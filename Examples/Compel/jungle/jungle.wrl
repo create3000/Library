@@ -226,7 +226,7 @@ function startTime(value, time)
 							texture	DEF FOREST-TEX_2 ImageTexture {
 							  repeatS	TRUE
 							  repeatT	TRUE
-							  url	"textures/raindark.bw"
+							  url	[ "textures/raindark.bw", "textures/raindark.png" ]
 							}
 
 							textureTransform	TextureTransform {
@@ -3384,7 +3384,7 @@ function startTime(value, time)
 								  texture	DEF STRAW-TEXTURE_12 ImageTexture {
 								    repeatS	TRUE
 								    repeatT	TRUE
-								    url	"textures/strawrf2.rgb"
+								    url	["textures/strawrf2.rgb", "textures/strawrf2.png"]
 								  }
 
 								  textureTransform	TextureTransform {
@@ -3488,7 +3488,7 @@ function startTime(value, time)
 									  texture	ImageTexture {
 									    repeatS	TRUE
 									    repeatT	TRUE
-									    url	"textures/palmtrnk.rgb"
+									    url	[ "textures/palmtrnk.rgb", "textures/palmtrnk.png" ]
 									  }
 
 									}
@@ -3534,7 +3534,7 @@ function startTime(value, time)
 									  texture	ImageTexture {
 									    repeatS	TRUE
 									    repeatT	TRUE
-									    url	"textures/palmtop.rgb"
+									    url	[ "textures/palmtop.rgb", "textures/palmtop.png" ]
 									  }
 
 									}
@@ -3710,7 +3710,7 @@ function startTime(value, time)
 								    texture	ImageTexture {
 								      repeatS	TRUE
 								      repeatT	TRUE
-								      url	"textures/strwfrng.rgb"
+								      url	[ "textures/strwfrng.rgb", "textures/strwfrng.png" ]
 								    }
 
 								    textureTransform	TextureTransform {
@@ -3854,7 +3854,7 @@ function startTime(value, time)
 								}
 
 								texture	DEF NAV-TEX_18 ImageTexture {
-								  url	"textures/el1288.bw"
+								  url	[ "textures/el1288.bw", "textures/el1288.png" ]
 								}
 
 								textureTransform	TextureTransform {
@@ -5132,7 +5132,7 @@ function startTime(value, time)
 							    texture	DEF _39 ImageTexture {
 							      repeatS	TRUE
 							      repeatT	TRUE
-							      url	"textures/el1288.bw"
+							      url	[ "textures/el1288.bw", "textures/el1288.png" ]
 							    }
 
 							    textureTransform	DEF _40 TextureTransform {
@@ -7041,7 +7041,7 @@ function exitZoneTime(value, time)
 						    texture	ImageTexture {
 						      repeatS	TRUE
 						      repeatT	TRUE
-						      url	"textures/au1288.bw"
+						      url	[ "textures/au1288.bw", "textures/au1288.png" ]
 						    }
 
 						    textureTransform	TextureTransform {
@@ -12313,7 +12313,7 @@ function exitZoneTime(value, time)
 			  texture	ImageTexture {
 			    repeatS	TRUE
 			    repeatT	TRUE
-			    url	"textures/drl.bw"
+			    url	[ "textures/drl.bw", "textures/drl.png" ]
 			  }
 
 			  textureTransform	TextureTransform {
@@ -12445,7 +12445,7 @@ function exitZoneTime(value, time)
 					  texture	ImageTexture {
 					    repeatS	TRUE
 					    repeatT	TRUE
-					    url	"textures/palmtrnk.rgb"
+					    url	[ "textures/palmtrnk.rgb", "textures/palmtrnk.png" ]
 					  }
 
 					}
@@ -12491,7 +12491,7 @@ function exitZoneTime(value, time)
 					  texture	ImageTexture {
 					    repeatS	TRUE
 					    repeatT	TRUE
-					    url	"textures/palmtop.rgb"
+					    url	[ "textures/palmtop.rgb", "textures/palmtop.png" ]
 					  }
 
 					}
