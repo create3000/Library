@@ -43,6 +43,7 @@
     <Folder Include="Moebius\" />
     <Folder Include="TreasureIsland\" />
     <Folder Include="Compel\" />
+    <Folder Include="Compel\jungle\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Appartment\index.wrl" />
@@ -2934,5 +2935,14 @@
     <None Include="Compel\wasabi\cloudsup.jpg" />
     <None Include="Compel\wasabi\wasabi.gif" />
     <None Include="Compel\wasabi\wasabi.htm" />
+    <None Include="Compel\jungle\jungle.x3d" />
+    <None Include="Compel\jungle\textures\au1288.png" />
+    <None Include="Compel\jungle\textures\drl.png" />
+    <None Include="Compel\jungle\textures\el1288.png" />
+    <None Include="Compel\jungle\textures\palmtop.png" />
+    <None Include="Compel\jungle\textures\palmtrnk.png" />
+    <None Include="Compel\jungle\textures\raindark.png" />
+    <None Include="Compel\jungle\textures\strawrf2.png" />
+    <None Include="Compel\jungle\textures\strwfrng.png" />
   </ItemGroup>
 </Project>
