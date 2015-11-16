@@ -4,17 +4,12 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ItemType>GenericProject</ItemType>
-    <ProjectGuid>{BCB5F657-C303-48C0-B118-F3B6BB8428CA}</ProjectGuid>
+    <ProjectGuid>{5EA0F1DE-969F-412C-B233-B6618743D771}</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Default|AnyCPU' ">
-    <OutputPath>.</OutputPath>
+    <OutputPath>.\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="..\Library.sln">
-      <Link>Library.sln</Link>
-    </None>
-    <None Include="..\README.md">
-      <Link>README.md</Link>
-    </None>
+    <None Include="Prototypes.mdproj" />
   </ItemGroup>
 </Project>
