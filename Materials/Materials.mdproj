@@ -7,9 +7,23 @@
     <ProjectGuid>{AB9CED5E-185D-4B06-9039-CBA2113AA080}</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Default|AnyCPU' ">
-    <OutputPath>.\</OutputPath>
+    <OutputPath>.</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <None Include="Materials.mdproj" />
+    <None Include="Velvet.x3dv" />
+    <None Include="Artdeco.x3dv" />
+    <None Include="Autumn.x3dv" />
+    <None Include="Glass.x3dv" />
+    <None Include="Metal.x3dv" />
+    <None Include="Neon.x3dv" />
+    <None Include="Rococo.x3dv" />
+    <None Include="Santafee.x3dv" />
+    <None Include="Sheen.x3dv" />
+    <None Include="Silky.x3dv" />
+    <None Include="Spring.x3dv" />
+    <None Include="Summer.x3dv" />
+    <None Include="Tropical.x3dv" />
+    <None Include="Winter.x3dv" />
   </ItemGroup>
 </Project>
