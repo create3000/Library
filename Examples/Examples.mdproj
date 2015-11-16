@@ -76,7 +76,6 @@
     <None Include="Appartment\stage\title.html" />
     <None Include="Appartment\stage\whitespace.gif" />
     <None Include="Examples.mdproj" />
-    <None Include="Approach\x3dom.html" />
     <None Include="Approach\stage\gate.wrl" />
     <None Include="Approach\stage\gate.x3d" />
     <None Include="Approach\stage\gatetex.png" />
@@ -1169,7 +1168,6 @@
     <None Include="Misc\shape5_a.x3d" />
     <None Include="Misc\starworld.x3d" />
     <None Include="Misc\torusbreath2.x3d" />
-    <None Include="MovieTruck\x3dom.html" />
     <None Include="MovieTruck\stage\aussenkachel1.jpg" />
     <None Include="MovieTruck\stage\baum_02-n.png" />
     <None Include="MovieTruck\stage\baum_03-n.png" />
@@ -2089,7 +2087,6 @@
     <None Include="NIST-Logo\stage\nistlogo.wrl" />
     <None Include="Rathaus\index.wrl" />
     <None Include="Rathaus\preview.gif" />
-    <None Include="Rathaus\x3dom.html" />
     <None Include="Rathaus\stage\index.html" />
     <None Include="Rathaus\stage\paper.3.bw" />
     <None Include="Schacht\stage\Or_proto.wrl.gz" />
