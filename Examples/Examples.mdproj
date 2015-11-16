@@ -2255,7 +2255,6 @@
     <None Include="Vattenfall\stage\buttons.wrl.gz" />
     <None Include="Vattenfall\stage\film.wrl.gz" />
     <None Include="Vattenfall\stage\film1.wrl.gz" />
-    <None Include="Vattenfall\stage\film2.wrl.gz" />
     <None Include="Vattenfall\stage\film3.wrl.gz" />
     <None Include="Vattenfall\stage\film4.wrl.gz" />
     <None Include="Vattenfall\stage\film5.wrl.gz" />

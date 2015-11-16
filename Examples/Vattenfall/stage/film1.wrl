@@ -9,7 +9,7 @@ Shape {
     material	NULL
 
     texture	DEF Movie MovieTexture {
-      url	"film1.mpv"
+      url	[ "film1.mpv", "film1.mp4" ]
       repeatS	TRUE
       repeatT	TRUE
       loop	TRUE
