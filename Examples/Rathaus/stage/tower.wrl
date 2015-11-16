@@ -878,7 +878,7 @@ DEF tower Transform {
 		    material	USE _0
 
 		    texture	DEF _3 ImageTexture {
-		      url	"paper.3.png"
+		      url	"paper.3.bw"
 		    }
 
 		    textureTransform	NULL
