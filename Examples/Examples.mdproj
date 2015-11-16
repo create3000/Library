@@ -7,10 +7,11 @@
     <ProjectGuid>{EA85C764-34A0-4AB0-B470-D01597F42029}</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Default|AnyCPU' ">
-    <OutputPath>.\</OutputPath>
+    <OutputPath>.</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Appartment\" />
+    <Folder Include="Approach\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Appartment\index.wrl" />
@@ -44,5 +45,33 @@
     <None Include="Appartment\stage\title.html" />
     <None Include="Appartment\stage\whitespace.gif" />
     <None Include="Examples.mdproj" />
+    <None Include="Approach\x3dom.html" />
+    <None Include="Approach\stage\gate.wrl" />
+    <None Include="Approach\stage\gate.x3d" />
+    <None Include="Approach\stage\gatetex.png" />
+    <None Include="Approach\stage\glow_cyan_q.png" />
+    <None Include="Approach\stage\index.html" />
+    <None Include="Approach\stage\index.wrl" />
+    <None Include="Approach\stage\index.x3d" />
+    <None Include="Approach\stage\jet.wrl" />
+    <None Include="Approach\stage\jet.x3d" />
+    <None Include="Approach\stage\jet1.aiff" />
+    <None Include="Approach\stage\jet1.png" />
+    <None Include="Approach\stage\light11.png" />
+    <None Include="Approach\stage\light3.png" />
+    <None Include="Approach\stage\light4.png" />
+    <None Include="Approach\stage\light6.png" />
+    <None Include="Approach\stage\light7.png" />
+    <None Include="Approach\stage\noise1.png" />
+    <None Include="Approach\stage\reflect2.png" />
+    <None Include="Approach\stage\strasse-m.png" />
+    <None Include="Approach\stage\strasse.png" />
+    <None Include="Approach\stage\t-spec-c.png" />
+    <None Include="Approach\stage\tunneltex1.png" />
+    <None Include="Approach\stage\wall-glow.png" />
+    <None Include="Approach\stage\wand1-m.png" />
+    <None Include="Approach\stage\wand2-m.png" />
+    <None Include="Approach\stage\wand4-m.png" />
+    <None Include="Approach\stage\wegweiser.png" />
   </ItemGroup>
 </Project>
