@@ -12,6 +12,7 @@
   <ItemGroup>
     <Folder Include="Appartment\" />
     <Folder Include="Approach\" />
+    <Folder Include="Arcadia\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Appartment\index.wrl" />
@@ -73,5 +74,27 @@
     <None Include="Approach\stage\wand2-m.png" />
     <None Include="Approach\stage\wand4-m.png" />
     <None Include="Approach\stage\wegweiser.png" />
+    <None Include="Arcadia\index.wrl" />
+    <None Include="Arcadia\stage\Thumbs.db" />
+    <None Include="Arcadia\stage\alert.wav" />
+    <None Include="Arcadia\stage\bonus.wav" />
+    <None Include="Arcadia\stage\index.html" />
+    <None Include="Arcadia\stage\index.wrl" />
+    <None Include="Arcadia\stage\index.x3d" />
+    <None Include="Arcadia\stage\key-a.png" />
+    <None Include="Arcadia\stage\key-d.png" />
+    <None Include="Arcadia\stage\key-i.png" />
+    <None Include="Arcadia\stage\key.wav" />
+    <None Include="Arcadia\stage\keybox.png" />
+    <None Include="Arcadia\stage\keyfb.png" />
+    <None Include="Arcadia\stage\mount.wrl" />
+    <None Include="Arcadia\stage\mount.x3d" />
+    <None Include="Arcadia\stage\saule.wrl" />
+    <None Include="Arcadia\stage\saule.x3d" />
+    <None Include="Arcadia\stage\sky.png" />
+    <None Include="Arcadia\stage\stone.png" />
+    <None Include="Arcadia\stage\t2.png" />
+    <None Include="Arcadia\stage\temple.wrl" />
+    <None Include="Arcadia\stage\temple.x3d" />
   </ItemGroup>
 </Project>
