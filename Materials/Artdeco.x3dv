@@ -4,7 +4,7 @@ META "comment" "World of Titania"
 META "created" "Mon, 16 Nov 2015 09:16:34 GMT"
 META "creator" "Holger Seelig"
 META "generator" "Titania V1.2.1, http://titania.create3000.de"
-META "modified" "Mon, 16 Nov 2015 09:20:28 GMT"
+META "modified" "Mon, 16 Nov 2015 09:29:51 GMT"
 
 WorldInfo {
   metadata DEF Titania MetadataSet {
@@ -28,19 +28,19 @@ WorldInfo {
             name "position"
             reference "http://titania.create3000.de"
             value [
-              0.88962459564209,
-              0.343955039978027,
-              24.5506496429443
+              0.968430399894714,
+              0.34349912405014,
+              24.5505256652832
             ]
           }
           DEF orientation MetadataDouble {
             name "orientation"
             reference "http://titania.create3000.de"
             value [
-              0,
-              0,
-              1,
-              0
+              0.00512771308422089,
+              0.962008118629456,
+              -0.272972613573074,
+              0.00331168505363166
             ]
           }
           DEF centerOfRotation MetadataDouble {
@@ -54,6 +54,45 @@ WorldInfo {
           }
         ]
       }
+      DEF AngleGrid MetadataSet {
+        name "AngleGrid"
+        reference "http://titania.create3000.de"
+        value DEF enabled MetadataBoolean {
+          name "enabled"
+          reference "http://titania.create3000.de"
+          value FALSE
+        }
+      }
+      DEF Grid MetadataSet {
+        name "Grid"
+        reference "http://titania.create3000.de"
+        value [
+          DEF enabled_1 MetadataBoolean {
+            name "enabled"
+            reference "http://titania.create3000.de"
+            value TRUE
+          }
+          DEF rotation MetadataFloat {
+            name "rotation"
+            reference "http://titania.create3000.de"
+            value [
+              1,
+              0,
+              0,
+              1.5708
+            ]
+          }
+          DEF dimension MetadataInteger {
+            name "dimension"
+            reference "http://titania.create3000.de"
+            value [
+              16,
+              10,
+              16
+            ]
+          }
+        ]
+      }
     ]
   }
   title "Artdeco"
@@ -62,7 +101,7 @@ WorldInfo {
 Group {
   children [
     Transform {
-      translation -4.80974 5.89731 0
+      translation -5 5 -1.71143e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -76,7 +115,7 @@ Group {
       }
     }
     Transform {
-      translation -2.48639 5.96696 0
+      translation -3 5 -1.71143e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -90,7 +129,7 @@ Group {
       }
     }
     Transform {
-      translation -0.352332 6.14232 0
+      translation -1 5 -1.71143e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -105,7 +144,7 @@ Group {
       }
     }
     Transform {
-      translation 2.04699 6.23663 0
+      translation 1 5 -1.71143e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -119,7 +158,7 @@ Group {
       }
     }
     Transform {
-      translation 4.81969 6.41054 0
+      translation 3 5 -1.71143e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -133,7 +172,7 @@ Group {
       }
     }
     Transform {
-      translation 6.7802 6.7124 0
+      translation 5 5 -1.71143e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -147,7 +186,7 @@ Group {
       }
     }
     Transform {
-      translation -4.76354 3.3702 0
+      translation -5 3 -1.02686e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -161,7 +200,7 @@ Group {
       }
     }
     Transform {
-      translation -2.4402 3.43985 0
+      translation -3 3 -1.02686e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -175,7 +214,7 @@ Group {
       }
     }
     Transform {
-      translation -0.306138 3.61521 0
+      translation -1 3 -1.02686e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -189,7 +228,7 @@ Group {
       }
     }
     Transform {
-      translation 2.09319 3.70952 0
+      translation 1 3 -1.02686e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -203,7 +242,7 @@ Group {
       }
     }
     Transform {
-      translation 4.86588 3.88343 0
+      translation 3 3 -1.02686e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -217,7 +256,7 @@ Group {
       }
     }
     Transform {
-      translation 6.8264 4.18529 0
+      translation 5 3 -1.02686e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -231,7 +270,7 @@ Group {
       }
     }
     Transform {
-      translation -4.95181 1.03279 0
+      translation -5 1 -3.42285e-08
       children Shape {
         appearance Appearance {
           material Material {
@@ -245,7 +284,7 @@ Group {
       }
     }
     Transform {
-      translation -2.62847 1.10243 0
+      translation -3 1 -3.42285e-08
       children Shape {
         appearance Appearance {
           material Material {
@@ -259,7 +298,7 @@ Group {
       }
     }
     Transform {
-      translation -0.494409 1.2778 0
+      translation -1 1 -3.42285e-08
       children Shape {
         appearance Appearance {
           material Material {
@@ -273,7 +312,7 @@ Group {
       }
     }
     Transform {
-      translation 1.90492 1.3721 0
+      translation 1 1 -3.42285e-08
       children Shape {
         appearance Appearance {
           material Material {
@@ -287,7 +326,7 @@ Group {
       }
     }
     Transform {
-      translation 4.67761 1.54602 0
+      translation 3 1 -3.42285e-08
       children Shape {
         appearance Appearance {
           material Material {
@@ -301,7 +340,7 @@ Group {
       }
     }
     Transform {
-      translation 6.63813 1.84787 0
+      translation 5 1 -3.42285e-08
       children Shape {
         appearance Appearance {
           material Material {
@@ -315,7 +354,7 @@ Group {
       }
     }
     Transform {
-      translation -5.00301 -1.38329 0
+      translation -5 -1 3.42285e-08
       children Shape {
         appearance Appearance {
           material Material {
@@ -329,7 +368,7 @@ Group {
       }
     }
     Transform {
-      translation -2.67966 -1.31364 0
+      translation -3 -1 3.42285e-08
       children Shape {
         appearance Appearance {
           material Material {
@@ -343,7 +382,7 @@ Group {
       }
     }
     Transform {
-      translation -0.545606 -1.13828 0
+      translation -1 -1 3.42285e-08
       children Shape {
         appearance Appearance {
           material Material {
@@ -357,7 +396,7 @@ Group {
       }
     }
     Transform {
-      translation 1.85372 -1.04397 0
+      translation 1 -1 3.42285e-08
       children Shape {
         appearance Appearance {
           material Material {
@@ -371,7 +410,7 @@ Group {
       }
     }
     Transform {
-      translation 4.62642 -0.870059 0
+      translation 3 -1 3.42285e-08
       children Shape {
         appearance Appearance {
           material Material {
@@ -385,7 +424,7 @@ Group {
       }
     }
     Transform {
-      translation 6.58693 -0.568204 0
+      translation 5 -1 3.42285e-08
       children Shape {
         appearance Appearance {
           material Material {
@@ -399,7 +438,7 @@ Group {
       }
     }
     Transform {
-      translation -5.04715 -3.61722 0
+      translation -5 -3 1.02686e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -413,7 +452,7 @@ Group {
       }
     }
     Transform {
-      translation -2.7238 -3.54757 0
+      translation -3 -3 1.02686e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -427,7 +466,7 @@ Group {
       }
     }
     Transform {
-      translation -0.589743 -3.3722 0
+      translation -1 -3 1.02686e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -441,7 +480,7 @@ Group {
       }
     }
     Transform {
-      translation 1.80958 -3.2779 0
+      translation 1 -3 1.02686e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -453,7 +492,7 @@ Group {
       }
     }
     Transform {
-      translation 4.58228 -3.10398 0
+      translation 3 -3 1.02686e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -464,7 +503,7 @@ Group {
       }
     }
     Transform {
-      translation 6.54279 -2.80213 0
+      translation 5 -3 1.02686e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -478,7 +517,7 @@ Group {
       }
     }
     Transform {
-      translation -4.9772 -6.02449 0
+      translation -5 -5 1.71143e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -492,7 +531,7 @@ Group {
       }
     }
     Transform {
-      translation -2.65385 -5.95485 0
+      translation -3 -5 1.71143e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -506,7 +545,7 @@ Group {
       }
     }
     Transform {
-      translation -0.519796 -5.77948 0
+      translation -1 -5 1.71143e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -520,7 +559,7 @@ Group {
       }
     }
     Transform {
-      translation 1.87953 -5.68518 0
+      translation 1 -5 1.71143e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -534,7 +573,7 @@ Group {
       }
     }
     Transform {
-      translation 4.65223 -5.51126 0
+      translation 3 -5 1.71143e-07
       children Shape {
         appearance Appearance {
           material Material {
@@ -548,7 +587,7 @@ Group {
       }
     }
     Transform {
-      translation 6.61274 -5.2094 0
+      translation 5 -5 1.71143e-07
       children Shape {
         appearance Appearance {
           material Material {

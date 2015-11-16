@@ -7,9 +7,94 @@
     <ProjectGuid>{E0724289-D534-4044-9952-D772BBE428B1}</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Default|AnyCPU' ">
-    <OutputPath>.\</OutputPath>
+    <OutputPath>.</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <None Include="Models.mdproj" />
+    <None Include="Animals\Bird.x3d" />
+    <None Include="Animals\Cow.x3d" />
+    <None Include="Animals\DragonHead.x3d" />
+    <None Include="Animals\Eagle.x3d" />
+    <None Include="Animals\Pig.x3d" />
+    <None Include="Animals\Shark.x3d" />
+    <None Include="Animals\Shell.x3d" />
+    <None Include="Buildings\Castle.x3d" />
+    <None Include="Buildings\Skyscraper.x3d" />
+    <None Include="Buildings\Windmill.x3d" />
+    <None Include="Chess\Bishop.x3d" />
+    <None Include="Chess\King.x3d" />
+    <None Include="Chess\Knight.x3d" />
+    <None Include="Chess\Pawn.x3d" />
+    <None Include="Chess\Queen.x3d" />
+    <None Include="Chess\Rook.x3d" />
+    <None Include="City\Lamp.x3d" />
+    <None Include="Food\Apple.x3d" />
+    <None Include="Food\Banana.x3d" />
+    <None Include="Food\Gourd.x3d" />
+    <None Include="Food\Mushroom.x3d" />
+    <None Include="Food\Pear.x3d" />
+    <None Include="Furniture\CeilingLamp.x3d" />
+    <None Include="Furniture\Chair.x3d" />
+    <None Include="Furniture\Couch.x3d" />
+    <None Include="Furniture\Table.x3d" />
+    <None Include="Geography\Coasts.x3d" />
+    <None Include="Geography\Earth.x3d" />
+    <None Include="Geography\WorldCurved.x3d" />
+    <None Include="Household\Gift.x3d" />
+    <None Include="Household\LavaLamp.x3d" />
+    <None Include="Household\ManillaFolder.x3d" />
+    <None Include="Household\MartiniGlass.x3d" />
+    <None Include="Household\Mug.x3d" />
+    <None Include="Household\Outlet.x3d" />
+    <None Include="Household\Pipe.x3d" />
+    <None Include="Household\Plant.x3d" />
+    <None Include="Household\Plug.x3d" />
+    <None Include="Household\Pump.x3d" />
+    <None Include="Household\Rose+Vase.x3d" />
+    <None Include="Household\Teapot.x3d" />
+    <None Include="Household\TrackLights.x3d" />
+    <None Include="Household\Vase.x3d" />
+    <None Include="People\Al.x3d" />
+    <None Include="People\Beethoven.x3d" />
+    <None Include="People\Venus.x3d" />
+    <None Include="Plants\Magnolia.x3d" />
+    <None Include="Robots\CubeMan.x3d" />
+    <None Include="Robots\CylinderMan.x3d" />
+    <None Include="Robots\SphereMan.x3d" />
+    <None Include="Science\Dodecahedron.x3d" />
+    <None Include="Science\Icosahedron.x3d" />
+    <None Include="Science\Octahedron.x3d" />
+    <None Include="Science\SpongeTri4.x3d" />
+    <None Include="Science\Tetrahedron.x3d" />
+    <None Include="Symbols\Diamond.x3d" />
+    <None Include="Symbols\Heart.x3d" />
+    <None Include="Symbols\Moon.x3d" />
+    <None Include="Symbols\Shamrock.x3d" />
+    <None Include="Symbols\Star.x3d" />
+    <None Include="Toys\Cannon.x3d" />
+    <None Include="Toys\Dart.x3d" />
+    <None Include="Toys\JackInTheBox.x3d" />
+    <None Include="Toys\LegoDog.x3d" />
+    <None Include="Toys\SlotMachine.x3d" />
+    <None Include="Toys\Soccerball.x3d" />
+    <None Include="Toys\Teddy.x3d" />
+    <None Include="Toys\Top.x3d" />
+    <None Include="Vehicles\Airbus767.x3d" />
+    <None Include="Vehicles\Aircar.x3d" />
+    <None Include="Vehicles\Alfa147.x3d" />
+    <None Include="Vehicles\Cessna.x3d" />
+    <None Include="Vehicles\Enemy.x3d" />
+    <None Include="Vehicles\F16.x3d" />
+    <None Include="Vehicles\Fiero.x3d" />
+    <None Include="Vehicles\Galleon.x3d" />
+    <None Include="Vehicles\Gunstar.x3d" />
+    <None Include="Vehicles\KittyHawk.x3d" />
+    <None Include="Vehicles\MiniCooper.x3d" />
+    <None Include="Vehicles\NCC1701b.x3d" />
+    <None Include="Vehicles\Rocket.x3d" />
+    <None Include="Vehicles\Shuttle.x3d" />
+    <None Include="Vehicles\SpaceStation.x3d" />
+    <None Include="Vehicles\Tie.x3d" />
+    <None Include="Vehicles\X29.x3d" />
   </ItemGroup>
 </Project>
