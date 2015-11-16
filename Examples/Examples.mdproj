@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ItemType>GenericProject</ItemType>
+    <ProjectGuid>{EA85C764-34A0-4AB0-B470-D01597F42029}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Default|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Appartment\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Appartment\index.wrl" />
+    <None Include="Appartment\index.x3d" />
+    <None Include="Appartment\preview.gif" />
+    <None Include="Appartment\stage\baum1.png" />
+    <None Include="Appartment\stage\empty.html" />
+    <None Include="Appartment\stage\env.png" />
+    <None Include="Appartment\stage\flat-notex-anim.wrl" />
+    <None Include="Appartment\stage\flat-notex-anim.x3d" />
+    <None Include="Appartment\stage\flat-vr.html" />
+    <None Include="Appartment\stage\granite.2.png" />
+    <None Include="Appartment\stage\index.html" />
+    <None Include="Appartment\stage\index.wrl" />
+    <None Include="Appartment\stage\index.x3d" />
+    <None Include="Appartment\stage\link.html" />
+    <None Include="Appartment\stage\links.gif" />
+    <None Include="Appartment\stage\links.map" />
+    <None Include="Appartment\stage\movie.html" />
+    <None Include="Appartment\stage\plaid.png" />
+    <None Include="Appartment\stage\poster.png" />
+    <None Include="Appartment\stage\schrank_dunkel128.png" />
+    <None Include="Appartment\stage\speck.paper.png" />
+    <None Include="Appartment\stage\still1.gif" />
+    <None Include="Appartment\stage\still2.gif" />
+    <None Include="Appartment\stage\still2.html" />
+    <None Include="Appartment\stage\still3.gif" />
+    <None Include="Appartment\stage\still3.html" />
+    <None Include="Appartment\stage\stills.html" />
+    <None Include="Appartment\stage\title.gif" />
+    <None Include="Appartment\stage\title.html" />
+    <None Include="Appartment\stage\whitespace.gif" />
+    <None Include="Examples.mdproj" />
+  </ItemGroup>
+</Project>
