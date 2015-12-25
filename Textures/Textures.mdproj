@@ -294,8 +294,33 @@
     <None Include="CubeMapTextures\WideOcean\WideOcean-left.jpg" />
     <None Include="CubeMapTextures\WideOcean\WideOcean-right.jpg" />
     <None Include="CubeMapTextures\WideOcean\WideOcean-top.jpg" />
+    <None Include="CubeMapTextures\Interstellar\Interstellar-back.jpg" />
+    <None Include="CubeMapTextures\Interstellar\Interstellar-bottom.jpg" />
+    <None Include="CubeMapTextures\Interstellar\Interstellar-front.jpg" />
+    <None Include="CubeMapTextures\Interstellar\Interstellar-left.jpg" />
+    <None Include="CubeMapTextures\Interstellar\Interstellar-right.jpg" />
+    <None Include="CubeMapTextures\Interstellar\Interstellar-top.jpg" />
+    <None Include="CubeMapTextures\NightSky\NightSky-back.jpg" />
+    <None Include="CubeMapTextures\NightSky\NightSky-bottom.jpg" />
+    <None Include="CubeMapTextures\NightSky\NightSky-front.jpg" />
+    <None Include="CubeMapTextures\NightSky\NightSky-left.jpg" />
+    <None Include="CubeMapTextures\NightSky\NightSky-right.jpg" />
+    <None Include="CubeMapTextures\NightSky\NightSky-top.jpg" />
+    <None Include="CubeMapTextures\Sunset\Sunset-back.jpg" />
+    <None Include="CubeMapTextures\Sunset\Sunset-bottom.jpg" />
+    <None Include="CubeMapTextures\Sunset\Sunset-front.jpg" />
+    <None Include="CubeMapTextures\Sunset\Sunset-left.jpg" />
+    <None Include="CubeMapTextures\Sunset\Sunset-right.jpg" />
+    <None Include="CubeMapTextures\Sunset\Sunset-top.jpg" />
+    <None Include="CubeMapTextures\ViolentDays\ViolentDays-back.jpg" />
+    <None Include="CubeMapTextures\ViolentDays\ViolentDays-bottom.jpg" />
+    <None Include="CubeMapTextures\ViolentDays\ViolentDays-front.jpg" />
+    <None Include="CubeMapTextures\ViolentDays\ViolentDays-left.jpg" />
+    <None Include="CubeMapTextures\ViolentDays\ViolentDays-right.jpg" />
+    <None Include="CubeMapTextures\ViolentDays\ViolentDays-top.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CubeMapTextures\WideOcean\" />
+    <Folder Include="CubeMapTextures\" />
   </ItemGroup>
 </Project>
