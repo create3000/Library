@@ -288,5 +288,14 @@
     <None Include="Textiles\weave.bw.png" />
     <None Include="Textiles\wool.bw.png" />
     <None Include="Textiles\wooly.bw.png" />
+    <None Include="CubeMapTextures\WideOcean\WideOcean-back.jpg" />
+    <None Include="CubeMapTextures\WideOcean\WideOcean-bottom.jpg" />
+    <None Include="CubeMapTextures\WideOcean\WideOcean-front.jpg" />
+    <None Include="CubeMapTextures\WideOcean\WideOcean-left.jpg" />
+    <None Include="CubeMapTextures\WideOcean\WideOcean-right.jpg" />
+    <None Include="CubeMapTextures\WideOcean\WideOcean-top.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CubeMapTextures\WideOcean\" />
   </ItemGroup>
 </Project>
