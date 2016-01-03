@@ -318,6 +318,8 @@
     <None Include="CubeMapTextures\ViolentDays\ViolentDays-left.jpg" />
     <None Include="CubeMapTextures\ViolentDays\ViolentDays-right.jpg" />
     <None Include="CubeMapTextures\ViolentDays\ViolentDays-top.jpg" />
+    <None Include="Miscellaneous\ubuntu.jpg" />
+    <None Include="Miscellaneous\test.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CubeMapTextures\WideOcean\" />
