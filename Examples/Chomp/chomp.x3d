@@ -996,7 +996,7 @@
 			startAnim = time;
 			playOops = time;
 			stopAnimLoop = time;
-			Browser.loadURL(new MFString('oops1.htm'), new MFString('target=helpertext'));
+			//Browser.loadURL(new MFString('oops1.htm'), new MFString('target=helpertext'));
 		}
 	  function allSafe(input, time) {
 			scared = 0;
@@ -1354,7 +1354,7 @@
 			startAnim = time;
 			playOops = time;
 			stopAnimLoop = time;
-			Browser.loadURL(new MFString('oops1.htm'), new MFString('target=helpertext'));
+			//Browser.loadURL(new MFString('oops1.htm'), new MFString('target=helpertext'));
 		}
 	  function allSafe(input, time) {
 			scared = 0;
@@ -1664,7 +1664,7 @@
 			enableHit = FALSE;
 			kickSlower = FALSE;
 			kickFaster = TRUE;
-			Browser.loadURL(new MFString('oops2.htm'), new MFString('target=helpertext'));
+			//Browser.loadURL(new MFString('oops2.htm'), new MFString('target=helpertext'));
 			if (tubePosition == 0) {
 				tubeRun = time;
 			} else {
@@ -1764,7 +1764,7 @@
 			enableHit = FALSE;
 			kickSlower = FALSE;
 			kickFaster = TRUE;
-			Browser.loadURL(new MFString('oops2.htm'), new MFString('target=helpertext'));
+			//Browser.loadURL(new MFString('oops2.htm'), new MFString('target=helpertext'));
 			if (tubePosition == 0) {
 				tubeRun = time;
 			} else {
@@ -2628,14 +2628,14 @@
 		function killObject(i, time) {
 			if (i==FALSE) {
 				playChompSound = time;
-				if (eatingWhichObject == 1) {numEatenObjects = numEatenObjects + 1; seagullSwitcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score3'));Browser.loadURL(new MFString('chomp3.htm'), new MFString('target=helpertext'));return;}
-				if (eatingWhichObject == 2) {numEatenObjects = numEatenObjects + 1; sittingSeagullSwitcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score1'));Browser.loadURL(new MFString('chomp1.htm'), new MFString('target=helpertext'));return;}
-				if (eatingWhichObject == 3) {numEatenObjects = numEatenObjects + 1; fishSwimSwitcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score2'));Browser.loadURL(new MFString('chomp2.htm'), new MFString('target=helpertext'));return;}
-				if (eatingWhichObject == 4) {numEatenObjects = numEatenObjects + 1; fishSwitcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score4'));Browser.loadURL(new MFString('chomp4.htm'), new MFString('target=helpertext'));return;}
-				if (eatingWhichObject == 5) {numEatenObjects = numEatenObjects + 1; surferSwitcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score5'));Browser.loadURL(new MFString('chomp5.htm'), new MFString('target=helpertext'));return;}
-				if (eatingWhichObject == 6) {numEatenObjects = numEatenObjects + 1; surfer2Switcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score7'));Browser.loadURL(new MFString('chomp7.htm'), new MFString('target=helpertext'));return;}				
-				if (eatingWhichObject == 7) {numEatenObjects = numEatenObjects + 1; tuberSwitcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score6'));Browser.loadURL(new MFString('chomp6.htm'), new MFString('target=helpertext'));return;}
-				if (eatingWhichObject == 8) {numEatenObjects = numEatenObjects + 1; tuber2Switcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score8'));Browser.loadURL(new MFString('chomp8.htm'), new MFString('target=helpertext'));return;}
+				//if (eatingWhichObject == 1) {numEatenObjects = numEatenObjects + 1; seagullSwitcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score3'));Browser.loadURL(new MFString('chomp3.htm'), new MFString('target=helpertext'));return;}
+				//if (eatingWhichObject == 2) {numEatenObjects = numEatenObjects + 1; sittingSeagullSwitcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score1'));Browser.loadURL(new MFString('chomp1.htm'), new MFString('target=helpertext'));return;}
+				//if (eatingWhichObject == 3) {numEatenObjects = numEatenObjects + 1; fishSwimSwitcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score2'));Browser.loadURL(new MFString('chomp2.htm'), new MFString('target=helpertext'));return;}
+				//if (eatingWhichObject == 4) {numEatenObjects = numEatenObjects + 1; fishSwitcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score4'));Browser.loadURL(new MFString('chomp4.htm'), new MFString('target=helpertext'));return;}
+				//if (eatingWhichObject == 5) {numEatenObjects = numEatenObjects + 1; surferSwitcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score5'));Browser.loadURL(new MFString('chomp5.htm'), new MFString('target=helpertext'));return;}
+				//if (eatingWhichObject == 6) {numEatenObjects = numEatenObjects + 1; surfer2Switcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score7'));Browser.loadURL(new MFString('chomp7.htm'), new MFString('target=helpertext'));return;}				
+				//if (eatingWhichObject == 7) {numEatenObjects = numEatenObjects + 1; tuberSwitcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score6'));Browser.loadURL(new MFString('chomp6.htm'), new MFString('target=helpertext'));return;}
+				//if (eatingWhichObject == 8) {numEatenObjects = numEatenObjects + 1; tuber2Switcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score8'));Browser.loadURL(new MFString('chomp8.htm'), new MFString('target=helpertext'));return;}
 			}
 		}
 		function eatingSeagull() {
@@ -2718,55 +2718,55 @@
 		function skeletonVisible() {
 		if (whichVisible != 9) {
 			whichVisible = 9;
-			Browser.loadURL(new MFString('text9.htm'), new MFString('target=helpertext'));
+			//Browser.loadURL(new MFString('text9.htm'), new MFString('target=helpertext'));
 		}
 		}
 		function seagullVisible() {
 		if (whichVisible != 1) {
 			whichVisible = 1;
-			Browser.loadURL(new MFString('text3.htm'), new MFString('target=helpertext'));
+			//Browser.loadURL(new MFString('text3.htm'), new MFString('target=helpertext'));
 		}
 		}
 		function sittingSeagullVisible() {
 		if (whichVisible != 2) {
 			whichVisible = 2;
-			Browser.loadURL(new MFString('text1.htm'), new MFString('target=helpertext'));
+			//Browser.loadURL(new MFString('text1.htm'), new MFString('target=helpertext'));
 		}
 		}
 		function fishVisible() {
 			if (whichVisible != 3) {
 			whichVisible = 3;
-			Browser.loadURL(new MFString('text4.htm'), new MFString('target=helpertext'));
+			//Browser.loadURL(new MFString('text4.htm'), new MFString('target=helpertext'));
 			}
 		}
 		function fishSwimVisible() {
 		if (whichVisible != 4) {
 			whichVisible = 4;
-			Browser.loadURL(new MFString('text2.htm'), new MFString('target=helpertext'));
+			//Browser.loadURL(new MFString('text2.htm'), new MFString('target=helpertext'));
 		}
 		}
 		function surferVisible() {
 		if (whichVisible != 5) {
 			whichVisible = 5;
-			Browser.loadURL(new MFString('text5.htm'), new MFString('target=helpertext'));
+			//Browser.loadURL(new MFString('text5.htm'), new MFString('target=helpertext'));
 		}
 		}
 		function surfer2Visible() {
 		if (whichVisible != 6) {
 			whichVisible = 6;
-			Browser.loadURL(new MFString('text7.htm'), new MFString('target=helpertext'));
+			//Browser.loadURL(new MFString('text7.htm'), new MFString('target=helpertext'));
 		}
 		}
 		function tuberVisible() {
 		if (whichVisible != 7) {
 			whichVisible = 7;
-			Browser.loadURL(new MFString('text6.htm'), new MFString('target=helpertext'));
+			//Browser.loadURL(new MFString('text6.htm'), new MFString('target=helpertext'));
 		}
 		}
 		function tuber2Visible() {
 		if (whichVisible != 8) {
 			whichVisible = 8;
-			Browser.loadURL(new MFString('text8.htm'), new MFString('target=helpertext'));
+			//Browser.loadURL(new MFString('text8.htm'), new MFString('target=helpertext'));
 		}}]]> 
     </Script>
     <Script DEF='BoomScript'>
@@ -2803,13 +2803,13 @@
 		}
 		function fadeDone(input) {
 			if (input == FALSE) {
-				Browser.loadURL(new MFString('end.htm'), new MFString('target=_parent'));
+				//Browser.loadURL(new MFString('end.htm'), new MFString('target=_parent'));
 			}
 		}
 		function Kill(input, time) {
 			readyToKill = input;
 			if (beenToEnd == TRUE) {
-				Browser.loadURL(new MFString('whoa.htm'), new MFString('target=helpertext'));
+				//Browser.loadURL(new MFString('whoa.htm'), new MFString('target=helpertext'));
 				startDeath = time;
 				sharkSwitcher = 0;
 				navInfoControl[0] = 'NONE';
@@ -2817,12 +2817,12 @@
 		}
 		function canyonEnd(input, t) {
 			if (input == TRUE && readyToKill == 1) {
-				Browser.loadURL(new MFString('whoa.htm'), new MFString('target=helpertext'));
+				//Browser.loadURL(new MFString('whoa.htm'), new MFString('target=helpertext'));
 				startDeath = t;
 				sharkSwitcher = 0;
 				navInfoControl[0] = 'NONE';
 			} else {
-				Browser.loadURL(new MFString('noend.htm'), new MFString('target=helpertext'));
+				//Browser.loadURL(new MFString('noend.htm'), new MFString('target=helpertext'));
 				beenToEnd = TRUE;
 			}
 		}

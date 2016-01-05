@@ -43,7 +43,7 @@
     <Script>
 <![CDATA[javascript:
 		function initialize() {
-				Browser.loadURL(new MFString('text.htm'), new MFString('target=helpertext'));			
+				//Browser.loadURL(new MFString('text.htm'), new MFString('target=helpertext'));			
 		}]]> 
     </Script>
     <Group>
