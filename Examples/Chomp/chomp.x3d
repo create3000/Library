@@ -2628,14 +2628,14 @@
 		function killObject(i, time) {
 			if (i==FALSE) {
 				playChompSound = time;
-				//if (eatingWhichObject == 1) {numEatenObjects = numEatenObjects + 1; seagullSwitcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score3'));Browser.loadURL(new MFString('chomp3.htm'), new MFString('target=helpertext'));return;}
-				//if (eatingWhichObject == 2) {numEatenObjects = numEatenObjects + 1; sittingSeagullSwitcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score1'));Browser.loadURL(new MFString('chomp1.htm'), new MFString('target=helpertext'));return;}
-				//if (eatingWhichObject == 3) {numEatenObjects = numEatenObjects + 1; fishSwimSwitcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score2'));Browser.loadURL(new MFString('chomp2.htm'), new MFString('target=helpertext'));return;}
-				//if (eatingWhichObject == 4) {numEatenObjects = numEatenObjects + 1; fishSwitcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score4'));Browser.loadURL(new MFString('chomp4.htm'), new MFString('target=helpertext'));return;}
-				//if (eatingWhichObject == 5) {numEatenObjects = numEatenObjects + 1; surferSwitcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score5'));Browser.loadURL(new MFString('chomp5.htm'), new MFString('target=helpertext'));return;}
-				//if (eatingWhichObject == 6) {numEatenObjects = numEatenObjects + 1; surfer2Switcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score7'));Browser.loadURL(new MFString('chomp7.htm'), new MFString('target=helpertext'));return;}				
-				//if (eatingWhichObject == 7) {numEatenObjects = numEatenObjects + 1; tuberSwitcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score6'));Browser.loadURL(new MFString('chomp6.htm'), new MFString('target=helpertext'));return;}
-				//if (eatingWhichObject == 8) {numEatenObjects = numEatenObjects + 1; tuber2Switcher = -1; Browser.loadURL(new MFString('point.htm'), new MFString('target=score8'));Browser.loadURL(new MFString('chomp8.htm'), new MFString('target=helpertext'));return;}
+				if (eatingWhichObject == 1) {numEatenObjects = numEatenObjects + 1; seagullSwitcher = -1; /*Browser.loadURL(new MFString('point.htm'), new MFString('target=score3'));Browser.loadURL(new MFString('chomp3.htm'), new MFString('target=helpertext'));*/return;}
+				if (eatingWhichObject == 2) {numEatenObjects = numEatenObjects + 1; sittingSeagullSwitcher = -1; /*Browser.loadURL(new MFString('point.htm'), new MFString('target=score1'));Browser.loadURL(new MFString('chomp1.htm'), new MFString('target=helpertext'));*/return;}
+				if (eatingWhichObject == 3) {numEatenObjects = numEatenObjects + 1; fishSwimSwitcher = -1; /*Browser.loadURL(new MFString('point.htm'), new MFString('target=score2'));Browser.loadURL(new MFString('chomp2.htm'), new MFString('target=helpertext'));*/return;}
+				if (eatingWhichObject == 4) {numEatenObjects = numEatenObjects + 1; fishSwitcher = -1; /*Browser.loadURL(new MFString('point.htm'), new MFString('target=score4'));Browser.loadURL(new MFString('chomp4.htm'), new MFString('target=helpertext'));*/return;}
+				if (eatingWhichObject == 5) {numEatenObjects = numEatenObjects + 1; surferSwitcher = -1; /*Browser.loadURL(new MFString('point.htm'), new MFString('target=score5'));Browser.loadURL(new MFString('chomp5.htm'), new MFString('target=helpertext'));*/return;}
+				if (eatingWhichObject == 6) {numEatenObjects = numEatenObjects + 1; surfer2Switcher = -1; /*Browser.loadURL(new MFString('point.htm'), new MFString('target=score7'));Browser.loadURL(new MFString('chomp7.htm'), new MFString('target=helpertext'));*/return;}				
+				if (eatingWhichObject == 7) {numEatenObjects = numEatenObjects + 1; tuberSwitcher = -1; /*Browser.loadURL(new MFString('point.htm'), new MFString('target=score6'));Browser.loadURL(new MFString('chomp6.htm'), new MFString('target=helpertext'));*/return;}
+				if (eatingWhichObject == 8) {numEatenObjects = numEatenObjects + 1; tuber2Switcher = -1; /*Browser.loadURL(new MFString('point.htm'), new MFString('target=score8'));Browser.loadURL(new MFString('chomp8.htm'), new MFString('target=helpertext'));*/return;}
 			}
 		}
 		function eatingSeagull() {
