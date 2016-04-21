@@ -320,6 +320,7 @@
     <None Include="CubeMapTextures\ViolentDays\ViolentDays-top.jpg" />
     <None Include="Miscellaneous\ubuntu.jpg" />
     <None Include="Miscellaneous\test.png" />
+    <None Include="Effects\fire3.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CubeMapTextures\WideOcean\" />
