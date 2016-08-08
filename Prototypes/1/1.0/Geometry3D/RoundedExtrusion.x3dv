@@ -1,0 +1,229 @@
+#X3D V3.3 utf8 Titania V1.4.8
+
+PROFILE Full
+
+META "comment" "World of Titania"
+META "created" "Sun, 03 Apr 2016 04:01:10 GMT"
+META "creator" "Holger Seelig"
+META "generator" "Titania V1.4.8, http://titania.create3000.de"
+META "identifier" "file:///home/holger/Projekte/Library/Prototypes/1/1.0/Geometry3D/RoundedExtrusion.x3d"
+META "modified" "Mon, 08 Aug 2016 19:42:54 GMT"
+
+PROTO RoundedExtrusion [
+  initializeOnly SFBool     beginCap TRUE
+  initializeOnly SFBool     endCap TRUE
+  initializeOnly SFBool     solid TRUE
+  initializeOnly SFBool     ccw TRUE
+  initializeOnly SFBool     convex TRUE
+  initializeOnly SFFloat    creaseAngle 0
+  inputOutput    MFVec2f    crossSection [
+    1 1,
+    1 -1,
+    -1 -1,
+    -1 1,
+    1 1
+  ]
+  inputOutput    MFRotation orientation 0 0 1 0
+  inputOutput    MFVec2f    scale 1 1
+  inputOutput    MFVec3f    spine [
+    0 0 0,
+    0 1 0
+  ]
+  inputOutput    SFFloat    cornerRadius 1
+  inputOutput    SFInt32    cornerDimension 16
+]
+{
+  DEF _1 Extrusion {
+    beginCap IS beginCap
+    endCap IS endCap
+    solid IS solid
+    ccw IS ccw
+    convex IS convex
+    creaseAngle IS creaseAngle
+    crossSection IS crossSection
+    orientation IS orientation
+    scale IS scale
+  }
+
+  DEF RoundedExtrusionScript Script {
+    inputOutput    MFVec3f spine IS spine
+    inputOutput    SFFloat cornerRadius IS cornerRadius
+    inputOutput    SFInt32 cornerDimension IS cornerDimension
+    initializeOnly SFNode  geometry USE _1
+
+    url "ecmascript:
+
+var
+	identity = new SFRotation (),
+	center   = new SFVec3f ();
+
+function initialize ()
+{
+	eventsProcessed ();
+}
+
+function eventsProcessed ()
+{
+	var roundedSpine = new MFVec3f ();
+
+	if (spine .length)
+		roundedSpine [0] = spine [0];
+
+	for (var i = 1, length = spine .length - 1; i < length; ++ i)
+	{
+		var
+			vector1    = spine [i - 1] .subtract (spine [i]),
+			vector2    = spine [i + 1] .subtract (spine [i]),
+			normal1    = vector1 .normalize (),
+			normal2    = vector2 .normalize (),
+			normal     = normal1 .cross (normal2) .normalize (), // plane normal
+			direction1 = normal1 .cross (normal),                // line direction
+			direction2 = normal2 .cross (normal),                // line direction
+			length1    = vector1 .length (),
+			length2    = vector2 .length (),
+			radius1    = cornerRadius < length1 / 2 ? cornerRadius : length1 / 2,
+			radius2    = cornerRadius < length2 / 2 ? cornerRadius : length2 / 2,
+			radius     = Math .min (radius1, radius2);
+
+		var
+			startPoint = spine [i] .add (normal1 .multiply (radius)),
+			endPoint   = spine [i] .add (normal2 .multiply (radius)),
+			theta      = get_closest_point (startPoint, direction1, endPoint, direction2, center);
+
+		if (Math .abs (theta) >= 1)
+			roundedSpine [roundedSpine .length] = spine [i];
+
+		else
+		{
+		   var
+		      segment1  = startPoint .subtract (center),
+		      segment2  = endPoint   .subtract (center),
+		      rotation  = new SFRotation (segment1, segment2);
+				angle     = Math .PI - Math .acos (clamp (normal1 .dot (normal2), -1, 1)),
+				dimension = Math .round (angle / (2 * Math .PI) * cornerDimension);
+			
+			if (dimension)
+			{
+				roundedSpine [roundedSpine .length] = startPoint;
+
+				for (var d = 1;  d < dimension; ++ d)
+				{
+				   var r = identity .slerp (rotation, d / dimension);
+
+					roundedSpine [roundedSpine .length] = center .add (r .multVec (segment1));
+				}
+
+				roundedSpine [roundedSpine .length] = endPoint;
+			}
+			else
+			   roundedSpine [roundedSpine .length] = spine [i];
+		}
+	}
+
+	if (spine .length > 1)
+		roundedSpine [roundedSpine .length] = spine [spine .length - 1];
+
+	geometry .spine = roundedSpine;
+}
+
+function get_closest_point (point1, direction1, point2, direction2, closestPoint)
+{
+	var
+		theta = direction1 .dot (direction2), // angle between both lines
+		u     = point2 .subtract (point1),
+		t     = (u .dot (direction1) - theta * u .dot (direction2)) / (1 - theta * theta);
+
+	var point = point1 .add (direction1 .multiply (t));
+
+	closestPoint .x = point .x;
+	closestPoint .y = point .y;
+	closestPoint .z = point .z;
+
+	return theta;
+}
+
+function clamp (value, min, max)
+{
+	return value < min ? min : (value > max ? max : value);
+}
+"
+  }
+}
+
+WorldInfo {
+  metadata DEF Titania MetadataSet {
+    name "Titania"
+    reference "http://titania.create3000.de"
+    value [
+      DEF AngleGrid MetadataSet {
+        name "AngleGrid"
+        reference "http://titania.create3000.de"
+        value DEF enabled MetadataBoolean {
+          name "enabled"
+          reference "http://titania.create3000.de"
+          value FALSE
+        }
+      }
+      DEF Grid MetadataSet {
+        name "Grid"
+        reference "http://titania.create3000.de"
+        value DEF enabled_1 MetadataBoolean {
+          name "enabled"
+          reference "http://titania.create3000.de"
+          value TRUE
+        }
+      }
+      DEF NavigationInfo MetadataSet {
+        name "NavigationInfo"
+        reference "http://titania.create3000.de"
+        value DEF type MetadataString {
+          name "type"
+          reference "http://titania.create3000.de"
+          value "EXAMINE"
+        }
+      }
+      DEF Viewpoint MetadataSet {
+        name "Viewpoint"
+        reference "http://titania.create3000.de"
+        value [
+          DEF position MetadataDouble {
+            name "position"
+            reference "http://titania.create3000.de"
+            value [
+              4.40744400024414,
+              3.83242583274841,
+              11.2482719421387
+            ]
+          }
+          DEF orientation MetadataDouble {
+            name "orientation"
+            reference "http://titania.create3000.de"
+            value [
+              -0.654276237355678,
+              0.756188680690693,
+              0.0100640164430718,
+              0.478951594373692
+            ]
+          }
+          DEF centerOfRotation MetadataDouble {
+            name "centerOfRotation"
+            reference "http://titania.create3000.de"
+            value [
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      }
+      DEF Selection MetadataSet {
+        name "Selection"
+        reference "http://titania.create3000.de"
+        value DEF previous MetadataSet {
+          name "previous"
+          reference "http://titania.create3000.de"
+        }
+      }
+    ]
+  }
+}

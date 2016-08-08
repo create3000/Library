@@ -157,6 +157,7 @@
     <None Include="1\1.0\Widgets\RadioButton.x3d" />
     <None Include="1\1.0\Widgets\RadioButton.x3dv" />
     <None Include="1\1.0\Geometry3D\RoundedExtrusion.x3d" />
+    <None Include="1\1.0\Geometry3D\RoundedExtrusion.x3dv" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="0\" />
