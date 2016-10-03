@@ -109,10 +109,10 @@ function set_scene(value, time)
 {
 	found = FALSE;
 	for (i = 0; i < value.length && !found; i++) {
-		if (value[i] == 'Transform { }' && value[i].children.length && value[i].children[0] == 'Scene { }') {
+		if (value[i].toString() == 'Transform { }' && value[i].children.length && value[i].children[0].toString() == 'Scene { }') {
 			found = TRUE;
 			scene = value[i].children[0];
-		} else if (value[i] == 'Scene { }') {
+		} else if (value[i].toString() == 'Scene { }') {
 			found = TRUE;
 			scene = value[i];
 		} 

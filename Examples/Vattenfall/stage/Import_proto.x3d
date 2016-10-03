@@ -93,7 +93,7 @@ function set_url(value, time) { loadUrl(); }
 function set_startTime(value, time) { loadUrl(); }
 function set_children(value, time) {
 	if(isActive){
-		if (value == "Group { }") {
+		if (value.toString() == "Group { }") {
 			data.children = value[0].children;
 		} else {
 			data.children = value;

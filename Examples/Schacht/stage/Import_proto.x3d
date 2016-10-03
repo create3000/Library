@@ -90,7 +90,7 @@ function set_startTime(value, time) { loadUrl(); }
 function set_stopTime(value, time) { isActive = FALSE; exitTime = time; }
 function set_children(value, time) {
 	if(isActive){
-		if (value.length == 1 && value == "Group { }") {
+		if (value.length == 1 && value.toString() == "Group { }") {
 			data.children = value[0].children;
 		} else {
 			data.children = value;
