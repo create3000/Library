@@ -14,7 +14,7 @@
     <Shape>
       <Appearance>
         <MovieTexture DEF='Movie'
-            url='"film4.mp4", "film4.mpv"'
+            url='"film4.mp4", "film4.mpv", "http://titania.create3000.de/fileadmin/cobweb/videos/film4.mp4"'
             loop='true'
             stopTime='1'/>
       </Appearance>
