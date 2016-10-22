@@ -2944,6 +2944,5 @@
     <None Include="Compel\jungle\textures\raindark.png" />
     <None Include="Compel\jungle\textures\strawrf2.png" />
     <None Include="Compel\jungle\textures\strwfrng.png" />
-    <None Include="Vattenfall\stage\film1.N.mp4" />
   </ItemGroup>
 </Project>
