@@ -2944,5 +2944,17 @@
     <None Include="Compel\jungle\textures\raindark.png" />
     <None Include="Compel\jungle\textures\strawrf2.png" />
     <None Include="Compel\jungle\textures\strwfrng.png" />
+    <None Include="Vattenfall\stage\alt\film1.mp4" />
+    <None Include="Vattenfall\stage\alt\film1.mpv" />
+    <None Include="Vattenfall\stage\alt\film2.mp4" />
+    <None Include="Vattenfall\stage\alt\film2.mpv" />
+    <None Include="Vattenfall\stage\alt\film3.mp4" />
+    <None Include="Vattenfall\stage\alt\film3.mpv" />
+    <None Include="Vattenfall\stage\alt\film4.mp4" />
+    <None Include="Vattenfall\stage\alt\film4.mpv" />
+    <None Include="Vattenfall\stage\alt\film5.mp4" />
+    <None Include="Vattenfall\stage\alt\film5.mpv" />
+    <None Include="Vattenfall\stage\alt\film6.mp4" />
+    <None Include="Vattenfall\stage\alt\film6.mpv" />
   </ItemGroup>
 </Project>
