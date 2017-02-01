@@ -98,5 +98,6 @@
     <None Include="Vehicles\X29.x3d" />
     <None Include="Plants\DeathTree.x3dz" />
     <None Include="Vehicles\MURCIELAGO640.x3dz" />
+    <None Include="Plants\ThreeTrees.x3dz" />
   </ItemGroup>
 </Project>
