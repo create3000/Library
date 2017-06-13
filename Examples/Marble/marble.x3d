@@ -5,8 +5,9 @@
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Tue, 22 Sep 2015 11:26:52 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V1.2.0, http://titania.create3000.de'/>
-    <meta name='modified' content='Wed, 04 Nov 2015 14:40:35 GMT'/>
+    <meta name='generator' content='Titania V3.0.4, http://titania.create3000.de'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Examples/Marble/marble.x3d'/>
+    <meta name='modified' content='Tue, 13 Jun 2017 09:24:18 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='Grid'>
@@ -33,7 +34,7 @@
             <connect nodeField='scale' protoField='scale'/>
           </IS>
           <Transform DEF='Plane'
-              rotation='-3.09087e-08 0.707105 0.707108 3.14159'
+              rotation='-3.09087122910219e-08 0.70710528118436 0.707108281185553 3.14159'
               scale='10 10 1'>
             <Shape>
               <Appearance>
@@ -241,7 +242,7 @@ function isMajor (i, dimension, majorLineEvery, majorLineOffset)
 
 	return false;
 }
-]]> 
+]]>
         </Script>
       </ProtoBody>
     </ProtoDeclare>
@@ -271,7 +272,7 @@ function isMajor (i, dimension, majorLineEvery, majorLineOffset)
                 <connect nodeField='scale' protoField='scale'/>
               </IS>
               <Transform DEF='Plane_1'
-                  rotation='-3.09087e-08 0.707105 0.707108 3.14159'
+                  rotation='-3.09087122910219e-08 0.70710528118436 0.707108281185553 3.14159'
                   scale='10 10 1'>
                 <Shape>
                   <Appearance>
@@ -479,7 +480,7 @@ function isMajor (i, dimension, majorLineEvery, majorLineOffset)
 
 	return false;
 }
-]]> 
+]]>
             </Script>
           </ProtoBody>
         </ProtoDeclare>
@@ -531,11 +532,19 @@ function isMajor (i, dimension, majorLineEvery, majorLineOffset)
           <MetadataDouble DEF='orientation' containerField='value'
               name='orientation'
               reference='http://titania.create3000.de'
-              value='-0.921656370162964, -0.377252072095871, -0.0907212719321251, 0.497329384088516'/>
+              value='-0.921656397930821, -0.377252083461801, -0.0907212746653947, 0.497329384088516'/>
           <MetadataDouble DEF='centerOfRotation' containerField='value'
               name='centerOfRotation'
               reference='http://titania.create3000.de'
               value='0, 0, 0'/>
+        </MetadataSet>
+        <MetadataSet DEF='Selection' containerField='value'
+            name='Selection'
+            reference='http://titania.create3000.de'>
+          <MetadataBoolean DEF='selectGeometry' containerField='value'
+              name='selectGeometry'
+              reference='http://titania.create3000.de'
+              value='false'/>
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
@@ -633,7 +642,7 @@ function initialize ()
 {
 	Browser .setBrowserOption ("Shading", "PHONG");
 }
-]]> 
+]]>
     </Script>
     <NavigationInfo/>
     <Background DEF='Gray'
@@ -646,9 +655,8 @@ function initialize ()
         <Viewpoint
             description='Home'
             position='-3.38726 12.9707 12.1553'
-            orientation='-0.947272 -0.299523 -0.113853 0.840082'/>
-        <Transform DEF='SphereRotation'
-            rotation='0.692128 -0.20474 -0.692128 4.66759'>
+            orientation='-0.94727163287453 -0.299522883916634 -0.113852955875043 0.840082'/>
+        <Transform DEF='SphereRotation'>
           <Shape>
             <Appearance>
               <Material DEF='Metal31'
@@ -678,17 +686,17 @@ function initialize ()
         <field accessType='initializeOnly' type='SFNode' name='orientationInterpolator'>
           <OrientationInterpolator DEF='_2'
               key='0, 0.25, 0.5, 0.75, 1'
-              keyValue='-0.512369 0.561327 -0.649916 4.97744, -0.197408 0.437309 -0.877377 5.16092, 0.202152 0.206444 -0.957348 5.15967, 0.515355 -0.032224 -0.856371 4.97425, 0.692128 -0.20474 -0.692128 4.66759'/>
+              keyValue='0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0, 0 0 1 0'/>
         </field>
         <field accessType='initializeOnly' type='SFNode' name='positionInterpolator'>
           <PositionInterpolator DEF='_3'
               key='0, 1'
-              keyValue='0 0 2, 0 0 0'/>
+              keyValue='0 0 0, 0 0 0'/>
         </field>
         <field accessType='initializeOnly' type='SFNode' name='rectangle'>
           <Transform DEF='MarblePositionRectangle'
-              rotation='1 3.62336e-06 -7.567e-10 4.71239'
-              scaleOrientation='1 2.97421e-06 1.60219e-06 0.785189'>
+              rotation='0.999999999993436 3.62335999997621e-06 -7.56699999995033e-10 4.71239'
+              scaleOrientation='0.999999999994294 2.97420999998303e-06 1.60218999999086e-06 0.785189'>
             <Shape>
               <Appearance>
                 <Material DEF='Neon22'
@@ -799,23 +807,23 @@ function roll (direction, rotationAxis, axis, time)
 	
 	rectangle .translation = positionInterpolator .keyValue [1];
 }
-]]> 
+]]>
       </Script>
     </Transform>
     <Transform USE='MarblePositionRectangle'/>
-    <ProtoInstance USE='_4'/>
+    <ProtoInstance name='Grid' USE='_4'/>
     <Script DEF='ItemsScript'>
       <field accessType='inputOnly' type='MFInt32' name='set_position'/>
       <field accessType='inputOutput' type='SFVec3f' name='fieldSize' value='2 0 2'/>
       <field accessType='initializeOnly' type='SFNode' name='item'>
         <Transform DEF='Item'>
           <Transform DEF='_5'
-              rotation='0 -1 0 0.831209'>
+              rotation='0 -1 0 1.88243797221035'>
             <Transform DEF='Rectangle2D'
                 translation='0 1 0'
                 rotation='-3.18379e-14 -9.22889e-14 1 2.35619'
                 scale='0.707107 0.707107 1'
-                scaleOrientation='9.90984e-06 3.06161e-06 1 0.392693'>
+                scaleOrientation='9.90983999946696e-06 3.06160999983532e-06 0.999999999946211 0.392693'>
               <Group DEF='ItemRotationAnim'>
                 <MetadataSet DEF='Animation'
                     name='Animation'
@@ -834,7 +842,7 @@ function roll (direction, rotationAxis, axis, time)
                     loop='true'/>
                 <OrientationInterpolator DEF='RotationInterpolator'
                     key='0, 0.0208333, 0.0416667, 0.0625, 0.0833333, 0.104167, 0.125, 0.145833, 0.166667, 0.1875, 0.208333, 0.229167, 0.25, 0.270833, 0.291667, 0.3125, 0.333333, 0.354167, 0.375, 0.395833, 0.416667, 0.4375, 0.458333, 0.479167, 0.5, 0.520833, 0.541667, 0.5625, 0.583333, 0.604167, 0.625, 0.645833, 0.666667, 0.6875, 0.708333, 0.729167, 0.75, 0.770833, 0.791667, 0.8125, 0.833333, 0.854167, 0.875, 0.895833, 0.916667, 0.9375, 0.958333, 0.979167, 1'
-                    keyValue='0 0 1 0, 0 -1 0 0.124026, 0 -1 0 0.250436, 0 -1 0 0.378893, 0 -1 0 0.509054, 0 -1 0 0.640579, 0 -1 0 0.773126, 0 -1 0 0.906355, 0 -1 0 1.03993, 0 -1 0 1.1735, 0 -1 0 1.30672, 0 -1 0 1.43927, 0 -1 0 1.5708, 0 -1 0 1.70107, 0 -1 0 1.83032, 0 -1 0 1.95889, 0 -1 0 2.08712, 0 -1 0 2.21535, 0 -1 0 2.34392, 0 -1 0 2.47317, 0 -1 0 2.60345, 0 -1 0 2.73509, 0 -1 0 2.86843, 0 -1 0 3.00382, 0 1 0 3.14159, 0 1 0 2.99996, 0 1 0 2.85389, 0 1 0 2.70441, 0 1 0 2.55254, 0 1 0 2.39932, 0 1 0 2.24575, 0 1 0 2.09286, 0 1 0 1.94168, 0 1 0 1.79322, 0 1 0 1.64852, 0 1 0 1.50859, 0 1 0 1.37445, 0 1 0 1.24679, 0 1 0 1.12492, 0 1 0 1.00783, 0 1 0 0.894481, 0 1 0 0.783864, 0 1 0 0.674952, 0 1 0 0.566721, 0 1 0 0.458149, 0 1 0 0.348214, 0 1 0 0.235892, 0 1 0 0.120161, 0 0 1 0'>
+                    keyValue='0 0 1 0, 0 -1 0 0.124026000000001, 0 -1 0 0.250436, 0 -1 0 0.378893, 0 -1 0 0.509054, 0 -1 0 0.640579, 0 -1 0 0.773126, 0 -1 0 0.906355, 0 -1 0 1.03993, 0 -1 0 1.1735, 0 -1 0 1.30672, 0 -1 0 1.43927, 0 -1 0 1.5708, 0 -1 0 1.70107, 0 -1 0 1.83032, 0 -1 0 1.95889, 0 -1 0 2.08712, 0 -1 0 2.21535, 0 -1 0 2.34392, 0 -1 0 2.47317, 0 -1 0 2.60345, 0 -1 0 2.73509, 0 -1 0 2.86843, 0 -1 0 3.00382, 0 1 0 3.14159, 0 1 0 2.99996, 0 1 0 2.85389, 0 1 0 2.70441, 0 1 0 2.55254, 0 1 0 2.39932, 0 1 0 2.24575, 0 1 0 2.09286, 0 1 0 1.94168, 0 1 0 1.79322, 0 1 0 1.64852, 0 1 0 1.50859, 0 1 0 1.37445, 0 1 0 1.24679, 0 1 0 1.12492, 0 1 0 1.00783, 0 1 0 0.894481, 0 1 0 0.783864, 0 1 0 0.674952, 0 1 0 0.566721, 0 1 0 0.458149, 0 1 0 0.348214, 0 1 0 0.235892, 0 1 0 0.120161000000002, 0 0 1 0'>
                   <MetadataSet DEF='Interpolator'
                       name='Interpolator'
                       reference='http://titania.create3000.de'>
@@ -868,8 +876,7 @@ function roll (direction, rotationAxis, axis, time)
                       backEmissiveColor='1 0.0392157 0'
                       backShininess='0.0903955'/>
                 </Appearance>
-                <Rectangle2D
-                    solid='false'/>
+                <Rectangle2D/>
               </Shape>
             </Transform>
           </Transform>
@@ -970,7 +977,7 @@ function roll (direction, rotationAxis, axis, time)
         </Group>
       </field>
       <field accessType='initializeOnly' type='SFNode' name='grid'>
-        <ProtoInstance USE='_4'/>
+        <ProtoInstance name='Grid' USE='_4'/>
       </field>
 <![CDATA[javascript:
 
@@ -999,7 +1006,7 @@ function set_startTime ()
 		transform .children [0] = item;
 		itemGroup .children [i] = transform;
 	}
-}]]> 
+}]]>
     </Script>
     <Group USE='ItemGroup'/>
     <ROUTE fromNode='_1' fromField='fraction_changed' toNode='_3' toField='set_fraction'/>
