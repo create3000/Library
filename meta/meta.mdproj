@@ -20,5 +20,8 @@
       <Link>.bzrignore</Link>
     </None>
     <None Include="meta.mdproj" />
+    <None Include="..\Library.userprefs">
+      <Link>Library.userprefs</Link>
+    </None>
   </ItemGroup>
 </Project>
