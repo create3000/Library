@@ -5,9 +5,10 @@
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Fri, 05 Sep 2014 01:58:48 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V1.2.2, http://titania.create3000.de'/>
+    <meta name='generator' content='Titania V3.0.4, http://titania.create3000.de'/>
     <meta name='icon' content='../../ui/icons/icon-bw.svg'/>
-    <meta name='modified' content='Thu, 07 Jan 2016 11:57:59 GMT'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Layout/info.x3d'/>
+    <meta name='modified' content='Tue, 29 Aug 2017 12:00:50 GMT'/>
     <meta name='title' content='about:info'/>
   </head>
   <Scene>
@@ -48,11 +49,64 @@
           <MetadataDouble DEF='orientation' containerField='value'
               name='orientation'
               reference='http://titania.create3000.de'
-              value='0.992968380451202, -0.052313357591629, -0.106194339692593, 0.00292968773283064'/>
+              value='0.992968316036784, -0.052313354198032, -0.106194332803706, 0.0029296877328307'/>
           <MetadataDouble DEF='centerOfRotation' containerField='value'
               name='centerOfRotation'
               reference='http://titania.create3000.de'
               value='0, 0, 0'/>
+        </MetadataSet>
+        <MetadataSet DEF='Page' containerField='value'
+            name='Page'
+            reference='http://titania.create3000.de'>
+          <MetadataInteger DEF='activeView' containerField='value'
+              name='activeView'
+              reference='http://titania.create3000.de'
+              value='1'/>
+          <MetadataInteger DEF='multiView' containerField='value'
+              name='multiView'
+              reference='http://titania.create3000.de'
+              value='0'/>
+        </MetadataSet>
+        <MetadataSet DEF='Selection' containerField='value'
+            name='Selection'
+            reference='http://titania.create3000.de'>
+          <MetadataBoolean DEF='selectGeometry' containerField='value'
+              name='selectGeometry'
+              reference='http://titania.create3000.de'
+              value='false'/>
+          <MetadataSet DEF='nodes' containerField='value'
+              name='nodes'
+              reference='http://titania.create3000.de'>
+            <Anchor DEF='_1' containerField='value'
+                description='http://titania.create3000.de'
+                url='"http://create3000.de/"'>
+              <Transform DEF='Support'
+                  translation='-0.421689 0.1 1'>
+                <Shape>
+                  <Appearance>
+                    <Material
+                        diffuseColor='0 0 0'/>
+                  </Appearance>
+                  <Text
+                      string='"For additional support please visit", "http://create3000.de."'>
+                    <FontStyle DEF='_2'
+                        family='"PTN57F.ttf", "sans"'
+                        style='NORMAL'
+                        size='0.04'
+                        spacing='1.2'/>
+                  </Text>
+                </Shape>
+              </Transform>
+            </Anchor>
+          </MetadataSet>
+        </MetadataSet>
+        <MetadataSet DEF='LayerSet' containerField='value'
+            name='LayerSet'
+            reference='http://titania.create3000.de'>
+          <MetadataInteger DEF='activeLayer' containerField='value'
+              name='activeLayer'
+              reference='http://titania.create3000.de'
+              value='-1'/>
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
@@ -88,7 +142,7 @@
                 size='1 1'/>
           </Shape>
         </LayoutGroup>
-        <LayoutGroup DEF='Page'>
+        <LayoutGroup DEF='Page_1'>
           <Layout
               scaleMode='"STRETCH", "NONE"'/>
           <Transform
@@ -143,7 +197,6 @@
                   <fieldValue name='loop' value='true'/>
                 </ProtoInstance>
                 <Transform DEF='Logo'
-                    rotation='0 0 -1 2.42353'
                     center='5.6 -5.9 0'>
                   <Inline
                       url='"library/logo.x3dv"'/>
@@ -191,33 +244,14 @@
                   <Text
                       string='"Something special, something more!"'
                       length='0.408361'>
-                    <FontStyle DEF='_1'
+                    <FontStyle
                         family='"PTN57F.ttf", "sans"'
                         style='BOLD'
                         size='0.03'/>
                   </Text>
                 </Shape>
               </Transform>
-              <Anchor
-                  description='http://titania.create3000.de'>
-                <Transform DEF='Support'
-                    translation='-0.421689 0.1 1'>
-                  <Shape>
-                    <Appearance>
-                      <Material
-                          diffuseColor='0 0 0'/>
-                    </Appearance>
-                    <Text
-                        string='"For additional support please visit", "titania.create3000.de."'>
-                      <FontStyle
-                          family='"PTN57F.ttf", "sans"'
-                          style='NORMAL'
-                          size='0.04'
-                          spacing='1.2'/>
-                    </Text>
-                  </Shape>
-                </Transform>
-              </Anchor>
+              <Anchor USE='_1'/>
               <Transform DEF='License'
                   translation='0.262 0.267 1'>
                 <Shape>
@@ -259,7 +293,7 @@
                         diffuseColor='1 1 1'/>
                   </Appearance>
                   <Text DEF='VersionNumberText'
-                      string='"1.2.2"'
+                      string='"3.0.4"'
                       maxExtent='0.65'>
                     <FontStyle
                         family='"PTN77F.ttf", "sans"'
@@ -280,7 +314,7 @@ function initialize ()
 	browser .string = new MFString (Browser .name);
 	version .string = new MFString (Browser .version);
 }
-]]> 
+]]>
                 </Script>
               </Transform>
             </LayoutGroup>
@@ -294,7 +328,7 @@ function initialize ()
 {
 	Browser .setBrowserOption ('Dashboard', false);
 }
-]]> 
+]]>
     </Script>
     <ROUTE fromNode='LogoRotor' fromField='rotation_changed' toNode='Logo' toField='set_rotation'/>
   </Scene>
