@@ -40,7 +40,7 @@ PROTO Rotor [
       angle IS angle
     }
 
-    url "vrmlscript:
+    url "ecmascript:
 
 function initialize ()
 {

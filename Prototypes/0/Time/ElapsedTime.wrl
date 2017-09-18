@@ -18,7 +18,7 @@ PROTO ElapsedTime [
     initializeOnly SFTime startTime 0
     inputOutput    SFTime start 0
 
-    url "vrmlscript:
+    url "ecmascript:
 function initialize ()
 {
 	start = 0;

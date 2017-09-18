@@ -32,7 +32,7 @@ DEF Debug Script {
   inputOnly SFBool set_active
   inputOnly SFTime set_time
 
-  url "vrmlscript:
+  url "ecmascript:
 function set_active (value)
 {
 	print ('set_active: ', value);

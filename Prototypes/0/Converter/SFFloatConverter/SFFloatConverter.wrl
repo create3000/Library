@@ -27,7 +27,7 @@ PROTO SFFloatConverter [
       children IS children
     }
 
-    url "vrmlscript:
+    url "ecmascript:
 function  initialize ()
 {
 	set_children (fields .children);

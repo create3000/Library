@@ -27,7 +27,7 @@ PROTO SFInt32Converter [
       children IS children
     }
 
-    url "vrmlscript:
+    url "ecmascript:
 function  initialize ()
 {
 	set_children (fields .children);

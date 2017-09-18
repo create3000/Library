@@ -31,7 +31,7 @@ PROTO RoundedRectangle2D [
       size IS size
     }
 
-    url "vrmlscript:
+    url "ecmascript:
 
 function initialize ()
 {

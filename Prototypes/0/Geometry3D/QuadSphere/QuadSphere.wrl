@@ -20,7 +20,7 @@ PROTO QuadSphere [
     exposedField SFFloat radius IS radius
     field        SFNode  geometry USE Geometry
 
-    url "vrmlscript:
+    url "ecmascript:
 function initialize ()
 {
 	eventsProcessed ();

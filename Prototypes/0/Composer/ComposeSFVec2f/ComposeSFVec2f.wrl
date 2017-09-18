@@ -23,7 +23,7 @@ PROTO ComposeSFVec2f [
       y IS y
     }
 
-    url "vrmlscript:
+    url "ecmascript:
 
 function set_x (value, time) { }
 function set_y (value, time) { }

@@ -25,7 +25,7 @@ PROTO Torus [
     exposedField SFInt32 majorDimension IS majorDimension
     field SFNode  geometry USE Geometry
 
-    url "vrmlscript:
+    url "ecmascript:
 
 function initialize ()
 {

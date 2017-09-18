@@ -34,7 +34,7 @@ PROTO TriangleSphere [
     field SFFloat  radius IS radius
     field SFNode   geometry USE Geometry
 
-    url "javascript:
+    url "ecmascript:
 
 var p = (1 + Math .sqrt (5)) / 2; // Golden ratio
 
