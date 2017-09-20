@@ -1,0 +1,388 @@
+{ "X3D": {
+    "encoding": "UTF-8",
+    "@profile": "Full",
+    "@version": "3.3",
+    "@xsd:noNamespaceSchemaLocation": "http://www.web3d.org/specifications/x3d-3.3.xsd",
+    "JSON schema": "http://www.web3d.org/specifications/x3d-3.3-JSONSchema.json",
+    "head": {
+      "meta": [
+        {
+          "@name": "comment",
+          "@content": "World of Titania"
+        }
+      ],
+      "unit": [
+        {
+          "@category": "angle",
+          "@name": "degree",
+          "@conversionFactor": 0.0174532925199432958
+        },
+      ]
+    },
+    "Scene": {
+      "-children": [
+        { "ExternProtoDeclare":
+          {
+            "@name":"Grid",
+            "field": [
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFVec3f",
+                "@name": "translation"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFRotation",
+                "@name": "rotation"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFVec3f",
+                "@name": "scale"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "MFInt32",
+                "@name": "dimension"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "MFInt32",
+                "@name": "majorLineEvery"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "MFInt32",
+                "@name": "majorLineOffset"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFVec3f",
+                "@name": "planeOffset"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFColor",
+                "@name": "planeColor"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFFloat",
+                "@name": "planeTransparency"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFColor",
+                "@name": "lineColor"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFFloat",
+                "@name": "lineTransparency"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFColor",
+                "@name": "majorLineColor"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFFloat",
+                "@name": "majorLineTransparency"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFBool",
+                "@name": "numbers"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFVec3f",
+                "@name": "numberOffset"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFNode",
+                "@name": "numberAppearance"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFNode",
+                "@name": "numberFontStyle"
+              },
+              {
+                "@accessType": "initializeOnly",
+                "@type": "SFBool",
+                "@name": "solid"
+              }
+            ],
+            "@url": [ "Grid.x3d#Grid" ]
+          }
+        },
+        { "ExternProtoDeclare":
+          {
+            "@name":"Water3",
+            "field": [
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFFloat",
+                "@name": "amplitude"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFFloat",
+                "@name": "frequency"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFVec2f",
+                "@name": "velocity"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFFloat",
+                "@name": "turbulence"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFFloat",
+                "@name": "contrast"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFFloat",
+                "@name": "skyIntensity"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFColor",
+                "@name": "skyColor"
+              }
+            ],
+            "@url": [ "Water3.x3d#Water3" ]
+          }
+        },
+        { "Background":
+          {
+            "@DEF": "Gray",
+            "@skyColor": [ 0.2, 0.2, 0.2 ]
+          }
+        },
+        { "Viewpoint":
+          {
+            "@description": "Initial View",
+            "@position": [ 0, 0, 7.23798 ],
+            "@centerOfRotation": [ -1.77636e-15, -7.10543e-15, 3.55271e-15 ]
+          }
+        },
+        { "ProtoInstance":
+          {
+            "@name": "Grid",
+            "fieldValue": [
+              {
+                "@name": "rotation",
+                "@value": [ 1, 0, 0, 1.5707963267949 ]
+              },
+              {
+                "@name": "scale",
+                "@value": [ 0.25, 0.25, 0.25 ]
+              },
+              {
+                "@name": "dimension",
+                "@value": [ 20, 0, 20 ]
+              },
+              {
+                "@name": "lineColor",
+                "@value": [ 0, 0, 0 ]
+              },
+              {
+                "@name": "majorLineColor",
+                "@value": [ 0, 0, 0 ]
+              },
+              {
+                "@name": "numbers",
+                "@value": false
+              }
+            ]
+          }
+        },
+        { "Transform":
+          {
+            "@DEF": "Material",
+            "@translation": [ -1.25, 1.25, 0 ],
+            "-children": [
+              { "Shape":
+                {
+                  "-appearance": { "Appearance":
+                    {
+                      "-material": { "Material":
+                        {
+                          "@DEF": "Metal15",
+                          "@ambientIntensity": 0.0787879,
+                          "@diffuseColor": [ 0.315152, 0.0745695, 0 ],
+                          "@specularColor": [ 0.508861, 0.684007, 0.326263 ],
+                          "@shininess": 0.0363636
+                        }
+                      }
+                    }
+                  },
+                  "-geometry": { "Sphere":
+                    {
+                    }
+                  }
+                }
+              },
+              { "TouchSensor":
+                {
+                  "@description": "Material"
+                }
+              }
+            ]
+          }
+        },
+        { "Transform":
+          {
+            "@DEF": "Texture",
+            "@translation": [ -1.31711, -1.2914, 0 ],
+            "-children": [
+              { "Shape":
+                {
+                  "-appearance": { "Appearance":
+                    {
+                      "-material": { "Material":
+                        {
+                        }
+                      },
+                      "-texture": { "ImageTexture":
+                        {
+                          "@url": [ "black-world.jpg" ]
+                        }
+                      }
+                    }
+                  },
+                  "-geometry": { "Sphere":
+                    {
+                    }
+                  }
+                }
+              },
+              { "TouchSensor":
+                {
+                  "@description": "Texture"
+                }
+              }
+            ]
+          }
+        },
+        { "Transform":
+          {
+            "@DEF": "TextureTransform",
+            "@translation": [ 1.25, -1.25, 0 ],
+            "-children": [
+              { "Shape":
+                {
+                  "-appearance": { "Appearance":
+                    {
+                      "-material": { "Material":
+                        {
+                        }
+                      },
+                      "-texture": { "ImageTexture":
+                        {
+                          "@url": [ "color-palette.png" ]
+                        }
+                      },
+                      "-textureTransform": { "TextureTransform":
+                        {
+                          "@scale": [ 8, 8 ]
+                        }
+                      }
+                    }
+                  },
+                  "-geometry": { "Sphere":
+                    {
+                    }
+                  }
+                }
+              },
+              { "TouchSensor":
+                {
+                  "@description": "TextureTransform"
+                }
+              }
+            ]
+          }
+        },
+        { "Transform":
+          {
+            "@DEF": "Shader",
+            "@translation": [ 1.25, 1.25, 0 ],
+            "-children": [
+              { "Shape":
+                {
+                  "-appearance": { "Appearance":
+                    {
+                      "-material": { "Material":
+                        {
+                          "@DEF": "Rococo24",
+                          "@ambientIntensity": 0.226102,
+                          "@diffuseColor": [ 0.292563, 0.566925, 0.924 ],
+                          "@specularColor": [ 0.574, 0.574, 0.574 ],
+                          "@shininess": 0.007
+                        }
+                      },
+                      "-shaders": [
+                        { "ProtoInstance":
+                          {
+                            "@name": "Water3",
+                            "fieldValue": [
+                              {
+                                "@name": "amplitude",
+                                "@value": 0.1
+                              },
+                              {
+                                "@name": "skyIntensity",
+                                "@value": 0.6
+                              },
+                              {
+                                "@name": "skyColor",
+                                "@value": [ 0.5, 0.5, 1 ]
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "-geometry": { "Sphere":
+                    {
+                    }
+                  }
+                }
+              },
+              { "TouchSensor":
+                {
+                  "@description": "Shader"
+                }
+              }
+            ]
+          }
+        },
+        { "Script":
+          {
+            "@DEF": "EnterWorldScript",
+            "#sourceText": [
+"ecmascript:",
+"",
+"function initialize ()",
+"{",
+"\tBrowser .setBrowserOption (\"PrimitiveQuality\", \"HIGH\");",
+"\tBrowser .setBrowserOption (\"Shading\",          \"PHONG\");",
+"}"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

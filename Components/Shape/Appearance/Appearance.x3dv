@@ -1,0 +1,154 @@
+#X3D V3.3 utf8 Titania V3.0.4
+
+PROFILE Full
+
+UNIT angle degree 0.0174532925199432958
+
+META "comment" "World of Titania"
+
+EXTERNPROTO Grid [
+  inputOutput    SFVec3f    translation
+  inputOutput    SFRotation rotation
+  inputOutput    SFVec3f    scale
+  inputOutput    MFInt32    dimension
+  inputOutput    MFInt32    majorLineEvery
+  inputOutput    MFInt32    majorLineOffset
+  inputOutput    SFVec3f    planeOffset
+  inputOutput    SFColor    planeColor
+  inputOutput    SFFloat    planeTransparency
+  inputOutput    SFColor    lineColor
+  inputOutput    SFFloat    lineTransparency
+  inputOutput    SFColor    majorLineColor
+  inputOutput    SFFloat    majorLineTransparency
+  inputOutput    SFBool     numbers
+  inputOutput    SFVec3f    numberOffset
+  inputOutput    SFNode     numberAppearance
+  inputOutput    SFNode     numberFontStyle
+  initializeOnly SFBool     solid
+]
+"Grid.x3d#Grid"
+
+EXTERNPROTO Water3 [
+  inputOutput SFFloat amplitude
+  inputOutput SFFloat frequency
+  inputOutput SFVec2f velocity
+  inputOutput SFFloat turbulence
+  inputOutput SFFloat contrast
+  inputOutput SFFloat skyIntensity
+  inputOutput SFColor skyColor
+]
+"Water3.x3d#Water3"
+
+DEF Gray Background {
+  skyColor 0.2 0.2 0.2
+}
+
+Viewpoint {
+  description "Initial View"
+  position 0 0 7.23798
+  centerOfRotation -1.77636e-15 -7.10543e-15 3.55271e-15
+}
+
+Grid {
+  rotation 1 0 0 1.5707963267949
+  scale 0.25 0.25 0.25
+  dimension [ 20, 0, 20 ]
+  lineColor 0 0 0
+  majorLineColor 0 0 0
+  numbers FALSE
+}
+
+DEF Material Transform {
+  translation -1.25 1.25 0
+  children [
+    Shape {
+      appearance Appearance {
+        material DEF Metal15 Material {
+          ambientIntensity 0.0787879
+          diffuseColor 0.315152 0.0745695 0
+          specularColor 0.508861 0.684007 0.326263
+          shininess 0.0363636
+        }
+      }
+      geometry Sphere { }
+    }
+    TouchSensor {
+      description "Material"
+    }
+  ]
+}
+
+DEF Texture Transform {
+  translation -1.31711 -1.2914 0
+  children [
+    Shape {
+      appearance Appearance {
+        material Material { }
+        texture ImageTexture {
+          url "black-world.jpg"
+        }
+      }
+      geometry Sphere { }
+    }
+    TouchSensor {
+      description "Texture"
+    }
+  ]
+}
+
+DEF TextureTransform Transform {
+  translation 1.25 -1.25 0
+  children [
+    Shape {
+      appearance Appearance {
+        material Material { }
+        texture ImageTexture {
+          url "color-palette.png"
+        }
+        textureTransform TextureTransform {
+          scale 8 8
+        }
+      }
+      geometry Sphere { }
+    }
+    TouchSensor {
+      description "TextureTransform"
+    }
+  ]
+}
+
+DEF Shader Transform {
+  translation 1.25 1.25 0
+  children [
+    Shape {
+      appearance Appearance {
+        material DEF Rococo24 Material {
+          ambientIntensity 0.226102
+          diffuseColor 0.292563 0.566925 0.924
+          specularColor 0.574 0.574 0.574
+          shininess 0.007
+        }
+        shaders Water3 {
+          amplitude 0.1
+          skyIntensity 0.6
+          skyColor 0.5 0.5 1
+        }
+      }
+      geometry Sphere { }
+    }
+    TouchSensor {
+      description "Shader"
+    }
+  ]
+}
+
+DEF EnterWorldScript Script {
+  url "ecmascript:
+
+function initialize ()
+{
+	Browser .setBrowserOption (\"PrimitiveQuality\", \"HIGH\");
+	Browser .setBrowserOption (\"Shading\",          \"PHONG\");
+}
+"
+}

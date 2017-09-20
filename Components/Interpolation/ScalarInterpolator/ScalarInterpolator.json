@@ -1,0 +1,795 @@
+{ "X3D": {
+    "encoding": "UTF-8",
+    "@profile": "Full",
+    "@version": "3.3",
+    "@xsd:noNamespaceSchemaLocation": "http://www.web3d.org/specifications/x3d-3.3.xsd",
+    "JSON schema": "http://www.web3d.org/specifications/x3d-3.3-JSONSchema.json",
+    "head": {
+      "meta": [
+        {
+          "@name": "comment",
+          "@content": "World of Titania"
+        }
+      ]
+    },
+    "Scene": {
+      "-children": [
+        { "ExternProtoDeclare":
+          {
+            "@name":"Grid",
+            "field": [
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFVec3f",
+                "@name": "translation"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFRotation",
+                "@name": "rotation"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFVec3f",
+                "@name": "scale"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "MFInt32",
+                "@name": "dimension"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "MFInt32",
+                "@name": "majorLineEvery"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "MFInt32",
+                "@name": "majorLineOffset"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFVec3f",
+                "@name": "planeOffset"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFColor",
+                "@name": "planeColor"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFFloat",
+                "@name": "planeTransparency"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFColor",
+                "@name": "lineColor"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFFloat",
+                "@name": "lineTransparency"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFColor",
+                "@name": "majorLineColor"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFFloat",
+                "@name": "majorLineTransparency"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFVec3f",
+                "@name": "numberOffset"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFNode",
+                "@name": "numberAppearance"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFNode",
+                "@name": "numberFontStyle"
+              },
+              {
+                "@accessType": "initializeOnly",
+                "@type": "SFBool",
+                "@name": "solid"
+              }
+            ],
+            "@url": [ "Grid.x3d#Grid" ]
+          }
+        },
+        { "ExternProtoDeclare":
+          {
+            "@name":"LineTrail",
+            "field": [
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFTime",
+                "@name": "resetTime"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFVec3f",
+                "@name": "point"
+              },
+              {
+                "@accessType": "inputOutput",
+                "@type": "SFInt32",
+                "@name": "dimension"
+              }
+            ],
+            "@url": [ "LineTrail.x3d#LineTrail" ]
+          }
+        },
+        { "NavigationInfo":
+          {
+            "@type": [ "NONE" ]
+          }
+        },
+        { "Viewpoint":
+          {
+            "@description": "Initial View",
+            "@position": [ 0, 0, 28.9553 ]
+          }
+        },
+        { "Group":
+          {
+            "@DEF": "Grid",
+            "-children": [
+              { "ProtoInstance":
+                {
+                  "@name": "Grid",
+                  "fieldValue": [
+                    {
+                      "@name": "rotation",
+                      "@value": [ 1, 0, 0, 1.5707963 ]
+                    },
+                    {
+                      "@name": "dimension",
+                      "@value": [ 60, 0, 30 ]
+                    },
+                    {
+                      "@name": "planeOffset",
+                      "@value": [ 0, -0.001, 0 ]
+                    },
+                    {
+                      "@name": "planeColor",
+                      "@value": [ 1, 1, 1 ]
+                    },
+                    {
+                      "@name": "planeTransparency",
+                      "@value": 0
+                    },
+                    {
+                      "@name": "lineColor",
+                      "@value": [ 0, 0, 0 ]
+                    },
+                    {
+                      "@name": "majorLineColor",
+                      "@value": [ 0, 0, 0 ]
+                    },
+                    {
+                      "@name": "majorLineTransparency",
+                      "@value": 0.4
+                    },
+                    {
+                      "@name": "numberOffset",
+                      "@value": [ -0.1, 0, 0.14 ]
+                    },
+                    {
+                      "@name": "numberAppearance",
+                      "-children": [
+                        { "Appearance":
+                          {
+                            "-material": { "Material":
+                              {
+                                "@diffuseColor": [ 0, 0, 0 ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "@name": "numberFontStyle",
+                      "-children": [
+                        { "ScreenFontStyle":
+                          {
+                            "@justify": [ "END", "BEGIN" ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              { "TouchSensor":
+                {
+                  "@DEF": "Touch"
+                }
+              },
+              { "Script":
+                {
+                  "@DEF": "PickingScript",
+                  "field": [
+                    {
+                      "@accessType": "inputOnly",
+                      "@type": "SFTime",
+                      "@name": "set_touchTime",
+                    },
+                    {
+                      "@accessType": "inputOnly",
+                      "@type": "SFVec3f",
+                      "@name": "set_hitPoint",
+                    },
+                    {
+                      "@accessType": "inputOutput",
+                      "@type": "SFBool",
+                      "@name": "active",
+                    },
+                    {
+                      "@accessType": "outputOnly",
+                      "@type": "SFTime",
+                      "@name": "doubleClickTime",
+                    },
+                    {
+                      "@accessType": "initializeOnly",
+                      "@type": "SFTime",
+                      "@name": "doubleClickInterval",
+                      "@value": 0.3
+                    },
+                    {
+                      "@accessType": "initializeOnly",
+                      "@type": "SFFloat",
+                      "@name": "pointSize",
+                      "@value": 0.5
+                    },
+                    {
+                      "@accessType": "initializeOnly",
+                      "@type": "SFNode",
+                      "@name": "xInterpolator",
+                      "-children": [
+                        { "ScalarInterpolator":
+                          {
+                            "@DEF": "XInterpolator",
+                            "@key": [ 0, 0.375, 0.75, 1 ],
+                            "@keyValue": [ -20, -5, 10, 20 ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "@accessType": "initializeOnly",
+                      "@type": "SFNode",
+                      "@name": "yInterpolator",
+                      "-children": [
+                        { "ScalarInterpolator":
+                          {
+                            "@DEF": "XInterpolator_1",
+                            "@key": [ -20, -5, 10, 20 ],
+                            "@keyValue": [ -10, 5, -5, 10 ]
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "#sourceText": [
+"ecmascript:",
+"",
+"var",
+"\tfirstTime  = 0,",
+"\tpointIndex = -1,",
+"\thitPoint   = new SFVec2f (),",
+"\toffset     = new SFVec2f ();",
+"",
+"function initialize ()",
+"{",
+"\txInterpolator .key      = new MFFloat (0, 0.375, 0.75, 1);",
+"\txInterpolator .keyValue = new MFFloat (-20, -5, 10, 20);",
+"\tyInterpolator .keyValue = new MFFloat (-10, 5, -5, 10);",
+"}",
+"",
+"function set_touchTime (value, time)",
+"{",
+"\tif (value - firstTime > doubleClickInterval)",
+"\t{",
+"\t\tfirstTime = value;",
+"\t\treturn;",
+"\t}",
+"",
+"\tdoubleClickTime = time;",
+"",
+"\tif (pointIndex < 0 || pointIndex >= xInterpolator .keyValue .length)",
+"\t\taddPoint ();",
+"",
+"\telse",
+"\t\tremovePoint ();",
+"}",
+"",
+"function set_hitPoint (value, time)",
+"{",
+"\thitPoint .x = value .x;",
+"\thitPoint .y = value .y;",
+"",
+"\tif (! active)",
+"\t\treturn;",
+"",
+"\tif (pointIndex < 0 || pointIndex >= xInterpolator .keyValue .length)",
+"\t\treturn;",
+"",
+"\txInterpolator .keyValue [pointIndex] = hitPoint .x + offset .x;",
+"\tyInterpolator .keyValue [pointIndex] = hitPoint .y + offset .y;",
+"}",
+"",
+"function set_active (value, time)",
+"{",
+"\tif (! active)",
+"\t\treturn;",
+"",
+"\tpointIndex = pick (hitPoint);",
+"}",
+"",
+"function pick (hitPoint)",
+"{",
+"\tvar pointIndex = -1;",
+"",
+"\tfor (var i = 0, length = xInterpolator .keyValue .length; i < length; ++ i)",
+"\t{",
+"\t\tvar point = new SFVec2f (xInterpolator .keyValue [i],",
+"\t\t                         yInterpolator .keyValue [i]);",
+"",
+"\t\toffset = point .subtract (hitPoint);",
+"",
+"\t\tif (offset .length () > pointSize)",
+"\t\t\tcontinue;",
+"",
+"\t\tpointIndex = i;",
+"\t\tbreak;",
+"\t}",
+"\t",
+"\treturn pointIndex;",
+"}",
+"",
+"function addPoint ()",
+"{",
+"\tvar pointIndex = getAddPointIndex ()",
+"",
+"\txInterpolator .keyValue .splice (pointIndex, 0, hitPoint .x);",
+"\tyInterpolator .keyValue .splice (pointIndex, 0, hitPoint .y);",
+"\t",
+"\tsetXInterpolatorKey ();",
+"}",
+"",
+"function removePoint ()",
+"{",
+"\tvar pointIndex = getRemovePointIndex ()",
+"",
+"\txInterpolator .keyValue .splice (pointIndex, 1);",
+"\tyInterpolator .keyValue .splice (pointIndex, 1);",
+"\t",
+"\tsetXInterpolatorKey ();",
+"}",
+"",
+"function getAddPointIndex ()",
+"{",
+"\tfor (var i = 0, length = xInterpolator .keyValue .length; i < length; ++ i)",
+"\t{",
+"\t\tif (xInterpolator .keyValue [i] > hitPoint .x)",
+"\t\t\tbreak;",
+"\t}",
+"\t",
+"\treturn i;",
+"}",
+"",
+"function getRemovePointIndex ()",
+"{",
+"\tvar",
+"\t\tfirst = xInterpolator .keyValue [0];",
+"\t\tlast  = xInterpolator .keyValue [xInterpolator .keyValue .length - 1];",
+"",
+"\tif (hitPoint .x < first)",
+"\t\treturn 0;",
+"",
+"\tif (hitPoint .x > last)",
+"\t\treturn xInterpolator .keyValue .length - 1;",
+"",
+"\treturn pick (hitPoint);",
+"}",
+"",
+"function setXInterpolatorKey ()",
+"{",
+"\tif (xInterpolator .keyValue .length)",
+"\t{",
+"\t\tvar",
+"\t\t\tfirst       = xInterpolator .keyValue [0];",
+"\t\t\tlast        = xInterpolator .keyValue [xInterpolator .keyValue .length - 1];",
+"\t\t\tdistance    = last - first,",
+"\t\t\ttotalLength = 0,",
+"\t\t\tlengthSoFar = 0;",
+"",
+"\t\tfor (var i = 1, length = xInterpolator .keyValue .length; i < length; ++ i)",
+"\t\t{",
+"\t\t\tvar point0 = new SFVec2f (xInterpolator .keyValue [i - 1],",
+"\t\t\t\t                       yInterpolator .keyValue [i - 1]);",
+"\t\t\t\t                       ",
+"\t\t\tvar point1 = new SFVec2f (xInterpolator .keyValue [i],",
+"\t\t\t\t                       yInterpolator .keyValue [i]);",
+"\t\t\t\t                      ",
+"\t\t\ttotalLength += point1 .subtract (point0) .length ();",
+"\t\t}",
+"",
+"\t\txInterpolator .key [0] = 0;",
+"",
+"\t\tfor (var i = 1, length = xInterpolator .keyValue .length; i < length; ++ i)",
+"\t\t{",
+"\t\t\tvar point0 = new SFVec2f (xInterpolator .keyValue [i - 1],",
+"\t\t\t\t                       yInterpolator .keyValue [i - 1]);",
+"\t\t\t\t                       ",
+"\t\t\tvar point1 = new SFVec2f (xInterpolator .keyValue [i],",
+"\t\t\t\t                       yInterpolator .keyValue [i]);",
+"\t\t\t\t                      ",
+"\t\t\tlengthSoFar += point1 .subtract (point0) .length ();",
+"\t\t\t",
+"\t\t\txInterpolator .key [i] = lengthSoFar / totalLength;",
+"\t\t}",
+"",
+"\t\txInterpolator .key .length = length;",
+"\t}",
+"\telse",
+"\t{",
+"\t\txInterpolator .key .length = 0;",
+"\t}",
+"}"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        { "Group":
+          {
+            "@DEF": "LineTrail",
+            "-children": [
+              { "TimeSensor":
+                {
+                  "@DEF": "Timer",
+                  "@cycleInterval": 10,
+                  "@loop": true
+                }
+              },
+              { "ScalarInterpolator":
+                {
+                  "@USE": "XInterpolator"
+                }
+              },
+              { "ScalarInterpolator":
+                {
+                  "@USE": "XInterpolator_1"
+                }
+              },
+              { "Script":
+                {
+                  "@DEF": "TrailScript",
+                  "field": [
+                    {
+                      "@accessType": "inputOnly",
+                      "@type": "SFFloat",
+                      "@name": "set_y",
+                    },
+                    {
+                      "@accessType": "outputOnly",
+                      "@type": "SFVec3f",
+                      "@name": "point_changed",
+                    },
+                    {
+                      "@accessType": "initializeOnly",
+                      "@type": "SFNode",
+                      "@name": "xInterpolator",
+                      "-children": [
+                        { "ScalarInterpolator":
+                          {
+                            "@USE": "XInterpolator"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "@accessType": "initializeOnly",
+                      "@type": "SFNode",
+                      "@name": "yInterpolator",
+                      "-children": [
+                        { "ScalarInterpolator":
+                          {
+                            "@USE": "XInterpolator_1"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "#sourceText": [
+"ecmascript:",
+"",
+"function set_y (value, time)",
+"{",
+"\tpoint_changed .x = xInterpolator .value_changed;",
+"\tpoint_changed .y = yInterpolator .value_changed;",
+"}"
+                  ]
+                }
+              },
+              { "Shape":
+                {
+                  "-appearance": { "Appearance":
+                    {
+                      "-lineProperties": { "LineProperties":
+                        {
+                          "@linewidthScaleFactor": 3
+                        }
+                      },
+                      "-material": { "Material":
+                        {
+                          "@emissiveColor": [ 0.552941, 0.270588, 0.14902 ]
+                        }
+                      }
+                    }
+                  },
+                  "-geometry": { "ProtoInstance":
+                    {
+                      "@DEF": "Trail",
+                      "@name": "LineTrail",
+                      "fieldValue": [
+                        {
+                          "@name": "resetTime",
+                          "@value": 1505540070.69239
+                        },
+                        {
+                          "@name": "point",
+                          "@value": [ -4.36295, 4.5753, 0 ]
+                        },
+                        {
+                          "@name": "dimension",
+                          "@value": 1000
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        { "Transform":
+          {
+            "@DEF": "Points",
+            "-children": [
+              { "Script":
+                {
+                  "@DEF": "PointsScript",
+                  "field": [
+                    {
+                      "@accessType": "inputOnly",
+                      "@type": "MFFloat",
+                      "@name": "set_x",
+                    },
+                    {
+                      "@accessType": "inputOnly",
+                      "@type": "MFFloat",
+                      "@name": "set_y",
+                    },
+                    {
+                      "@accessType": "initializeOnly",
+                      "@type": "SFNode",
+                      "@name": "points",
+                      "-children": [
+                        { "Polypoint2D":
+                          {
+                            "@DEF": "_1",
+                            "@point": [ -20, -10, -5, 5, 10, -5, 20, 10 ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "@accessType": "initializeOnly",
+                      "@type": "SFNode",
+                      "@name": "xInterpolator",
+                      "-children": [
+                        { "ScalarInterpolator":
+                          {
+                            "@USE": "XInterpolator"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "@accessType": "initializeOnly",
+                      "@type": "SFNode",
+                      "@name": "yInterpolator",
+                      "-children": [
+                        { "ScalarInterpolator":
+                          {
+                            "@USE": "XInterpolator_1"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "#sourceText": [
+"ecmascript:",
+"",
+"function initialize ()",
+"{",
+"\teventsProcessed ();",
+"}",
+"",
+"function eventsProcessed ()",
+"{",
+"\tfor (var i = 0, length = xInterpolator .keyValue .length; i < length; ++ i)",
+"\t{",
+"\t\tpoints .point [i] .x = xInterpolator .keyValue [i];",
+"\t\tpoints .point [i] .y = yInterpolator .keyValue [i];",
+"\t}",
+"",
+"\tpoints .point .length = i;",
+"}"
+                  ]
+                }
+              },
+              { "Shape":
+                {
+                  "-appearance": { "Appearance":
+                    {
+                      "-lineProperties": { "LineProperties":
+                        {
+                          "@linewidthScaleFactor": 20
+                        }
+                      },
+                      "-material": { "Material":
+                        {
+                          "@emissiveColor": [ 1, 0.75, 0.5 ]
+                        }
+                      }
+                    }
+                  },
+                  "-geometry": { "Polypoint2D":
+                    {
+                      "@USE": "_1"
+                    }
+                  }
+                }
+              },
+              { "Shape":
+                {
+                  "-appearance": { "Appearance":
+                    {
+                      "-lineProperties": { "LineProperties":
+                        {
+                          "@linewidthScaleFactor": 8
+                        }
+                      },
+                      "-material": { "Material":
+                        {
+                          "@emissiveColor": [ 1, 0.5, 0 ]
+                        }
+                      }
+                    }
+                  },
+                  "-geometry": { "Polypoint2D":
+                    {
+                      "@USE": "_1"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        { "ROUTE":
+          {
+            "@fromNode": "XInterpolator",
+            "@fromField": "value_changed",
+            "@toNode": "XInterpolator_1",
+            "@toField": "set_fraction"
+          }
+        },
+        { "ROUTE":
+          {
+            "@fromNode": "Timer",
+            "@fromField": "fraction_changed",
+            "@toNode": "XInterpolator",
+            "@toField": "set_fraction"
+          }
+        },
+        { "ROUTE":
+          {
+            "@fromNode": "XInterpolator_1",
+            "@fromField": "value_changed",
+            "@toNode": "TrailScript",
+            "@toField": "set_y"
+          }
+        },
+        { "ROUTE":
+          {
+            "@fromNode": "TrailScript",
+            "@fromField": "point_changed",
+            "@toNode": "Trail",
+            "@toField": "point"
+          }
+        },
+        { "ROUTE":
+          {
+            "@fromNode": "Timer",
+            "@fromField": "cycleTime",
+            "@toNode": "Trail",
+            "@toField": "resetTime"
+          }
+        },
+        { "ROUTE":
+          {
+            "@fromNode": "XInterpolator",
+            "@fromField": "keyValue",
+            "@toNode": "XInterpolator_1",
+            "@toField": "key"
+          }
+        },
+        { "ROUTE":
+          {
+            "@fromNode": "XInterpolator",
+            "@fromField": "keyValue",
+            "@toNode": "PointsScript",
+            "@toField": "set_x"
+          }
+        },
+        { "ROUTE":
+          {
+            "@fromNode": "XInterpolator_1",
+            "@fromField": "keyValue",
+            "@toNode": "PointsScript",
+            "@toField": "set_y"
+          }
+        },
+        { "ROUTE":
+          {
+            "@fromNode": "Touch",
+            "@fromField": "isActive",
+            "@toNode": "PickingScript",
+            "@toField": "active"
+          }
+        },
+        { "ROUTE":
+          {
+            "@fromNode": "Touch",
+            "@fromField": "hitPoint_changed",
+            "@toNode": "PickingScript",
+            "@toField": "set_hitPoint"
+          }
+        },
+        { "ROUTE":
+          {
+            "@fromNode": "Touch",
+            "@fromField": "touchTime",
+            "@toNode": "PickingScript",
+            "@toField": "set_touchTime"
+          }
+        },
+        { "ROUTE":
+          {
+            "@fromNode": "PickingScript",
+            "@fromField": "doubleClickTime",
+            "@toNode": "Trail",
+            "@toField": "resetTime"
+          }
+        }
+      ]
+    }
+  }
+}

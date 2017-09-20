@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta name='comment' content='World of Titania'/>
+  </head>
+  <Scene>
+    <NavigationInfo DEF='_1'
+        type='"EXAMINE"'
+        transitionType='"ANIMATE"'/>
+    <Background
+        skyAngle='1.5708'
+        skyColor='0.1 0.1 0.1, 0.3 0.3 0.3'
+        groundAngle='1.5708'
+        groundColor='0.1 0.1 0.1, 0.3 0.3 0.3'/>
+    <Viewpoint
+        description='Initial View'
+        position='0 0 3.4142'/>
+    <Transform DEF='TriangleSet2D'>
+      <Shape>
+        <Appearance>
+          <Material DEF='Santafe22'
+              ambientIntensity='0.0791511'
+              diffuseColor='0.322063 0.156723 0.0820722'
+              specularColor='0.296891 0.0591278 0.016358'
+              shininess='0.0319149'/>
+        </Appearance>
+        <TriangleSet2D
+            vertices='2 0.5, 1.5 1.25, 0 0, 0 0, -0.5 -0.5, 1 -1, -2 -0.25, 0 0, -1.25 1'/>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

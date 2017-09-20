@@ -1,0 +1,869 @@
+{ "X3D": {
+    "encoding": "UTF-8",
+    "@profile": "Full",
+    "@version": "3.3",
+    "@xsd:noNamespaceSchemaLocation": "http://www.web3d.org/specifications/x3d-3.3.xsd",
+    "JSON schema": "http://www.web3d.org/specifications/x3d-3.3-JSONSchema.json",
+    "head": {
+      "meta": [
+        {
+          "@name": "comment",
+          "@content": "World of Titania"
+        }
+      ]
+    },
+    "Scene": {
+      "-children": [
+        { "OrthoViewpoint":
+          {
+            "@centerOfRotation": [ -1.77636e-15, -7.10543e-15, 3.55271e-15 ]
+          }
+        },
+        { "Group":
+          {
+            "@DEF": "Words-Never-Spoken",
+            "-children": [
+              { "Group":
+                {
+                  "@DEF": "Animation",
+                  "-metadata": { "MetadataSet":
+                    {
+                      "@DEF": "Animation_1",
+                      "@name": "Animation",
+                      "@reference": "http://titania.create3000.de",
+                      "-value": [
+                        { "MetadataInteger":
+                          {
+                            "@DEF": "duration",
+                            "@name": "duration",
+                            "@reference": "http://titania.create3000.de",
+                            "@value": [ 720 ]
+                          }
+                        },
+                        { "MetadataInteger":
+                          {
+                            "@DEF": "frameRate",
+                            "@name": "frameRate",
+                            "@reference": "http://titania.create3000.de",
+                            "@value": [ 10 ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "-children": [
+                    { "TimeSensor":
+                      {
+                        "@DEF": "AnimationTimer",
+                        "@cycleInterval": 72,
+                        "@loop": true,
+                        "@startTime": 1505684911.83313,
+                        "@stopTime": 1505684911.83312
+                      }
+                    },
+                    { "IntegerSequencer":
+                      {
+                        "@DEF": "WhichChoiceInterpolator",
+                        "-metadata": { "MetadataSet":
+                          {
+                            "@DEF": "Interpolator",
+                            "@name": "Interpolator",
+                            "@reference": "http://titania.create3000.de",
+                            "-value": [
+                              { "MetadataInteger":
+                                {
+                                  "@DEF": "key",
+                                  "@name": "key",
+                                  "@reference": "http://titania.create3000.de",
+                                  "@value": [ 0, 20, 40, 60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300, 320, 340, 360, 380, 400, 420, 440, 460, 480, 500, 520, 540, 560, 580, 600, 620, 640, 660, 680 ]
+                                }
+                              },
+                              { "MetadataDouble":
+                                {
+                                  "@DEF": "keyValue",
+                                  "@name": "keyValue",
+                                  "@reference": "http://titania.create3000.de",
+                                  "@value": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34 ]
+                                }
+                              },
+                              { "MetadataString":
+                                {
+                                  "@DEF": "keyType",
+                                  "@name": "keyType",
+                                  "@reference": "http://titania.create3000.de",
+                                  "@value": [ "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT", "CONSTANT" ]
+                                }
+                              },
+                              { "MetadataInteger":
+                                {
+                                  "@DEF": "keySize",
+                                  "@name": "keySize",
+                                  "@reference": "http://titania.create3000.de",
+                                  "@value": [ 1 ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "@key": [ 0, 0.0277778, 0.0555556, 0.0833333, 0.111111, 0.138889, 0.166667, 0.194444, 0.222222, 0.25, 0.277778, 0.305556, 0.333333, 0.361111, 0.388889, 0.416667, 0.444444, 0.472222, 0.5, 0.527778, 0.555556, 0.583333, 0.611111, 0.638889, 0.666667, 0.694444, 0.722222, 0.75, 0.777778, 0.805556, 0.833333, 0.861111, 0.888889, 0.916667, 0.944444 ],
+                        "@keyValue": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34 ]
+                      }
+                    }
+                  ]
+                }
+              },
+              { "Switch":
+                {
+                  "@DEF": "_1",
+                  "@whichChoice": 0,
+                  "-children": [
+                    { "Transform":
+                      {
+                        "@DEF": "Text",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "I just want " ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@DEF": "_2",
+                                      "@family": [ "NewCenturySchlbk-Roman.otf", "SERIF" ],
+                                      "@size": 0.3,
+                                      "@justify": [ "MIDDLE", "FIRST" ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_1",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "to find a way out" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_2",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "Just one single" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_3",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "easy escape" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_4",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "This path" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_5",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "is the darkest" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_6",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "I have been" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_7",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "I guess" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_8",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "its easier to accuse" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_9",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "than believe..." ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_10",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "just believe." ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Group":
+                      {
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_11",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "I close my eyes" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_12",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "and I see you here" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_13",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "And my heart screams" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_14",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "to hold you near" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_15",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "To see your smile" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_16",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "and to feel your breath" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_17",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "On my face" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_18",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "and on my neck," ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_19",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "right now." ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Group":
+                      {
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_20",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "So many things" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_21",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "I should have said" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_22",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "Too many" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_23",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "I should have done" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_24",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "Shouldn't we give" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_25",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "this one more chance" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_26",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "Without you," ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_27",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "what does" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_28",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "my life amount to?" ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_29",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "Without you," ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_30",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "without you," ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Transform":
+                      {
+                        "@DEF": "Text_31",
+                        "-children": [
+                          { "Shape":
+                            {
+                              "-geometry": { "Text":
+                                {
+                                  "@string": [ "without you..." ],
+                                  "@solid": true,
+                                  "-fontStyle": { "FontStyle":
+                                    {
+                                      "@USE": "_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    { "Group":
+                      {
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        { "NavigationInfo":
+          {
+            "@type": [ "NONE" ]
+          }
+        },
+        { "ROUTE":
+          {
+            "@fromNode": "AnimationTimer",
+            "@fromField": "fraction_changed",
+            "@toNode": "WhichChoiceInterpolator",
+            "@toField": "set_fraction"
+          }
+        },
+        { "ROUTE":
+          {
+            "@fromNode": "WhichChoiceInterpolator",
+            "@fromField": "value_changed",
+            "@toNode": "_1",
+            "@toField": "whichChoice"
+          }
+        }
+      ]
+    }
+  }
+}

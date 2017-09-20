@@ -1,0 +1,356 @@
+#X3D V3.3 utf8 Titania V3.0.4
+
+PROFILE Full
+
+UNIT angle degree 0.0174532925199432958
+
+META "comment" "World of Titania"
+
+NavigationInfo {
+  type "EXAMINE"
+  transitionType "ANIMATE"
+}
+
+DEF Gray Background {
+  skyColor 0.2 0.2 0.2
+}
+
+Viewpoint {
+  description "Initial View"
+  position 88.6625 86.1609 76.3865
+  orientation -0.580909769224258 0.777411062318136 0.241196766572868 0.981087963955961
+  centerOfRotation 7 7 -5
+  fieldOfView 0.185755
+}
+
+DEF Cubes Group {
+  children [
+    Transform {
+      translation 1 1 1
+      children DEF ColorCube Shape {
+        appearance Appearance {
+          material Material { }
+        }
+        geometry IndexedFaceSet {
+          colorIndex [ 0, 0, 0, 0, -1, 0, 0, 0, 0, -1, 2, 2, 2, 2, -1, 2, 2, 2, 2, -1, 1, 1, 1, 1, -1, 1, 1, 1, 1, -1 ]
+          texCoordIndex [ 0, 1, 2, 3, -1, 0, 1, 2, 3, -1, 0, 1, 2, 3, -1, 0, 1, 2, 3, -1, 0, 1, 2, 3, -1, 0, 1, 2, 3, -1 ]
+          coordIndex [ 0, 1, 2, 3, -1, 5, 4, 7, 6, -1, 3, 2, 6, 7, -1, 4, 5, 1, 0, -1, 4, 0, 3, 7, -1, 1, 5, 6, 2, -1 ]
+          color Color {
+            color [ 1 0 0, 1 0.647059 0, 0.117647 0.564706 1 ]
+          }
+          texCoord TextureCoordinate {
+            point [ 0 0, 1 0, 1 1, 0 1 ]
+          }
+          coord Coordinate {
+            point [ -1 -1 1, 1 -1 1, 1 1 1, -1 1 1, -1 -1 -1, 1 -1 -1, 1 1 -1, -1 1 -1 ]
+          }
+        }
+      }
+    }
+    Transform {
+      translation 3 1 1
+      children USE ColorCube
+    }
+    Transform {
+      translation 5 1 1
+      children USE ColorCube
+    }
+    Transform {
+      translation 7 1 1
+      children USE ColorCube
+    }
+    Transform {
+      translation 9 1 1
+      children USE ColorCube
+    }
+    Transform {
+      translation 11 1 1
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 1 1
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 1 -1
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 1 -3
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 1 -5
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 1 -7
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 1 -9
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 1 -11
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 3 -11
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 5 -11
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 5 -9
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 5 -7
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 5 -5
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 5 -3
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 5 -1
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 5 1
+      children USE ColorCube
+    }
+    Transform {
+      translation 11 5 1
+      children USE ColorCube
+    }
+    Transform {
+      translation 9 5 1
+      children USE ColorCube
+    }
+    Transform {
+      translation 7 5 1
+      children USE ColorCube
+    }
+    Transform {
+      translation 5 5 1
+      children USE ColorCube
+    }
+    Transform {
+      translation 3 5 1
+      children USE ColorCube
+    }
+    Transform {
+      translation 1 5 1
+      children USE ColorCube
+    }
+    Transform {
+      translation 1 7 1
+      children USE ColorCube
+    }
+    Transform {
+      translation 1 9 1
+      children USE ColorCube
+    }
+    Transform {
+      translation 3 9 1
+      children USE ColorCube
+    }
+    Transform {
+      translation 5 9 1
+      children USE ColorCube
+    }
+    Transform {
+      translation 7 9 1
+      children USE ColorCube
+    }
+    Transform {
+      translation 9 9 1
+      children USE ColorCube
+    }
+    Transform {
+      translation 11 9 1
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 9 1
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 9 -1
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 9 -3
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 9 -5
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 9 -7
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 9 -9
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 9 -11
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 11 -11
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 13 -11
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 13 -9
+      children USE ColorCube
+    }
+    Transform {
+      translation 13 13 -7
+      children USE ColorCube
+    }
+  ]
+}
+
+DEF Timer TimeSensor {
+  cycleInterval 0.05
+  loop TRUE
+}
+
+DEF CubesScript Script {
+  inputOnly      SFTime  set_time
+  initializeOnly MFInt32 matrix [ 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2, 1, 1, 1, 1, 1, 0, 2 ]
+  initializeOnly SFNode  shape USE ColorCube
+  initializeOnly SFNode  group USE Cubes
+
+  url "ecmascript:
+
+var
+	dimension = 7,
+	offset    = 1
+	size      = 2,
+	position  = [0, 0, 0],
+	cache     = new MFNode ();
+
+function initialize ()
+{
+	cache .assign (group .children);
+	group .children .length = 0;
+
+	for (var i = 0; i < matrix .length; ++ i)
+	{
+		if (matrix [i])
+			matrix [i] = 1;
+	}
+
+	position [0] = 0;
+	position [1] = 0;
+	position [2] = 0;
+
+	createCube (position);
+}
+
+function set_time (value, time)
+{
+	if (getNextPosition (position))
+	{
+		createCube (position);
+	}
+	else
+	{
+		initialize ();
+	}
+}
+
+function getNextPosition (position)
+{
+	var index = getIndex (position [2], position [1], position [0]);
+
+	matrix [index] = 2;
+	
+	for (var zOffset = -1; zOffset < 2; ++ zOffset)
+	{
+		var z = position [2] + zOffset;
+	
+		if (z < 0 || z >= dimension)
+			continue;
+
+		for (var yOffset = -1; yOffset < 2; ++ yOffset)
+		{
+			var y = position [1] + yOffset;
+
+			if (y < 0 || y >= dimension)
+				continue;
+
+			for (var xOffset = -1; xOffset < 2; ++ xOffset)
+			{
+				if (Math .abs (xOffset) + Math .abs (yOffset) + Math .abs (zOffset) > 1)
+					continue;
+				
+				var x = position [0] + xOffset;
+				
+				if (x < 0 || x >= dimension)
+					continue;
+				
+				var next = getIndex (z, y, x);
+				
+				if (matrix [next] == 1)
+				{
+					//print (x, \" \", y, \" \", z, \" \", next, \" \", matrix [next]);
+
+					position [0] = x;
+					position [1] = y;
+					position [2] = z;
+
+					return true;
+				}
+			}
+		}
+	}
+
+	//print (false);
+
+	return false;
+}
+
+function createCube (position)
+{
+	if (cache .length)
+	{
+		var transform = cache .pop ();
+	}
+	else
+	{	
+		var transform = Browser .currentScene .createNode (\"Transform\");
+
+		transform .children .push (shape);
+	}
+
+	transform .translation .x = position [0] * size + offset;
+	transform .translation .y = position [1] * size + offset;
+	transform .translation .z = -position [2] * size + offset;
+	
+	group .children .push (transform);
+}
+
+function getIndex (z, y, x)
+{
+	return (z * dimension * dimension) + (dimension * y) + x;
+}"
+}
+
+ROUTE Timer.cycleTime TO CubesScript.set_time

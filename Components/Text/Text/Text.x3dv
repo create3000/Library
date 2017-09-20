@@ -1,0 +1,51 @@
+#X3D V3.3 utf8 Titania V3.0.4
+
+PROFILE Full
+
+META "comment" "World of Titania"
+
+Background {
+  skyColor 1 1 1
+}
+
+Viewpoint {
+  description "Initial View"
+}
+
+DEF Ubuntu Transform {
+  translation -5.89326 0 0
+  children Shape {
+    appearance Appearance {
+      material Material {
+        ambientIntensity 0
+        diffuseColor 0 0 0
+        shininess 0
+      }
+    }
+    geometry Text {
+      string "Ubuntu"
+      fontStyle FontStyle {
+        family "Ubuntu-B.ttf"
+      }
+    }
+  }
+}
+
+DEF Glyphs Transform {
+  translation -5.89326 0 0
+  children Shape {
+    appearance Appearance {
+      material Material {
+        ambientIntensity 0
+        diffuseColor 0 0 0
+        shininess 0
+      }
+    }
+    geometry Text {
+      string [ "", "ABCDEFGHIJKLMNOP", "QRSTUVWXYZ", "äöüß@€!\"§$%&/()=?\\'" ]
+      fontStyle FontStyle {
+        family "Ubuntu-R.ttf"
+      }
+    }
+  }
+}

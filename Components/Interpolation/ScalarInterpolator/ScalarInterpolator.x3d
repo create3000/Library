@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta name='comment' content='World of Titania'/>
+  </head>
+  <Scene>
+    <ExternProtoDeclare name='Grid' url='"Grid.x3d#Grid"'>
+      <field accessType='inputOutput' type='SFVec3f' name='translation'/>
+      <field accessType='inputOutput' type='SFRotation' name='rotation'/>
+      <field accessType='inputOutput' type='SFVec3f' name='scale'/>
+      <field accessType='inputOutput' type='MFInt32' name='dimension'/>
+      <field accessType='inputOutput' type='MFInt32' name='majorLineEvery'/>
+      <field accessType='inputOutput' type='MFInt32' name='majorLineOffset'/>
+      <field accessType='inputOutput' type='SFVec3f' name='planeOffset'/>
+      <field accessType='inputOutput' type='SFColor' name='planeColor'/>
+      <field accessType='inputOutput' type='SFFloat' name='planeTransparency'/>
+      <field accessType='inputOutput' type='SFColor' name='lineColor'/>
+      <field accessType='inputOutput' type='SFFloat' name='lineTransparency'/>
+      <field accessType='inputOutput' type='SFColor' name='majorLineColor'/>
+      <field accessType='inputOutput' type='SFFloat' name='majorLineTransparency'/>
+      <field accessType='inputOutput' type='SFVec3f' name='numberOffset'/>
+      <field accessType='inputOutput' type='SFNode' name='numberAppearance'/>
+      <field accessType='inputOutput' type='SFNode' name='numberFontStyle'/>
+      <field accessType='initializeOnly' type='SFBool' name='solid'/>
+    </ExternProtoDeclare>
+    <ExternProtoDeclare name='LineTrail' url='"LineTrail.x3d#LineTrail"'>
+      <field accessType='inputOutput' type='SFTime' name='resetTime'/>
+      <field accessType='inputOutput' type='SFVec3f' name='point'/>
+      <field accessType='inputOutput' type='SFInt32' name='dimension'/>
+    </ExternProtoDeclare>
+    <NavigationInfo
+        type='"NONE"'/>
+    <Viewpoint
+        description='Initial View'
+        position='0 0 28.9553'/>
+    <Group DEF='Grid'>
+      <ProtoInstance name='Grid'>
+        <fieldValue name='rotation' value='1 0 0 1.5707963'/>
+        <fieldValue name='dimension' value='60, 0, 30'/>
+        <fieldValue name='planeOffset' value='0 -0.001 0'/>
+        <fieldValue name='planeColor' value='1 1 1'/>
+        <fieldValue name='planeTransparency' value='0'/>
+        <fieldValue name='lineColor' value='0 0 0'/>
+        <fieldValue name='majorLineColor' value='0 0 0'/>
+        <fieldValue name='majorLineTransparency' value='0.4'/>
+        <fieldValue name='numberOffset' value='-0.1 0 0.14'/>
+        <fieldValue name='numberAppearance'>
+          <Appearance DEF='_1' containerField='children'>
+            <Material
+                diffuseColor='0 0 0'/>
+          </Appearance>
+        </fieldValue>
+        <fieldValue name='numberFontStyle'>
+          <ScreenFontStyle DEF='_2' containerField='children'
+              justify='"END", "BEGIN"'/>
+        </fieldValue>
+      </ProtoInstance>
+      <TouchSensor DEF='Touch'/>
+      <Script DEF='PickingScript'>
+        <field accessType='inputOnly' type='SFTime' name='set_touchTime'/>
+        <field accessType='inputOnly' type='SFVec3f' name='set_hitPoint'/>
+        <field accessType='inputOutput' type='SFBool' name='active'/>
+        <field accessType='outputOnly' type='SFTime' name='doubleClickTime'/>
+        <field accessType='initializeOnly' type='SFTime' name='doubleClickInterval' value='0.3'/>
+        <field accessType='initializeOnly' type='SFFloat' name='pointSize' value='0.5'/>
+        <field accessType='initializeOnly' type='SFNode' name='xInterpolator'>
+          <ScalarInterpolator DEF='XInterpolator'
+              key='0, 0.375, 0.75, 1'
+              keyValue='-20, -5, 10, 20'/>
+        </field>
+        <field accessType='initializeOnly' type='SFNode' name='yInterpolator'>
+          <ScalarInterpolator DEF='XInterpolator_1'
+              key='-20, -5, 10, 20'
+              keyValue='-10, 5, -5, 10'/>
+        </field>
+<![CDATA[ecmascript:
+
+var
+	firstTime  = 0,
+	pointIndex = -1,
+	hitPoint   = new SFVec2f (),
+	offset     = new SFVec2f ();
+
+function initialize ()
+{
+	xInterpolator .key      = new MFFloat (0, 0.375, 0.75, 1);
+	xInterpolator .keyValue = new MFFloat (-20, -5, 10, 20);
+	yInterpolator .keyValue = new MFFloat (-10, 5, -5, 10);
+}
+
+function set_touchTime (value, time)
+{
+	if (value - firstTime > doubleClickInterval)
+	{
+		firstTime = value;
+		return;
+	}
+
+	doubleClickTime = time;
+
+	if (pointIndex < 0 || pointIndex >= xInterpolator .keyValue .length)
+		addPoint ();
+
+	else
+		removePoint ();
+}
+
+function set_hitPoint (value, time)
+{
+	hitPoint .x = value .x;
+	hitPoint .y = value .y;
+
+	if (! active)
+		return;
+
+	if (pointIndex < 0 || pointIndex >= xInterpolator .keyValue .length)
+		return;
+
+	xInterpolator .keyValue [pointIndex] = hitPoint .x + offset .x;
+	yInterpolator .keyValue [pointIndex] = hitPoint .y + offset .y;
+}
+
+function set_active (value, time)
+{
+	if (! active)
+		return;
+
+	pointIndex = pick (hitPoint);
+}
+
+function pick (hitPoint)
+{
+	var pointIndex = -1;
+
+	for (var i = 0, length = xInterpolator .keyValue .length; i < length; ++ i)
+	{
+		var point = new SFVec2f (xInterpolator .keyValue [i],
+		                         yInterpolator .keyValue [i]);
+
+		offset = point .subtract (hitPoint);
+
+		if (offset .length () > pointSize)
+			continue;
+
+		pointIndex = i;
+		break;
+	}
+	
+	return pointIndex;
+}
+
+function addPoint ()
+{
+	var pointIndex = getAddPointIndex ()
+
+	xInterpolator .keyValue .splice (pointIndex, 0, hitPoint .x);
+	yInterpolator .keyValue .splice (pointIndex, 0, hitPoint .y);
+	
+	setXInterpolatorKey ();
+}
+
+function removePoint ()
+{
+	var pointIndex = getRemovePointIndex ()
+
+	xInterpolator .keyValue .splice (pointIndex, 1);
+	yInterpolator .keyValue .splice (pointIndex, 1);
+	
+	setXInterpolatorKey ();
+}
+
+function getAddPointIndex ()
+{
+	for (var i = 0, length = xInterpolator .keyValue .length; i < length; ++ i)
+	{
+		if (xInterpolator .keyValue [i] > hitPoint .x)
+			break;
+	}
+	
+	return i;
+}
+
+function getRemovePointIndex ()
+{
+	var
+		first = xInterpolator .keyValue [0];
+		last  = xInterpolator .keyValue [xInterpolator .keyValue .length - 1];
+
+	if (hitPoint .x < first)
+		return 0;
+
+	if (hitPoint .x > last)
+		return xInterpolator .keyValue .length - 1;
+
+	return pick (hitPoint);
+}
+
+function setXInterpolatorKey ()
+{
+	if (xInterpolator .keyValue .length)
+	{
+		var
+			first       = xInterpolator .keyValue [0];
+			last        = xInterpolator .keyValue [xInterpolator .keyValue .length - 1];
+			distance    = last - first,
+			totalLength = 0,
+			lengthSoFar = 0;
+
+		for (var i = 1, length = xInterpolator .keyValue .length; i < length; ++ i)
+		{
+			var point0 = new SFVec2f (xInterpolator .keyValue [i - 1],
+				                       yInterpolator .keyValue [i - 1]);
+				                       
+			var point1 = new SFVec2f (xInterpolator .keyValue [i],
+				                       yInterpolator .keyValue [i]);
+				                      
+			totalLength += point1 .subtract (point0) .length ();
+		}
+
+		xInterpolator .key [0] = 0;
+
+		for (var i = 1, length = xInterpolator .keyValue .length; i < length; ++ i)
+		{
+			var point0 = new SFVec2f (xInterpolator .keyValue [i - 1],
+				                       yInterpolator .keyValue [i - 1]);
+				                       
+			var point1 = new SFVec2f (xInterpolator .keyValue [i],
+				                       yInterpolator .keyValue [i]);
+				                      
+			lengthSoFar += point1 .subtract (point0) .length ();
+			
+			xInterpolator .key [i] = lengthSoFar / totalLength;
+		}
+
+		xInterpolator .key .length = length;
+	}
+	else
+	{
+		xInterpolator .key .length = 0;
+	}
+}
+]]>
+      </Script>
+    </Group>
+    <Group DEF='LineTrail'>
+      <TimeSensor DEF='Timer'
+          cycleInterval='10'
+          loop='true'/>
+      <ScalarInterpolator USE='XInterpolator'/>
+      <ScalarInterpolator USE='XInterpolator_1'/>
+      <Script DEF='TrailScript'>
+        <field accessType='inputOnly' type='SFFloat' name='set_y'/>
+        <field accessType='outputOnly' type='SFVec3f' name='point_changed'/>
+        <field accessType='initializeOnly' type='SFNode' name='xInterpolator'>
+          <ScalarInterpolator USE='XInterpolator'/>
+        </field>
+        <field accessType='initializeOnly' type='SFNode' name='yInterpolator'>
+          <ScalarInterpolator USE='XInterpolator_1'/>
+        </field>
+<![CDATA[ecmascript:
+
+function set_y (value, time)
+{
+	point_changed .x = xInterpolator .value_changed;
+	point_changed .y = yInterpolator .value_changed;
+}
+]]>
+      </Script>
+      <Shape>
+        <Appearance>
+          <LineProperties
+              linewidthScaleFactor='3'/>
+          <Material
+              emissiveColor='0.552941 0.270588 0.14902'/>
+        </Appearance>
+        <ProtoInstance name='LineTrail' DEF='Trail' containerField='geometry'>
+          <fieldValue name='resetTime' value='1505540070.69239'/>
+          <fieldValue name='point' value='-4.36295 4.5753 0'/>
+          <fieldValue name='dimension' value='1000'/>
+        </ProtoInstance>
+      </Shape>
+    </Group>
+    <Transform DEF='Points'>
+      <Script DEF='PointsScript'>
+        <field accessType='inputOnly' type='MFFloat' name='set_x'/>
+        <field accessType='inputOnly' type='MFFloat' name='set_y'/>
+        <field accessType='initializeOnly' type='SFNode' name='points'>
+          <Polypoint2D DEF='_3'
+              point='-20 -10, -5 5, 10 -5, 20 10'/>
+        </field>
+        <field accessType='initializeOnly' type='SFNode' name='xInterpolator'>
+          <ScalarInterpolator USE='XInterpolator'/>
+        </field>
+        <field accessType='initializeOnly' type='SFNode' name='yInterpolator'>
+          <ScalarInterpolator USE='XInterpolator_1'/>
+        </field>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+	eventsProcessed ();
+}
+
+function eventsProcessed ()
+{
+	for (var i = 0, length = xInterpolator .keyValue .length; i < length; ++ i)
+	{
+		points .point [i] .x = xInterpolator .keyValue [i];
+		points .point [i] .y = yInterpolator .keyValue [i];
+	}
+
+	points .point .length = i;
+}
+]]>
+      </Script>
+      <Shape>
+        <Appearance>
+          <LineProperties
+              linewidthScaleFactor='20'/>
+          <Material
+              emissiveColor='1 0.75 0.5'/>
+        </Appearance>
+        <Polypoint2D USE='_3'/>
+      </Shape>
+      <Shape>
+        <Appearance>
+          <LineProperties
+              linewidthScaleFactor='8'/>
+          <Material
+              emissiveColor='1 0.5 0'/>
+        </Appearance>
+        <Polypoint2D USE='_3'/>
+      </Shape>
+    </Transform>
+    <ROUTE fromNode='XInterpolator' fromField='value_changed' toNode='XInterpolator_1' toField='set_fraction'/>
+    <ROUTE fromNode='Timer' fromField='fraction_changed' toNode='XInterpolator' toField='set_fraction'/>
+    <ROUTE fromNode='XInterpolator_1' fromField='value_changed' toNode='TrailScript' toField='set_y'/>
+    <ROUTE fromNode='TrailScript' fromField='point_changed' toNode='Trail' toField='set_point'/>
+    <ROUTE fromNode='Timer' fromField='cycleTime' toNode='Trail' toField='set_resetTime'/>
+    <ROUTE fromNode='XInterpolator' fromField='keyValue_changed' toNode='XInterpolator_1' toField='set_key'/>
+    <ROUTE fromNode='XInterpolator' fromField='keyValue_changed' toNode='PointsScript' toField='set_x'/>
+    <ROUTE fromNode='XInterpolator_1' fromField='keyValue_changed' toNode='PointsScript' toField='set_y'/>
+    <ROUTE fromNode='Touch' fromField='isActive' toNode='PickingScript' toField='set_active'/>
+    <ROUTE fromNode='Touch' fromField='hitPoint_changed' toNode='PickingScript' toField='set_hitPoint'/>
+    <ROUTE fromNode='Touch' fromField='touchTime' toNode='PickingScript' toField='set_touchTime'/>
+    <ROUTE fromNode='PickingScript' fromField='doubleClickTime' toNode='Trail' toField='set_resetTime'/>
+  </Scene>
+</X3D>

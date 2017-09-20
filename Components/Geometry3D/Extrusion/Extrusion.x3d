@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta name='comment' content='World of Titania'/>
+  </head>
+  <Scene>
+    <NavigationInfo DEF='_1'
+        type='"EXAMINE"'
+        transitionType='"ANIMATE"'/>
+    <Background
+        skyAngle='1.5708'
+        skyColor='0.1 0.1 0.1, 0.3 0.3 0.3'
+        groundAngle='1.5708'
+        groundColor='0.1 0.1 0.1, 0.3 0.3 0.3'/>
+    <Viewpoint
+        description='Initial View'
+        position='8.92494 19.2002 22.8518'
+        orientation='-0.890923584466619 0.447534192647981 0.0772548577894703 0.749638995885363'/>
+    <Transform DEF='Extrusion'>
+      <Shape>
+        <Appearance>
+          <Material
+              ambientIntensity='0.712006'
+              diffuseColor='1 1 1'
+              specularColor='1 1 0.7'
+              shininess='0.81'/>
+          <ImageTexture
+              url='"pattern.png"'/>
+          <TextureTransform
+              scale='8 80'/>
+        </Appearance>
+        <Extrusion
+            beginCap='false'
+            endCap='false'
+            creaseAngle='3.14159'
+            crossSection='0 1, 0.587785 0.809017, 0.951057 0.309017, 0.951057 -0.309017, 0.587785 -0.809017, 1.22465e-16 -1, -0.587785 -0.809017, -0.951057 -0.309017, -0.951057 0.309017, -0.587785 0.809017, 0 1'
+            spine='0 0 10, 2.07912 0 9.78148, 4.06737 0 9.13545, 5.87785 0 8.09017, 7.43145 0 6.69131, 8.66025 0 5, 9.51057 0 3.09017, 9.94522 0 1.04528, 9.94522 0 -1.04528, 9.51057 0 -3.09017, 8.66025 0 -5, 7.43145 0 -6.69131, 5.87785 0 -8.09017, 4.06737 0 -9.13545, 2.07912 0 -9.78148, 5.66554e-15 0 -10, -2.07912 0 -9.78148, -4.06737 0 -9.13545, -5.87785 0 -8.09017, -7.43145 0 -6.69131, -8.66025 0 -5, -9.51057 0 -3.09017, -9.94522 0 -1.04528, -9.94522 0 1.04528, -9.51057 0 3.09017, -8.66025 0 5, -7.43145 0 6.69131, -5.87785 0 8.09017, -4.06737 0 9.13545, -2.07912 0 9.78148, 0 0 10'/>
+      </Shape>
+    </Transform>
+    <Script DEF='EnterWorldScript'>
+<![CDATA[ecmascript:
+function initialize ()
+{
+	Browser .setBrowserOption ("Shading",          "PHONG");
+	Browser .setBrowserOption ("PrimitiveQuality", "HIGH");
+}
+]]>
+    </Script>
+  </Scene>
+</X3D>

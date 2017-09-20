@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <unit category='angle' name='degree' conversionFactor='0.0174532925199432958'/>
+    <meta name='comment' content='World of Titania'/>
+  </head>
+  <Scene>
+    <ExternProtoDeclare name='Grid' url='"Grid.x3d#Grid"'>
+      <field accessType='inputOutput' type='SFVec3f' name='translation'/>
+      <field accessType='inputOutput' type='SFRotation' name='rotation'/>
+      <field accessType='inputOutput' type='SFVec3f' name='scale'/>
+      <field accessType='inputOutput' type='MFInt32' name='dimension'/>
+      <field accessType='inputOutput' type='MFInt32' name='majorLineEvery'/>
+      <field accessType='inputOutput' type='MFInt32' name='majorLineOffset'/>
+      <field accessType='inputOutput' type='SFVec3f' name='planeOffset'/>
+      <field accessType='inputOutput' type='SFColor' name='planeColor'/>
+      <field accessType='inputOutput' type='SFFloat' name='planeTransparency'/>
+      <field accessType='inputOutput' type='SFColor' name='lineColor'/>
+      <field accessType='inputOutput' type='SFFloat' name='lineTransparency'/>
+      <field accessType='inputOutput' type='SFColor' name='majorLineColor'/>
+      <field accessType='inputOutput' type='SFFloat' name='majorLineTransparency'/>
+      <field accessType='inputOutput' type='SFBool' name='numbers'/>
+      <field accessType='inputOutput' type='SFVec3f' name='numberOffset'/>
+      <field accessType='inputOutput' type='SFNode' name='numberAppearance'/>
+      <field accessType='inputOutput' type='SFNode' name='numberFontStyle'/>
+      <field accessType='initializeOnly' type='SFBool' name='solid'/>
+    </ExternProtoDeclare>
+    <ExternProtoDeclare name='Water3' url='"Water3.x3d#Water3"'>
+      <field accessType='inputOutput' type='SFFloat' name='amplitude'/>
+      <field accessType='inputOutput' type='SFFloat' name='frequency'/>
+      <field accessType='inputOutput' type='SFVec2f' name='velocity'/>
+      <field accessType='inputOutput' type='SFFloat' name='turbulence'/>
+      <field accessType='inputOutput' type='SFFloat' name='contrast'/>
+      <field accessType='inputOutput' type='SFFloat' name='skyIntensity'/>
+      <field accessType='inputOutput' type='SFColor' name='skyColor'/>
+    </ExternProtoDeclare>
+    <Background DEF='Gray'
+        skyColor='0.2 0.2 0.2'/>
+    <Viewpoint
+        description='Initial View'
+        position='0 0 7.23798'
+        centerOfRotation='-1.77636e-15 -7.10543e-15 3.55271e-15'/>
+    <ProtoInstance name='Grid'>
+      <fieldValue name='rotation' value='1 0 0 1.5707963267949'/>
+      <fieldValue name='scale' value='0.25 0.25 0.25'/>
+      <fieldValue name='dimension' value='20, 0, 20'/>
+      <fieldValue name='lineColor' value='0 0 0'/>
+      <fieldValue name='majorLineColor' value='0 0 0'/>
+      <fieldValue name='numbers' value='false'/>
+    </ProtoInstance>
+    <Transform DEF='Material'
+        translation='-1.25 1.25 0'>
+      <Shape>
+        <Appearance>
+          <Material DEF='Metal15'
+              ambientIntensity='0.0787879'
+              diffuseColor='0.315152 0.0745695 0'
+              specularColor='0.508861 0.684007 0.326263'
+              shininess='0.0363636'/>
+        </Appearance>
+        <Sphere/>
+      </Shape>
+      <TouchSensor
+          description='Material'/>
+    </Transform>
+    <Transform DEF='Texture'
+        translation='-1.31711 -1.2914 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+          <ImageTexture
+              url='"black-world.jpg"'/>
+        </Appearance>
+        <Sphere/>
+      </Shape>
+      <TouchSensor
+          description='Texture'/>
+    </Transform>
+    <Transform DEF='TextureTransform'
+        translation='1.25 -1.25 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+          <ImageTexture
+              url='"color-palette.png"'/>
+          <TextureTransform
+              scale='8 8'/>
+        </Appearance>
+        <Sphere/>
+      </Shape>
+      <TouchSensor
+          description='TextureTransform'/>
+    </Transform>
+    <Transform DEF='Shader'
+        translation='1.25 1.25 0'>
+      <Shape>
+        <Appearance>
+          <Material DEF='Rococo24'
+              ambientIntensity='0.226102'
+              diffuseColor='0.292563 0.566925 0.924'
+              specularColor='0.574 0.574 0.574'
+              shininess='0.007'/>
+          <ProtoInstance name='Water3' containerField='shaders'>
+            <fieldValue name='amplitude' value='0.1'/>
+            <fieldValue name='skyIntensity' value='0.6'/>
+            <fieldValue name='skyColor' value='0.5 0.5 1'/>
+          </ProtoInstance>
+        </Appearance>
+        <Sphere/>
+      </Shape>
+      <TouchSensor
+          description='Shader'/>
+    </Transform>
+    <Script DEF='EnterWorldScript'>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+	Browser .setBrowserOption ("PrimitiveQuality", "HIGH");
+	Browser .setBrowserOption ("Shading",          "PHONG");
+}
+]]>
+    </Script>
+  </Scene>
+</X3D>
