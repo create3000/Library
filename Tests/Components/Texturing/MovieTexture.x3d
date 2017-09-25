@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V3.0.4, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Texturing/MovieTexture.x3d'/>
-    <meta name='modified' content='Mon, 25 Sep 2017 04:08:28 GMT'/>
+    <meta name='modified' content='Mon, 25 Sep 2017 04:10:37 GMT'/>
     <meta name='title' content='MovieTexture'/>
   </head>
   <Scene>
@@ -15,7 +15,9 @@
         skyColor='0.2 0.2 0.2'/>
     <Viewpoint
         description='Home'/>
-    <Transform DEF='MovieTexture'>
+    <Transform DEF='MovieTexture'
+        translation='-0.00617909 1.07765 0'
+        scale='2.39888 2.39888 2.39888'>
       <Shape>
         <Appearance>
           <Material/>
