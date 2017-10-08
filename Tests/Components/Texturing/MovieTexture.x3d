@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V3.0.4, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Texturing/MovieTexture.x3d'/>
-    <meta name='modified' content='Mon, 25 Sep 2017 14:16:59 GMT'/>
+    <meta name='modified' content='Tue, 26 Sep 2017 06:24:31 GMT'/>
     <meta name='title' content='MovieTexture'/>
   </head>
   <Scene>
@@ -22,11 +22,11 @@
         <Appearance>
           <Material/>
           <MovieTexture DEF='Movie'
-              url='"test.mp4", "film1.mp4"'
+              url='"film1.mp4"'
               loop='true'
-              startTime='1506314672.36329'
+              startTime='1506407067.45471'
               pauseTime='1506314681.19818'
-              stopTime='1506348991.92485'
+              stopTime='1506407059.34022'
               repeatS='false'
               repeatT='false'/>
         </Appearance>
