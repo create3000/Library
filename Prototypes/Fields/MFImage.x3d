@@ -6,17 +6,17 @@
   <Scene>
     <ProtoDeclare name='MFImage'>
       <ProtoInterface>
-        <field accessType='inputOutput' type='SFTime' name='triggerTime'/>
+        <field accessType='inputOnly' type='SFTime' name='set_triggerTime'/>
         <field accessType='inputOutput' type='MFImage' name='keyValue'/>
         <field accessType='outputOnly' type='MFImage' name='value_changed'/>
       </ProtoInterface>
       <ProtoBody>
         <Script DEF='MFImage'>
-          <field accessType='inputOutput' type='SFTime' name='triggerTime'/>
+          <field accessType='inputOnly' type='SFTime' name='set_triggerTime'/>
           <field accessType='inputOutput' type='MFImage' name='keyValue'/>
           <field accessType='outputOnly' type='MFImage' name='value_changed'/>
           <IS>
-            <connect nodeField='triggerTime' protoField='triggerTime'/>
+            <connect nodeField='set_triggerTime' protoField='set_triggerTime'/>
             <connect nodeField='keyValue' protoField='keyValue'/>
             <connect nodeField='value_changed' protoField='value_changed'/>
           </IS>

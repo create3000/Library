@@ -1,15 +1,15 @@
-#X3D V3.3 utf8 Titania V3.1.0
+#X3D V3.3 utf8 Titania V3.1.1
 
 PROFILE Full
 
 PROTO SFVec3d [
-  inputOutput SFTime  triggerTime 0
+  inputOnly   SFTime  set_triggerTime
   inputOutput SFVec3d keyValue 0 0 0
   outputOnly  SFVec3d value_changed
 ]
 {
   DEF SFVec3d Script {
-    inputOutput SFTime  triggerTime IS triggerTime
+    inputOnly   SFTime  set_triggerTime IS set_triggerTime
     inputOutput SFVec3d keyValue IS keyValue
     outputOnly  SFVec3d value_changed IS value_changed
 

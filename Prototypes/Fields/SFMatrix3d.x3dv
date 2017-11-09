@@ -1,15 +1,15 @@
-#X3D V3.3 utf8 Titania V3.1.0
+#X3D V3.3 utf8 Titania V3.1.1
 
 PROFILE Full
 
 PROTO SFMatrix3d [
-  inputOutput SFTime     triggerTime 0
+  inputOnly   SFTime     set_triggerTime
   inputOutput SFMatrix3d keyValue 1 0 0 0 1 0 0 0 1
   outputOnly  SFMatrix3d value_changed
 ]
 {
   DEF SFMatrix3d Script {
-    inputOutput SFTime     triggerTime IS triggerTime
+    inputOnly   SFTime     set_triggerTime IS set_triggerTime
     inputOutput SFMatrix3d keyValue IS keyValue
     outputOnly  SFMatrix3d value_changed IS value_changed
 

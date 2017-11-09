@@ -1,15 +1,15 @@
-#X3D V3.3 utf8 Titania V3.1.0
+#X3D V3.3 utf8 Titania V3.1.1
 
 PROFILE Full
 
 PROTO MFColorRGBA [
-  inputOutput SFTime      triggerTime 0
+  inputOnly   SFTime      set_triggerTime
   inputOutput MFColorRGBA keyValue [ ]
   outputOnly  MFColorRGBA value_changed
 ]
 {
   DEF MFColorRGBA Script {
-    inputOutput SFTime      triggerTime IS triggerTime
+    inputOnly   SFTime      set_triggerTime IS set_triggerTime
     inputOutput MFColorRGBA keyValue IS keyValue
     outputOnly  MFColorRGBA value_changed IS value_changed
 

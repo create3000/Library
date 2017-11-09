@@ -1,15 +1,15 @@
-#X3D V3.3 utf8 Titania V3.1.0
+#X3D V3.3 utf8 Titania V3.1.1
 
 PROFILE Full
 
 PROTO SFImage [
-  inputOutput SFTime  triggerTime 0
+  inputOnly   SFTime  set_triggerTime
   inputOutput SFImage keyValue 0 0 0
   outputOnly  SFImage value_changed
 ]
 {
   DEF SFImage Script {
-    inputOutput SFTime  triggerTime IS triggerTime
+    inputOnly   SFTime  set_triggerTime IS set_triggerTime
     inputOutput SFImage keyValue IS keyValue
     outputOnly  SFImage value_changed IS value_changed
 

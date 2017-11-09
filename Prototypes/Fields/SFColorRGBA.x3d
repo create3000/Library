@@ -6,17 +6,17 @@
   <Scene>
     <ProtoDeclare name='SFColorRGBA'>
       <ProtoInterface>
-        <field accessType='inputOutput' type='SFTime' name='triggerTime'/>
+        <field accessType='inputOnly' type='SFTime' name='set_triggerTime'/>
         <field accessType='inputOutput' type='SFColorRGBA' name='keyValue'/>
         <field accessType='outputOnly' type='SFColorRGBA' name='value_changed'/>
       </ProtoInterface>
       <ProtoBody>
         <Script DEF='SFColorRGBA'>
-          <field accessType='inputOutput' type='SFTime' name='triggerTime'/>
+          <field accessType='inputOnly' type='SFTime' name='set_triggerTime'/>
           <field accessType='inputOutput' type='SFColorRGBA' name='keyValue'/>
           <field accessType='outputOnly' type='SFColorRGBA' name='value_changed'/>
           <IS>
-            <connect nodeField='triggerTime' protoField='triggerTime'/>
+            <connect nodeField='set_triggerTime' protoField='set_triggerTime'/>
             <connect nodeField='keyValue' protoField='keyValue'/>
             <connect nodeField='value_changed' protoField='value_changed'/>
           </IS>

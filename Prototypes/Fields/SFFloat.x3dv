@@ -1,15 +1,15 @@
-#X3D V3.3 utf8 Titania V3.1.0
+#X3D V3.3 utf8 Titania V3.1.1
 
 PROFILE Full
 
 PROTO SFFloat [
-  inputOutput SFTime  triggerTime 0
+  inputOnly   SFTime  set_triggerTime
   inputOutput SFFloat keyValue 0
   outputOnly  SFFloat value_changed
 ]
 {
   DEF SFFloat Script {
-    inputOutput SFTime  triggerTime IS triggerTime
+    inputOnly   SFTime  set_triggerTime IS set_triggerTime
     inputOutput SFFloat keyValue IS keyValue
     outputOnly  SFFloat value_changed IS value_changed
 
