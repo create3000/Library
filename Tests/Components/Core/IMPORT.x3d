@@ -5,13 +5,12 @@
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Mon, 11 Jan 2016 23:02:48 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V2.0.1, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite/tests/Components/Core/IMPORT.x3d'/>
-    <meta name='modified' content='Sat, 24 Dec 2016 09:27:22 GMT'/>
-    <meta name='outputStyle' content='nicest'/>
+    <meta name='generator' content='Titania V3.1.1, http://titania.create3000.de'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Core/IMPORT.x3d'/>
+    <meta name='modified' content='Sun, 12 Nov 2017 07:13:17 GMT'/>
   </head>
   <Scene>
-    <ExternProtoDeclare name='Rotor' url='"https://cdn.rawgit.com/create3000/Library/master/Prototypes/1/1.0/Engines/Rotor.x3d", "http://cdn.rawgit.com/create3000/Library/master/Prototypes/1/1.0/Engines/Rotor.x3d", "https://rawgit.com/create3000/Library/master/Prototypes/1/1.0/Engines/Rotor.x3d", "http://rawgit.com/create3000/Library/master/Prototypes/1/1.0/Engines/Rotor.x3d"'>
+    <ExternProtoDeclare name='Rotor' url='"https://cdn.rawgit.com/create3000/Library/1.0.2/Prototypes/Engines/Rotor.x3d", "http://cdn.rawgit.com/create3000/Library/1.0.2/Prototypes/Engines/Rotor.x3d", "https://rawgit.com/create3000/Library/1.0.2/Prototypes/Engines/Rotor.x3d", "http://rawgit.com/create3000/Library/1.0.2/Prototypes/Engines/Rotor.x3d"'>
       <field accessType='inputOutput' type='SFBool' name='enabled'/>
       <field accessType='inputOutput' type='SFTime' name='cycleInterval'/>
       <field accessType='inputOutput' type='SFVec3f' name='axis'/>
@@ -75,7 +74,7 @@
           <MetadataSet DEF='children' containerField='value'
               name='children'
               reference='http://titania.create3000.de'>
-            <Inline DEF='_1' containerField='value'
+            <Inline DEF='_2' containerField='value'
                 url='"EXPORT.x3d"'/>
           </MetadataSet>
           <MetadataSet DEF='previous' containerField='value'
@@ -99,9 +98,10 @@
         </Text>
       </Shape>
     </Transform>
-    <Inline USE='_1'/>
-    <ProtoInstance name='Rotor' DEF='_2'>
+    <Inline USE='_2'/>
+    <ProtoInstance name='Rotor' DEF='_3'>
       <fieldValue name='axis' value='0 0 -1'/>
+      <fieldValue name='startTime' value='1510470794.87107'/>
     </ProtoInstance>
     <Transform DEF='StartRotationButton'
         translation='-1 -3 0'
@@ -116,10 +116,10 @@
         </Appearance>
         <Box/>
       </Shape>
-      <TouchSensor DEF='_3'
+      <TouchSensor DEF='_4'
           description='Toggle Inline load field'/>
-      <BooleanFilter DEF='_4'/>
-      <BooleanToggle DEF='_5'
+      <BooleanFilter DEF='_5'/>
+      <BooleanToggle DEF='_6'
           toggle='true'/>
     </Transform>
     <Transform DEF='RemoveRightRouteButton'
@@ -135,7 +135,7 @@
         </Appearance>
         <Box/>
       </Shape>
-      <TouchSensor DEF='_6'
+      <TouchSensor DEF='_7'
           description='Remove right route'/>
       <Script DEF='RemoveRightRouteScript'>
         <field accessType='inputOnly' type='SFTime' name='set_triggerTime'/>
@@ -162,7 +162,7 @@ function set_triggerTime ()
         scale='0.218041 0.218041 0.218041'>
       <Shape>
         <Appearance>
-          <Material DEF='Rococo12_1'
+          <Material DEF='Rococo12_8'
               ambientIntensity='0.226102'
               diffuseColor='0.388 0.0627924 0.0895634'
               specularColor='0.0955906 0.0955906 0.0955906'
@@ -170,7 +170,7 @@ function set_triggerTime ()
         </Appearance>
         <Box/>
       </Shape>
-      <TouchSensor DEF='_7'
+      <TouchSensor DEF='_9'
           description='Remove right imported node'/>
       <Script DEF='RemoveRightImportedNodeScript'>
         <field accessType='inputOnly' type='SFTime' name='set_triggerTime'/>
@@ -182,16 +182,17 @@ function set_triggerTime (time)
 }]]>
       </Script>
     </Transform>
-    <IMPORT inlineDEF='_1' exportedDEF='Export'/>
-    <IMPORT inlineDEF='_1' exportedDEF='ExportAs' AS='ImportAs'/>
-    <IMPORT inlineDEF='_1' exportedDEF='Touch'/>
-    <ROUTE fromNode='Touch' fromField='touchTime' toNode='_2' toField='set_startTime'/>
-    <ROUTE fromNode='_2' fromField='rotation_changed' toNode='Export' toField='set_rotation'/>
+    <ProtoInstance name='Rotor'/>
+    <IMPORT inlineDEF='_2' exportedDEF='Export'/>
+    <IMPORT inlineDEF='_2' exportedDEF='ExportAs' AS='ImportAs'/>
+    <IMPORT inlineDEF='_2' exportedDEF='Touch'/>
+    <ROUTE fromNode='_6' fromField='toggle_changed' toNode='_2' toField='set_load'/>
+    <ROUTE fromNode='_7' fromField='touchTime' toNode='RemoveRightRouteScript' toField='set_triggerTime'/>
+    <ROUTE fromNode='_4' fromField='isActive' toNode='_5' toField='set_boolean'/>
+    <ROUTE fromNode='_5' fromField='inputFalse' toNode='_6' toField='set_boolean'/>
+    <ROUTE fromNode='_9' fromField='touchTime' toNode='RemoveRightImportedNodeScript' toField='set_triggerTime'/>
     <ROUTE fromNode='Export' fromField='rotation_changed' toNode='ImportAs' toField='set_rotation'/>
-    <ROUTE fromNode='_5' fromField='toggle_changed' toNode='_1' toField='set_load'/>
-    <ROUTE fromNode='_6' fromField='touchTime' toNode='RemoveRightRouteScript' toField='set_triggerTime'/>
-    <ROUTE fromNode='_3' fromField='isActive' toNode='_4' toField='set_boolean'/>
-    <ROUTE fromNode='_4' fromField='inputFalse' toNode='_5' toField='set_boolean'/>
-    <ROUTE fromNode='_7' fromField='touchTime' toNode='RemoveRightImportedNodeScript' toField='set_triggerTime'/>
+    <ROUTE fromNode='Touch' fromField='touchTime' toNode='_3' toField='set_startTime'/>
+    <ROUTE fromNode='_3' fromField='rotation_changed' toNode='Export' toField='set_rotation'/>
   </Scene>
 </X3D>
