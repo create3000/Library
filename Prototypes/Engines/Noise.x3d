@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta name='comment' content='World of Titania'/>
+    <meta name='created' content='Sun, 17 Dec 2017 11:02:55 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Titania V4.0.3, http://titania.create3000.de'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Prototypes/Engines/Noise.x3d'/>
+    <meta name='modified' content='Sun, 17 Dec 2017 11:15:56 GMT'/>
+  </head>
+  <Scene>
+    <ProtoDeclare name='Noise'>
+      <ProtoInterface>
+        <field accessType='inputOutput' type='SFBool' name='enabled' value='true'/>
+        <field accessType='inputOutput' type='SFFloat' name='frequency' value='1'/>
+        <field accessType='inputOutput' type='SFFloat' name='amplitude' value='1'/>
+        <field accessType='inputOutput' type='SFFloat' name='phase' value='1'/>
+        <field accessType='inputOutput' type='SFTime' name='startTime'/>
+        <field accessType='inputOutput' type='SFTime' name='stopTime' value='1'/>
+        <field accessType='outputOnly' type='SFBool' name='isActive'/>
+        <field accessType='outputOnly' type='SFFloat' name='value_changed'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Script DEF='PEACHEYnoise_1'
+            directOutput='true'>
+          <field accessType='inputOnly' type='SFTime' name='set_time'/>
+          <field accessType='inputOutput' type='SFFloat' name='frequency'/>
+          <field accessType='inputOutput' type='SFFloat' name='amplitude'/>
+          <field accessType='inputOutput' type='SFFloat' name='phase'/>
+          <field accessType='outputOnly' type='SFFloat' name='value_changed'/>
+          <field accessType='initializeOnly' type='SFFloat' name='CR00' value='-0.5'/>
+          <field accessType='initializeOnly' type='SFFloat' name='CR01' value='1.5'/>
+          <field accessType='initializeOnly' type='SFFloat' name='CR02' value='-1.5'/>
+          <field accessType='initializeOnly' type='SFFloat' name='CR03' value='0.5'/>
+          <field accessType='initializeOnly' type='SFFloat' name='CR10' value='1'/>
+          <field accessType='initializeOnly' type='SFFloat' name='CR11' value='-2.5'/>
+          <field accessType='initializeOnly' type='SFFloat' name='CR12' value='2'/>
+          <field accessType='initializeOnly' type='SFFloat' name='CR13' value='-0.5'/>
+          <field accessType='initializeOnly' type='SFFloat' name='CR20' value='-0.5'/>
+          <field accessType='initializeOnly' type='SFFloat' name='CR21'/>
+          <field accessType='initializeOnly' type='SFFloat' name='CR22' value='0.5'/>
+          <field accessType='initializeOnly' type='SFFloat' name='CR23'/>
+          <field accessType='initializeOnly' type='SFFloat' name='CR30'/>
+          <field accessType='initializeOnly' type='SFFloat' name='CR31' value='1'/>
+          <field accessType='initializeOnly' type='SFFloat' name='CR32'/>
+          <field accessType='initializeOnly' type='SFFloat' name='CR33'/>
+          <field accessType='initializeOnly' type='SFInt32' name='TABSIZE' value='256'/>
+          <field accessType='initializeOnly' type='SFInt32' name='TABMASK' value='255'/>
+          <field accessType='initializeOnly' type='MFFloat' name='VALUTAB' value='-0.23589, 0.191167, 0.770732, -0.942861, -0.405035, -0.256969, 0.953224, -0.03285, 0.181703, -0.0515821, -0.365402, 0.797955, 0.422049, 0.604867, -0.979862, 0.832574, 0.299443, -0.478821, 0.434169, 0.488716, -0.328321, -0.13717, 0.482534, -0.0538595, 0.812328, 0.683945, -0.623724, -0.608795, 0.751781, -0.594972, 0.727994, -0.0741036, 0.47836, 0.431242, -0.135249, -0.907044, 0.0112002, -0.0209894, -0.628657, -0.689519, -0.754809, -0.510668, 0.185153, -0.711295, 0.294509, 0.754191, 0.108746, -0.281558, -0.175108, -0.931978, -0.911226, -0.825013, -0.433976, 0.339226, 0.0296839, 0.273048, -0.165977, 0.15728, -0.73186, -0.362403, 0.470236, -0.690965, 0.12901, 0.222307, 0.116203, -0.826664, 0.216163, 0.91157, 0.195813, -0.203845, 0.261261, 0.183841, 0.364364, -0.741041, -0.538841, -0.106606, -0.489602, -0.798891, -0.720582, -0.0556532, 0.65987, 0.042592, 0.669903, 0.785123, -0.666646, 0.576484, 0.600306, 0.243297, -0.954304, 0.161042, 0.610914, 0.250095, 0.713668, -0.260596, 0.93881, -0.529414, 0.750855, 0.350407, 0.470158, -0.240072, -0.419803, 0.667078, -0.546887, -0.292197, 0.183252, 0.40992, 0.511355, -0.687509, -0.868566, 0.230122, 0.0431201, 0.0428194, 0.308162, 0.843419, 0.573077, 0.200529, 0.23199, 0.818335, -0.955725, 0.587382, -0.470484, -0.516896, 0.394829, 0.0106473, -0.31702, 0.913619, 0.0589485, 0.127395, -0.308819, 0.900286, -0.73571, 0.532312, -0.266508, -0.83527, -0.83241, -0.164423, 0.315419, -0.0921827, -0.0220838, 0.756589, -0.299658, -0.981452, -0.738179, 0.976191, -0.304276, -0.0411303, -0.392917, 0.644279, 0.0632791, 0.462551, -0.258329, 0.0315179, 0.961209, 0.746777, -0.938046, 0.84316, 0.902858, 0.933185, -0.680866, 0.179778, 0.729743, 0.810606, 0.945273, -0.965995, 0.0481354, 0.944814, -0.829766, -0.445823, -0.532983, 0.451155, 0.688253, -0.914922, -0.198596, -0.50606, -0.822208, 0.212767, 0.168735, -0.237932, -0.539238, 0.694784, 0.607135, -0.206626, -0.492923, -0.751188, -0.516893, 0.0807384, 0.84799, 0.702172, -0.467681, -0.608942, -0.743473, 0.971344, 0.890843, 0.663713, 0.785778, 0.744964, 0.925405, 0.228214, -0.574259, 0.585595, -0.940179, -0.108736, -0.253195, -0.555187, 0.12101, -0.30849, 0.942907, -0.697002, -0.00836467, -0.194182, -0.330188, 0.799467, 0.557587, -0.786067, -0.00612821, 0.310434, -0.922804, 0.288951, -0.375934, -0.0384733, 0.175257, 0.479063, 0.395035, 0.52843, 0.678576, 0.6816, -0.29877, -0.916504, 0.46097, 0.783412, 0.252252, 0.587973, 0.354287, 0.152217, 0.126841, -0.591206, -0.991804, 0.611549, -0.352068, 0.955653, 0.345183, -0.382474, 0.0835837, -0.711567, -0.041671, -0.0213299, -0.401468, -0.363209, 0.438162, -0.479418, 0.238539, -0.696958, 0.190992, -0.404686, 0.0246102, 0.386278'/>
+          <field accessType='initializeOnly' type='MFInt32' name='PERM' value='225, 155, 210, 108, 175, 199, 221, 144, 203, 116, 70, 213, 69, 158, 33, 252, 5, 82, 173, 133, 222, 139, 174, 27, 9, 71, 90, 246, 75, 130, 91, 191, 169, 138, 2, 151, 194, 235, 81, 7, 25, 113, 228, 159, 205, 253, 134, 142, 248, 65, 224, 217, 22, 121, 229, 63, 89, 103, 96, 104, 156, 17, 201, 129, 36, 8, 165, 110, 237, 117, 231, 56, 132, 211, 152, 20, 181, 111, 239, 218, 170, 163, 51, 172, 157, 47, 80, 212, 176, 250, 87, 49, 99, 242, 136, 189, 162, 115, 44, 43, 124, 94, 150, 16, 141, 247, 32, 10, 198, 223, 255, 72, 53, 131, 84, 57, 220, 197, 58, 50, 208, 11, 241, 28, 3, 192, 62, 202, 18, 215, 153, 24, 76, 41, 15, 179, 39, 46, 55, 6, 128, 167, 23, 188, 106, 34, 187, 140, 164, 73, 112, 182, 244, 195, 227, 13, 35, 77, 196, 185, 26, 200, 226, 119, 31, 123, 168, 125, 249, 68, 183, 230, 177, 135, 160, 180, 12, 1, 243, 148, 102, 166, 38, 238, 251, 37, 240, 126, 64, 74, 161, 40, 184, 149, 171, 178, 101, 66, 29, 59, 146, 61, 254, 107, 42, 86, 154, 4, 236, 232, 120, 21, 233, 209, 45, 98, 193, 114, 78, 19, 206, 14, 118, 127, 48, 79, 147, 85, 30, 207, 219, 54, 88, 234, 190, 122, 95, 67, 143, 109, 137, 214, 145, 93, 92, 100, 245, 0, 216, 186, 60, 83, 105, 97, 204, 52'/>
+          <field accessType='initializeOnly' type='SFNode' name='timer'>
+            <TimeSensor DEF='Timer_2'
+                loop='true'>
+              <IS>
+                <connect nodeField='enabled' protoField='enabled'/>
+                <connect nodeField='startTime' protoField='startTime'/>
+                <connect nodeField='stopTime' protoField='stopTime'/>
+                <connect nodeField='isActive' protoField='isActive'/>
+              </IS>
+            </TimeSensor>
+          </field>
+          <field accessType='initializeOnly' type='SFInt32' name='seed'/>
+          <IS>
+            <connect nodeField='frequency' protoField='frequency'/>
+            <connect nodeField='amplitude' protoField='amplitude'/>
+            <connect nodeField='phase' protoField='phase'/>
+            <connect nodeField='value_changed' protoField='value_changed'/>
+          </IS>
+<![CDATA[vrmlscript:
+
+function initialize ()
+{
+	for (i = 0; i < TABSIZE; i++)
+		VALUTAB [i] = 1.0 - 2.0 * Math .random ();
+}
+
+function set_time (time)
+{
+	value_changed = amplitude * vnoise (time * frequency) + phase;
+}
+
+function vnoise (value)
+{
+	var xknots = [ ];
+	var yknots = [ ];
+	var zknots = [ ];
+
+	var ix = Math.floor(value);
+	var fx = value - ix;
+
+	for (k = -1; k <= 2; k ++)
+	{
+		for (j = -1; j <= 2; j ++)
+		{
+			for (i = -1; i <= 2; i ++)
+				xknots [i + 1] = vlattice (ix + i, ix + j, k);
+
+			yknots [j + 1] = spline (fx, 4, xknots);
+		}
+
+		zknots [k + 1] = spline (fx, 4, yknots);
+	}
+
+	return spline (0, 4, zknots);
+}
+
+function spline (x, nknots, knot)
+{
+	var i      = 0;
+	var nspans = nknots - 3;
+
+	if (nspans >= 1)
+	{
+		/* Find the appropriate 4-point span of the spline. */
+		var x    = clamp(x, 0, 1) * nspans;
+		var span = Math.floor(x);
+		
+		if (span >= (nknots - 3))
+			span = (nknots - 3);
+		
+		x -= span;
+		i += span;
+
+		/* Evaluate the span cubic at x using Horners rule. */
+		var c3 = CR00 * knot [0 + i] + CR01 * knot [1 + i] + CR02 * knot [2 + i] + CR03 * knot [3 + i];
+		var c2 = CR10 * knot [0 + i] + CR11 * knot [1 + i] + CR12 * knot [2 + i] + CR13 * knot [3 + i];
+		var c1 = CR20 * knot [0 + i] + CR21 * knot [1 + i] + CR22 * knot [2 + i] + CR23 * knot [3 + i];
+		var c0 = CR30 * knot [0 + i] + CR31 * knot [1 + i] + CR32 * knot [2 + i] + CR33 * knot [3 + i];
+
+		return ((c3 * x + c2) * x + c1) * x + c0;
+	}
+}
+
+function perm (x)
+{
+	return PERM[(x & TABMASK)];
+}
+
+function index (ix, iy, iz)
+{
+	return perm (ix + perm (iy + perm (iz)));
+}
+
+function vlattice (ix, iy, iz)
+{
+	return VALUTAB [index (ix, iy, iz)];
+}
+
+function clamp (x, a, b)
+{
+	return x <= a ? a : (x >= b ? b : x);
+}
+]]>
+        </Script>
+        <ROUTE fromNode='Timer_2' fromField='time' toNode='PEACHEYnoise_1' toField='set_time'/>
+      </ProtoBody>
+    </ProtoDeclare>
+  </Scene>
+</X3D>
