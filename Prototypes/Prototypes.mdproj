@@ -127,6 +127,7 @@
     <None Include="Fields\SFVec3f.x3d" />
     <None Include="Fields\SFVec4d.x3d" />
     <None Include="Fields\SFVec4f.x3d" />
+    <None Include="Engines\Noise.x3d" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Engines\" />
