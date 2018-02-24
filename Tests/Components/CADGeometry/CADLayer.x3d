@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.0.6a, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/CADGeometry/CADLayer.x3d'/>
-    <meta name='modified' content='Sat, 24 Feb 2018 08:13:16 GMT'/>
+    <meta name='modified' content='Sat, 24 Feb 2018 08:27:42 GMT'/>
     <meta name='title' content='CADLayer'/>
   </head>
   <Scene>
@@ -102,7 +102,7 @@
         name='CADAssembly'>
       <CADLayer DEF='_1'
           name='CADLayer'
-          visible='true, true, true'>
+          visible='true, false, true'>
         <CADPart
             name='CADPart'
             translation='-2 0 0'>
