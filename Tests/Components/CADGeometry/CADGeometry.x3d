@@ -6,9 +6,8 @@
     <meta name='created' content='Sat, 24 Feb 2018 08:05:00 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.0.6a, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/Projekte/Titania/Library/Tests/CADGeometry/CADGeometry.wrl'/>
-    <meta name='modified' content='Sat, 24 Feb 2018 08:05:00 GMT'/>
-    <meta name='titania-output-style' content='Nicest'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/CADGeometry/CADGeometry.x3d'/>
+    <meta name='modified' content='Sat, 24 Feb 2018 08:26:48 GMT'/>
   </head>
   <Scene>
     <WorldInfo
@@ -23,6 +22,26 @@
               name='selectGeometry'
               reference='http://titania.create3000.de'
               value='false'/>
+          <MetadataSet DEF='nodes' containerField='value'
+              name='nodes'
+              reference='http://titania.create3000.de'>
+            <Transform DEF='_1' containerField='value'
+                translation='0 3 0'>
+              <Shape>
+                <Appearance DEF='Image'>
+                  <Material/>
+                  <ImageTexture
+                      url='"../images/image.png"'/>
+                </Appearance>
+                <IndexedQuadSet DEF='IndexedQuadSet'
+                    solid='false'
+                    index='0, 1, 2, 3'>
+                  <Coordinate
+                      point='-1 -1 0, 1 -1 0, 1 1 0, -1 1 0'/>
+                </IndexedQuadSet>
+              </Shape>
+            </Transform>
+          </MetadataSet>
         </MetadataSet>
         <MetadataSet DEF='Page' containerField='value'
             name='Page'
@@ -49,12 +68,7 @@
         <Appearance DEF='Grey'>
           <Material/>
         </Appearance>
-        <IndexedQuadSet DEF='IndexedQuadSet'
-            solid='false'
-            index='0, 1, 2, 3'>
-          <Coordinate
-              point='-1 -1 0, 1 -1 0, 1 1 0, -1 1 0'/>
-        </IndexedQuadSet>
+        <IndexedQuadSet USE='IndexedQuadSet'/>
       </Shape>
     </Transform>
     <Transform
@@ -68,17 +82,7 @@
         </QuadSet>
       </Shape>
     </Transform>
-    <Transform
-        translation='0 3 0'>
-      <Shape>
-        <Appearance DEF='Image'>
-          <Material/>
-          <ImageTexture
-              url='"../../../../Titania/Library/Tests/images/image.png"'/>
-        </Appearance>
-        <IndexedQuadSet USE='IndexedQuadSet'/>
-      </Shape>
-    </Transform>
+    <Transform USE='_1'/>
     <Transform
         translation='3 3 0'>
       <Shape>
