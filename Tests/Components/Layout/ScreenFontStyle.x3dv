@@ -1,4 +1,13 @@
-#VRML V2.0 utf8 Titania V2.0.1
+#X3D V3.3 utf8 Titania V4.0.6a
+
+PROFILE Full
+
+META "comment" "World of Titania"
+META "created" "Sun, 25 Feb 2018 08:23:00 GMT"
+META "creator" "Holger Seelig"
+META "generator" "Titania V4.0.6a, http://titania.create3000.de"
+META "identifier" "file:///home/holger/Projekte/Library/Tests/Components/Layout/ScreenFontStyle.x3dv"
+META "modified" "Sun, 25 Feb 2018 08:23:00 GMT"
 
 WorldInfo {
   metadata DEF Titania MetadataSet {
@@ -9,48 +18,24 @@ WorldInfo {
         name "Selection"
         reference "http://titania.create3000.de"
         value [
-          DEF previous MetadataSet {
-            name "previous"
+          DEF selectGeometry MetadataBoolean {
+            name "selectGeometry"
             reference "http://titania.create3000.de"
-            value DEF Text Transform {
-              children [
-                DEF Shape Shape {
-                  appearance Appearance {
-                    material Material {
-                      diffuseColor 1 0 0
-                      specularColor 0 1 0
-                    }
-                  }
-                  geometry DEF Geo Text {
-                    string [
-                      "上海市第二中级人民法院2月18日对“复旦投毒案”依法公开",
-                      "一审宣判，被告人林森浩犯故意杀人罪被判死刑，剥夺政治",
-                      "权利终身。2013年4月，复旦大学研究生黄洋因舍友投毒",
-                      "死亡，年仅28岁。!"
-                    ]
-                    fontStyle ScreenFontStyle {
-                      family [
-                        "Test-XXX",
-                        "-../../../Titania/share/titania/fonts/pt-sans/PTN57F.ttf",
-                        "Arial Unicode MS"
-                      ]
-                      pointSize 11
-                      spacing 1.8
-                      horizontal FALSE
-                      justify [
-                        "BEGIN",
-                        "BEGIN"
-                      ]
-                    }
-                  }
-                }
-                TouchSensor { }
+            value FALSE
+          }
+          DEF nodes MetadataSet {
+            name "nodes"
+            reference "http://titania.create3000.de"
+            value DEF _1 ScreenFontStyle {
+              family "ARIALUNI.TTF"
+              pointSize 11
+              spacing 1.8
+              horizontal FALSE
+              justify [
+                "BEGIN",
+                "BEGIN"
               ]
             }
-          }
-          DEF children MetadataSet {
-            name "children"
-            reference "http://titania.create3000.de"
           }
         ]
       }
@@ -97,6 +82,22 @@ WorldInfo {
           }
         ]
       }
+      DEF Page MetadataSet {
+        name "Page"
+        reference "http://titania.create3000.de"
+        value [
+          DEF activeView MetadataInteger {
+            name "activeView"
+            reference "http://titania.create3000.de"
+            value 1
+          }
+          DEF multiView MetadataInteger {
+            name "multiView"
+            reference "http://titania.create3000.de"
+            value 0
+          }
+        ]
+      }
     ]
   }
   title "ScreenFontStyle"
@@ -135,17 +136,12 @@ DEF Lena Anchor {
     children Shape {
       appearance Appearance {
         texture ImageTexture {
-          url [
-            "../../../Titania/share/titania/Library/Textures/Miscellaneous/lena.jpg",
-            "file:///home/holger/Projekte/Titania/Titania/share/titania/Library/Textures/Miscellaneous/lena.jpg"
-          ]
+          url "../images/lena.jpg"
           repeatS FALSE
           repeatT FALSE
         }
       }
-      geometry Rectangle2D {
-        solid FALSE
-      }
+      geometry Rectangle2D { }
     }
   }
 }
@@ -183,7 +179,28 @@ DEF Axes Transform {
   }
 }
 
-USE Text
+DEF Text Transform {
+  children [
+    DEF Shape Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 0
+          specularColor 0 1 0
+        }
+      }
+      geometry DEF Geo Text {
+        string [
+          "上海市第二中级人民法院2月18日对“复旦投毒案”依法公开",
+          "一审宣判，被告人林森浩犯故意杀人罪被判死刑，剥夺政治",
+          "权利终身。2013年4月，复旦大学研究生黄洋因舍友投毒",
+          "死亡，年仅28岁。!"
+        ]
+        fontStyle USE _1
+      }
+    }
+    TouchSensor { }
+  ]
+}
 
 DEF Debug Script {
   url "vrmlscript:
