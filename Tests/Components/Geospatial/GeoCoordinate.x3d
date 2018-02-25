@@ -6,21 +6,48 @@
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Sun, 10 Apr 2016 01:48:21 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V1.4.1, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite/tests/Components/Geospatial/GeoCoordinate.x3d'/>
-    <meta name='modified' content='Sat, 16 Apr 2016 16:49:21 GMT'/>
+    <meta name='generator' content='Titania V4.0.6a, http://titania.create3000.de'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Geospatial/GeoCoordinate.x3d'/>
+    <meta name='modified' content='Sun, 25 Feb 2018 07:56:16 GMT'/>
   </head>
   <Scene>
-    <ExternProtoDeclare name='QuadSphere' url='"https://cdn.rawgit.com/create3000/Library/master/Prototypes/1/1.0/Geometry3D/QuadSphere.x3d", "http://cdn.rawgit.com/create3000/Library/master/Prototypes/1/1.0/Geometry3D/QuadSphere.x3d", "https://rawgit.com/create3000/Library/master/Prototypes/1/1.0/Geometry3D/QuadSphere.x3d", "http://rawgit.com/create3000/Library/master/Prototypes/1/1.0/Geometry3D/QuadSphere.x3d"'>
+    <ExternProtoDeclare name='QuadSphere' url='"https://cdn.rawgit.com/create3000/Library/1.0.4/Prototypes/Geometry3D/QuadSphere.x3d", "http://cdn.rawgit.com/create3000/Library/1.0.4/Prototypes/Geometry3D/QuadSphere.x3d", "https://rawgit.com/create3000/Library/1.0.4/Prototypes/Geometry3D/QuadSphere.x3d", "http://rawgit.com/create3000/Library/1.0.4/Prototypes/Geometry3D/QuadSphere.x3d"'>
       <field accessType='inputOutput' type='SFInt32' name='uDimension'/>
       <field accessType='inputOutput' type='SFInt32' name='vDimension'/>
       <field accessType='inputOutput' type='SFFloat' name='radius'/>
       <field accessType='initializeOnly' type='SFBool' name='solid'/>
     </ExternProtoDeclare>
+    <WorldInfo
+        title='GeoCoordinate'>
+      <MetadataSet DEF='Titania_1'
+          name='Titania'
+          reference='http://titania.create3000.de'>
+        <MetadataSet DEF='Selection_2' containerField='value'
+            name='Selection'
+            reference='http://titania.create3000.de'>
+          <MetadataBoolean DEF='selectGeometry' containerField='value'
+              name='selectGeometry'
+              reference='http://titania.create3000.de'
+              value='false'/>
+        </MetadataSet>
+        <MetadataSet DEF='Page' containerField='value'
+            name='Page'
+            reference='http://titania.create3000.de'>
+          <MetadataInteger DEF='activeView' containerField='value'
+              name='activeView'
+              reference='http://titania.create3000.de'
+              value='1'/>
+          <MetadataInteger DEF='multiView' containerField='value'
+              name='multiView'
+              reference='http://titania.create3000.de'
+              value='0'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
     <Transform DEF='Earth'
         scale='6.37814e+06 6.37814e+06 6.35675e+06'>
       <Transform DEF='Sphere'
-          rotation='1 0 0 1.57079012795023'>
+          rotation='1 0 0 89.9996448323628'>
         <Shape>
           <Appearance>
             <Material
@@ -63,7 +90,7 @@
         <MetadataSet DEF='Grid' containerField='value'
             name='Grid'
             reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled_1' containerField='value'
+          <MetadataBoolean DEF='enabled_3' containerField='value'
               name='enabled'
               reference='http://titania.create3000.de'
               value='true'/>
@@ -115,14 +142,14 @@
               emissiveColor='1 0 0'/>
         </Appearance>
         <PointSet>
-          <GeoCoordinate DEF='_1'
+          <GeoCoordinate DEF='_4'
               point='0 0 0, 51.31158 12.37115 0, -37.013074 143.98429 0'/>
         </PointSet>
       </Shape>
     </Transform>
-    <Transform DEF='PointSet_1'>
+    <Transform DEF='PointSet_5'>
       <Shape>
-        <Appearance DEF='_2'>
+        <Appearance DEF='_6'>
           <LineProperties
               linewidthScaleFactor='20'/>
           <Material
@@ -135,7 +162,7 @@
         </PointSet>
       </Shape>
       <Shape>
-        <Appearance USE='_2'/>
+        <Appearance USE='_6'/>
         <PointSet>
           <GeoCoordinate
               geoSystem='"UTM", "WE", "Z60", "S"'
@@ -148,26 +175,26 @@
         <IndexedFaceSet DEF='Cube'
             solid='false'
             coordIndex='0, 1, 2, -1'>
-          <GeoCoordinate USE='_1'/>
+          <GeoCoordinate USE='_4'/>
         </IndexedFaceSet>
       </Shape>
     </Transform>
     <GeoViewpoint DEF='GeoViewpoint'
         description='GeoViewpoint 1'
         position='59.0138021102767 14.2092536584956 13061757.4683608'
-        orientation='-0.990200604776192 -0.0977995956564333 -0.0996895249778136 1.58413680623767'
+        orientation='-0.990200604776192 -0.0977995956564333 -0.0996895249778136 90.7643531687519'
         centerOfRotation='-9.86098025956847 -11.5497015008559 -6277396.13213197'/>
     <GeoViewpoint
         description='GeoViewpoint 2'
         position='47.9176027832204 -115.67914270301 13393476.957017'
-        orientation='-0.999972897045324 0.00213829683675326 0.00704505936236741 1.56919614791486'
+        orientation='-0.999972897045324 0.00213829683675326 0.00704505936236741 89.9083165037079'
         centerOfRotation='-9.86098025956761 -11.5497015008554 -6277396.13213197'/>
-    <Viewpoint DEF='Viewpoint_1'
+    <Viewpoint DEF='Viewpoint_7'
         description='Viewpoint'
         position='1.61556e+07 8.00619e+06 9.72771e+06'
-        orientation='-0.291493827316054 -0.504239572059709 -0.812879943537593 4.1321963063271'/>
+        orientation='-0.291493827316054 -0.504239572059709 -0.812879943537593 236.757408472091'/>
     <Background DEF='DesertSky'
-        skyAngle='0.8, 1.2, 1.5, 1.55, 1.5708'
+        skyAngle='45.8366, 68.7549, 85.9437, 88.8085, 90.0002'
         skyColor='0.0196078 0.0196078 0.0196078, 0.054902 0.0705882 0.0862745, 0.203922 0.243137 0.313726, 0.541176 0.462745 0.435294, 0.745098 0.541176 0.376471, 0.890196 0.537255 0.172549'
         groundColor='0 0 0'/>
   </Scene>
