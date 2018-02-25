@@ -5,13 +5,12 @@
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Mon, 02 May 2016 10:03:35 GMT'/>
     <meta name='creator' content='holger'/>
-    <meta name='generator' content='Titania V3.0.1, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite/tests/Components/ParticleSystems/BoundedPhysicsModel.x3d'/>
-    <meta name='modified' content='Thu, 13 Apr 2017 15:30:26 GMT'/>
-    <meta name='outputStyle' content='nicest'/>
+    <meta name='generator' content='Titania V4.0.6a, http://titania.create3000.de'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/ParticleSystems/BoundedPhysicsModel.x3d'/>
+    <meta name='modified' content='Sun, 25 Feb 2018 10:22:55 GMT'/>
   </head>
   <Scene>
-    <ExternProtoDeclare name='IcoSphere' url='"https://cdn.rawgit.com/create3000/Library/master/Prototypes/1/1.0/Geometry3D/IcoSphere.x3d", "http://cdn.rawgit.com/create3000/Library/master/Prototypes/1/1.0/Geometry3D/IcoSphere.x3d", "https://rawgit.com/create3000/Library/master/Prototypes/1/1.0/Geometry3D/IcoSphere.x3d", "http://rawgit.com/create3000/Library/master/Prototypes/1/1.0/Geometry3D/IcoSphere.x3d"'>
+    <ExternProtoDeclare name='IcoSphere' url='"https://cdn.rawgit.com/create3000/Library/1.0.4/Prototypes/Geometry3D/IcoSphere.x3d", "http://cdn.rawgit.com/create3000/Library/1.0.4/Prototypes/Geometry3D/IcoSphere.x3d", "https://rawgit.com/create3000/Library/1.0.4/Prototypes/Geometry3D/IcoSphere.x3d", "http://rawgit.com/create3000/Library/1.0.4/Prototypes/Geometry3D/IcoSphere.x3d"'>
       <field accessType='inputOutput' type='SFString' name='type'/>
       <field accessType='inputOutput' type='SFInt32' name='order'/>
       <field accessType='inputOutput' type='SFFloat' name='radius'/>
@@ -63,6 +62,22 @@
               </Shape>
             </Transform>
           </MetadataSet>
+          <MetadataBoolean DEF='selectGeometry' containerField='value'
+              name='selectGeometry'
+              reference='http://titania.create3000.de'
+              value='false'/>
+        </MetadataSet>
+        <MetadataSet DEF='Page' containerField='value'
+            name='Page'
+            reference='http://titania.create3000.de'>
+          <MetadataInteger DEF='activeView' containerField='value'
+              name='activeView'
+              reference='http://titania.create3000.de'
+              value='1'/>
+          <MetadataInteger DEF='multiView' containerField='value'
+              name='multiView'
+              reference='http://titania.create3000.de'
+              value='0'/>
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
@@ -70,8 +85,7 @@
         skyColor='0.2 0.2 0.2'/>
     <Viewpoint
         description='Viewpoint'
-        position='0 0 15'
-        fieldOfView='0.7854'/>
+        position='0 0 15'/>
     <Transform DEF='Box'>
       <Shape>
         <Appearance>
@@ -92,6 +106,7 @@
     <ParticleSystem DEF='_5'
         geometryType='POINT'
         maxParticles='4000'
+        createParticles='false'
         particleLifetime='30'
         lifetimeVariation='0'
         particleSize='0.1 0.1'
