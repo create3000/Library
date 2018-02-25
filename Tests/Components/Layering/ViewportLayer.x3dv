@@ -1,0 +1,128 @@
+#VRML V2.0 utf8 Titania V0.7.4
+
+EXTERNPROTO Rotor [
+  exposedField SFBool     enabled
+  exposedField SFTime     cycleInterval
+  exposedField SFVec3f    axis
+  exposedField SFFloat    angle
+  exposedField SFBool     loop
+  exposedField SFTime     startTime
+  exposedField SFTime     pauseTime
+  exposedField SFTime     resumeTime
+  exposedField SFTime     stopTime
+  eventOut     SFRotation rotation_changed
+]
+[
+  "../../../Titania/share/titania/Prototypes/0.1/Engines/Rotor.x3dv",
+  "file:///usr/share/titania/Prototypes/0.1/Engines/Rotor.x3dv"
+]
+
+LayerSet {
+  activeLayer 2
+  order [
+    1,
+    2,
+    3,
+    4
+  ]
+  layers [
+    DEF NE Layer {
+      viewport Viewport {
+        clipBoundary [
+          0.51,
+          1,
+          0.51,
+          1
+        ]
+      }
+      children [
+        Viewpoint { }
+        Transform {
+          children DEF Beethoven Transform {
+            children Inline {
+              url "../Geometry3D/Beethoven.wrl"
+            }
+          }
+        }
+        DEF Gray Background {
+          skyColor 0.2 0.2 0.2
+        }
+      ]
+    }
+    DEF SE Layer {
+      viewport Viewport {
+        clipBoundary [
+          0.51,
+          1,
+          0,
+          0.49
+        ]
+      }
+      children [
+        Viewpoint {
+          position 3.37595 7.13251 8.61918
+          orientation -0.556812 0.536966 0.633741 0.969805
+        }
+        Transform {
+          children USE Beethoven
+        }
+        DEF Gray1 Background {
+          skyColor 0.3 0.3 0.3
+        }
+        TouchSensor { }
+      ]
+    }
+    DEF SW Layer {
+      viewport Viewport {
+        clipBoundary [
+          0,
+          0.49,
+          0,
+          0.49
+        ]
+      }
+      children [
+        Viewpoint {
+          position 0 10 0
+          orientation -1 -0 -0 1.5708
+        }
+        Transform {
+          children USE Beethoven
+        }
+        DEF Gray2 Background {
+          skyColor 0.4 0.4 0.4
+        }
+      ]
+    }
+    DEF NW Layer {
+      viewport Viewport {
+        clipBoundary [
+          0,
+          0.49,
+          0.51,
+          1
+        ]
+      }
+      children [
+        Viewpoint {
+          position 10 0 0
+          orientation 0 1 0 1.5708
+        }
+        Transform {
+          children USE Beethoven
+        }
+        DEF Gray3 Background {
+          skyColor 0.5 0.5 0.5
+        }
+      ]
+    }
+  ]
+}
+
+DEF Rotor Rotor {
+  cycleInterval 10
+  axis 0 -1 0
+  loop TRUE
+}
+
+ROUTE Rotor.rotation_changed TO Beethoven.set_rotation
