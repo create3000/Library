@@ -5,8 +5,9 @@
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Sat, 26 Dec 2015 20:37:24 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V1.2.2, http://titania.create3000.de'/>
-    <meta name='modified' content='Sat, 02 Jan 2016 03:04:18 GMT'/>
+    <meta name='generator' content='Titania V4.0.6a, http://titania.create3000.de'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Shaders/Fields.x3d'/>
+    <meta name='modified' content='Sun, 25 Feb 2018 11:11:42 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -37,82 +38,17 @@
               reference='http://titania.create3000.de'
               value='0, 0, 0'/>
         </MetadataSet>
-      </MetadataSet>
-    </WorldInfo>
-    <Transform DEF='Sphere'>
-      <Shape>
-        <Appearance>
-          <ComposedShader DEF='CobwebShader'
-              language='GLSL'>
-            <field accessType='initializeOnly' type='SFBool' name='sfbool'/>
-            <field accessType='initializeOnly' type='SFColor' name='sfcolor'/>
-            <field accessType='initializeOnly' type='SFColorRGBA' name='sfcolorrgba'/>
-            <field accessType='initializeOnly' type='SFDouble' name='sfdouble'/>
-            <field accessType='initializeOnly' type='SFFloat' name='sffloat'/>
-            <field accessType='initializeOnly' type='SFImage' name='sfimage' value='3 5 2 0xffff 0xffff 0xffff 0 0 0xffff 0xffff 0xffff 0xffff 0 0 0xffff 0xffff 0xffff 0xffff'/>
-            <field accessType='initializeOnly' type='SFInt32' name='sfint32'/>
-            <field accessType='initializeOnly' type='SFMatrix3d' name='sfmatrix3d'/>
-            <field accessType='initializeOnly' type='SFMatrix3f' name='sfmatrix3f'/>
-            <field accessType='initializeOnly' type='SFMatrix4d' name='sfmatrix4d'/>
-            <field accessType='initializeOnly' type='SFMatrix4f' name='sfmatrix4f'/>
-            <field accessType='initializeOnly' type='SFNode' name='sfnode'>
-              <ImageTexture DEF='_1'
-                  url='"../images/ubuntu.png"'/>
-            </field>
-            <field accessType='initializeOnly' type='SFRotation' name='sfrotation'/>
-            <field accessType='initializeOnly' type='SFString' name='sfstring'/>
-            <field accessType='initializeOnly' type='SFTime' name='sftime'/>
-            <field accessType='initializeOnly' type='SFVec2d' name='sfvec2d'/>
-            <field accessType='initializeOnly' type='SFVec2f' name='sfvec2f'/>
-            <field accessType='initializeOnly' type='SFVec3d' name='sfvec3d'/>
-            <field accessType='initializeOnly' type='SFVec3f' name='sfvec3f'/>
-            <field accessType='initializeOnly' type='SFVec4d' name='sfvec4d'/>
-            <field accessType='initializeOnly' type='SFVec4f' name='sfvec4f'/>
-            <field accessType='initializeOnly' type='MFBool' name='mfbool'/>
-            <field accessType='initializeOnly' type='MFColor' name='mfcolor'/>
-            <field accessType='initializeOnly' type='MFColorRGBA' name='mfcolorrgba'/>
-            <field accessType='initializeOnly' type='MFDouble' name='mfdouble'/>
-            <field accessType='initializeOnly' type='MFFloat' name='mffloat'/>
-            <field accessType='initializeOnly' type='MFImage' name='mfimage' value='3 5 2 0xffff 0xffff 0xffff 0 0 0xffff 0xffff 0xffff 0xffff 0 0 0xffff 0xffff 0xffff 0xffff'/>
-            <field accessType='initializeOnly' type='MFInt32' name='mfint32'/>
-            <field accessType='initializeOnly' type='MFMatrix3d' name='mfmatrix3d'/>
-            <field accessType='initializeOnly' type='MFMatrix3f' name='mfmatrix3f'/>
-            <field accessType='initializeOnly' type='MFMatrix4d' name='mfmatrix4d'/>
-            <field accessType='initializeOnly' type='MFMatrix4f' name='mfmatrix4f'/>
-            <field accessType='initializeOnly' type='MFNode' name='mfnode'>
-              <ImageTexture USE='_1'/>
-            </field>
-            <field accessType='initializeOnly' type='MFRotation' name='mfrotation'/>
-            <field accessType='initializeOnly' type='MFString' name='mfstring'/>
-            <field accessType='initializeOnly' type='MFTime' name='mftime'/>
-            <field accessType='initializeOnly' type='MFVec2d' name='mfvec2d'/>
-            <field accessType='initializeOnly' type='MFVec2f' name='mfvec2f'/>
-            <field accessType='initializeOnly' type='MFVec3d' name='mfvec3d'/>
-            <field accessType='initializeOnly' type='MFVec3f' name='mfvec3f'/>
-            <field accessType='initializeOnly' type='MFVec4d' name='mfvec4d'/>
-            <field accessType='initializeOnly' type='MFVec4f' name='mfvec4f'/>
-            <ShaderPart DEF='CobweVertex'>
-<![CDATA[data:text/plain,
-
-precision mediump float;
-
-uniform mat4 x3d_ProjectionMatrix;
-uniform mat4 x3d_ModelViewMatrix;
-
-attribute vec4 x3d_TexCoord;
-attribute vec4 x3d_Vertex;
-
-varying vec4 texCoord;
-
-void
-main ()
-{
-	gl_Position = x3d_ProjectionMatrix * x3d_ModelViewMatrix * x3d_Vertex;
-
-	texCoord = x3d_TexCoord;
-}]]> 
-            </ShaderPart>
-            <ShaderPart DEF='CobwebFragment'
+        <MetadataSet DEF='Selection' containerField='value'
+            name='Selection'
+            reference='http://titania.create3000.de'>
+          <MetadataBoolean DEF='selectGeometry' containerField='value'
+              name='selectGeometry'
+              reference='http://titania.create3000.de'
+              value='false'/>
+          <MetadataSet DEF='nodes' containerField='value'
+              name='nodes'
+              reference='http://titania.create3000.de'>
+            <ShaderPart DEF='CobwebFragment' containerField='value'
                 type='FRAGMENT'>
 <![CDATA[data:text/plain,
 
@@ -130,7 +66,7 @@ uniform mat3      sfmatrix3f;
 uniform mat4      sfmatrix4d;
 uniform mat4      sfmatrix4f;
 uniform sampler2D sfnode;
-uniform vec4      sfrotation;
+uniform mat3      sfrotation;
 uniform float     sftime;
 uniform vec2      sfvec2d;
 uniform vec2      sfvec2f;
@@ -150,7 +86,7 @@ uniform mat3      mfmatrix3f [2];
 uniform mat4      mfmatrix4d [2];
 uniform mat4      mfmatrix4f [2];
 uniform sampler2D mfnode [2];
-uniform vec4      mfrotation [2];
+uniform mat3      mfrotation [2];
 uniform vec4      mfstring [2];
 uniform float     mftime [2];
 uniform vec2      mfvec2d [2];
@@ -184,7 +120,7 @@ main ()
 	x += sfmatrix4d [0] .x;
 	x += sfmatrix4f [0] .x;
 	x += texture2D (sfnode, vec2 (0, 0)) .r;
-	x += sfrotation [0];
+	x += sfrotation [0] [0];
 	x += sftime;
 	x += sfvec2d [0];
 	x += sfvec2f [0];
@@ -204,7 +140,7 @@ main ()
 	x += mfmatrix4d [0] [0] .x;
 	x += mfmatrix4f [0] [0] .x;
 	x += texture2D (mfnode [0], vec2 (0, 0)) .r;
-	x += mfrotation [0] [0];
+	x += mfrotation [0] [0] [0];
 	x += mftime [0];
 	x += mfvec2d [0] [0];
 	x += mfvec2f [0] [0];
@@ -221,8 +157,108 @@ main ()
 	vec3 color   = vec3 (texture2D (mfnode [0], texCoord .st));
 	gl_FragColor = vec4 (color, 1.0 + x);
 }
-]]> 
+]]>
             </ShaderPart>
+          </MetadataSet>
+        </MetadataSet>
+        <MetadataSet DEF='Page' containerField='value'
+            name='Page'
+            reference='http://titania.create3000.de'>
+          <MetadataInteger DEF='activeView' containerField='value'
+              name='activeView'
+              reference='http://titania.create3000.de'
+              value='1'/>
+          <MetadataInteger DEF='multiView' containerField='value'
+              name='multiView'
+              reference='http://titania.create3000.de'
+              value='0'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <Transform DEF='Sphere'>
+      <Shape>
+        <Appearance>
+          <ComposedShader DEF='CobwebShader'
+              language='GLSL'>
+            <field accessType='initializeOnly' type='SFBool' name='sfbool'/>
+            <field accessType='initializeOnly' type='SFColor' name='sfcolor'/>
+            <field accessType='initializeOnly' type='SFColorRGBA' name='sfcolorrgba'/>
+            <field accessType='initializeOnly' type='SFDouble' name='sfdouble'/>
+            <field accessType='initializeOnly' type='SFFloat' name='sffloat'/>
+            <field accessType='initializeOnly' type='SFImage' name='sfimage' value='3 5 2
+              0xffff 0xffff 0xffff
+              0 0 0xffff
+              0xffff 0xffff 0xffff
+              0 0 0xffff
+              0xffff 0xffff 0xffff'/>
+            <field accessType='initializeOnly' type='SFInt32' name='sfint32'/>
+            <field accessType='initializeOnly' type='SFMatrix3d' name='sfmatrix3d'/>
+            <field accessType='initializeOnly' type='SFMatrix3f' name='sfmatrix3f'/>
+            <field accessType='initializeOnly' type='SFMatrix4d' name='sfmatrix4d'/>
+            <field accessType='initializeOnly' type='SFMatrix4f' name='sfmatrix4f'/>
+            <field accessType='initializeOnly' type='SFNode' name='sfnode'>
+              <ImageTexture DEF='_1'
+                  url='"../images/ubuntu.png"'/>
+            </field>
+            <field accessType='initializeOnly' type='SFRotation' name='sfrotation'/>
+            <field accessType='initializeOnly' type='SFString' name='sfstring'/>
+            <field accessType='initializeOnly' type='SFTime' name='sftime'/>
+            <field accessType='initializeOnly' type='SFVec2d' name='sfvec2d'/>
+            <field accessType='initializeOnly' type='SFVec2f' name='sfvec2f'/>
+            <field accessType='initializeOnly' type='SFVec3d' name='sfvec3d'/>
+            <field accessType='initializeOnly' type='SFVec3f' name='sfvec3f'/>
+            <field accessType='initializeOnly' type='SFVec4d' name='sfvec4d'/>
+            <field accessType='initializeOnly' type='SFVec4f' name='sfvec4f'/>
+            <field accessType='initializeOnly' type='MFBool' name='mfbool'/>
+            <field accessType='initializeOnly' type='MFColor' name='mfcolor'/>
+            <field accessType='initializeOnly' type='MFColorRGBA' name='mfcolorrgba'/>
+            <field accessType='initializeOnly' type='MFDouble' name='mfdouble'/>
+            <field accessType='initializeOnly' type='MFFloat' name='mffloat'/>
+            <field accessType='initializeOnly' type='MFImage' name='mfimage' value='3 5 2
+              0xffff 0xffff 0xffff
+              0 0 0xffff
+              0xffff 0xffff 0xffff
+              0 0 0xffff
+              0xffff 0xffff 0xffff'/>
+            <field accessType='initializeOnly' type='MFInt32' name='mfint32'/>
+            <field accessType='initializeOnly' type='MFMatrix3d' name='mfmatrix3d'/>
+            <field accessType='initializeOnly' type='MFMatrix3f' name='mfmatrix3f'/>
+            <field accessType='initializeOnly' type='MFMatrix4d' name='mfmatrix4d'/>
+            <field accessType='initializeOnly' type='MFMatrix4f' name='mfmatrix4f'/>
+            <field accessType='initializeOnly' type='MFNode' name='mfnode'>
+              <ImageTexture USE='_1'/>
+            </field>
+            <field accessType='initializeOnly' type='MFRotation' name='mfrotation'/>
+            <field accessType='initializeOnly' type='MFString' name='mfstring'/>
+            <field accessType='initializeOnly' type='MFDouble' name='mftime'/>
+            <field accessType='initializeOnly' type='MFVec2d' name='mfvec2d'/>
+            <field accessType='initializeOnly' type='MFVec2f' name='mfvec2f'/>
+            <field accessType='initializeOnly' type='MFVec3d' name='mfvec3d'/>
+            <field accessType='initializeOnly' type='MFVec3f' name='mfvec3f'/>
+            <field accessType='initializeOnly' type='MFVec4d' name='mfvec4d'/>
+            <field accessType='initializeOnly' type='MFVec4f' name='mfvec4f'/>
+            <ShaderPart DEF='CobweVertex'>
+<![CDATA[data:text/plain,
+
+precision mediump float;
+
+uniform mat4 x3d_ProjectionMatrix;
+uniform mat4 x3d_ModelViewMatrix;
+
+attribute vec4 x3d_TexCoord;
+attribute vec4 x3d_Vertex;
+
+varying vec4 texCoord;
+
+void
+main ()
+{
+	gl_Position = x3d_ProjectionMatrix * x3d_ModelViewMatrix * x3d_Vertex;
+
+	texCoord = x3d_TexCoord;
+}]]>
+            </ShaderPart>
+            <ShaderPart USE='CobwebFragment'/>
           </ComposedShader>
         </Appearance>
         <Sphere/>
