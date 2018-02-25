@@ -8,7 +8,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.0.6a, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Geospatial/GeoCoordinate.x3d'/>
-    <meta name='modified' content='Sun, 25 Feb 2018 07:56:16 GMT'/>
+    <meta name='modified' content='Sun, 25 Feb 2018 07:58:30 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='QuadSphere' url='"https://cdn.rawgit.com/create3000/Library/1.0.4/Prototypes/Geometry3D/QuadSphere.x3d", "http://cdn.rawgit.com/create3000/Library/1.0.4/Prototypes/Geometry3D/QuadSphere.x3d", "https://rawgit.com/create3000/Library/1.0.4/Prototypes/Geometry3D/QuadSphere.x3d", "http://rawgit.com/create3000/Library/1.0.4/Prototypes/Geometry3D/QuadSphere.x3d"'>
