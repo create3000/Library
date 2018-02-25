@@ -1,21 +1,76 @@
-#VRML V2.0 utf8 Titania V0.7.4
+#X3D V3.3 utf8 Titania V4.0.6a
+
+PROFILE Full
+
+META "comment" "World of Titania"
+META "created" "Sun, 25 Feb 2018 08:13:15 GMT"
+META "creator" "Holger Seelig"
+META "generator" "Titania V4.0.6a, http://titania.create3000.de"
+META "identifier" "file:///home/holger/Projekte/Library/Tests/Components/Layering/ViewportLayer.x3dv"
+META "modified" "Sun, 25 Feb 2018 08:13:15 GMT"
 
 EXTERNPROTO Rotor [
-  exposedField SFBool     enabled
-  exposedField SFTime     cycleInterval
-  exposedField SFVec3f    axis
-  exposedField SFFloat    angle
-  exposedField SFBool     loop
-  exposedField SFTime     startTime
-  exposedField SFTime     pauseTime
-  exposedField SFTime     resumeTime
-  exposedField SFTime     stopTime
-  eventOut     SFRotation rotation_changed
+  inputOutput SFBool     enabled
+  inputOutput SFTime     cycleInterval
+  inputOutput SFVec3f    axis
+  inputOutput SFFloat    angle
+  inputOutput SFBool     loop
+  inputOutput SFTime     startTime
+  inputOutput SFTime     pauseTime
+  inputOutput SFTime     resumeTime
+  inputOutput SFTime     stopTime
+  outputOnly  SFBool     isActive
+  outputOnly  SFTime     cycleTime
+  outputOnly  SFRotation rotation_changed
 ]
-[
-  "../../../Titania/share/titania/Prototypes/0.1/Engines/Rotor.x3dv",
-  "file:///usr/share/titania/Prototypes/0.1/Engines/Rotor.x3dv"
-]
+"Rotor.x3d"
+
+WorldInfo {
+  metadata DEF Titania MetadataSet {
+    name "Titania"
+    reference "http://titania.create3000.de"
+    value [
+      DEF Selection MetadataSet {
+        name "Selection"
+        reference "http://titania.create3000.de"
+        value [
+          DEF selectGeometry MetadataBoolean {
+            name "selectGeometry"
+            reference "http://titania.create3000.de"
+            value FALSE
+          }
+          DEF nodes MetadataSet {
+            name "nodes"
+            reference "http://titania.create3000.de"
+            value DEF Beethoven Transform {
+              rotation 0 -1 0 4.39186601669956
+              children Inline {
+                url "../Geometry3D/Beethoven.x3dz"
+              }
+            }
+          }
+        ]
+      }
+      DEF Page MetadataSet {
+        name "Page"
+        reference "http://titania.create3000.de"
+        value [
+          DEF activeView MetadataInteger {
+            name "activeView"
+            reference "http://titania.create3000.de"
+            value 1
+          }
+          DEF multiView MetadataInteger {
+            name "multiView"
+            reference "http://titania.create3000.de"
+            value 0
+          }
+        ]
+      }
+    ]
+  }
+  title "ViewportLayer"
+}
 
 LayerSet {
   activeLayer 2
@@ -38,11 +93,7 @@ LayerSet {
       children [
         Viewpoint { }
         Transform {
-          children DEF Beethoven Transform {
-            children Inline {
-              url "../Geometry3D/Beethoven.wrl"
-            }
-          }
+          children USE Beethoven
         }
         DEF Gray Background {
           skyColor 0.2 0.2 0.2
@@ -61,7 +112,7 @@ LayerSet {
       children [
         Viewpoint {
           position 3.37595 7.13251 8.61918
-          orientation -0.556812 0.536966 0.633741 0.969805
+          orientation -0.556812071388602 0.536966068844156 0.633741081251632 0.969805
         }
         Transform {
           children USE Beethoven
