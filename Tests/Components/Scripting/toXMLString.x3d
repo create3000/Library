@@ -9,13 +9,12 @@
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Mon, 24 Mar 2015 10:08:53 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V2.0.1, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite/tests/Components/Scripting/toXMLString.x3d'/>
-    <meta name='modified' content='Fri, 27 Jan 2017 14:35:02 GMT'/>
-    <meta name='outputStyle' content='nicest'/>
+    <meta name='generator' content='Titania V4.0.6a, http://titania.create3000.de'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Scripting/toXMLString.x3d'/>
+    <meta name='modified' content='Sun, 25 Feb 2018 10:38:31 GMT'/>
   </head>
   <Scene>
-    <ExternProtoDeclare name='BooleanSwitch' url='"https://cdn.rawgit.com/create3000/Library/master/Prototypes/1/1.0/Grouping/BooleanSwitch.x3d", "http://cdn.rawgit.com/create3000/Library/master/Prototypes/1/1.0/Grouping/BooleanSwitch.x3d", "https://rawgit.com/create3000/Library/master/Prototypes/1/1.0/Grouping/BooleanSwitch.x3d", "http://rawgit.com/create3000/Library/master/Prototypes/1/1.0/Grouping/BooleanSwitch.x3d"'>
+    <ExternProtoDeclare name='BooleanSwitch' url='"https://cdn.rawgit.com/create3000/Library/1.0.4/Prototypes/Grouping/BooleanSwitch.x3d", "http://cdn.rawgit.com/create3000/Library/1.0.4/Prototypes/Grouping/BooleanSwitch.x3d", "https://rawgit.com/create3000/Library/1.0.4/Prototypes/Grouping/BooleanSwitch.x3d", "http://rawgit.com/create3000/Library/1.0.4/Prototypes/Grouping/BooleanSwitch.x3d"'>
       <field accessType='inputOutput' type='SFBool' name='whichChoice'/>
       <field accessType='initializeOnly' type='SFVec3f' name='bboxSize'/>
       <field accessType='initializeOnly' type='SFVec3f' name='bboxCenter'/>
@@ -32,7 +31,7 @@
       </ProtoInterface>
       <ProtoBody>
         <Transform
-            rotation='0.267261241912424 0.534522483824849 0.801783725737273 0.0698131700797713'>
+            rotation='0.267261241912424 0.534522483824849 0.801783725737273 3.99999999999989'>
           <IS>
             <connect nodeField='translation' protoField='translation'/>
             <connect nodeField='children' protoField='children'/>
@@ -90,9 +89,25 @@
           <MetadataSet DEF='children' containerField='value'
               name='children'
               reference='http://titania.create3000.de'>
-            <MetadataSet DEF='_1' containerField='value'
+            <MetadataSet containerField='value'
                 reference='http://titania.create3000.de'/>
           </MetadataSet>
+          <MetadataBoolean DEF='selectGeometry' containerField='value'
+              name='selectGeometry'
+              reference='http://titania.create3000.de'
+              value='false'/>
+        </MetadataSet>
+        <MetadataSet DEF='Page' containerField='value'
+            name='Page'
+            reference='http://titania.create3000.de'>
+          <MetadataInteger DEF='activeView' containerField='value'
+              name='activeView'
+              reference='http://titania.create3000.de'
+              value='1'/>
+          <MetadataInteger DEF='multiView' containerField='value'
+              name='multiView'
+              reference='http://titania.create3000.de'
+              value='0'/>
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
@@ -119,8 +134,7 @@
             <Box/>
           </Shape>
         </Transform>
-        <Viewpoint DEF='_2'
-            fieldOfView='0.7854'/>
+        <Viewpoint DEF='_2'/>
       </field>
       <field accessType='initializeOnly' type='MFVec3f' name='point' value='1 2 3, 4 5 6'/>
 <![CDATA[javascript:
@@ -174,8 +188,8 @@ function initialize ()
           </fieldValue>
         </ProtoInstance>
       </field>
-      <field accessType='initializeOnly' type='SFRotation' name='SFRotationValue' value='0.267261241912424 0.534522483824849 0.801783725737273 4'/>
-      <field accessType='initializeOnly' type='SFString' name='SFStringValue' value='Hello Wörld!&#xA;&amp;&#35;&quot;&quot;-&apos;&lt;&gt;&#92;&#xA;äöü'/>
+      <field accessType='initializeOnly' type='SFRotation' name='SFRotationValue' value='0.267261241912424 0.534522483824849 0.801783725737273 229.183118052329'/>
+      <field accessType='initializeOnly' type='SFString' name='SFStringValue' value='Hello Wörld!&#xA;&amp;#\"\"-&apos;&lt;&gt;\\&#xA;äöü'/>
       <field accessType='initializeOnly' type='SFTime' name='SFTimeValue' value='123.456789012346'/>
       <field accessType='initializeOnly' type='SFVec2d' name='SFVec2dValue' value='1 2'/>
       <field accessType='initializeOnly' type='SFVec2f' name='SFVec2fValue' value='1 2'/>
@@ -205,9 +219,9 @@ function initialize ()
         <TimeSensor DEF='_7'/>
         <TimeSensor USE='_7'/>
       </field>
-      <field accessType='initializeOnly' type='MFRotation' name='MFRotationValue' value='0.267261241912424 0.534522483824849 0.801783725737273 4, 0.267261241912424 0.534522483824849 0.801783725737273 4'/>
+      <field accessType='initializeOnly' type='MFRotation' name='MFRotationValue' value='0.267261241912424 0.534522483824849 0.801783725737273 229.183118052329, 0.267261241912424 0.534522483824849 0.801783725737273 229.183118052329'/>
       <field accessType='initializeOnly' type='MFString' name='MFStringValue' value='"ABCDEF", "abcdef"'/>
-      <field accessType='initializeOnly' type='MFTime' name='MFTimeValue' value='1.2345678901234, 2.345678901234'/>
+      <field accessType='initializeOnly' type='MFDouble' name='MFTimeValue' value='1.2345678901234, 2.345678901234'/>
       <field accessType='initializeOnly' type='MFVec2d' name='MFVec2dValue' value='1 2, 1 2'/>
       <field accessType='initializeOnly' type='MFVec2f' name='MFVec2fValue' value='1 2, 1 2'/>
       <field accessType='initializeOnly' type='MFVec3d' name='MFVec3dValue' value='1 2 3, 1 2 3'/>
@@ -231,7 +245,6 @@ function initialize ()
     <ProtoInstance name='BooleanSwitch'>
       <fieldValue name='whichChoice' value='true'/>
       <fieldValue name='bboxSize' value='1 1 1'/>
-      <MetadataSet USE='_1'/>
     </ProtoInstance>
     <Inline DEF='_8'
         url='"../Core/EXPORT.x3d"'/>
@@ -243,8 +256,8 @@ function initialize ()
     <IMPORT inlineDEF='_8' exportedDEF='ExportAs' AS='ImportAs'/>
     <ROUTE fromNode='Box_1' fromField='translation_changed' toNode='Box_1' toField='set_scale'/>
     <ROUTE fromNode='Box_1' fromField='translation_changed' toNode='_2' toField='set_position'/>
-    <ROUTE fromNode='Export' fromField='translation_changed' toNode='ImportAs' toField='set_translation'/>
     <ROUTE fromNode='Box_1' fromField='translation_changed' toNode='Export' toField='set_translation'/>
+    <ROUTE fromNode='Export' fromField='translation_changed' toNode='ImportAs' toField='set_translation'/>
     <EXPORT localDEF='Box_1' AS='Box'/>
     <EXPORT localDEF='Box_1' AS='BoxExportsAs'/>
   </Scene>
