@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.0.6a, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/CADGeometry/CADGeometry.x3d'/>
-    <meta name='modified' content='Sat, 24 Feb 2018 08:26:48 GMT'/>
+    <meta name='modified' content='Wed, 07 Mar 2018 03:03:16 GMT'/>
   </head>
   <Scene>
     <WorldInfo
@@ -26,19 +26,27 @@
               name='nodes'
               reference='http://titania.create3000.de'>
             <Transform DEF='_1' containerField='value'
-                translation='0 3 0'>
+                translation='2 0 0'>
+              <Shape>
+                <Appearance DEF='Grey'>
+                  <Material/>
+                </Appearance>
+                <QuadSet DEF='QuadSet'
+                    solid='false'>
+                  <Coordinate
+                      point='-1 -1 0, 1 -1 0, 1 1 0, -1 1 0, 1 -1 0, 3 -1 0, 3 1 0, 1 1 0'/>
+                </QuadSet>
+              </Shape>
+            </Transform>
+            <Transform DEF='_2' containerField='value'
+                translation='2 3 0'>
               <Shape>
                 <Appearance DEF='Image'>
                   <Material/>
                   <ImageTexture
                       url='"../images/image.png"'/>
                 </Appearance>
-                <IndexedQuadSet DEF='IndexedQuadSet'
-                    solid='false'
-                    index='0, 1, 2, 3'>
-                  <Coordinate
-                      point='-1 -1 0, 1 -1 0, 1 1 0, -1 1 0'/>
-                </IndexedQuadSet>
+                <QuadSet USE='QuadSet'/>
               </Shape>
             </Transform>
           </MetadataSet>
@@ -55,6 +63,14 @@
               reference='http://titania.create3000.de'
               value='0'/>
         </MetadataSet>
+        <MetadataSet DEF='Grid' containerField='value'
+            name='Grid'
+            reference='http://titania.create3000.de'>
+          <MetadataBoolean DEF='enabled' containerField='value'
+              name='enabled'
+              reference='http://titania.create3000.de'
+              value='true'/>
+        </MetadataSet>
       </MetadataSet>
     </WorldInfo>
     <Background
@@ -63,32 +79,26 @@
         description='Home'
         position='1.5 0 12'
         centerOfRotation='1.2 0 0'/>
-    <Transform>
-      <Shape>
-        <Appearance DEF='Grey'>
-          <Material/>
-        </Appearance>
-        <IndexedQuadSet USE='IndexedQuadSet'/>
-      </Shape>
-    </Transform>
     <Transform
-        translation='3 0 0'>
+        translation='-4 0 0'>
       <Shape>
         <Appearance USE='Grey'/>
-        <QuadSet DEF='QuadSet'
-            solid='false'>
+        <IndexedQuadSet DEF='IndexedQuadSet'
+            solid='false'
+            index='0, 1, 2, 3, 1, 4, 5, 2'>
           <Coordinate
-              point='-1 -1 0, 1 -1 0, 1 1 0, -1 1 0'/>
-        </QuadSet>
+              point='-1 -1 0, 1 -1 0, 1 1 0, -1 1 0, 3 -1 0, 3 1 0'/>
+        </IndexedQuadSet>
       </Shape>
     </Transform>
     <Transform USE='_1'/>
     <Transform
-        translation='3 3 0'>
+        translation='-4 3 0'>
       <Shape>
         <Appearance USE='Image'/>
-        <QuadSet USE='QuadSet'/>
+        <IndexedQuadSet USE='IndexedQuadSet'/>
       </Shape>
     </Transform>
+    <Transform USE='_2'/>
   </Scene>
 </X3D>
