@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.0.6a, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Follower/ScalarDamper.x3d'/>
-    <meta name='modified' content='Sun, 25 Feb 2018 06:55:30 GMT'/>
+    <meta name='modified' content='Thu, 08 Mar 2018 09:06:02 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='LineTrail' url='"LineTrail.x3dv"'>
@@ -16,6 +16,11 @@
       <field accessType='inputOutput' type='SFTime' name='resetTime'/>
       <field accessType='inputOutput' type='SFVec3f' name='point'/>
       <field accessType='initializeOnly' type='SFInt32' name='dimension'/>
+    </ExternProtoDeclare>
+    <ExternProtoDeclare name='SFFloat' url='"SFFloat.x3dv"'>
+      <field accessType='inputOnly' type='SFTime' name='set_triggerTime'/>
+      <field accessType='inputOutput' type='SFFloat' name='keyValue'/>
+      <field accessType='outputOnly' type='SFFloat' name='value_changed'/>
     </ExternProtoDeclare>
     <WorldInfo
         title='PositionDamper2D'>
@@ -53,6 +58,22 @@
               name='selectGeometry'
               reference='http://titania.create3000.de'
               value='false'/>
+          <MetadataSet DEF='nodes' containerField='value'
+              name='nodes'
+              reference='http://titania.create3000.de'>
+            <Transform DEF='ResetBox' containerField='value'
+                translation='4.43603 0 0'
+                scale='0.167946 0.167946 0.167946'>
+              <Shape>
+                <Appearance>
+                  <Material/>
+                </Appearance>
+                <Box/>
+              </Shape>
+              <TouchSensor DEF='ResetTouch'/>
+              <ProtoInstance name='SFFloat' DEF='_1'/>
+            </Transform>
+          </MetadataSet>
         </MetadataSet>
         <MetadataSet DEF='Page' containerField='value'
             name='Page'
@@ -174,6 +195,7 @@ function set_active (value)
 }
 ]]>
     </Script>
+    <Transform USE='ResetBox'/>
     <ROUTE fromNode='Touch' fromField='touchTime' toNode='FollowerScript' toField='set_time'/>
     <ROUTE fromNode='FollowerScript' fromField='color_changed' toNode='SphereMaterial' toField='set_diffuseColor'/>
     <ROUTE fromNode='FollowerScript' fromField='value_changed' toNode='Sphere' toField='set_translation'/>
@@ -186,5 +208,8 @@ function set_active (value)
     <ROUTE fromNode='DecomposeXYScript' fromField='x_changed' toNode='X' toField='set_destination'/>
     <ROUTE fromNode='Y' fromField='value_changed' toNode='ComposeXYScript' toField='set_y'/>
     <ROUTE fromNode='DecomposeXYScript' fromField='y_changed' toNode='Y' toField='set_destination'/>
+    <ROUTE fromNode='ResetTouch' fromField='touchTime' toNode='_1' toField='set_triggerTime'/>
+    <ROUTE fromNode='_1' fromField='value_changed' toNode='Y' toField='set_value'/>
+    <ROUTE fromNode='_1' fromField='value_changed' toNode='X' toField='set_value'/>
   </Scene>
 </X3D>

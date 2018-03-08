@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.0.6a, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Follower/ScalarChaser.x3d'/>
-    <meta name='modified' content='Sun, 25 Feb 2018 06:55:46 GMT'/>
+    <meta name='modified' content='Thu, 08 Mar 2018 09:05:20 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='LineTrail' url='"LineTrail.x3dv"'>
@@ -101,8 +101,10 @@
         </Shape>
       </Transform>
     </Transform>
-    <ScalarChaser DEF='X'/>
-    <ScalarChaser DEF='Y'/>
+    <ScalarChaser DEF='X'
+        duration='2'/>
+    <ScalarChaser DEF='Y'
+        duration='2'/>
     <Transform DEF='Sphere'
         scale='0.192862 0.192862 0.192862'>
       <Shape>
