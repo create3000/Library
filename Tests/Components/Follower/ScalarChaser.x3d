@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.0.6a, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Follower/ScalarChaser.x3d'/>
-    <meta name='modified' content='Thu, 08 Mar 2018 09:05:20 GMT'/>
+    <meta name='modified' content='Thu, 08 Mar 2018 09:10:36 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='LineTrail' url='"LineTrail.x3dv"'>
@@ -68,6 +68,9 @@
               name='selectGeometry'
               reference='http://titania.create3000.de'
               value='false'/>
+          <MetadataSet DEF='nodes' containerField='value'
+              name='nodes'
+              reference='http://titania.create3000.de'/>
         </MetadataSet>
         <MetadataSet DEF='Page' containerField='value'
             name='Page'
@@ -106,6 +109,7 @@
     <ScalarChaser DEF='Y'
         duration='2'/>
     <Transform DEF='Sphere'
+        translation='2.45296 1.55582 0'
         scale='0.192862 0.192862 0.192862'>
       <Shape>
         <Appearance>
@@ -122,6 +126,7 @@
       <ProtoInstance name='LineTrail' DEF='Trail' containerField='geometry'>
         <fieldValue name='enabled' value='false'/>
         <fieldValue name='cycleInterval' value='0.1'/>
+        <fieldValue name='point' value='2.45296 1.55582 0'/>
         <fieldValue name='dimension' value='200'/>
       </ProtoInstance>
     </Shape>
@@ -175,6 +180,20 @@ function set_valueY (value)
       <TouchSensor DEF='ResetTouch'/>
       <ProtoInstance name='SFFloat' DEF='_1'/>
     </Transform>
+    <Transform DEF='ResetBox_2'
+        translation='4.43603 -0.67719 0'
+        scale='0.167946 0.167946 0.167946'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Box/>
+      </Shape>
+      <TouchSensor DEF='ResetTouch_3'/>
+      <ProtoInstance name='SFFloat' DEF='_4'>
+        <fieldValue name='keyValue' value='1'/>
+      </ProtoInstance>
+    </Transform>
     <ROUTE fromNode='Touch' fromField='touchTime' toNode='FollowerScript' toField='set_time'/>
     <ROUTE fromNode='FollowerScript' fromField='color_changed' toNode='SphereMaterial' toField='set_diffuseColor'/>
     <ROUTE fromNode='FollowerScript' fromField='value_changed' toNode='Trail' toField='set_point'/>
@@ -188,5 +207,8 @@ function set_valueY (value)
     <ROUTE fromNode='FollowerScript' fromField='destinationY_changed' toNode='Y' toField='set_destination'/>
     <ROUTE fromNode='X' fromField='value_changed' toNode='FollowerScript' toField='set_valueX'/>
     <ROUTE fromNode='Y' fromField='value_changed' toNode='FollowerScript' toField='set_valueY'/>
+    <ROUTE fromNode='ResetTouch_3' fromField='touchTime' toNode='_4' toField='set_triggerTime'/>
+    <ROUTE fromNode='_4' fromField='value_changed' toNode='Y' toField='set_value'/>
+    <ROUTE fromNode='_4' fromField='value_changed' toNode='X' toField='set_value'/>
   </Scene>
 </X3D>
