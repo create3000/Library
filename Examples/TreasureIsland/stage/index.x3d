@@ -6302,7 +6302,7 @@ function set_value(value, time)
                   location='0 0.0229433 -0.16'
                   priority='1'>
                 <AudioClip DEF='bonus_1'
-                    url='"key.mp2"'
+                    url='"key.wav"'
                     pitch='1.1'/>
               </Sound>
             </Transform>
