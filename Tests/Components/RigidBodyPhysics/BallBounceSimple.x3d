@@ -7,12 +7,12 @@
     <meta name='created' content='1 January 2008'/>
     <meta name='creator' content='Alan Hudson and Justin Couch'/>
     <meta name='description' content='Example scene for RigidBodyPhysics component'/>
-    <meta name='generator' content='Titania V2.0.1, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite/tests/Components/RigidBodyPhysics/BallBounceSimple.x3d'/>
+    <meta name='generator' content='Titania V4.0.6a, http://titania.create3000.de'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/RigidBodyPhysics/BallBounceSimple.x3d'/>
     <meta name='license' content='../license.html'/>
-    <meta name='modified' content='Thu, 15 Dec 2016 08:48:42 GMT'/>
+    <meta name='modified' content='Tue, 20 Mar 2018 14:28:35 GMT'/>
     <meta name='reference' content='originals/ball_bounce_simple.x3dv'/>
-    <meta name='reference' content='http://www.xj3d.org/extensions/index.html&#35;Physics'/>
+    <meta name='reference' content='http://www.xj3d.org/extensions/index.html#Physics'/>
     <meta name='reference' content='http://www.web3d.org/x3d/specifications/ISO-IEC-FDIS-19775-1.2-X3D-AbstractSpecification/Part01/components/rigid_physics.html'/>
     <meta name='title' content='BallBounceSimple.x3d'/>
     <meta name='translated' content='26 December 2008'/>
@@ -55,6 +55,22 @@
           <MetadataSet DEF='previous' containerField='value'
               name='previous'
               reference='http://titania.create3000.de'/>
+          <MetadataBoolean DEF='selectGeometry' containerField='value'
+              name='selectGeometry'
+              reference='http://titania.create3000.de'
+              value='false'/>
+        </MetadataSet>
+        <MetadataSet DEF='Page' containerField='value'
+            name='Page'
+            reference='http://titania.create3000.de'>
+          <MetadataInteger DEF='activeView' containerField='value'
+              name='activeView'
+              reference='http://titania.create3000.de'
+              value='1'/>
+          <MetadataInteger DEF='multiView' containerField='value'
+              name='multiView'
+              reference='http://titania.create3000.de'
+              value='0'/>
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
@@ -63,7 +79,7 @@
         orientation='-0.526168843648981 0.850317189417353 0.0103453059146783 0.404083572121568'
         centerOfRotation='0 -0.455475 0'/>
     <Group>
-      <CollidableShape DEF='BALL-GEOM'>
+      <CollidableShape DEF='Ball'>
         <Shape containerField='shape'>
           <Appearance>
             <Material DEF='Rococo20'
@@ -76,9 +92,9 @@
               radius='0.1'/>
         </Shape>
       </CollidableShape>
-      <CollidableShape DEF='GROUND-GEOM'
+      <CollidableShape DEF='Ground'
           translation='0 -1 0'>
-        <Shape DEF='_1' containerField='shape'>
+        <Shape containerField='shape'>
           <Appearance>
             <Material DEF='Rococo6'
                 ambientIntensity='0.226102'
@@ -92,20 +108,19 @@
         </Shape>
       </CollidableShape>
     </Group>
-    <RigidBodyCollection DEF='BODY-COLLECTION'>
-      <RigidBody DEF='BODY-1'
+    <RigidBodyCollection DEF='Collection'>
+      <RigidBody DEF='BallBody'
           finiteRotationAxis='0 1 0'
-          autoDisable='true'
-          disableLinearSpeed='0.1'>
-        <CollidableShape USE='BALL-GEOM' containerField='geometry'/>
+          autoDisable='true'>
+        <CollidableShape USE='Ball' containerField='geometry'/>
       </RigidBody>
-      <RigidBody DEF='BODY-1_1'
+      <RigidBody DEF='GroundBody'
           fixed='true'
           position='0 -1 0'>
-        <CollidableShape USE='GROUND-GEOM' containerField='geometry'/>
+        <CollidableShape USE='Ground' containerField='geometry'/>
       </RigidBody>
     </RigidBodyCollection>
-    <CollisionSensor DEF='COLLISION-OUTPUT'/>
-    <ROUTE fromNode='COLLISION-OUTPUT' fromField='contacts' toNode='BODY-COLLECTION' toField='set_contacts'/>
+    <CollisionSensor DEF='_1'/>
+    <ROUTE fromNode='_1' fromField='contacts' toNode='Collection' toField='set_contacts'/>
   </Scene>
 </X3D>
