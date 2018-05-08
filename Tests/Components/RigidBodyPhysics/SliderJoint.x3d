@@ -2,12 +2,13 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
 <X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
   <head>
+    <unit category='angle' name='degree' conversionFactor='0.0174532925199432958'/>
     <meta name='comment' content='World of Titania'/>
-    <meta name='created' content='Fri, 20 Apr 2018 14:01:02 GMT'/>
+    <meta name='created' content='Tue, 08 May 2018 06:42:40 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.1.1, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/scene.x3d'/>
-    <meta name='modified' content='Sat, 28 Apr 2018 10:28:05 GMT'/>
+    <meta name='modified' content='Tue, 08 May 2018 07:54:10 GMT'/>
     <meta name='titania-output-style' content='Nicest'/>
   </head>
   <Scene>
@@ -40,7 +41,17 @@
               value='false'/>
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
-              reference='http://titania.create3000.de'/>
+              reference='http://titania.create3000.de'>
+            <CollidableShape DEF='Box' containerField='value'
+                translation='-2 0 0'>
+              <Shape containerField='shape'>
+                <Appearance>
+                  <Material/>
+                </Appearance>
+                <Box/>
+              </Shape>
+            </CollidableShape>
+          </MetadataSet>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
             name='BrowserPanel'
@@ -102,7 +113,7 @@
               <MetadataDouble DEF='position_10' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
-                  value='0.200621649900266, -8.57283603382919, 10000'/>
+                  value='-0.00884759203065143, 0.0177734813359099, 10000'/>
               <MetadataDouble DEF='orientation_11' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
@@ -110,11 +121,11 @@
               <MetadataDouble DEF='centerOfRotation_12' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
-                  value='0.200621649900266, -8.57283603382919, 0'/>
+                  value='-0.00884759203065143, 0.0177734813359099, 0'/>
               <MetadataDouble DEF='fieldOfViewScale_13' containerField='value'
                   name='fieldOfViewScale'
                   reference='http://titania.create3000.de'
-                  value='3.37788905354714'/>
+                  value='1.212467484375'/>
             </MetadataSet>
           </MetadataSet>
         </MetadataSet>
@@ -124,7 +135,7 @@
           <MetadataInteger DEF='activeView' containerField='value'
               name='activeView'
               reference='http://titania.create3000.de'
-              value='3'/>
+              value='1'/>
           <MetadataInteger DEF='multiView' containerField='value'
               name='multiView'
               reference='http://titania.create3000.de'
@@ -133,83 +144,39 @@
       </MetadataSet>
     </WorldInfo>
     <Viewpoint
-        position='0 0 34.7907'/>
-    <Group DEF='Collidables'>
-      <CollidableShape DEF='Cylinder'
-          translation='-1 0 0'>
-        <Shape containerField='shape'>
-          <Appearance>
-            <Material/>
-          </Appearance>
-          <Sphere/>
-        </Shape>
-      </CollidableShape>
-      <CollidableShape DEF='Sphere_14'
-          translation='-1 -3 3'>
-        <Shape containerField='shape'>
-          <Appearance>
-            <Material/>
-          </Appearance>
-          <Sphere/>
-        </Shape>
-      </CollidableShape>
-      <CollidableShape DEF='_15'
-          translation='-1 -6 3'>
-        <Shape containerField='shape'>
-          <Appearance>
-            <Material/>
-          </Appearance>
-          <Cylinder
-              height='6'/>
-        </Shape>
-      </CollidableShape>
-      <CollidableShape DEF='Sphere_16'
-          translation='-1 -11 3'>
-        <Shape containerField='shape'>
-          <Appearance>
-            <Material/>
-          </Appearance>
-          <Sphere/>
-        </Shape>
-      </CollidableShape>
-    </Group>
+        position='12.1187 6.1241 9.17752'
+        orientation='-0.357547358147961 0.916826215405546 0.177734570150426 56.9321916646035'
+        centerOfRotation='1.11823e-07 8.20996e-08 -1.05448e-07'/>
+    <CylinderSensor DEF='_14'
+        axisRotation='0 0 1 270'/>
+    <CollidableShape DEF='Wippe'
+        translation='-2 0 0'>
+      <Shape containerField='shape'>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Box
+            size='0.5 0.5 12'/>
+      </Shape>
+    </CollidableShape>
+    <CollidableShape USE='Box'/>
     <RigidBodyCollection>
-      <RigidBody DEF='Sphere_17'
+      <RigidBody DEF='Wippe_15'
           fixed='true'
-          position='-1 0 0'>
-        <CollidableShape USE='Cylinder' containerField='geometry'/>
+          position='-2 0 0'>
+        <CollidableShape USE='Wippe' containerField='geometry'/>
       </RigidBody>
-      <RigidBody DEF='Sphere'
-          position='-1 -3 3'>
-        <CollidableShape USE='Sphere_14' containerField='geometry'/>
+      <RigidBody DEF='Box_16'
+          position='-2 0 0'>
+        <CollidableShape USE='Box' containerField='geometry'/>
       </RigidBody>
-      <RigidBody DEF='Cylinder_18'
-          position='-1 -6 3'
-          useFiniteRotation='true'
-          finiteRotationAxis='0 0 1'>
-        <CollidableShape USE='_15' containerField='geometry'/>
-      </RigidBody>
-      <RigidBody DEF='Sphere_19'
-          position='-1 -11 3'>
-        <CollidableShape USE='Sphere_16' containerField='geometry'/>
-      </RigidBody>
-      <MotorJoint
-          autoCalc='true'
-          motor3Axis='0 0 1'
-          axis3Torque='1'>
-        <RigidBody USE='Sphere_17' containerField='body1'/>
-        <RigidBody USE='Sphere' containerField='body2'/>
-      </MotorJoint>
-      <SingleAxisHingeJoint
-          anchorPoint='-1 -3 3'
+      <SliderJoint
+          forceOutput='"ALL"'
           axis='0 0 1'>
-        <RigidBody USE='Sphere' containerField='body1'/>
-        <RigidBody USE='Cylinder_18' containerField='body2'/>
-      </SingleAxisHingeJoint>
-      <SliderJoint>
-        <RigidBody USE='Cylinder_18' containerField='body1'/>
-        <RigidBody USE='Sphere_19' containerField='body2'/>
+        <RigidBody USE='Wippe_15' containerField='body1'/>
+        <RigidBody USE='Box_16' containerField='body2'/>
       </SliderJoint>
     </RigidBodyCollection>
+    <ROUTE fromNode='_14' fromField='rotation_changed' toNode='Wippe' toField='set_rotation'/>
   </Scene>
 </X3D>
