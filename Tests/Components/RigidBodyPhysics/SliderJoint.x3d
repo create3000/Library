@@ -7,9 +7,8 @@
     <meta name='created' content='Tue, 08 May 2018 06:42:40 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.1.1, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/scene.x3d'/>
-    <meta name='modified' content='Tue, 08 May 2018 07:54:10 GMT'/>
-    <meta name='titania-output-style' content='Nicest'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/RigidBodyPhysics/SliderJoint.x3d'/>
+    <meta name='modified' content='Tue, 08 May 2018 09:52:58 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -43,7 +42,8 @@
               name='nodes'
               reference='http://titania.create3000.de'>
             <CollidableShape DEF='Box' containerField='value'
-                translation='-2 0 0'>
+                translation='-2 0 0'
+                rotation='0 0 1 0'>
               <Shape containerField='shape'>
                 <Appearance>
                   <Material/>
@@ -167,12 +167,16 @@
         <CollidableShape USE='Wippe' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='Box_16'
-          position='-2 0 0'>
+          position='-2 0 0'
+          orientation='0 0 1 0'
+          angularVelocity='-1.6973e-40 0 -1.03572e-41'>
         <CollidableShape USE='Box' containerField='geometry'/>
       </RigidBody>
       <SliderJoint
           forceOutput='"ALL"'
-          axis='0 0 1'>
+          axis='0 0 1'
+          minSeparation='-10'
+          maxSeparation='10'>
         <RigidBody USE='Wippe_15' containerField='body1'/>
         <RigidBody USE='Box_16' containerField='body2'/>
       </SliderJoint>

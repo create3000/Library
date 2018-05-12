@@ -7,9 +7,8 @@
     <meta name='created' content='Tue, 08 May 2018 06:42:40 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.1.1, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/scene.x3d'/>
-    <meta name='modified' content='Tue, 08 May 2018 08:44:57 GMT'/>
-    <meta name='titania-output-style' content='Nicest'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/RigidBodyPhysics/SliderJoint2.x3d'/>
+    <meta name='modified' content='Tue, 08 May 2018 14:45:52 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -41,7 +40,18 @@
               value='false'/>
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
-              reference='http://titania.create3000.de'/>
+              reference='http://titania.create3000.de'>
+            <CollidableShape DEF='Box' containerField='value'
+                translation='-4.75208 -2.33123 -2'
+                rotation='-8.87609702116837e-08 0.99999999999999 1.09834152167684e-07 269.999874270995'>
+              <Shape containerField='shape'>
+                <Appearance>
+                  <Material/>
+                </Appearance>
+                <Box/>
+              </Shape>
+            </CollidableShape>
+          </MetadataSet>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
             name='BrowserPanel'
@@ -125,7 +135,7 @@
           <MetadataInteger DEF='activeView' containerField='value'
               name='activeView'
               reference='http://titania.create3000.de'
-              value='1'/>
+              value='3'/>
           <MetadataInteger DEF='multiView' containerField='value'
               name='multiView'
               reference='http://titania.create3000.de'
@@ -151,16 +161,7 @@
             size='0.5 0.5 12'/>
       </Shape>
     </CollidableShape>
-    <CollidableShape DEF='Box'
-        translation='-4.75208 -2.33123 -2'
-        rotation='0.211541378239846 -0.954201493702862 0.211541378239845 92.685066888397'>
-      <Shape containerField='shape'>
-        <Appearance>
-          <Material/>
-        </Appearance>
-        <Box/>
-      </Shape>
-    </CollidableShape>
+    <CollidableShape USE='Box'/>
     <RigidBodyCollection>
       <RigidBody DEF='Wippe_15'
           fixed='true'
@@ -170,14 +171,16 @@
       </RigidBody>
       <RigidBody DEF='Box_16'
           position='-4.75208 -2.33123 -2'
-          orientation='0.211541378239846 -0.954201493702862 0.211541378239845 92.685066888397'
+          orientation='-8.87609702116837e-08 0.99999999999999 1.09834152167684e-07 269.999874270995'
           linearVelocity='-2.33139e-06 -3.08163 6.28173'
           angularVelocity='0.000304079 2.20504e-12 1.08173e-12'>
         <CollidableShape USE='Box' containerField='geometry'/>
       </RigidBody>
       <SliderJoint
           forceOutput='"ALL"'
-          axis='2 1 0'>
+          axis='2 1 0'
+          minSeparation='-10'
+          maxSeparation='10'>
         <RigidBody USE='Wippe_15' containerField='body1'/>
         <RigidBody USE='Box_16' containerField='body2'/>
       </SliderJoint>
