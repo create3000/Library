@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.1.1, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/RigidBodyPhysics/KineticPendulum.x3d'/>
-    <meta name='modified' content='Tue, 15 May 2018 03:38:50 GMT'/>
+    <meta name='modified' content='Tue, 15 May 2018 03:45:41 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -131,259 +131,237 @@
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
-    <CollidableShape DEF='_14'
-        translation='0 2 0'>
-      <Shape containerField='shape'>
-        <Appearance>
-          <Material/>
-        </Appearance>
-        <Sphere
-            radius='0.15'/>
-      </Shape>
-    </CollidableShape>
-    <CollidableShape DEF='_15'
-        translation='-2 2 0'
-        rotation='2.26008637581007e-07 3.87429872713976e-06 -0.999999999992469 1.57079626719778'>
-      <Shape containerField='shape'>
-        <Appearance>
-          <Material/>
-        </Appearance>
-        <Cylinder
-            height='4'
-            radius='0.1'/>
-      </Shape>
-    </CollidableShape>
-    <CollidableOffset DEF='_16'
-        translation='-2 2 0'
-        rotation='2.26008637581007e-07 3.87429872713976e-06 -0.999999999992469 1.57079626719778'>
-      <CollidableShape containerField='collidable'
-          translation='0 -2 0'>
+    <Group DEF='Collidables'>
+      <CollidableShape DEF='_14'
+          translation='0 2 0'>
         <Shape containerField='shape'>
-          <Appearance>
-            <Material/>
+          <Appearance DEF='_15'>
+            <Material DEF='Metal30_16'
+                ambientIntensity='0.136142'
+                diffuseColor='0.566681 0.580872 0.580874'
+                specularColor='0.673937 0.45734 0.436528'
+                shininess='0.168182'/>
           </Appearance>
           <Sphere
-              radius='0.5'/>
+              radius='0.15'/>
         </Shape>
       </CollidableShape>
-    </CollidableOffset>
-    <CollidableShape DEF='_17'
-        translation='1 2 0'>
-      <Shape containerField='shape'>
-        <Appearance>
-          <Material/>
-        </Appearance>
-        <Sphere
-            radius='0.15'/>
-      </Shape>
-    </CollidableShape>
-    <CollidableShape DEF='_18'
-        translation='1 0 0'>
-      <Shape containerField='shape'>
-        <Appearance>
-          <Material/>
-        </Appearance>
-        <Cylinder
-            height='4'
-            radius='0.1'/>
-      </Shape>
-    </CollidableShape>
-    <CollidableOffset DEF='_19'
-        translation='1 0 0'>
-      <CollidableShape containerField='collidable'
-          translation='0 -2 0'>
+      <CollidableShape DEF='_17'
+          translation='-2 2 0'
+          rotation='2.26008637581007e-07 3.87429872713976e-06 -0.999999999992469 1.57079626719778'>
         <Shape containerField='shape'>
-          <Appearance>
-            <Material/>
-          </Appearance>
-          <Sphere
-              radius='0.5'/>
+          <Appearance USE='_15'/>
+          <Cylinder
+              height='4'
+              radius='0.1'/>
         </Shape>
       </CollidableShape>
-    </CollidableOffset>
-    <CollidableShape DEF='_20'
-        translation='2 2 0'>
-      <Shape containerField='shape'>
-        <Appearance>
-          <Material/>
-        </Appearance>
-        <Sphere
-            radius='0.15'/>
-      </Shape>
-    </CollidableShape>
-    <CollidableShape DEF='_21'
-        translation='2 0 0'>
-      <Shape containerField='shape'>
-        <Appearance>
-          <Material/>
-        </Appearance>
-        <Cylinder
-            height='4'
-            radius='0.1'/>
-      </Shape>
-    </CollidableShape>
-    <CollidableOffset DEF='_22'
-        translation='2 0 0'>
-      <CollidableShape containerField='collidable'
-          translation='0 -2 0'>
+      <CollidableOffset DEF='_18'
+          translation='-2 2 0'
+          rotation='2.26008637581007e-07 3.87429872713976e-06 -0.999999999992469 1.57079626719778'>
+        <CollidableShape containerField='collidable'
+            translation='0 -2 0'>
+          <Shape containerField='shape'>
+            <Appearance USE='_15'/>
+            <Sphere
+                radius='0.5'/>
+          </Shape>
+        </CollidableShape>
+      </CollidableOffset>
+      <CollidableShape DEF='_19'
+          translation='1 2 0'>
         <Shape containerField='shape'>
-          <Appearance>
-            <Material/>
-          </Appearance>
+          <Appearance USE='_15'/>
           <Sphere
-              radius='0.5'/>
+              radius='0.15'/>
         </Shape>
       </CollidableShape>
-    </CollidableOffset>
-    <CollidableShape DEF='_23'
-        translation='3 2 0'>
-      <Shape containerField='shape'>
-        <Appearance>
-          <Material/>
-        </Appearance>
-        <Sphere
-            radius='0.15'/>
-      </Shape>
-    </CollidableShape>
-    <CollidableShape DEF='_24'
-        translation='3 0 0'>
-      <Shape containerField='shape'>
-        <Appearance>
-          <Material/>
-        </Appearance>
-        <Cylinder
-            height='4'
-            radius='0.1'/>
-      </Shape>
-    </CollidableShape>
-    <CollidableOffset DEF='_25'
-        translation='3 0 0'>
-      <CollidableShape containerField='collidable'
-          translation='0 -2 0'>
+      <CollidableShape DEF='_20'
+          translation='1 0 0'>
         <Shape containerField='shape'>
-          <Appearance>
-            <Material/>
-          </Appearance>
-          <Sphere
-              radius='0.5'/>
+          <Appearance USE='_15'/>
+          <Cylinder
+              height='4'
+              radius='0.1'/>
         </Shape>
       </CollidableShape>
-    </CollidableOffset>
-    <CollidableShape DEF='_26'
-        translation='4 2 0'>
-      <Shape containerField='shape'>
-        <Appearance>
-          <Material/>
-        </Appearance>
-        <Sphere
-            radius='0.15'/>
-      </Shape>
-    </CollidableShape>
-    <CollidableShape DEF='_27'
-        translation='4 0 0'>
-      <Shape containerField='shape'>
-        <Appearance>
-          <Material/>
-        </Appearance>
-        <Cylinder
-            height='4'
-            radius='0.1'/>
-      </Shape>
-    </CollidableShape>
-    <CollidableOffset DEF='_28'
-        translation='4 0 0'>
-      <CollidableShape containerField='collidable'
-          translation='0 -2 0'>
+      <CollidableOffset DEF='_21'
+          translation='1 0 0'>
+        <CollidableShape containerField='collidable'
+            translation='0 -2 0'>
+          <Shape containerField='shape'>
+            <Appearance USE='_15'/>
+            <Sphere
+                radius='0.5'/>
+          </Shape>
+        </CollidableShape>
+      </CollidableOffset>
+      <CollidableShape DEF='_22'
+          translation='2 2 0'>
         <Shape containerField='shape'>
-          <Appearance>
-            <Material/>
-          </Appearance>
+          <Appearance USE='_15'/>
           <Sphere
-              radius='0.5'/>
+              radius='0.15'/>
         </Shape>
       </CollidableShape>
-    </CollidableOffset>
+      <CollidableShape DEF='_23'
+          translation='2 0 0'>
+        <Shape containerField='shape'>
+          <Appearance USE='_15'/>
+          <Cylinder
+              height='4'
+              radius='0.1'/>
+        </Shape>
+      </CollidableShape>
+      <CollidableOffset DEF='_24'
+          translation='2 0 0'>
+        <CollidableShape containerField='collidable'
+            translation='0 -2 0'>
+          <Shape containerField='shape'>
+            <Appearance USE='_15'/>
+            <Sphere
+                radius='0.5'/>
+          </Shape>
+        </CollidableShape>
+      </CollidableOffset>
+      <CollidableShape DEF='_25'
+          translation='3 2 0'>
+        <Shape containerField='shape'>
+          <Appearance USE='_15'/>
+          <Sphere
+              radius='0.15'/>
+        </Shape>
+      </CollidableShape>
+      <CollidableShape DEF='_26'
+          translation='3 0 0'>
+        <Shape containerField='shape'>
+          <Appearance USE='_15'/>
+          <Cylinder
+              height='4'
+              radius='0.1'/>
+        </Shape>
+      </CollidableShape>
+      <CollidableOffset DEF='_27'
+          translation='3 0 0'>
+        <CollidableShape containerField='collidable'
+            translation='0 -2 0'>
+          <Shape containerField='shape'>
+            <Appearance USE='_15'/>
+            <Sphere
+                radius='0.5'/>
+          </Shape>
+        </CollidableShape>
+      </CollidableOffset>
+      <CollidableShape DEF='_28'
+          translation='4 2 0'>
+        <Shape containerField='shape'>
+          <Appearance USE='_15'/>
+          <Sphere
+              radius='0.15'/>
+        </Shape>
+      </CollidableShape>
+      <CollidableShape DEF='_29'
+          translation='4 0 0'>
+        <Shape containerField='shape'>
+          <Appearance USE='_15'/>
+          <Cylinder
+              height='4'
+              radius='0.1'/>
+        </Shape>
+      </CollidableShape>
+      <CollidableOffset DEF='_30'
+          translation='4 0 0'>
+        <CollidableShape containerField='collidable'
+            translation='0 -2 0'>
+          <Shape containerField='shape'>
+            <Appearance USE='_15'/>
+            <Sphere
+                radius='0.5'/>
+          </Shape>
+        </CollidableShape>
+      </CollidableOffset>
+    </Group>
     <RigidBodyCollection>
-      <RigidBody DEF='_29'
+      <RigidBody DEF='_31'
           fixed='true'
           position='0 2 0'>
         <CollidableShape USE='_14' containerField='geometry'/>
       </RigidBody>
-      <RigidBody DEF='_30'
+      <RigidBody DEF='_32'
           position='-2 2 0'
           orientation='2.26008637581007e-07 3.87429872713976e-06 -0.999999999992469 1.57079626719778'>
-        <CollidableShape USE='_15' containerField='geometry'/>
-        <CollidableOffset USE='_16' containerField='geometry'/>
-      </RigidBody>
-      <RigidBody DEF='_31'
-          fixed='true'
-          position='1 2 0'>
         <CollidableShape USE='_17' containerField='geometry'/>
-      </RigidBody>
-      <RigidBody DEF='_32'
-          position='1 0 0'>
-        <CollidableShape USE='_18' containerField='geometry'/>
-        <CollidableOffset USE='_19' containerField='geometry'/>
+        <CollidableOffset USE='_18' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='_33'
           fixed='true'
-          position='2 2 0'>
-        <CollidableShape USE='_20' containerField='geometry'/>
+          position='1 2 0'>
+        <CollidableShape USE='_19' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='_34'
-          position='2 0 0'>
-        <CollidableShape USE='_21' containerField='geometry'/>
-        <CollidableOffset USE='_22' containerField='geometry'/>
+          position='1 0 0'>
+        <CollidableShape USE='_20' containerField='geometry'/>
+        <CollidableOffset USE='_21' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='_35'
           fixed='true'
-          position='3 2 0'>
-        <CollidableShape USE='_23' containerField='geometry'/>
+          position='2 2 0'>
+        <CollidableShape USE='_22' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='_36'
-          position='3 0 0'>
-        <CollidableShape USE='_24' containerField='geometry'/>
-        <CollidableOffset USE='_25' containerField='geometry'/>
+          position='2 0 0'>
+        <CollidableShape USE='_23' containerField='geometry'/>
+        <CollidableOffset USE='_24' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='_37'
           fixed='true'
-          position='4 2 0'>
-        <CollidableShape USE='_26' containerField='geometry'/>
+          position='3 2 0'>
+        <CollidableShape USE='_25' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='_38'
+          position='3 0 0'>
+        <CollidableShape USE='_26' containerField='geometry'/>
+        <CollidableOffset USE='_27' containerField='geometry'/>
+      </RigidBody>
+      <RigidBody DEF='_39'
+          fixed='true'
+          position='4 2 0'>
+        <CollidableShape USE='_28' containerField='geometry'/>
+      </RigidBody>
+      <RigidBody DEF='_40'
           position='4 0 0'>
-        <CollidableShape USE='_27' containerField='geometry'/>
-        <CollidableOffset USE='_28' containerField='geometry'/>
+        <CollidableShape USE='_29' containerField='geometry'/>
+        <CollidableOffset USE='_30' containerField='geometry'/>
       </RigidBody>
       <SingleAxisHingeJoint
           anchorPoint='0 2 0'
-          axis='0 0 1'>
-        <RigidBody USE='_29' containerField='body1'/>
-        <RigidBody USE='_30' containerField='body2'/>
-      </SingleAxisHingeJoint>
-      <SingleAxisHingeJoint
-          anchorPoint='1 2 0'
           axis='0 0 1'>
         <RigidBody USE='_31' containerField='body1'/>
         <RigidBody USE='_32' containerField='body2'/>
       </SingleAxisHingeJoint>
       <SingleAxisHingeJoint
-          anchorPoint='2 2 0'
+          anchorPoint='1 2 0'
           axis='0 0 1'>
         <RigidBody USE='_33' containerField='body1'/>
         <RigidBody USE='_34' containerField='body2'/>
       </SingleAxisHingeJoint>
       <SingleAxisHingeJoint
-          anchorPoint='3 2 0'
+          anchorPoint='2 2 0'
           axis='0 0 1'>
         <RigidBody USE='_35' containerField='body1'/>
         <RigidBody USE='_36' containerField='body2'/>
       </SingleAxisHingeJoint>
       <SingleAxisHingeJoint
-          anchorPoint='4 2 0'
+          anchorPoint='3 2 0'
           axis='0 0 1'>
         <RigidBody USE='_37' containerField='body1'/>
         <RigidBody USE='_38' containerField='body2'/>
+      </SingleAxisHingeJoint>
+      <SingleAxisHingeJoint
+          anchorPoint='4 2 0'
+          axis='0 0 1'>
+        <RigidBody USE='_39' containerField='body1'/>
+        <RigidBody USE='_40' containerField='body2'/>
       </SingleAxisHingeJoint>
     </RigidBodyCollection>
   </Scene>
