@@ -8,7 +8,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.1.1, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/RigidBodyPhysics/SliderJoint2.x3d'/>
-    <meta name='modified' content='Tue, 08 May 2018 14:45:52 GMT'/>
+    <meta name='modified' content='Sun, 13 May 2018 02:05:48 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -42,8 +42,8 @@
               name='nodes'
               reference='http://titania.create3000.de'>
             <CollidableShape DEF='Box' containerField='value'
-                translation='-4.75208 -2.33123 -2'
-                rotation='-8.87609702116837e-08 0.99999999999999 1.09834152167684e-07 269.999874270995'>
+                translation='-9.06308 -4.22618 -2'
+                rotation='0.211541292013807 -0.954201522802289 0.211541333206826 92.6850859818565'>
               <Shape containerField='shape'>
                 <Appearance>
                   <Material/>
@@ -152,7 +152,7 @@
         offset='25'/>
     <CollidableShape DEF='Wippe'
         translation='0 0 -2'
-        rotation='0.211541378239845 -0.954201493702862 0.211541378239845 92.6850668883971'>
+        rotation='0.211541383376337 -0.954201491425397 0.211541383376337 92.6850671003662'>
       <Shape containerField='shape'>
         <Appearance>
           <Material/>
@@ -166,19 +166,18 @@
       <RigidBody DEF='Wippe_15'
           fixed='true'
           position='0 0 -2'
-          orientation='0.211541378239845 -0.954201493702862 0.211541378239845 92.6850668883971'>
+          orientation='0.211541383376337 -0.954201491425397 0.211541383376337 92.6850671003662'>
         <CollidableShape USE='Wippe' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='Box_16'
-          position='-4.75208 -2.33123 -2'
-          orientation='-8.87609702116837e-08 0.99999999999999 1.09834152167684e-07 269.999874270995'
-          linearVelocity='-2.33139e-06 -3.08163 6.28173'
-          angularVelocity='0.000304079 2.20504e-12 1.08173e-12'>
+          position='-9.06308 -4.22618 -2'
+          orientation='0.211541292013807 -0.954201522802289 0.211541333206826 92.6850859818565'
+          linearVelocity='3.46883e-05 2.12342e-05 -7.19194e-06'
+          angularVelocity='4.16261e-05 0.000338754 0.000108534'>
         <CollidableShape USE='Box' containerField='geometry'/>
       </RigidBody>
       <SliderJoint
           forceOutput='"ALL"'
-          axis='2 1 0'
           minSeparation='-10'
           maxSeparation='10'>
         <RigidBody USE='Wippe_15' containerField='body1'/>

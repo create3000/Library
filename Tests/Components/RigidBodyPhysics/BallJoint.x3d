@@ -6,10 +6,9 @@
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Fri, 30 Mar 2018 09:04:34 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V4.0.6a, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/scene.x3d'/>
-    <meta name='modified' content='Mon, 02 Apr 2018 13:25:07 GMT'/>
-    <meta name='titania-output-style' content='Nicest'/>
+    <meta name='generator' content='Titania V4.1.1, http://titania.create3000.de'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/RigidBodyPhysics/BallJoint.x3d'/>
+    <meta name='modified' content='Sat, 12 May 2018 06:31:53 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -195,11 +194,13 @@
         <CollidableShape USE='Cylinder2_17' containerField='geometry'/>
       </RigidBody>
       <BallJoint
+          forceOutput='"ALL"'
           anchorPoint='0 3 0'>
         <RigidBody USE='Sphere' containerField='body1'/>
         <RigidBody USE='Cylinder1' containerField='body2'/>
       </BallJoint>
       <BallJoint DEF='_20'
+          forceOutput='"ALL"'
           anchorPoint='6 3 0'>
         <RigidBody USE='Cylinder1' containerField='body1'/>
         <RigidBody USE='Cylinder2' containerField='body2'/>
