@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.1.1, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/RigidBodyPhysics/KineticPendulum.x3d'/>
-    <meta name='modified' content='Tue, 15 May 2018 04:10:10 GMT'/>
+    <meta name='modified' content='Tue, 15 May 2018 06:43:46 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -302,6 +302,7 @@
     </Group>
     <RigidBodyCollection>
       <CollisionCollection
+          bounce='1'
           minBounceSpeed='0'>
         <CollidableShape USE='_14' containerField='collidables'/>
         <CollidableShape USE='_17' containerField='collidables'/>
