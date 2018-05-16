@@ -6,8 +6,9 @@
     <meta name='created' content='Tue, 15 May 2018 02:42:31 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.1.1, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/RigidBodyPhysics/KineticPendulum.x3d'/>
-    <meta name='modified' content='Tue, 15 May 2018 06:43:46 GMT'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Server/create3000.de/media/htdocs/components/RigidBodyPhysics/SingleAxisHingeJoint/SingleAxisHingeJoint.O.x3d'/>
+    <meta name='modified' content='Wed, 16 May 2018 09:21:32 GMT'/>
+    <meta name='titania-output-style' content='Nicest'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -302,7 +303,6 @@
     </Group>
     <RigidBodyCollection>
       <CollisionCollection
-          bounce='1'
           minBounceSpeed='0'>
         <CollidableShape USE='_14' containerField='collidables'/>
         <CollidableShape USE='_17' containerField='collidables'/>
@@ -322,52 +322,62 @@
       </CollisionCollection>
       <RigidBody DEF='_37'
           fixed='true'
-          position='0 2 0'>
+          position='0 2 0'
+          mass='0.01'>
         <CollidableShape USE='_14' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='_38'
           position='-2 2 0'
-          orientation='2.26008637581007e-07 3.87429872713976e-06 -0.999999999992469 1.57079626719778'>
+          orientation='2.26008637581007e-07 3.87429872713976e-06 -0.999999999992469 1.57079626719778'
+          mass='0.01'>
         <CollidableShape USE='_17' containerField='geometry'/>
         <CollidableOffset USE='_19' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='_39'
           fixed='true'
-          position='1 2 0'>
+          position='1 2 0'
+          mass='0.01'>
         <CollidableShape USE='_21' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='_40'
-          position='1 0 0'>
+          position='1 0 0'
+          mass='0.01'>
         <CollidableShape USE='_23' containerField='geometry'/>
         <CollidableOffset USE='_24' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='_41'
           fixed='true'
-          position='2 2 0'>
+          position='2 2 0'
+          mass='0.01'>
         <CollidableShape USE='_25' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='_42'
-          position='2 0 0'>
+          position='2 0 0'
+          mass='0.01'>
         <CollidableShape USE='_27' containerField='geometry'/>
         <CollidableOffset USE='_28' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='_43'
           fixed='true'
-          position='3 2 0'>
+          position='3 2 0'
+          mass='0.01'>
         <CollidableShape USE='_29' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='_44'
-          position='3 0 0'>
+          position='3 0 0'
+          mass='0.01'>
         <CollidableShape USE='_31' containerField='geometry'/>
         <CollidableOffset USE='_32' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='_45'
           fixed='true'
-          position='4 2 0'>
+          position='4 2 0'
+          mass='0.01'>
         <CollidableShape USE='_33' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='_46'
-          position='4 0 0'>
+          position='4 0 0'
+          mass='0.01'>
         <CollidableShape USE='_35' containerField='geometry'/>
         <CollidableOffset USE='_36' containerField='geometry'/>
       </RigidBody>
