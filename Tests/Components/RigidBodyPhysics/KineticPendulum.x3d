@@ -2,13 +2,13 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
 <X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
   <head>
+    <unit category='angle' name='degree' conversionFactor='0.0174532925199432958'/>
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Tue, 15 May 2018 02:42:31 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.1.1, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/Projekte/Server/create3000.de/media/htdocs/components/RigidBodyPhysics/SingleAxisHingeJoint/SingleAxisHingeJoint.O.x3d'/>
-    <meta name='modified' content='Wed, 16 May 2018 09:21:32 GMT'/>
-    <meta name='titania-output-style' content='Nicest'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/RigidBodyPhysics/KineticPendulum.x3d'/>
+    <meta name='modified' content='Sat, 19 May 2018 14:35:57 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -137,9 +137,9 @@
       </MetadataSet>
     </WorldInfo>
     <Background
-        skyAngle='1.5708'
+        skyAngle='90.0002'
         skyColor='0.023 0.023 0.023, 0.123 0.123 0.123'
-        groundAngle='1.5708'
+        groundAngle='90.0002'
         groundColor='0.644 0.644 0.644, 0.123 0.123 0.123'/>
     <Viewpoint
         description='Initial View'/>
@@ -160,7 +160,7 @@
       </CollidableShape>
       <CollidableShape DEF='_17'
           translation='-2 2 0'
-          rotation='2.26008637581007e-07 3.87429872713976e-06 -0.999999999992469 1.57079626719778'>
+          rotation='2.26008637581007e-07 3.87429872713976e-06 -0.999999999992469 89.9999965853368'>
         <Shape containerField='shape'>
           <Appearance USE='_15'/>
           <Cylinder DEF='_18'
@@ -170,7 +170,7 @@
       </CollidableShape>
       <CollidableOffset DEF='_19'
           translation='-2 2 0'
-          rotation='2.26008637581007e-07 3.87429872713976e-06 -0.999999999992469 1.57079626719778'>
+          rotation='2.26008637581007e-07 3.87429872713976e-06 -0.999999999992469 89.9999965853368'>
         <CollidableShape containerField='collidable'
             translation='0 -2 0'>
           <Shape containerField='shape'>
@@ -328,7 +328,7 @@
       </RigidBody>
       <RigidBody DEF='_38'
           position='-2 2 0'
-          orientation='2.26008637581007e-07 3.87429872713976e-06 -0.999999999992469 1.57079626719778'
+          orientation='2.26008637581007e-07 3.87429872713976e-06 -0.999999999992469 89.9999965853368'
           mass='0.01'>
         <CollidableShape USE='_17' containerField='geometry'/>
         <CollidableOffset USE='_19' containerField='geometry'/>
@@ -382,6 +382,7 @@
         <CollidableOffset USE='_36' containerField='geometry'/>
       </RigidBody>
       <SingleAxisHingeJoint
+          forceOutput='"ALL"'
           anchorPoint='0 2 0'
           axis='0 0 1'>
         <RigidBody USE='_37' containerField='body1'/>

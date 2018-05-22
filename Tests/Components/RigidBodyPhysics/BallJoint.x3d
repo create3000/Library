@@ -8,7 +8,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.1.1, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/RigidBodyPhysics/BallJoint.x3d'/>
-    <meta name='modified' content='Sat, 12 May 2018 06:31:53 GMT'/>
+    <meta name='modified' content='Sat, 19 May 2018 02:38:40 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -41,18 +41,16 @@
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
               reference='http://titania.create3000.de'>
-            <CollidableShape DEF='Cylinder2_2' containerField='value'
-                translation='3 3 0'
-                rotation='0 0 1 90'>
-              <Shape DEF='_3' containerField='shape'>
+            <Transform DEF='_2' containerField='value'
+                translation='-2.38419e-07 -3 0'>
+              <Shape>
                 <Appearance>
                   <Material/>
                 </Appearance>
-                <Cylinder
-                    height='6'
-                    radius='0.262747'/>
+                <Sphere
+                    radius='0.51305'/>
               </Shape>
-            </CollidableShape>
+            </Transform>
           </MetadataSet>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
@@ -62,7 +60,7 @@
               name='layerNumber'
               reference='http://titania.create3000.de'
               value='-1, 0, 0, 0, 0, -1, -1, -1'/>
-          <MetadataString DEF='type_4' containerField='value'
+          <MetadataString DEF='type_3' containerField='value'
               name='type'
               reference='http://titania.create3000.de'
               value='"TOP_VIEW", "MAIN_VIEW", "PERSPECTIVE_VIEW", "FRONT_VIEW"'/>
@@ -72,15 +70,15 @@
             <MetadataSet DEF='PerspectiveViewpoint' containerField='value'
                 name='PerspectiveViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_5' containerField='value'
+              <MetadataDouble DEF='position_4' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
                   value='-13.0693017707918, 9.42332023386004, 10.4264578941736'/>
-              <MetadataDouble DEF='orientation_6' containerField='value'
+              <MetadataDouble DEF='orientation_5' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
                   value='-0.442819645497847, -0.857569419226012, -0.261697254035118, 1.03595451506509'/>
-              <MetadataDouble DEF='centerOfRotation_7' containerField='value'
+              <MetadataDouble DEF='centerOfRotation_6' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
                   value='0, 0, 0'/>
@@ -92,19 +90,19 @@
             <MetadataSet DEF='TopViewpoint' containerField='value'
                 name='TopViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_8' containerField='value'
+              <MetadataDouble DEF='position_7' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
                   value='-0.243852317273461, 10.8662109375, 0.0978136415104167'/>
-              <MetadataDouble DEF='orientation_9' containerField='value'
+              <MetadataDouble DEF='orientation_8' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
                   value='1, 0, 0, 4.71238898038469'/>
-              <MetadataDouble DEF='centerOfRotation_10' containerField='value'
+              <MetadataDouble DEF='centerOfRotation_9' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
                   value='-0.243852317273461, 0, 0.0978136415104167'/>
-              <MetadataDouble DEF='fieldOfViewScale_11' containerField='value'
+              <MetadataDouble DEF='fieldOfViewScale_10' containerField='value'
                   name='fieldOfViewScale'
                   reference='http://titania.create3000.de'
                   value='1.54460628591057'/>
@@ -112,19 +110,19 @@
             <MetadataSet DEF='FrontViewpoint' containerField='value'
                 name='FrontViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_12' containerField='value'
+              <MetadataDouble DEF='position_11' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
                   value='-0.376141946369768, -1.99640987558847, 10000'/>
-              <MetadataDouble DEF='orientation_13' containerField='value'
+              <MetadataDouble DEF='orientation_12' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
                   value='0, 0, 1, 0'/>
-              <MetadataDouble DEF='centerOfRotation_14' containerField='value'
+              <MetadataDouble DEF='centerOfRotation_13' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
                   value='-0.376141946369768, -1.99640987558847, 0'/>
-              <MetadataDouble DEF='fieldOfViewScale_15' containerField='value'
+              <MetadataDouble DEF='fieldOfViewScale_14' containerField='value'
                   name='fieldOfViewScale'
                   reference='http://titania.create3000.de'
                   value='1.24938738466191'/>
@@ -146,7 +144,7 @@
       </MetadataSet>
     </WorldInfo>
     <Group DEF='Collidables'>
-      <CollidableShape DEF='_16'
+      <CollidableShape DEF='_15'
           translation='0 3 0'>
         <Shape containerField='shape'>
           <Appearance>
@@ -156,24 +154,26 @@
               radius='0.51305'/>
         </Shape>
       </CollidableShape>
-      <CollidableShape USE='Cylinder2_2'/>
-      <CollidableShape DEF='Cylinder2_17'
-          translation='6 0 0'>
-        <Shape USE='_3' containerField='shape'/>
-      </CollidableShape>
-      <Transform DEF='_18'
+      <CollidableShape DEF='Cylinder2_16'
           translation='3 3 0'
           rotation='0 0 1 90'>
-        <Transform DEF='_19'
-            translation='0 -3 0'>
-          <Shape>
-            <Appearance>
-              <Material/>
-            </Appearance>
-            <Sphere
-                radius='0.51305'/>
-          </Shape>
-        </Transform>
+        <Shape DEF='_17' containerField='shape'>
+          <Appearance>
+            <Material/>
+          </Appearance>
+          <Cylinder
+              height='6'
+              radius='0.262747'/>
+        </Shape>
+      </CollidableShape>
+      <CollidableShape DEF='Cylinder2_18'
+          translation='6 0 0'>
+        <Shape USE='_17' containerField='shape'/>
+      </CollidableShape>
+      <Transform
+          translation='3 3 0'
+          rotation='0 0 1 90'>
+        <Transform USE='_2'/>
       </Transform>
     </Group>
     <RigidBodyCollection>
@@ -181,17 +181,17 @@
           fixed='true'
           position='0 3 0'
           useGlobalGravity='false'>
-        <CollidableShape USE='_16' containerField='geometry'/>
+        <CollidableShape USE='_15' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='Cylinder1'
           position='3 3 0'
           orientation='0 0 1 90'>
-        <CollidableShape USE='Cylinder2_2' containerField='geometry'/>
+        <CollidableShape USE='Cylinder2_16' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='Cylinder2'
           position='6 0 0'
           angularVelocity='0 0 -1108.72'>
-        <CollidableShape USE='Cylinder2_17' containerField='geometry'/>
+        <CollidableShape USE='Cylinder2_18' containerField='geometry'/>
       </RigidBody>
       <BallJoint
           forceOutput='"ALL"'
@@ -199,15 +199,13 @@
         <RigidBody USE='Sphere' containerField='body1'/>
         <RigidBody USE='Cylinder1' containerField='body2'/>
       </BallJoint>
-      <BallJoint DEF='_20'
+      <BallJoint DEF='_19'
           forceOutput='"ALL"'
           anchorPoint='6 3 0'>
         <RigidBody USE='Cylinder1' containerField='body1'/>
         <RigidBody USE='Cylinder2' containerField='body2'/>
       </BallJoint>
     </RigidBodyCollection>
-    <ROUTE fromNode='_20' fromField='body1AnchorPoint' toNode='_19' toField='set_translation'/>
-    <ROUTE fromNode='Cylinder2_2' fromField='translation_changed' toNode='_18' toField='set_translation'/>
-    <ROUTE fromNode='Cylinder2_2' fromField='rotation_changed' toNode='_18' toField='set_rotation'/>
+    <ROUTE fromNode='_19' fromField='body1AnchorPoint' toNode='_2' toField='set_translation'/>
   </Scene>
 </X3D>

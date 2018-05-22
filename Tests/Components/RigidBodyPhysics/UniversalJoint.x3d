@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.2//EN" "http://www.web3d.org/specifications/x3d-3.2.dtd">
+<X3D profile='Immersive' version='3.2' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.2.xsd'>
+  <head>
+    <component name='RigidBodyPhysics' level='2'/>
+    <meta name='comment' content='World of Titania'/>
+    <meta name='created' content='1 January 2008'/>
+    <meta name='creator' content='Alan Hudson and Justin Couch'/>
+    <meta name='description' content='Example scene for RigidBodyPhysics component'/>
+    <meta name='generator' content='Titania V4.1.1, http://titania.create3000.de'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/RigidBodyPhysics/UniversalJoint.x3d'/>
+    <meta name='license' content='../../license.html'/>
+    <meta name='modified' content='Thu, 17 May 2018 09:49:33 GMT'/>
+    <meta name='reference' content='http://www.xj3d.org/extensions/index.html#Physics'/>
+    <meta name='reference' content='originals/universal_joint.x3dv'/>
+    <meta name='reference' content='http://www.web3d.org/x3d/specifications/ISO-IEC-FDIS-19775-1.2-X3D-AbstractSpecification/Part01/components/rigid_physics.html'/>
+    <meta name='title' content='UniversalJoint.x3d'/>
+    <meta name='translated' content='26 December 2008'/>
+    <meta name='translator' content='Don Brutzman'/>
+    <meta name='warning' content='under development'/>
+  </head>
+  <Scene>
+    <WorldInfo
+        title='UniversalJoint'>
+      <MetadataSet DEF='Titania'
+          name='Titania'
+          reference='http://titania.create3000.de'>
+        <MetadataSet DEF='Selection' containerField='value'
+            name='Selection'
+            reference='http://titania.create3000.de'>
+          <MetadataBoolean DEF='selectGeometry' containerField='value'
+              name='selectGeometry'
+              reference='http://titania.create3000.de'
+              value='false'/>
+          <MetadataSet DEF='nodes' containerField='value'
+              name='nodes'
+              reference='http://titania.create3000.de'/>
+        </MetadataSet>
+        <MetadataSet DEF='Page' containerField='value'
+            name='Page'
+            reference='http://titania.create3000.de'>
+          <MetadataInteger DEF='activeView' containerField='value'
+              name='activeView'
+              reference='http://titania.create3000.de'
+              value='2'/>
+          <MetadataInteger DEF='multiView' containerField='value'
+              name='multiView'
+              reference='http://titania.create3000.de'
+              value='1'/>
+        </MetadataSet>
+        <MetadataSet DEF='Grid' containerField='value'
+            name='Grid'
+            reference='http://titania.create3000.de'>
+          <MetadataBoolean DEF='enabled' containerField='value'
+              name='enabled'
+              reference='http://titania.create3000.de'
+              value='true'/>
+        </MetadataSet>
+        <MetadataSet DEF='BrowserPanel' containerField='value'
+            name='BrowserPanel'
+            reference='http://titania.create3000.de'>
+          <MetadataString DEF='type' containerField='value'
+              name='type'
+              reference='http://titania.create3000.de'
+              value='"", "", "PERSPECTIVE_VIEW", ""'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <Group>
+      <CollidableShape DEF='BOX-GEOM-1'
+          translation='0.5 0 0'>
+        <Shape containerField='shape'>
+          <Appearance>
+            <Material
+                emissiveColor='1 0 0'/>
+          </Appearance>
+          <Box
+              size='1 0.2 0.2'/>
+        </Shape>
+      </CollidableShape>
+      <CollidableShape DEF='BOX-GEOM-2'
+          translation='-0.35355 -0.35355 0'
+          rotation='0 0 1 0.7854'>
+        <Shape containerField='shape'>
+          <Appearance>
+            <Material
+                emissiveColor='0 0 1'/>
+          </Appearance>
+          <Box
+              size='1 0.2 0.2'/>
+        </Shape>
+      </CollidableShape>
+    </Group>
+    <RigidBodyCollection>
+      <RigidBody DEF='BODY-1'
+          fixed='true'
+          position='0.5 0 0'
+          angularVelocity='0.5 0 0'
+          finiteRotationAxis='0 1 0'
+          mass='0.1'
+          useGlobalGravity='false'>
+        <CollidableShape USE='BOX-GEOM-1' containerField='geometry'/>
+      </RigidBody>
+      <RigidBody DEF='BODY-2'
+          position='-0.35355 -0.35355 0'
+          orientation='0 0 1 0.7854'
+          finiteRotationAxis='0 1 0'
+          angularDampingFactor='0'
+          mass='0.1'>
+        <CollidableShape USE='BOX-GEOM-2' containerField='geometry'/>
+      </RigidBody>
+      <UniversalJoint
+          forceOutput='"ALL"'
+          axis1='0.7071 0.7071 0'
+          axis2='0 0 1'>
+        <RigidBody USE='BODY-1' containerField='body1'/>
+        <RigidBody USE='BODY-2' containerField='body2'/>
+      </UniversalJoint>
+    </RigidBodyCollection>
+  </Scene>
+</X3D>

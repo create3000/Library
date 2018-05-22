@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.1.1, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/RigidBodyPhysics/DoubleAxisHingeJoint.x3d'/>
-    <meta name='modified' content='Fri, 20 Apr 2018 01:57:31 GMT'/>
+    <meta name='modified' content='Sat, 19 May 2018 14:56:59 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -162,6 +162,7 @@
         <CollidableShape USE='Box' containerField='geometry'/>
       </RigidBody>
       <DoubleAxisHingeJoint
+          forceOutput='"ALL"'
           axis1='0 1 0'
           axis2='1 0 0'>
         <RigidBody USE='Cylinder_14' containerField='body1'/>
