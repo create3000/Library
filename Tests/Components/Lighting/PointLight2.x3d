@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.3.0, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Lighting/PointLight2.x3d'/>
-    <meta name='modified' content='Tue, 05 Jun 2018 12:07:56 GMT'/>
+    <meta name='modified' content='Tue, 05 Jun 2018 12:08:39 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -40,13 +40,13 @@
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
               reference='http://titania.create3000.de'>
-            <Transform DEF='Cylinder' containerField='value'
-                translation='4 2 0'>
+            <Transform DEF='Cone' containerField='value'
+                translation='0 2 4'>
               <Shape>
                 <Appearance>
                   <Material/>
                 </Appearance>
-                <Cylinder/>
+                <Cone/>
               </Shape>
             </Transform>
           </MetadataSet>
@@ -152,7 +152,7 @@
       </Shape>
     </Transform>
     <PointLight DEF='_14'
-        location='0 4 0'
+        location='0 5 0'
         shadowIntensity='1'/>
     <Viewpoint DEF='_15'
         position='5.1736 10.0496 10.0977'
@@ -169,16 +169,16 @@
         <Box/>
       </Shape>
     </Transform>
-    <Transform DEF='Cone'
-        translation='0 1 4'>
+    <Transform USE='Cone'/>
+    <Transform DEF='Cylinder'
+        translation='4 2 0'>
       <Shape>
         <Appearance>
           <Material/>
         </Appearance>
-        <Cone/>
+        <Cylinder/>
       </Shape>
     </Transform>
-    <Transform USE='Cylinder'/>
     <Transform DEF='Pyramid'
         translation='0 1 -4'>
       <Shape>
