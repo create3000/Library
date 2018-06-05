@@ -3,11 +3,11 @@
 <X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
   <head>
     <meta name='comment' content='World of Titania'/>
-    <meta name='created' content='Fri, 20 Apr 2018 14:01:02 GMT'/>
+    <meta name='created' content='Tue, 05 Jun 2018 02:21:56 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V4.1.1, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/RigidBodyPhysics/MotorJoint.x3d'/>
-    <meta name='modified' content='Thu, 24 May 2018 09:05:14 GMT'/>
+    <meta name='generator' content='Titania V4.3.0, http://titania.create3000.de'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Lighting/PointLight2.x3d'/>
+    <meta name='modified' content='Tue, 05 Jun 2018 02:26:19 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -39,20 +39,7 @@
               value='false'/>
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
-              reference='http://titania.create3000.de'>
-            <RigidBody DEF='Sphere2' containerField='value'
-                position='2 0 0'>
-              <CollidableShape DEF='Sphere2_2' containerField='geometry'
-                  translation='2 0 0'>
-                <Shape containerField='shape'>
-                  <Appearance>
-                    <Material/>
-                  </Appearance>
-                  <Sphere/>
-                </Shape>
-              </CollidableShape>
-            </RigidBody>
-          </MetadataSet>
+              reference='http://titania.create3000.de'/>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
             name='BrowserPanel'
@@ -61,7 +48,7 @@
               name='layerNumber'
               reference='http://titania.create3000.de'
               value='-1, 0, 0, 0, 0, -1, -1, -1'/>
-          <MetadataString DEF='type_3' containerField='value'
+          <MetadataString DEF='type_2' containerField='value'
               name='type'
               reference='http://titania.create3000.de'
               value='"TOP_VIEW", "MAIN_VIEW", "PERSPECTIVE_VIEW", "FRONT_VIEW"'/>
@@ -71,15 +58,15 @@
             <MetadataSet DEF='PerspectiveViewpoint' containerField='value'
                 name='PerspectiveViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_4' containerField='value'
+              <MetadataDouble DEF='position_3' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
                   value='5.87788534164429, 6.46984958648682, 13.8524446487427'/>
-              <MetadataDouble DEF='orientation_5' containerField='value'
+              <MetadataDouble DEF='orientation_4' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
                   value='-0.704047462871212, 0.695566762376517, 0.143192350010952, 0.568941727555854'/>
-              <MetadataDouble DEF='centerOfRotation_6' containerField='value'
+              <MetadataDouble DEF='centerOfRotation_5' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
                   value='0, 0, 0'/>
@@ -91,39 +78,39 @@
             <MetadataSet DEF='TopViewpoint' containerField='value'
                 name='TopViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_7' containerField='value'
+              <MetadataDouble DEF='position_6' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
-                  value='-0.0320612526145463, 10.8662109375, 0.0937320149966475'/>
-              <MetadataDouble DEF='orientation_8' containerField='value'
+                  value='-5.9857227487932, 10.8662109375, 0.18038974973888'/>
+              <MetadataDouble DEF='orientation_7' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
                   value='1, 0, 0, 4.71238898038469'/>
-              <MetadataDouble DEF='centerOfRotation_9' containerField='value'
+              <MetadataDouble DEF='centerOfRotation_8' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
-                  value='-0.0320612526145463, 0, 0.0937320149966475'/>
-              <MetadataDouble DEF='fieldOfViewScale_10' containerField='value'
+                  value='-5.9857227487932, 0, 0.18038974973888'/>
+              <MetadataDouble DEF='fieldOfViewScale_9' containerField='value'
                   name='fieldOfViewScale'
                   reference='http://titania.create3000.de'
-                  value='1.21023944190259'/>
+                  value='2.6418009235867'/>
             </MetadataSet>
             <MetadataSet DEF='FrontViewpoint' containerField='value'
                 name='FrontViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_11' containerField='value'
+              <MetadataDouble DEF='position_10' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
                   value='-0.00884759203065143, 0.0177734813359099, 10000'/>
-              <MetadataDouble DEF='orientation_12' containerField='value'
+              <MetadataDouble DEF='orientation_11' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
                   value='0, 0, 1, 0'/>
-              <MetadataDouble DEF='centerOfRotation_13' containerField='value'
+              <MetadataDouble DEF='centerOfRotation_12' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
                   value='-0.00884759203065143, 0.0177734813359099, 0'/>
-              <MetadataDouble DEF='fieldOfViewScale_14' containerField='value'
+              <MetadataDouble DEF='fieldOfViewScale_13' containerField='value'
                   name='fieldOfViewScale'
                   reference='http://titania.create3000.de'
                   value='1.212467484375'/>
@@ -136,7 +123,7 @@
           <MetadataInteger DEF='activeView' containerField='value'
               name='activeView'
               reference='http://titania.create3000.de'
-              value='2'/>
+              value='1'/>
           <MetadataInteger DEF='multiView' containerField='value'
               name='multiView'
               reference='http://titania.create3000.de'
@@ -144,35 +131,64 @@
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
-    <Group DEF='Collidables'>
-      <CollidableShape DEF='Sphere1'
-          translation='-1 0 0'>
-        <Shape containerField='shape'>
-          <Appearance>
-            <Material/>
-          </Appearance>
-          <Sphere/>
-        </Shape>
-      </CollidableShape>
-      <CollidableShape USE='Sphere2_2'/>
-    </Group>
-    <RigidBodyCollection
-        gravity='0 0 0'>
-      <RigidBody DEF='Sphere1_15'
-          fixed='true'
-          position='-1 0 0'>
-        <CollidableShape USE='Sphere1' containerField='geometry'/>
-      </RigidBody>
-      <RigidBody USE='Sphere2'/>
-      <MotorJoint
-          autoCalc='true'
-          enabledAxes='3'
-          motor3Axis='0 1 0'
-          axis2Torque='1'
-          axis3Torque='1'>
-        <RigidBody USE='Sphere1_15' containerField='body1'/>
-        <RigidBody USE='Sphere2' containerField='body2'/>
-      </MotorJoint>
-    </RigidBodyCollection>
+    <Transform DEF='Box'
+        translation='0 -1 0'
+        scale='11 1 11'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Box/>
+      </Shape>
+    </Transform>
+    <PointLight DEF='_14'
+        location='0 3 0'
+        shadowIntensity='1'/>
+    <Viewpoint DEF='_15'
+        position='5.1736 10.0496 10.0977'
+        orientation='-0.826747553796003 0.526024485457868 0.19946609484098 0.860063252825464'
+        centerOfRotation='1.22569e-07 -1.49027e-08 -4.7967e-08'/>
+    <NavigationInfo
+        headlight='false'/>
+    <Transform DEF='Box_16'
+        translation='-4 1 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Box/>
+      </Shape>
+    </Transform>
+    <Transform DEF='Cone'
+        translation='0 1 4'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Cone/>
+      </Shape>
+    </Transform>
+    <Transform DEF='Cylinder'
+        translation='4 1 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Cylinder/>
+      </Shape>
+    </Transform>
+    <Transform DEF='Pyramid'
+        translation='0 1 -4'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <IndexedFaceSet
+            coordIndex='3, 2, 1, 0, -1, 0, 1, 4, -1, 1, 2, 4, -1, 2, 3, 4, -1, 3, 0, 4, -1'>
+          <Coordinate
+              point='-1 -1 1, 1 -1 1, 1 -1 -1, -1 -1 -1, 0 1 0'/>
+        </IndexedFaceSet>
+      </Shape>
+    </Transform>
   </Scene>
 </X3D>
