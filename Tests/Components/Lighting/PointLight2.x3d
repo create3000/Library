@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.3.0, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Lighting/PointLight2.x3d'/>
-    <meta name='modified' content='Tue, 05 Jun 2018 02:26:19 GMT'/>
+    <meta name='modified' content='Tue, 05 Jun 2018 12:07:56 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -39,7 +39,17 @@
               value='false'/>
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
-              reference='http://titania.create3000.de'/>
+              reference='http://titania.create3000.de'>
+            <Transform DEF='Cylinder' containerField='value'
+                translation='4 2 0'>
+              <Shape>
+                <Appearance>
+                  <Material/>
+                </Appearance>
+                <Cylinder/>
+              </Shape>
+            </Transform>
+          </MetadataSet>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
             name='BrowserPanel'
@@ -123,7 +133,7 @@
           <MetadataInteger DEF='activeView' containerField='value'
               name='activeView'
               reference='http://titania.create3000.de'
-              value='1'/>
+              value='3'/>
           <MetadataInteger DEF='multiView' containerField='value'
               name='multiView'
               reference='http://titania.create3000.de'
@@ -142,7 +152,7 @@
       </Shape>
     </Transform>
     <PointLight DEF='_14'
-        location='0 3 0'
+        location='0 4 0'
         shadowIntensity='1'/>
     <Viewpoint DEF='_15'
         position='5.1736 10.0496 10.0977'
@@ -168,15 +178,7 @@
         <Cone/>
       </Shape>
     </Transform>
-    <Transform DEF='Cylinder'
-        translation='4 1 0'>
-      <Shape>
-        <Appearance>
-          <Material/>
-        </Appearance>
-        <Cylinder/>
-      </Shape>
-    </Transform>
+    <Transform USE='Cylinder'/>
     <Transform DEF='Pyramid'
         translation='0 1 -4'>
       <Shape>
