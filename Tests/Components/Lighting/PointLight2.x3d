@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.3.0, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Lighting/PointLight2.x3d'/>
-    <meta name='modified' content='Tue, 05 Jun 2018 13:05:26 GMT'/>
+    <meta name='modified' content='Tue, 05 Jun 2018 13:58:32 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -29,6 +29,10 @@
               name='enabled'
               reference='http://titania.create3000.de'
               value='true'/>
+          <MetadataInteger DEF='dimension' containerField='value'
+              name='dimension'
+              reference='http://titania.create3000.de'
+              value='10, 20, 10'/>
         </MetadataSet>
         <MetadataSet DEF='Selection' containerField='value'
             name='Selection'
@@ -40,15 +44,17 @@
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
               reference='http://titania.create3000.de'>
-            <Transform DEF='Sphere' containerField='value'
-                translation='0 5 0'
-                scale='0.241256 0.241256 0.241256'>
+            <Transform DEF='Pyramid_2' containerField='value'
+                translation='0 9 -4'>
               <Shape>
                 <Appearance>
-                  <Material DEF='_2'
-                      emissiveColor='1 1 1'/>
+                  <Material/>
                 </Appearance>
-                <Sphere/>
+                <IndexedFaceSet
+                    coordIndex='3, 2, 1, 0, -1, 0, 1, 4, -1, 1, 2, 4, -1, 2, 3, 4, -1, 3, 0, 4, -1'>
+                  <Coordinate
+                      point='-1 -1 1, 1 -1 1, 1 -1 -1, -1 -1 -1, 0 1 0'/>
+                </IndexedFaceSet>
               </Shape>
             </Transform>
           </MetadataSet>
@@ -113,7 +119,7 @@
               <MetadataDouble DEF='position_11' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
-                  value='0.517967601501745, 1.89145375034326, 10000'/>
+                  value='-3.76314300822868, 3.55015251499291, 10000'/>
               <MetadataDouble DEF='orientation_12' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
@@ -121,11 +127,11 @@
               <MetadataDouble DEF='centerOfRotation_13' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
-                  value='0.517967601501745, 1.89145375034326, 0'/>
+                  value='-3.76314300822868, 3.55015251499291, 0'/>
               <MetadataDouble DEF='fieldOfViewScale_14' containerField='value'
                   name='fieldOfViewScale'
                   reference='http://titania.create3000.de'
-                  value='0.689651616994707'/>
+                  value='2.01741078562512'/>
             </MetadataSet>
           </MetadataSet>
         </MetadataSet>
@@ -135,7 +141,7 @@
           <MetadataInteger DEF='activeView' containerField='value'
               name='activeView'
               reference='http://titania.create3000.de'
-              value='1'/>
+              value='3'/>
           <MetadataInteger DEF='multiView' containerField='value'
               name='multiView'
               reference='http://titania.create3000.de'
@@ -153,7 +159,17 @@
       <PlaneSensor DEF='_16'
           offset='0 5 0'
           maxPosition='0 -1'/>
-      <Transform USE='Sphere'/>
+      <Transform DEF='Sphere'
+          translation='0 5 0'
+          scale='0.241256 0.241256 0.241256'>
+        <Shape>
+          <Appearance>
+            <Material
+                emissiveColor='1 1 1'/>
+          </Appearance>
+          <Sphere/>
+        </Shape>
+      </Transform>
     </Group>
     <Group>
       <PointLight DEF='_17'
@@ -210,6 +226,44 @@
           </IndexedFaceSet>
         </Shape>
       </Transform>
+      <Transform DEF='Ceiling'
+          translation='0 11.001 0'
+          scale='11 1 11'>
+        <Shape>
+          <Appearance>
+            <Material/>
+          </Appearance>
+          <Box/>
+        </Shape>
+      </Transform>
+      <Transform DEF='Box_19'
+          translation='-4 9 0'>
+        <Shape>
+          <Appearance>
+            <Material/>
+          </Appearance>
+          <Box/>
+        </Shape>
+      </Transform>
+      <Transform DEF='Cone_20'
+          translation='0 9 4'>
+        <Shape>
+          <Appearance>
+            <Material/>
+          </Appearance>
+          <Cone/>
+        </Shape>
+      </Transform>
+      <Transform DEF='Cylinder_21'
+          translation='4 9 0'>
+        <Shape>
+          <Appearance>
+            <Material/>
+          </Appearance>
+          <Cylinder/>
+        </Shape>
+      </Transform>
+      <Transform USE='Pyramid_2'/>
     </Group>
     <ROUTE fromNode='_16' fromField='translation_changed' toNode='_17' toField='set_location'/>
     <ROUTE fromNode='_17' fromField='location_changed' toNode='Sphere' toField='set_translation'/>
