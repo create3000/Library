@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.3.0, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Lighting/PointLight2.x3d'/>
-    <meta name='modified' content='Tue, 05 Jun 2018 13:04:23 GMT'/>
+    <meta name='modified' content='Tue, 05 Jun 2018 13:05:26 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -40,9 +40,17 @@
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
               reference='http://titania.create3000.de'>
-            <PlaneSensor DEF='_2' containerField='value'
-                offset='0 5 0'
-                maxPosition='0 -1'/>
+            <Transform DEF='Sphere' containerField='value'
+                translation='0 5 0'
+                scale='0.241256 0.241256 0.241256'>
+              <Shape>
+                <Appearance>
+                  <Material DEF='_2'
+                      emissiveColor='1 1 1'/>
+                </Appearance>
+                <Sphere/>
+              </Shape>
+            </Transform>
           </MetadataSet>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
@@ -142,20 +150,13 @@
         orientation='-0.826747553796003 0.526024485457868 0.19946609484098 0.860063252825464'
         centerOfRotation='1.22569e-07 -1.49027e-08 -4.7967e-08'/>
     <Group DEF='LightButton'>
-      <PlaneSensor USE='_2'/>
-      <Transform DEF='Sphere'
-          translation='0 5 0'
-          scale='0.241256 0.241256 0.241256'>
-        <Shape>
-          <Appearance>
-            <Material/>
-          </Appearance>
-          <Sphere/>
-        </Shape>
-      </Transform>
+      <PlaneSensor DEF='_16'
+          offset='0 5 0'
+          maxPosition='0 -1'/>
+      <Transform USE='Sphere'/>
     </Group>
     <Group>
-      <PointLight DEF='_16'
+      <PointLight DEF='_17'
           global='false'
           location='0 5 0'
           shadowIntensity='1'/>
@@ -169,7 +170,7 @@
           <Box/>
         </Shape>
       </Transform>
-      <Transform DEF='Box_17'
+      <Transform DEF='Box_18'
           translation='-4 1 0'>
         <Shape>
           <Appearance>
@@ -210,7 +211,7 @@
         </Shape>
       </Transform>
     </Group>
-    <ROUTE fromNode='_2' fromField='translation_changed' toNode='_16' toField='set_location'/>
-    <ROUTE fromNode='_16' fromField='location_changed' toNode='Sphere' toField='set_translation'/>
+    <ROUTE fromNode='_16' fromField='translation_changed' toNode='_17' toField='set_location'/>
+    <ROUTE fromNode='_17' fromField='location_changed' toNode='Sphere' toField='set_translation'/>
   </Scene>
 </X3D>
