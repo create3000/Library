@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.3.0, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Lighting/PointLight2.x3d'/>
-    <meta name='modified' content='Tue, 05 Jun 2018 13:58:32 GMT'/>
+    <meta name='modified' content='Wed, 06 Jun 2018 02:10:37 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -44,19 +44,11 @@
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
               reference='http://titania.create3000.de'>
-            <Transform DEF='Pyramid_2' containerField='value'
-                translation='0 9 -4'>
-              <Shape>
-                <Appearance>
-                  <Material/>
-                </Appearance>
-                <IndexedFaceSet
-                    coordIndex='3, 2, 1, 0, -1, 0, 1, 4, -1, 1, 2, 4, -1, 2, 3, 4, -1, 3, 0, 4, -1'>
-                  <Coordinate
-                      point='-1 -1 1, 1 -1 1, 1 -1 -1, -1 -1 -1, 0 1 0'/>
-                </IndexedFaceSet>
-              </Shape>
-            </Transform>
+            <Viewpoint DEF='_2' containerField='value'
+                description='Inital View'
+                position='5.1736 10.0496 10.0977'
+                orientation='-0.826747553796003 0.526024485457868 0.19946609484098 0.860063252825464'
+                centerOfRotation='1.22569e-07 -1.49027e-08 -4.7967e-08'/>
           </MetadataSet>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
@@ -151,12 +143,9 @@
     </WorldInfo>
     <NavigationInfo
         headlight='false'/>
-    <Viewpoint DEF='_15'
-        position='5.1736 10.0496 10.0977'
-        orientation='-0.826747553796003 0.526024485457868 0.19946609484098 0.860063252825464'
-        centerOfRotation='1.22569e-07 -1.49027e-08 -4.7967e-08'/>
+    <Viewpoint USE='_2'/>
     <Group DEF='LightButton'>
-      <PlaneSensor DEF='_16'
+      <PlaneSensor DEF='_15'
           offset='0 5 0'
           maxPosition='0 -1'/>
       <Transform DEF='Sphere'
@@ -172,7 +161,7 @@
       </Transform>
     </Group>
     <Group>
-      <PointLight DEF='_17'
+      <PointLight DEF='_16'
           global='false'
           location='0 5 0'
           shadowIntensity='1'/>
@@ -186,7 +175,7 @@
           <Box/>
         </Shape>
       </Transform>
-      <Transform DEF='Box_18'
+      <Transform DEF='Box_17'
           translation='-4 1 0'>
         <Shape>
           <Appearance>
@@ -236,7 +225,7 @@
           <Box/>
         </Shape>
       </Transform>
-      <Transform DEF='Box_19'
+      <Transform DEF='Box_18'
           translation='-4 9 0'>
         <Shape>
           <Appearance>
@@ -245,7 +234,7 @@
           <Box/>
         </Shape>
       </Transform>
-      <Transform DEF='Cone_20'
+      <Transform DEF='Cone_19'
           translation='0 9 4'>
         <Shape>
           <Appearance>
@@ -254,7 +243,7 @@
           <Cone/>
         </Shape>
       </Transform>
-      <Transform DEF='Cylinder_21'
+      <Transform DEF='Cylinder_20'
           translation='4 9 0'>
         <Shape>
           <Appearance>
@@ -263,9 +252,21 @@
           <Cylinder/>
         </Shape>
       </Transform>
-      <Transform USE='Pyramid_2'/>
+      <Transform DEF='Pyramid_21'
+          translation='0 9 -4'>
+        <Shape>
+          <Appearance>
+            <Material/>
+          </Appearance>
+          <IndexedFaceSet
+              coordIndex='3, 2, 1, 0, -1, 0, 1, 4, -1, 1, 2, 4, -1, 2, 3, 4, -1, 3, 0, 4, -1'>
+            <Coordinate
+                point='-1 -1 1, 1 -1 1, 1 -1 -1, -1 -1 -1, 0 1 0'/>
+          </IndexedFaceSet>
+        </Shape>
+      </Transform>
     </Group>
-    <ROUTE fromNode='_16' fromField='translation_changed' toNode='_17' toField='set_location'/>
-    <ROUTE fromNode='_17' fromField='location_changed' toNode='Sphere' toField='set_translation'/>
+    <ROUTE fromNode='_15' fromField='translation_changed' toNode='_16' toField='set_location'/>
+    <ROUTE fromNode='_16' fromField='location_changed' toNode='Sphere' toField='set_translation'/>
   </Scene>
 </X3D>
