@@ -5,13 +5,56 @@
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Sun, 18 Sep 2016 14:43:01 GMT'/>
     <meta name='creator' content='holger'/>
-    <meta name='generator' content='Titania V4.0.2, http://titania.create3000.de'/>
+    <meta name='generator' content='Titania V4.3.0, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/ComposedCubeMapTexture/GeneratedCubeMapTexture.x3d'/>
-    <meta name='modified' content='Wed, 06 Dec 2017 05:27:36 GMT'/>
+    <meta name='modified' content='Sun, 17 Jun 2018 23:24:39 GMT'/>
   </head>
   <Scene>
     <WorldInfo
-        title='GeneratedCubeMapTexture'/>
+        title='GeneratedCubeMapTexture'>
+      <MetadataSet DEF='Titania'
+          name='Titania'
+          reference='http://titania.create3000.de'>
+        <MetadataSet DEF='Selection' containerField='value'
+            name='Selection'
+            reference='http://titania.create3000.de'>
+          <MetadataBoolean DEF='selectGeometry' containerField='value'
+              name='selectGeometry'
+              reference='http://titania.create3000.de'
+              value='false'/>
+          <MetadataSet DEF='nodes' containerField='value'
+              name='nodes'
+              reference='http://titania.create3000.de'>
+            <Transform DEF='Box_1' containerField='value'
+                translation='0.100791 -0.5 0.0633195'
+                scale='13.9742 0.5 13.9367'>
+              <Shape>
+                <Appearance>
+                  <Material DEF='Artdeco1'
+                      ambientIntensity='0.0292398'
+                      diffuseColor='0.73 0.61739 0.4307'
+                      specularColor='0.073 0.073 0.073'
+                      shininess='0.122807'/>
+                </Appearance>
+                <Box/>
+              </Shape>
+            </Transform>
+          </MetadataSet>
+        </MetadataSet>
+        <MetadataSet DEF='Page' containerField='value'
+            name='Page'
+            reference='http://titania.create3000.de'>
+          <MetadataInteger DEF='activeView' containerField='value'
+              name='activeView'
+              reference='http://titania.create3000.de'
+              value='1'/>
+          <MetadataInteger DEF='multiView' containerField='value'
+              name='multiView'
+              reference='http://titania.create3000.de'
+              value='0'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
     <WorldInfo/>
     <Background
         frontUrl='"../images/lost_valley/lostvalley_south.png"'
@@ -28,20 +71,9 @@
         position='-4.04934 2.51449 -4.47583'
         orientation='-0.0684467319102771 0.982413982747315 -0.17371761969749 3.88023490021279'
         centerOfRotation='0.136094 4.75451 0.0109285'/>
-    <Transform DEF='Box_1'
-        translation='0.100791 -0.5 0.0633195'
-        scale='13.9742 0.5 13.9367'>
-      <Shape>
-        <Appearance>
-          <Material DEF='Artdeco1'
-              ambientIntensity='0.0292398'
-              diffuseColor='0.73 0.61739 0.4307'
-              specularColor='0.073 0.073 0.073'
-              shininess='0.122807'/>
-        </Appearance>
-        <Box/>
-      </Shape>
-    </Transform>
+    <StaticGroup>
+      <Transform USE='Box_1'/>
+    </StaticGroup>
     <Transform DEF='Box'
         translation='-1.6648 4.99441 0'>
       <Shape>
