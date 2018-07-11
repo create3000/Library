@@ -5,9 +5,9 @@
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Sun, 17 Dec 2017 11:02:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V4.0.3, http://titania.create3000.de'/>
+    <meta name='generator' content='Titania V4.3.1, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Prototypes/Engines/Noise.x3d'/>
-    <meta name='modified' content='Sun, 17 Dec 2017 12:22:17 GMT'/>
+    <meta name='modified' content='Wed, 11 Jul 2018 12:52:20 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='Noise'>
@@ -15,7 +15,7 @@
         <field accessType='inputOutput' type='SFBool' name='enabled'/>
         <field accessType='inputOutput' type='SFFloat' name='amplitude' value='1'/>
         <field accessType='inputOutput' type='SFFloat' name='frequency' value='1'/>
-        <field accessType='inputOutput' type='SFFloat' name='phase' value='0'/>
+        <field accessType='inputOutput' type='SFFloat' name='phase'/>
         <field accessType='outputOnly' type='SFFloat' name='value_changed'/>
       </ProtoInterface>
       <ProtoBody>
@@ -149,12 +149,39 @@ function vlattice (ix, iy, iz)
 
 function clamp (x, a, b)
 {
-	return x <= a ? a : (x >= b ? b : x);
+	return Math .min (Math .max (x, a), b);
 }
 ]]>
         </Script>
         <ROUTE fromNode='Timer' fromField='time' toNode='NoiseScript' toField='set_time'/>
       </ProtoBody>
     </ProtoDeclare>
+    <WorldInfo
+        title='Noise'>
+      <MetadataSet DEF='Titania'
+          name='Titania'
+          reference='http://titania.create3000.de'>
+        <MetadataSet DEF='Selection' containerField='value'
+            name='Selection'
+            reference='http://titania.create3000.de'>
+          <MetadataBoolean DEF='selectGeometry' containerField='value'
+              name='selectGeometry'
+              reference='http://titania.create3000.de'
+              value='false'/>
+        </MetadataSet>
+        <MetadataSet DEF='Page' containerField='value'
+            name='Page'
+            reference='http://titania.create3000.de'>
+          <MetadataInteger DEF='activeView' containerField='value'
+              name='activeView'
+              reference='http://titania.create3000.de'
+              value='1'/>
+          <MetadataInteger DEF='multiView' containerField='value'
+              name='multiView'
+              reference='http://titania.create3000.de'
+              value='0'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
   </Scene>
 </X3D>
