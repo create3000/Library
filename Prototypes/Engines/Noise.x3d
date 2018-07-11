@@ -13,9 +13,9 @@
     <ProtoDeclare name='Noise'>
       <ProtoInterface>
         <field accessType='inputOutput' type='SFBool' name='enabled'/>
-        <field accessType='inputOutput' type='SFFloat' name='frequency' value='1'/>
         <field accessType='inputOutput' type='SFFloat' name='amplitude' value='1'/>
-        <field accessType='inputOutput' type='SFFloat' name='phase' value='1'/>
+        <field accessType='inputOutput' type='SFFloat' name='frequency' value='1'/>
+        <field accessType='inputOutput' type='SFFloat' name='phase' value='0'/>
         <field accessType='outputOnly' type='SFFloat' name='value_changed'/>
       </ProtoInterface>
       <ProtoBody>
