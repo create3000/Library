@@ -5,8 +5,10 @@
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Mon, 04 Jan 2016 06:29:42 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V1.2.2, http://titania.create3000.de'/>
-    <meta name='modified' content='Mon, 04 Jan 2016 08:10:10 GMT'/>
+    <meta name='generator' content='Titania V4.3.3, http://titania.create3000.de'/>
+    <meta name='identifier' content='https://rawgit.com/create3000/Library/master/Tests/Components/Interpolation/OrientationInterpolator.x3d'/>
+    <meta name='modified' content='Sat, 27 Oct 2018 09:53:37 GMT'/>
+    <meta name='titania-output-style' content='Nicest'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='LineTrail' url='"https://cdn.rawgit.com/create3000/Titania/master/Library/Tests/Interpolation/LineTrail.wrl"'>
@@ -45,6 +47,85 @@
               reference='http://titania.create3000.de'
               value='0, 0, 0'/>
         </MetadataSet>
+        <MetadataSet DEF='Page' containerField='value'
+            name='Page'
+            reference='http://titania.create3000.de'>
+          <MetadataInteger DEF='activeView' containerField='value'
+              name='activeView'
+              reference='http://titania.create3000.de'
+              value='1'/>
+          <MetadataInteger DEF='multiView' containerField='value'
+              name='multiView'
+              reference='http://titania.create3000.de'
+              value='0'/>
+        </MetadataSet>
+        <MetadataSet DEF='Selection' containerField='value'
+            name='Selection'
+            reference='http://titania.create3000.de'>
+          <MetadataBoolean DEF='selectGeometry' containerField='value'
+              name='selectGeometry'
+              reference='http://titania.create3000.de'
+              value='false'/>
+          <MetadataSet DEF='nodes' containerField='value'
+              name='nodes'
+              reference='http://titania.create3000.de'>
+            <Script DEF='FollowerScript' containerField='value'>
+              <field accessType='inputOnly' type='SFTime' name='set_time'/>
+              <field accessType='inputOnly' type='SFBool' name='set_active'/>
+              <field accessType='inputOnly' type='SFRotation' name='set_rotation'/>
+              <field accessType='outputOnly' type='SFColor' name='color_changed'/>
+              <field accessType='outputOnly' type='SFVec3f' name='point_changed'/>
+              <field accessType='initializeOnly' type='SFNode' name='touchSensor'>
+                <TouchSensor DEF='Touch'/>
+              </field>
+              <field accessType='initializeOnly' type='SFNode' name='timeSensor'>
+                <TimeSensor DEF='_1'
+                    cycleInterval='2'
+                    startTime='1540633981.11618'
+                    stopTime='1540633981.11618'/>
+              </field>
+              <field accessType='initializeOnly' type='SFNode' name='interpolator'>
+                <OrientationInterpolator DEF='_2'
+                    key='0, 1'
+                    keyValue='0.835275572584412 -0.549831535876019 0 0.558846203626118, -0.894060667491528 0.44794589276452 0 0.919814454880826'/>
+              </field>
+<![CDATA[vrmlscript:
+
+function initialize ()
+{
+	timeSensor .stopTime  = 0;
+	timeSensor .startTime = 0;
+
+	interpolator .keyValue [0] = new SFRotation ();
+	interpolator .keyValue [1] = new SFRotation ();
+}
+
+function set_time (value, time)
+{
+	timeSensor .stopTime  = time;
+	timeSensor .startTime = time;
+
+	interpolator .keyValue [0] = interpolator .value_changed;
+	interpolator .keyValue [1] = new SFRotation (new SFVec3f (0, 0, 1), touchSensor .hitPoint_changed);
+}
+
+function set_active (value)
+{
+	if (value)
+		color_changed = new SFColor (0.8, 0, 0);
+	
+	else
+		color_changed = new SFColor (0.8, 0.8, 0.8);
+}
+
+function set_rotation (value)
+{
+	point_changed = value .multVec (new SFVec3f (0, 0, 1));
+}
+]]>
+            </Script>
+          </MetadataSet>
+        </MetadataSet>
       </MetadataSet>
     </WorldInfo>
     <NavigationInfo
@@ -61,7 +142,7 @@
       <ProtoInstance name='LineTrail' DEF='Trail' containerField='geometry'>
         <fieldValue name='enabled' value='false'/>
         <fieldValue name='cycleInterval' value='0.1'/>
-        <fieldValue name='point' value='0 0 1'/>
+        <fieldValue name='point' value='0.356336 0.711216 0.605968'/>
         <fieldValue name='dimension' value='100'/>
       </ProtoInstance>
     </Shape>
@@ -73,10 +154,11 @@
         </Appearance>
         <Sphere/>
       </Shape>
-      <TouchSensor DEF='Touch'/>
+      <TouchSensor USE='Touch'/>
     </Transform>
-    <Transform DEF='Cone'>
-      <Transform DEF='Cone_1'
+    <Transform DEF='Cone'
+        rotation='-0.894060667491529 0.44794589276452 0 0.919814454880826'>
+      <Transform DEF='Cone_3'
           translation='0 0 0.192283'
           rotation='1 0 0 1.5708'
           scale='0.770473 0.770473 0.770473'>
@@ -101,59 +183,7 @@
         </Shape>
       </Transform>
     </Transform>
-    <Script DEF='FollowerScript'>
-      <field accessType='inputOnly' type='SFTime' name='set_time'/>
-      <field accessType='inputOnly' type='SFBool' name='set_active'/>
-      <field accessType='inputOnly' type='SFRotation' name='set_rotation'/>
-      <field accessType='outputOnly' type='SFColor' name='color_changed'/>
-      <field accessType='outputOnly' type='SFVec3f' name='point_changed'/>
-      <field accessType='initializeOnly' type='SFNode' name='touchSensor'>
-        <TouchSensor USE='Touch'/>
-      </field>
-      <field accessType='initializeOnly' type='SFNode' name='timeSensor'>
-        <TimeSensor DEF='_1'
-            cycleInterval='2'/>
-      </field>
-      <field accessType='initializeOnly' type='SFNode' name='interpolator'>
-        <OrientationInterpolator DEF='_2'
-            key='0, 1'
-            keyValue='0 0 1 0, 0 0 1 0'/>
-      </field>
-<![CDATA[vrmlscript:
-
-function initialize ()
-{
-	timeSensor .stopTime  = 0;
-	timeSensor .startTime = 0;
-
-	interpolator .keyValue [0] = new SFRotation ();
-	interpolator .keyValue [1] = new SFRotation ();
-}
-
-function set_time (value, time)
-{
-	timeSensor .stopTime  = time;
-	timeSensor .startTime = time;
-
-	interpolator .keyValue [0] = interpolator .value_changed;
-	interpolator .keyValue [1] = new SFRotation (new SFVec3f (0.1, 0.1, 0.9), touchSensor .hitPoint_changed);
-}
-
-function set_active (value)
-{
-	if (value)
-		color_changed = new SFColor (0.8, 0, 0);
-	
-	else
-		color_changed = new SFColor (0.8, 0.8, 0.8);
-}
-
-function set_rotation (value)
-{
-	point_changed = value .multVec (new SFVec3f (0, 0, 1));
-}
-]]> 
-    </Script>
+    <Script USE='FollowerScript'/>
     <ROUTE fromNode='Touch' fromField='touchTime' toNode='FollowerScript' toField='set_time'/>
     <ROUTE fromNode='FollowerScript' fromField='color_changed' toNode='ConeMaterial' toField='set_diffuseColor'/>
     <ROUTE fromNode='FollowerScript' fromField='point_changed' toNode='Trail' toField='set_point'/>

@@ -5,12 +5,40 @@
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Tue, 25 Aug 2015 18:42:23 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V0.7.8, http://titania.create3000.de'/>
+    <meta name='generator' content='Titania V4.3.2, http://titania.create3000.de'/>
     <meta name='icon' content='about:icon'/>
-    <meta name='modified' content='Wed, 26 Aug 2015 18:33:59 GMT'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Text/date.x3d'/>
+    <meta name='modified' content='Tue, 09 Oct 2018 14:39:06 GMT'/>
     <meta name='title' content='Random Text'/>
   </head>
   <Scene>
+    <WorldInfo
+        title='date'>
+      <MetadataSet DEF='Titania'
+          name='Titania'
+          reference='http://titania.create3000.de'>
+        <MetadataSet DEF='Selection' containerField='value'
+            name='Selection'
+            reference='http://titania.create3000.de'>
+          <MetadataBoolean DEF='selectGeometry' containerField='value'
+              name='selectGeometry'
+              reference='http://titania.create3000.de'
+              value='false'/>
+        </MetadataSet>
+        <MetadataSet DEF='Page' containerField='value'
+            name='Page'
+            reference='http://titania.create3000.de'>
+          <MetadataInteger DEF='activeView' containerField='value'
+              name='activeView'
+              reference='http://titania.create3000.de'
+              value='1'/>
+          <MetadataInteger DEF='multiView' containerField='value'
+              name='multiView'
+              reference='http://titania.create3000.de'
+              value='0'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
     <Viewpoint
         position='0 0 8.74054'
         centerOfRotation='-1.38477 0.122227 0'/>
@@ -21,9 +49,9 @@
               diffuseColor='1 0 0'/>
         </Appearance>
         <Text DEF='Time'
-            string='"Date"'>
+            string='"Tue, 09 Oct 2018 14:35:59 GMT", "Titania 4.3.2", "qrPHBGgi"'>
           <FontStyle
-              family='"Ubuntu Mono", "CHOPS___.TTF", "SANS"'
+              family='"CHOPS___.TTF", "SANS"'
               style='BOLDITALIC'
               size='0.5'
               justify='"MIDDLE", "BEGIN"'/>
@@ -56,7 +84,7 @@ function set_time (value)
 
 	time .string = new MFString (date, browser, makeid (8));
 }
-  ]]> 
+  ]]>
     </Script>
     <Background DEF='Sunset_1'
         skyAngle='0.8, 1.2, 1.5, 1.55, 1.5708'
