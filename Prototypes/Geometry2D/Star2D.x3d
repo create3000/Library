@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta name='comment' content='World of Titania'/>
+    <meta name='created' content='Sun, 25 Nov 2018 14:48:00 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Titania V4.3.3, http://titania.create3000.de'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Prototypes/Geometry2D/Star2D.x3d'/>
+    <meta name='modified' content='Sun, 25 Nov 2018 16:23:15 GMT'/>
+  </head>
+  <Scene>
+    <ProtoDeclare name='Star2D'>
+      <ProtoInterface>
+        <field accessType='inputOutput' type='SFInt32' name='sides' value='5'/>
+        <field accessType='inputOutput' type='SFFloat' name='innerRadius' value='0.401623'/>
+        <field accessType='inputOutput' type='SFFloat' name='outerRadius' value='1'/>
+        <field accessType='initializeOnly' type='SFBool' name='solid'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <IndexedFaceSet DEF='_1'
+            convex='false'>
+          <TextureCoordinate/>
+          <Coordinate/>
+        </IndexedFaceSet>
+        <Script DEF='NewScript'>
+          <field accessType='inputOutput' type='SFInt32' name='sides'/>
+          <field accessType='inputOutput' type='SFFloat' name='innerRadius'/>
+          <field accessType='inputOutput' type='SFFloat' name='outerRadius'/>
+          <field accessType='inputOutput' type='SFBool' name='solid'/>
+          <field accessType='initializeOnly' type='SFNode' name='geometry'>
+            <IndexedFaceSet USE='_1'/>
+          </field>
+          <IS>
+            <connect nodeField='sides' protoField='sides'/>
+            <connect nodeField='innerRadius' protoField='innerRadius'/>
+            <connect nodeField='outerRadius' protoField='outerRadius'/>
+            <connect nodeField='solid' protoField='solid'/>
+          </IS>
+<![CDATA[ecmascript:
+
+var yAxis = new SFVec3f (0, 1, 0);
+
+function initialize ()
+{
+	eventsProcessed ();
+}
+
+function eventsProcessed ()
+{
+	var
+		coordIndex = new MFInt32 (),
+		coord      = geometry .coord,
+		texCoord   = geometry .texCoord;
+
+	coord    .point .length = 0;
+	texCoord .point .length = 0;
+	
+	var maxRadius = Math .max (Math .abs (innerRadius), Math .abs (outerRadius));
+
+	for (var i = 0, length = sides * 2; i < length; ++ i)
+	{
+		var
+			rotation = new SFRotation (0, 0, 1, Math .PI * 2 * i / length),
+			radius   = Math .abs (i % 2 ? innerRadius : outerRadius),
+			point    = rotation .multVec (yAxis) .multiply (radius),
+			tex      = point .add (new SFVec3f (maxRadius, maxRadius, 0)) .divide (maxRadius * 2);
+
+		coordIndex .push (i);
+		coord .point .push (point);
+		texCoord .point .push (new SFVec2f (tex .x, tex .y));
+	}
+	
+	coordIndex .push (-1);
+
+	if (! solid)
+	{
+		for (var i = 0, length = sides * 2; i < length; ++ i)
+			coordIndex .push (length - 1 - i);
+
+		coordIndex .push (-1);
+	}
+
+	geometry .set_coordIndex = coordIndex;
+}
+]]>
+        </Script>
+      </ProtoBody>
+    </ProtoDeclare>
+    <WorldInfo>
+      <MetadataSet DEF='Titania'
+          name='Titania'
+          reference='http://titania.create3000.de'>
+        <MetadataSet DEF='AngleGrid' containerField='value'
+            name='AngleGrid'
+            reference='http://titania.create3000.de'>
+          <MetadataBoolean DEF='enabled' containerField='value'
+              name='enabled'
+              reference='http://titania.create3000.de'
+              value='false'/>
+        </MetadataSet>
+        <MetadataSet DEF='Grid' containerField='value'
+            name='Grid'
+            reference='http://titania.create3000.de'>
+          <MetadataBoolean DEF='enabled_2' containerField='value'
+              name='enabled'
+              reference='http://titania.create3000.de'
+              value='true'/>
+        </MetadataSet>
+        <MetadataSet DEF='Selection' containerField='value'
+            name='Selection'
+            reference='http://titania.create3000.de'>
+          <MetadataBoolean DEF='selectGeometry' containerField='value'
+              name='selectGeometry'
+              reference='http://titania.create3000.de'
+              value='false'/>
+          <MetadataSet DEF='nodes' containerField='value'
+              name='nodes'
+              reference='http://titania.create3000.de'/>
+        </MetadataSet>
+        <MetadataSet DEF='BrowserPanel' containerField='value'
+            name='BrowserPanel'
+            reference='http://titania.create3000.de'>
+          <MetadataString DEF='type_3' containerField='value'
+              name='type'
+              reference='http://titania.create3000.de'
+              value='"TOP_VIEW", "MAIN_VIEW", "PERSPECTIVE_VIEW", "FRONT_VIEW"'/>
+          <MetadataSet DEF='viewpoints' containerField='value'
+              name='viewpoints'
+              reference='http://titania.create3000.de'>
+            <MetadataSet DEF='PerspectiveViewpoint' containerField='value'
+                name='PerspectiveViewpoint'
+                reference='http://titania.create3000.de'>
+              <MetadataDouble DEF='position_4' containerField='value'
+                  name='position'
+                  reference='http://titania.create3000.de'
+                  value='5.87788534164429, 6.46984958648682, 13.8524446487427'/>
+              <MetadataDouble DEF='orientation_5' containerField='value'
+                  name='orientation'
+                  reference='http://titania.create3000.de'
+                  value='-0.704047462871212, 0.695566762376517, 0.143192350010952, 0.568941727555854'/>
+              <MetadataDouble DEF='centerOfRotation_6' containerField='value'
+                  name='centerOfRotation'
+                  reference='http://titania.create3000.de'
+                  value='0, 0, 0'/>
+              <MetadataDouble DEF='fieldOfViewScale' containerField='value'
+                  name='fieldOfViewScale'
+                  reference='http://titania.create3000.de'
+                  value='1'/>
+            </MetadataSet>
+            <MetadataSet DEF='TopViewpoint' containerField='value'
+                name='TopViewpoint'
+                reference='http://titania.create3000.de'>
+              <MetadataDouble DEF='position_7' containerField='value'
+                  name='position'
+                  reference='http://titania.create3000.de'
+                  value='0, 10000, 0'/>
+              <MetadataDouble DEF='orientation_8' containerField='value'
+                  name='orientation'
+                  reference='http://titania.create3000.de'
+                  value='1, 0, 0, 4.71238898038469'/>
+              <MetadataDouble DEF='centerOfRotation_9' containerField='value'
+                  name='centerOfRotation'
+                  reference='http://titania.create3000.de'
+                  value='-0.0320612526145463, 0, 0.0937320149966475'/>
+              <MetadataDouble DEF='fieldOfViewScale_10' containerField='value'
+                  name='fieldOfViewScale'
+                  reference='http://titania.create3000.de'
+                  value='1.21023944190259'/>
+            </MetadataSet>
+            <MetadataSet DEF='FrontViewpoint' containerField='value'
+                name='FrontViewpoint'
+                reference='http://titania.create3000.de'>
+              <MetadataDouble DEF='position_11' containerField='value'
+                  name='position'
+                  reference='http://titania.create3000.de'
+                  value='0, 0, 10000'/>
+              <MetadataDouble DEF='orientation_12' containerField='value'
+                  name='orientation'
+                  reference='http://titania.create3000.de'
+                  value='0, 0, 1, 0'/>
+              <MetadataDouble DEF='centerOfRotation_13' containerField='value'
+                  name='centerOfRotation'
+                  reference='http://titania.create3000.de'
+                  value='-0.00884759203065143, 0.0177734813359099, 0'/>
+              <MetadataDouble DEF='fieldOfViewScale_14' containerField='value'
+                  name='fieldOfViewScale'
+                  reference='http://titania.create3000.de'
+                  value='1.212467484375'/>
+            </MetadataSet>
+          </MetadataSet>
+        </MetadataSet>
+        <MetadataSet DEF='Page' containerField='value'
+            name='Page'
+            reference='http://titania.create3000.de'>
+          <MetadataInteger DEF='activeView' containerField='value'
+              name='activeView'
+              reference='http://titania.create3000.de'
+              value='1'/>
+          <MetadataInteger DEF='multiView' containerField='value'
+              name='multiView'
+              reference='http://titania.create3000.de'
+              value='1'/>
+        </MetadataSet>
+        <MetadataSet DEF='Prototype' containerField='value'
+            name='Prototype'
+            reference='http://titania.create3000.de'>
+          <MetadataString DEF='path' containerField='value'
+              name='path'
+              reference='http://titania.create3000.de'
+              value='"Star2D"'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+  </Scene>
+</X3D>
