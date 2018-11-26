@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.3.3, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Prototypes/Geometry2D/RoundedRectangle2D.x3d'/>
-    <meta name='modified' content='Mon, 26 Nov 2018 03:07:12 GMT'/>
+    <meta name='modified' content='Mon, 26 Nov 2018 03:14:23 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='RoundedRectangle2D'>
@@ -17,8 +17,7 @@
         <field accessType='initializeOnly' type='SFBool' name='solid'/>
       </ProtoInterface>
       <ProtoBody>
-        <IndexedFaceSet DEF='Geometry'
-            solid='false'>
+        <IndexedFaceSet DEF='Geometry'>
           <TextureCoordinate/>
           <Coordinate/>
         </IndexedFaceSet>
