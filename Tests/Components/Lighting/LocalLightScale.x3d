@@ -6,8 +6,8 @@
     <meta name='created' content='Sun, 16 Dec 2018 09:01:46 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.3.6, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Lighting/LightScale.x3d'/>
-    <meta name='modified' content='Sun, 16 Dec 2018 14:07:31 GMT'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Lighting/LocalLightScale.x3d'/>
+    <meta name='modified' content='Sun, 16 Dec 2018 14:07:06 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -163,6 +163,7 @@ function initialize ()
           position='0 1.6 0'
           centerOfRotation='0.722464 2.49992 -1.68122'/>
       <PointLight DEF='_14'
+          global='false'
           color='0 0 1'
           radius='5.39'/>
     </Transform>
