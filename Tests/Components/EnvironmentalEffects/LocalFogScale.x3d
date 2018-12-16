@@ -5,9 +5,9 @@
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Sun, 16 Dec 2018 09:01:46 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V4.3.6, http://titania.create3000.de'/>
+    <meta name='generator' content='Titania V4.3.5, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/EnvironmentalEffects/FogScale.x3d'/>
-    <meta name='modified' content='Sun, 16 Dec 2018 10:43:45 GMT'/>
+    <meta name='modified' content='Sun, 16 Dec 2018 09:45:56 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -141,10 +141,10 @@
               solid='false'/>
         </Shape>
       </Transform>
-      <Fog DEF='_14'
+      <LocalFog DEF='_14'
           color='0 0 1'
           visibilityRange='10'/>
-      <Viewpoint DEF='_15'
+      <Viewpoint
           description='Fog without Scale Inside'
           position='0 1.6 0'
           centerOfRotation='0.722464 2.49992 -1.68122'/>
@@ -154,26 +154,20 @@
         rotation='0 -1 0 0.785398131619433'
         scale='2 1 1'>
       <Transform USE='Box'/>
-      <Fog DEF='_16'
-          color='0 0 1'
-          visibilityRange='10'/>
-      <Viewpoint DEF='_17'
+      <LocalFog USE='_14'/>
+      <Viewpoint
           description='Fog with Scale and Rotation Inside'
           position='0 1.6 0'
           centerOfRotation='0.722464 2.49992 -1.68122'/>
     </Transform>
-    <Viewpoint DEF='_18'
+    <Viewpoint
         description='Fog without Scale Outside'
         position='0 1.6 0'
         centerOfRotation='0.722464 2.49992 -1.68122'/>
-    <Viewpoint DEF='_19'
+    <Viewpoint
         description='Fog with Scale and Rotation Outside'
         position='-15 1.6 0'
         orientation='0 -1 0 0.785398131619433'
         centerOfRotation='0.722464 2.49992 -1.68122'/>
-    <ROUTE fromNode='_17' fromField='isBound' toNode='_16' toField='set_bind'/>
-    <ROUTE fromNode='_19' fromField='isBound' toNode='_16' toField='set_bind'/>
-    <ROUTE fromNode='_18' fromField='isBound' toNode='_14' toField='set_bind'/>
-    <ROUTE fromNode='_15' fromField='isBound' toNode='_14' toField='set_bind'/>
   </Scene>
 </X3D>
