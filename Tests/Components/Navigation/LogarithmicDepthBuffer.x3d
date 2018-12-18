@@ -3,11 +3,12 @@
 <X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
   <head>
     <meta name='comment' content='World of Titania'/>
-    <meta name='created' content='Thu, 07 Jun 2018 02:16:32 GMT'/>
+    <meta name='created' content='Sun, 12 Nov 2017 22:36:28 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V4.3.0, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Navigation/LogarithmicDepthBuffer.x3d'/>
-    <meta name='modified' content='Thu, 07 Jun 2018 15:26:02 GMT'/>
+    <meta name='generator' content='Titania V4.3.6, http://titania.create3000.de'/>
+    <meta name='identifier' content='file:///home/holger/LogarithmicDepthBuffer.O.x3d'/>
+    <meta name='modified' content='Tue, 18 Dec 2018 11:43:05 GMT'/>
+    <meta name='titania-output-style' content='Nicest'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -40,16 +41,19 @@
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
               reference='http://titania.create3000.de'>
-            <Transform DEF='Text_2' containerField='value'
-                translation='0 0 -5'
-                scale='1e+12 1e+12 1e+12'>
+            <Transform DEF='ChildSized_2' containerField='value'
+                translation='0 4346 0'
+                scale='12194.5 12194.5 12194.5'>
               <Shape>
                 <Appearance>
                   <Material/>
                 </Appearance>
                 <Text
-                    string='"solar-system-sized (1000000000km)"'
-                    solid='true'/>
+                    string='"city sized (10km)"'
+                    solid='true'>
+                  <FontStyle
+                      family='"TYPEWRITER"'/>
+                </Text>
               </Shape>
             </Transform>
           </MetadataSet>
@@ -57,10 +61,6 @@
         <MetadataSet DEF='BrowserPanel' containerField='value'
             name='BrowserPanel'
             reference='http://titania.create3000.de'>
-          <MetadataInteger DEF='layerNumber' containerField='value'
-              name='layerNumber'
-              reference='http://titania.create3000.de'
-              value='-1, 0, 0, 0, 0, -1, -1, -1'/>
           <MetadataString DEF='type_3' containerField='value'
               name='type'
               reference='http://titania.create3000.de'
@@ -74,11 +74,11 @@
               <MetadataDouble DEF='position_4' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
-                  value='8.39506781454899, 9.24053832458565, 19.7847020660102'/>
+                  value='5.87788534164429, 6.46984958648682, 13.8524446487427'/>
               <MetadataDouble DEF='orientation_5' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
-                  value='-0.704047462871212, 0.695566762376517, 0.143192350010952, 0.568941727555854'/>
+                  value='-0.704047462871211, 0.695566762376517, 0.143192350010952, 0.568941727555854'/>
               <MetadataDouble DEF='centerOfRotation_6' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
@@ -94,7 +94,7 @@
               <MetadataDouble DEF='position_7' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
-                  value='-72.4710885333055, 10.8662109375, -37.1111823801123'/>
+                  value='0, 10000, 0'/>
               <MetadataDouble DEF='orientation_8' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
@@ -102,11 +102,11 @@
               <MetadataDouble DEF='centerOfRotation_9' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
-                  value='-72.4710885333055, 0, -37.1111823801123'/>
+                  value='-0.0320612526145463, 0, 0.0937320149966475'/>
               <MetadataDouble DEF='fieldOfViewScale_10' containerField='value'
                   name='fieldOfViewScale'
                   reference='http://titania.create3000.de'
-                  value='27.4780837597661'/>
+                  value='1.21023944190259'/>
             </MetadataSet>
             <MetadataSet DEF='FrontViewpoint' containerField='value'
                 name='FrontViewpoint'
@@ -114,7 +114,7 @@
               <MetadataDouble DEF='position_11' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
-                  value='-0.00884759203065143, 0.0177734813359099, 10000'/>
+                  value='0, 0, 10000'/>
               <MetadataDouble DEF='orientation_12' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
@@ -140,70 +140,176 @@
           <MetadataInteger DEF='multiView' containerField='value'
               name='multiView'
               reference='http://titania.create3000.de'
-              value='1'/>
+              value='0'/>
+          <MetadataDouble DEF='browserRatio' containerField='value'
+              name='browserRatio'
+              reference='http://titania.create3000.de'
+              value='1.777777'/>
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
+    <Script DEF='LogarithmicDepthBufferScript'>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+	Browser .setBrowserOption ("LogarithmicDepthBuffer", true);
+}
+]]>
+    </Script>
+    <Group>
+      <Group DEF='Animation'>
+        <MetadataSet DEF='Animation_15'
+            name='Animation'
+            reference='http://titania.create3000.de'>
+          <MetadataInteger DEF='duration' containerField='value'
+              name='duration'
+              reference='http://titania.create3000.de'
+              value='20'/>
+          <MetadataInteger DEF='frameRate' containerField='value'
+              name='frameRate'
+              reference='http://titania.create3000.de'
+              value='10'/>
+        </MetadataSet>
+        <TimeSensor DEF='AnimationTimer'
+            stopTime='1'/>
+        <PositionInterpolator DEF='PositionInterpolator'
+            key='0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35'
+            keyValue='0.0062 -0.436384 0.01, 0.057 -0.414206 0.089518, 0.77 -0.226 1.20879, 7.159 0.252969 11.289, 67.72 9.40602 106.867, 895.678 194.051 1409.7, 8200.34 2137.22 12874, 78531.4 7595.66 124103'>
+          <MetadataSet DEF='Interpolator'
+              name='Interpolator'
+              reference='http://titania.create3000.de'>
+            <MetadataInteger DEF='key' containerField='value'
+                name='key'
+                reference='http://titania.create3000.de'
+                value='0, 1, 2, 3, 4, 5, 6, 7'/>
+            <MetadataDouble DEF='keyValue' containerField='value'
+                name='keyValue'
+                reference='http://titania.create3000.de'
+                value='0.00620000017806888, -0.436383992433548, 0.00999999977648258, 0.0570000000298023, -0.414205998182297, 0.0895179510116577, 0.769999980926514, -0.225999996066093, 1.20879077911377, 7.15899991989136, 0.252968728542328, 11.2889938354492, 67.7200012207031, 9.40601921081543, 106.86661529541, 895.677978515625, 194.050765991211, 1409.70471191406, 8200.33984375, 2137.21875, 12874.0009765625, 78531.3671875, 7595.6572265625, 124102.5859375'/>
+            <MetadataString DEF='keyType' containerField='value'
+                name='keyType'
+                reference='http://titania.create3000.de'
+                value='"SPLINE", "SPLINE", "SPLINE", "SPLINE", "SPLINE", "SPLINE", "SPLINE", "SPLINE"'/>
+            <MetadataInteger DEF='keySize' containerField='value'
+                name='keySize'
+                reference='http://titania.create3000.de'
+                value='1'/>
+          </MetadataSet>
+        </PositionInterpolator>
+      </Group>
+      <Viewpoint DEF='_16'
+          position='78531.4 7595.66 124103'
+          centerOfRotation='51131.4 7595.66 0'/>
+    </Group>
     <NavigationInfo
-        avatarSize='0.001, 1600, 750'/>
-    <Transform DEF='Text'
-        scale='0.001 0.001 0.001'>
+        type='"EXAMINE"'
+        avatarSize='0.01, 1.6, 0.75'/>
+    <Transform DEF='ChildSized_17'
+        translation='0 -0.250291 0'
+        scale='0.0988509 0.0988509 0.0988509'>
       <Shape>
         <Appearance>
           <Material/>
         </Appearance>
         <Text
-            string='"millimetre (1mm)"'
-            solid='true'/>
+            string='"tiny (1cm)"'
+            solid='true'>
+          <FontStyle
+              family='"TYPEWRITER"'/>
+        </Text>
       </Shape>
     </Transform>
-    <Transform DEF='Text_15'
-        translation='0 0 -1'>
+    <Transform DEF='ChildSized'>
       <Shape>
         <Appearance>
           <Material/>
         </Appearance>
         <Text
-            string='"metre (1m)"'
-            solid='true'/>
+            string='"child sized (1m)"'
+            solid='true'>
+          <FontStyle
+              family='"TYPEWRITER"'/>
+        </Text>
       </Shape>
     </Transform>
-    <Transform DEF='Text_16'
-        translation='0 0 -2'
-        scale='1000 1000 1000'>
+    <Transform DEF='ChildSized_18'
+        translation='0 -0.417575 0'
+        scale='0.0132601 0.0132601 0.0132601'>
       <Shape>
         <Appearance>
           <Material/>
         </Appearance>
         <Text
-            string='"kilometre (1km)"'
-            solid='true'/>
+            string='"minuscle (1mm)"'
+            solid='true'>
+          <FontStyle
+              family='"TYPEWRITER"'/>
+        </Text>
       </Shape>
     </Transform>
-    <Transform DEF='Text_17'
-        translation='0 0 -3'
-        scale='1e+06 1e+06 1e+06'>
+    <Transform DEF='ChildSized_19'
+        translation='0 -0.436508 0'
+        scale='0.000485627 0.000485627 0.000485627'>
       <Shape>
         <Appearance>
           <Material/>
         </Appearance>
         <Text
-            string='"planet-sized (1000km)"'
-            solid='true'/>
+            string='"microscopic (1μm)"'
+            solid='true'>
+          <FontStyle
+              family='"TYPEWRITER"'/>
+        </Text>
       </Shape>
     </Transform>
-    <Transform DEF='Text_18'
-        translation='0 0 -4'
-        scale='5e+08 5e+08 5e+08'>
+    <Transform DEF='ChildSized_20'
+        translation='0 6.68123 0'
+        scale='12.6808 12.6808 12.6808'>
       <Shape>
         <Appearance>
           <Material/>
         </Appearance>
         <Text
-            string='"sun-sized (500000km)"'
-            solid='true'/>
+            string='"tree sized (10m)"'
+            solid='true'>
+          <FontStyle
+              family='"TYPEWRITER"'/>
+        </Text>
       </Shape>
     </Transform>
-    <Transform USE='Text_2'/>
+    <Transform DEF='ChildSized_21'
+        translation='0 162.691 0'
+        scale='117.678 117.678 117.678'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text
+            string='"building sized (10m)"'
+            solid='true'>
+          <FontStyle
+              family='"TYPEWRITER"'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform DEF='ChildSized_22'
+        translation='0 1818.33 0'
+        scale='1194.55 1194.55 1194.55'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text
+            string='"medium sized (1km)"'
+            solid='true'>
+          <FontStyle
+              family='"TYPEWRITER"'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform USE='ChildSized_2'/>
+    <ROUTE fromNode='AnimationTimer' fromField='fraction_changed' toNode='PositionInterpolator' toField='set_fraction'/>
+    <ROUTE fromNode='PositionInterpolator' fromField='value_changed' toNode='_16' toField='set_position'/>
   </Scene>
 </X3D>
