@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta name='comment' content='World of Titania'/>
+    <meta name='created' content='Fri, 21 Dec 2018 02:11:05 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Titania V4.3.6, http://titania.create3000.de'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Prototypes/Geometry2D/ArcOpen2D.x3d'/>
+    <meta name='modified' content='Fri, 21 Dec 2018 04:16:18 GMT'/>
+  </head>
+  <Scene>
+    <ProtoDeclare name='ArcOpen2D'>
+      <ProtoInterface>
+        <field accessType='inputOutput' type='SFInt32' name='dimension' value='16'/>
+        <field accessType='inputOutput' type='SFFloat' name='startAngle'/>
+        <field accessType='inputOutput' type='SFFloat' name='endAngle' value='1.5708'/>
+        <field accessType='inputOutput' type='SFFloat' name='innerRadius' value='0.5'/>
+        <field accessType='inputOutput' type='SFFloat' name='outerRadius' value='1'/>
+        <field accessType='initializeOnly' type='SFBool' name='solid'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <IndexedQuadSet DEF='_1'>
+          <IS>
+            <connect nodeField='solid' protoField='solid'/>
+          </IS>
+          <Coordinate/>
+        </IndexedQuadSet>
+        <Script DEF='ArcOpen2DScript'>
+          <field accessType='inputOutput' type='SFInt32' name='dimension'/>
+          <field accessType='inputOutput' type='SFFloat' name='startAngle'/>
+          <field accessType='inputOutput' type='SFFloat' name='endAngle'/>
+          <field accessType='inputOutput' type='SFFloat' name='innerRadius'/>
+          <field accessType='inputOutput' type='SFFloat' name='outerRadius'/>
+          <field accessType='initializeOnly' type='SFNode' name='geometry'>
+            <IndexedQuadSet USE='_1'/>
+          </field>
+          <IS>
+            <connect nodeField='dimension' protoField='dimension'/>
+            <connect nodeField='startAngle' protoField='startAngle'/>
+            <connect nodeField='endAngle' protoField='endAngle'/>
+            <connect nodeField='innerRadius' protoField='innerRadius'/>
+            <connect nodeField='outerRadius' protoField='outerRadius'/>
+          </IS>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+	eventsProcessed ();
+}
+
+function eventsProcessed ()
+{
+	var
+		coord      = geometry .coord,
+		r1         = Math .min (Math .abs (innerRadius), Math .abs (outerRadius)),
+		r2         = Math .max (Math .abs (innerRadius), Math .abs (outerRadius)),
+		sweepAngle = getSweepAngle (),
+		circle     = sweepAngle === Math .PI * 2,
+		steps      = Math .floor (sweepAngle * dimension / (Math .PI * 2));
+
+	steps = Math .max (3, steps);
+
+	if (! circle)
+		++ steps;
+
+	var steps_1 = circle ? steps : steps - 1;
+	
+	geometry .index .length = 0;
+	coord .point .length    = 0;
+
+	for (var n = 0; n < steps; ++ n)
+	{
+		var
+			t     = n / steps_1,
+			theta = startAngle + (sweepAngle * t),
+			x     = Math .cos (theta),
+			y     = Math .sin (theta),
+			point = new SFVec3f (x, y, 0);
+
+		coord .point .push (point .multiply (r1));
+		coord .point .push (point .multiply (r2));
+	}
+
+	for (var n = 0; n < steps - 1; ++ n)
+	{
+		var i = n * 2;
+	
+		geometry .index .push (i);
+		geometry .index .push (i + 1);
+		geometry .index .push (i + 3);
+		geometry .index .push (i + 2);
+	}
+	
+	if (circle)
+	{
+		var
+			l1 = geometry .index [geometry .index .length - 1],
+			l2 = geometry .index [geometry .index .length - 2];
+	
+		geometry .index .push (l1);
+		geometry .index .push (l2);
+		geometry .index .push (geometry .index [1]);
+		geometry .index .push (geometry .index [0]);
+	}
+}
+
+function getSweepAngle ()
+{
+	var
+		start = interval (startAngle, 0, Math .PI * 2),
+		end   = interval (endAngle,   0, Math .PI * 2);
+
+	if (start === end)
+		return Math .PI * 2;
+
+	var sweepAngle = Math .abs (end - start);
+
+	if (start > end)
+		return Math .PI * 2 - sweepAngle;
+
+	if (! isNaN (sweepAngle))
+		return sweepAngle;
+	
+	// We must test for NAN, as NAN to int32_t is undefined.
+	return 0;
+}
+
+function interval (value, low, high)
+{
+	if (value >= high)
+		return (value - low) % (high - low) + low;
+
+	if (value < low)
+		return (value - high) % (high - low) + high;
+
+	return value;
+}
+]]>
+        </Script>
+      </ProtoBody>
+    </ProtoDeclare>
+  </Scene>
+</X3D>
