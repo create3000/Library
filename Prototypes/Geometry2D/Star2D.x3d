@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.3.6, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Prototypes/Geometry2D/Star2D.x3d'/>
-    <meta name='modified' content='Fri, 21 Dec 2018 10:58:46 GMT'/>
+    <meta name='modified' content='Fri, 21 Dec 2018 14:50:09 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='Star2D'>
@@ -19,7 +19,8 @@
       </ProtoInterface>
       <ProtoBody>
         <IndexedFaceSet DEF='_1'
-            convex='false'>
+            convex='false'
+            normalPerVertex='false'>
           <TextureCoordinate/>
           <Coordinate/>
         </IndexedFaceSet>
@@ -89,5 +90,32 @@ function eventsProcessed ()
         </Script>
       </ProtoBody>
     </ProtoDeclare>
+    <WorldInfo
+        title='Star2D'>
+      <MetadataSet DEF='Titania'
+          name='Titania'
+          reference='http://titania.create3000.de'>
+        <MetadataSet DEF='Page' containerField='value'
+            name='Page'
+            reference='http://titania.create3000.de'>
+          <MetadataInteger DEF='activeView' containerField='value'
+              name='activeView'
+              reference='http://titania.create3000.de'
+              value='1'/>
+          <MetadataInteger DEF='multiView' containerField='value'
+              name='multiView'
+              reference='http://titania.create3000.de'
+              value='0'/>
+        </MetadataSet>
+        <MetadataSet DEF='Selection' containerField='value'
+            name='Selection'
+            reference='http://titania.create3000.de'>
+          <MetadataBoolean DEF='selectGeometry' containerField='value'
+              name='selectGeometry'
+              reference='http://titania.create3000.de'
+              value='false'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
   </Scene>
 </X3D>

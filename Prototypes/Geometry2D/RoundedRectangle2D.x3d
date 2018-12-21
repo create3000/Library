@@ -5,9 +5,9 @@
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Sun, 20 Sep 2015 06:48:36 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V4.3.3, http://titania.create3000.de'/>
+    <meta name='generator' content='Titania V4.3.6, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Prototypes/Geometry2D/RoundedRectangle2D.x3d'/>
-    <meta name='modified' content='Mon, 26 Nov 2018 03:14:23 GMT'/>
+    <meta name='modified' content='Fri, 21 Dec 2018 14:50:04 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='RoundedRectangle2D'>
@@ -17,7 +17,8 @@
         <field accessType='initializeOnly' type='SFBool' name='solid'/>
       </ProtoInterface>
       <ProtoBody>
-        <IndexedFaceSet DEF='Geometry'>
+        <IndexedFaceSet DEF='Geometry'
+            normalPerVertex='false'>
           <TextureCoordinate/>
           <Coordinate/>
         </IndexedFaceSet>

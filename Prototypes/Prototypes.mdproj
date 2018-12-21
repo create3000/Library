@@ -56,7 +56,6 @@
     <None Include="Fields\SFVec4d.x3dv" />
     <None Include="Fields\SFVec4f.x3dv" />
     <None Include="Geometry2D\RoundedRectangle2D.x3d" />
-    <None Include="Geometry2D\RoundedRectangle2D.x3dv" />
     <None Include="Geometry3D\IcoSphere.x3d" />
     <None Include="Geometry3D\IcoSphere.x3dv" />
     <None Include="Geometry3D\Number.x3d" />
@@ -129,6 +128,8 @@
     <None Include="Fields\SFVec4f.x3d" />
     <None Include="Engines\Noise.x3d" />
     <None Include="Text\Number.x3d" />
+    <None Include="Geometry2D\ArcOpen2D.x3d" />
+    <None Include="Geometry2D\Star2D.x3d" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Engines\" />
