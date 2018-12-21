@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.3.6, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Prototypes/Geometry2D/ArcOpen2D.x3d'/>
-    <meta name='modified' content='Fri, 21 Dec 2018 04:16:18 GMT'/>
+    <meta name='modified' content='Fri, 21 Dec 2018 10:55:35 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='ArcOpen2D'>
@@ -20,20 +20,19 @@
         <field accessType='initializeOnly' type='SFBool' name='solid'/>
       </ProtoInterface>
       <ProtoBody>
-        <IndexedQuadSet DEF='_1'>
-          <IS>
-            <connect nodeField='solid' protoField='solid'/>
-          </IS>
+        <IndexedFaceSet DEF='_1'>
+          <TextureCoordinate/>
           <Coordinate/>
-        </IndexedQuadSet>
+        </IndexedFaceSet>
         <Script DEF='ArcOpen2DScript'>
           <field accessType='inputOutput' type='SFInt32' name='dimension'/>
           <field accessType='inputOutput' type='SFFloat' name='startAngle'/>
           <field accessType='inputOutput' type='SFFloat' name='endAngle'/>
           <field accessType='inputOutput' type='SFFloat' name='innerRadius'/>
           <field accessType='inputOutput' type='SFFloat' name='outerRadius'/>
+          <field accessType='inputOutput' type='SFBool' name='solid'/>
           <field accessType='initializeOnly' type='SFNode' name='geometry'>
-            <IndexedQuadSet USE='_1'/>
+            <IndexedFaceSet USE='_1'/>
           </field>
           <IS>
             <connect nodeField='dimension' protoField='dimension'/>
@@ -41,6 +40,7 @@
             <connect nodeField='endAngle' protoField='endAngle'/>
             <connect nodeField='innerRadius' protoField='innerRadius'/>
             <connect nodeField='outerRadius' protoField='outerRadius'/>
+            <connect nodeField='solid' protoField='solid'/>
           </IS>
 <![CDATA[ecmascript:
 
@@ -52,11 +52,13 @@ function initialize ()
 function eventsProcessed ()
 {
 	var
+		texCoord   = geometry .texCoord,
 		coord      = geometry .coord,
 		r1         = Math .min (Math .abs (innerRadius), Math .abs (outerRadius)),
 		r2         = Math .max (Math .abs (innerRadius), Math .abs (outerRadius)),
 		sweepAngle = getSweepAngle (),
 		circle     = sweepAngle === Math .PI * 2,
+		disk       = r1 === 0,
 		steps      = Math .floor (sweepAngle * dimension / (Math .PI * 2));
 
 	steps = Math .max (3, steps);
@@ -66,8 +68,16 @@ function eventsProcessed ()
 
 	var steps_1 = circle ? steps : steps - 1;
 	
-	geometry .index .length = 0;
-	coord .point .length    = 0;
+	geometry .coordIndex .length = 0;
+	coord .point .length         = 0;
+	texCoord .point .length      = 0;
+
+	if (r1 === r2)
+		return;
+		
+	var
+		coordIndex = new MFInt32 (),
+		texOffset  = new SFVec3f (r2, r2, 0);
 
 	for (var n = 0; n < steps; ++ n)
 	{
@@ -78,31 +88,85 @@ function eventsProcessed ()
 			y     = Math .sin (theta),
 			point = new SFVec3f (x, y, 0);
 
-		coord .point .push (point .multiply (r1));
-		coord .point .push (point .multiply (r2));
+		if (! disk)
+		{
+			var
+				point1 = point .multiply (r1),
+				tex1   = point1 .add (texOffset) .divide (r2 * 2);
+				
+			coord .point .push (point1);
+			texCoord .point .push (new SFVec2f (tex1 .x, tex1 .y));
+		}
+
+		var
+			point2 = point .multiply (r2),
+			tex2   = point2 .add (texOffset) .divide (r2 * 2);
+
+		coord .point .push (point2);
+		texCoord .point .push (new SFVec2f (tex2 .x, tex2 .y));
 	}
 
-	for (var n = 0; n < steps - 1; ++ n)
+	if (disk)
 	{
-		var i = n * 2;
-	
-		geometry .index .push (i);
-		geometry .index .push (i + 1);
-		geometry .index .push (i + 3);
-		geometry .index .push (i + 2);
+		if (circle)
+		{
+			for (var n = 0; n < steps; ++ n)
+				coordIndex .push (n);
+
+			coordIndex .push (-1);
+		}
+		else
+		{
+			var l = coord .point .length;
+			
+			coord .point .push (new SFVec3f ());
+			texCoord .point .push (new SFVec2f (0.5, 0.5));
+		
+			for (var n = 0; n < steps - 1; ++ n)
+			{
+				coordIndex .push (n);
+				coordIndex .push (n + 1);
+				coordIndex .push (l);
+				coordIndex .push (-1);
+			}
+		}
 	}
-	
+	else
+	{
+		for (var n = 0; n < steps - 1; ++ n)
+		{
+			var i = n * 2;
+
+			coordIndex .push (i);
+			coordIndex .push (i + 1);
+			coordIndex .push (i + 3);
+			coordIndex .push (i + 2);
+			coordIndex .push (-1);
+		}
+	}
+		
 	if (circle)
 	{
 		var
-			l1 = geometry .index [geometry .index .length - 1],
-			l2 = geometry .index [geometry .index .length - 2];
+			l1 = coordIndex [coordIndex .length - 2],
+			l2 = coordIndex [coordIndex .length - 3];
 	
-		geometry .index .push (l1);
-		geometry .index .push (l2);
-		geometry .index .push (geometry .index [1]);
-		geometry .index .push (geometry .index [0]);
+		coordIndex .push (l1);
+		coordIndex .push (l2);
+		coordIndex .push (coordIndex [1]);
+		coordIndex .push (coordIndex [0]);
+		coordIndex .push (-1);
 	}
+
+	if (! solid)
+	{
+		for (var i = 1, length = coordIndex .length; i < length; ++ i)
+			coordIndex .push (coordIndex [length - 1 - i]);
+
+		coordIndex .push (-1);
+	}
+	
+	geometry .set_coordIndex = coordIndex;
 }
 
 function getSweepAngle ()
