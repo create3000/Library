@@ -5,9 +5,9 @@
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Sun, 03 Apr 2016 04:01:10 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V1.4.0, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/Projekte/Library/Prototypes/1/1.0/Geometry3D/RoundedExtrusion.x3d'/>
-    <meta name='modified' content='Mon, 04 Apr 2016 00:05:23 GMT'/>
+    <meta name='generator' content='Titania V4.3.9, http://titania.create3000.de'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Prototypes/Geometry3D/RoundedExtrusion.x3d'/>
+    <meta name='modified' content='Mon, 07 Jan 2019 04:05:08 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='RoundedExtrusion'>
@@ -39,7 +39,8 @@
             <connect nodeField='scale' protoField='scale'/>
           </IS>
         </Extrusion>
-        <Script DEF='RoundedExtrusionScript'>
+        <Script DEF='RoundedExtrusionScript'
+            directOutput='true'>
           <field accessType='inputOutput' type='MFVec3f' name='spine'/>
           <field accessType='inputOutput' type='SFFloat' name='cornerRadius'/>
           <field accessType='inputOutput' type='SFInt32' name='cornerDimension'/>
@@ -146,7 +147,7 @@ function clamp (value, min, max)
 {
 	return value < min ? min : (value > max ? max : value);
 }
-]]> 
+]]>
         </Script>
       </ProtoBody>
     </ProtoDeclare>
@@ -165,7 +166,7 @@ function clamp (value, min, max)
         <MetadataSet DEF='Grid' containerField='value'
             name='Grid'
             reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled_1' containerField='value'
+          <MetadataBoolean DEF='enabled_2' containerField='value'
               name='enabled'
               reference='http://titania.create3000.de'
               value='true'/>
@@ -197,12 +198,27 @@ function clamp (value, min, max)
         <MetadataSet DEF='Selection' containerField='value'
             name='Selection'
             reference='http://titania.create3000.de'>
-          <MetadataSet DEF='previous' containerField='value'
-              name='previous'
-              reference='http://titania.create3000.de'/>
-          <MetadataSet DEF='children' containerField='value'
-              name='children'
-              reference='http://titania.create3000.de'/>
+          <MetadataBoolean DEF='selectGeometry' containerField='value'
+              name='selectGeometry'
+              reference='http://titania.create3000.de'
+              value='false'/>
+          <MetadataSet DEF='nodes' containerField='value'
+              name='nodes'
+              reference='http://titania.create3000.de'>
+            <!-- NULL -->
+          </MetadataSet>
+        </MetadataSet>
+        <MetadataSet DEF='Page' containerField='value'
+            name='Page'
+            reference='http://titania.create3000.de'>
+          <MetadataInteger DEF='activeView' containerField='value'
+              name='activeView'
+              reference='http://titania.create3000.de'
+              value='1'/>
+          <MetadataInteger DEF='multiView' containerField='value'
+              name='multiView'
+              reference='http://titania.create3000.de'
+              value='0'/>
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>

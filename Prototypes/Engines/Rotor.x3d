@@ -5,8 +5,9 @@
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Sun, 20 Sep 2015 06:48:37 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V1.1.0, http://titania.create3000.de'/>
-    <meta name='modified' content='Sun, 20 Sep 2015 06:48:37 GMT'/>
+    <meta name='generator' content='Titania V4.3.9, http://titania.create3000.de'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Prototypes/Engines/Rotor.x3d'/>
+    <meta name='modified' content='Mon, 07 Jan 2019 04:03:22 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='Rotor'>
@@ -31,8 +32,8 @@
             <connect nodeField='cycleInterval' protoField='cycleInterval'/>
             <connect nodeField='loop' protoField='loop'/>
             <connect nodeField='startTime' protoField='startTime'/>
-            <connect nodeField='pauseTime' protoField='pauseTime'/>
             <connect nodeField='resumeTime' protoField='resumeTime'/>
+            <connect nodeField='pauseTime' protoField='pauseTime'/>
             <connect nodeField='stopTime' protoField='stopTime'/>
             <connect nodeField='isActive' protoField='isActive'/>
             <connect nodeField='cycleTime' protoField='cycleTime'/>
@@ -40,18 +41,19 @@
         </TimeSensor>
         <OrientationInterpolator DEF='Interpolator'
             key='0, 0.25, 0.5, 0.75, 1'
-            keyValue='0 0 1 0, 0 0 1 1.5708, 0 0 1 3.14159, 0 0 1 4.71239, 0 0 1 0'>
+            keyValue='0 0 1 0, 0 0 1 1.5707963267949, 0 0 1 3.14159265358979, 0 0 1 4.71238898038469, 0 0 1 0'>
           <IS>
             <connect nodeField='value_changed' protoField='rotation_changed'/>
           </IS>
         </OrientationInterpolator>
-        <Script DEF='Rotor'>
+        <Script DEF='Rotor'
+            directOutput='true'>
           <field accessType='inputOnly' type='SFVec3f' name='set_axis'/>
           <field accessType='inputOnly' type='SFFloat' name='set_angle'/>
           <field accessType='inputOutput' type='SFVec3f' name='axis'/>
           <field accessType='inputOutput' type='SFFloat' name='angle'/>
           <field accessType='initializeOnly' type='SFNode' name='interpolator'>
-            <OrientationInterpolator USE='Interpolator'/>
+            <OrientationInterpolator USE='Interpolator' containerField='interpolator'/>
           </field>
           <IS>
             <connect nodeField='axis' protoField='axis'/>
@@ -73,10 +75,37 @@ function eventsProcessed ()
 	
 	keyValue [4] = keyValue [0];
 }
-]]> 
+]]>
         </Script>
         <ROUTE fromNode='Timer' fromField='fraction_changed' toNode='Interpolator' toField='set_fraction'/>
       </ProtoBody>
     </ProtoDeclare>
+    <WorldInfo
+        title='Rotor'>
+      <MetadataSet DEF='Titania'
+          name='Titania'
+          reference='http://titania.create3000.de'>
+        <MetadataSet DEF='Page' containerField='value'
+            name='Page'
+            reference='http://titania.create3000.de'>
+          <MetadataInteger DEF='activeView' containerField='value'
+              name='activeView'
+              reference='http://titania.create3000.de'
+              value='1'/>
+          <MetadataInteger DEF='multiView' containerField='value'
+              name='multiView'
+              reference='http://titania.create3000.de'
+              value='0'/>
+        </MetadataSet>
+        <MetadataSet DEF='Selection' containerField='value'
+            name='Selection'
+            reference='http://titania.create3000.de'>
+          <MetadataBoolean DEF='selectGeometry' containerField='value'
+              name='selectGeometry'
+              reference='http://titania.create3000.de'
+              value='false'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
   </Scene>
 </X3D>

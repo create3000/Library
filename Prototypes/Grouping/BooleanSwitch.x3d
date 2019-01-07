@@ -5,8 +5,9 @@
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Sun, 20 Sep 2015 06:48:37 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V1.1.0, http://titania.create3000.de'/>
-    <meta name='modified' content='Sun, 20 Sep 2015 06:48:37 GMT'/>
+    <meta name='generator' content='Titania V4.3.9, http://titania.create3000.de'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Prototypes/Grouping/BooleanSwitch.x3d'/>
+    <meta name='modified' content='Mon, 07 Jan 2019 04:05:45 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='BooleanSwitch'>
@@ -19,7 +20,8 @@
         <field accessType='inputOutput' type='MFNode' name='children'/>
       </ProtoInterface>
       <ProtoBody>
-        <Switch DEF='Switch'>
+        <Switch DEF='Switch'
+            whichChoice='0'>
           <IS>
             <connect nodeField='bboxSize' protoField='bboxSize'/>
             <connect nodeField='bboxCenter' protoField='bboxCenter'/>
@@ -28,11 +30,11 @@
             <connect nodeField='children' protoField='children'/>
           </IS>
         </Switch>
-        <Script
+        <Script DEF='BooleanSwitchScript'
             directOutput='true'>
           <field accessType='inputOutput' type='SFBool' name='whichChoice'/>
           <field accessType='initializeOnly' type='SFNode' name='group'>
-            <Switch USE='Switch'/>
+            <Switch USE='Switch' containerField='group'/>
           </field>
           <IS>
             <connect nodeField='whichChoice' protoField='whichChoice'/>
@@ -48,9 +50,41 @@ function set_whichChoice (value)
 {
 	group .whichChoice = value
 }
-]]> 
+]]>
         </Script>
       </ProtoBody>
     </ProtoDeclare>
+    <WorldInfo
+        title='BooleanSwitch'>
+      <MetadataSet DEF='Titania'
+          name='Titania'
+          reference='http://titania.create3000.de'>
+        <MetadataSet DEF='Page' containerField='value'
+            name='Page'
+            reference='http://titania.create3000.de'>
+          <MetadataInteger DEF='activeView' containerField='value'
+              name='activeView'
+              reference='http://titania.create3000.de'
+              value='1'/>
+          <MetadataInteger DEF='multiView' containerField='value'
+              name='multiView'
+              reference='http://titania.create3000.de'
+              value='0'/>
+        </MetadataSet>
+        <MetadataSet DEF='Selection' containerField='value'
+            name='Selection'
+            reference='http://titania.create3000.de'>
+          <MetadataBoolean DEF='selectGeometry' containerField='value'
+              name='selectGeometry'
+              reference='http://titania.create3000.de'
+              value='false'/>
+          <MetadataSet DEF='nodes' containerField='value'
+              name='nodes'
+              reference='http://titania.create3000.de'>
+            <!-- NULL -->
+          </MetadataSet>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
   </Scene>
 </X3D>
