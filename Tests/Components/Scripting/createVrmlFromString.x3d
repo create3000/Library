@@ -5,18 +5,47 @@
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Mon, 31 Aug 2015 16:22:31 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V0.7.8, http://titania.create3000.de'/>
-    <meta name='modified' content='Mon, 31 Aug 2015 17:18:07 GMT'/>
+    <meta name='generator' content='Titania V4.3.9, http://titania.create3000.de'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Scripting/createVrmlFromString.x3d'/>
+    <meta name='modified' content='Mon, 07 Jan 2019 04:44:14 GMT'/>
   </head>
   <Scene>
-    <Script>
-      <field accessType='initializeOnly' type='SFNode' name='node'>
-        <Transform DEF='_1'>
-          <!-- NULL -->
-          <!-- NULL -->
-          <!-- NULL -->
-        </Transform>
-      </field>
+    <WorldInfo
+        title='createVrmlFromString'>
+      <MetadataSet DEF='Titania'
+          name='Titania'
+          reference='http://titania.create3000.de'>
+        <MetadataSet DEF='Page' containerField='value'
+            name='Page'
+            reference='http://titania.create3000.de'>
+          <MetadataInteger DEF='activeView' containerField='value'
+              name='activeView'
+              reference='http://titania.create3000.de'
+              value='1'/>
+          <MetadataInteger DEF='multiView' containerField='value'
+              name='multiView'
+              reference='http://titania.create3000.de'
+              value='0'/>
+        </MetadataSet>
+        <MetadataSet DEF='Selection' containerField='value'
+            name='Selection'
+            reference='http://titania.create3000.de'>
+          <MetadataBoolean DEF='selectGeometry' containerField='value'
+              name='selectGeometry'
+              reference='http://titania.create3000.de'
+              value='false'/>
+          <MetadataSet DEF='nodes' containerField='value'
+              name='nodes'
+              reference='http://titania.create3000.de'>
+            <Script DEF='_1' containerField='value'
+                directOutput='true'>
+              <field accessType='initializeOnly' type='SFNode' name='node'>
+                <Transform DEF='_2' containerField='node'>
+                  <!-- NULL -->
+                  <!-- NULL -->
+                  <!-- NULL -->
+                </Transform>
+              </field>
 <![CDATA[javascript:
 
 function initialize ()
@@ -42,10 +71,15 @@ function initialize ()
 "</Scene></X3D>";
 
 	node .children = Browser .createVrmlFromString (vrmlSyntax);
-}]]> 
-    </Script>
+}]]>
+            </Script>
+          </MetadataSet>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <Script USE='_1'/>
     <Transform>
-      <Transform USE='_1'/>
+      <Transform USE='_2'/>
     </Transform>
   </Scene>
 </X3D>
