@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.3.9, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/NURBS/NurbsSweptSurface.x3d'/>
-    <meta name='modified' content='Tue, 15 Jan 2019 12:22:56 GMT'/>
+    <meta name='modified' content='Tue, 15 Jan 2019 12:26:14 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -40,11 +40,28 @@
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
               reference='http://titania.create3000.de'>
-            <NurbsCurve DEF='_2' containerField='value'
-                tessellation='50'>
-              <CoordinateDouble DEF='_3' containerField='controlPoint'
-                  point='0 0 0, 1 1 0, 3 -1 0, 5 1 0, 7 -1 0, 8 0 0'/>
-            </NurbsCurve>
+            <Transform DEF='NurbsSweptSurface_2' containerField='value'
+                translation='0 -2 0'>
+              <Shape>
+                <Appearance>
+                  <Material DEF='Rococo16'
+                      ambientIntensity='0.226102'
+                      diffuseColor='0.894461 0.382776 0.904409'
+                      specularColor='0.0955906 0.0955906 0.0955906'
+                      shininess='0.078125'/>
+                </Appearance>
+                <NurbsSweptSurface
+                    ccw='false'>
+                  <ContourPolyline2D containerField='crossSectionCurve'
+                      controlPoint='0 0, 1 0'/>
+                  <NurbsCurve DEF='_3' containerField='trajectoryCurve'
+                      tessellation='80'>
+                    <CoordinateDouble containerField='controlPoint'
+                        point='0 0 0, 1 1 0, 3 -1 0, 5 1 0, 7 -1 0, 8 0 0'/>
+                  </NurbsCurve>
+                </NurbsSweptSurface>
+              </Shape>
+            </Transform>
           </MetadataSet>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
@@ -142,31 +159,22 @@
     <Transform DEF='NurbsSweptSurface'>
       <Shape>
         <Appearance>
-          <Material/>
+          <Material DEF='Rococo2'
+              ambientIntensity='0.216064'
+              diffuseColor='0.864256 0.833788 0.330482'
+              specularColor='0.0955906 0.0940254 0.0681705'
+              shininess='0.078125'/>
         </Appearance>
         <NurbsSweptSurface
             ccw='false'>
           <NurbsCurve2D containerField='crossSectionCurve'
-              tessellation='20'
+              tessellation='40'
               closed='true'
               controlPoint='0 0, 1 0, 1 1, 0 1, 0 0'/>
-          <NurbsCurve USE='_2' containerField='trajectoryCurve'/>
+          <NurbsCurve USE='_3' containerField='trajectoryCurve'/>
         </NurbsSweptSurface>
       </Shape>
     </Transform>
-    <Transform DEF='NurbsSweptSurface_16'
-        translation='0 -2 0'>
-      <Shape>
-        <Appearance>
-          <Material/>
-        </Appearance>
-        <NurbsSweptSurface
-            ccw='false'>
-          <ContourPolyline2D containerField='crossSectionCurve'
-              controlPoint='0 0, 1 0'/>
-          <NurbsCurve USE='_2' containerField='trajectoryCurve'/>
-        </NurbsSweptSurface>
-      </Shape>
-    </Transform>
+    <Transform USE='NurbsSweptSurface_2'/>
   </Scene>
 </X3D>
