@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.3.9, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/NURBS/NurbsSweptSurface.x3d'/>
-    <meta name='modified' content='Tue, 15 Jan 2019 12:20:55 GMT'/>
+    <meta name='modified' content='Tue, 15 Jan 2019 12:22:56 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -40,30 +40,17 @@
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
               reference='http://titania.create3000.de'>
-            <Transform DEF='NurbsSweptSurface_2' containerField='value'
-                translation='0 -2 0'>
-              <Shape>
-                <Appearance>
-                  <Material/>
-                </Appearance>
-                <NurbsSweptSurface
-                    ccw='false'>
-                  <ContourPolyline2D containerField='crossSectionCurve'
-                      controlPoint='0 0, 1 0'/>
-                  <NurbsCurve containerField='trajectoryCurve'
-                      tessellation='50'>
-                    <CoordinateDouble containerField='controlPoint'
-                        point='0 0 0, 1 1 0, 3 -1 0, 5 1 0, 7 -1 0, 8 0 0'/>
-                  </NurbsCurve>
-                </NurbsSweptSurface>
-              </Shape>
-            </Transform>
+            <NurbsCurve DEF='_2' containerField='value'
+                tessellation='50'>
+              <CoordinateDouble DEF='_3' containerField='controlPoint'
+                  point='0 0 0, 1 1 0, 3 -1 0, 5 1 0, 7 -1 0, 8 0 0'/>
+            </NurbsCurve>
           </MetadataSet>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
             name='BrowserPanel'
             reference='http://titania.create3000.de'>
-          <MetadataString DEF='type_3' containerField='value'
+          <MetadataString DEF='type_4' containerField='value'
               name='type'
               reference='http://titania.create3000.de'
               value='"TOP_VIEW", "MAIN_VIEW", "PERSPECTIVE_VIEW", "FRONT_VIEW"'/>
@@ -73,15 +60,15 @@
             <MetadataSet DEF='PerspectiveViewpoint' containerField='value'
                 name='PerspectiveViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_4' containerField='value'
+              <MetadataDouble DEF='position_5' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
                   value='5.87788534164429, 6.46984958648682, 13.8524446487427'/>
-              <MetadataDouble DEF='orientation_5' containerField='value'
+              <MetadataDouble DEF='orientation_6' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
                   value='-0.704047462871212, 0.695566762376517, 0.143192350010952, 0.568941727555854'/>
-              <MetadataDouble DEF='centerOfRotation_6' containerField='value'
+              <MetadataDouble DEF='centerOfRotation_7' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
                   value='0, 0, 0'/>
@@ -93,19 +80,19 @@
             <MetadataSet DEF='TopViewpoint' containerField='value'
                 name='TopViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_7' containerField='value'
+              <MetadataDouble DEF='position_8' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
                   value='0, 10000, 0'/>
-              <MetadataDouble DEF='orientation_8' containerField='value'
+              <MetadataDouble DEF='orientation_9' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
                   value='1, 0, 0, 4.71238898038469'/>
-              <MetadataDouble DEF='centerOfRotation_9' containerField='value'
+              <MetadataDouble DEF='centerOfRotation_10' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
                   value='-0.0320612526145463, 0, 0.0937320149966475'/>
-              <MetadataDouble DEF='fieldOfViewScale_10' containerField='value'
+              <MetadataDouble DEF='fieldOfViewScale_11' containerField='value'
                   name='fieldOfViewScale'
                   reference='http://titania.create3000.de'
                   value='1.21023944190259'/>
@@ -113,19 +100,19 @@
             <MetadataSet DEF='FrontViewpoint' containerField='value'
                 name='FrontViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_11' containerField='value'
+              <MetadataDouble DEF='position_12' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
                   value='0, 0, 10000'/>
-              <MetadataDouble DEF='orientation_12' containerField='value'
+              <MetadataDouble DEF='orientation_13' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
                   value='0, 0, 1, 0'/>
-              <MetadataDouble DEF='centerOfRotation_13' containerField='value'
+              <MetadataDouble DEF='centerOfRotation_14' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
                   value='-0.00884759203065143, 0.0177734813359099, 0'/>
-              <MetadataDouble DEF='fieldOfViewScale_14' containerField='value'
+              <MetadataDouble DEF='fieldOfViewScale_15' containerField='value'
                   name='fieldOfViewScale'
                   reference='http://titania.create3000.de'
                   value='1.212467484375'/>
@@ -163,14 +150,23 @@
               tessellation='20'
               closed='true'
               controlPoint='0 0, 1 0, 1 1, 0 1, 0 0'/>
-          <NurbsCurve containerField='trajectoryCurve'
-              tessellation='50'>
-            <CoordinateDouble containerField='controlPoint'
-                point='0 0 0, 1 1 0, 3 -1 0, 5 1 0, 7 -1 0, 8 0 0'/>
-          </NurbsCurve>
+          <NurbsCurve USE='_2' containerField='trajectoryCurve'/>
         </NurbsSweptSurface>
       </Shape>
     </Transform>
-    <Transform USE='NurbsSweptSurface_2'/>
+    <Transform DEF='NurbsSweptSurface_16'
+        translation='0 -2 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <NurbsSweptSurface
+            ccw='false'>
+          <ContourPolyline2D containerField='crossSectionCurve'
+              controlPoint='0 0, 1 0'/>
+          <NurbsCurve USE='_2' containerField='trajectoryCurve'/>
+        </NurbsSweptSurface>
+      </Shape>
+    </Transform>
   </Scene>
 </X3D>
