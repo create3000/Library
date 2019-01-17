@@ -5,9 +5,9 @@
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Thu, 10 Jan 2019 13:46:10 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V4.3.9, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/Schreibtisch/torus.x3d'/>
-    <meta name='modified' content='Mon, 14 Jan 2019 03:32:41 GMT'/>
+    <meta name='generator' content='Titania V4.3.10, http://titania.create3000.de'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/NURBS/torus.x3d'/>
+    <meta name='modified' content='Thu, 17 Jan 2019 04:08:50 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='NurbsTorus'>
@@ -187,6 +187,7 @@ function eventsProcessed ()
                   <connect nodeField='string' protoField='name'/>
                 </IS>
                 <FontStyle
+                    family='"SANS"'
                     size='0.06'
                     justify='"BEGIN", "MIDDLE"'/>
               </Text>
@@ -201,13 +202,14 @@ function eventsProcessed ()
               <Text DEF='_2'
                   string='"0"'
                   solid='true'>
-                <FontStyle
+                <FontStyle DEF='_3'
+                    family='"SANS"'
                     size='0.06'
                     justify='"END", "MIDDLE"'/>
               </Text>
             </Shape>
           </Transform>
-          <PlaneSensor DEF='_3'
+          <PlaneSensor DEF='_4'
               offset='-0.475 0 0'
               minPosition='-0.475 0'
               maxPosition='0.475 0'/>
@@ -222,7 +224,7 @@ function eventsProcessed ()
           <field accessType='outputOnly' type='MFString' name='string_changed'/>
           <field accessType='outputOnly' type='SFFloat' name='value_changed'/>
           <field accessType='initializeOnly' type='SFNode' name='sensor'>
-            <PlaneSensor USE='_3' containerField='sensor'/>
+            <PlaneSensor USE='_4' containerField='sensor'/>
           </field>
           <field accessType='initializeOnly' type='SFNode' name='knob'>
             <Transform USE='Knob' containerField='knob'/>
@@ -267,7 +269,7 @@ function project (value, fromLow, fromHigh, toLow, toHigh)
 }
 ]]>
         </Script>
-        <ROUTE fromNode='_3' fromField='translation_changed' toNode='SliderScript' toField='set_translation'/>
+        <ROUTE fromNode='_4' fromField='translation_changed' toNode='SliderScript' toField='set_translation'/>
         <ROUTE fromNode='SliderScript' fromField='string_changed' toNode='_2' toField='set_string'/>
       </ProtoBody>
     </ProtoDeclare>
@@ -309,7 +311,7 @@ function set_value (value, time)
         <MetadataSet DEF='Grid' containerField='value'
             name='Grid'
             reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled_4' containerField='value'
+          <MetadataBoolean DEF='enabled_5' containerField='value'
               name='enabled'
               reference='http://titania.create3000.de'
               value='true'/>
@@ -320,28 +322,11 @@ function set_value (value, time)
           <MetadataBoolean DEF='selectGeometry' containerField='value'
               name='selectGeometry'
               reference='http://titania.create3000.de'
-              value='true'/>
+              value='false'/>
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
               reference='http://titania.create3000.de'>
-            <Transform DEF='Torus' containerField='value'>
-              <Shape>
-                <Appearance>
-                  <Material
-                      diffuseColor='1 1 1'
-                      specularColor='0.9 0.9 0.9'
-                      emissiveColor='0.275 0.275 0.275'
-                      shininess='0.25'/>
-                  <ImageTexture
-                      url='"gradient.png"'/>
-                  <TextureTransform
-                      scale='1 1.67'/>
-                </Appearance>
-                <ProtoInstance name='NurbsTorus' DEF='_5' containerField='geometry'>
-                  <fieldValue name='vOrder' value='4'/>
-                </ProtoInstance>
-              </Shape>
-            </Transform>
+            <!-- NULL -->
           </MetadataSet>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
@@ -458,16 +443,33 @@ function set_value (value, time)
             position='9.85116 5.89662 2.62456'
             orientation='-0.319601353670287 0.915169165318119 0.245602063474756 1.39696298210609'
             centerOfRotation='-6.87838e-05 5.96046e-08 2.18153e-05'/>
-        <Transform USE='Torus'/>
+        <Transform DEF='Torus'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='1 1 1'
+                  specularColor='0.9 0.9 0.9'
+                  emissiveColor='0.275 0.275 0.275'
+                  shininess='0.25'/>
+              <ImageTexture
+                  url='"gradient.png"'/>
+              <TextureTransform
+                  scale='1 1.67'/>
+            </Appearance>
+            <ProtoInstance name='NurbsTorus' DEF='_18' containerField='geometry'>
+              <fieldValue name='vOrder' value='4'/>
+            </ProtoInstance>
+          </Shape>
+        </Transform>
       </Layer>
       <LayoutLayer DEF='HUD'>
-        <MetadataSet DEF='Titania_18'
+        <MetadataSet DEF='Titania_19'
             name='Titania'
             reference='http://titania.create3000.de'>
-          <MetadataSet DEF='Grid_19' containerField='value'
+          <MetadataSet DEF='Grid_20' containerField='value'
               name='Grid'
               reference='http://titania.create3000.de'>
-            <MetadataBoolean DEF='enabled_20' containerField='value'
+            <MetadataBoolean DEF='enabled_21' containerField='value'
                 name='enabled'
                 reference='http://titania.create3000.de'
                 value='false'/>
@@ -478,7 +480,7 @@ function set_value (value, time)
             size='0.2, 0.4'/>
         <Transform DEF='minorRadius'
             translation='0 0.44 0'>
-          <ProtoInstance name='Slider' DEF='_21'>
+          <ProtoInstance name='Slider' DEF='_22'>
             <fieldValue name='name' value='"minorRadius"'/>
             <fieldValue name='initialValue' value='1'/>
             <fieldValue name='minValue' value='0.1'/>
@@ -488,7 +490,7 @@ function set_value (value, time)
         </Transform>
         <Transform DEF='majorRadius'
             translation='0 0.33 0'>
-          <ProtoInstance name='Slider' DEF='_22'>
+          <ProtoInstance name='Slider' DEF='_23'>
             <fieldValue name='name' value='"majorRadius"'/>
             <fieldValue name='initialValue' value='3'/>
             <fieldValue name='minValue' value='1'/>
@@ -498,7 +500,7 @@ function set_value (value, time)
         </Transform>
         <Transform DEF='uFrequency'
             translation='0 0.22 0'>
-          <ProtoInstance name='Slider' DEF='_23'>
+          <ProtoInstance name='Slider' DEF='_24'>
             <fieldValue name='name' value='"uFrequency"'/>
             <fieldValue name='initialValue' value='4'/>
             <fieldValue name='maxValue' value='8'/>
@@ -507,7 +509,7 @@ function set_value (value, time)
         </Transform>
         <Transform DEF='vFrequency'
             translation='0 0.11 0'>
-          <ProtoInstance name='Slider' DEF='_24'>
+          <ProtoInstance name='Slider' DEF='_25'>
             <fieldValue name='name' value='"vFrequency"'/>
             <fieldValue name='initialValue' value='4'/>
             <fieldValue name='maxValue' value='16'/>
@@ -515,7 +517,7 @@ function set_value (value, time)
           </ProtoInstance>
         </Transform>
         <Transform DEF='Twist'>
-          <ProtoInstance name='Slider' DEF='_25'>
+          <ProtoInstance name='Slider' DEF='_26'>
             <fieldValue name='name' value='"twist"'/>
             <fieldValue name='minValue' value='-2'/>
             <fieldValue name='maxValue' value='2'/>
@@ -524,42 +526,42 @@ function set_value (value, time)
         </Transform>
         <Transform DEF='WeightStength'
             translation='0 -0.11 0'>
-          <ProtoInstance name='Slider' DEF='_26'>
+          <ProtoInstance name='Slider' DEF='_27'>
             <fieldValue name='name' value='"weightStrength"'/>
             <fieldValue name='precision' value='2'/>
           </ProtoInstance>
         </Transform>
         <Transform DEF='uOrder'
             translation='0 -0.22 0'>
-          <ProtoInstance name='Slider' DEF='_27'>
+          <ProtoInstance name='Slider' DEF='_28'>
             <fieldValue name='name' value='"uOrder"'/>
             <fieldValue name='initialValue' value='3'/>
             <fieldValue name='minValue' value='2'/>
             <fieldValue name='maxValue' value='6'/>
           </ProtoInstance>
-          <ProtoInstance name='Float2Integer' DEF='_28'/>
+          <ProtoInstance name='Float2Integer' DEF='_29'/>
         </Transform>
         <Transform DEF='vOrder'
             translation='0 -0.33 0'>
-          <ProtoInstance name='Slider' DEF='_29'>
+          <ProtoInstance name='Slider' DEF='_30'>
             <fieldValue name='name' value='"vOrder"'/>
             <fieldValue name='initialValue' value='4'/>
             <fieldValue name='minValue' value='2'/>
             <fieldValue name='maxValue' value='6'/>
           </ProtoInstance>
-          <ProtoInstance name='Float2Integer' DEF='_30'/>
+          <ProtoInstance name='Float2Integer' DEF='_31'/>
         </Transform>
       </LayoutLayer>
     </LayerSet>
-    <ROUTE fromNode='_27' fromField='value_changed' toNode='_28' toField='set_value'/>
-    <ROUTE fromNode='_29' fromField='value_changed' toNode='_30' toField='set_value'/>
-    <ROUTE fromNode='_26' fromField='value_changed' toNode='_5' toField='set_weightStrength'/>
-    <ROUTE fromNode='_25' fromField='value_changed' toNode='_5' toField='set_twist'/>
-    <ROUTE fromNode='_24' fromField='value_changed' toNode='_5' toField='set_vFrequency'/>
-    <ROUTE fromNode='_23' fromField='value_changed' toNode='_5' toField='set_uFrequency'/>
-    <ROUTE fromNode='_22' fromField='value_changed' toNode='_5' toField='set_majorRadius'/>
-    <ROUTE fromNode='_21' fromField='value_changed' toNode='_5' toField='set_minorRadius'/>
-    <ROUTE fromNode='_30' fromField='value_changed' toNode='_5' toField='set_vOrder'/>
-    <ROUTE fromNode='_28' fromField='value_changed' toNode='_5' toField='set_uOrder'/>
+    <ROUTE fromNode='_29' fromField='value_changed' toNode='_18' toField='set_uOrder'/>
+    <ROUTE fromNode='_31' fromField='value_changed' toNode='_18' toField='set_vOrder'/>
+    <ROUTE fromNode='_22' fromField='value_changed' toNode='_18' toField='set_minorRadius'/>
+    <ROUTE fromNode='_23' fromField='value_changed' toNode='_18' toField='set_majorRadius'/>
+    <ROUTE fromNode='_24' fromField='value_changed' toNode='_18' toField='set_uFrequency'/>
+    <ROUTE fromNode='_25' fromField='value_changed' toNode='_18' toField='set_vFrequency'/>
+    <ROUTE fromNode='_26' fromField='value_changed' toNode='_18' toField='set_twist'/>
+    <ROUTE fromNode='_27' fromField='value_changed' toNode='_18' toField='set_weightStrength'/>
+    <ROUTE fromNode='_28' fromField='value_changed' toNode='_29' toField='set_value'/>
+    <ROUTE fromNode='_30' fromField='value_changed' toNode='_31' toField='set_value'/>
   </Scene>
 </X3D>
