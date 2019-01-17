@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.3.10, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/NURBS/torus.x3d'/>
-    <meta name='modified' content='Thu, 17 Jan 2019 04:08:50 GMT'/>
+    <meta name='modified' content='Thu, 17 Jan 2019 04:40:48 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='NurbsTorus'>
@@ -35,10 +35,8 @@
             uDimension='7'
             vDimension='7'
             weight='1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1'>
-          <TextureCoordinate3D
-              point='3.86603 0.5 0, 3 1 0, 2.13397 0.5 0, 2.13397 -0.5 0, 3 -1 0, 3.86603 -0.5 0, 3.86603 0.5 0, 2.02676 0.608253 3.51046, 1.5 0.566987 2.59808, 0.973237 0.608253 1.6857, 0.973237 -0.608253 1.6857, 1.5 -0.566987 2.59808, 2.02676 -0.608253 3.51046, 2.02676 0.608253 3.51046, -1.83926 0.391747 3.1857, -1.5 1.43301 2.59808, -1.16074 0.391747 2.01046, -1.16074 -0.391747 2.01046, -1.5 -1.43301 2.59808, -1.83926 -0.391747 3.1857, -1.83926 0.391747 3.1857, -3.86603 0.5 4.73452e-16, -3 1 3.67394e-16, -2.13397 0.5 2.61337e-16, -2.13397 -0.5 2.61337e-16, -3 -1 3.67394e-16, -3.86603 -0.5 4.73452e-16, -3.86603 0.5 4.73452e-16, -2.02676 0.608253 -3.51046, -1.5 0.566987 -2.59808, -0.973237 0.608253 -1.6857, -0.973237 -0.608253 -1.6857, -1.5 -0.566987 -2.59808, -2.02676 -0.608253 -3.51046, -2.02676 0.608253 -3.51046, 1.83926 0.391747 -3.1857, 1.5 1.43301 -2.59808, 1.16074 0.391747 -2.01046, 1.16074 -0.391747 -2.01046, 1.5 -1.43301 -2.59808, 1.83926 -0.391747 -3.1857, 1.83926 0.391747 -3.1857, 3.86603 0.5 0, 3 1 0, 2.13397 0.5 0, 2.13397 -0.5 0, 3 -1 0, 3.86603 -0.5 0, 3.86603 0.5 0'/>
-          <CoordinateDouble containerField='controlPoint'
-              point='3.86602540378444 0.5 0, 3 1 0, 2.13397459621556 0.5 0, 2.13397459621556 -0.5 0, 3 -1 0, 3.86602540378444 -0.5 0, 3.86602540378444 0.5 0, 2.02676270189222 0.608253175473055 3.5104559745629, 1.5 0.566987298107781 2.59807621135332, 0.973237298107781 0.608253175473055 1.68569644814373, 0.973237298107781 -0.608253175473055 1.68569644814373, 1.5 -0.566987298107781 2.59807621135332, 2.02676270189222 -0.608253175473056 3.5104559745629, 2.02676270189222 0.608253175473055 3.5104559745629, -1.83926270189222 0.391746824526945 3.18569644814373, -1.5 1.43301270189222 2.59807621135332, -1.16073729810778 0.391746824526945 2.0104559745629, -1.16073729810778 -0.391746824526945 2.0104559745629, -1.5 -1.43301270189222 2.59807621135332, -1.83926270189222 -0.391746824526945 3.18569644814373, -1.83926270189222 0.391746824526945 3.18569644814373, -3.86602540378444 0.5 4.73451563616697e-16, -3 1 3.67394039744206e-16, -2.13397459621556 0.5 2.61336515871715e-16, -2.13397459621556 -0.5 2.61336515871715e-16, -3 -1 3.67394039744206e-16, -3.86602540378444 -0.500000000000001 4.73451563616697e-16, -3.86602540378444 0.5 4.73451563616697e-16, -2.02676270189222 0.608253175473055 -3.5104559745629, -1.5 0.566987298107781 -2.59807621135332, -0.973237298107782 0.608253175473055 -1.68569644814373, -0.973237298107782 -0.608253175473055 -1.68569644814373, -1.5 -0.566987298107781 -2.59807621135332, -2.02676270189222 -0.608253175473056 -3.5104559745629, -2.02676270189222 0.608253175473055 -3.5104559745629, 1.83926270189222 0.391746824526945 -3.18569644814373, 1.5 1.43301270189222 -2.59807621135332, 1.16073729810778 0.391746824526945 -2.0104559745629, 1.16073729810778 -0.391746824526945 -2.0104559745629, 1.5 -1.43301270189222 -2.59807621135332, 1.83926270189222 -0.391746824526945 -3.18569644814373, 1.83926270189222 0.391746824526945 -3.18569644814373, 3.86602540378444 0.5 0, 3 1 0, 2.13397459621556 0.5 0, 2.13397459621556 -0.5 0, 3 -1 0, 3.86602540378444 -0.5 0, 3.86602540378444 0.5 0'/>
+          <TextureCoordinate3D/>
+          <CoordinateDouble containerField='controlPoint'/>
         </NurbsPatchSurface>
         <Script DEF='NurbsTorusScript'
             directOutput='true'>
@@ -202,14 +200,14 @@ function eventsProcessed ()
               <Text DEF='_2'
                   string='"0"'
                   solid='true'>
-                <FontStyle DEF='_3'
+                <FontStyle
                     family='"SANS"'
                     size='0.06'
                     justify='"END", "MIDDLE"'/>
               </Text>
             </Shape>
           </Transform>
-          <PlaneSensor DEF='_4'
+          <PlaneSensor DEF='_3'
               offset='-0.475 0 0'
               minPosition='-0.475 0'
               maxPosition='0.475 0'/>
@@ -224,7 +222,7 @@ function eventsProcessed ()
           <field accessType='outputOnly' type='MFString' name='string_changed'/>
           <field accessType='outputOnly' type='SFFloat' name='value_changed'/>
           <field accessType='initializeOnly' type='SFNode' name='sensor'>
-            <PlaneSensor USE='_4' containerField='sensor'/>
+            <PlaneSensor USE='_3' containerField='sensor'/>
           </field>
           <field accessType='initializeOnly' type='SFNode' name='knob'>
             <Transform USE='Knob' containerField='knob'/>
@@ -269,7 +267,7 @@ function project (value, fromLow, fromHigh, toLow, toHigh)
 }
 ]]>
         </Script>
-        <ROUTE fromNode='_4' fromField='translation_changed' toNode='SliderScript' toField='set_translation'/>
+        <ROUTE fromNode='_3' fromField='translation_changed' toNode='SliderScript' toField='set_translation'/>
         <ROUTE fromNode='SliderScript' fromField='string_changed' toNode='_2' toField='set_string'/>
       </ProtoBody>
     </ProtoDeclare>
@@ -311,7 +309,7 @@ function set_value (value, time)
         <MetadataSet DEF='Grid' containerField='value'
             name='Grid'
             reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled_5' containerField='value'
+          <MetadataBoolean DEF='enabled_4' containerField='value'
               name='enabled'
               reference='http://titania.create3000.de'
               value='true'/>
@@ -325,14 +323,12 @@ function set_value (value, time)
               value='false'/>
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
-              reference='http://titania.create3000.de'>
-            <!-- NULL -->
-          </MetadataSet>
+              reference='http://titania.create3000.de'/>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
             name='BrowserPanel'
             reference='http://titania.create3000.de'>
-          <MetadataString DEF='type_6' containerField='value'
+          <MetadataString DEF='type_5' containerField='value'
               name='type'
               reference='http://titania.create3000.de'
               value='"TOP_VIEW", "MAIN_VIEW", "PERSPECTIVE_VIEW", "FRONT_VIEW"'/>
@@ -342,15 +338,15 @@ function set_value (value, time)
             <MetadataSet DEF='PerspectiveViewpoint' containerField='value'
                 name='PerspectiveViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_7' containerField='value'
+              <MetadataDouble DEF='position_6' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
                   value='5.87788534164429, 6.46984958648682, 13.8524446487427'/>
-              <MetadataDouble DEF='orientation_8' containerField='value'
+              <MetadataDouble DEF='orientation_7' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
                   value='-0.704047462871213, 0.695566762376518, 0.143192350010952, 0.568941727555854'/>
-              <MetadataDouble DEF='centerOfRotation_9' containerField='value'
+              <MetadataDouble DEF='centerOfRotation_8' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
                   value='0, 0, 0'/>
@@ -362,19 +358,19 @@ function set_value (value, time)
             <MetadataSet DEF='TopViewpoint' containerField='value'
                 name='TopViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_10' containerField='value'
+              <MetadataDouble DEF='position_9' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
                   value='0, 10000, 0'/>
-              <MetadataDouble DEF='orientation_11' containerField='value'
+              <MetadataDouble DEF='orientation_10' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
                   value='1, 0, 0, 4.71238898038469'/>
-              <MetadataDouble DEF='centerOfRotation_12' containerField='value'
+              <MetadataDouble DEF='centerOfRotation_11' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
                   value='-0.0320612526145463, 0, 0.0937320149966475'/>
-              <MetadataDouble DEF='fieldOfViewScale_13' containerField='value'
+              <MetadataDouble DEF='fieldOfViewScale_12' containerField='value'
                   name='fieldOfViewScale'
                   reference='http://titania.create3000.de'
                   value='1.21023944190259'/>
@@ -382,19 +378,19 @@ function set_value (value, time)
             <MetadataSet DEF='FrontViewpoint' containerField='value'
                 name='FrontViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_14' containerField='value'
+              <MetadataDouble DEF='position_13' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
                   value='0, 0, 10000'/>
-              <MetadataDouble DEF='orientation_15' containerField='value'
+              <MetadataDouble DEF='orientation_14' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
                   value='0, 0, 1, 0'/>
-              <MetadataDouble DEF='centerOfRotation_16' containerField='value'
+              <MetadataDouble DEF='centerOfRotation_15' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
                   value='-0.00884759203065143, 0.0177734813359099, 0'/>
-              <MetadataDouble DEF='fieldOfViewScale_17' containerField='value'
+              <MetadataDouble DEF='fieldOfViewScale_16' containerField='value'
                   name='fieldOfViewScale'
                   reference='http://titania.create3000.de'
                   value='1.212467484375'/>
@@ -456,20 +452,20 @@ function set_value (value, time)
               <TextureTransform
                   scale='1 1.67'/>
             </Appearance>
-            <ProtoInstance name='NurbsTorus' DEF='_18' containerField='geometry'>
+            <ProtoInstance name='NurbsTorus' DEF='_17' containerField='geometry'>
               <fieldValue name='vOrder' value='4'/>
             </ProtoInstance>
           </Shape>
         </Transform>
       </Layer>
       <LayoutLayer DEF='HUD'>
-        <MetadataSet DEF='Titania_19'
+        <MetadataSet DEF='Titania_18'
             name='Titania'
             reference='http://titania.create3000.de'>
-          <MetadataSet DEF='Grid_20' containerField='value'
+          <MetadataSet DEF='Grid_19' containerField='value'
               name='Grid'
               reference='http://titania.create3000.de'>
-            <MetadataBoolean DEF='enabled_21' containerField='value'
+            <MetadataBoolean DEF='enabled_20' containerField='value'
                 name='enabled'
                 reference='http://titania.create3000.de'
                 value='false'/>
@@ -480,7 +476,7 @@ function set_value (value, time)
             size='0.2, 0.4'/>
         <Transform DEF='minorRadius'
             translation='0 0.44 0'>
-          <ProtoInstance name='Slider' DEF='_22'>
+          <ProtoInstance name='Slider' DEF='_21'>
             <fieldValue name='name' value='"minorRadius"'/>
             <fieldValue name='initialValue' value='1'/>
             <fieldValue name='minValue' value='0.1'/>
@@ -490,7 +486,7 @@ function set_value (value, time)
         </Transform>
         <Transform DEF='majorRadius'
             translation='0 0.33 0'>
-          <ProtoInstance name='Slider' DEF='_23'>
+          <ProtoInstance name='Slider' DEF='_22'>
             <fieldValue name='name' value='"majorRadius"'/>
             <fieldValue name='initialValue' value='3'/>
             <fieldValue name='minValue' value='1'/>
@@ -500,7 +496,7 @@ function set_value (value, time)
         </Transform>
         <Transform DEF='uFrequency'
             translation='0 0.22 0'>
-          <ProtoInstance name='Slider' DEF='_24'>
+          <ProtoInstance name='Slider' DEF='_23'>
             <fieldValue name='name' value='"uFrequency"'/>
             <fieldValue name='initialValue' value='4'/>
             <fieldValue name='maxValue' value='8'/>
@@ -509,7 +505,7 @@ function set_value (value, time)
         </Transform>
         <Transform DEF='vFrequency'
             translation='0 0.11 0'>
-          <ProtoInstance name='Slider' DEF='_25'>
+          <ProtoInstance name='Slider' DEF='_24'>
             <fieldValue name='name' value='"vFrequency"'/>
             <fieldValue name='initialValue' value='4'/>
             <fieldValue name='maxValue' value='16'/>
@@ -517,7 +513,7 @@ function set_value (value, time)
           </ProtoInstance>
         </Transform>
         <Transform DEF='Twist'>
-          <ProtoInstance name='Slider' DEF='_26'>
+          <ProtoInstance name='Slider' DEF='_25'>
             <fieldValue name='name' value='"twist"'/>
             <fieldValue name='minValue' value='-2'/>
             <fieldValue name='maxValue' value='2'/>
@@ -526,42 +522,42 @@ function set_value (value, time)
         </Transform>
         <Transform DEF='WeightStength'
             translation='0 -0.11 0'>
-          <ProtoInstance name='Slider' DEF='_27'>
+          <ProtoInstance name='Slider' DEF='_26'>
             <fieldValue name='name' value='"weightStrength"'/>
             <fieldValue name='precision' value='2'/>
           </ProtoInstance>
         </Transform>
         <Transform DEF='uOrder'
             translation='0 -0.22 0'>
-          <ProtoInstance name='Slider' DEF='_28'>
+          <ProtoInstance name='Slider' DEF='_27'>
             <fieldValue name='name' value='"uOrder"'/>
             <fieldValue name='initialValue' value='3'/>
             <fieldValue name='minValue' value='2'/>
             <fieldValue name='maxValue' value='6'/>
           </ProtoInstance>
-          <ProtoInstance name='Float2Integer' DEF='_29'/>
+          <ProtoInstance name='Float2Integer' DEF='_28'/>
         </Transform>
         <Transform DEF='vOrder'
             translation='0 -0.33 0'>
-          <ProtoInstance name='Slider' DEF='_30'>
+          <ProtoInstance name='Slider' DEF='_29'>
             <fieldValue name='name' value='"vOrder"'/>
             <fieldValue name='initialValue' value='4'/>
             <fieldValue name='minValue' value='2'/>
             <fieldValue name='maxValue' value='6'/>
           </ProtoInstance>
-          <ProtoInstance name='Float2Integer' DEF='_31'/>
+          <ProtoInstance name='Float2Integer' DEF='_30'/>
         </Transform>
       </LayoutLayer>
     </LayerSet>
-    <ROUTE fromNode='_29' fromField='value_changed' toNode='_18' toField='set_uOrder'/>
-    <ROUTE fromNode='_31' fromField='value_changed' toNode='_18' toField='set_vOrder'/>
-    <ROUTE fromNode='_22' fromField='value_changed' toNode='_18' toField='set_minorRadius'/>
-    <ROUTE fromNode='_23' fromField='value_changed' toNode='_18' toField='set_majorRadius'/>
-    <ROUTE fromNode='_24' fromField='value_changed' toNode='_18' toField='set_uFrequency'/>
-    <ROUTE fromNode='_25' fromField='value_changed' toNode='_18' toField='set_vFrequency'/>
-    <ROUTE fromNode='_26' fromField='value_changed' toNode='_18' toField='set_twist'/>
-    <ROUTE fromNode='_27' fromField='value_changed' toNode='_18' toField='set_weightStrength'/>
-    <ROUTE fromNode='_28' fromField='value_changed' toNode='_29' toField='set_value'/>
-    <ROUTE fromNode='_30' fromField='value_changed' toNode='_31' toField='set_value'/>
+    <ROUTE fromNode='_27' fromField='value_changed' toNode='_28' toField='set_value'/>
+    <ROUTE fromNode='_29' fromField='value_changed' toNode='_30' toField='set_value'/>
+    <ROUTE fromNode='_30' fromField='value_changed' toNode='_17' toField='set_vOrder'/>
+    <ROUTE fromNode='_26' fromField='value_changed' toNode='_17' toField='set_weightStrength'/>
+    <ROUTE fromNode='_25' fromField='value_changed' toNode='_17' toField='set_twist'/>
+    <ROUTE fromNode='_24' fromField='value_changed' toNode='_17' toField='set_vFrequency'/>
+    <ROUTE fromNode='_23' fromField='value_changed' toNode='_17' toField='set_uFrequency'/>
+    <ROUTE fromNode='_22' fromField='value_changed' toNode='_17' toField='set_majorRadius'/>
+    <ROUTE fromNode='_21' fromField='value_changed' toNode='_17' toField='set_minorRadius'/>
+    <ROUTE fromNode='_28' fromField='value_changed' toNode='_17' toField='set_uOrder'/>
   </Scene>
 </X3D>
