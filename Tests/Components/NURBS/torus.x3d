@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.3.10, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/NURBS/torus.x3d'/>
-    <meta name='modified' content='Thu, 17 Jan 2019 04:40:48 GMT'/>
+    <meta name='modified' content='Thu, 17 Jan 2019 05:00:28 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='NurbsTorus'>
@@ -246,7 +246,6 @@ function initialize ()
 	sensor .offset     = t;
 	knob .translation  = t;
 	string_changed [0] = v;
-	value_changed      = v;
 }
 
 function set_translation (value, time)
@@ -323,7 +322,9 @@ function set_value (value, time)
               value='false'/>
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
-              reference='http://titania.create3000.de'/>
+              reference='http://titania.create3000.de'>
+            <!-- NULL -->
+          </MetadataSet>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
             name='BrowserPanel'
