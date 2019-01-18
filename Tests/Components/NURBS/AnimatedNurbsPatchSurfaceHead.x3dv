@@ -23,7 +23,7 @@ META "generator" "Titania V4.3.10, http://titania.create3000.de"
 META "identifier" "file:///home/holger/Projekte/Library/Tests/Components/NURBS/AnimatedNurbsPatchSurfaceHead.x3dv"
 META "info" "Animation only working in H3DViewer, InstantReality, OctagaVS"
 META "license" "../license.html"
-META "modified" "Fri, 18 Jan 2019 13:00:06 GMT"
+META "modified" "Fri, 18 Jan 2019 13:00:49 GMT"
 META "reference" "http://edocs.nps.edu/npspubs/scholarly/theses/2003/Jun/03Jun_Adams.pdf"
 META "title" "AnimatedNurbsPatchSurfaceHead.x3d"
 META "translator" "Exported from Maya 4 by X3D MayaExport Plug-in"
@@ -73,7 +73,7 @@ WorldInfo {
 NavigationInfo { }
 
 NurbsSet {
-  tessellationScale 0.5
+  tessellationScale 0.8
   geometry DEF NS NurbsPatchSurface {
     solid FALSE
     uClosed TRUE
