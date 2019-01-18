@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.3.10, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/NURBS/NurbsSweptSurface.x3d'/>
-    <meta name='modified' content='Fri, 18 Jan 2019 09:42:37 GMT'/>
+    <meta name='modified' content='Fri, 18 Jan 2019 11:04:28 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -56,9 +56,9 @@
                   <ContourPolyline2D containerField='crossSectionCurve'
                       controlPoint='-0.5 0, 0.5 0'/>
                   <NurbsCurve DEF='_3' containerField='trajectoryCurve'
-                      tessellation='80'>
+                      tessellation='40'>
                     <Coordinate DEF='_4' containerField='controlPoint'
-                        point='0 0 0, 1 -0.859753 0, 3 0.859753 0, 5 -0.859753 0, 7 0.859753 0, 8 0 0'/>
+                        point='0 0 0, 1 0.553045 0, 3 -0.553045 0, 5 0.553045 0, 7 -0.553045 0, 8 0 0'/>
                   </NurbsCurve>
                 </NurbsSweptSurface>
               </Shape>
@@ -172,7 +172,7 @@
         <NurbsSweptSurface
             ccw='false'>
           <NurbsCurve2D containerField='crossSectionCurve'
-              tessellation='40'
+              tessellation='20'
               closed='true'
               controlPoint='-0.5 -0.5, 0.5 -0.5, 0.5 0.5, -0.5 0.5, -0.5 -0.5'/>
           <NurbsCurve USE='_3' containerField='trajectoryCurve'/>
