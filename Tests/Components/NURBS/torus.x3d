@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.3.10, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/NURBS/torus.x3d'/>
-    <meta name='modified' content='Fri, 18 Jan 2019 01:35:34 GMT'/>
+    <meta name='modified' content='Fri, 18 Jan 2019 02:45:28 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='NurbsTorus'>
@@ -28,8 +28,8 @@
       <ProtoBody>
         <NurbsPatchSurface DEF='_1'
             solid='false'
-            uTessellation='40'
-            vTessellation='120'
+            uTessellation='30'
+            vTessellation='90'
             uClosed='true'
             vClosed='true'
             uDimension='7'
@@ -550,13 +550,13 @@ function set_value (value, time)
     </LayerSet>
     <ROUTE fromNode='_27' fromField='value_changed' toNode='_28' toField='set_value'/>
     <ROUTE fromNode='_29' fromField='value_changed' toNode='_30' toField='set_value'/>
-    <ROUTE fromNode='_30' fromField='value_changed' toNode='_17' toField='set_vOrder'/>
-    <ROUTE fromNode='_28' fromField='value_changed' toNode='_17' toField='set_uOrder'/>
-    <ROUTE fromNode='_25' fromField='value_changed' toNode='_17' toField='set_twist'/>
     <ROUTE fromNode='_24' fromField='value_changed' toNode='_17' toField='set_vFrequency'/>
     <ROUTE fromNode='_23' fromField='value_changed' toNode='_17' toField='set_uFrequency'/>
     <ROUTE fromNode='_22' fromField='value_changed' toNode='_17' toField='set_majorRadius'/>
     <ROUTE fromNode='_21' fromField='value_changed' toNode='_17' toField='set_minorRadius'/>
+    <ROUTE fromNode='_30' fromField='value_changed' toNode='_17' toField='set_vOrder'/>
+    <ROUTE fromNode='_28' fromField='value_changed' toNode='_17' toField='set_uOrder'/>
     <ROUTE fromNode='_26' fromField='value_changed' toNode='_17' toField='set_weightStrength'/>
+    <ROUTE fromNode='_25' fromField='value_changed' toNode='_17' toField='set_twist'/>
   </Scene>
 </X3D>
