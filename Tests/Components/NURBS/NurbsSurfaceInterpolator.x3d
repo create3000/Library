@@ -6,8 +6,8 @@
     <meta name='created' content='Wed, 16 Jan 2019 14:37:37 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.3.10, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/Projekte/Titania/Library/Tests/NURBS/NurbsSurfaceInterpolator.x3d'/>
-    <meta name='modified' content='Wed, 16 Jan 2019 15:10:24 GMT'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/NURBS/NurbsSurfaceInterpolator.x3d'/>
+    <meta name='modified' content='Sat, 19 Jan 2019 05:45:53 GMT'/>
   </head>
   <Scene>
     <WorldInfo
@@ -88,8 +88,8 @@ function set_normal (value, time)
     </NurbsSurfaceInterpolator>
     <Script USE='NewScript'/>
     <Transform DEF='Disk2D'
-        translation='-0.935428 0.554304 0.0232356'
-        rotation='-0.147196771448258 -0.989107229007657 0 0.421881050788152'>
+        translation='-0.648135 0.650265 0.12064'
+        rotation='-0.709309111917842 -0.704897569686775 0 0.459176767095574'>
       <Shape>
         <Appearance>
           <Material/>
@@ -100,8 +100,8 @@ function set_normal (value, time)
       </Shape>
     </Transform>
     <ROUTE fromNode='_2' fromField='hitTexCoord_changed' toNode='_3' toField='set_fraction'/>
-    <ROUTE fromNode='_3' fromField='position_changed' toNode='Disk2D' toField='set_translation'/>
     <ROUTE fromNode='NewScript' fromField='rotation_changed' toNode='Disk2D' toField='set_rotation'/>
-    <ROUTE fromNode='_3' fromField='normal_changed' toNode='NewScript' toField='set_normal'/>
+    <ROUTE fromNode='_2' fromField='hitPoint_changed' toNode='Disk2D' toField='set_translation'/>
+    <ROUTE fromNode='_2' fromField='hitNormal_changed' toNode='NewScript' toField='set_normal'/>
   </Scene>
 </X3D>
