@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.3.10, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/NURBS/NurbsSurfaceInterpolator.x3d'/>
-    <meta name='modified' content='Sat, 19 Jan 2019 05:46:51 GMT'/>
+    <meta name='modified' content='Sat, 19 Jan 2019 23:43:54 GMT'/>
   </head>
   <Scene>
     <WorldInfo
@@ -36,21 +36,7 @@
               value='false'/>
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
-              reference='http://titania.create3000.de'>
-            <Script DEF='NewScript' containerField='value'>
-              <field accessType='inputOnly' type='SFVec3f' name='set_normal'/>
-              <field accessType='outputOnly' type='SFRotation' name='rotation_changed'/>
-<![CDATA[ecmascript:
-
-var zAxis = new SFVec3f (0, 0, 1);
-
-function set_normal (value, time)
-{
-	rotation_changed = new SFRotation (zAxis, value);
-}
-]]>
-            </Script>
-          </MetadataSet>
+              reference='http://titania.create3000.de'/>
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
@@ -77,8 +63,8 @@ function set_normal (value, time)
               point='-1 -1 0, 0 -1 0, 1 -1 0, -1 0 0, 0 0 1, 1 0 0, -1 1 0, 0 1 0, 1 1 0'/>
         </NurbsPatchSurface>
       </Shape>
+      <TouchSensor DEF='_2'/>
     </Transform>
-    <TouchSensor DEF='_2'/>
     <NurbsSurfaceInterpolator DEF='_3'
         uOrder='2'
         vOrder='2'
@@ -86,10 +72,22 @@ function set_normal (value, time)
         vDimension='3'>
       <Coordinate USE='_1' containerField='controlPoint'/>
     </NurbsSurfaceInterpolator>
-    <Script USE='NewScript'/>
+    <Script DEF='NewScript'>
+      <field accessType='inputOnly' type='SFVec3f' name='set_normal'/>
+      <field accessType='outputOnly' type='SFRotation' name='rotation_changed'/>
+<![CDATA[ecmascript:
+
+var zAxis = new SFVec3f (0, 0, 1);
+
+function set_normal (value, time)
+{
+	rotation_changed = new SFRotation (zAxis, value);
+}
+]]>
+    </Script>
     <Transform DEF='Disk2D'
-        translation='0.806376 0.0327909 0.188159'
-        rotation='-0.19587748424614 0.980628375668073 2.47335364967573e-17 0.7773105568272'
+        translation='-0.937116 0.209022 0.0497365'
+        rotation='-0.0792636934389926 -0.996853683798385 0 0.670687123541612'
         scaleOrientation='-0.999999999999994 0 0 0.122489331563433'>
       <Shape>
         <Appearance>
