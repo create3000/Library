@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.3.10, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/NURBS/torus.x3d'/>
-    <meta name='modified' content='Fri, 18 Jan 2019 02:45:28 GMT'/>
+    <meta name='modified' content='Sat, 19 Jan 2019 01:06:52 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='NurbsTorus'>
@@ -322,7 +322,19 @@ function set_value (value, time)
               value='false'/>
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
-              reference='http://titania.create3000.de'/>
+              reference='http://titania.create3000.de'>
+            <Script DEF='PhongShadingScript' containerField='value'>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+	// Phong shading can be enabled if »X_ITE Compatibility« mode is enabled in Titania.
+
+	Browser .setBrowserOption ("Shading", "PHONG");
+}
+]]>
+            </Script>
+          </MetadataSet>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
             name='BrowserPanel'
@@ -444,7 +456,6 @@ function set_value (value, time)
               <Material
                   diffuseColor='1 1 1'
                   specularColor='0.9 0.9 0.9'
-                  emissiveColor='0.275 0.275 0.275'
                   shininess='0.25'/>
               <ImageTexture
                   url='"gradient.png"'/>
@@ -456,6 +467,7 @@ function set_value (value, time)
             </ProtoInstance>
           </Shape>
         </Transform>
+        <Script USE='PhongShadingScript'/>
       </Layer>
       <LayoutLayer DEF='HUD'>
         <MetadataSet DEF='Titania_18'
