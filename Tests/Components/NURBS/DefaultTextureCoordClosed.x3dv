@@ -7,7 +7,7 @@ META "created" "Sun, 20 Jan 2019 00:49:50 GMT"
 META "creator" "Holger Seelig"
 META "generator" "Titania V4.3.10, http://titania.create3000.de"
 META "identifier" "file:///home/holger/Projekte/Library/Tests/Components/NURBS/DefaultTextureCoordClosed.x3dv"
-META "modified" "Sun, 20 Jan 2019 00:49:59 GMT"
+META "modified" "Sun, 20 Jan 2019 01:53:02 GMT"
 
 PROTO NurbsTorus [
   inputOutput SFInt32 uOrder 3
@@ -348,6 +348,16 @@ WorldInfo {
               }
             ]
           }
+          DEF shading MetadataString {
+            name "shading"
+            reference "http://titania.create3000.de"
+            value [
+              "",
+              "PHONG",
+              "",
+              ""
+            ]
+          }
         ]
       }
       DEF Page MetadataSet {
@@ -362,7 +372,7 @@ WorldInfo {
           DEF multiView MetadataInteger {
             name "multiView"
             reference "http://titania.create3000.de"
-            value 1
+            value 0
           }
         ]
       }
@@ -395,6 +405,7 @@ DEF Torus Transform {
       vOrder 4
       uDimension 7
       vDimension 7
+      uKnot 0
       weight [
         1,
         1,
