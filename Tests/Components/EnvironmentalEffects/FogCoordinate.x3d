@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
   <head>
     <component name='EnvironmentalEffects' level='4'/>
     <component name='Shape' level='4'/>
@@ -9,7 +9,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.3.11, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/EnvironmentalEffects/FogCoordinate.x3d'/>
-    <meta name='modified' content='Fri, 01 Feb 2019 16:16:54 GMT'/>
+    <meta name='modified' content='Fri, 01 Feb 2019 16:19:15 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -129,6 +129,10 @@
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
+    <Viewpoint DEF='_14'
+        position='2.90105 5.30204 8.76298'
+        orientation='-0.999779350335914 -0.0202334217554241 -0.00564440306534947 0.54421038992524'
+        centerOfRotation='3 0 0'/>
     <Fog
         color='0 0 0'
         visibilityRange='12'/>
@@ -140,7 +144,7 @@
         <Box/>
       </Shape>
     </Transform>
-    <Transform DEF='Box_14'
+    <Transform DEF='IndexedFaceSet'
         translation='3 0 0'>
       <Shape>
         <Appearance>
@@ -158,7 +162,7 @@
         </IndexedFaceSet>
       </Shape>
     </Transform>
-    <Transform DEF='Box_15'
+    <Transform DEF='IndexedLineSet'
         translation='6 0 0'>
       <Shape>
         <Appearance>
