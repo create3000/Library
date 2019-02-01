@@ -9,7 +9,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.3.11, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/EnvironmentalEffects/FogCoordinate.x3d'/>
-    <meta name='modified' content='Fri, 01 Feb 2019 16:19:15 GMT'/>
+    <meta name='modified' content='Fri, 01 Feb 2019 17:23:38 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -129,10 +129,10 @@
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
-    <Viewpoint DEF='_14'
-        position='2.90105 5.30204 8.76298'
-        orientation='-0.999779350335914 -0.0202334217554241 -0.00564440306534947 0.54421038992524'
-        centerOfRotation='3 0 0'/>
+    <Viewpoint
+        position='4.22536 4.9822 10.0044'
+        orientation='-0.998207622135396 -0.0582570810576082 -0.0136987451047911 0.462695077650254'
+        centerOfRotation='4.5 0 0'/>
     <Fog
         color='0 0 0'
         visibilityRange='12'/>
@@ -176,6 +176,23 @@
           <Coordinate
               point='-1 -1 1, 1 -1 1, 1 1 1, -1 1 1, -1 -1 -1, 1 -1 -1, 1 1 -1, -1 1 -1'/>
         </IndexedLineSet>
+      </Shape>
+    </Transform>
+    <Transform DEF='PointSet'
+        translation='9 0 0'>
+      <Shape>
+        <Appearance>
+          <LineProperties
+              linewidthScaleFactor='10'/>
+          <Material
+              emissiveColor='1 1 1'/>
+        </Appearance>
+        <PointSet>
+          <FogCoordinate
+              depth='16, 16, 16, 16, 10'/>
+          <Coordinate
+              point='-1 -1 1, 1 -1 1, 1 1 1, -1 1 1, -1 -1 -1, 1 -1 -1, 1 1 -1, -1 1 -1'/>
+        </PointSet>
       </Shape>
     </Transform>
   </Scene>
