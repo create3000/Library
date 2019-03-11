@@ -178,6 +178,8 @@ function set_triggerTime ()
 
 function set_triggerTime (time)
 {
+	print ("RemoveRightImportedNodeScript", time);
+	
 	Browser .currentScene .removeImportedNode ("ImportAs");
 }]]>
       </Script>
