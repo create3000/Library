@@ -9,8 +9,8 @@
     <meta name='created' content='Tue, 12 Mar 2019 06:45:03 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.4.3, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/scene.x3d'/>
-    <meta name='modified' content='Tue, 12 Mar 2019 10:17:50 GMT'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Core/Statements.x3d'/>
+    <meta name='modified' content='Wed, 13 Mar 2019 03:21:43 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='ArcOpen2D' url='"https://cdn.rawgit.com/create3000/Library/1.0.11/Prototypes/Geometry2D/ArcOpen2D.x3d", "http://cdn.rawgit.com/create3000/Library/1.0.11/Prototypes/Geometry2D/ArcOpen2D.x3d", "https://rawgit.com/create3000/Library/1.0.11/Prototypes/Geometry2D/ArcOpen2D.x3d", "http://rawgit.com/create3000/Library/1.0.11/Prototypes/Geometry2D/ArcOpen2D.x3d"'>
@@ -20,6 +20,8 @@
       <field accessType='inputOutput' type='SFFloat' name='innerRadius'/>
       <field accessType='inputOutput' type='SFFloat' name='outerRadius'/>
       <field accessType='initializeOnly' type='SFBool' name='solid'/>
+    </ExternProtoDeclare>
+    <ExternProtoDeclare name='TestPrototype' url='"proto/TestPrototype.x3d#TestPrototype"'>
     </ExternProtoDeclare>
     <ProtoDeclare name='NewPrototype'>
       <ProtoInterface>
@@ -90,8 +92,7 @@ function initialize ()
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
               reference='http://titania.create3000.de'>
-            <Inline DEF='_2' containerField='value'
-                url='"export.x3d"'/>
+            <ProtoInstance name='TestPrototype' DEF='_2' containerField='value'/>
           </MetadataSet>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
@@ -184,7 +185,7 @@ function initialize ()
           <MetadataString DEF='path' containerField='value'
               name='path'
               reference='http://titania.create3000.de'
-              value='"NewPrototype"'/>
+              value='"TestPrototype"'/>
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
@@ -225,11 +226,13 @@ function initialize ()
         </ProtoInstance>
       </Shape>
     </Transform>
-    <Inline USE='_2'/>
-    <IMPORT inlineDEF='_2' importedDEF='Box' AS='BAh'/>
+    <Inline DEF='_19'
+        url='"export.x3d"'/>
+    <ProtoInstance name='TestPrototype' USE='_2'/>
+    <IMPORT inlineDEF='_19' importedDEF='Box' AS='BAh'/>
     <ROUTE fromNode='_17' fromField='children_changed' toNode='_16' toField='set_children'/>
-    <ROUTE fromNode='ArcOpen2D' fromField='translation_changed' toNode='BAh' toField='set_translation'/>
     <ROUTE fromNode='NewScript_15' fromField='rotation_changed' toNode='ArcOpen2D' toField='set_rotation'/>
+    <ROUTE fromNode='ArcOpen2D' fromField='translation_changed' toNode='BAh' toField='set_translation'/>
     <EXPORT localDEF='_17' AS='ExportNameWithAs'/>
     <EXPORT localDEF='NewScript_15' AS='NewScript'/>
   </Scene>
