@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.4.3, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Core/proto/TestPrototype.x3d'/>
-    <meta name='modified' content='Wed, 13 Mar 2019 03:20:43 GMT'/>
+    <meta name='modified' content='Wed, 13 Mar 2019 03:28:32 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='TestPrototype'>
@@ -17,17 +17,7 @@
 
 function initialize ()
 {
-	
-}
-
-function set_field (value, time)
-{
-	
-}
-
-function eventsProcessed ()
-{
-	
+	print (Browser .currentScene .worldURL);
 }
 ]]>
         </Script>
@@ -86,7 +76,7 @@ function eventsProcessed ()
               <MetadataDouble DEF='orientation_4' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
-                  value='-0.704047462871212, 0.695566762376517, 0.143192350010952, 0.568941727555854'/>
+                  value='-0.704047462871213, 0.695566762376518, 0.143192350010952, 0.568941727555854'/>
               <MetadataDouble DEF='centerOfRotation_5' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
