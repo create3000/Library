@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.4.3, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Core/proto/TestPrototype.x3d'/>
-    <meta name='modified' content='Wed, 13 Mar 2019 03:28:32 GMT'/>
+    <meta name='modified' content='Wed, 13 Mar 2019 03:28:58 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='TestPrototype'>
@@ -17,6 +17,7 @@
 
 function initialize ()
 {
+	print ("Extern proto");
 	print (Browser .currentScene .worldURL);
 }
 ]]>
