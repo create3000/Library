@@ -1,13 +1,15 @@
-#X3D V3.3 utf8 Titania V4.0.6a
+#X3D V3.3 utf8 Titania V4.4.3
 
-PROFILE Full
+PROFILE Immersive
+
+COMPONENT Shape : 4
 
 META "comment" "World of Titania"
 META "created" "Mon, 21 Jul 2014 07:20:49 GMT"
 META "creator" "Holger Seelig"
-META "generator" "Titania V4.0.6a, http://titania.create3000.de"
+META "generator" "Titania V4.4.3, http://titania.create3000.de"
 META "identifier" "file:///home/holger/Projekte/Library/Tests/Components/Geometry3D/1728.x3dv"
-META "modified" "Sun, 25 Feb 2018 07:39:34 GMT"
+META "modified" "Thu, 14 Mar 2019 08:37:30 GMT"
 
 WorldInfo {
   metadata DEF Titania MetadataSet {
@@ -19844,4 +19846,21 @@ Collision {
       }
     }
   ]
+}
+
+DEF _3 DirectionalLight {
+  metadata DEF DirectionalLight MetadataSet {
+    name "DirectionalLight"
+    reference "http://titania.create3000.de"
+    value DEF location MetadataFloat {
+      name "location"
+      reference "http://titania.create3000.de"
+      value [
+        5.1257,
+        0,
+        -2.76227
+      ]
+    }
+  }
+  direction -0.834222 0.152021 -0.530059
 }
