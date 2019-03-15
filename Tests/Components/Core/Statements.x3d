@@ -10,7 +10,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.4.3, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Core/Statements.x3d'/>
-    <meta name='modified' content='Wed, 13 Mar 2019 03:21:43 GMT'/>
+    <meta name='modified' content='Fri, 15 Mar 2019 12:09:59 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='ArcOpen2D' url='"https://cdn.rawgit.com/create3000/Library/1.0.11/Prototypes/Geometry2D/ArcOpen2D.x3d", "http://cdn.rawgit.com/create3000/Library/1.0.11/Prototypes/Geometry2D/ArcOpen2D.x3d", "https://rawgit.com/create3000/Library/1.0.11/Prototypes/Geometry2D/ArcOpen2D.x3d", "http://rawgit.com/create3000/Library/1.0.11/Prototypes/Geometry2D/ArcOpen2D.x3d"'>
@@ -189,23 +189,23 @@ function initialize ()
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
-    <Script DEF='NewScript_15'>
+    <Script DEF='NewScript'>
       <field accessType='initializeOnly' type='SFBool' name='enabled'/>
       <field accessType='inputOnly' type='SFColorRGBA' name='color'/>
       <field accessType='outputOnly' type='SFVec3d' name='vector'/>
       <field accessType='inputOutput' type='SFRotation' name='rotation'/>
       <field accessType='initializeOnly' type='MFNode' name='nodes'>
-        <Group DEF='_16' containerField='nodes'/>
-        <LayoutGroup DEF='_17' containerField='nodes'/>
-        <ProtoInstance name='NewPrototype' DEF='_18' containerField='nodes'>
+        <Group DEF='_15' containerField='nodes'/>
+        <LayoutGroup DEF='_16' containerField='nodes'/>
+        <ProtoInstance name='NewPrototype' DEF='_17' containerField='nodes'>
           <fieldValue name='rotation' value='1 2 3 229.183118052329'/>
         </ProtoInstance>
       </field>
       <field accessType='initializeOnly' type='SFNode' name='instance'>
-        <ProtoInstance name='NewPrototype' USE='_18' containerField='instance'/>
+        <ProtoInstance name='NewPrototype' USE='_17' containerField='instance'/>
       </field>
       <field accessType='initializeOnly' type='SFNode' name='self'>
-        <Script USE='NewScript_15' containerField='self'/>
+        <Script USE='NewScript' containerField='self'/>
       </field>
 <![CDATA[ecmascript:
 
@@ -226,14 +226,14 @@ function initialize ()
         </ProtoInstance>
       </Shape>
     </Transform>
-    <Inline DEF='_19'
+    <Inline DEF='_18'
         url='"export.x3d"'/>
     <ProtoInstance name='TestPrototype' USE='_2'/>
-    <IMPORT inlineDEF='_19' importedDEF='Box' AS='BAh'/>
-    <ROUTE fromNode='_17' fromField='children_changed' toNode='_16' toField='set_children'/>
-    <ROUTE fromNode='NewScript_15' fromField='rotation_changed' toNode='ArcOpen2D' toField='set_rotation'/>
+    <IMPORT inlineDEF='_18' importedDEF='Box' AS='BAh'/>
+    <ROUTE fromNode='_16' fromField='children_changed' toNode='_15' toField='set_children'/>
+    <ROUTE fromNode='NewScript' fromField='rotation_changed' toNode='ArcOpen2D' toField='set_rotation'/>
     <ROUTE fromNode='ArcOpen2D' fromField='translation_changed' toNode='BAh' toField='set_translation'/>
-    <EXPORT localDEF='_17' AS='ExportNameWithAs'/>
-    <EXPORT localDEF='NewScript_15' AS='NewScript'/>
+    <EXPORT localDEF='_16' AS='ExportNameWithAs'/>
+    <EXPORT localDEF='NewScript'/>
   </Scene>
 </X3D>
