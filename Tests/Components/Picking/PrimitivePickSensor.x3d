@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
   <head>
     <component name='Picking' level='1'/>
     <component name='Shape' level='4'/>
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Thu, 21 Feb 2019 11:43:42 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V4.4.0, http://titania.create3000.de'/>
+    <meta name='generator' content='Titania V4.4.4, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Picking/PrimitivePickSensor.x3d'/>
-    <meta name='modified' content='Sun, 24 Feb 2019 10:41:22 GMT'/>
+    <meta name='modified' content='Tue, 19 Mar 2019 08:03:31 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -42,18 +42,22 @@
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
               reference='http://titania.create3000.de'>
-            <Transform DEF='TargetBox' containerField='value'>
-              <Shape>
-                <Appearance>
-                  <Material DEF='Rococo6'
-                      ambientIntensity='0.226102'
-                      diffuseColor='0.904409 0.549305 0.224283'
-                      specularColor='0.0955906 0.0955906 0.0955906'
-                      shininess='0.078125'/>
-                </Appearance>
-                <Box/>
-              </Shape>
-            </Transform>
+            <Script DEF='DebugScript' containerField='value'>
+              <field accessType='inputOnly' type='SFBool' name='set_active'/>
+              <field accessType='inputOnly' type='MFNode' name='set_pickedGeometry'/>
+<![CDATA[ecmascript:
+
+function set_active (value, time)
+{
+	print ("isActive: ", value);
+}
+
+function set_pickedGeometry (value, time)
+{
+	print ("pickedGeometry: ", value);
+}
+]]>
+            </Script>
           </MetadataSet>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
@@ -153,7 +157,21 @@
     </Transform>
     <PickableGroup DEF='PickableGroup'
         objectType='"BOX"'>
-      <Transform USE='TargetBox'/>
+      <PlaneSensor DEF='_14'
+          offset='0.0481357 0.0232569 0'/>
+      <Transform DEF='TargetBox'
+          translation='0.0481357 0.0232569 0'>
+        <Shape>
+          <Appearance>
+            <Material DEF='Rococo6'
+                ambientIntensity='0.226102'
+                diffuseColor='0.904409 0.549305 0.224283'
+                specularColor='0.0955906 0.0955906 0.0955906'
+                shininess='0.078125'/>
+          </Appearance>
+          <Box/>
+        </Shape>
+      </Transform>
       <Transform DEF='NoneTargetBox'
           translation='0 -3 0'>
         <Shape>
@@ -178,13 +196,17 @@
               specularColor='0.0955906 0.0955906 0.0955906'
               shininess='0.078125'/>
         </Appearance>
-        <Box DEF='_14'/>
+        <Box DEF='_15'/>
       </Shape>
-      <PrimitivePickSensor
+      <PrimitivePickSensor DEF='_16'
           objectType='"BOX"'>
-        <Box USE='_14' containerField='pickingGeometry'/>
+        <Box USE='_15' containerField='pickingGeometry'/>
         <Transform USE='TargetBox' containerField='pickTarget'/>
       </PrimitivePickSensor>
     </Transform>
+    <Script USE='DebugScript'/>
+    <ROUTE fromNode='_14' fromField='translation_changed' toNode='TargetBox' toField='set_translation'/>
+    <ROUTE fromNode='_16' fromField='isActive' toNode='DebugScript' toField='set_active'/>
+    <ROUTE fromNode='_16' fromField='pickedGeometry' toNode='DebugScript' toField='set_pickedGeometry'/>
   </Scene>
 </X3D>
