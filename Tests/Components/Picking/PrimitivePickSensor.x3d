@@ -9,7 +9,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.4.4, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Picking/PrimitivePickSensor.x3d'/>
-    <meta name='modified' content='Tue, 19 Mar 2019 10:27:58 GMT'/>
+    <meta name='modified' content='Tue, 19 Mar 2019 10:30:00 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -41,30 +41,7 @@
               value='false'/>
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
-              reference='http://titania.create3000.de'>
-            <Script DEF='DebugScript' containerField='value'>
-              <field accessType='inputOnly' type='SFBool' name='set_active'/>
-              <field accessType='inputOnly' type='MFNode' name='set_pickedGeometry'/>
-              <field accessType='outputOnly' type='SFVec3f' name='translation_changed'/>
-<![CDATA[ecmascript:
-
-function initialize ()
-{
-	translation_changed = new SFVec3f ();
-}
-
-function set_active (value, time)
-{
-	print ("isActive: ", value);
-}
-
-function set_pickedGeometry (value, time)
-{
-	print ("pickedGeometry: ", value);
-}
-]]>
-            </Script>
-          </MetadataSet>
+              reference='http://titania.create3000.de'/>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
             name='BrowserPanel'
@@ -162,7 +139,7 @@ function set_pickedGeometry (value, time)
           <Material/>
         </Appearance>
         <Text
-            string='"Intersect orange box with lila box."'
+            string='"Drag and intersect orange box with lila box."'
             solid='true'>
           <FontStyle DEF='_15'
               family='"SANS"'
@@ -196,7 +173,8 @@ function set_pickedGeometry (value, time)
         </Shape>
       </Transform>
       <Group DEF='DragableTarget'>
-        <Transform DEF='TargetBox'>
+        <Transform DEF='TargetBox'
+            translation='-0.0489823 -0.00419625 0'>
           <Shape>
             <Appearance>
               <Material DEF='Rococo6'
@@ -208,7 +186,8 @@ function set_pickedGeometry (value, time)
             <Box/>
           </Shape>
         </Transform>
-        <PlaneSensor DEF='_16'/>
+        <PlaneSensor DEF='_16'
+            offset='-0.0489823 -0.00419625 0'/>
       </Group>
       <Transform DEF='Target2'
           translation='0 3 0'>
@@ -233,7 +212,28 @@ function set_pickedGeometry (value, time)
         <Transform USE='TargetBox' containerField='pickTarget'/>
       </PrimitivePickSensor>
     </Transform>
-    <Script USE='DebugScript'/>
+    <Script DEF='DebugScript'>
+      <field accessType='inputOnly' type='SFBool' name='set_active'/>
+      <field accessType='inputOnly' type='MFNode' name='set_pickedGeometry'/>
+      <field accessType='outputOnly' type='SFVec3f' name='translation_changed'/>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+	translation_changed = new SFVec3f ();
+}
+
+function set_active (value, time)
+{
+	print ("isActive: ", value);
+}
+
+function set_pickedGeometry (value, time)
+{
+	print ("pickedGeometry: ", value);
+}
+]]>
+    </Script>
     <ROUTE fromNode='_16' fromField='translation_changed' toNode='TargetBox' toField='set_translation'/>
     <ROUTE fromNode='_18' fromField='isActive' toNode='DebugScript' toField='set_active'/>
     <ROUTE fromNode='_18' fromField='pickedGeometry' toNode='DebugScript' toField='set_pickedGeometry'/>
