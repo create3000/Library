@@ -9,7 +9,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.4.4, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Picking/PrimitivePickSensor.x3d'/>
-    <meta name='modified' content='Wed, 20 Mar 2019 10:08:37 GMT'/>
+    <meta name='modified' content='Wed, 20 Mar 2019 11:23:33 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -41,20 +41,7 @@
               value='false'/>
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
-              reference='http://titania.create3000.de'>
-            <Transform DEF='TargetBox' containerField='value'>
-              <Shape>
-                <Appearance>
-                  <Material DEF='Rococo6'
-                      ambientIntensity='0.226102'
-                      diffuseColor='0.904409 0.549305 0.224283'
-                      specularColor='0.0955906 0.0955906 0.0955906'
-                      shininess='0.078125'/>
-                </Appearance>
-                <Box/>
-              </Shape>
-            </Transform>
-          </MetadataSet>
+              reference='http://titania.create3000.de'/>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
             name='BrowserPanel'
@@ -186,7 +173,18 @@
         </Shape>
       </Transform>
       <Group DEF='DragableTarget'>
-        <Transform USE='TargetBox'/>
+        <Transform DEF='TargetBox'>
+          <Shape>
+            <Appearance>
+              <Material DEF='Rococo6'
+                  ambientIntensity='0.226102'
+                  diffuseColor='0.904409 0.549305 0.224283'
+                  specularColor='0.0955906 0.0955906 0.0955906'
+                  shininess='0.078125'/>
+            </Appearance>
+            <Box/>
+          </Shape>
+        </Transform>
         <PlaneSensor DEF='_14'/>
       </Group>
       <Transform DEF='Target2'
@@ -196,7 +194,7 @@
     </PickableGroup>
     <Transform DEF='Sensor'
         translation='3 0 0'>
-      <Shape>
+      <Shape DEF='_15'>
         <Appearance>
           <Material DEF='Rococo20'
               ambientIntensity='0.226102'
@@ -204,14 +202,19 @@
               specularColor='0.0955906 0.0955906 0.0955906'
               shininess='0.078125'/>
         </Appearance>
-        <Box DEF='_15'/>
+        <Box DEF='_16'/>
       </Shape>
-      <PrimitivePickSensor DEF='_16'
+      <PrimitivePickSensor DEF='_17'
           objectType='"BOX"'
           sortOrder='ALL_SORTED'>
-        <Box USE='_15' containerField='pickingGeometry'/>
+        <Box USE='_16' containerField='pickingGeometry'/>
         <Transform USE='TargetBox' containerField='pickTarget'/>
       </PrimitivePickSensor>
+    </Transform>
+    <Transform DEF='Sensor_18'
+        translation='6 0 0'>
+      <Shape USE='_15'/>
+      <PrimitivePickSensor USE='_17'/>
     </Transform>
     <Script DEF='DebugScript'>
       <field accessType='inputOnly' type='SFBool' name='set_active'/>
@@ -236,8 +239,8 @@ function set_pickedGeometry (value, time)
 ]]>
     </Script>
     <ROUTE fromNode='_14' fromField='translation_changed' toNode='TargetBox' toField='set_translation'/>
-    <ROUTE fromNode='_16' fromField='isActive' toNode='DebugScript' toField='set_active'/>
-    <ROUTE fromNode='_16' fromField='pickedGeometry' toNode='DebugScript' toField='set_pickedGeometry'/>
+    <ROUTE fromNode='_17' fromField='isActive' toNode='DebugScript' toField='set_active'/>
+    <ROUTE fromNode='_17' fromField='pickedGeometry' toNode='DebugScript' toField='set_pickedGeometry'/>
     <ROUTE fromNode='DebugScript' fromField='translation_changed' toNode='_14' toField='set_offset'/>
     <ROUTE fromNode='DebugScript' fromField='translation_changed' toNode='TargetBox' toField='set_translation'/>
   </Scene>
