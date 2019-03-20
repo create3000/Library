@@ -9,7 +9,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.4.4, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Picking/PrimitivePickSensor.x3d'/>
-    <meta name='modified' content='Tue, 19 Mar 2019 10:30:00 GMT'/>
+    <meta name='modified' content='Wed, 20 Mar 2019 10:08:37 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -41,7 +41,20 @@
               value='false'/>
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
-              reference='http://titania.create3000.de'/>
+              reference='http://titania.create3000.de'>
+            <Transform DEF='TargetBox' containerField='value'>
+              <Shape>
+                <Appearance>
+                  <Material DEF='Rococo6'
+                      ambientIntensity='0.226102'
+                      diffuseColor='0.904409 0.549305 0.224283'
+                      specularColor='0.0955906 0.0955906 0.0955906'
+                      shininess='0.078125'/>
+                </Appearance>
+                <Box/>
+              </Shape>
+            </Transform>
+          </MetadataSet>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
             name='BrowserPanel'
@@ -129,7 +142,7 @@
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
-    <Viewpoint DEF='_14'
+    <Viewpoint
         description='Front view'
         position='0 0 16.4061'/>
     <Transform DEF='Text'
@@ -141,7 +154,7 @@
         <Text
             string='"Drag and intersect orange box with lila box."'
             solid='true'>
-          <FontStyle DEF='_15'
+          <FontStyle
               family='"SANS"'
               size='0.45'
               justify='"MIDDLE", "MIDDLE"'/>
@@ -173,21 +186,8 @@
         </Shape>
       </Transform>
       <Group DEF='DragableTarget'>
-        <Transform DEF='TargetBox'
-            translation='-0.0489823 -0.00419625 0'>
-          <Shape>
-            <Appearance>
-              <Material DEF='Rococo6'
-                  ambientIntensity='0.226102'
-                  diffuseColor='0.904409 0.549305 0.224283'
-                  specularColor='0.0955906 0.0955906 0.0955906'
-                  shininess='0.078125'/>
-            </Appearance>
-            <Box/>
-          </Shape>
-        </Transform>
-        <PlaneSensor DEF='_16'
-            offset='-0.0489823 -0.00419625 0'/>
+        <Transform USE='TargetBox'/>
+        <PlaneSensor DEF='_14'/>
       </Group>
       <Transform DEF='Target2'
           translation='0 3 0'>
@@ -204,11 +204,12 @@
               specularColor='0.0955906 0.0955906 0.0955906'
               shininess='0.078125'/>
         </Appearance>
-        <Box DEF='_17'/>
+        <Box DEF='_15'/>
       </Shape>
-      <PrimitivePickSensor DEF='_18'
-          objectType='"BOX"'>
-        <Box USE='_17' containerField='pickingGeometry'/>
+      <PrimitivePickSensor DEF='_16'
+          objectType='"BOX"'
+          sortOrder='ALL_SORTED'>
+        <Box USE='_15' containerField='pickingGeometry'/>
         <Transform USE='TargetBox' containerField='pickTarget'/>
       </PrimitivePickSensor>
     </Transform>
@@ -234,10 +235,10 @@ function set_pickedGeometry (value, time)
 }
 ]]>
     </Script>
-    <ROUTE fromNode='_16' fromField='translation_changed' toNode='TargetBox' toField='set_translation'/>
-    <ROUTE fromNode='_18' fromField='isActive' toNode='DebugScript' toField='set_active'/>
-    <ROUTE fromNode='_18' fromField='pickedGeometry' toNode='DebugScript' toField='set_pickedGeometry'/>
-    <ROUTE fromNode='DebugScript' fromField='translation_changed' toNode='_16' toField='set_offset'/>
+    <ROUTE fromNode='_14' fromField='translation_changed' toNode='TargetBox' toField='set_translation'/>
+    <ROUTE fromNode='_16' fromField='isActive' toNode='DebugScript' toField='set_active'/>
+    <ROUTE fromNode='_16' fromField='pickedGeometry' toNode='DebugScript' toField='set_pickedGeometry'/>
+    <ROUTE fromNode='DebugScript' fromField='translation_changed' toNode='_14' toField='set_offset'/>
     <ROUTE fromNode='DebugScript' fromField='translation_changed' toNode='TargetBox' toField='set_translation'/>
   </Scene>
 </X3D>
