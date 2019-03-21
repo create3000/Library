@@ -9,7 +9,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.4.4, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Picking/PrimitivePickSensor.x3d'/>
-    <meta name='modified' content='Wed, 20 Mar 2019 11:23:43 GMT'/>
+    <meta name='modified' content='Thu, 21 Mar 2019 09:36:30 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -173,7 +173,8 @@
         </Shape>
       </Transform>
       <Group DEF='DragableTarget'>
-        <Transform DEF='TargetBox'>
+        <Transform DEF='TargetBox'
+            translation='1.03133 1.67552 -1.77636e-15'>
           <Shape>
             <Appearance>
               <Material DEF='Rococo6'
@@ -182,10 +183,18 @@
                   specularColor='0.0955906 0.0955906 0.0955906'
                   shininess='0.078125'/>
             </Appearance>
-            <Box/>
+            <Sphere DEF='_14'/>
+          </Shape>
+          <Shape>
+            <IndexedLineSet DEF='_15'
+                coordIndex='0, 1, 2, 3, 0, -1, 5, 4, 7, 6, 5, -1, 2, 6, -1, 7, 3, -1, 5, 1, -1, 0, 4, -1'>
+              <Coordinate DEF='_16'
+                  point='-1 -1 1, 1 -1 1, 1 1 1, -1 1 1, -1 -1 -1, 1 -1 -1, 1 1 -1, -1 1 -1'/>
+            </IndexedLineSet>
           </Shape>
         </Transform>
-        <PlaneSensor DEF='_14'/>
+        <PlaneSensor DEF='_17'
+            offset='1.03133 1.67552 -1.77636e-15'/>
       </Group>
       <Transform DEF='Target2'
           translation='0 3 0'>
@@ -194,7 +203,7 @@
     </PickableGroup>
     <Transform DEF='Sensor'
         translation='3 0 0'>
-      <Shape DEF='_15'>
+      <Shape DEF='_18'>
         <Appearance>
           <Material DEF='Rococo20'
               ambientIntensity='0.226102'
@@ -202,19 +211,20 @@
               specularColor='0.0955906 0.0955906 0.0955906'
               shininess='0.078125'/>
         </Appearance>
-        <Box DEF='_16'/>
+        <Box DEF='_19'/>
       </Shape>
-      <PrimitivePickSensor DEF='_17'
+      <PrimitivePickSensor DEF='_20'
           objectType='"BOX"'
+          intersectionType='GEOMETRY'
           sortOrder='ALL_SORTED'>
-        <Box USE='_16' containerField='pickingGeometry'/>
+        <Box USE='_19' containerField='pickingGeometry'/>
         <Transform USE='TargetBox' containerField='pickTarget'/>
       </PrimitivePickSensor>
     </Transform>
-    <Transform DEF='Sensor_18'
+    <Transform DEF='Sensor_21'
         translation='6 0 0'>
-      <Shape USE='_15'/>
-      <PrimitivePickSensor USE='_17'/>
+      <Shape USE='_18'/>
+      <PrimitivePickSensor USE='_20'/>
     </Transform>
     <Script DEF='DebugScript'>
       <field accessType='inputOnly' type='SFBool' name='set_active'/>
@@ -238,10 +248,10 @@ function set_pickedGeometry (value, time)
 }
 ]]>
     </Script>
-    <ROUTE fromNode='_14' fromField='translation_changed' toNode='TargetBox' toField='set_translation'/>
-    <ROUTE fromNode='_17' fromField='isActive' toNode='DebugScript' toField='set_active'/>
-    <ROUTE fromNode='_17' fromField='pickedGeometry' toNode='DebugScript' toField='set_pickedGeometry'/>
-    <ROUTE fromNode='DebugScript' fromField='translation_changed' toNode='_14' toField='set_offset'/>
+    <ROUTE fromNode='_17' fromField='translation_changed' toNode='TargetBox' toField='set_translation'/>
+    <ROUTE fromNode='_20' fromField='isActive' toNode='DebugScript' toField='set_active'/>
+    <ROUTE fromNode='_20' fromField='pickedGeometry' toNode='DebugScript' toField='set_pickedGeometry'/>
+    <ROUTE fromNode='DebugScript' fromField='translation_changed' toNode='_17' toField='set_offset'/>
     <ROUTE fromNode='DebugScript' fromField='translation_changed' toNode='TargetBox' toField='set_translation'/>
   </Scene>
 </X3D>
