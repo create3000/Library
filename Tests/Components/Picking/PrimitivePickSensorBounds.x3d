@@ -9,7 +9,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.4.4, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Picking/PrimitivePickSensor.x3d'/>
-    <meta name='modified' content='Thu, 21 Mar 2019 09:36:30 GMT'/>
+    <meta name='modified' content='Thu, 21 Mar 2019 11:31:30 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -41,7 +41,30 @@
               value='false'/>
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
-              reference='http://titania.create3000.de'/>
+              reference='http://titania.create3000.de'>
+            <Script DEF='DebugScript' containerField='value'>
+              <field accessType='inputOnly' type='SFBool' name='set_active'/>
+              <field accessType='inputOnly' type='MFNode' name='set_pickedGeometry'/>
+              <field accessType='outputOnly' type='SFVec3f' name='translation_changed'/>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+	translation_changed = new SFVec3f ();
+}
+
+function set_active (value, time)
+{
+	print ("isActive: ", value);
+}
+
+function set_pickedGeometry (value, time)
+{
+	print ("pickedGeometry: ", value);
+}
+]]>
+            </Script>
+          </MetadataSet>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
             name='BrowserPanel'
@@ -173,8 +196,7 @@
         </Shape>
       </Transform>
       <Group DEF='DragableTarget'>
-        <Transform DEF='TargetBox'
-            translation='1.03133 1.67552 -1.77636e-15'>
+        <Transform DEF='TargetBox'>
           <Shape>
             <Appearance>
               <Material DEF='Rococo6'
@@ -188,13 +210,12 @@
           <Shape>
             <IndexedLineSet DEF='_15'
                 coordIndex='0, 1, 2, 3, 0, -1, 5, 4, 7, 6, 5, -1, 2, 6, -1, 7, 3, -1, 5, 1, -1, 0, 4, -1'>
-              <Coordinate DEF='_16'
+              <Coordinate
                   point='-1 -1 1, 1 -1 1, 1 1 1, -1 1 1, -1 -1 -1, 1 -1 -1, 1 1 -1, -1 1 -1'/>
             </IndexedLineSet>
           </Shape>
         </Transform>
-        <PlaneSensor DEF='_17'
-            offset='1.03133 1.67552 -1.77636e-15'/>
+        <PlaneSensor DEF='_16'/>
       </Group>
       <Transform DEF='Target2'
           translation='0 3 0'>
@@ -203,7 +224,7 @@
     </PickableGroup>
     <Transform DEF='Sensor'
         translation='3 0 0'>
-      <Shape DEF='_18'>
+      <Shape DEF='_17'>
         <Appearance>
           <Material DEF='Rococo20'
               ambientIntensity='0.226102'
@@ -211,47 +232,25 @@
               specularColor='0.0955906 0.0955906 0.0955906'
               shininess='0.078125'/>
         </Appearance>
-        <Box DEF='_19'/>
+        <Box DEF='_18'/>
       </Shape>
-      <PrimitivePickSensor DEF='_20'
+      <PrimitivePickSensor DEF='_19'
           objectType='"BOX"'
-          intersectionType='GEOMETRY'
           sortOrder='ALL_SORTED'>
-        <Box USE='_19' containerField='pickingGeometry'/>
+        <Box USE='_18' containerField='pickingGeometry'/>
         <Transform USE='TargetBox' containerField='pickTarget'/>
       </PrimitivePickSensor>
     </Transform>
-    <Transform DEF='Sensor_21'
+    <Transform DEF='Sensor_20'
         translation='6 0 0'>
-      <Shape USE='_18'/>
-      <PrimitivePickSensor USE='_20'/>
+      <Shape USE='_17'/>
+      <PrimitivePickSensor USE='_19'/>
     </Transform>
-    <Script DEF='DebugScript'>
-      <field accessType='inputOnly' type='SFBool' name='set_active'/>
-      <field accessType='inputOnly' type='MFNode' name='set_pickedGeometry'/>
-      <field accessType='outputOnly' type='SFVec3f' name='translation_changed'/>
-<![CDATA[ecmascript:
-
-function initialize ()
-{
-	translation_changed = new SFVec3f ();
-}
-
-function set_active (value, time)
-{
-	print ("isActive: ", value);
-}
-
-function set_pickedGeometry (value, time)
-{
-	print ("pickedGeometry: ", value);
-}
-]]>
-    </Script>
-    <ROUTE fromNode='_17' fromField='translation_changed' toNode='TargetBox' toField='set_translation'/>
-    <ROUTE fromNode='_20' fromField='isActive' toNode='DebugScript' toField='set_active'/>
-    <ROUTE fromNode='_20' fromField='pickedGeometry' toNode='DebugScript' toField='set_pickedGeometry'/>
-    <ROUTE fromNode='DebugScript' fromField='translation_changed' toNode='_17' toField='set_offset'/>
+    <Script USE='DebugScript'/>
+    <ROUTE fromNode='_16' fromField='translation_changed' toNode='TargetBox' toField='set_translation'/>
+    <ROUTE fromNode='_19' fromField='isActive' toNode='DebugScript' toField='set_active'/>
+    <ROUTE fromNode='_19' fromField='pickedGeometry' toNode='DebugScript' toField='set_pickedGeometry'/>
+    <ROUTE fromNode='DebugScript' fromField='translation_changed' toNode='_16' toField='set_offset'/>
     <ROUTE fromNode='DebugScript' fromField='translation_changed' toNode='TargetBox' toField='set_translation'/>
   </Scene>
 </X3D>
