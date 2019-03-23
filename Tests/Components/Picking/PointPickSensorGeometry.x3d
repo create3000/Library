@@ -9,7 +9,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.4.4, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Picking/PointPickSensorGeometry.x3d'/>
-    <meta name='modified' content='Sat, 23 Mar 2019 08:28:17 GMT'/>
+    <meta name='modified' content='Sat, 23 Mar 2019 08:32:05 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -239,7 +239,7 @@ function set_pickedGeometry (value, time)
         </Appearance>
         <PointSet DEF='_16'>
           <Coordinate
-              point='-1 1 1, -1 -1 1, 1 -1 1, 1 1 1, -1 1 -1, -1 -1 -1, 1 -1 -1, 1 1 -1'/>
+              point='-1 0 0, 1 0 0'/>
         </PointSet>
       </Shape>
       <PointPickSensor DEF='_17'
@@ -251,7 +251,8 @@ function set_pickedGeometry (value, time)
       </PointPickSensor>
     </Transform>
     <Transform DEF='Sensor_18'
-        translation='6 0 0'>
+        translation='6 0 0'
+        scale='0.5 0.5 0.5'>
       <Shape USE='_15'/>
       <PointPickSensor USE='_17'/>
     </Transform>
