@@ -14,7 +14,7 @@
     <meta name='generator' content='Titania V4.4.5, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/RigidBodyPhysics/Ball.x3d'/>
     <meta name='license' content='../license.html'/>
-    <meta name='modified' content='Fri, 29 Mar 2019 09:30:30 GMT'/>
+    <meta name='modified' content='Fri, 29 Mar 2019 09:31:42 GMT'/>
     <meta name='reference' content='http://www.xj3d.org/extensions/index.html#Physics'/>
     <meta name='reference' content='originals/ball_bounce.x3dv'/>
     <meta name='reference' content='http://www.web3d.org/x3d/specifications/ISO-IEC-FDIS-19775-1.2-X3D-AbstractSpecification/Part01/components/rigid_physics.html'/>
@@ -211,8 +211,8 @@ function set_contacts (value, time)
                       frictionCoefficients='0.5 0'
                       surfaceSpeed='1 0'>
                     <CollidableShape DEF='Ball' containerField='collidables'
-                        translation='2.37802 0.31806 0'
-                        rotation='0 0 1.00000002248867 157.070962813314'>
+                        translation='3.69697 0.318064 0'
+                        rotation='0 0 0.999999951512354 228.442178980306'>
                       <Shape containerField='shape'>
                         <Sphere DEF='_14'
                             radius='0.3'/>
@@ -287,8 +287,8 @@ function set_contacts (value, time)
     </Group>
     <Group DEF='Collidables'>
       <Transform DEF='Sphere'
-          translation='2.37802 0.31806 0'
-          rotation='0 0 1.00000002248867 157.070962813314'>
+          translation='3.69697 0.318064 0'
+          rotation='0 0 0.999999951512354 228.442178980306'>
         <ProtoInstance name='BooleanSwitch' DEF='_17'>
           <fieldValue name='whichChoice' value='true'/>
           <fieldValue name='children'>
@@ -340,10 +340,10 @@ function set_contacts (value, time)
     <RigidBodyCollection>
       <CollisionCollection USE='_13'/>
       <RigidBody DEF='Ball_22'
-          position='2.37802 0.31806 0'
-          orientation='0 0 1.00000002248867 157.070962813314'
-          linearVelocity='2.28444 0.000138499 0'
-          angularVelocity='0 0 -436.296'>
+          position='3.69697 0.318064 0'
+          orientation='0 0 0.999999951512354 228.442178980306'
+          linearVelocity='-0.00518404 -5.69969e-07 0'
+          angularVelocity='0 0 0.990079'>
         <CollidableShape USE='Ball' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='Ground_23'
