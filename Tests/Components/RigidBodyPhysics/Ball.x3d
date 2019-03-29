@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
   <head>
-    <component name='RigidBodyPhysics' level='2'/>
+    <component name='EnvironmentalEffects' level='3'/>
+    <component name='RigidBodyPhysics' level='1'/>
+    <component name='Shape' level='4'/>
+    <component name='Time' level='2'/>
     <unit category='angle' name='degree' conversionFactor='0.0174532925199432958'/>
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='1 January 2008'/>
     <meta name='creator' content='Alan Hudson and Justin Couch'/>
     <meta name='description' content='Example scene for RigidBodyPhysics component'/>
-    <meta name='generator' content='Titania V4.1.1, http://titania.create3000.de'/>
+    <meta name='generator' content='Titania V4.4.5, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/RigidBodyPhysics/Ball.x3d'/>
     <meta name='license' content='../license.html'/>
-    <meta name='modified' content='Wed, 02 May 2018 15:11:51 GMT'/>
+    <meta name='modified' content='Fri, 29 Mar 2019 09:30:30 GMT'/>
     <meta name='reference' content='http://www.xj3d.org/extensions/index.html#Physics'/>
     <meta name='reference' content='originals/ball_bounce.x3dv'/>
     <meta name='reference' content='http://www.web3d.org/x3d/specifications/ISO-IEC-FDIS-19775-1.2-X3D-AbstractSpecification/Part01/components/rigid_physics.html'/>
@@ -187,7 +190,7 @@
 
 function set_active (value, time)
 {
-	print (time, " ", value);
+	//print (time, " ", value);
 }
 
 function set_intersections (value, time)
@@ -208,8 +211,8 @@ function set_contacts (value, time)
                       frictionCoefficients='0.5 0'
                       surfaceSpeed='1 0'>
                     <CollidableShape DEF='Ball' containerField='collidables'
-                        translation='3.35502 0.318064 -1.55863e-06'
-                        rotation='-7.62698129306882e-07 4.34649682686876e-07 0.999999999999615 78.9015599615029'>
+                        translation='2.37802 0.31806 0'
+                        rotation='0 0 1.00000002248867 157.070962813314'>
                       <Shape containerField='shape'>
                         <Sphere DEF='_14'
                             radius='0.3'/>
@@ -284,8 +287,8 @@ function set_contacts (value, time)
     </Group>
     <Group DEF='Collidables'>
       <Transform DEF='Sphere'
-          translation='3.35502 0.318064 -1.55863e-06'
-          rotation='-7.62698129306882e-07 4.34649682686876e-07 0.999999999999615 78.9015599615029'>
+          translation='2.37802 0.31806 0'
+          rotation='0 0 1.00000002248867 157.070962813314'>
         <ProtoInstance name='BooleanSwitch' DEF='_17'>
           <fieldValue name='whichChoice' value='true'/>
           <fieldValue name='children'>
@@ -337,10 +340,10 @@ function set_contacts (value, time)
     <RigidBodyCollection>
       <CollisionCollection USE='_13'/>
       <RigidBody DEF='Ball_22'
-          position='3.35502 0.318064 -1.55863e-06'
-          orientation='-7.62698129306882e-07 4.34649682686876e-07 0.999999999999615 78.9015599615029'
-          linearVelocity='0.938399 3.20002e-06 -7.5005e-07'
-          angularVelocity='-0.000157615 4.52806e-05 -179.221'>
+          position='2.37802 0.31806 0'
+          orientation='0 0 1.00000002248867 157.070962813314'
+          linearVelocity='2.28444 0.000138499 0'
+          angularVelocity='0 0 -436.296'>
         <CollidableShape USE='Ball' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='Ground_23'
