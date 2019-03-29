@@ -14,7 +14,7 @@
     <meta name='generator' content='Titania V4.4.5, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/RigidBodyPhysics/Ball.x3d'/>
     <meta name='license' content='../license.html'/>
-    <meta name='modified' content='Fri, 29 Mar 2019 09:31:42 GMT'/>
+    <meta name='modified' content='Fri, 29 Mar 2019 10:45:13 GMT'/>
     <meta name='reference' content='http://www.xj3d.org/extensions/index.html#Physics'/>
     <meta name='reference' content='originals/ball_bounce.x3dv'/>
     <meta name='reference' content='http://www.web3d.org/x3d/specifications/ISO-IEC-FDIS-19775-1.2-X3D-AbstractSpecification/Part01/components/rigid_physics.html'/>
@@ -69,22 +69,7 @@
               value='false'/>
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
-              reference='http://titania.create3000.de'>
-            <CollidableShape DEF='_1' containerField='value'
-                translation='-1 2.35918e-15 1'>
-              <Shape containerField='shape'>
-                <Appearance>
-                  <Material DEF='Neon12_2'
-                      ambientIntensity='0.341463'
-                      diffuseColor='0.16 0.16 0.16'
-                      specularColor='0.661 0.661 0.661'
-                      shininess='0.0284553'/>
-                </Appearance>
-                <Box
-                    size='4 1 4'/>
-              </Shape>
-            </CollidableShape>
-          </MetadataSet>
+              reference='http://titania.create3000.de'/>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
             name='BrowserPanel'
@@ -119,19 +104,19 @@
             <MetadataSet DEF='RightViewpoint' containerField='value'
                 name='RightViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_3' containerField='value'
+              <MetadataDouble DEF='position_1' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
                   value='10000, 0.835422415145837, -0.255489969196878'/>
-              <MetadataDouble DEF='orientation_4' containerField='value'
+              <MetadataDouble DEF='orientation_2' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
                   value='0, 1, 0, 1.5707963267949'/>
-              <MetadataDouble DEF='centerOfRotation_5' containerField='value'
+              <MetadataDouble DEF='centerOfRotation_3' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
                   value='0, 0.835422415145837, -0.255489969196878'/>
-              <MetadataDouble DEF='fieldOfViewScale_6' containerField='value'
+              <MetadataDouble DEF='fieldOfViewScale_4' containerField='value'
                   name='fieldOfViewScale'
                   reference='http://titania.create3000.de'
                   value='0.513342083279505'/>
@@ -139,19 +124,19 @@
             <MetadataSet DEF='TopViewpoint' containerField='value'
                 name='TopViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_7' containerField='value'
+              <MetadataDouble DEF='position_5' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
                   value='-0.12322520380435, 10000, 0.0600833616394929'/>
-              <MetadataDouble DEF='orientation_8' containerField='value'
+              <MetadataDouble DEF='orientation_6' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
                   value='1, 0, 0, 4.71238898038469'/>
-              <MetadataDouble DEF='centerOfRotation_9' containerField='value'
+              <MetadataDouble DEF='centerOfRotation_7' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
                   value='-0.12322520380435, 0, 0.0600833616394929'/>
-              <MetadataDouble DEF='fieldOfViewScale_10' containerField='value'
+              <MetadataDouble DEF='fieldOfViewScale_8' containerField='value'
                   name='fieldOfViewScale'
                   reference='http://titania.create3000.de'
                   value='1.1025'/>
@@ -179,7 +164,7 @@
                   name='nodePositions'
                   reference='http://titania.create3000.de'
                   value='583, 24, 242, 20'/>
-              <MetadataSet DEF='nodes_11' containerField='value'
+              <MetadataSet DEF='nodes_9' containerField='value'
                   name='nodes'
                   reference='http://titania.create3000.de'>
                 <Script DEF='CollisionsScript' containerField='value'>
@@ -204,20 +189,22 @@ function set_contacts (value, time)
 }
 ]]>
                 </Script>
-                <CollisionSensor DEF='_12' containerField='value'>
-                  <CollisionCollection DEF='_13'
+                <CollisionSensor DEF='_10' containerField='value'>
+                  <CollisionCollection DEF='_11'
                       appliedParameters='"BOUNCE", "FRICTION_COEFFICIENT_2"'
                       bounce='0.6'
                       frictionCoefficients='0.5 0'
                       surfaceSpeed='1 0'>
-                    <CollidableShape DEF='Ball' containerField='collidables'
-                        translation='3.69697 0.318064 0'
-                        rotation='0 0 0.999999951512354 228.442178980306'>
-                      <Shape containerField='shape'>
-                        <Sphere DEF='_14'
-                            radius='0.3'/>
-                      </Shape>
-                    </CollidableShape>
+                    <CollisionSpace containerField='collidables'>
+                      <CollidableShape DEF='Ball' containerField='collidables'
+                          translation='3.6998 0.318065 0'
+                          rotation='0 0 0.999999900844977 98.6990804311279'>
+                        <Shape containerField='shape'>
+                          <Sphere DEF='_12'
+                              radius='0.3'/>
+                        </Shape>
+                      </CollidableShape>
+                    </CollisionSpace>
                   </CollisionCollection>
                 </CollisionSensor>
               </MetadataSet>
@@ -261,10 +248,10 @@ function set_contacts (value, time)
       </MetadataSet>
     </DirectionalLight>
     <Group DEF='ResetButton'>
-      <TimeSensor DEF='_15'
+      <TimeSensor DEF='_13'
           cycleInterval='5'
           loop='true'/>
-      <TouchSensor DEF='_16'
+      <TouchSensor DEF='_14'
           description='Reset Button'/>
       <ProtoInstance name='SFVec3f' DEF='Position'>
         <fieldValue name='keyValue' value='0 2 0'/>
@@ -287,24 +274,24 @@ function set_contacts (value, time)
     </Group>
     <Group DEF='Collidables'>
       <Transform DEF='Sphere'
-          translation='3.69697 0.318064 0'
-          rotation='0 0 0.999999951512354 228.442178980306'>
-        <ProtoInstance name='BooleanSwitch' DEF='_17'>
+          translation='3.6998 0.318065 0'
+          rotation='0 0 0.999999900844977 98.6990804311279'>
+        <ProtoInstance name='BooleanSwitch' DEF='_15'>
           <fieldValue name='whichChoice' value='true'/>
           <fieldValue name='children'>
-            <Shape DEF='_18'>
+            <Shape DEF='_16'>
               <Appearance>
                 <ImageTexture
                     url='"pattern-blue.png"'/>
               </Appearance>
-              <Sphere USE='_14'/>
+              <Sphere USE='_12'/>
             </Shape>
-            <Shape DEF='_19'>
+            <Shape DEF='_17'>
               <Appearance>
                 <ImageTexture
                     url='"pattern-red.png"'/>
               </Appearance>
-              <Sphere USE='_14'/>
+              <Sphere USE='_12'/>
             </Shape>
           </fieldValue>
         </ProtoInstance>
@@ -326,24 +313,37 @@ function set_contacts (value, time)
         </Shape>
       </CollidableShape>
       <Group DEF='BoxSlider'>
-        <PlaneSensor DEF='_20'
+        <PlaneSensor DEF='_18'
             description='Drag to move.'
             axisRotation='1 0 0 270'
             offset='-1 2.35918e-15 1'
             minPosition='-1 -1'
             maxPosition='1 1'/>
-        <CollidableOffset DEF='Box_21'>
-          <CollidableShape USE='_1' containerField='collidable'/>
+        <CollidableOffset DEF='Box_19'>
+          <CollidableShape DEF='_20' containerField='collidable'
+              translation='-1 2.35918e-15 1'>
+            <Shape containerField='shape'>
+              <Appearance>
+                <Material DEF='Neon12_21'
+                    ambientIntensity='0.341463'
+                    diffuseColor='0.16 0.16 0.16'
+                    specularColor='0.661 0.661 0.661'
+                    shininess='0.0284553'/>
+              </Appearance>
+              <Box
+                  size='4 1 4'/>
+            </Shape>
+          </CollidableShape>
         </CollidableOffset>
       </Group>
     </Group>
     <RigidBodyCollection>
-      <CollisionCollection USE='_13'/>
+      <CollisionCollection USE='_11'/>
       <RigidBody DEF='Ball_22'
-          position='3.69697 0.318064 0'
-          orientation='0 0 0.999999951512354 228.442178980306'
-          linearVelocity='-0.00518404 -5.69969e-07 0'
-          angularVelocity='0 0 0.990079'>
+          position='3.6998 0.318065 0'
+          orientation='0 0 0.999999900844977 98.6990804311279'
+          linearVelocity='-0.000286878 9.38773e-07 0'
+          angularVelocity='0 0 0.0547897'>
         <CollidableShape USE='Ball' containerField='geometry'/>
       </RigidBody>
       <RigidBody DEF='Ground_23'
@@ -353,29 +353,29 @@ function set_contacts (value, time)
       <RigidBody DEF='Box_24'
           fixed='true'
           linearVelocity='0.5 0.006 0'>
-        <CollidableOffset USE='Box_21' containerField='geometry'/>
+        <CollidableOffset USE='Box_19' containerField='geometry'/>
       </RigidBody>
     </RigidBodyCollection>
-    <CollisionSensor USE='_12'/>
+    <CollisionSensor USE='_10'/>
     <Script USE='CollisionsScript'/>
     <ROUTE fromNode='Position' fromField='value_changed' toNode='Ball_22' toField='set_position'/>
     <ROUTE fromNode='LinearVelocity' fromField='value_changed' toNode='Ball_22' toField='set_linearVelocity'/>
-    <ROUTE fromNode='_16' fromField='touchTime' toNode='Position' toField='set_triggerTime'/>
-    <ROUTE fromNode='_16' fromField='touchTime' toNode='LinearVelocity' toField='set_triggerTime'/>
-    <ROUTE fromNode='_16' fromField='touchTime' toNode='Orientation' toField='set_triggerTime'/>
-    <ROUTE fromNode='_16' fromField='touchTime' toNode='AngularVelocity' toField='set_triggerTime'/>
+    <ROUTE fromNode='_14' fromField='touchTime' toNode='Position' toField='set_triggerTime'/>
+    <ROUTE fromNode='_14' fromField='touchTime' toNode='LinearVelocity' toField='set_triggerTime'/>
+    <ROUTE fromNode='_14' fromField='touchTime' toNode='Orientation' toField='set_triggerTime'/>
+    <ROUTE fromNode='_14' fromField='touchTime' toNode='AngularVelocity' toField='set_triggerTime'/>
     <ROUTE fromNode='AngularVelocity' fromField='value_changed' toNode='Ball_22' toField='set_angularVelocity'/>
     <ROUTE fromNode='Orientation' fromField='value_changed' toNode='Ball_22' toField='set_orientation'/>
-    <ROUTE fromNode='_15' fromField='cycleTime' toNode='Position' toField='set_triggerTime'/>
-    <ROUTE fromNode='_15' fromField='cycleTime' toNode='LinearVelocity' toField='set_triggerTime'/>
-    <ROUTE fromNode='_15' fromField='cycleTime' toNode='Orientation' toField='set_triggerTime'/>
-    <ROUTE fromNode='_15' fromField='cycleTime' toNode='AngularVelocity' toField='set_triggerTime'/>
-    <ROUTE fromNode='_20' fromField='translation_changed' toNode='_1' toField='set_translation'/>
-    <ROUTE fromNode='_12' fromField='contacts' toNode='CollisionsScript' toField='set_contacts'/>
-    <ROUTE fromNode='_12' fromField='intersections' toNode='CollisionsScript' toField='set_intersections'/>
-    <ROUTE fromNode='_12' fromField='isActive' toNode='CollisionsScript' toField='set_active'/>
+    <ROUTE fromNode='_13' fromField='cycleTime' toNode='Position' toField='set_triggerTime'/>
+    <ROUTE fromNode='_13' fromField='cycleTime' toNode='LinearVelocity' toField='set_triggerTime'/>
+    <ROUTE fromNode='_13' fromField='cycleTime' toNode='Orientation' toField='set_triggerTime'/>
+    <ROUTE fromNode='_13' fromField='cycleTime' toNode='AngularVelocity' toField='set_triggerTime'/>
+    <ROUTE fromNode='_18' fromField='translation_changed' toNode='_20' toField='set_translation'/>
+    <ROUTE fromNode='_10' fromField='contacts' toNode='CollisionsScript' toField='set_contacts'/>
+    <ROUTE fromNode='_10' fromField='intersections' toNode='CollisionsScript' toField='set_intersections'/>
+    <ROUTE fromNode='_10' fromField='isActive' toNode='CollisionsScript' toField='set_active'/>
     <ROUTE fromNode='Ball_22' fromField='position_changed' toNode='Sphere' toField='set_translation'/>
     <ROUTE fromNode='Ball_22' fromField='orientation_changed' toNode='Sphere' toField='set_rotation'/>
-    <ROUTE fromNode='_12' fromField='isActive' toNode='_17' toField='set_whichChoice'/>
+    <ROUTE fromNode='_10' fromField='isActive' toNode='_15' toField='set_whichChoice'/>
   </Scene>
 </X3D>
