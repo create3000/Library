@@ -8,7 +8,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.4.5, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Texturing/TextureCoordinateGenerator.x3d'/>
-    <meta name='modified' content='Tue, 02 Apr 2019 08:23:14 GMT'/>
+    <meta name='modified' content='Tue, 02 Apr 2019 08:24:24 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -42,6 +42,7 @@
               name='nodes'
               reference='http://titania.create3000.de'>
             <Script DEF='ModeScript' containerField='value'>
+              <field accessType='inputOnly' type='SFTime' name='set_time'/>
               <field accessType='outputOnly' type='SFString' name='mode_changed'/>
               <field accessType='outputOnly' type='MFString' name='string_changed'/>
 <![CDATA[ecmascript:
@@ -194,7 +195,7 @@ function set_mode (index)
         </Appearance>
         <Sphere/>
       </Shape>
-      <TouchSensor/>
+      <TouchSensor DEF='_16'/>
     </Transform>
     <Transform DEF='Text'
         translation='-1.51224 -1.29328 0'
@@ -203,16 +204,17 @@ function set_mode (index)
         <Appearance>
           <Material/>
         </Appearance>
-        <Text DEF='_16'
+        <Text DEF='_17'
             string='"SPHERE"'
             solid='true'>
-          <FontStyle DEF='_17'
+          <FontStyle DEF='_18'
               family='"SANS"'/>
         </Text>
       </Shape>
     </Transform>
     <Script USE='ModeScript'/>
     <ROUTE fromNode='ModeScript' fromField='mode_changed' toNode='_14' toField='set_mode'/>
-    <ROUTE fromNode='ModeScript' fromField='string_changed' toNode='_16' toField='set_string'/>
+    <ROUTE fromNode='ModeScript' fromField='string_changed' toNode='_17' toField='set_string'/>
+    <ROUTE fromNode='_16' fromField='touchTime' toNode='ModeScript' toField='set_time'/>
   </Scene>
 </X3D>
