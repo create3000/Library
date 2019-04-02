@@ -2,7 +2,7 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
 <X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
   <head>
-    <component name='CubeMapTexturing' level='1'/>
+    <component name='CubeMapTexturing' level='3'/>
     <component name='EnvironmentalEffects' level='3'/>
     <component name='Shape' level='4'/>
     <meta name='comment' content='World of Titania'/>
@@ -10,7 +10,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.4.5, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Texturing/TextureCoordinateGenerator.x3d'/>
-    <meta name='modified' content='Tue, 02 Apr 2019 10:25:01 GMT'/>
+    <meta name='modified' content='Tue, 02 Apr 2019 10:35:25 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -189,20 +189,8 @@
         <ImageTexture USE='_14' containerField='texture1'/>
       </field>
       <field accessType='initializeOnly' type='SFNode' name='texture2'>
-        <ComposedCubeMapTexture DEF='_19' containerField='texture2'>
-          <ImageTexture containerField='front'
-              url='"../images/room/front.jpg"'/>
-          <ImageTexture containerField='back'
-              url='"../images/room/back.jpg"'/>
-          <ImageTexture containerField='left'
-              url='"../images/room/left.jpg"'/>
-          <ImageTexture containerField='right'
-              url='"../images/room/right.jpg"'/>
-          <ImageTexture containerField='top'
-              url='"../images/room/up.jpg"'/>
-          <ImageTexture containerField='bottom'
-              url='"../images/room/down.jpg"'/>
-        </ComposedCubeMapTexture>
+        <GeneratedCubeMapTexture DEF='_19' containerField='texture2'
+            update='ALWAYS'/>
       </field>
 <![CDATA[ecmascript:
 
@@ -271,7 +259,20 @@ function set_texture2 (value, time)
       <Shape>
         <Appearance>
           <Material/>
-          <ComposedCubeMapTexture USE='_19'/>
+          <ComposedCubeMapTexture>
+            <ImageTexture containerField='front'
+                url='"../images/room/front.jpg"'/>
+            <ImageTexture containerField='back'
+                url='"../images/room/back.jpg"'/>
+            <ImageTexture containerField='left'
+                url='"../images/room/left.jpg"'/>
+            <ImageTexture containerField='right'
+                url='"../images/room/right.jpg"'/>
+            <ImageTexture containerField='top'
+                url='"../images/room/up.jpg"'/>
+            <ImageTexture containerField='bottom'
+                url='"../images/room/down.jpg"'/>
+          </ComposedCubeMapTexture>
         </Appearance>
         <Sphere/>
       </Shape>
