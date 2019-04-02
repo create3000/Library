@@ -9,7 +9,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.4.5, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Texturing/TextureCoordinateGenerator.x3d'/>
-    <meta name='modified' content='Tue, 02 Apr 2019 09:21:04 GMT'/>
+    <meta name='modified' content='Tue, 02 Apr 2019 09:29:44 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -44,9 +44,11 @@
               reference='http://titania.create3000.de'>
             <Script DEF='ModeScript' containerField='value'>
               <field accessType='inputOnly' type='SFTime' name='set_time'/>
+              <field accessType='inputOnly' type='SFVec3f' name='set_position'/>
               <field accessType='inputOnly' type='SFTime' name='set_texture1'/>
               <field accessType='inputOnly' type='SFTime' name='set_texture2'/>
               <field accessType='outputOnly' type='SFString' name='mode_changed'/>
+              <field accessType='outputOnly' type='MFFloat' name='parameter_changed'/>
               <field accessType='outputOnly' type='MFString' name='string_changed'/>
               <field accessType='outputOnly' type='SFNode' name='texture_changed'/>
               <field accessType='initializeOnly' type='SFNode' name='texture1'>
@@ -101,6 +103,11 @@ function set_mode (index)
 {
 	mode_changed       = modes [index];
 	string_changed [0] = modes [index];
+}
+
+function set_position (value, time)
+{
+	parameter_changed = new MFFloat (1, value .x, value .y, value .z);
 }
 
 function set_texture1 (value, time)
@@ -271,11 +278,15 @@ function set_texture2 (value, time)
       </Shape>
       <TouchSensor DEF='_23'/>
     </Transform>
+    <ProximitySensor DEF='_24'
+        size='200 200 200'/>
     <ROUTE fromNode='ModeScript' fromField='mode_changed' toNode='_16' toField='set_mode'/>
     <ROUTE fromNode='ModeScript' fromField='string_changed' toNode='_18' toField='set_string'/>
     <ROUTE fromNode='_17' fromField='touchTime' toNode='ModeScript' toField='set_time'/>
     <ROUTE fromNode='_21' fromField='touchTime' toNode='ModeScript' toField='set_texture1'/>
     <ROUTE fromNode='_23' fromField='touchTime' toNode='ModeScript' toField='set_texture2'/>
     <ROUTE fromNode='ModeScript' fromField='texture_changed' toNode='Appearance' toField='set_texture'/>
+    <ROUTE fromNode='_24' fromField='position_changed' toNode='ModeScript' toField='set_position'/>
+    <ROUTE fromNode='ModeScript' fromField='parameter_changed' toNode='_16' toField='set_parameter'/>
   </Scene>
 </X3D>
