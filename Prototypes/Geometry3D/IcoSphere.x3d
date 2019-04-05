@@ -76,7 +76,7 @@ IcoSphere .prototype .getTexPoint = function ()
 IcoSphere .prototype .coord = function ()
 {
 	this .point      = new MFVec3f ();
-	this .coordIndex = MFInt32 ();
+	this .coordIndex = new MFInt32 ();
 
 	this .middlePointIndexCache = [ ];
 
