@@ -9,7 +9,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.5.0, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Text/charcodes.x3d'/>
-    <meta name='modified' content='Tue, 09 Apr 2019 07:53:52 GMT'/>
+    <meta name='modified' content='Wed, 10 Apr 2019 09:11:02 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -49,10 +49,10 @@
                   <Material/>
                 </Appearance>
                 <Text DEF='_2'
-                    string='"ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^", "_`abcdefghijklmnopqrstuvwxyz{|", "}~", " ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸", "¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ", "×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóô", "õö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒ", "ēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİ", "ıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎ", "ŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬ", "ŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſƀƁƂƃƄƅƆƇƈƉƊ", "ƋƌƍƎƏƐƑƒƓƔƕƖƗƘƙƚƛƜƝƞƟƠơƢƣƤƥƦƧƨ", "ƩƪƫƬƭƮƯưƱƲƳƴƵƶƷƸƹƺƻƼƽƾƿǀǁǂǃǄǅǆ", "ǇǈǉǊǋǌǍǎǏǐǑǒǓǔǕǖǗǘǙǚǛǜǝǞǟǠǡǢǣǤ", "ǥǦǧǨǩǪǫǬǭǮǯǰǱǲǳǴǵǶǷǸǹǺǻǼǽǾǿȀȁȂ", "ȃȄȅȆȇȈȉȊȋȌȍȎȏȐȑȒȓȔȕȖȗȘșȚțȜȝȞȟȠ", "ȡȢȣȤȥȦȧȨȩȪȫȬȭȮȯȰȱȲȳȴȵȶȷȸȹȺȻȼȽȾ", "ȿɀɁɂɃɄɅɆɇɈɉɊɋɌɍɎɏɐɑɒɓɔɕɖɗɘəɚɛɜ", "ɝɞɟɠɡɢɣɤɥɦɧɨɩɪɫɬɭɮɯɰɱɲɳɴɵɶɷɸɹɺ", "ɻɼɽɾɿʀʁʂʃʄʅʆʇʈʉʊʋʌʍʎʏʐʑʒʓʔʕʖʗʘ"'
+                    string='"ʘʗʖʕʔʓʒʑʐʏʎʍʌʋʊʉʈʇʆʅʄʃʂʁʀɿɾɽɼɻ", "ɺɹɸɷɶɵɴɳɲɱɰɯɮɭɬɫɪɩɨɧɦɥɤɣɢɡɠɟɞɝ", "ɜɛɚəɘɗɖɕɔɓɒɑɐɏɎɍɌɋɊɉɈɇɆɅɄɃɂɁɀȿ", "ȾȽȼȻȺȹȸȷȶȵȴȳȲȱȰȯȮȭȬȫȪȩȨȧȦȥȤȣȢȡ", "ȠȟȞȝȜțȚșȘȗȖȕȔȓȒȑȐȏȎȍȌȋȊȉȈȇȆȅȄȃ", "ȂȁȀǿǾǽǼǻǺǹǸǷǶǵǴǳǲǱǰǯǮǭǬǫǪǩǨǧǦǥ", "ǤǣǢǡǠǟǞǝǜǛǚǙǘǗǖǕǔǓǒǑǐǏǎǍǌǋǊǉǈǇ", "ǆǅǄǃǂǁǀƿƾƽƼƻƺƹƸƷƶƵƴƳƲƱưƯƮƭƬƫƪƩ", "ƨƧƦƥƤƣƢơƠƟƞƝƜƛƚƙƘƗƖƕƔƓƒƑƐƏƎƍƌƋ", "ƊƉƈƇƆƅƄƃƂƁƀſžŽżŻźŹŸŷŶŵŴųŲűŰůŮŭ", "ŬūŪũŨŧŦťŤţŢšŠşŞŝŜśŚřŘŗŖŕŔœŒőŐŏ", "ŎōŌŋŊŉňŇņŅńŃłŁŀĿľĽļĻĺĹĸķĶĵĴĳĲı", "İįĮĭĬīĪĩĨħĦĥĤģĢġĠğĞĝĜěĚęĘėĖĕĔē", "ĒđĐďĎčČċĊĉĈćĆąĄăĂāĀÿþýüûúùø÷öõ", "ôóòñðïîíìëêéèçæåäãâáàßÞÝÜÛÚÙØ×", "ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈÇÆÅÄÃÂÁÀ¿¾½¼»º¹", "¸·¶µ´³²±°¯®­¬«ª©¨§¦¥¤£¢¡ ", "~}", "|{zyxwvutsrqponmlkjihgfedcba`_", "^]\\[ZYXWVUTSRQPONMLKJIHGFEDCBA"'
                     length='384.018, 323.018, 332.018, 311.018, 394.018, 352.018, 368.018, 328.018, 343.018, 361.018, 383.018, 391.018, 374.018, 419.018, 434.018, 344.018, 388.018, 343.018, 334.018, 333.018'
                     solid='true'>
-                  <ScreenFontStyle DEF='_3'
+                  <ScreenFontStyle
                       family='"SANS"'
                       pointSize='13.15'
                       spacing='1.2'/>
@@ -64,7 +64,7 @@
         <MetadataSet DEF='BrowserPanel' containerField='value'
             name='BrowserPanel'
             reference='http://titania.create3000.de'>
-          <MetadataString DEF='type_4' containerField='value'
+          <MetadataString DEF='type_3' containerField='value'
               name='type'
               reference='http://titania.create3000.de'
               value='"TOP_VIEW", "MAIN_VIEW", "PERSPECTIVE_VIEW", "FRONT_VIEW"'/>
@@ -74,15 +74,15 @@
             <MetadataSet DEF='PerspectiveViewpoint' containerField='value'
                 name='PerspectiveViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_5' containerField='value'
+              <MetadataDouble DEF='position_4' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
                   value='5.87788534164429, 6.46984958648682, 13.8524446487427'/>
-              <MetadataDouble DEF='orientation_6' containerField='value'
+              <MetadataDouble DEF='orientation_5' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
                   value='-0.704047462871213, 0.695566762376518, 0.143192350010952, 0.568941727555854'/>
-              <MetadataDouble DEF='centerOfRotation_7' containerField='value'
+              <MetadataDouble DEF='centerOfRotation_6' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
                   value='0, 0, 0'/>
@@ -94,19 +94,19 @@
             <MetadataSet DEF='TopViewpoint' containerField='value'
                 name='TopViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_8' containerField='value'
+              <MetadataDouble DEF='position_7' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
                   value='0, 10000, 0'/>
-              <MetadataDouble DEF='orientation_9' containerField='value'
+              <MetadataDouble DEF='orientation_8' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
                   value='1, 0, 0, 4.71238898038469'/>
-              <MetadataDouble DEF='centerOfRotation_10' containerField='value'
+              <MetadataDouble DEF='centerOfRotation_9' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
                   value='-0.0320612526145463, 0, 0.0937320149966475'/>
-              <MetadataDouble DEF='fieldOfViewScale_11' containerField='value'
+              <MetadataDouble DEF='fieldOfViewScale_10' containerField='value'
                   name='fieldOfViewScale'
                   reference='http://titania.create3000.de'
                   value='1.21023944190259'/>
@@ -114,19 +114,19 @@
             <MetadataSet DEF='FrontViewpoint' containerField='value'
                 name='FrontViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_12' containerField='value'
+              <MetadataDouble DEF='position_11' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
                   value='0, 0, 10000'/>
-              <MetadataDouble DEF='orientation_13' containerField='value'
+              <MetadataDouble DEF='orientation_12' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
                   value='0, 0, 1, 0'/>
-              <MetadataDouble DEF='centerOfRotation_14' containerField='value'
+              <MetadataDouble DEF='centerOfRotation_13' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
                   value='-0.00884759203065143, 0.0177734813359099, 0'/>
-              <MetadataDouble DEF='fieldOfViewScale_15' containerField='value'
+              <MetadataDouble DEF='fieldOfViewScale_14' containerField='value'
                   name='fieldOfViewScale'
                   reference='http://titania.create3000.de'
                   value='1.212467484375'/>
@@ -147,7 +147,7 @@
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
-    <Viewpoint DEF='_16'
+    <Viewpoint DEF='_15'
         description='Test'
         position='25.2858 -10.9949 37.7836'
         centerOfRotation='25.2858 -10.9949 0'/>
@@ -156,8 +156,8 @@
         <Appearance>
           <Material/>
         </Appearance>
-        <Text DEF='_17'
-            string='"ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^", "_`abcdefghijklmnopqrstuvwxyz{|", "}~", " ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸", "¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ", "×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóô", "õö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒ", "ēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİ", "ıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎ", "ŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬ", "ŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſƀƁƂƃƄƅƆƇƈƉƊ", "ƋƌƍƎƏƐƑƒƓƔƕƖƗƘƙƚƛƜƝƞƟƠơƢƣƤƥƦƧƨ", "ƩƪƫƬƭƮƯưƱƲƳƴƵƶƷƸƹƺƻƼƽƾƿǀǁǂǃǄǅǆ", "ǇǈǉǊǋǌǍǎǏǐǑǒǓǔǕǖǗǘǙǚǛǜǝǞǟǠǡǢǣǤ", "ǥǦǧǨǩǪǫǬǭǮǯǰǱǲǳǴǵǶǷǸǹǺǻǼǽǾǿȀȁȂ", "ȃȄȅȆȇȈȉȊȋȌȍȎȏȐȑȒȓȔȕȖȗȘșȚțȜȝȞȟȠ", "ȡȢȣȤȥȦȧȨȩȪȫȬȭȮȯȰȱȲȳȴȵȶȷȸȹȺȻȼȽȾ", "ȿɀɁɂɃɄɅɆɇɈɉɊɋɌɍɎɏɐɑɒɓɔɕɖɗɘəɚɛɜ", "ɝɞɟɠɡɢɣɤɥɦɧɨɩɪɫɬɭɮɯɰɱɲɳɴɵɶɷɸɹɺ", "ɻɼɽɾɿʀʁʂʃʄʅʆʇʈʉʊʋʌʍʎʏʐʑʒʓʔʕʖʗʘ"'
+        <Text DEF='_16'
+            string='"ʘʗʖʕʔʓʒʑʐʏʎʍʌʋʊʉʈʇʆʅʄʃʂʁʀɿɾɽɼɻ", "ɺɹɸɷɶɵɴɳɲɱɰɯɮɭɬɫɪɩɨɧɦɥɤɣɢɡɠɟɞɝ", "ɜɛɚəɘɗɖɕɔɓɒɑɐɏɎɍɌɋɊɉɈɇɆɅɄɃɂɁɀȿ", "ȾȽȼȻȺȹȸȷȶȵȴȳȲȱȰȯȮȭȬȫȪȩȨȧȦȥȤȣȢȡ", "ȠȟȞȝȜțȚșȘȗȖȕȔȓȒȑȐȏȎȍȌȋȊȉȈȇȆȅȄȃ", "ȂȁȀǿǾǽǼǻǺǹǸǷǶǵǴǳǲǱǰǯǮǭǬǫǪǩǨǧǦǥ", "ǤǣǢǡǠǟǞǝǜǛǚǙǘǗǖǕǔǓǒǑǐǏǎǍǌǋǊǉǈǇ", "ǆǅǄǃǂǁǀƿƾƽƼƻƺƹƸƷƶƵƴƳƲƱưƯƮƭƬƫƪƩ", "ƨƧƦƥƤƣƢơƠƟƞƝƜƛƚƙƘƗƖƕƔƓƒƑƐƏƎƍƌƋ", "ƊƉƈƇƆƅƄƃƂƁƀſžŽżŻźŹŸŷŶŵŴųŲűŰůŮŭ", "ŬūŪũŨŧŦťŤţŢšŠşŞŝŜśŚřŘŗŖŕŔœŒőŐŏ", "ŎōŌŋŊŉňŇņŅńŃłŁŀĿľĽļĻĺĹĸķĶĵĴĳĲı", "İįĮĭĬīĪĩĨħĦĥĤģĢġĠğĞĝĜěĚęĘėĖĕĔē", "ĒđĐďĎčČċĊĉĈćĆąĄăĂāĀÿþýüûúùø÷öõ", "ôóòñðïîíìëêéèçæåäãâáàßÞÝÜÛÚÙØ×", "ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈÇÆÅÄÃÂÁÀ¿¾½¼»º¹", "¸·¶µ´³²±°¯®­¬«ª©¨§¦¥¤£¢¡ ", "~}", "|{zyxwvutsrqponmlkjihgfedcba`_", "^]\\[ZYXWVUTSRQPONMLKJIHGFEDCBA"'
             length='22.4851, 19.034, 19.168, 18.2026, 22.8299, 20.8315, 21.6135, 19.264, 20.2626, 21.208, 22.508, 22.9191, 22.064, 24.4821, 25.3201, 20.224, 22.8127, 20.1262, 19.271, 19.2419'
             solid='true'>
           <FontStyle
@@ -173,7 +173,7 @@
 
 function initialize ()
 {
-	var c = 65;
+	var c = 65 + 20 * 30;
 	
 	for (var y = 0; y < 20; ++ y)
 	{
@@ -181,7 +181,7 @@ function initialize ()
 	
 		for (var x = 0; x < 30; ++ x)
 		{
-			s += String .fromCharCode (c ++);
+			s += String .fromCharCode (-- c);
 		}
 		
 		string_changed [y] = s;
@@ -191,7 +191,7 @@ function initialize ()
 }
 ]]>
     </Script>
-    <ROUTE fromNode='DebugScript' fromField='string_changed' toNode='_17' toField='set_string'/>
+    <ROUTE fromNode='DebugScript' fromField='string_changed' toNode='_16' toField='set_string'/>
     <ROUTE fromNode='DebugScript' fromField='string_changed' toNode='_2' toField='set_string'/>
   </Scene>
 </X3D>
