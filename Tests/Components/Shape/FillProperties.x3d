@@ -13,7 +13,7 @@
     <meta name='generator' content='Titania V4.5.0, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Shape/FillProperties.x3d'/>
     <meta name='license' content='../license.html'/>
-    <meta name='modified' content='Sat, 13 Apr 2019 08:14:16 GMT'/>
+    <meta name='modified' content='Sat, 13 Apr 2019 10:52:32 GMT'/>
     <meta name='reference' content='http://X3dGraphics.com'/>
     <meta name='reference' content='http://www.web3d.org/x3d/content/examples/X3dResources.html'/>
     <meta name='subject' content='X3D book, X3D graphics, X3D-Edit, http://www.x3dGraphics.com'/>
@@ -46,7 +46,28 @@
               value='false'/>
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
-              reference='http://titania.create3000.de'/>
+              reference='http://titania.create3000.de'>
+            <Transform DEF='_1' containerField='value'
+                translation='-11.9683 7 0'>
+              <Shape>
+                <Appearance DEF='FillAppearance1_2'>
+                  <FillProperties
+                      hatchStyle='0'/>
+                  <Material
+                      diffuseColor='1 0 0'/>
+                </Appearance>
+                <Box/>
+              </Shape>
+            </Transform>
+          </MetadataSet>
+        </MetadataSet>
+        <MetadataSet DEF='BrowserPanel' containerField='value'
+            name='BrowserPanel'
+            reference='http://titania.create3000.de'>
+          <MetadataString DEF='shading' containerField='value'
+              name='shading'
+              reference='http://titania.create3000.de'
+              value='"", "GOURAUD", "", ""'/>
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
@@ -509,5 +530,6 @@
         <Box/>
       </Shape>
     </Transform>
+    <Transform USE='_1'/>
   </Scene>
 </X3D>
