@@ -10,7 +10,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.5.3, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Texturing3D/ImageTexture3D.x3d'/>
-    <meta name='modified' content='Thu, 09 May 2019 17:40:30 GMT'/>
+    <meta name='modified' content='Thu, 09 May 2019 17:43:59 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='Volume'>
@@ -244,7 +244,7 @@ function set_translation (value)
     </Transform>
     <Transform>
       <Transform>
-        <ProtoInstance name='Volume'>
+        <ProtoInstance name='Volume' DEF='Volume'>
           <fieldValue name='dimension' value='200'/>
           <fieldValue name='voxels'>
             <ImageTexture3D DEF='_14' containerField='voxels'
