@@ -8,10 +8,9 @@
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Fri, 19 Apr 2019 09:28:31 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V4.5.0, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/Projekte/Titania/Library/Tests/Texturing3D/ComposedTexture3D.wrl'/>
-    <meta name='modified' content='Fri, 19 Apr 2019 09:28:31 GMT'/>
-    <meta name='titania-output-style' content='Nicest'/>
+    <meta name='generator' content='Titania V4.5.3, http://titania.create3000.de'/>
+    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Texturing3D/ComposedTexture3D.x3d'/>
+    <meta name='modified' content='Thu, 09 May 2019 15:12:42 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='Volume'>
@@ -106,6 +105,9 @@ function set_dimension ()
               name='selectGeometry'
               reference='http://titania.create3000.de'
               value='false'/>
+          <MetadataSet DEF='nodes' containerField='value'
+              name='nodes'
+              reference='http://titania.create3000.de'/>
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
@@ -124,14 +126,20 @@ function set_dimension ()
           scale='0.5 0.5 1'>
         <Shape>
           <Appearance>
-            <LineProperties
-                linewidthScaleFactor='3'/>
-            <FillProperties
-                filled='false'
-                hatched='false'/>
-            <Material/>
+            <Material
+                transparency='1'/>
           </Appearance>
           <Rectangle2D/>
+        </Shape>
+        <Shape>
+          <Appearance>
+            <Material/>
+          </Appearance>
+          <IndexedLineSet
+              coordIndex='0, 1, 2, 3, 0'>
+            <Coordinate
+                point='-1 -1 0, 1 -1 0, 1 1 0, -1 1 0'/>
+          </IndexedLineSet>
         </Shape>
       </Transform>
       <Script DEF='ClipPlaneScript'>
