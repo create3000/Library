@@ -10,7 +10,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.5.3, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Texturing3D/ComposedTexture3D.x3d'/>
-    <meta name='modified' content='Fri, 10 May 2019 15:46:40 GMT'/>
+    <meta name='modified' content='Fri, 10 May 2019 16:05:54 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='Volume'>
@@ -31,7 +31,7 @@
             <Coordinate/>
           </QuadSet>
         </Shape>
-        <Script DEF='VolumeScript_2'>
+        <Script DEF='VolumeScript'>
           <field accessType='inputOutput' type='SFInt32' name='dimension'/>
           <field accessType='inputOutput' type='SFNode' name='geometry'>
             <QuadSet USE='_1'/>
@@ -61,15 +61,15 @@ function set_dimension ()
 			depth = i / (dimension - 1),
 			z     = 0.5 - depth;
 
-		coord .point .push (new SFVec3f ( 0.5,  0.5, z));
-		coord .point .push (new SFVec3f (-0.5,  0.5, z));
-		coord .point .push (new SFVec3f (-0.5, -0.5, z));
-		coord .point .push (new SFVec3f ( 0.5, -0.5, z));
+		coord .point .push (new SFVec3f ( 0.5,  0.5, z),
+		                    new SFVec3f (-0.5,  0.5, z),
+		                    new SFVec3f (-0.5, -0.5, z),
+		                    new SFVec3f ( 0.5, -0.5, z));
 
-		texCoord .point .push (new SFVec3f (1, 1, depth));
-		texCoord .point .push (new SFVec3f (0, 1, depth));
-		texCoord .point .push (new SFVec3f (0, 0, depth));
-		texCoord .point .push (new SFVec3f (1, 0, depth));
+		texCoord .point .push (new SFVec3f (1, 1, depth),
+		                       new SFVec3f (0, 1, depth),
+		                       new SFVec3f (0, 0, depth),
+		                       new SFVec3f (1, 0, depth));
 	}
 }
 ]]>
@@ -102,7 +102,9 @@ function set_dimension ()
               value='false'/>
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
-              reference='http://titania.create3000.de'/>
+              reference='http://titania.create3000.de'>
+            <!-- NULL -->
+          </MetadataSet>
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
@@ -171,11 +173,11 @@ function set_translation (value)
           </fieldValue>
         </ProtoInstance>
       </Transform>
-      <ClipPlane DEF='_3'
+      <ClipPlane DEF='_2'
           plane='0 0 -1 0.843597'/>
     </Transform>
     <ROUTE fromNode='PlaneSensor' fromField='translation_changed' toNode='ClipPlaneScript' toField='set_translation'/>
     <ROUTE fromNode='PlaneSensor' fromField='translation_changed' toNode='Rectangle2D' toField='set_translation'/>
-    <ROUTE fromNode='ClipPlaneScript' fromField='plane_changed' toNode='_3' toField='set_plane'/>
+    <ROUTE fromNode='ClipPlaneScript' fromField='plane_changed' toNode='_2' toField='set_plane'/>
   </Scene>
 </X3D>

@@ -10,7 +10,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.5.3, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Texturing3D/ImageTexture3D.x3d'/>
-    <meta name='modified' content='Fri, 10 May 2019 15:45:04 GMT'/>
+    <meta name='modified' content='Fri, 10 May 2019 16:05:56 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='Volume'>
@@ -19,13 +19,13 @@
         <field accessType='inputOutput' type='SFNode' name='voxels'/>
       </ProtoInterface>
       <ProtoBody>
-        <Shape>
+        <Shape DEF='_1'>
           <Appearance>
             <IS>
               <connect nodeField='texture' protoField='voxels'/>
             </IS>
           </Appearance>
-          <QuadSet DEF='_1'
+          <QuadSet DEF='_2'
               solid='false'>
             <TextureCoordinate3D/>
             <Coordinate/>
@@ -34,7 +34,7 @@
         <Script DEF='VolumeScript'>
           <field accessType='inputOutput' type='SFInt32' name='dimension'/>
           <field accessType='inputOutput' type='SFNode' name='geometry'>
-            <QuadSet USE='_1'/>
+            <QuadSet USE='_2'/>
           </field>
           <IS>
             <connect nodeField='dimension' protoField='dimension'/>
@@ -61,15 +61,15 @@ function set_dimension ()
 			depth = i / (dimension - 1),
 			z     = 0.5 - depth;
 
-		coord .point .push (new SFVec3f ( 0.5,  0.5, z));
-		coord .point .push (new SFVec3f (-0.5,  0.5, z));
-		coord .point .push (new SFVec3f (-0.5, -0.5, z));
-		coord .point .push (new SFVec3f ( 0.5, -0.5, z));
+		coord .point .push (new SFVec3f ( 0.5,  0.5, z),
+		                    new SFVec3f (-0.5,  0.5, z),
+		                    new SFVec3f (-0.5, -0.5, z),
+		                    new SFVec3f ( 0.5, -0.5, z));
 
-		texCoord .point .push (new SFVec3f (1, 1, depth));
-		texCoord .point .push (new SFVec3f (0, 1, depth));
-		texCoord .point .push (new SFVec3f (0, 0, depth));
-		texCoord .point .push (new SFVec3f (1, 0, depth));
+		texCoord .point .push (new SFVec3f (1, 1, depth),
+		                       new SFVec3f (0, 1, depth),
+		                       new SFVec3f (0, 0, depth),
+		                       new SFVec3f (1, 0, depth));
 	}
 }
 ]]>
@@ -91,7 +91,7 @@ function set_dimension ()
         <MetadataSet DEF='Grid' containerField='value'
             name='Grid'
             reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled_2' containerField='value'
+          <MetadataBoolean DEF='enabled_3' containerField='value'
               name='enabled'
               reference='http://titania.create3000.de'
               value='true'/>
@@ -105,12 +105,15 @@ function set_dimension ()
               value='false'/>
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
-              reference='http://titania.create3000.de'/>
+              reference='http://titania.create3000.de'>
+            <!-- NULL -->
+            <!-- NULL -->
+          </MetadataSet>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
             name='BrowserPanel'
             reference='http://titania.create3000.de'>
-          <MetadataString DEF='type_3' containerField='value'
+          <MetadataString DEF='type_4' containerField='value'
               name='type'
               reference='http://titania.create3000.de'
               value='"TOP_VIEW", "MAIN_VIEW", "PERSPECTIVE_VIEW", "FRONT_VIEW"'/>
@@ -120,15 +123,15 @@ function set_dimension ()
             <MetadataSet DEF='PerspectiveViewpoint' containerField='value'
                 name='PerspectiveViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_4' containerField='value'
+              <MetadataDouble DEF='position_5' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
                   value='5.87788534164429, 6.46984958648682, 13.8524446487427'/>
-              <MetadataDouble DEF='orientation_5' containerField='value'
+              <MetadataDouble DEF='orientation_6' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
                   value='-0.704047462871212, 0.695566762376517, 0.143192350010952, 0.568941727555854'/>
-              <MetadataDouble DEF='centerOfRotation_6' containerField='value'
+              <MetadataDouble DEF='centerOfRotation_7' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
                   value='0, 0, 0'/>
@@ -140,19 +143,19 @@ function set_dimension ()
             <MetadataSet DEF='TopViewpoint' containerField='value'
                 name='TopViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_7' containerField='value'
+              <MetadataDouble DEF='position_8' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
                   value='0, 10000, 0'/>
-              <MetadataDouble DEF='orientation_8' containerField='value'
+              <MetadataDouble DEF='orientation_9' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
                   value='1, 0, 0, 4.71238898038469'/>
-              <MetadataDouble DEF='centerOfRotation_9' containerField='value'
+              <MetadataDouble DEF='centerOfRotation_10' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
                   value='-0.0320612526145463, 0, 0.0937320149966475'/>
-              <MetadataDouble DEF='fieldOfViewScale_10' containerField='value'
+              <MetadataDouble DEF='fieldOfViewScale_11' containerField='value'
                   name='fieldOfViewScale'
                   reference='http://titania.create3000.de'
                   value='1.21023944190259'/>
@@ -160,19 +163,19 @@ function set_dimension ()
             <MetadataSet DEF='FrontViewpoint' containerField='value'
                 name='FrontViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_11' containerField='value'
+              <MetadataDouble DEF='position_12' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
                   value='0, 0, 10000'/>
-              <MetadataDouble DEF='orientation_12' containerField='value'
+              <MetadataDouble DEF='orientation_13' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
                   value='0, 0, 1, 0'/>
-              <MetadataDouble DEF='centerOfRotation_13' containerField='value'
+              <MetadataDouble DEF='centerOfRotation_14' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
                   value='-0.00884759203065143, 0.0177734813359099, 0'/>
-              <MetadataDouble DEF='fieldOfViewScale_14' containerField='value'
+              <MetadataDouble DEF='fieldOfViewScale_15' containerField='value'
                   name='fieldOfViewScale'
                   reference='http://titania.create3000.de'
                   value='1.212467484375'/>
@@ -242,7 +245,7 @@ function set_translation (value)
         <ProtoInstance name='Volume' DEF='Volume'>
           <fieldValue name='dimension' value='200'/>
           <fieldValue name='voxels'>
-            <ImageTexture3D DEF='_15' containerField='voxels'
+            <ImageTexture3D DEF='_16' containerField='voxels'
                 url='"backpack.nrrd"'
                 repeatS='true'
                 repeatT='true'
@@ -250,10 +253,10 @@ function set_translation (value)
           </fieldValue>
         </ProtoInstance>
       </Transform>
-      <ClipPlane DEF='_16'
+      <ClipPlane DEF='_17'
           plane='0 0 -1 1.42007'/>
     </Transform>
-    <ROUTE fromNode='ClipPlaneScript' fromField='plane_changed' toNode='_16' toField='set_plane'/>
+    <ROUTE fromNode='ClipPlaneScript' fromField='plane_changed' toNode='_17' toField='set_plane'/>
     <ROUTE fromNode='PlaneSensor' fromField='translation_changed' toNode='ClipPlaneScript' toField='set_translation'/>
     <ROUTE fromNode='PlaneSensor' fromField='translation_changed' toNode='Rectangle2D' toField='set_translation'/>
   </Scene>
