@@ -10,7 +10,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.5.3, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Texturing3D/ImageTexture3D.x3d'/>
-    <meta name='modified' content='Fri, 10 May 2019 16:05:56 GMT'/>
+    <meta name='modified' content='Sat, 11 May 2019 10:02:42 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='Volume'>
@@ -19,13 +19,13 @@
         <field accessType='inputOutput' type='SFNode' name='voxels'/>
       </ProtoInterface>
       <ProtoBody>
-        <Shape DEF='_1'>
+        <Shape>
           <Appearance>
             <IS>
               <connect nodeField='texture' protoField='voxels'/>
             </IS>
           </Appearance>
-          <QuadSet DEF='_2'
+          <QuadSet DEF='_1'
               solid='false'>
             <TextureCoordinate3D/>
             <Coordinate/>
@@ -34,7 +34,7 @@
         <Script DEF='VolumeScript'>
           <field accessType='inputOutput' type='SFInt32' name='dimension'/>
           <field accessType='inputOutput' type='SFNode' name='geometry'>
-            <QuadSet USE='_2'/>
+            <QuadSet USE='_1'/>
           </field>
           <IS>
             <connect nodeField='dimension' protoField='dimension'/>
@@ -91,7 +91,7 @@ function set_dimension ()
         <MetadataSet DEF='Grid' containerField='value'
             name='Grid'
             reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled_3' containerField='value'
+          <MetadataBoolean DEF='enabled_2' containerField='value'
               name='enabled'
               reference='http://titania.create3000.de'
               value='true'/>
@@ -106,8 +106,11 @@ function set_dimension ()
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
               reference='http://titania.create3000.de'>
-            <!-- NULL -->
-            <!-- NULL -->
+            <ImageTexture3D DEF='_3' containerField='value'
+                url='"backpack.nrrd"'
+                repeatS='true'
+                repeatT='true'
+                repeatR='true'/>
           </MetadataSet>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
@@ -240,19 +243,13 @@ function set_translation (value)
 ]]>
       </Script>
     </Transform>
-    <Transform>
-      <Transform>
-        <ProtoInstance name='Volume' DEF='Volume'>
-          <fieldValue name='dimension' value='200'/>
-          <fieldValue name='voxels'>
-            <ImageTexture3D DEF='_16' containerField='voxels'
-                url='"backpack.nrrd"'
-                repeatS='true'
-                repeatT='true'
-                repeatR='true'/>
-          </fieldValue>
-        </ProtoInstance>
-      </Transform>
+    <Transform DEF='Volume_16'>
+      <ProtoInstance name='Volume' DEF='Volume'>
+        <fieldValue name='dimension' value='200'/>
+        <fieldValue name='voxels'>
+          <ImageTexture3D USE='_3' containerField='voxels'/>
+        </fieldValue>
+      </ProtoInstance>
       <ClipPlane DEF='_17'
           plane='0 0 -1 1.42007'/>
     </Transform>
