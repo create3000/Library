@@ -2,7 +2,6 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
 <X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
   <head>
-    <component name='CADGeometry' level='1'/>
     <component name='EnvironmentalEffects' level='3'/>
     <component name='Texturing3D' level='1'/>
     <meta name='comment' content='World of Titania'/>
@@ -10,72 +9,13 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.5.3, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Texturing3D/PixelTexture3D.x3d'/>
-    <meta name='modified' content='Sun, 12 May 2019 10:18:45 GMT'/>
+    <meta name='modified' content='Tue, 14 May 2019 11:10:11 GMT'/>
   </head>
   <Scene>
-    <ProtoDeclare name='Volume'>
-      <ProtoInterface>
-        <field accessType='inputOutput' type='SFInt32' name='dimension' value='10'/>
-        <field accessType='inputOutput' type='SFNode' name='voxels'/>
-      </ProtoInterface>
-      <ProtoBody>
-        <Shape>
-          <Appearance>
-            <IS>
-              <connect nodeField='texture' protoField='voxels'/>
-            </IS>
-          </Appearance>
-          <QuadSet DEF='_1'
-              solid='false'>
-            <TextureCoordinate3D/>
-            <Coordinate/>
-          </QuadSet>
-        </Shape>
-        <Script DEF='VolumeScript'>
-          <field accessType='inputOutput' type='SFInt32' name='dimension'/>
-          <field accessType='inputOutput' type='SFNode' name='geometry'>
-            <QuadSet USE='_1'/>
-          </field>
-          <IS>
-            <connect nodeField='dimension' protoField='dimension'/>
-          </IS>
-<![CDATA[vrmlscript:
-
-function initialize ()
-{
-	set_dimension ();
-}
-
-function set_dimension ()
-{
-	var
-		coord    = geometry .coord,
-		texCoord = geometry .texCoord;
-	
-	coord    .point .length = 0;
-	texCoord .point .length = 0;
-
-	for (var i = 0; i < dimension; ++ i)
-	{
-		var
-			depth = i / (dimension - 1),
-			z     = 0.5 - depth;
-
-		coord .point .push (new SFVec3f ( 0.5,  0.5, z),
-		                    new SFVec3f (-0.5,  0.5, z),
-		                    new SFVec3f (-0.5, -0.5, z),
-		                    new SFVec3f ( 0.5, -0.5, z));
-
-		texCoord .point .push (new SFVec3f (1, 1, depth),
-		                       new SFVec3f (0, 1, depth),
-		                       new SFVec3f (0, 0, depth),
-		                       new SFVec3f (1, 0, depth));
-	}
-}
-]]>
-        </Script>
-      </ProtoBody>
-    </ProtoDeclare>
+    <ExternProtoDeclare name='Volume' url='"Volume.x3d#Volume", "file:///home/holger/Projekte/Library/Tests/Components/Texturing3D/Volume.x3d#Volume"'>
+      <field accessType='inputOutput' type='SFVec3f' name='dimensions'/>
+      <field accessType='inputOutput' type='SFNode' name='voxels'/>
+    </ExternProtoDeclare>
     <WorldInfo
         title='PixelTexture3D'>
       <MetadataSet DEF='Titania'
@@ -103,17 +43,17 @@ function set_dimension ()
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
               reference='http://titania.create3000.de'>
-            <Transform DEF='RGB_2' containerField='value'
-                translation='2 -2 0'>
-              <ProtoInstance name='Volume'>
-                <fieldValue name='dimension' value='200'/>
-                <fieldValue name='voxels'>
-                  <PixelTexture3D DEF='_3' containerField='voxels'
-                      image='4, 2, 2, 2, 65535, -16776961, -16776961, 65535, -65281, 16711935, 16711935, 0'/>
-                </fieldValue>
-              </ProtoInstance>
-            </Transform>
+            <PixelTexture3D DEF='_1' containerField='value'
+                image='4, 2, 2, 2, 65535, -16776961, -16776961, 65535, -65281, 16711935, 16711935, 0'/>
           </MetadataSet>
+        </MetadataSet>
+        <MetadataSet DEF='Prototype' containerField='value'
+            name='Prototype'
+            reference='http://titania.create3000.de'>
+          <MetadataString DEF='path' containerField='value'
+              name='path'
+              reference='http://titania.create3000.de'
+              value='"Volume"'/>
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
@@ -126,9 +66,8 @@ function set_dimension ()
         centerOfRotation='1 -1 0'/>
     <Transform DEF='Luminance'>
       <ProtoInstance name='Volume'>
-        <fieldValue name='dimension' value='200'/>
         <fieldValue name='voxels'>
-          <PixelTexture3D DEF='_4' containerField='voxels'
+          <PixelTexture3D DEF='_2' containerField='voxels'
               image='1, 2, 2, 2, 255, 0, 0, 255, 0, 255, 255, 0'/>
         </fieldValue>
       </ProtoInstance>
@@ -136,9 +75,8 @@ function set_dimension ()
     <Transform DEF='LuminanceAlpha'
         translation='2 0 0'>
       <ProtoInstance name='Volume'>
-        <fieldValue name='dimension' value='200'/>
         <fieldValue name='voxels'>
-          <PixelTexture3D DEF='_5' containerField='voxels'
+          <PixelTexture3D DEF='_3' containerField='voxels'
               image='2, 2, 2, 2, 65535, 255, 255, 65535, 255, 65535, 65535, 0'/>
         </fieldValue>
       </ProtoInstance>
@@ -146,13 +84,19 @@ function set_dimension ()
     <Transform DEF='RGB'
         translation='0 -2 0'>
       <ProtoInstance name='Volume'>
-        <fieldValue name='dimension' value='200'/>
         <fieldValue name='voxels'>
-          <PixelTexture3D DEF='_6' containerField='voxels'
+          <PixelTexture3D DEF='_4' containerField='voxels'
               image='3, 2, 2, 2, 255, 16711680, 16711680, 255, 16776960, 65280, 65280, 16776960'/>
         </fieldValue>
       </ProtoInstance>
     </Transform>
-    <Transform USE='RGB_2'/>
+    <Transform DEF='RGB_5'
+        translation='2 -2 0'>
+      <ProtoInstance name='Volume'>
+        <fieldValue name='voxels'>
+          <PixelTexture3D USE='_1' containerField='voxels'/>
+        </fieldValue>
+      </ProtoInstance>
+    </Transform>
   </Scene>
 </X3D>
