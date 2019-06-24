@@ -18,9 +18,9 @@
         <field accessType='initializeOnly' type='SFBool' name='ccw' value='true'/>
         <field accessType='initializeOnly' type='SFBool' name='convex' value='true'/>
         <field accessType='initializeOnly' type='SFFloat' name='creaseAngle'/>
-        <field accessType='inputOutput' type='MFVec2f' name='crossSection' value='1 1, 1 -1, -1 -1, -1 1, 1 1'/>
-        <field accessType='inputOutput' type='MFRotation' name='orientation' value='0 0 1 0'/>
-        <field accessType='inputOutput' type='MFVec2f' name='scale' value='1 1'/>
+        <field accessType='initializeOnly' type='MFVec2f' name='crossSection' value='1 1, 1 -1, -1 -1, -1 1, 1 1'/>
+        <field accessType='initializeOnly' type='MFRotation' name='orientation' value='0 0 1 0'/>
+        <field accessType='initializeOnly' type='MFVec2f' name='scale' value='1 1'/>
         <field accessType='inputOutput' type='MFVec3f' name='spine' value='0 0 0, 0 1 0'/>
         <field accessType='inputOutput' type='SFFloat' name='cornerRadius' value='1'/>
         <field accessType='inputOutput' type='SFInt32' name='cornerDimension' value='16'/>
@@ -124,7 +124,7 @@ function eventsProcessed ()
 	if (spine .length > 1)
 		roundedSpine [roundedSpine .length] = spine [spine .length - 1];
 
-	geometry .spine = roundedSpine;
+	geometry .set_spine = roundedSpine;
 }
 
 function get_closest_point (point1, direction1, point2, direction2, closestPoint)

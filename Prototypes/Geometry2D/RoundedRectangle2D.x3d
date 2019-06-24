@@ -111,7 +111,7 @@ function eventsProcessed ()
 		coordIndex [coordIndex .length] = -1;
 	}
 
-	geometry .coordIndex = coordIndex;
+	geometry .set_coordIndex = coordIndex;
 }
 ]]>
         </Script>

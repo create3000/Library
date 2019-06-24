@@ -73,7 +73,6 @@ function eventsProcessed ()
 
 	var steps_1 = circle ? steps : steps - 1;
 	
-	geometry .coordIndex .length = 0;
 	coord .point .length         = 0;
 	texCoord .point .length      = 0;
 
