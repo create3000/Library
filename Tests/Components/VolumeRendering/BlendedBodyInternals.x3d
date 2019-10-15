@@ -35,7 +35,7 @@
           <ImageTexture3D DEF="_2" containerField='voxels' url='"datasets/nrrd/body.nrrd" "http://metagrid2.sv.vt.edu/~npolys/X3DVolexamples/X3DVolumeExamples/datasets/nrrd/body.nrrd" "https://savage.nps.edu/Savage/VolumeRendering/datasets/nrrd/body.nrrd"'/>
         </VolumeData>
       </Transform>
-      <Transform scale='1.000292969 0.000292969 0.000292969'>
+      <Transform translation='1 0 0' scale='0.000292969 0.000292969 0.000292969'>
         <VolumeData dimensions='512 512 452'>
           <BlendedVolumeStyle USE="_!"/>
           <ImageTexture3D USE="_2" containerField='voxels'/>
