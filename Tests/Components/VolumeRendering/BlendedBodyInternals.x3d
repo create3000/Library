@@ -28,11 +28,17 @@
       <Background DEF='BG' skyColor='0.5 0.5 0.5'/>
       <Transform scale='0.000292969 0.000292969 0.000292969'>
         <VolumeData dimensions='512 512 452'>
-          <BlendedVolumeStyle weightConstant1='0.51' weightConstant2='0.5'>
+          <BlendedVolumeStyle DEF="_1" weightConstant1='0.51' weightConstant2='0.5'>
             <ToneMappedVolumeStyle/>
             <ImageTexture3D containerField='voxels' url='"datasets/nrrd/internals.nrrd" "http://metagrid2.sv.vt.edu/~npolys/X3DVolexamples/X3DVolumeExamples/datasets/nrrd/internals.nrrd" "https://savage.nps.edu/Savage/VolumeRendering/datasets/nrrd/.nrrd"'/>
           </BlendedVolumeStyle>
-          <ImageTexture3D containerField='voxels' url='"datasets/nrrd/body.nrrd" "http://metagrid2.sv.vt.edu/~npolys/X3DVolexamples/X3DVolumeExamples/datasets/nrrd/body.nrrd" "https://savage.nps.edu/Savage/VolumeRendering/datasets/nrrd/body.nrrd"'/>
+          <ImageTexture3D DEF="_2" containerField='voxels' url='"datasets/nrrd/body.nrrd" "http://metagrid2.sv.vt.edu/~npolys/X3DVolexamples/X3DVolumeExamples/datasets/nrrd/body.nrrd" "https://savage.nps.edu/Savage/VolumeRendering/datasets/nrrd/body.nrrd"'/>
+        </VolumeData>
+      </Transform>
+      <Transform scale='1.000292969 0.000292969 0.000292969'>
+        <VolumeData dimensions='512 512 452'>
+          <BlendedVolumeStyle USE="_!"/>
+          <ImageTexture3D USE="_2" containerField='voxels'/>
         </VolumeData>
       </Transform>
     </Group>
