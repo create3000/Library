@@ -44,7 +44,7 @@
               name='nodes'
               reference='http://titania.create3000.de'>
             <ImageTexture3D DEF='_2' containerField='value'
-                url='"../Texturing3D/backpack.nrrd"'
+                url='"datasets/nrrd/backpack.nrrd"'
                 repeatS='true'
                 repeatT='true'
                 repeatR='true'/>
