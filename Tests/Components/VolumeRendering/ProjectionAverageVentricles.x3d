@@ -21,12 +21,12 @@
   </head>
   <Scene>
     <Group>
-      <Viewpoint DEF='VP' description='Projection Max Ventricles' position='0 0 0.21'/>
+      <Viewpoint DEF='VP' description='Boundary Enhancement Ventricles' position='0 0 0.21'/>
       <Background DEF='BG' skyColor='0.5 0.5 0.5'/>
       <PointLight intensity='0.4' location='1 0 1'/>
       <Transform scale='0.0651042 0.0651042 0.0651042'>
         <VolumeData dimensions='2.304 2.304 1.116'>
-          <ProjectionVolumeStyle type="AVERAGE"/>
+          <BoundaryEnhancementVolumeStyle type="AVERAGE"/>
           <ImageTexture3D containerField='voxels' url='"datasets/nrrd/mri_ventricles.nrrd" "http://metagrid2.sv.vt.edu/~npolys/X3DVolexamples/X3DVolumeExamples/datasets/nrrd/mri_ventricles.nrrd" "https://savage.nps.edu/Savage/VolumeRendering/datasets/nrrd/mri_ventricles.nrrd"'/>
         </VolumeData>
       </Transform>
