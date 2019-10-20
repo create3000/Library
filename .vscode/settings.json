@@ -1,0 +1,15 @@
+{
+   "files.exclude": {
+      ".vscode/ipch": true,
+      "**/.bzr": true,
+      "**/*~": true,
+      "**/node_modules": true
+   },
+   "files.watcherExclude": {
+      "**/.bzr/**": true
+   },
+   "files.insertFinalNewline": true,
+   "files.trimFinalNewlines": true,
+   "files.trimTrailingWhitespace": true,
+   "files.eol": "\n"
+}
