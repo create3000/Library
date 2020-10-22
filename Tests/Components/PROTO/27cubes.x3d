@@ -185,7 +185,7 @@
         position='0 0 12'/>
     <ProtoInstance name='twentyseven'>
       <fieldValue name='myShape'>
-        <Shape USE='_4'/>
+        <!-- <Shape USE='_4'/> -->
         <Shape DEF='_6'>
           <Appearance>
             <Material
