@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrise X3D Editor V1.0, https://create3000.github.io/Sunrise/'/>
     <meta name='identifier' content='file:///Volumes/Home/Projekte/Library/Tests/Components/CADGeometry/CADLayer.x3d'/>
-    <meta name='modified' content='Fri, 3 Dec 2021 01:34:55 +0100'/>
+    <meta name='modified' content='Fri, 3 Dec 2021 01:45:01 +0100'/>
     <meta name='title' content='CADLayer'/>
   </head>
   <Scene>
@@ -184,6 +184,19 @@
         <fieldValue name='keyValue' value='true'/>
       </ProtoInstance>
     </Transform>
+    <Transform>
+      <Transform DEF='Box_2'
+          translation='0 3 -1.10241e-05'>
+        <Shape>
+          <Appearance>
+            <Material
+                diffuseColor='0 0 1'/>
+          </Appearance>
+          <Box/>
+        </Shape>
+      </Transform>
+      <TouchSensor DEF='_8'/>
+    </Transform>
     <ROUTE fromNode='_4' fromField='touchTime' toNode='_5' toField='set_triggerTime'/>
     <ROUTE fromNode='_5' fromField='value_changed' toNode='_3' toField='set_visible'/>
     <ROUTE fromNode='_5' fromField='value_changed' toNode='_2' toField='set_visible'/>
@@ -192,5 +205,6 @@
     <ROUTE fromNode='_7' fromField='value_changed' toNode='_2' toField='set_visible'/>
     <ROUTE fromNode='_7' fromField='value_changed' toNode='_1' toField='set_visible'/>
     <ROUTE fromNode='_6' fromField='touchTime' toNode='_7' toField='set_triggerTime'/>
+    <ROUTE fromNode='_8' fromField='isActive' toNode='_2' toField='set_visible'/>
   </Scene>
 </X3D>
