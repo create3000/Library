@@ -81,7 +81,8 @@
         maxParticles='500'
         particleLifetime='8'
         lifetimeVariation='0.8'
-        particleSize='1 1'>
+        particleSize='1 1'
+        castShadow='true'>
       <PointEmitter
           direction='0 0 0'
           speed='0.5'
