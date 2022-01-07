@@ -50,8 +50,8 @@
               reference='http://titania.create3000.de'>
             <DirectionalLight DEF='_1' containerField='value'
                 direction='-0.372556 -3.8217e-05 -0.92801'
-                shadowIntensity='0.518717'
-                shadowDiffusion='0.43'/>
+                shadows='true'
+                shadowIntensity='0.518717'/>
           </MetadataSet>
         </MetadataSet>
       </MetadataSet>
@@ -81,8 +81,7 @@
         maxParticles='500'
         particleLifetime='8'
         lifetimeVariation='0.8'
-        particleSize='1 1'
-        castShadow='true'>
+        particleSize='1 1'>
       <PointEmitter
           direction='0 0 0'
           speed='0.5'
