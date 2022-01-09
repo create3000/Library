@@ -14,7 +14,7 @@
 
 function initialize ()
 {
-	var vrmlSyntax = "<?xml version='1.0' encoding='UTF-8'?>" +
+	var x3dSyntax = "<?xml version='1.0' encoding='UTF-8'?>" +
  "<X3D><Scene>" +
  " <TimeSensor DEF='T'" +
  "     cycleInterval='10'" +
@@ -34,8 +34,8 @@ function initialize ()
 "<ROUTE fromNode='I' fromField='value_changed' toNode='B' toField='set_translation' />" +
 "</Scene></X3D>";
 
-	Browser .replaceWorld (Browser .createX3DFromString (vrmlSyntax));
-}]]> 
+  Browser .createX3DFromString (x3dSyntax) .then (scene => Browser .replaceWorld (scene));
+}]]>
     </Script>
   </Scene>
 </X3D>

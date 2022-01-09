@@ -30,7 +30,7 @@ X3D(function()
 
   var browser = X3D.getBrowser("X3DCanvas");
 
-  browser.replaceWorld(browser.createX3DFromString(content));
+  browser.createX3DFromString(content) .then (scene => browser.replaceWorld(scene));
 },
 function () {
   alert("Failed to render XML to X_ITE");
