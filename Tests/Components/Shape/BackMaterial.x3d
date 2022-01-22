@@ -25,8 +25,8 @@
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
-    <Transform DEF='Box'>
-      <Shape>
+    <Transform DEF='Box' translation='-2 0 0'>
+      <Shape DEF='Shape'>
         <Appearance>
           <UnlitMaterial
               emissiveColor='1 0 0'/>
@@ -35,6 +35,9 @@
         </Appearance>
         <Rectangle2D/>
       </Shape>
+    </Transform>
+    <Transform translation='2 0 0' rotation='0 1 0 3.1415'>
+      <Shape USE='Shape'/>
     </Transform>
   </Scene>
 </X3D>
