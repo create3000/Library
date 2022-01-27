@@ -50,7 +50,7 @@
             <field accessType='initializeOnly' type='SFMatrix3f' name='sfmatrix3fs' value='2 0 0 0 2 0 0 0 2'/>
             <field accessType='initializeOnly' type='SFMatrix4d' name='sfmatrix4ds' value='2 0 0 0 0 2 0 0 0 0 2 0 0 0 0 2'/>
             <field accessType='initializeOnly' type='SFMatrix4f' name='sfmatrix4fs' value='2 0 0 0 0 2 0 0 0 0 2 0 0 0 0 2'/>
-            <field accessType='initializeOnly' type='SFNode' name='sfnode'/>
+            <field accessType='initializeOnly' type='SFNode' name='sfnodes'/>
             <field accessType='initializeOnly' type='SFRotation' name='sfrotations' value='1 2 3 4'/>
             <field accessType='initializeOnly' type='SFString' name='sfstrings' value='abc'/>
             <field accessType='initializeOnly' type='SFTime' name='sftimes' value='1'/>
