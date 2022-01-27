@@ -281,7 +281,7 @@ main ()
               <ImageTexture USE='_1'/>
             </field>
             <field accessType='initializeOnly' type='MFRotation' name='mfrotations' value='1 2 3 4, 5 6 7 8'/>
-            <field accessType='initializeOnly' type='MFString' name='mfstrings' value='"abc", "def'/>
+            <field accessType='initializeOnly' type='MFString' name='mfstrings' value='"abc", "def"'/>
             <field accessType='initializeOnly' type='MFTime' name='mftimes' value='1, 2'/>
             <field accessType='initializeOnly' type='MFVec2d' name='mfvec2ds' value='1 2, 3 4'/>
             <field accessType='initializeOnly' type='MFVec2f' name='mfvec2fs' value='1 2, 3 4'/>
