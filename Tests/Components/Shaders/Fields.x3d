@@ -180,35 +180,57 @@ main ()
         <Appearance>
           <ComposedShader DEF='CobwebShader'
               language='GLSL'>
-            <field accessType='initializeOnly' type='SFBool' name='sfbool' value='true'/>
-            <field accessType='initializeOnly' type='SFColor' name='sfcolor' value='1 0 0'/>
-            <field accessType='initializeOnly' type='SFColorRGBA' name='sfcolorrgba' value='1 0 0 1'/>
-            <field accessType='initializeOnly' type='SFDouble' name='sfdouble' value='1.2'/>
-            <field accessType='initializeOnly' type='SFFloat' name='sffloat' value='1.2'/>
+            <field accessType='initializeOnly' type='SFBool' name='sfbool'/>
+            <field accessType='initializeOnly' type='SFColor' name='sfcolor'/>
+            <field accessType='initializeOnly' type='SFColorRGBA' name='sfcolorrgba'/>
+            <field accessType='initializeOnly' type='SFDouble' name='sfdouble'/>
+            <field accessType='initializeOnly' type='SFFloat' name='sffloat'/>
             <field accessType='initializeOnly' type='SFImage' name='sfimage' value='3 5 2
               0xffff 0xffff 0xffff
               0 0 0xffff
               0xffff 0xffff 0xffff
               0 0 0xffff
               0xffff 0xffff 0xffff'/>
-            <field accessType='initializeOnly' type='SFInt32' name='sfint32' value='1'/>
-            <field accessType='initializeOnly' type='SFMatrix3d' name='sfmatrix3d' value='2 0 0 0 2 0 0 0 2'/>
-            <field accessType='initializeOnly' type='SFMatrix3f' name='sfmatrix3f' value='2 0 0 0 2 0 0 0 2'/>
-            <field accessType='initializeOnly' type='SFMatrix4d' name='sfmatrix4d' value='2 0 0 0 0 2 0 0 0 0 2 0 0 0 0 2'/>
-            <field accessType='initializeOnly' type='SFMatrix4f' name='sfmatrix4f' value='2 0 0 0 0 2 0 0 0 0 2 0 0 0 0 2'/>
+            <field accessType='initializeOnly' type='SFInt32' name='sfint32'/>
+            <field accessType='initializeOnly' type='SFMatrix3d' name='sfmatrix3d'/>
+            <field accessType='initializeOnly' type='SFMatrix3f' name='sfmatrix3f'/>
+            <field accessType='initializeOnly' type='SFMatrix4d' name='sfmatrix4d'/>
+            <field accessType='initializeOnly' type='SFMatrix4f' name='sfmatrix4f'/>
             <field accessType='initializeOnly' type='SFNode' name='sfnode'>
               <ImageTexture DEF='_1'
                   url='"../images/ubuntu.png"'/>
             </field>
-            <field accessType='initializeOnly' type='SFRotation' name='sfrotation' value='1 2 3 4'/>
-            <field accessType='initializeOnly' type='SFString' name='sfstring' value='abc'/>
-            <field accessType='initializeOnly' type='SFTime' name='sftime' value='1'/>
-            <field accessType='initializeOnly' type='SFVec2d' name='sfvec2d' value='1 2'/>
-            <field accessType='initializeOnly' type='SFVec2f' name='sfvec2f' value='1 2'/>
-            <field accessType='initializeOnly' type='SFVec3d' name='sfvec3d' value='1 2 3'/>
-            <field accessType='initializeOnly' type='SFVec3f' name='sfvec3f' value='1 2 3'/>
-            <field accessType='initializeOnly' type='SFVec4d' name='sfvec4d' value='1 2 3 4'/>
-            <field accessType='initializeOnly' type='SFVec4f' name='sfvec4f' value='1 2 3 4'/>
+            <field accessType='initializeOnly' type='SFRotation' name='sfrotation'/>
+            <field accessType='initializeOnly' type='SFString' name='sfstring'/>
+            <field accessType='initializeOnly' type='SFTime' name='sftime'/>
+            <field accessType='initializeOnly' type='SFVec2d' name='sfvec2d'/>
+            <field accessType='initializeOnly' type='SFVec2f' name='sfvec2f'/>
+            <field accessType='initializeOnly' type='SFVec3d' name='sfvec3d'/>
+            <field accessType='initializeOnly' type='SFVec3f' name='sfvec3f'/>
+            <field accessType='initializeOnly' type='SFVec4d' name='sfvec4d'/>
+            <field accessType='initializeOnly' type='SFVec4f' name='sfvec4f'/>
+
+            <field accessType='initializeOnly' type='SFBool' name='sfbools' value='true'/>
+            <field accessType='initializeOnly' type='SFColor' name='sfcolors' value='1 0 0'/>
+            <field accessType='initializeOnly' type='SFColorRGBA' name='sfcolorrgbas' value='1 0 0 1'/>
+            <field accessType='initializeOnly' type='SFDouble' name='sfdoubles' value='1.2'/>
+            <field accessType='initializeOnly' type='SFFloat' name='sffloats' value='1.2'/>
+            <field accessType='initializeOnly' type='SFImage' name='sfimages'/>
+            <field accessType='initializeOnly' type='SFInt32' name='sfint32s' value='1'/>
+            <field accessType='initializeOnly' type='SFMatrix3d' name='sfmatrix3ds' value='2 0 0 0 2 0 0 0 2'/>
+            <field accessType='initializeOnly' type='SFMatrix3f' name='sfmatrix3fs' value='2 0 0 0 2 0 0 0 2'/>
+            <field accessType='initializeOnly' type='SFMatrix4d' name='sfmatrix4ds' value='2 0 0 0 0 2 0 0 0 0 2 0 0 0 0 2'/>
+            <field accessType='initializeOnly' type='SFMatrix4f' name='sfmatrix4fs' value='2 0 0 0 0 2 0 0 0 0 2 0 0 0 0 2'/>
+            <field accessType='initializeOnly' type='SFNode' name='sfnode'/>
+            <field accessType='initializeOnly' type='SFRotation' name='sfrotations' value='1 2 3 4'/>
+            <field accessType='initializeOnly' type='SFString' name='sfstrings' value='abc'/>
+            <field accessType='initializeOnly' type='SFTime' name='sftimes' value='1'/>
+            <field accessType='initializeOnly' type='SFVec2d' name='sfvec2ds' value='1 2'/>
+            <field accessType='initializeOnly' type='SFVec2f' name='sfvec2fs' value='1 2'/>
+            <field accessType='initializeOnly' type='SFVec3d' name='sfvec3ds' value='1 2 3'/>
+            <field accessType='initializeOnly' type='SFVec3f' name='sfvec3fs' value='1 2 3'/>
+            <field accessType='initializeOnly' type='SFVec4d' name='sfvec4ds' value='1 2 3 4'/>
+            <field accessType='initializeOnly' type='SFVec4f' name='sfvec4fs' value='1 2 3 4'/>
 
             <field accessType='initializeOnly' type='MFBool' name='mfbool'/>
             <field accessType='initializeOnly' type='MFColor' name='mfcolor'/>
