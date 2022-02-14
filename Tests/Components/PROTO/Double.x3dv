@@ -3,7 +3,7 @@
 PROFILE Full
 
 PROTO A [
-   inputOutput SFVec3f translation -2 0 0
+   inputOutput SFVec3f translation -3 0 0
    inputOutput SFColor color 1 0 0
 ]
 {
@@ -22,9 +22,22 @@ PROTO A [
 
 A { }
 
-PROTO A [
-   inputOutput SFVec3f translation 2 0 0
+PROTO B [
+   inputOutput SFVec3f translation 0 0 0
    inputOutput SFColor color 0 1 0
+]
+{
+   A {
+      translation IS translation
+      color IS color
+   }
+}
+
+B { }
+
+PROTO A [
+   inputOutput SFVec3f translation 3 0 0
+   inputOutput SFColor color 0 0 1
 ]
 {
    A {
