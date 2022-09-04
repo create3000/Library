@@ -109,8 +109,10 @@
           speed='0.3'
           gustiness='2'/>
       <Appearance>
-        <LineProperties
-            linewidthScaleFactor='8'/>
+        <PointProperties
+            pointSizeScaleFactor='8'
+            pointSizeMinValue='8'
+            pointSizeMaxValue='8'/>
         <Material
             emissiveColor='0.0437445 0.0437445 0.0437445'
             transparency='0.96'/>
