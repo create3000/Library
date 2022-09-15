@@ -79,8 +79,9 @@
                 <ProtoInstance name='Dolphin' DEF='_2' containerField='surface'/>
               </SurfaceEmitter>
               <Appearance>
-                <LineProperties
-                    linewidthScaleFactor='3.24'/>
+                <PointProperties
+                  pointSizeScaleFactor='3.24'
+                  pointSizeMaxValue='3.24'/>
                 <Material DEF='Rococo17'
                     ambientIntensity='0.187004'
                     diffuseColor='0.640987 0.460097 0.748016'
