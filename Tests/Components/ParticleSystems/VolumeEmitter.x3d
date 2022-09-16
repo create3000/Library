@@ -74,8 +74,9 @@
       <ColorRGBA containerField='colorRamp'
           color='1 0.38 0 1, 1 0.58 0.06 1, 1 0.37 0 1, 1 0.05 0 1'/>
       <Appearance>
-        <LineProperties
-            linewidthScaleFactor='2'/>
+        <PointProperties
+          pointSizeScaleFactor='2'
+          pointSizeMaxValue='2'/>
       </Appearance>
     </ParticleSystem>
     <ClipPlane
