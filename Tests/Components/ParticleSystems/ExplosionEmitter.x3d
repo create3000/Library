@@ -94,7 +94,7 @@ function set_value (value)
 	string_changed [0] = description + " " + rounded;
 	value_changed      = rounded;
 }
-]]> 
+]]>
             </Script>
           </MetadataSet>
         </MetadataSet>
@@ -141,8 +141,10 @@ function set_value (value)
           <ColorRGBA containerField='colorRamp'
               color='1 0.38 0 0, 1 0.58 0.06 0.01, 1 0.37 0 0.1, 1 0.05 0 0, 0 0 0 0.015, 0 0 0 0'/>
           <Appearance>
-            <LineProperties
-                linewidthScaleFactor='10'/>
+            <PointProperties
+              pointSizeScaleFactor='10'
+              pointSizeMinValue='10'
+              pointSizeMaxValue='10'/>
           </Appearance>
         </ParticleSystem>
         <Transform DEF='IndexedLineSet'>
@@ -288,7 +290,7 @@ function set_touchTime (value, time)
 	}
 	else
 		timer .startTime = time;
-}]]> 
+}]]>
               </Script>
             </Transform>
           </Switch>
