@@ -1,0 +1,60 @@
+#VRML V2.0 utf8 Titania V0.7.4
+
+EXTERNPROTO Torus [
+  exposedField SFFloat minorRadius
+  exposedField SFFloat majorRadius
+  exposedField SFInt32 minorDimension
+  exposedField SFInt32 majorDimension
+  field        SFBool  solid
+  field        SFBool  ccw
+  field        SFFloat creaseAngle
+]
+"Torus.x3dv"
+
+DEF Gray Background {
+  skyColor 0.2 0.2 0.2
+}
+
+Viewpoint {
+  description "Viewpoint"
+  position 0 0 20
+}
+
+DEF _1 Transform {
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 0 0 0
+        transparency 0.5
+      }
+    }
+    geometry DEF _2 Torus {
+      majorRadius 4
+      minorDimension 16
+      majorDimension 20
+      solid FALSE
+      creaseAngle 0
+    }
+  }
+}
+
+ParticleSystem {
+  geometryType "POINT"
+  maxParticles 2000
+  particleLifetime 50
+  emitter ConeEmitter {
+    position 4 0 0
+    direction 0 0 1
+    speed 1
+  }
+  physics BoundedPhysicsModel {
+    geometry USE _2
+  }
+  appearance Appearance {
+    pointProperties PointProperties {
+      pointSizeScaleFactor 5
+      pointSizeMinValue 5
+      pointSizeMaxValue 5
+    }
+  }
+}
