@@ -178,7 +178,7 @@ function generateGrid (major, grid)
 		coordIndex [coordIndex .length] = p;
 		coordIndex [coordIndex .length] = p + 1;
 		coordIndex [coordIndex .length] = -1;
-			
+
 		p += 2;
 	}
 
@@ -194,7 +194,7 @@ function generateGrid (major, grid)
 		coordIndex [coordIndex .length] = p;
 		coordIndex [coordIndex .length] = p + 1;
 		coordIndex [coordIndex .length] = -1;
-		
+
 		p += 2;
 	}
 
@@ -242,7 +242,7 @@ function isMajor (i, dimension, majorLineEvery, majorLineOffset)
 
 	return false;
 }
-]]> 
+]]>
         </Script>
       </ProtoBody>
     </ProtoDeclare>
@@ -299,8 +299,10 @@ function isMajor (i, dimension, majorLineEvery, majorLineOffset)
             <Transform DEF='Rectangle2D' containerField='value'>
               <Shape>
                 <Appearance>
-                  <LineProperties
-                      linewidthScaleFactor='10'/>
+                  <PointProperties
+                    pointSizeMaxValue='10'
+                    pointSizeMinValue='10'
+                    pointSizeScaleFactor='10'/>
                   <Material/>
                   <ComposedShader>
                     <ShaderPart>
@@ -318,11 +320,11 @@ void
 main ()
 {
 	gl_PointSize = x3d_LinewidthScaleFactor;
-	
+
 	vec4 vertex = rotation * x3d_Vertex;
 
 	gl_Position = x3d_ProjectionMatrix * x3d_ModelViewMatrix * vertex;
-}]]> 
+}]]>
                     </ShaderPart>
                     <ShaderPart
                         type='FRAGMENT'>
@@ -332,7 +334,7 @@ void
 main ()
 {
 	gl_FragColor = vec4 (1.0, 0.0, 0.0, 1.0);
-}]]> 
+}]]>
                     </ShaderPart>
                   </ComposedShader>
                 </Appearance>
