@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Core' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <component name='EnvironmentalEffects' level='4'/>
+    <component name='Navigation' level='3'/>
+    <component name='ParticleSystems' level='3'/>
+    <component name='Rendering' level='5'/>
+    <component name='Shape' level='5'/>
+    <component name='Geometry3D' level='4'/>
+    <component name='Grouping' level='3'/>
+    <component name='Layering' level='1'/>
+    <component name='Text' level='1'/>
+    <component name='Geometry2D' level='2'/>
+    <component name='PointingDeviceSensor' level='1'/>
+    <component name='Scripting' level='1'/>
+    <component name='Time' level='2'/>
+    <meta name='created' content='Fri, 30 Sep 2022 17:09:57 GMT'/>
+    <meta name='comment' content='World of Sunrise X3D Editor'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrise X3D Editor V1.0.0, https://create3000.github.io/Sunrise/'/>
+    <meta name='identifier' content='file:///Users/holger/Desktop/X_ITE/x_ite/src/tests/ExplosionEmitterGeometry.x3d'/>
+    <meta name='modified' content='Fri, 30 Sep 2022 18:26:37 GMT'/>
+  </head>
+  <Scene>
+    <LayerSet
+        activeLayer='1'
+        order='0, 1, 2, 3'>
+      <Layer>
+        <Background DEF='Gray'
+            skyColor='0.2 0.2 0.2'/>
+        <Viewpoint
+            description='Viewpoint'
+            position='0 20 55'/>
+        <ParticleSystem DEF='_1'
+            geometryType='GEOMETRY'
+            particleLifetime='4'
+            lifetimeVariation='0.5'
+            particleSize='1 1'
+            colorKey='0, 0.2, 0.5, 0.7, 0.8, 1'>
+          <ExplosionEmitter
+              speed='0.5'
+              variation='0.5'
+              mass='0.1'
+              surfaceArea='0.1'/>
+          <WindPhysicsModel
+              direction='0 1 0'
+              speed='0.7'
+              gustiness='1.7'
+              turbulence='0.3'/>
+          <WindPhysicsModel
+              direction='1 0 0'
+              speed='0.5'
+              gustiness='2'/>
+          <ColorRGBA containerField='colorRamp'
+              color='1 0.38 0 0, 1 0.58 0.06 0.01, 1 0.37 0 0.1, 1 0.05 0 0, 0 0 0 0.015, 0 0 0 0'/>
+          <Appearance>
+            <Material
+                diffuseColor='0.403922 0.305882 0.654902'/>
+          </Appearance>
+          <Box
+              size='1 1 1'/>
+        </ParticleSystem>
+        <Transform DEF='Box'
+            translation='-10 0 0'>
+          <Shape>
+            <Appearance>
+              <Material/>
+            </Appearance>
+            <Box/>
+          </Shape>
+        </Transform>
+        <Transform DEF='IndexedLineSet'>
+          <Shape>
+            <IndexedLineSet
+                colorPerVertex='false'
+                colorIndex='0, 1, 2'
+                coordIndex='0, 1, -1, 2, 3, -1, 4, 5, -1'>
+              <Color
+                  color='1 0 0, 0 1 0, 0 0 1'/>
+              <Coordinate
+                  point='-1 0 0, 1 0 0, 0 -1 0, 0 1 0, 0 0 -1, 0 0 1'/>
+            </IndexedLineSet>
+          </Shape>
+        </Transform>
+      </Layer>
+      <Layer>
+        <OrthoViewpoint/>
+        <Transform DEF='TransparencyText'
+            translation='1.675 -0.95 -0.00000349096'
+            scale='0.0672307 0.0672307 0.0672307'>
+          <Shape>
+            <Appearance>
+              <Material
+                  emissiveColor='1 1 1'/>
+            </Appearance>
+            <Text DEF='_2'
+                string='"numParticles 200"'
+                solid='true'>
+              <FontStyle
+                  family='"SANS"'
+                  justify='"END"'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <Transform DEF='TransparancySlider'
+            translation='0.025 -0.923 -0.00000349096'
+            center='0 -0.027 0'>
+          <Transform DEF='IndexedLineSet_1'>
+            <Shape>
+              <Appearance>
+                <LineProperties
+                    linewidthScaleFactor='2'/>
+                <Material DEF='Artdeco31'
+                    emissiveColor='1 1 1'/>
+              </Appearance>
+              <IndexedLineSet
+                  colorPerVertex='false'
+                  coordIndex='0, 1, -1'>
+                <Coordinate
+                    point='0 0 0, 1 0 0'/>
+              </IndexedLineSet>
+            </Shape>
+          </Transform>
+          <Transform>
+            <Transform DEF='Rectangle2D'
+                translation='1 0 0'
+                scale='0.027 0.0267372 0.0267372'>
+              <Shape>
+                <Appearance>
+                  <Material
+                      emissiveColor='1 1 1'/>
+                </Appearance>
+                <Disk2D/>
+              </Shape>
+            </Transform>
+            <PlaneSensor DEF='_3'
+                offset='1 0 0'
+                maxPosition='1 0'/>
+          </Transform>
+          <Group>
+            <Script DEF='NumParticlesyScript'>
+              <field accessType='inputOnly' type='SFVec3f' name='set_translation'/>
+              <field accessType='inputOutput' type='SFString' name='description' value='numParticles'/>
+              <field accessType='inputOutput' type='SFInt32' name='minValue'/>
+              <field accessType='inputOutput' type='SFInt32' name='maxValue' value='200'/>
+              <field accessType='outputOnly' type='SFInt32' name='value_changed'/>
+              <field accessType='outputOnly' type='MFString' name='string_changed'/>
+              <field accessType='initializeOnly' type='SFInt32' name='currentValue' value='200'/>
+<![CDATA[ecmascript:
+
+function initialized ()
+{
+	set_value (value);
+}
+
+function set_translation (value)
+{
+	set_value (minValue + (value .x * (maxValue - minValue)));
+}
+
+function set_value (value)
+{
+	var rounded = value .toFixed (0);
+
+	if (rounded == currentValue)
+		return;
+
+	currentValue       = rounded;
+	string_changed [0] = description + " " + rounded;
+	value_changed      = rounded;
+}
+]]>
+            </Script>
+          </Group>
+          <Switch>
+            <Transform DEF='Rectangle2D_1'
+                translation='-0.075 0 0'
+                scale='0.025 0.0247567 0.0247567'>
+              <Shape>
+                <Appearance>
+                  <Material
+                      emissiveColor='1 1 1'/>
+                </Appearance>
+                <Rectangle2D/>
+              </Shape>
+              <TouchSensor DEF='_4'
+                  description='Toggle Animation'/>
+              <Script DEF='ToggleTransparencyAnim'>
+                <field accessType='inputOnly' type='SFTime' name='set_touchTime'/>
+                <field accessType='initializeOnly' type='SFNode' name='timer'>
+                  <TimeSensor containerField='timer'
+                      cycleInterval='6.8'
+                      loop='true'
+                      startTime='1451028308.5169'
+                      resumeTime='1451028223.75739'
+                      pauseTime='1451028247.50596'
+                      stopTime='1451028309.80616'/>
+                </field>
+<![CDATA[ecmascript:
+
+function set_touchTime (value, time)
+{
+	if (timer .isActive)
+	{
+		if (timer .isPaused)
+			timer .resumeTime = time;
+		else
+			timer .pauseTime = time;
+	}
+	else
+		timer .startTime = time;
+}]]>
+              </Script>
+            </Transform>
+          </Switch>
+        </Transform>
+      </Layer>
+    </LayerSet>
+    <ROUTE fromNode='NumParticlesyScript' fromField='value_changed' toNode='_1' toField='set_maxParticles'/>
+    <ROUTE fromNode='NumParticlesyScript' fromField='string_changed' toNode='_2' toField='set_string'/>
+    <ROUTE fromNode='_3' fromField='translation_changed' toNode='Rectangle2D' toField='set_translation'/>
+    <ROUTE fromNode='_3' fromField='translation_changed' toNode='NumParticlesyScript' toField='set_translation'/>
+    <ROUTE fromNode='_4' fromField='touchTime' toNode='ToggleTransparencyAnim' toField='set_touchTime'/>
+  </Scene>
+</X3D>
