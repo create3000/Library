@@ -311,15 +311,13 @@ function isMajor (i, dimension, majorLineEvery, majorLineOffset)
 uniform mat4 x3d_ProjectionMatrix;
 uniform mat4 x3d_ModelViewMatrix;
 
-uniform float x3d_LinewidthScaleFactor;
-
 attribute vec4 x3d_Vertex;
 attribute mat4 rotation;
 
 void
 main ()
 {
-	gl_PointSize = x3d_LinewidthScaleFactor;
+	gl_PointSize = 10.0;
 
 	vec4 vertex = rotation * x3d_Vertex;
 
