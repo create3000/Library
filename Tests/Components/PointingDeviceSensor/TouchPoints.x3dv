@@ -13,7 +13,7 @@ META "comment" "World of Sunrise X3D Editor"
 META "creator" "Holger Seelig"
 META "generator" "Sunrise X3D Editor V1.0.0, https://create3000.github.io/Sunrise/"
 META "identifier" "file:///Volumes/Home/Projekte/Library/Tests/Components/PointingDeviceSensor/TouchPoints.x3dv"
-META "modified" "Thu, 20 Oct 2022 14:53:22 GMT"
+META "modified" "Thu, 20 Oct 2022 18:09:59 GMT"
 
 DEF Small Transform {
   translation -3 0 0
@@ -54,7 +54,7 @@ DEF Large_1 Transform {
       children DEF PointSet_1 Transform {
         children Shape {
           appearance Appearance {
-            pointProperties DEF _1 PointProperties {
+            pointProperties PointProperties {
               pointSizeScaleFactor 30
               pointSizeMinValue 30
               pointSizeMaxValue 30
@@ -76,7 +76,11 @@ DEF Large_1 Transform {
     DEF SinglePoint_2 Transform {
       children Shape {
         appearance Appearance {
-          pointProperties USE _1
+          pointProperties PointProperties {
+            pointSizeScaleFactor 100
+            pointSizeMinValue 100
+            pointSizeMaxValue 100
+          }
         }
         geometry PointSet {
           coord Coordinate {
@@ -96,7 +100,7 @@ DEF Attenuation Transform {
       children DEF PointSet_2 Transform {
         children Shape {
           appearance Appearance {
-            pointProperties DEF _2 PointProperties {
+            pointProperties DEF _1 PointProperties {
               pointSizeScaleFactor 2000
               pointSizeMinValue 5
               pointSizeMaxValue 30
@@ -123,7 +127,7 @@ DEF Attenuation Transform {
     DEF SinglePoint Transform {
       children Shape {
         appearance Appearance {
-          pointProperties USE _2
+          pointProperties USE _1
         }
         geometry PointSet {
           coord Coordinate {
@@ -135,11 +139,11 @@ DEF Attenuation Transform {
   ]
 }
 
-DEF _3 TouchSensor {
+DEF _2 TouchSensor {
   description "Touch A Point"
 }
 
-DEF _4 Script {
+DEF _3 Script {
   inputOnly SFVec3f set_point
 
   url "ecmascript:
@@ -151,4 +155,4 @@ function set_point (value, time)
 "
 }
 
-ROUTE _3.hitPoint_changed TO _4.set_point
+ROUTE _2.hitPoint_changed TO _3.set_point
