@@ -13,10 +13,10 @@ META "comment" "World of Sunrise X3D Editor"
 META "creator" "Holger Seelig"
 META "generator" "Sunrise X3D Editor V1.0.0, https://create3000.github.io/Sunrise/"
 META "identifier" "file:///Volumes/Home/Projekte/Library/Tests/Components/PointingDeviceSensor/TouchPoints.x3dv"
-META "modified" "Thu, 20 Oct 2022 11:50:28 GMT"
+META "modified" "Thu, 20 Oct 2022 14:53:22 GMT"
 
 DEF Small Transform {
-  translation -2 0 0
+  translation -3 0 0
   children [
     DEF FourPoints Transform {
       children DEF PointSet Transform {
@@ -48,8 +48,7 @@ DEF Small Transform {
   ]
 }
 
-DEF Large Transform {
-  translation 2 0 0
+DEF Large_1 Transform {
   children [
     DEF FourPoints_1 Transform {
       children DEF PointSet_1 Transform {
@@ -74,7 +73,7 @@ DEF Large Transform {
         }
       }
     }
-    DEF SinglePoint Transform {
+    DEF SinglePoint_2 Transform {
       children Shape {
         appearance Appearance {
           pointProperties USE _1
@@ -89,22 +88,58 @@ DEF Large Transform {
   ]
 }
 
-DEF SinglePoint_2 Transform {
-  children Shape {
-    appearance Appearance { }
-    geometry PointSet {
-      coord Coordinate {
-        point 0 0 0
+DEF Attenuation Transform {
+  translation 3 0 0
+  rotation 0 -1 0 1.5
+  children [
+    DEF FourPoints_2 Transform {
+      children DEF PointSet_2 Transform {
+        children Shape {
+          appearance Appearance {
+            pointProperties DEF _2 PointProperties {
+              pointSizeScaleFactor 2000
+              pointSizeMinValue 5
+              pointSizeMaxValue 30
+              pointSizeAttenuation [
+                0,
+                0,
+                1
+              ]
+            }
+          }
+          geometry PointSet {
+            coord Coordinate {
+              point [
+                1 1 0,
+                -1 1 0,
+                -1 -1 0,
+                1 -1 0
+              ]
+            }
+          }
+        }
       }
     }
-  }
+    DEF SinglePoint Transform {
+      children Shape {
+        appearance Appearance {
+          pointProperties USE _2
+        }
+        geometry PointSet {
+          coord Coordinate {
+            point 0 0 0
+          }
+        }
+      }
+    }
+  ]
 }
 
-DEF _2 TouchSensor {
+DEF _3 TouchSensor {
   description "Touch A Point"
 }
 
-DEF _3 Script {
+DEF _4 Script {
   inputOnly SFVec3f set_point
 
   url "ecmascript:
@@ -116,4 +151,4 @@ function set_point (value, time)
 "
 }
 
-ROUTE _2.hitPoint_changed TO _3.set_point
+ROUTE _3.hitPoint_changed TO _4.set_point
