@@ -13,7 +13,7 @@ META "comment" "World of Sunrise X3D Editor"
 META "creator" "Holger Seelig"
 META "generator" "Sunrise X3D Editor V1.0.0, https://create3000.github.io/Sunrise/"
 META "identifier" "file:///Volumes/Home/Projekte/Library/Tests/Components/PointingDeviceSensor/TouchPoints.x3dv"
-META "modified" "Thu, 20 Oct 2022 18:09:59 GMT"
+META "modified" "Fri, 21 Oct 2022 12:56:02 GMT"
 
 DEF Small Transform {
   translation -3 0 0
@@ -74,6 +74,7 @@ DEF Large_1 Transform {
       }
     }
     DEF SinglePoint_2 Transform {
+      scale 2 1 1
       children Shape {
         appearance Appearance {
           pointProperties PointProperties {
