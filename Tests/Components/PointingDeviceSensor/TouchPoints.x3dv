@@ -38,7 +38,7 @@ DEF Small Transform {
     DEF SinglePoint_1 Transform {
       children Shape {
         appearance Appearance { }
-        geometry PointSet {
+        geometry DEF PS PointSet {
           coord Coordinate {
             point 0 0 0
           }
@@ -74,7 +74,7 @@ DEF Large_1 Transform {
       }
     }
     DEF SinglePoint_2 Transform {
-      scale 2 1 1
+      scale 2 0.5 1
       children Shape {
         appearance Appearance {
           pointProperties PointProperties {
@@ -83,7 +83,7 @@ DEF Large_1 Transform {
             pointSizeMaxValue 100
           }
         }
-        geometry PointSet {
+        geometry DEF PL PointSet {
           coord Coordinate {
             point 0 0 0
           }
@@ -96,6 +96,7 @@ DEF Large_1 Transform {
 DEF Attenuation Transform {
   translation 3 0 0
   rotation 0 -1 0 1.5
+  scale 4 1 1
   children [
     DEF FourPoints_2 Transform {
       children DEF PointSet_2 Transform {
@@ -103,7 +104,7 @@ DEF Attenuation Transform {
           appearance Appearance {
             pointProperties DEF _1 PointProperties {
               pointSizeScaleFactor 2000
-              pointSizeMinValue 5
+              pointSizeMinValue 2
               pointSizeMaxValue 30
               pointSizeAttenuation [
                 0,
@@ -130,7 +131,7 @@ DEF Attenuation Transform {
         appearance Appearance {
           pointProperties USE _1
         }
-        geometry PointSet {
+        geometry DEF PM PointSet {
           coord Coordinate {
             point 0 0 0
           }
