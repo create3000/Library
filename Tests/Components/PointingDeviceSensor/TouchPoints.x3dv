@@ -74,7 +74,7 @@ DEF Large_1 Transform {
       }
     }
     DEF SinglePoint_2 Transform {
-      scale 2 0.5 1
+      scale 3 0.3 1
       children Shape {
         appearance Appearance {
           pointProperties PointProperties {
@@ -105,15 +105,15 @@ DEF Attenuation Transform {
             pointProperties DEF _1 PointProperties {
               pointSizeScaleFactor 2000
               pointSizeMinValue 2
-              pointSizeMaxValue 30
+              pointSizeMaxValue 50
               pointSizeAttenuation [
-                0,
-                0,
-                1
+                1,
+                1,
+                0.5
               ]
             }
           }
-          geometry PointSet {
+          geometry DEF PA PointSet {
             coord Coordinate {
               point [
                 1 1 0,
