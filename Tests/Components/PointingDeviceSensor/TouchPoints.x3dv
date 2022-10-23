@@ -22,7 +22,7 @@ DEF Small Transform {
       children DEF PointSet Transform {
         children Shape {
           appearance Appearance { }
-          geometry PointSet {
+          geometry DEF PS4 PointSet {
             coord Coordinate {
               point [
                 1 1 0,
@@ -60,7 +60,7 @@ DEF Large_1 Transform {
               pointSizeMaxValue 30
             }
           }
-          geometry PointSet {
+          geometry DEF PL4 PointSet {
             coord Coordinate {
               point [
                 1 1 0,
@@ -113,7 +113,7 @@ DEF Attenuation Transform {
               ]
             }
           }
-          geometry DEF PA PointSet {
+          geometry DEF PM4 PointSet {
             coord Coordinate {
               point [
                 1 1 0,
