@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+<X3D profile='Core' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
   <head>
-    <unit category='angle' name='degree' conversionFactor='0.0174532925199432958'/>
-    <meta name='comment' content='World of Titania'/>
+    <component name='Shape' level='5'/>
+    <component name='Geometry2D' level='2'/>
+    <component name='Grouping' level='3'/>
+    <component name='Rendering' level='5'/>
+    <component name='Scripting' level='1'/>
+    <component name='Core' level='2'/>
+    <component name='Navigation' level='3'/>
+    <component name='Geometry3D' level='4'/>
+    <component name='PointingDeviceSensor' level='1'/>
+    <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
+    <meta name='comment' content='World of Sunrise X3D Editor'/>
     <meta name='created' content='Thu, 06 Oct 2016 10:49:59 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V4.3.5, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/PointingDeviceSensor/ClonedSensors.x3d'/>
-    <meta name='modified' content='Fri, 14 Dec 2018 01:52:16 GMT'/>
+    <meta name='generator' content='Sunrise X3D Editor V1.0.0, https://create3000.github.io/Sunrise/'/>
+    <meta name='identifier' content='file:///Volumes/Home/Projekte/Library/Tests/Components/PointingDeviceSensor/ClonedSensors.x3d'/>
+    <meta name='modified' content='Sun, 23 Oct 2022 17:05:05 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='Grid'>
@@ -35,7 +44,7 @@
             <connect nodeField='scale' protoField='scale'/>
           </IS>
           <Transform DEF='Plane'
-              rotation='-3.09087122910219e-08 0.70710528118436 0.707108281185553 179.999847960504'
+              rotation='-3.0908712291022e-8 0.70710528118436 0.70710828118555 179.9998479605'
               scale='10 10 1'>
             <Shape>
               <Appearance>
@@ -79,7 +88,7 @@
                 </IS>
               </Material>
             </Appearance>
-            <IndexedLineSet DEF='MinorGrid_2'
+            <IndexedLineSet DEF='MinorGrid_1'
                 coordIndex='0, 1, -1, 2, 3, -1, 4, 5, -1, 6, 7, -1, 8, 9, -1, 10, 11, -1, 12, 13, -1, 14, 15, -1, 16, 17, -1, 18, 19, -1, 20, 21, -1, 22, 23, -1, 24, 25, -1, 26, 27, -1, 28, 29, -1, 30, 31, -1'>
               <Coordinate
                   point='-4 0 -5, -4 0 5, -3 0 -5, -3 0 5, -2 0 -5, -2 0 5, -1 0 -5, -1 0 5, 1 0 -5, 1 0 5, 2 0 -5, 2 0 5, 3 0 -5, 3 0 5, 4 0 -5, 4 0 5, -5 0 -4, 5 0 -4, -5 0 -3, 5 0 -3, -5 0 -2, 5 0 -2, -5 0 -1, 5 0 -1, -5 0 1, 5 0 1, -5 0 2, 5 0 2, -5 0 3, 5 0 3, -5 0 4, 5 0 4'/>
@@ -87,22 +96,26 @@
           </Shape>
           <Shape DEF='MajorPoints'>
             <Appearance>
-              <LineProperties
-                  linewidthScaleFactor='6'/>
+              <PointProperties
+                  pointSizeScaleFactor='6'
+                  pointSizeMinValue='6'
+                  pointSizeMaxValue='6'/>
               <Material USE='MajorMaterial'/>
             </Appearance>
-            <PointSet DEF='MajorPoints_3'>
+            <PointSet DEF='MajorPoints_1'>
               <Coordinate
                   point='0 -5 0, 0 0 0, 0 5 0'/>
             </PointSet>
           </Shape>
           <Shape DEF='MinorPoints'>
             <Appearance>
-              <LineProperties
-                  linewidthScaleFactor='4'/>
+              <PointProperties
+                  pointSizeScaleFactor='4'
+                  pointSizeMinValue='4'
+                  pointSizeMaxValue='4'/>
               <Material USE='MinorMaterial'/>
             </Appearance>
-            <PointSet DEF='MinorPoints_4'>
+            <PointSet DEF='MinorPoints_1'>
               <Coordinate
                   point='0 -4 0, 0 -3 0, 0 -2 0, 0 -1 0, 0 1 0, 0 2 0, 0 3 0, 0 4 0'/>
             </PointSet>
@@ -115,19 +128,19 @@
           <field accessType='inputOutput' type='MFInt32' name='majorLineEvery'/>
           <field accessType='inputOutput' type='MFInt32' name='majorLineOffset'/>
           <field accessType='initializeOnly' type='SFNode' name='plane'>
-            <Transform USE='Plane'/>
+            <Transform USE='Plane' containerField='plane'/>
           </field>
           <field accessType='initializeOnly' type='SFNode' name='majorGrid'>
-            <IndexedLineSet USE='MajorGrid_1'/>
+            <IndexedLineSet USE='MajorGrid_1' containerField='majorGrid'/>
           </field>
           <field accessType='initializeOnly' type='SFNode' name='minorGrid'>
-            <IndexedLineSet USE='MinorGrid_2'/>
+            <IndexedLineSet USE='MinorGrid_1' containerField='minorGrid'/>
           </field>
           <field accessType='initializeOnly' type='SFNode' name='majorPoints'>
-            <PointSet USE='MajorPoints_3'/>
+            <PointSet USE='MajorPoints_1' containerField='majorPoints'/>
           </field>
           <field accessType='initializeOnly' type='SFNode' name='minorPoints'>
-            <PointSet USE='MinorPoints_4'/>
+            <PointSet USE='MinorPoints_1' containerField='minorPoints'/>
           </field>
           <IS>
             <connect nodeField='dimension' protoField='dimension'/>
@@ -262,7 +275,7 @@ function isMajor (i, dimension, majorLineEvery, majorLineOffset)
         <MetadataSet DEF='Grid' containerField='value'
             name='Grid'
             reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled_5' containerField='value'
+          <MetadataBoolean DEF='enabled_1' containerField='value'
               name='enabled'
               reference='http://titania.create3000.de'
               value='true'/>
@@ -323,7 +336,7 @@ function isMajor (i, dimension, majorLineEvery, majorLineOffset)
     <Viewpoint
         description='Home'/>
     <ProtoInstance name='Grid'>
-      <fieldValue name='rotation' value='1 0 0 90.0000000000002'/>
+      <fieldValue name='rotation' value='1 0 0 90'/>
       <fieldValue name='transparency' value='0.8'/>
     </ProtoInstance>
     <Transform DEF='Clone1'
@@ -343,28 +356,28 @@ function isMajor (i, dimension, majorLineEvery, majorLineOffset)
             <Cone/>
           </Shape>
         </Transform>
-        <PlaneSensor DEF='_6'
+        <PlaneSensor DEF='_1'
             offset='0 2 0'
             maxPosition='0 2'/>
       </Transform>
     </Transform>
     <Transform DEF='Clone2'
-        rotation='-3.57398802300153e-17 1.10915152794688e-16 1 180'
-        scaleOrientation='-0.357406744336593 0.862856209461017 -0.357406744336593 258.947302582207'>
+        rotation='-3.5739880230015e-17 1.1091515279469e-16 1 180'
+        scaleOrientation='-0.35740674433659 0.86285620946102 -0.35740674433659 258.94730258221'>
       <Transform USE='SimpleSlider'/>
     </Transform>
     <Transform DEF='Clone3'
         translation='-2 -3 6.66134e-16'
-        rotation='1.72022019207585e-06 1.72022019207586e-06 -0.999999999997041 90.0000000001698'
-        scaleOrientation='0.999999999997869 7.89894308018685e-07 1.9074129865875e-06 224.999999999914'>
+        rotation='0.0000017202201920758 0.0000017202201920759 -0.99999999999704 90.00000000017'
+        scaleOrientation='0.99999999999787 7.8989430801868e-7 0.0000019074129865875 224.99999999991'>
       <Transform USE='SimpleSlider'/>
     </Transform>
     <Transform
         translation='4 3 0'>
-      <Transform DEF='Clone1_7'
+      <Transform DEF='Clone1_1'
           translation='-4 -2 0'>
-        <Transform DEF='SimpleSlider_8'>
-          <Transform DEF='Cone_9'
+        <Transform DEF='SimpleSlider_1'>
+          <Transform DEF='Cone_1'
               translation='0 2 0'
               scale='0.374845 0.374845 0.374845'>
             <Shape>
@@ -377,25 +390,25 @@ function isMajor (i, dimension, majorLineEvery, majorLineOffset)
               </Appearance>
               <Cone/>
             </Shape>
-            <PlaneSensor DEF='_10'
+            <PlaneSensor DEF='_2'
                 offset='0 2 0'
                 maxPosition='0 2'/>
           </Transform>
         </Transform>
       </Transform>
-      <Transform DEF='Clone2_11'
-          rotation='-3.57398802300153e-17 1.10915152794688e-16 1 180'
-          scaleOrientation='-0.357406744336593 0.862856209461017 -0.357406744336593 258.947302582207'>
-        <Transform USE='SimpleSlider_8'/>
+      <Transform DEF='Clone2_1'
+          rotation='-3.5739880230015e-17 1.1091515279469e-16 1 180'
+          scaleOrientation='-0.35740674433659 0.86285620946102 -0.35740674433659 258.94730258221'>
+        <Transform USE='SimpleSlider_1'/>
       </Transform>
-      <Transform DEF='Clone3_12'
+      <Transform DEF='Clone3_1'
           translation='-2 -3 6.66134e-16'
-          rotation='1.72022019207585e-06 1.72022019207586e-06 -0.999999999997041 90.0000000001698'
-          scaleOrientation='0.999999999997869 7.89894308018685e-07 1.9074129865875e-06 224.999999999914'>
-        <Transform USE='SimpleSlider_8'/>
+          rotation='0.0000017202201920758 0.0000017202201920759 -0.99999999999704 90.00000000017'
+          scaleOrientation='0.99999999999787 7.8989430801868e-7 0.0000019074129865875 224.99999999991'>
+        <Transform USE='SimpleSlider_1'/>
       </Transform>
     </Transform>
-    <ROUTE fromNode='_6' fromField='translation_changed' toNode='Cone' toField='set_translation'/>
-    <ROUTE fromNode='_10' fromField='translation_changed' toNode='Cone_9' toField='set_translation'/>
+    <ROUTE fromNode='_1' fromField='translation_changed' toNode='Cone' toField='set_translation'/>
+    <ROUTE fromNode='_2' fromField='translation_changed' toNode='Cone_1' toField='set_translation'/>
   </Scene>
 </X3D>
