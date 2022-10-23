@@ -13,9 +13,9 @@ META "comment" "World of Sunrise X3D Editor"
 META "creator" "Holger Seelig"
 META "generator" "Sunrise X3D Editor V1.0.0, https://create3000.github.io/Sunrise/"
 META "identifier" "file:///Volumes/Home/Projekte/Library/Tests/Components/PointingDeviceSensor/TouchLines.x3dv"
-META "modified" "Thu, 20 Oct 2022 12:06:06 GMT"
+META "modified" "Sun, 23 Oct 2022 07:19:21 GMT"
 
-DEF IndexedLineSet_1 Transform {
+DEF Thin Transform {
   translation -2 0 0
   children Shape {
     appearance Appearance { }
@@ -62,8 +62,9 @@ DEF IndexedLineSet_1 Transform {
   }
 }
 
-DEF IndexedLineSet Transform {
+DEF Thick Transform {
   translation 2 0 0
+  scale 2 1 6
   children Shape {
     appearance Appearance {
       lineProperties LineProperties {
