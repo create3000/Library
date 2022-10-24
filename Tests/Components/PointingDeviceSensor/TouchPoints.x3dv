@@ -1,19 +1,13 @@
-#X3D V3.3 utf8 X_ITE V6.0.0
+#X3D V3.3 utf8 X_ITE V6.1.0
 
-PROFILE Core
-
-COMPONENT Shape : 5
-COMPONENT Rendering : 5
-COMPONENT Grouping : 3
-COMPONENT PointingDeviceSensor : 1
-COMPONENT Scripting : 1
+PROFILE Immersive
 
 META "created" "Thu, 20 Oct 2022 11:31:00 GMT"
 META "comment" "World of Sunrise X3D Editor"
 META "creator" "Holger Seelig"
 META "generator" "Sunrise X3D Editor V1.0.0, https://create3000.github.io/Sunrise/"
 META "identifier" "file:///Volumes/Home/Projekte/Library/Tests/Components/PointingDeviceSensor/TouchPoints.x3dv"
-META "modified" "Fri, 21 Oct 2022 12:56:02 GMT"
+META "modified" "Mon, 24 Oct 2022 17:32:34 GMT"
 
 DEF Small Transform {
   translation -3 0 0
