@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
   <head>
-    <meta name='comment' content='World of Titania'/>
+    <component name='Layering' level='1'/>
+    <meta name='comment' content='World of Sunrise X3D Editor'/>
     <meta name='created' content='Wed, 18 Nov 2015 05:00:27 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V2.0.1, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite/tests/Components/Geometry2D/Geometry2D.x3d'/>
-    <meta name='modified' content='Thu, 20 Oct 2016 10:58:16 GMT'/>
+    <meta name='generator' content='Sunrise X3D Editor V1.0.3, https://create3000.github.io/sunrise/'/>
+    <meta name='identifier' content='file:///Volumes/Home/Projekte/Library/Tests/Components/Geometry2D/Geometry2D.x3d'/>
+    <meta name='modified' content='Wed, 26 Oct 2022 20:29:31 GMT'/>
   </head>
   <Scene>
     <WorldInfo
@@ -29,15 +30,15 @@
           <MetadataDouble DEF='position' containerField='value'
               name='position'
               reference='http://titania.create3000.de'
-              value='0.0131181795150042, -0.957872569561005, 18.0397644042969'/>
+              value='0.013118179515004, -0.957872569561, 18.039764404297'/>
           <MetadataDouble DEF='orientation' containerField='value'
               name='orientation'
               reference='http://titania.create3000.de'
-              value='-0.750440353409506, 0.637897307790788, -0.172992198343974, 0.00497951265420745'/>
+              value='-0.75044035340951, 0.63789730779079, -0.17299219834397, 0.0049795126542074'/>
           <MetadataDouble DEF='centerOfRotation' containerField='value'
               name='centerOfRotation'
               reference='http://titania.create3000.de'
-              value='-0.0443000793457031, -1.0149998664856, -9.06456261873245e-06'/>
+              value='-0.044300079345703, -1.0149998664856, -0.0000090645626187325'/>
         </MetadataSet>
         <MetadataSet DEF='AngleGrid' containerField='value'
             name='AngleGrid'
@@ -116,7 +117,7 @@
             <MetadataFloat containerField='value'
                 name='translation'
                 reference='http://titania.create3000.de'
-                value='0, -1, -3.63588e-06'/>
+                value='0, -1, -0.00000363588'/>
             <MetadataInteger containerField='value'
                 name='dimension'
                 reference='http://titania.create3000.de'
@@ -128,14 +129,14 @@
         <Viewpoint
             description='Initial View'
             position='0.0131182 -0.957873 18.0398'
-            orientation='-0.750440372116082 0.637897316310074 -0.172992085780482 0.00497951000002077'
-            centerOfRotation='-0.0443001 -1.015 -9.06456e-06'/>
+            orientation='-0.75044037211608 0.63789731631007 -0.17299208578048 0.0049795100000208'
+            centerOfRotation='-0.0443001 -1.015 -0.00000906456'/>
         <Transform>
           <Transform
               translation='0.999976 -0.000498056 0'
-              center='-5.99998 4.0005 -1.36914e-07'>
+              center='-5.99998 4.0005 -1.36914e-7'>
             <Transform
-                translation='-6 4 -1.36914e-07'>
+                translation='-6 4 -1.36914e-7'>
               <Shape>
                 <Appearance DEF='Grey'>
                   <Material/>
@@ -144,54 +145,49 @@
                 </Appearance>
                 <ArcClose2D DEF='ArcClose2D'
                     startAngle='2.09'
-                    endAngle='5.8808'
-                    solid='false'/>
+                    endAngle='5.8808'/>
               </Shape>
             </Transform>
             <Transform
-                translation='-6 4 -1.36914e-07'>
+                translation='-6 4 -1.36914e-7'>
               <Shape>
                 <Appearance DEF='Image'>
                   <Material/>
                   <ImageTexture USE='_2'/>
                 </Appearance>
                 <ArcClose2D DEF='ArcClose2D_1'
-                    closureType='CHORD'
-                    solid='false'/>
+                    closureType='CHORD'/>
               </Shape>
             </Transform>
             <TouchSensor DEF='_3'
                 description='ArcClose2D'/>
           </Transform>
           <Transform
-              translation='-2 4 -1.36914e-07'>
+              translation='-2 4 -1.36914e-7'>
             <Shape>
               <Appearance USE='Image'/>
               <Disk2D DEF='Disk2D'
                   innerRadius='0.54'
-                  outerRadius='1.26'
-                  solid='false'/>
+                  outerRadius='1.26'/>
             </Shape>
             <TouchSensor DEF='_4'
                 description='Disk2D'/>
           </Transform>
           <Transform
-              translation='2 4 -1.36914e-07'>
+              translation='2 4 -1.36914e-7'>
             <Shape>
               <Appearance USE='Image'/>
-              <Rectangle2D DEF='Rectangle2D'
-                  solid='false'/>
+              <Rectangle2D DEF='Rectangle2D'/>
             </Shape>
             <TouchSensor DEF='_5'
                 description='Rectangle2D'/>
           </Transform>
           <Transform
-              translation='5 4 -1.36914e-07'>
+              translation='5 4 -1.36914e-7'>
             <Shape>
               <Appearance USE='Image'/>
               <TriangleSet2D DEF='TriangleSet2D'
-                  vertices='-1 -1, 1 -1, 0 1'
-                  solid='false'/>
+                  vertices='-1 -1, 1 -1, 0 1'/>
             </Shape>
             <TouchSensor DEF='_6'
                 description='TriangleSet2D'/>
@@ -224,8 +220,7 @@
                 <ArcClose2D DEF='ArcClose2D_2'
                     startAngle='2.09'
                     endAngle='5.8808'
-                    radius='1.2'
-                    solid='false'/>
+                    radius='1.2'/>
               </Shape>
             </Transform>
             <TouchSensor USE='_3'/>
@@ -275,7 +270,7 @@
         </Transform>
         <Transform>
           <Transform
-              translation='-5 -3 1.02686e-07'>
+              translation='-5 -3 1.02686e-7'>
             <Shape>
               <Appearance>
                 <LineProperties DEF='_7'
@@ -289,9 +284,9 @@
           </Transform>
           <Transform
               translation='-5.00105 -0.000807524 0'
-              center='3.00105 -2.99919 1.02686e-07'>
+              center='3.00105 -2.99919 1.02686e-7'>
             <Transform
-                translation='3 -3 1.02686e-07'>
+                translation='3 -3 1.02686e-7'>
               <Shape>
                 <Appearance>
                   <LineProperties USE='_7'/>
@@ -302,7 +297,7 @@
               </Shape>
             </Transform>
             <Transform
-                translation='3 -3 1.02686e-07'>
+                translation='3 -3 1.02686e-7'>
               <Shape>
                 <Appearance>
                   <LineProperties USE='_7'/>
@@ -316,7 +311,7 @@
             </Transform>
           </Transform>
           <Transform
-              translation='0 -3 1.02686e-07'>
+              translation='0 -3 1.02686e-7'>
             <Shape>
               <Appearance>
                 <LineProperties USE='_7'/>
@@ -330,7 +325,7 @@
           </Transform>
           <Transform>
             <Transform
-                translation='-5 -6 2.05371e-07'>
+                translation='-5 -6 2.05371e-7'>
               <Shape>
                 <Appearance DEF='Grey_6'>
                   <LineProperties USE='_7'/>
@@ -341,7 +336,7 @@
               </Shape>
             </Transform>
             <Transform
-                translation='-2 -6 2.05371e-07'>
+                translation='-2 -6 2.05371e-7'>
               <Shape>
                 <Appearance DEF='Grey_7'>
                   <LineProperties USE='_7'/>
@@ -355,7 +350,7 @@
           </Transform>
         </Transform>
         <Transform
-            translation='2 -3 -1.09853e-05'
+            translation='2 -3 -0.0000109853'
             scale='0.333333 0.333333 0.333333'>
           <Shape>
             <Appearance>
@@ -368,7 +363,7 @@
           </Shape>
         </Transform>
         <Transform
-            translation='5 -5 -1.83347e-05'
+            translation='5 -5 -0.0000183347'
             scale='0.376156 0.376156 0.376156'>
           <TimeSensor DEF='_8'
               cycleInterval='10'
@@ -380,34 +375,35 @@
               scale='3 3 3'>
             <Shape>
               <Appearance>
-                <LineProperties
-                    linewidthScaleFactor='20'/>
+                <PointProperties DEF='_10'
+                    pointSizeScaleFactor='9'
+                    pointSizeMinValue='9'
+                    pointSizeMaxValue='9'/>
                 <Material
                     emissiveColor='0.269542 0.740744 0.418337'/>
               </Appearance>
               <PointSet>
-                <Coordinate DEF='_10'
-                    point='-0.693822 0.720147 0, -0.720147 -0.693822 0, 0.693822 -0.720147 0, 0.720147 0.693822 0'/>
+                <Coordinate DEF='_11'
+                    point='0.419056 -0.907961 0, 0.907961 0.419056 0, -0.419056 0.907961 0, -0.907961 -0.419056 0'/>
               </PointSet>
             </Shape>
           </Transform>
         </Transform>
         <Transform
-            translation='2 -6 -2.20094e-05'>
+            translation='2 -6 -0.0000220094'>
           <Shape>
             <Appearance>
-              <LineProperties
-                  linewidthScaleFactor='8.69'/>
+              <PointProperties USE='_10'/>
               <Material
                   emissiveColor='0.794118 0.539253 0.311916'/>
             </Appearance>
-            <Polypoint2D DEF='_11'
-                point='-0.408029 -0.856193, 0.0434122 0.417266, 0.274972 0.691414, 0.0199558 0.979417, -0.549303 -0.217619'/>
+            <Polypoint2D DEF='_12'
+                point='0.340601 -0.559484, 0.972897 -0.0962096, 0.201842 -0.297446, -0.534234 0.866497, -0.525527 -0.998792'/>
           </Shape>
         </Transform>
         <Script DEF='Polypoint2DScript'>
           <field accessType='initializeOnly' type='SFNode' name='polypoint'>
-            <Polypoint2D USE='_11'/>
+            <Polypoint2D USE='_12' containerField='polypoint'/>
           </field>
 <![CDATA[ecmascript:
 
@@ -418,7 +414,7 @@ function initialize ()
 		polypoint .point [i] .x = Math .random () * 2 - 1;
 		polypoint .point [i] .y = Math .random () * 2 - 1;
 	}
-}]]> 
+}]]>
         </Script>
       </Layer>
       <Layer DEF='HUD'>
@@ -522,7 +518,7 @@ function set_phong ()
 	Browser .setBrowserOption ("Shading", "PHONG");
 	Browser .setDescription ("Shading: Phong");
 }
-]]> 
+]]>
           </Script>
           <Transform DEF='Header_1'
               translation='1.6905 -0.857496 -1'
@@ -564,26 +560,8 @@ function set_phong ()
               scale='0.139972 0.040588 0.040588'>
             <Shape>
               <Appearance>
-                <Material DEF='_12'
+                <Material DEF='_13'
                     transparency='1'/>
-              </Appearance>
-              <IndexedFaceSet
-                  texCoordIndex='0, 1, 2, 3, -1'
-                  coordIndex='0, 1, 2, 3, -1'>
-                <TextureCoordinate
-                    point='0 0, 1 0, 1 1, 0 1'/>
-                <Coordinate
-                    point='-1 -1 0, 1 -1 0, 1 1 0, -1 1 0'/>
-              </IndexedFaceSet>
-            </Shape>
-            <TouchSensor DEF='_13'/>
-          </Transform>
-          <Transform DEF='Wireframe'
-              translation='0.77569 -0.916146 0'
-              scale='0.177062 0.040588 0.040588'>
-            <Shape>
-              <Appearance>
-                <Material USE='_12'/>
               </Appearance>
               <IndexedFaceSet
                   texCoordIndex='0, 1, 2, 3, -1'
@@ -596,12 +574,12 @@ function set_phong ()
             </Shape>
             <TouchSensor DEF='_14'/>
           </Transform>
-          <Transform DEF='Flat'
-              translation='1.04432 -0.916146 0'
-              scale='0.0743511 0.040588 0.040588'>
+          <Transform DEF='Wireframe'
+              translation='0.77569 -0.916146 0'
+              scale='0.177062 0.040588 0.040588'>
             <Shape>
               <Appearance>
-                <Material USE='_12'/>
+                <Material USE='_13'/>
               </Appearance>
               <IndexedFaceSet
                   texCoordIndex='0, 1, 2, 3, -1'
@@ -614,12 +592,12 @@ function set_phong ()
             </Shape>
             <TouchSensor DEF='_15'/>
           </Transform>
-          <Transform DEF='Gouraud'
-              translation='1.27986 -0.916146 0'
-              scale='0.142825 0.040588 0.040588'>
+          <Transform DEF='Flat'
+              translation='1.04432 -0.916146 0'
+              scale='0.0743511 0.040588 0.040588'>
             <Shape>
               <Appearance>
-                <Material USE='_12'/>
+                <Material USE='_13'/>
               </Appearance>
               <IndexedFaceSet
                   texCoordIndex='0, 1, 2, 3, -1'
@@ -632,12 +610,12 @@ function set_phong ()
             </Shape>
             <TouchSensor DEF='_16'/>
           </Transform>
-          <Transform DEF='Phong'
-              translation='1.55457 -0.916146 0'
-              scale='0.111441 0.040588 0.040588'>
+          <Transform DEF='Gouraud'
+              translation='1.27986 -0.916146 0'
+              scale='0.142825 0.040588 0.040588'>
             <Shape>
               <Appearance>
-                <Material USE='_12'/>
+                <Material USE='_13'/>
               </Appearance>
               <IndexedFaceSet
                   texCoordIndex='0, 1, 2, 3, -1'
@@ -650,15 +628,33 @@ function set_phong ()
             </Shape>
             <TouchSensor DEF='_17'/>
           </Transform>
+          <Transform DEF='Phong'
+              translation='1.55457 -0.916146 0'
+              scale='0.111441 0.040588 0.040588'>
+            <Shape>
+              <Appearance>
+                <Material USE='_13'/>
+              </Appearance>
+              <IndexedFaceSet
+                  texCoordIndex='0, 1, 2, 3, -1'
+                  coordIndex='0, 1, 2, 3, -1'>
+                <TextureCoordinate
+                    point='0 0, 1 0, 1 1, 0 1'/>
+                <Coordinate
+                    point='-1 -1 0, 1 -1 0, 1 1 0, -1 1 0'/>
+              </IndexedFaceSet>
+            </Shape>
+            <TouchSensor DEF='_18'/>
+          </Transform>
         </Group>
       </Layer>
     </LayerSet>
-    <ROUTE fromNode='_17' fromField='touchTime' toNode='ShadingScript' toField='set_phong'/>
-    <ROUTE fromNode='_16' fromField='touchTime' toNode='ShadingScript' toField='set_gouraud'/>
-    <ROUTE fromNode='_15' fromField='touchTime' toNode='ShadingScript' toField='set_flat'/>
-    <ROUTE fromNode='_14' fromField='touchTime' toNode='ShadingScript' toField='set_wireframe'/>
-    <ROUTE fromNode='_13' fromField='touchTime' toNode='ShadingScript' toField='set_pointset'/>
+    <ROUTE fromNode='_18' fromField='touchTime' toNode='ShadingScript' toField='set_phong'/>
+    <ROUTE fromNode='_17' fromField='touchTime' toNode='ShadingScript' toField='set_gouraud'/>
+    <ROUTE fromNode='_16' fromField='touchTime' toNode='ShadingScript' toField='set_flat'/>
+    <ROUTE fromNode='_15' fromField='touchTime' toNode='ShadingScript' toField='set_wireframe'/>
+    <ROUTE fromNode='_14' fromField='touchTime' toNode='ShadingScript' toField='set_pointset'/>
     <ROUTE fromNode='_8' fromField='fraction_changed' toNode='_9' toField='set_fraction'/>
-    <ROUTE fromNode='_9' fromField='value_changed' toNode='_10' toField='set_point'/>
+    <ROUTE fromNode='_9' fromField='value_changed' toNode='_11' toField='set_point'/>
   </Scene>
 </X3D>
