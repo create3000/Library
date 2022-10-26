@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
   <head>
-    <component name='CADGeometry' level='1'/>
-    <component name='EnvironmentalEffects' level='3'/>
-    <meta name='comment' content='World of Titania'/>
+    <component name='CADGeometry' level='2'/>
+    <meta name='comment' content='World of Sunrise X3D Editor'/>
     <meta name='created' content='Fri, 01 Feb 2019 02:49:39 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V4.5.9, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/EnvironmentalEffects/FogCoordinate.x3d'/>
-    <meta name='modified' content='Sat, 06 Jul 2019 14:28:49 GMT'/>
+    <meta name='generator' content='Sunrise X3D Editor V1.0.3, https://create3000.github.io/sunrise/'/>
+    <meta name='identifier' content='file:///Volumes/Home/Projekte/Library/Tests/Components/EnvironmentalEffects/FogCoordinate.x3d'/>
+    <meta name='modified' content='Wed, 26 Oct 2022 15:20:42 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -46,7 +45,7 @@
         <MetadataSet DEF='BrowserPanel' containerField='value'
             name='BrowserPanel'
             reference='http://titania.create3000.de'>
-          <MetadataString DEF='type_2' containerField='value'
+          <MetadataString DEF='type_1' containerField='value'
               name='type'
               reference='http://titania.create3000.de'
               value='"TOP_VIEW", "MAIN_VIEW", "PERSPECTIVE_VIEW", "FRONT_VIEW"'/>
@@ -56,15 +55,15 @@
             <MetadataSet DEF='PerspectiveViewpoint' containerField='value'
                 name='PerspectiveViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_3' containerField='value'
+              <MetadataDouble DEF='position_1' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
-                  value='5.87788534164429, 6.46984958648682, 13.8524446487427'/>
-              <MetadataDouble DEF='orientation_4' containerField='value'
+                  value='5.8778853416443, 6.4698495864868, 13.852444648743'/>
+              <MetadataDouble DEF='orientation_1' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
-                  value='-0.704047462871212, 0.695566762376517, 0.143192350010952, 0.568941727555854'/>
-              <MetadataDouble DEF='centerOfRotation_5' containerField='value'
+                  value='-0.70404746287121, 0.69556676237652, 0.14319235001095, 0.56894172755585'/>
+              <MetadataDouble DEF='centerOfRotation_1' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
                   value='0, 0, 0'/>
@@ -76,39 +75,39 @@
             <MetadataSet DEF='TopViewpoint' containerField='value'
                 name='TopViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_6' containerField='value'
+              <MetadataDouble DEF='position_2' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
                   value='0, 10000, 0'/>
-              <MetadataDouble DEF='orientation_7' containerField='value'
+              <MetadataDouble DEF='orientation_2' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
-                  value='1, 0, 0, 4.71238898038469'/>
-              <MetadataDouble DEF='centerOfRotation_8' containerField='value'
+                  value='1, 0, 0, 4.7123889803847'/>
+              <MetadataDouble DEF='centerOfRotation_2' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
-                  value='-0.0320612526145463, 0, 0.0937320149966475'/>
-              <MetadataDouble DEF='fieldOfViewScale_9' containerField='value'
+                  value='-0.032061252614546, 0, 0.093732014996648'/>
+              <MetadataDouble DEF='fieldOfViewScale_1' containerField='value'
                   name='fieldOfViewScale'
                   reference='http://titania.create3000.de'
-                  value='1.21023944190259'/>
+                  value='1.2102394419026'/>
             </MetadataSet>
             <MetadataSet DEF='FrontViewpoint' containerField='value'
                 name='FrontViewpoint'
                 reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_10' containerField='value'
+              <MetadataDouble DEF='position_3' containerField='value'
                   name='position'
                   reference='http://titania.create3000.de'
                   value='0, 0, 10000'/>
-              <MetadataDouble DEF='orientation_11' containerField='value'
+              <MetadataDouble DEF='orientation_3' containerField='value'
                   name='orientation'
                   reference='http://titania.create3000.de'
                   value='0, 0, 1, 0'/>
-              <MetadataDouble DEF='centerOfRotation_12' containerField='value'
+              <MetadataDouble DEF='centerOfRotation_3' containerField='value'
                   name='centerOfRotation'
                   reference='http://titania.create3000.de'
-                  value='-0.00884759203065143, 0.0177734813359099, 0'/>
-              <MetadataDouble DEF='fieldOfViewScale_13' containerField='value'
+                  value='-0.0088475920306514, 0.01777348133591, 0'/>
+              <MetadataDouble DEF='fieldOfViewScale_2' containerField='value'
                   name='fieldOfViewScale'
                   reference='http://titania.create3000.de'
                   value='1.212467484375'/>
@@ -136,7 +135,7 @@
         groundColor='0.105712 0.156051 0.297, 0.187629 0.255857 0.398, 0.33604 0.405546 0.542, 0.3612 0.469145 0.602, 0.39471 0.522059 0.669'/>
     <Viewpoint
         position='4.61462 7.23644 11.127'
-        orientation='-0.965565420277522 -0.251731137854744 -0.0656875437099692 0.527888131612246'
+        orientation='-0.96556542027752 -0.25173113785474 -0.065687543709969 0.52788813161225'
         centerOfRotation='6.34553 0.0791084 -1.53575'/>
     <Fog
         color='0 0 0'
@@ -221,8 +220,10 @@
         translation='9 0 0'>
       <Shape>
         <Appearance>
-          <LineProperties
-              linewidthScaleFactor='10'/>
+          <PointProperties
+              pointSizeScaleFactor='20'
+              pointSizeMinValue='20'
+              pointSizeMaxValue='20'/>
           <Material
               emissiveColor='1 1 1'/>
         </Appearance>
