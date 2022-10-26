@@ -8,7 +8,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrise X3D Editor V1.0.3, https://create3000.github.io/sunrise/'/>
     <meta name='identifier' content='file:///Volumes/Home/Projekte/Library/Tests/Components/EnvironmentalEffects/FogCoordinate.x3d'/>
-    <meta name='modified' content='Wed, 26 Oct 2022 15:20:42 GMT'/>
+    <meta name='modified' content='Wed, 26 Oct 2022 15:22:44 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -204,6 +204,9 @@
         translation='6 0 -4'>
       <Shape>
         <Appearance>
+          <LineProperties
+              linetype='3'
+              linewidthScaleFactor='3'/>
           <Material
               emissiveColor='1 1 1'/>
         </Appearance>
