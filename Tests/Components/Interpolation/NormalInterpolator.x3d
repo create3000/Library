@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
   <head>
-    <meta name='comment' content='World of Titania'/>
+    <meta name='comment' content='World of Sunrise X3D Editor'/>
     <meta name='created' content='Mon, 13 Apr 2015 02:16:11 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V0.7.7, http://titania.create3000.de'/>
-    <meta name='modified' content='Mon, 13 Apr 2015 04:41:07 GMT'/>
+    <meta name='generator' content='Sunrise X3D Editor V1.0.4, https://create3000.github.io/sunrise/'/>
+    <meta name='modified' content='Fri, 28 Oct 2022 13:27:25 GMT'/>
+    <meta name='identifier' content='file:///Volumes/Home/Projekte/Library/Tests/Components/Interpolation/NormalInterpolator.x3d'/>
   </head>
   <Scene>
     <WorldInfo
@@ -37,14 +38,16 @@
         scale='3 3 3'>
       <Shape>
         <Appearance>
-          <LineProperties
-              linewidthScaleFactor='20'/>
+          <PointProperties
+              pointSizeScaleFactor='20'
+              pointSizeMinValue='20'
+              pointSizeMaxValue='20'/>
           <Material
               emissiveColor='1 0 0'/>
         </Appearance>
         <PointSet>
           <Coordinate DEF='_3'
-              point='1 0 0, 0 1 0, -1 0 0, 0 -1 0'/>
+              point='-0.983304 -0.181969 0, 0.181969 -0.983304 0, 0.983304 0.181969 0, -0.181969 0.983304 0'/>
         </PointSet>
       </Shape>
     </Transform>
