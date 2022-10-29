@@ -228,6 +228,26 @@ Transform {
 }
 
 Transform {
+  translation 10 -4 0
+  children Shape {
+    appearance Appearance {
+      lineProperties LineProperties {
+        linetype 16
+        linewidthScaleFactor 3
+      }
+      material Material { }
+      texture PixelTexture {
+        image 36 1 2 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xff00 0xff00 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xff00 0xff00 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xff00 0xff00 0xffff 0xffff 0xff00 0xff00 0xffff 0xffff 0xff00 0xff00 0xffff 0xffff 0xff00 0xff00
+      }
+      textureTransform TextureTransform {
+        scale 0.5 1
+      }
+    }
+    geometry Circle2D { }
+  }
+}
+
+Transform {
   translation 4 -2 0
   children Shape {
     appearance Appearance {
