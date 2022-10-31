@@ -1,0 +1,1792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta name='created' content='Mon, 11 Apr 2022 08:11:36 GMT'/>
+    <meta name='comment' content='World of Sunrise X3D Editor'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrise X3D Editor V1.0.4, https://create3000.github.io/sunrise/'/>
+    <meta name='identifier' content='file:///Users/holger/Desktop/X_ITE/x_ite/src/tests/PointSize.x3d'/>
+    <meta name='modified' content='Sun, 30 Oct 2022 05:06:06 GMT'/>
+  </head>
+  <Scene>
+    <Group DEF='_1'>
+      <Transform
+          translation='-5 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='0'
+                pointSizeMinValue='0'
+                pointSizeMaxValue='0'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 1 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-4.9 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='0.1'
+                pointSizeMinValue='0.1'
+                pointSizeMaxValue='0.1'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 1 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-4.8 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='0.2'
+                pointSizeMinValue='0.2'
+                pointSizeMaxValue='0.2'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 1 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-4.7 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='0.3'
+                pointSizeMinValue='0.3'
+                pointSizeMaxValue='0.3'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 1 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-4.6 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='0.4'
+                pointSizeMinValue='0.4'
+                pointSizeMaxValue='0.4'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 1 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-4.5 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='0.5'
+                pointSizeMinValue='0.5'
+                pointSizeMaxValue='0.5'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 1 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-4.4 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='0.6'
+                pointSizeMinValue='0.6'
+                pointSizeMaxValue='0.6'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 1 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-4.3 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='0.7'
+                pointSizeMinValue='0.7'
+                pointSizeMaxValue='0.7'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 1 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-4.2 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='0.8'
+                pointSizeMinValue='0.8'
+                pointSizeMaxValue='0.8'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 1 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-4.1 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='0.9'
+                pointSizeMinValue='0.9'
+                pointSizeMaxValue='0.9'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 1 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-4 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-3.9 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='1.1'
+                pointSizeMinValue='1.1'
+                pointSizeMaxValue='1.1'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-3.8 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='1.2'
+                pointSizeMinValue='1.2'
+                pointSizeMaxValue='1.2'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-3.7 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='1.3'
+                pointSizeMinValue='1.3'
+                pointSizeMaxValue='1.3'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-3.6 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='1.4'
+                pointSizeMinValue='1.4'
+                pointSizeMaxValue='1.4'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-3.5 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='1.5'
+                pointSizeMinValue='1.5'
+                pointSizeMaxValue='1.5'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-3.4 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='1.6'
+                pointSizeMinValue='1.6'
+                pointSizeMaxValue='1.6'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-3.3 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='1.7'
+                pointSizeMinValue='1.7'
+                pointSizeMaxValue='1.7'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-3.2 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='1.8'
+                pointSizeMinValue='1.8'
+                pointSizeMaxValue='1.8'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-3.1 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='1.9'
+                pointSizeMinValue='1.9'
+                pointSizeMaxValue='1.9'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-3 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='2'
+                pointSizeMinValue='2'
+                pointSizeMaxValue='2'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 1 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-2.9 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='2.1'
+                pointSizeMinValue='2.1'
+                pointSizeMaxValue='2.1'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 1 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-2.8 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='2.2'
+                pointSizeMinValue='2.2'
+                pointSizeMaxValue='2.2'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 1 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-2.7 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='2.3'
+                pointSizeMinValue='2.3'
+                pointSizeMaxValue='2.3'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 1 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-2.6 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='2.4'
+                pointSizeMinValue='2.4'
+                pointSizeMaxValue='2.4'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 1 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-2.5 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='2.5'
+                pointSizeMinValue='2.5'
+                pointSizeMaxValue='2.5'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 1 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-2.4 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='2.6'
+                pointSizeMinValue='2.6'
+                pointSizeMaxValue='2.6'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 1 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-2.3 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='2.7'
+                pointSizeMinValue='2.7'
+                pointSizeMaxValue='2.7'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 1 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-2.2 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='2.8'
+                pointSizeMinValue='2.8'
+                pointSizeMaxValue='2.8'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 1 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-2.1 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='2.9'
+                pointSizeMinValue='2.9'
+                pointSizeMaxValue='2.9'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 1 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-2 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='3'
+                pointSizeMinValue='3'
+                pointSizeMaxValue='3'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-1.9 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='3.1'
+                pointSizeMinValue='3.1'
+                pointSizeMaxValue='3.1'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-1.8 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='3.2'
+                pointSizeMinValue='3.2'
+                pointSizeMaxValue='3.2'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-1.7 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='3.3'
+                pointSizeMinValue='3.3'
+                pointSizeMaxValue='3.3'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-1.6 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='3.4'
+                pointSizeMinValue='3.4'
+                pointSizeMaxValue='3.4'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-1.5 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='3.5'
+                pointSizeMinValue='3.5'
+                pointSizeMaxValue='3.5'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-1.4 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='3.6'
+                pointSizeMinValue='3.6'
+                pointSizeMaxValue='3.6'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-1.3 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='3.7'
+                pointSizeMinValue='3.7'
+                pointSizeMaxValue='3.7'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-1.2 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='3.8'
+                pointSizeMinValue='3.8'
+                pointSizeMaxValue='3.8'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-1.1 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='3.9'
+                pointSizeMinValue='3.9'
+                pointSizeMaxValue='3.9'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-1 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='4'
+                pointSizeMinValue='4'
+                pointSizeMaxValue='4'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-0.9 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='4.1'
+                pointSizeMinValue='4.1'
+                pointSizeMaxValue='4.1'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-0.8 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='4.2'
+                pointSizeMinValue='4.2'
+                pointSizeMaxValue='4.2'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-0.7 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='4.3'
+                pointSizeMinValue='4.3'
+                pointSizeMaxValue='4.3'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-0.6 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='4.4'
+                pointSizeMinValue='4.4'
+                pointSizeMaxValue='4.4'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-0.5 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='4.5'
+                pointSizeMinValue='4.5'
+                pointSizeMaxValue='4.5'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-0.4 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='4.6'
+                pointSizeMinValue='4.6'
+                pointSizeMaxValue='4.6'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-0.3 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='4.7'
+                pointSizeMinValue='4.7'
+                pointSizeMaxValue='4.7'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-0.2 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='4.8'
+                pointSizeMinValue='4.8'
+                pointSizeMaxValue='4.8'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='-0.1 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='4.9'
+                pointSizeMinValue='4.9'
+                pointSizeMaxValue='4.9'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='5'
+                pointSizeMinValue='5'
+                pointSizeMaxValue='5'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 1 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='0.1 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='5.1'
+                pointSizeMinValue='5.1'
+                pointSizeMaxValue='5.1'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 1 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='0.2 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='5.2'
+                pointSizeMinValue='5.2'
+                pointSizeMaxValue='5.2'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 1 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='0.3 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='5.3'
+                pointSizeMinValue='5.3'
+                pointSizeMaxValue='5.3'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 1 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='0.4 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='5.4'
+                pointSizeMinValue='5.4'
+                pointSizeMaxValue='5.4'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 1 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='0.5 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='5.5'
+                pointSizeMinValue='5.5'
+                pointSizeMaxValue='5.5'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 1 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='0.6 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='5.6'
+                pointSizeMinValue='5.6'
+                pointSizeMaxValue='5.6'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 1 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='0.7 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='5.7'
+                pointSizeMinValue='5.7'
+                pointSizeMaxValue='5.7'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 1 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='0.8 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='5.8'
+                pointSizeMinValue='5.8'
+                pointSizeMaxValue='5.8'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 1 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='0.9 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='5.9'
+                pointSizeMinValue='5.9'
+                pointSizeMaxValue='5.9'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='0 1 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='1 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='6'
+                pointSizeMinValue='6'
+                pointSizeMaxValue='6'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 1 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='1.1 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='6.1'
+                pointSizeMinValue='6.1'
+                pointSizeMaxValue='6.1'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 1 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='1.2 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='6.2'
+                pointSizeMinValue='6.2'
+                pointSizeMaxValue='6.2'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 1 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='1.3 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='6.3'
+                pointSizeMinValue='6.3'
+                pointSizeMaxValue='6.3'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 1 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='1.4 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='6.4'
+                pointSizeMinValue='6.4'
+                pointSizeMaxValue='6.4'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 1 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='1.5 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='6.5'
+                pointSizeMinValue='6.5'
+                pointSizeMaxValue='6.5'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 1 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='1.6 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='6.6'
+                pointSizeMinValue='6.6'
+                pointSizeMaxValue='6.6'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 1 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='1.7 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='6.7'
+                pointSizeMinValue='6.7'
+                pointSizeMaxValue='6.7'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 1 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='1.8 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='6.8'
+                pointSizeMinValue='6.8'
+                pointSizeMaxValue='6.8'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 1 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='1.9 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='6.9'
+                pointSizeMinValue='6.9'
+                pointSizeMaxValue='6.9'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 1 0'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='2 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='7'
+                pointSizeMinValue='7'
+                pointSizeMaxValue='7'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='2.1 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='7.1'
+                pointSizeMinValue='7.1'
+                pointSizeMaxValue='7.1'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='2.2 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='7.2'
+                pointSizeMinValue='7.2'
+                pointSizeMaxValue='7.2'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='2.3 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='7.3'
+                pointSizeMinValue='7.3'
+                pointSizeMaxValue='7.3'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='2.4 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='7.4'
+                pointSizeMinValue='7.4'
+                pointSizeMaxValue='7.4'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='2.5 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='7.5'
+                pointSizeMinValue='7.5'
+                pointSizeMaxValue='7.5'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='2.6 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='7.6'
+                pointSizeMinValue='7.6'
+                pointSizeMaxValue='7.6'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='2.7 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='7.7'
+                pointSizeMinValue='7.7'
+                pointSizeMaxValue='7.7'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='2.8 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='7.8'
+                pointSizeMinValue='7.8'
+                pointSizeMaxValue='7.8'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='2.9 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='7.9'
+                pointSizeMinValue='7.9'
+                pointSizeMaxValue='7.9'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='3 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='8'
+                pointSizeMinValue='8'
+                pointSizeMaxValue='8'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='3.1 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='8.1'
+                pointSizeMinValue='8.1'
+                pointSizeMaxValue='8.1'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='3.2 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='8.2'
+                pointSizeMinValue='8.2'
+                pointSizeMaxValue='8.2'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='3.3 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='8.3'
+                pointSizeMinValue='8.3'
+                pointSizeMaxValue='8.3'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='3.4 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='8.4'
+                pointSizeMinValue='8.4'
+                pointSizeMaxValue='8.4'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='3.5 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='8.5'
+                pointSizeMinValue='8.5'
+                pointSizeMaxValue='8.5'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='3.6 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='8.6'
+                pointSizeMinValue='8.6'
+                pointSizeMaxValue='8.6'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='3.7 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='8.7'
+                pointSizeMinValue='8.7'
+                pointSizeMaxValue='8.7'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='3.8 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='8.8'
+                pointSizeMinValue='8.8'
+                pointSizeMaxValue='8.8'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='3.9 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='8.9'
+                pointSizeMinValue='8.9'
+                pointSizeMaxValue='8.9'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='4 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='9'
+                pointSizeMinValue='9'
+                pointSizeMaxValue='9'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='4.1 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='9.1'
+                pointSizeMinValue='9.1'
+                pointSizeMaxValue='9.1'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='4.2 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='9.2'
+                pointSizeMinValue='9.2'
+                pointSizeMaxValue='9.2'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='4.3 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='9.3'
+                pointSizeMinValue='9.3'
+                pointSizeMaxValue='9.3'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='4.4 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='9.4'
+                pointSizeMinValue='9.4'
+                pointSizeMaxValue='9.4'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='4.5 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='9.5'
+                pointSizeMinValue='9.5'
+                pointSizeMaxValue='9.5'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='4.6 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='9.6'
+                pointSizeMinValue='9.6'
+                pointSizeMaxValue='9.6'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='4.7 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='9.7'
+                pointSizeMinValue='9.7'
+                pointSizeMaxValue='9.7'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='4.8 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='9.8'
+                pointSizeMinValue='9.8'
+                pointSizeMaxValue='9.8'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='4.9 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='9.9'
+                pointSizeMinValue='9.9'
+                pointSizeMaxValue='9.9'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+      <Transform
+          translation='5 0 0'>
+        <Shape>
+          <Appearance>
+            <PointProperties
+                pointSizeScaleFactor='10'
+                pointSizeMinValue='10'
+                pointSizeMaxValue='10'/>
+          </Appearance>
+          <PointSet>
+            <Color
+                color='1 0 1'/>
+            <Coordinate
+                point='0 0 0'/>
+          </PointSet>
+        </Shape>
+      </Transform>
+    </Group>
+    <Script DEF='NewScript'>
+      <field accessType='initializeOnly' type='SFNode' name='group'>
+        <Group USE='_1' containerField='group'/>
+      </field>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+   group .children .length = 0;
+
+   for (let i = 0; i < 101; ++ i)
+   {
+      build (i / 10);
+   }
+}
+
+const colors = [
+   new SFColor (0, 1, 0),
+   new SFColor (1, 1, 1),
+   new SFColor (1, 0, 0),
+   new SFColor (0, 0, 1),
+   new SFColor (1, 0, 1),
+   new SFColor (0, 1, 1),
+   new SFColor (1, 1, 0),
+   new SFColor (0, 1, 0),
+   new SFColor (1, 1, 1),
+   new SFColor (1, 0, 0),
+   new SFColor (0, 0, 1),
+   new SFColor (1, 0, 1),
+   new SFColor (0, 1, 1),
+   new SFColor (1, 1, 0),
+];
+
+function build (pointSize)
+{
+   const
+      scene           = Browser .currentScene,
+      transform       = scene .createNode ("Transform"),
+      shape           = scene .createNode ("Shape"),
+      appearance      = scene .createNode ("Appearance"),
+      pointProperties = scene .createNode ("PointProperties"),
+      geometry        = scene .createNode ("PointSet"),
+      color           = scene .createNode ("Color"),
+      coord           = scene .createNode ("Coordinate");
+
+   group .children .push (transform);
+
+   transform .children [0]     = shape;
+   shape .appearance           = appearance;
+   shape .geometry             = geometry;
+   appearance .pointProperties = pointProperties;
+   geometry .color             = color;
+   geometry .coord             = coord;
+
+   transform .translation                = new SFVec3f (pointSize - 5, 0, 0);
+   pointProperties .pointSizeScaleFactor = pointSize;
+   pointProperties .pointSizeMinValue    = pointSize;
+   pointProperties .pointSizeMaxValue    = pointSize;
+   color .color [0]                      = colors [Math .floor (pointSize)];
+   coord .point [0]                      = new SFVec3f ();
+}
+]]>
+    </Script>
+  </Scene>
+</X3D>

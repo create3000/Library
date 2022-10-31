@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta name='created' content='Mon, 24 Oct 2022 21:12:53 GMT'/>
+    <meta name='comment' content='World of Sunrise X3D Editor'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrise X3D Editor V1.0.0, https://create3000.github.io/Sunrise/'/>
+    <meta name='identifier' content='file:///Users/holger/Desktop/X_ITE/x_ite/src/tests/PointsWithTexture.x3d'/>
+    <meta name='modified' content='Tue, 25 Oct 2022 14:54:59 GMT'/>
+  </head>
+  <Scene>
+    <Transform DEF='PointSet_1'
+        translation='-3 0 0'>
+      <Shape>
+        <Appearance>
+          <PointProperties DEF='_1'
+              pointSizeScaleFactor='80'
+              pointSizeMinValue='80'
+              pointSizeMaxValue='80'/>
+          <PixelTexture DEF='_2'
+              image='2 2 1 0x0 0xff 0xff 0x0'/>
+          <TextureTransform DEF='_3'
+              scale='2 2'/>
+        </Appearance>
+        <PointSet>
+          <ColorRGBA
+              color='1 0 0 1, 0 1 0 1, 0 0 1 1, 1 1 1 0.5'/>
+          <Coordinate
+              point='1 1 0, -1 1 0, -1 -1 0, 1 -1 0'/>
+        </PointSet>
+      </Shape>
+    </Transform>
+    <Transform DEF='PointSet'
+        translation='3 0 0'>
+      <Shape>
+        <Appearance>
+          <PointProperties USE='_1'/>
+          <UnlitMaterial
+              emissiveColor='0.403922 0.305882 0.654902'>
+            <PixelTexture USE='_2' containerField='emissiveTexture'/>
+          </UnlitMaterial>
+          <TextureTransform USE='_3'/>
+        </Appearance>
+        <PointSet>
+          <Coordinate
+              point='1 1 0, -1 1 0, -1 -1 0, 1 -1 0'/>
+        </PointSet>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

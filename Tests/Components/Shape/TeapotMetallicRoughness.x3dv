@@ -1,0 +1,239 @@
+#X3D V4.0 utf8 X_ITE V5.0.0a
+
+PROFILE Core
+
+COMPONENT Navigation : 3
+COMPONENT Shape : 5
+COMPONENT Core : 2
+COMPONENT Grouping : 3
+COMPONENT Time : 2
+COMPONENT Interpolation : 5
+COMPONENT Lighting : 3
+COMPONENT Geometry3D : 4
+
+META "created" "Sun, 10 Apr 2022 08:53:30 GMT"
+META "comment" "World of Sunrise X3D Editor"
+META "creator" "Holger Seelig"
+META "generator" "Sunrise X3D Editor V1.0.0, https://create3000.github.io/Sunrise/"
+META "identifier" "file:///Users/holger/Desktop/X_ITE/x_ite/src/tests/TeapotMetallicRoughness.x3dv"
+META "modified" "Sun, 10 Apr 2022 08:53:30 GMT"
+
+EXTERNPROTO Teapot [ ]
+"Teapot.x3dv#Teapot"
+
+Viewpoint {
+  position 3.74173 -2.26961 15.4102
+  orientation -0.96826410604699 0.24959524126048 0.012916519705612 0.10679043768047
+  centerOfRotation 3.3349 -3.85237 0.164201
+}
+
+Transform {
+  children [
+    Transform {
+      children Shape {
+        appearance Appearance {
+          material PhysicalMaterial {
+            baseColor 1 1 0
+            metallic 0
+            roughness 0
+          }
+        }
+        geometry Teapot { }
+      }
+    }
+    Transform {
+      translation 3 0 0
+      children Shape {
+        appearance Appearance {
+          material PhysicalMaterial {
+            baseColor 1 1 0
+            metallic 0.5
+            roughness 0
+          }
+        }
+        geometry Teapot { }
+      }
+    }
+    Transform {
+      translation 6 0 0
+      children Shape {
+        appearance Appearance {
+          material PhysicalMaterial {
+            baseColor 1 1 0
+            roughness 0
+          }
+        }
+        geometry Teapot { }
+      }
+    }
+  ]
+}
+
+Transform {
+  translation 0 -3 0
+  children [
+    Transform {
+      children Shape {
+        appearance Appearance {
+          material PhysicalMaterial {
+            baseColor 1 1 0
+            metallic 0
+            roughness 0.1
+          }
+        }
+        geometry Teapot { }
+      }
+    }
+    Transform {
+      translation 3 0 0
+      children Shape {
+        appearance Appearance {
+          material PhysicalMaterial {
+            baseColor 1 1 0
+            metallic 0.5
+            roughness 0.1
+          }
+        }
+        geometry Teapot { }
+      }
+    }
+    Transform {
+      translation 6 0 0
+      children Shape {
+        appearance Appearance {
+          material PhysicalMaterial {
+            baseColor 1 1 0
+            roughness 0.1
+          }
+        }
+        geometry Teapot { }
+      }
+    }
+  ]
+}
+
+Transform {
+  translation 0 -6 0
+  children [
+    Transform {
+      children Shape {
+        appearance Appearance {
+          material PhysicalMaterial {
+            baseColor 1 1 0
+            metallic 0
+            roughness 0.5
+          }
+        }
+        geometry Teapot { }
+      }
+    }
+    Transform {
+      translation 3 0 0
+      children Shape {
+        appearance Appearance {
+          material PhysicalMaterial {
+            baseColor 1 1 0
+            metallic 0.5
+            roughness 0.5
+          }
+        }
+        geometry Teapot { }
+      }
+    }
+    Transform {
+      translation 6 0 0
+      children Shape {
+        appearance Appearance {
+          material PhysicalMaterial {
+            baseColor 1 1 0
+            roughness 0.5
+          }
+        }
+        geometry Teapot { }
+      }
+    }
+  ]
+}
+
+Transform {
+  translation 0 -9 0
+  children [
+    Transform {
+      children Shape {
+        appearance Appearance {
+          material PhysicalMaterial {
+            baseColor 1 1 0
+            metallic 0
+          }
+        }
+        geometry Teapot { }
+      }
+    }
+    Transform {
+      translation 3 0 0
+      children Shape {
+        appearance Appearance {
+          material PhysicalMaterial {
+            baseColor 1 1 0
+            metallic 0.5
+          }
+        }
+        geometry Teapot { }
+      }
+    }
+    Transform {
+      translation 6 0 0
+      children Shape {
+        appearance Appearance {
+          material PhysicalMaterial {
+            baseColor 1 1 0
+          }
+        }
+        geometry Teapot { }
+      }
+    }
+  ]
+}
+
+DEF MyTimeSensor TimeSensor {
+  cycleInterval 2
+  loop TRUE
+}
+
+DEF MyOrientationInterpolator OrientationInterpolator {
+  key [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ]
+  keyValue [
+    0 0 1 0,
+    0 0 1 1.57,
+    0 0 1 3.14,
+    0 0 1 4.71,
+    0 0 1 0
+  ]
+}
+
+Transform {
+  translation 3 -3 0
+  children DEF LightTransform Transform {
+    rotation 0 0 1 1.6863871860504
+    children Transform {
+      translation 5 0 2
+      children [
+        PointLight { }
+        Shape {
+          geometry Sphere {
+            radius 0.1
+          }
+        }
+      ]
+    }
+  }
+}
+
+ROUTE MyTimeSensor.fraction_changed TO MyOrientationInterpolator.set_fraction
+ROUTE MyOrientationInterpolator.value_changed TO LightTransform.set_rotation

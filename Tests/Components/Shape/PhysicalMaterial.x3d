@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Core' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <component name='EnvironmentalEffects' level='4'/>
+    <component name='Navigation' level='3'/>
+    <component name='Shape' level='5'/>
+    <component name='Geometry3D' level='4'/>
+    <component name='Grouping' level='3'/>
+    <meta name='created' content='Thu, 07 Apr 2022 17:51:23 GMT'/>
+    <meta name='comment' content='World of Sunrise X3D Editor'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrise X3D Editor V1.0.0, https://create3000.github.io/Sunrise/'/>
+    <meta name='identifier' content='file:///Users/holger/Desktop/X_ITE/x_ite/src/tests/PhysicalMaterial.x3d'/>
+    <meta name='modified' content='Sat, 07 May 2022 12:20:34 GMT'/>
+  </head>
+  <Scene>
+    <Background DEF='Gray'
+        skyColor='0.2 0.2 0.2'/>
+    <Viewpoint
+        position='1.51417 2.22314 3.86733'
+        orientation='-0.79001912155715 0.59466404368949 0.14914577673179 0.61481119089033'/>
+    <Transform DEF='Box'>
+      <Shape>
+        <Appearance>
+          <PhysicalMaterial
+              baseColor='0.454902 0.278431 0'
+              metallic='0.3'
+              roughness='0.1'/>
+        </Appearance>
+        <Box/>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>
