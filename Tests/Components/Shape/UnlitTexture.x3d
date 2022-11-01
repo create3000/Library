@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D profile='Core' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
   <head>
-    <component name='EnvironmentalEffects' level='4'/>
-    <component name='Navigation' level='3'/>
-    <component name='Texturing' level='3'/>
-    <component name='Shape' level='5'/>
-    <component name='Geometry3D' level='4'/>
-    <component name='Grouping' level='3'/>
     <component name='CubeMapTexturing' level='3'/>
-    <component name='Rendering' level='5'/>
     <meta name='created' content='Wed, 30 Mar 2022 14:31:19 GMT'/>
     <meta name='comment' content='World of Sunrise X3D Editor'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Sunrise X3D Editor V1.0.0, https://create3000.github.io/Sunrise/'/>
+    <meta name='generator' content='Sunrise X3D Editor V1.0.4, https://create3000.github.io/sunrise/'/>
     <meta name='identifier' content='file:///Volumes/Home/Projekte/Library/Tests/Components/Shape/UnlitTexture.x3d'/>
-    <meta name='modified' content='Sun, 10 Apr 2022 11:49:00 GMT'/>
+    <meta name='modified' content='Tue, 01 Nov 2022 21:58:21 GMT'/>
   </head>
   <Scene>
     <Background DEF='Gray'
