@@ -1,0 +1,15 @@
+
+Shape {
+   appearance Appearance {
+      material Material { }
+   }
+   geometry Box { }
+}
+
+Viewpoint {
+   description "Viewpoint"
+}
+
+OrthoViewpoint {
+   description "OrthoViewpoint"
+}
