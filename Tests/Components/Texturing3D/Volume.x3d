@@ -70,7 +70,6 @@ precision mediump sampler3D;
 uniform int       x3d_NumTextures;
 uniform sampler3D x3d_Texture3D [1];
 
-uniform int  x3d_NumClipPlanes;
 uniform vec4 x3d_ClipPlane [x3d_MaxClipPlanes];
 
 in vec3 vertex;
@@ -81,11 +80,8 @@ out vec4 x3d_FragColor;
 void
 clip ()
 {
-	for (int i = 0; i < x3d_MaxClipPlanes; ++ i)
+	for (int i = 0; i < 1; ++ i)
 	{
-		if (i == x3d_NumClipPlanes)
-			break;
-
 		if (dot (vertex, x3d_ClipPlane [i] .xyz) - x3d_ClipPlane [i] .w < 0.0)
 			discard;
 	}
