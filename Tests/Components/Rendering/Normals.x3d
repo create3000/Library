@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='https://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta name='created' content='Fri, 09 Dec 2022 12:18:26 GMT'/>
+    <meta name='comment' content='World of Sunrise X3D Editor'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrise X3D Editor V1.0.5, https://create3000.github.io/sunrise/'/>
+    <meta name='identifier' content='file:///Users/holger/Desktop/X_ITE/x_ite/src/tests/Normals.x3d'/>
+    <meta name='modified' content='Fri, 09 Dec 2022 14:11:49 GMT'/>
+  </head>
+  <Scene>
+    <Background
+        skyColor='0.2 0.2 0.2'/>
+    <Transform DEF='PointSet'
+        translation='-3 0 0'>
+      <Shape>
+        <Appearance>
+          <PointProperties
+              pointSizeMinValue='20'
+              pointSizeMaxValue='20'/>
+          <Material DEF='_1'/>
+        </Appearance>
+        <PointSet>
+          <Normal
+              vector='0 0 1, 0 0 1, 0 0 1, 0 0 1'/>
+          <Coordinate
+              point='1 1 0, -1 1 0, -1 -1 0, 1 -1 0'/>
+        </PointSet>
+      </Shape>
+    </Transform>
+    <Transform DEF='IndexedLineSet_1'
+        translation='0 1.5 0'>
+      <Shape>
+        <Appearance>
+          <LineProperties
+              linewidthScaleFactor='2'/>
+          <Material USE='_1'/>
+        </Appearance>
+        <IndexedLineSet
+            coordIndex='0, 1, 2, 3, 0, -1, 4, 5, 6, 7, 4, -1, 0, 4, -1, 1, 5, -1, 2, 6, -1, 3, 7, -1'>
+          <Normal
+              vector='0 0 1, 0 0 1, 0 0 1, 0 0 1, 0 0 1, 0 0 1, 0 0 1, 0 0 1'/>
+          <Coordinate
+              point='1 1 1, -1 1 1, -1 -1 1, 1 -1 1, 1 1 -1, -1 1 -1, -1 -1 -1, 1 -1 -1'/>
+        </IndexedLineSet>
+      </Shape>
+    </Transform>
+    <Transform DEF='IndexedLineSet_2'
+        translation='0 -1.5 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <LineSet
+            vertexCount='5'>
+          <Normal
+              vector='0 0 1, 0 0 1, 0 0 1, 0 0 1, 0 0 1'/>
+          <Coordinate
+              point='1 1 0, -1 1 0, -1 -1 0, 1 -1 0, 1 1 0'/>
+        </LineSet>
+      </Shape>
+    </Transform>
+    <Transform DEF='IndexedFaceSet'
+        translation='3 0 0'>
+      <Shape>
+        <Appearance>
+          <Material USE='_1'/>
+        </Appearance>
+        <IndexedFaceSet
+            solid='false'
+            coordIndex='0, 1, 2, 3, -1'>
+          <Normal
+              vector='0 0 1, 0 0 1, 0 0 1, 0 0 1'/>
+          <Coordinate
+              point='1 1 0, -1 1 0, -1 -1 0, 1 -1 0'/>
+        </IndexedFaceSet>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>
