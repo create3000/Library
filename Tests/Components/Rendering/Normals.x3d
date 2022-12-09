@@ -6,8 +6,8 @@
     <meta name='comment' content='World of Sunrise X3D Editor'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrise X3D Editor V1.0.5, https://create3000.github.io/sunrise/'/>
-    <meta name='identifier' content='file:///Users/holger/Desktop/X_ITE/x_ite/src/tests/Normals.x3d'/>
-    <meta name='modified' content='Fri, 09 Dec 2022 14:11:49 GMT'/>
+    <meta name='identifier' content='file:///Volumes/Home/Projekte/Library/Tests/Components/Rendering/Normals.x3d'/>
+    <meta name='modified' content='Fri, 09 Dec 2022 14:38:02 GMT'/>
   </head>
   <Scene>
     <Background
@@ -46,7 +46,7 @@
         </IndexedLineSet>
       </Shape>
     </Transform>
-    <Transform DEF='IndexedLineSet_2'
+    <Transform DEF='LineSet'
         translation='0 -1.5 0'>
       <Shape>
         <Appearance>
