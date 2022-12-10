@@ -43,7 +43,7 @@
           <MetadataSet DEF='nodes' containerField='value'
               name='nodes'
               reference='http://titania.create3000.de'>
-            <TextureProjectorPerspective DEF='_2' containerField='value'
+            <TextureProjector DEF='_2' containerField='value'
                 global='false'
                 location='3 0 2'
                 direction='-0 -0 -1'
@@ -53,7 +53,7 @@
                   url='"http://cdn.rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "https://cdn.rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "http://rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "https://rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg"'
                   repeatS='false'
                   repeatT='false'/>
-            </TextureProjectorPerspective>
+            </TextureProjector>
           </MetadataSet>
         </MetadataSet>
         <MetadataSet DEF='BrowserPanel' containerField='value'
@@ -167,7 +167,7 @@
         <Box/>
       </Shape>
     </Transform>
-    <TextureProjectorPerspective DEF='_16'
+    <TextureProjector DEF='_16'
         location='-2 0 2'
         direction='-0 -0 -1'
         upVector='-0 1 -0'>
@@ -175,7 +175,7 @@
           url='"http://cdn.rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "https://cdn.rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "http://rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "https://rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg"'
           repeatS='false'
           repeatT='false'/>
-    </TextureProjectorPerspective>
-    <TextureProjectorPerspective USE='_2'/>
+    </TextureProjector>
+    <TextureProjector USE='_2'/>
   </Scene>
 </X3D>

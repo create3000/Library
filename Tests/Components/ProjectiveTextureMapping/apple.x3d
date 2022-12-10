@@ -44,7 +44,7 @@
     <Viewpoint DEF='_1'
         position='3.45864 5.78616 7.38635'
         orientation='-0.80658553711544 0.563208014712301 0.179489563707828 0.75257055684603'/>
-    <TextureProjectorPerspective DEF='_2'
+    <TextureProjector DEF='_2'
         description='pt1'
         location='3 3 3'
         direction='-0.601322 -0.526144 -0.601319'
@@ -54,7 +54,7 @@
           url='"apple.png"'
           repeatS='false'
           repeatT='false'/>
-    </TextureProjectorPerspective>
+    </TextureProjector>
     <Shape>
       <Appearance>
         <Material
