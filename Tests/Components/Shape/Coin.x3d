@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='https://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta name='created' content='Thu, 10 Nov 2022 15:17:09 GMT'/>
+    <meta name='comment' content='World of Sunrise X3D Editor'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrise X3D Editor V1.0.4, https://create3000.github.io/sunrise/'/>
+    <meta name='identifier' content='file:///Users/holger/Desktop/X_ITE/x_ite/src/tests/Coin.x3d'/>
+    <meta name='modified' content='Thu, 10 Nov 2022 19:24:52 GMT'/>
+  </head>
+  <Scene>
+    <Transform DEF='Cylinder'
+        scale='1 0.05 1'>
+      <Shape>
+        <Appearance>
+          <Material
+              diffuseColor='1 1 1'
+              specularColor='1 1 1'
+              shininess='1'
+              normalScale='2'>
+            <ImageTexture containerField='normalTexture'
+                url='"coin.jpg"'/>
+          </Material>
+        </Appearance>
+        <Cylinder/>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='https://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='EventUtilities' level='4'/>
+    <component name='PointingDeviceSensor' level='1'/>
+    <meta name='created' content='Fri, 09 Dec 2022 15:26:53 GMT'/>
+    <meta name='comment' content='World of Sunrise X3D Editor'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrise X3D Editor V1.0.5, https://create3000.github.io/sunrise/'/>
+    <meta name='identifier' content='file:///Users/holger/Desktop/X_ITE/x_ite/src/tests/InlineGlobal.x3d'/>
+    <meta name='modified' content='Sat, 10 Dec 2022 00:00:22 GMT'/>
+  </head>
+  <Scene>
+    <NavigationInfo
+        headlight='false'/>
+    <Viewpoint
+        position='5.65094 8.33655 10.783'
+        orientation='-0.76859137417185 0.61112546586771 0.1891902865281 0.76580931764699'/>
+    <Transform DEF='Floor'
+        scale='100 0.1 100'>
+      <Shape>
+        <Appearance>
+          <Material
+              emissiveColor='0.266667 0.266667 0.266667'/>
+        </Appearance>
+        <Box/>
+      </Shape>
+    </Transform>
+    <Transform
+        translation='-3 1 0'>
+      <TouchSensor DEF='_1'/>
+      <BooleanFilter DEF='_2'/>
+      <Inline DEF='_3'
+          global='true'
+          url='"BoxWithLight.x3d"'/>
+    </Transform>
+    <Transform
+        translation='3 1 0'>
+      <TouchSensor DEF='_4'/>
+      <BooleanFilter DEF='_5'/>
+      <Inline DEF='_6'
+          global='true'
+          url='"BoxWithLight.x3d"'/>
+    </Transform>
+    <ROUTE fromNode='_1' fromField='isOver' toNode='_2' toField='set_boolean'/>
+    <ROUTE fromNode='_2' fromField='inputNegate' toNode='_3' toField='set_global'/>
+    <ROUTE fromNode='_4' fromField='isOver' toNode='_5' toField='set_boolean'/>
+    <ROUTE fromNode='_5' fromField='inputNegate' toNode='_6' toField='set_global'/>
+  </Scene>
+</X3D>
