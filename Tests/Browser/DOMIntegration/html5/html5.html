@@ -7,15 +7,10 @@
 		<meta http-equiv="Pragma" content="no-cache"/>
 		<meta http-equiv="Expires" content="0"/>
 		<meta charset="utf-8"/>
-		
-		<script type="text/javascript" 
+
+		<script type="text/javascript"
 			src="https://create3000.github.io/code/x_ite/latest/dist/x_ite.js">
 		</script>
-		<script type="text/javascript" 
-			src="">
-		</script>
-		<link rel="stylesheet" type="text/css"
-			href="https://create3000.github.io/code/x_ite/latest/dist/x_ite.css"/>
 
 <style >
 html, body {
@@ -50,7 +45,7 @@ x3d-canvas {
 	<button onclick='add_box()'>new box</button>
 	<button onclick='remove_last_box()'>remove box</button>
 	<button onclick='remove_last_material()'>remove material</button>
-	
+
 	<x3d-canvas>
 <X3D>
 	<Scene>
@@ -64,7 +59,7 @@ x3d-canvas {
 					<Box></Box>
 				</Shape>
 		</Transform>
-		
+
 		<Transform id='shell'>
 		</Transform>
 	</Scene>
@@ -84,9 +79,9 @@ var radius = 4;
 var perBoxAngle = 2*Math.PI/12;
 
 function random_color() {
-	
+
 	var m = document.querySelector("Material")
-	//will be transferred to scene graph node 
+	//will be transferred to scene graph node
 	m.setAttribute("diffuseColor", Math.random()+" "+Math.random()+" "+Math.random());
 	console.log(m);
 }

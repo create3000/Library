@@ -4,16 +4,11 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <title>JQuery Manipulation</title>
-    	
-		<script type="text/javascript" 
-			src="https://create3000.github.io/code/x_ite/latest/dist/x_ite.js">
-		</script>
-		<script type="text/javascript" 
-			src="">
-		</script>
-		<link rel="stylesheet" type="text/css"
-			href="https://create3000.github.io/code/x_ite/latest/dist/x_ite.css"/>
-	
+
+    <script type="text/javascript"
+        src="https://create3000.github.io/code/x_ite/latest/dist/x_ite.js">
+    </script>
+
   <style>
   html, body {
   	margin: 0px;
@@ -23,25 +18,25 @@
   	height: 100%;
   	overflow: hidden;
   }
-  
+
   body {
   	background: black;
   	color: white;
   }
-  
+
   x3d-canvas {
   	background: #414141;
   	height: 300px;
   	width: 400px;
   	float: left;
   }
-  
+
   .fallback {
   	display: block;
   	margin: 300px 0 0 0;
   	text-align: center;
   }
-  
+
         label { width: 100px; float: left; clear: both; }
         #ctrlContainer { border: 1px solid #000; padding: 20px; float: left; width: 280px; margin-left: 20px; }
         #sliderContainer div { float:left; width: 200px; }
@@ -71,7 +66,7 @@
         </Scene>
 	</X3D>
     </x3d-canvas>
-	
+
     <div id="ctrlContainer">
         <p>Change the color of the cube using the RGB sliders, which updates the "diffuseColor" attribute of the Material node using jQuery.</p>
         <div id="sliderContainer">
@@ -83,8 +78,8 @@
         </div>
     </div>
 
-	 
-  
+
+
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <link type="text/css" href="https://code.jquery.com/ui/1.10.4/themes/humanity/jquery-ui.css" rel="stylesheet" />
@@ -93,11 +88,11 @@
 	          // Create the sliders
 //$(function(){
 $(".slider").slider({min: 0, max: 1, step: 0.01, slide: function(e, ui) {
-	var newCol =   $("#redSlider").slider('option', 'value') + " " 
-	     + $("#greenSlider").slider('option', 'value') + " "  
-	     + $("#blueSlider").slider('option', 'value');              
+	var newCol =   $("#redSlider").slider('option', 'value') + " "
+	     + $("#greenSlider").slider('option', 'value') + " "
+	     + $("#blueSlider").slider('option', 'value');
 	$("Material").attr("diffuseColor", newCol);
 }});
-//});		     
+//});
 </script>
 </html>

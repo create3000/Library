@@ -9,16 +9,11 @@
 		<meta http-equiv="Pragma" content="no-cache"/>
 		<meta http-equiv="Expires" content="0"/>
 		<meta charset="utf-8"/>
-		
-		<script type="text/javascript" 
+
+		<script type="text/javascript"
 			src="https://create3000.github.io/code/x_ite/latest/dist/x_ite.js">
 		</script>
-		<script type="text/javascript" 
-			src="">
-		</script>
-		<link rel="stylesheet" type="text/css"
-			href="https://create3000.github.io/code/x_ite/latest/dist/x_ite.css"/>
-	
+
 <style>
 
 x3d-canvas {
@@ -32,13 +27,13 @@ x3d-canvas {
 <body>
 	<button onclick='remove_material()'>remove material</button>
 	<button onclick='add_material()'>add material</button>
-	
+
 		<x3d-canvas id='dummy'>
 <X3D>
 	<Scene>
 		<Viewpoint></Viewpoint>
 		<NavigationInfo type='"FLY", "ANY"'></NavigationInfo>
-		
+
 		<Transform translation='2 0 0'>
 				<Shape>
 				<!-- When attribute values are not specified, the default values from the X3D (or VRML) Specification are used. -->
@@ -48,7 +43,7 @@ x3d-canvas {
 					<Box></Box>
 				</Shape>
 		</Transform>
-		
+
 		<Transform id='shell'>
 		</Transform>
 	</Scene>

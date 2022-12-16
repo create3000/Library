@@ -8,17 +8,12 @@
 		<meta http-equiv="Pragma" content="no-cache"/>
 		<meta http-equiv="Expires" content="0"/>
 		<meta charset="utf-8"/>
-		<script type="text/javascript" 
+		<script type="text/javascript"
 			src="https://create3000.github.io/code/x_ite/latest/dist/x_ite.js">
 		</script>
-		<script type="text/javascript" 
-			src="">
-		</script>
-		<link rel="stylesheet" type="text/css"
-			href="https://create3000.github.io/code/x_ite/latest/dist/x_ite.css"/>
-	
+
 		<script src="https://d3js.org/d3.v4.min.js"></script>
-		
+
 <style>
 html, body {
 	margin: 0px;
@@ -52,7 +47,7 @@ x3d-canvas {
 	<button onclick='add_box()'>new box</button>
 	<button onclick='remove_last_box()'>remove box</button>
 	<button onclick='remove_last_material()'>remove material</button>
-	
+
 <x3d-canvas>
 	<X3D>
 	<Scene>
@@ -60,10 +55,10 @@ x3d-canvas {
 		<NavigationInfo type='"FLY", "ANY"'></NavigationInfo>
 		<KeySensor DEF='ks1'></KeySensor>
 		<TimeSensor DEF='tms1' loop='true' cycleInterval='10'></TimeSensor>
-		
+
 		<Transform translation='2 0 0'>
 			<TouchSensor DEF='ts1'></TouchSensor>
-			<ProximitySensor DEF='ps1' size='8 8 8'></ProximitySensor> 
+			<ProximitySensor DEF='ps1' size='8 8 8'></ProximitySensor>
 				<Shape>
 				<!-- When attribute values are not specified, the default values from the X3D (or VRML) Specification are used. -->
 					<Appearance>
@@ -72,7 +67,7 @@ x3d-canvas {
 					<Box></Box>
 				</Shape>
 		</Transform>
-		
+
 		<Transform id='shell'>
 		</Transform>
 <!--http://www.web3d.org/x3d/content/examples/Basic/ScriptConformance/TouchSensorIsOverEventECMAScript.html-->
@@ -93,14 +88,14 @@ x3d-canvas {
 
 ecmascript:
 
-function isOver(val) 
-{ 
-    if (val == true) 
-    { 
-        diffuseColor_changed = new SFColor(1,0,0); 
-    } 
-    else 
-    { 
+function isOver(val)
+{
+    if (val == true)
+    {
+        diffuseColor_changed = new SFColor(1,0,0);
+    }
+    else
+    {
         diffuseColor_changed = new SFColor(0,0,1);
     }
 }
@@ -108,7 +103,7 @@ function isOver(val)
 	]]>
 </Script>
 <ROUTE fromNode='TS' fromField='isOver' toNode='SC' toField='isOver'></ROUTE>
-<ROUTE fromNode='SC' fromField='diffuseColor_changed' toNode='MAT' toField='set_diffuseColor'></ROUTE> 
+<ROUTE fromNode='SC' fromField='diffuseColor_changed' toNode='MAT' toField='set_diffuseColor'></ROUTE>
 
 	</Scene>
 	</X3D>
@@ -142,7 +137,7 @@ mat.transition()
 	.duration(5000)
 	.attr("diffuseColor", red.r/255 + " " + red.g/255 + " " + red.b/255);
 
-// 
+//
 var spins = 20;
 var msperspin = 5000;
 firsttrafo.transition()
@@ -205,9 +200,9 @@ var radius = 4;
 var perBoxAngle = 2*Math.PI/12;
 
 function random_color() {
-	
+
 	var m = document.querySelector("Material")
-	//will be transferred to scene graph node 
+	//will be transferred to scene graph node
 	m.setAttribute("diffuseColor", Math.random()+" "+Math.random()+" "+Math.random());
 	console.log(m);
 }

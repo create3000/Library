@@ -5,16 +5,11 @@
 		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 		<title>Multi-View: Multiple X3D scenes in a single XHTML document</title>
-		
-		<script type="text/javascript" 
+
+		<script type="text/javascript"
 			src="https://create3000.github.io/code/x_ite/latest/dist/x_ite.js">
 		</script>
-		<script type="text/javascript" 
-			src="">
-		</script>
-		<link rel="stylesheet" type="text/css"
-			href="https://create3000.github.io/code/x_ite/latest/dist/x_ite.css"/>
-		
+
 		<style>
 			x3d-canvas {
 				width: 300px;
@@ -22,20 +17,20 @@
 				float: left;
 			}
 		</style>
-		
+
 	</head>
-       
+
 <body style="background-color:#E0E0E0; background-image:url(texture/generic/dots.png); ">
 
     <h1>Multi-View: Multiple X3D scenes in a single XHTML document</h1>
-	
+
 	<p class="case">
 	<x3d-canvas>
 		<X3D xmlns="http://www.web3d.org/specifications/x3d-namespace" id="boxes" showStat="true" showLog="false" x="0px" y="0px" width="300px" height="400px" style="float:left;">
 			<Scene>
 				<Background transparency="1.0" skyColor='0 0 0' />
 				<DirectionalLight direction="0 0 -1" />
-				
+
 				<Transform >
 					<Shape>
 						<Appearance>
@@ -44,7 +39,7 @@
 						<Box/>
 					</Shape>
 				</Transform>
-				
+
 				<Transform translation='2 -0.5 -2'>
 				  <Shape>
 					<Appearance>
@@ -57,7 +52,7 @@
 					</IndexedFaceSet>
 				  </Shape>
 				</Transform>
-				
+
 				<Transform DEF="TBox" translation="4 0 0" rotation="1 0 0 0.9">
 					<Shape>
 						<Appearance>
@@ -67,17 +62,17 @@
 						<Box size="3 1 2"/>
 					</Shape>
 				</Transform>
-				
+
 				<TimeSensor DEF="TS" loop="true" cycleInterval="2" />
-				
+
 				<OrientationInterpolator DEF="OI" key="0 0.5 1" keyValue="1 0 0 0, 1 0 0 3.14159, 1 0 0 6.28318" />
 				<ROUTE fromNode='TS' fromField='fraction_changed' toNode='OI' toField='set_fraction'/>
 				<ROUTE fromNode='OI' fromField='value_changed' toNode='TBox' toField='rotation'/>
-				
+
 				<ScalarInterpolator DEF="SI" key="0 0.3 0.6 1" keyValue="1 0 0 1" />
 				<ROUTE fromNode='TS' fromField='fraction_changed' toNode='SI' toField='set_fraction'/>
 				<ROUTE fromNode='SI' fromField='value_changed' toNode='BoxMat' toField='transparency'/>
-				
+
 				<Viewpoint centerOfRotation="0 0 0" position="2 0 8" orientation="0 1 0 0" fieldOfView="0.785398"/>
 			</Scene>
 		</X3D>
@@ -106,7 +101,7 @@
 				<Background transparency='1' skyColor='0 0 0' />
 			</Scene>
         	</X3D>
-	</x3d-canvas>	
+	</x3d-canvas>
 		&nbsp;
 	<x3d-canvas>
         	<X3D xmlns="http://www.web3d.org/specifications/x3d-namespace" id="flipper" showStat="true" x="0px" y="0px" width="300px" height="400px" style="float:left;">
@@ -127,11 +122,11 @@
         	</X3D>
 	</x3d-canvas>
 	</p>
-	
-	<p class="case"> &nbsp; 
+
+	<p class="case"> &nbsp;
 	<!--
 	<input type="button" id="points" value="Show Points" onclick="toggleRendering();" />
-	
+
 	<img id="test_img_1" src="data:image/png;base64,
 iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABGdBTUEAALGP
 C/xhBQAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9YGARc5KB0XV+IA
@@ -140,12 +135,12 @@ REFUGNO9zL0NglAAxPEfdLTs4BZM4DIO4C7OwQg2JoQ9LE1exdlYvBBeZ7jq
 ch9//q1uH4TLzw4d6+ErXMMcXuHWxId3KOETnnXXV6MJpcq2MLaI97CER3N0
 vr4MkhoXe0rZigAAAABJRU5ErkJggg==" alt="Red dot" />
 	-->
-	</p>  
-	
+	</p>
+
 	<script type="text/javascript" ><![CDATA[
        window.onload = function() {
 	   return true;
-            
+
             /* Test DOM updates by randomly changing the flipper color... */
             var mats = document.getElementsByTagNameNS('http://www.web3d.org/specifications/x3d-namespace', 'Material');
             x3dom.debug.logInfo("Found " + mats.length + " materials.");
@@ -164,13 +159,13 @@ vr4MkhoXe0rZigAAAABJRU5ErkJggg==" alt="Red dot" />
             );
 
             /* Another DOM updates test which animates the scale of the first cube */
-            var trans = document.getElementsByTagNameNS('http://www.web3d.org/specifications/x3d-namespace', 'Transform');           
+            var trans = document.getElementsByTagNameNS('http://www.web3d.org/specifications/x3d-namespace', 'Transform');
             var cubeTrans = trans[0];
             var cubeScale = 0;
             var scaleFac = 0.01;
-            setInterval( function() {                    
+            setInterval( function() {
                     if (cubeScale>1.0-scaleFac || cubeScale<(0.0)) {
-                        scaleFac *= -1;                        
+                        scaleFac *= -1;
                     }
                     cubeScale += scaleFac;
                     cubeTrans.setAttribute("scale", cubeScale.toString() + " " + cubeScale.toString() + " " + cubeScale.toString());

@@ -5,20 +5,15 @@
         	<meta http-equiv="X-UA-Compatible" content="chrome=1" />
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 		<title>Multiple animations with a single TimeSensor and fanOut, add/remove ROUTEs</title>
-		<script type="text/javascript" 
+		<script type="text/javascript"
 			src="https://create3000.github.io/code/x_ite/latest/dist/x_ite.js">
 		</script>
-		<script type="text/javascript" 
-			src="">
-		</script>
-		<link rel="stylesheet" type="text/css"
-			href="https://create3000.github.io/code/x_ite/latest/dist/x_ite.css"/>
 	</head>
 
 <body>
 
     <h1>Multiple animations with a single TimeSensor and fanOut</h1>
-	
+
 	<p class="case">Test removing and adding routes</p>
 	<p>
 duration [5s to 60s]: <input id='duration' min='5' max='60' type='range' />
@@ -41,7 +36,7 @@ duration [5s to 60s]: <input id='duration' min='5' max='60' type='range' />
 	</Transform>
  	<Transform translation='10 0 0'>
 		<Transform USE='bluePL' />
-	 </Transform>   
+	 </Transform>
      <Transform scale='2.5 2.5 2.5'>
       <Shape DEF='CUBE1'>
         <Appearance>
@@ -138,7 +133,7 @@ duration [5s to 60s]: <input id='duration' min='5' max='60' type='range' />
       <Transform USE='XFORM2c'/>
       <Transform USE='XFORM2d'/>
     </Transform>
-	
+
     <TimeSensor DEF='TIMER' cycleInterval='30' loop='true'/>
     <OrientationInterpolator DEF='ROTOR_A' key='0 0.5 1' keyValue='1 0 0 0, 1 0 0 3.14, 1 0 0 6.28'/>
     <OrientationInterpolator DEF='ROTOR_B' key='0 0.5 1' keyValue='0 1 0 0, 0 1 0 3.14, 0 1 0 6.28'/>
@@ -169,7 +164,7 @@ duration [5s to 60s]: <input id='duration' min='5' max='60' type='range' />
 	<input type='checkbox' id='freezeRotorB' /> toggle set B
 	<input type='checkbox' id='freezeRotorC' /> toggle set C
 	<input type='checkbox' id='freezeRotorD' /> toggle set D
-	
+
 <script>
 	var period = document.querySelector('#duration');
 	var ts = document.querySelector("[DEF='TIMER']");
@@ -219,8 +214,8 @@ duration [5s to 60s]: <input id='duration' min='5' max='60' type='range' />
 			el.remove(); }
 		else { scene.appendChild(routeD); }
 	}
-	
+
 </script>
-	
+
 </body>
 </html>

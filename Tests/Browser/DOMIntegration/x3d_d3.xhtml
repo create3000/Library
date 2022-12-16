@@ -9,16 +9,11 @@
 		<meta http-equiv="Pragma" content="no-cache"/>
 		<meta http-equiv="Expires" content="0"/>
 		<meta charset="utf-8"/>
-		<script type="text/javascript" 
+		<script type="text/javascript"
 			src="https://create3000.github.io/code/x_ite/latest/dist/x_ite.js">
 		</script>
-		<script type="text/javascript" 
-			src="">
-		</script>
 		<script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
-		<link rel="stylesheet" type="text/css"
-			href="https://create3000.github.io/code/x_ite/latest/dist/x_ite.css"/>
-		
+
 <style >
 html, body {
 	margin: 0px;
@@ -53,7 +48,7 @@ x3d-canvas {
 	<button onclick='remove_last_box()'>remove box</button>
 	<button onclick='remove_last_material()'>remove material</button>
 	<button onclick='toggle_boxSensor()'>toggle box sensor</button>
-	
+
 		<x3d-canvas id='dummy'>
 <X3D>
 	<Scene>
@@ -66,7 +61,7 @@ x3d-canvas {
 		<ROUTE fromNode='tms1' fromField='fraction_changed' toNode='SI' toField='set_fraction' />
 		<Transform translation='2 0 0'>
 			<TouchSensor DEF='ts1'></TouchSensor>
-			<ProximitySensor DEF='ps1' size='3'></ProximitySensor> 
+			<ProximitySensor DEF='ps1' size='3'></ProximitySensor>
 				<Shape>
 				<!-- When attribute values are not specified, the default values from the X3D (or VRML) Specification are used. -->
 					<Appearance>
@@ -75,7 +70,7 @@ x3d-canvas {
 					<Box></Box>
 				</Shape>
 		</Transform>
-		
+
 		<Transform id='shell'>
 		</Transform>
 	</Scene>
@@ -113,7 +108,7 @@ mat.transition()
 	.duration(5000)
 	.attr("diffuseColor", red.r/255 + " " + red.g/255 + " " + red.b/255);
 
-// 
+//
 var spins = 20;
 var msperspin = 5000;
 firsttrafo.transition()
@@ -195,9 +190,9 @@ var radius = 4;
 var perBoxAngle = 2*Math.PI/12;
 
 function random_color() {
-	
+
 	var m = document.querySelector("Material")
-	//will be transferred to scene graph node 
+	//will be transferred to scene graph node
 	m.setAttribute("diffuseColor", Math.random()+" "+Math.random()+" "+Math.random());
 	console.log(m);
 }
@@ -245,14 +240,14 @@ function toggle_boxSensor() {
 		app.appendChild(mat);
 	}
 }
-	
+
 function toRed (evt) {
 	var e = evt.detail;
 	var mat = evt.target.parentNode.querySelector('Material');
 	var color = e.value ? "1 0 0" : "0.5 0.5 0.8" ; //mouseOver:mouseOut
 	mat.setAttribute("diffuseColor", color);
 }
-	
+
 function remove_last_box() {
 
 	var trafos = document.querySelectorAll("Transform");

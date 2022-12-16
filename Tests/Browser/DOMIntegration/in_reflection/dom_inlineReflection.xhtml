@@ -5,16 +5,11 @@
 		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 		<title>Inline HTML Reflection</title>
-		
-		<script type="text/javascript" 
+
+		<script type="text/javascript"
 			src="https://create3000.github.io/code/x_ite/latest/dist/x_ite.js">
 		</script>
-		<script type="text/javascript" 
-			src="">
-		</script>
-		<link rel="stylesheet" type="text/css"
-			href="https://create3000.github.io/code/x_ite/latest/dist/x_ite.css"/>
-	
+
 		<style>
 			x3d-canvas {
 				background: #414141;
@@ -38,7 +33,7 @@
 
 		</style>
 	</head>
-       
+
 <body>
 	<h1>Inline HTML Reflection</h1>
     <p>This example shows how to use the reflection of inline into HTML</p>
@@ -54,7 +49,7 @@
 	</Scene>
 	</X3D>
 </x3d-canvas>
-    
+
 <x3d-canvas xmlns="http://www.web3d.org/specifications/x3d-namespace" width="500px" height="500px">
 	<X3D>
 	<Scene>
@@ -66,8 +61,8 @@
 	</Scene>
 	</X3D>
 </x3d-canvas>
-	
-    
+
+
     <script type="text/javascript" >
 	<![CDATA[
 document.addEventListener("x3dload", sceneLoaded);
@@ -76,7 +71,7 @@ var loadedScenes = 0;
 function sceneLoaded (evt) {
 	if (++loadedScenes < numScenes) { return; }
 
-	var test1 = function (event) {	
+	var test1 = function (event) {
 		//document.getElementById('test1__color1').setAttribute('diffuseColor', '0 1 0');
 		if (event.detail.value) { //mouseOver
 		document.querySelector('[nameSpaceName="test1"] #color1').setAttribute('diffuseColor', '0 1 0');
@@ -84,7 +79,7 @@ function sceneLoaded (evt) {
         };
 	document.querySelector("[DEF='box1TS']").addEventListener('x3d_isOver', test1);
 
-	var test2 = function (event) {		
+	var test2 = function (event) {
 		//document.getElementById('test1__color1').setAttribute('diffuseColor', '1 1 0');
 		if (!event.detail.value) { //mouseOut
 		document.querySelector('[nameSpaceName="test1"] #color1').setAttribute('diffuseColor', '1 1 0');
@@ -92,15 +87,15 @@ function sceneLoaded (evt) {
         };
 	document.querySelector("[DEF='box1TS']").addEventListener('x3d_isOver', test2);
 
-	var test3 = function (event) {		
+	var test3 = function (event) {
 		//document.getElementById('test2__color2').setAttribute('diffuseColor', '0 0 1');
 		if (event.detail.value) { //mouseOver
 		document.querySelector('[nameSpaceName="test2"] #color2').setAttribute('diffuseColor', '0 0 1');
 		}
         };
 	document.querySelector("[DEF='box2TS']").addEventListener('x3d_isOver', test3);
-		
-	var test4 = function (event) {		
+
+	var test4 = function (event) {
 		//document.getElementById('test2__color2').setAttribute('diffuseColor', '1 0 0');
 		if (!event.detail.value) { //mouseOut
 		document.querySelector('[nameSpaceName="test2"] #color2').setAttribute('diffuseColor', '1 0 0');
@@ -108,31 +103,31 @@ function sceneLoaded (evt) {
         };
 	document.querySelector("[DEF='box2TS']").addEventListener('x3d_isOver', test4);
 
-	var test5 = function (event) {		
+	var test5 = function (event) {
 		//document.getElementById('test3__color1').setAttribute('diffuseColor', '0 1 1');
 		if (event.detail.value) { //mouseOver
 		document.querySelector('[nameSpaceName="test3"] #color1').setAttribute('diffuseColor', '0 1 1');
 		}
 	};
 	document.querySelector("[DEF='box3c1TS']").addEventListener('x3d_isOver', test5);
-		
-	var test6 = function (event) {		
+
+	var test6 = function (event) {
 		//document.getElementById('test3__color1').setAttribute('diffuseColor', '1 1 0');
 		if (!event.detail.value) { //mouseOut
 		document.querySelector('[nameSpaceName="test3"] #color1').setAttribute('diffuseColor', '1 1 0');
 		}
 	};
 	document.querySelector("[DEF='box3c1TS']").addEventListener('x3d_isOver', test6);
-		
-	var test7 = function (event) {		
+
+	var test7 = function (event) {
 		//document.getElementById('test3__color2').setAttribute('diffuseColor', '1 0 1');
 		if (event.detail.value) { //mouseOver
 		document.querySelector('[nameSpaceName="test3"] #color2').setAttribute('diffuseColor', '1 0 1');
 		}
 	};
 	document.querySelector("[DEF='box3c2TS']").addEventListener('x3d_isOver', test7);
-		
-	var test8 = function (event) {		
+
+	var test8 = function (event) {
 		//document.getElementById('test3__color2').setAttribute('diffuseColor', '1 0 0');
 		if (!event.detail.value) { //mouseOut
 		document.querySelector('[nameSpaceName="test3"] #color2').setAttribute('diffuseColor', '1 0 0');
