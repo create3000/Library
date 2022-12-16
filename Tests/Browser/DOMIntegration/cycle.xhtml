@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+      <title>XHTML DOM access for Cobweb</title>
+      <meta charset="utf-8"/>
+
+		<script type="text/javascript" 
+			src="https://create3000.github.io/code/x_ite/latest/dist/x_ite.js">
+		</script>
+		<script type="text/javascript" 
+			src="">
+		</script>
+		<link rel="stylesheet" type="text/css"
+			href="https://create3000.github.io/code/x_ite/latest/dist/x_ite.css"/>
+		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+		
+      <style>
+
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400);
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font-family: PT Sans;
+}
+
+.cycle-slideshow {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	width: auto;
+	height: auto;
+}
+
+.slick-list,
+.slick-track,
+.browser {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.text {
+	position: absolute;
+	color: white;
+	text-align: center;
+	/* xOffset yOffset blur color */
+	text-shadow: 0px 0px 3px black;
+	bottom: 20px;
+	left: 30px;
+	right: 30px;
+}
+
+.text h1 {
+	margin: 20px 0px;
+	font-size: 50px;
+}
+
+.text p {
+	margin: 20px 0px;
+	font-size: 30px;
+}
+
+.fallback {
+	margin: 0px;
+	width: 100%;
+	height: 100%
+}
+
+.cobweb-menu {
+	display: none !important;
+}
+
+.cobweb-browser-timings {
+	display: none !important;
+}
+      </style>
+   </head>
+	<body>
+
+		<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="12000" data-cycle-slides="> div">
+			<div>
+				<x3d-canvas class="browser" timings="false" notification="false" contextMenu="false">
+					<X3D xmlns="http://www.web3d.org/specifications/x3d-namespace">
+						<Scene>
+							<Inline url='"ClickToAnimate.x3d"'/>
+						</Scene>
+					</X3D>
+					<div class="fallback">
+						<img src="JoinUs.png"/>
+					</div>
+				</x3d-canvas>
+				<div class="text">
+					<h1>
+						Join Us Now
+					</h1>
+					<p>
+						You are able to create some impressive 3D worlds with Cobweb and Titania to add to your design portfolio.
+					</p>
+				</div>
+			</div>
+			<div>
+				<x3d-canvas class="browser" timings="false" notification="false" contextMenu="false">
+					<X3D xmlns="http://www.web3d.org/specifications/x3d-namespace">
+						<Scene>
+							<Inline url='"inline.x3d"'/>
+						</Scene>
+					</X3D>
+					<div class="fallback">
+						<img src="DarkSideOfTheMoon.png"/>
+					</div>
+				</x3d-canvas>
+				<div class="text">
+					<h1>
+						The Dark Side of the Moon
+					</h1>
+					<p>
+						Cobweb and Titania are the best X3D software alternatives for making stunning HTML5 presentations!
+					</p>
+				</div>
+			</div>
+			<div>
+				<x3d-canvas class="browser" timings="false" notification="false" contextMenu="false">
+					<X3D xmlns="http://www.web3d.org/specifications/x3d-namespace">
+						<Scene>
+							<Inline url='"nestedProtos.x3d"'/>
+						</Scene>
+					</X3D>
+					<div class="fallback">
+						<img src="ToBeOrToHave.png"/>
+					</div>
+				</x3d-canvas>
+				<div class="text">
+					<h1>
+						To Be or To Have
+					</h1>
+					<p>
+						Use the full set of richt tools from Cobweb and Titania to design your worlds in a way as you like best!
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!--script src="https://rawgit.com/malsup/cycle2/master/build/jquery.cycle2.min.js"></script-->
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.cycle-slideshow').slick({
+			autoplay: true,
+			speed: 1500,
+			arrows: false,
+			dots: false,
+			fade: true,
+			draggable: false,
+			pauseOnHover: false,
+			pauseOnFocus: false
+		});
+	});
+</script>
+		
+	</body>
+</html>

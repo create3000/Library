@@ -1,0 +1,84 @@
+<X3D>
+        <Scene>
+            <Transform DEF="ball" scale="1 1 1">
+                <Shape>
+                    <Appearance>
+                        <Material DEF='ballColour' diffuseColor='1 0 0'></Material>
+                    </Appearance>
+                    <Sphere radius="1" ></Sphere>
+                </Shape>
+                <TouchSensor DEF='thesphereSensor'></TouchSensor>
+            </Transform>
+            <TimeSensor DEF="time" cycleInterval="1" loop="true"></TimeSensor>
+            <Script directOutput='true' DEF='speeder'>
+		<field name='set_enabled' type='SFBool' accessType='inputOnly'></field>
+		<field name='cycleInterval_changed' type='SFTime' accessType='outputOnly'>
+	  </field>
+		<field name='ballmaterial' type='SFNode' accessType='initializeOnly'>
+	    		<Material USE='ballColour'></Material>
+	    	</field>
+		<![CDATA[
+		ecmascript:
+		
+		function set_enabled (value)
+		{
+			if (value)
+			{
+				cycleInterval_changed = 5;
+				Browser.print("\n slow: "+cycleInterval_changed);
+				ballmaterial.diffuseColor = new SFColor(0.5, 0.5, 0.5);
+			}
+			else
+			{
+				cycleInterval_changed = 2;
+				Browser.print("\n fast: "+cycleInterval_changed);
+				ballmaterial.diffuseColor = new SFColor(1, 0, 0);
+			}
+		}
+		]]>
+            </Script>
+            <Script DEF='enabler'>
+            <field name='set_cycleInterval' type='SFTime' accessType='inputOnly'></field>
+            <field name='enabled_changed' type='SFBool' accessType='outputOnly'>
+	          </field>
+            <![CDATA[
+		ecmascript:
+		
+		function set_cycleInterval (value)
+    		{
+			enabled_changed = true;
+			Browser.print('\n Enabler ..');
+		}
+	    ]]>
+            </Script>
+            <Script DEF='disabler'>
+            <field name='isOver' type='SFBool' accessType='inputOnly'></field>
+            <field name='enabled_changed' type='SFBool' accessType='outputOnly'>
+	    </field>
+	    <field name='isOverTrue' type='SFBool' accessType='outputOnly'>
+	    </field>
+            <![CDATA[
+		ecmascript:
+		
+		function isOver (value)
+    		{
+			
+				enabled_changed = false;
+				isOverTrue = value;
+				Browser.print('\n Disabler ..');
+			
+		}
+	    ]]>
+	    </Script>
+            <PositionInterpolator DEF="move" key="0 0.5 1" keyValue="0 0 0  0 3 0  0 0 0"></PositionInterpolator>
+            <ROUTE fromNode="time" fromField ="fraction_changed" toNode="move" toField="set_fraction"></ROUTE>
+            <ROUTE fromNode="move" fromField ="value_changed" toNode="ball" toField="translation"></ROUTE>
+            <ROUTE fromNode="thesphereSensor" fromField ="isOver" toNode="disabler" toField="isOver"></ROUTE>
+            <ROUTE fromNode="disabler" fromField ="enabled_changed" toNode="time" toField="set_enabled"></ROUTE>
+            <ROUTE fromNode="disabler" fromField ="enabled_changed" toNode="speeder" toField="set_enabled"></ROUTE>
+            <ROUTE fromNode="speeder" fromField ="cycleInterval_changed" toNode="time" toField="set_cycleInterval"></ROUTE>
+            <ROUTE fromNode="time" fromField ="cycleInterval_changed" toNode="enabler" toField="set_cycleInterval"></ROUTE>
+            <ROUTE fromNode="enabler" fromField ="enabled_changed" toNode="time" toField="set_enabled"></ROUTE>
+            
+      </Scene>
+</X3D>

@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>JQuery Manipulation</title>
+    	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<link type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/humanity/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script>$$ = jQuery.noConflict();</script>
+	<script type="text/javascript" 
+			src="https://create3000.github.io/code/x_ite/latest/dist/x_ite.js">
+	</script>
+	<script type="text/javascript" 
+		src="">
+	</script>
+	<link rel="stylesheet" type="text/css"
+			href="https://create3000.github.io/code/x_ite/latest/dist/x_ite.css"/>
+  <style>
+  html, body {
+  	margin: 0px;
+  	padding: 0px;
+  	border: 0px;
+  	width: 100%;
+  	height: 100%;
+  	overflow: hidden;
+  }
+  
+  body {
+  	background: black;
+  	color: white;
+  }
+  
+  x3d-canvas {
+  	background: #414141;
+  	height: 300px;
+  	width: 400px;
+  	float: left;
+  }
+  
+  .fallback {
+  	display: block;
+  	margin: 300px 0 0 0;
+  	text-align: center;
+  }
+  
+        label { width: 100px; float: left; clear: both; }
+        #ctrlContainer { border: 1px solid #000; padding: 20px; float: left; width: 280px; margin-left: 20px; }
+        #sliderContainer div { float:left; width: 200px; }
+        #sliderContainer li { height: 25px; }
+        #sliderContainer ul { clear: both; list-style-type: none; margin: 20px 0 10px 0; padding: 0; }
+    </style>
+
+</head>
+
+<body style="background-color:#101010;">
+
+    <h1>JQuery Manipulation: Using jQuery to manipulate an Attribute</h1>
+
+    <x3d-canvas >
+    	<X3D>
+        <Scene DEF='scene'>
+            <Viewpoint position='0 0 10' />
+			<Background skyColor='1 1 1' />
+            <Transform id='trans'>
+                <Shape>
+                    <Appearance>
+                        <Material diffuseColor='0 0 0' specularColor='.2 .2 .2' />
+                    </Appearance>
+                    <Box DEF='box'/>
+                </Shape>
+            </Transform>
+        </Scene>
+	</X3D>
+    </x3d-canvas>
+	
+    <div id="ctrlContainer">
+        <p>Change the color of the cube using the RGB sliders, which updates the "diffuseColor" attribute of the Material node using jQuery.</p>
+        <div id="sliderContainer">
+            <ul>
+                <li><label>Red</label><div id="redSlider" class="slider"/></li>
+                <li><label>Green</label><div id="greenSlider" class="slider"/></li>
+                <li><label>Blue</label><div id="blueSlider" class="slider"/></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+	
+// Create the sliders
+$$(function(){
+	$$(".slider").slider({min: 0, max: 1, step: 0.01, slide: function(e, ui) {
+	var newCol = $$("#redSlider").slider('option', 'value') + " " 
+	     + $$("#greenSlider").slider('option', 'value') + " "  
+	     + $$("#blueSlider").slider('option', 'value');              
+	$$("Material").attr("diffuseColor", newCol);
+}});
+});
+</script>
+</html>
