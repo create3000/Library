@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>dom inline route access</title>
+
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<meta http-equiv="Expires" content="0"/>
+		<meta charset="utf-8"/>
+		
+		<script type="text/javascript" 
+			src="https://create3000.github.io/code/x_ite/latest/dist/x_ite.js">
+		</script>
+		<script type="text/javascript" 
+			src="">
+		</script>
+		<link rel="stylesheet" type="text/css"
+			href="https://create3000.github.io/code/x_ite/latest/dist/x_ite.css"/>
+	
+  <style>
+  x3d-canvas {
+    background: #414141;
+    width: 600px;
+    height: 400px;
+  }
+  .fallback {
+    display: block;
+    margin: 300px 0 0 0;
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+	<x3d-canvas>
+		<X3D>
+		<Scene>
+			<Inline DEF='animate' url='"ClickToAnimate.x3d"' />
+		</Scene>
+		</X3D>
+		<p class="fallback">
+			Your browser may not support all features required by Cobweb! You can use Firefox, <br/>
+			because this is currently the choice of the choice. We will continuously keep you informed <br/>
+			on technical developments and as soon as Cobweb is running in other browser too.
+		</p>
+	</x3d-canvas>
+	<input type='checkbox' onclick='toggleInlineRoute()' /> Toggle animation after clicking
+</body>
+<script>
+	var origRoute;
+	function toggleInlineRoute (evt) {
+		var scene = document.querySelector("[DEF='animate'] Scene");
+		var route = scene.querySelector("ROUTE[fromNode='Clicker']");
+		if (route !== null) {
+			origRoute = route;
+			route.remove();
+		}
+		else { scene.appendChild(origRoute); }
+	}
+</script>
+</html>

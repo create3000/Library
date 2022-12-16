@@ -1,0 +1,49 @@
+<X3D>
+        <Scene>
+            <Transform DEF="ball" scale="1 1 1">
+                <Shape>
+                    <Appearance>
+                        <Material DEF='ballColour' diffuseColor='1 0 0'></Material>
+                    </Appearance>
+                    <Sphere radius="1" ></Sphere>
+                </Shape>
+                <TouchSensor DEF='thesphereSensor'></TouchSensor>
+            </Transform>
+            <TimeSensor DEF="time" cycleInterval="1" loop="true"></TimeSensor>
+            <Script directOutput='true' DEF='speeder'>
+		<field name='isOver' type='SFBool' accessType='inputOnly'></field>
+		<field name='timeNode' type='SFNode' accessType='initializeOnly'>
+	    		<TimeSensor USE='time'></TimeSensor>
+	    	</field>
+		<field name='ballmaterial' type='SFNode' accessType='initializeOnly'>
+	    		<Material USE='ballColour'></Material>
+	    	</field>
+		<![CDATA[
+		ecmascript:
+		
+		function isOver (value)
+		{
+			if (value)
+			{
+				timeNode.enabled = false;
+				timeNode.cycleInterval = 5;
+				timeNode.enabled = true;
+				Browser.print("slow: "+timeNode.enabled);
+				ballmaterial.diffuseColor = new SFColor(0.5, 0.5, 0.5);
+			}
+			else
+			{
+				timeNode.enabled = false;
+				timeNode.cycleInterval = 2;
+				timeNode.enabled = true;
+				ballmaterial.diffuseColor = new SFColor(1, 0, 0);
+			}
+		}
+		]]>
+            </Script>
+            <PositionInterpolator DEF="move" key="0 0.5 1" keyValue="0 0 0  0 3 0  0 0 0"></PositionInterpolator>
+            <ROUTE fromNode="time" fromField ="fraction_changed" toNode="move" toField="set_fraction"></ROUTE>
+            <ROUTE fromNode="move" fromField ="value_changed" toNode="ball" toField="translation"></ROUTE>
+            <ROUTE fromNode="thesphereSensor" fromField ="isOver" toNode="speeder" toField="isOver"></ROUTE>
+      </Scene>
+</X3D>
