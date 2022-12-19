@@ -9,11 +9,16 @@
 		<meta http-equiv="Pragma" content="no-cache"/>
 		<meta http-equiv="Expires" content="0"/>
 		<meta charset="utf-8"/>
-		<script type="text/javascript"
+		<script type="text/javascript" 
 			src="https://create3000.github.io/code/x_ite/latest/dist/x_ite.js">
 		</script>
+		<script type="text/javascript" 
+			src="">
+		</script>
 		<script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
-
+		<!--link rel="stylesheet" type="text/css"
+			href="https://create3000.github.io/code/x_ite/latest/dist/x_ite.css"/-->
+		
 <style >
 html, body {
 	margin: 0px;
@@ -48,20 +53,20 @@ x3d-canvas {
 	<button onclick='remove_last_box()'>remove box</button>
 	<button onclick='remove_last_material()'>remove material</button>
 	<button onclick='toggle_boxSensor()'>toggle box sensor</button>
-
+	
 		<x3d-canvas id='dummy'>
 <X3D>
 	<Scene>
 		<Viewpoint description='start'></Viewpoint>
 		<Viewpoint description='offset' position='10 0 10'></Viewpoint>
 		<NavigationInfo type='"FLY", "ANY"'></NavigationInfo>
+		<ProximitySensor DEF='ps1' size='60 60 60'></ProximitySensor> 
 		<KeySensor DEF='ks1'></KeySensor>
 		<TimeSensor DEF='tms1' loop='true' cycleInterval='10'></TimeSensor>
 		<ScalarInterpolator DEF='SI' key='0 0.5 1' keyValue='0 2 10' />
 		<ROUTE fromNode='tms1' fromField='fraction_changed' toNode='SI' toField='set_fraction' />
 		<Transform translation='2 0 0'>
 			<TouchSensor DEF='ts1'></TouchSensor>
-			<ProximitySensor DEF='ps1' size='3'></ProximitySensor>
 				<Shape>
 				<!-- When attribute values are not specified, the default values from the X3D (or VRML) Specification are used. -->
 					<Appearance>
@@ -70,7 +75,7 @@ x3d-canvas {
 					<Box></Box>
 				</Shape>
 		</Transform>
-
+		
 		<Transform id='shell'>
 		</Transform>
 	</Scene>
@@ -108,7 +113,7 @@ mat.transition()
 	.duration(5000)
 	.attr("diffuseColor", red.r/255 + " " + red.g/255 + " " + red.b/255);
 
-//
+// 
 var spins = 20;
 var msperspin = 5000;
 firsttrafo.transition()
@@ -133,66 +138,52 @@ var vp1 = document.querySelector('Viewpoint');
 var vp2 = document.querySelector('Viewpoint[description="offset"]');
 var vpp = document.querySelector('#position');
 
-///*
-ts.addEventListener('x3d_isOver', function(evt) {
+ts.addEventListener('isOver', function(evt) {
 	var e = evt.detail;
 	if (e.value) {
 		coords.textContent = " " + e.node.hitPoint_changed;
-		//alert('isOver event:'+evt.value+'\nHitPoint: '+evt.node.hitPoint_changed)
 	}
 	});
-ts.addEventListener('x3d_hitPoint_changed', function(evt) {
+ts.addEventListener('hitPoint_changed', function(evt) {
 	var e = evt.detail;
 	if (e.value) {
 		hitpt.textContent = " " + e.value;
-		//alert('isOver event:'+evt.value+'\nHitPoint: '+evt.node.hitPoint_changed)
 	}
 	});
-ks.addEventListener('x3d_keyPress', function(evt) {
+ks.addEventListener('keyPress', function(evt) {
 	var e = evt.detail;
 	//if (evt.value) {
 		kp.textContent = " " + e.value;
-		//alert('isOver event:'+evt.value+'\nHitPoint: '+evt.node.hitPoint_changed)
 	//}
 	});
-tms.addEventListener('x3d_fraction_changed', function(evt) {
+tms.addEventListener('fraction_changed', function(evt) {
 	var e = evt.detail;
 	//if (evt.value) {
 		tmp.textContent = " " + e.value;
-		//alert('isOver event:'+evt.value+'\nHitPoint: '+evt.node.hitPoint_changed)
 	//}
 	});
-si.addEventListener('x3d_value_changed', function(evt) {
+si.addEventListener('value_changed', function(evt) {
 	var e = evt.detail;
 	//if (evt.value) {
 		sip.textContent = " " + e.value;
-		//alert('isOver event:'+evt.value+'\nHitPoint: '+evt.node.hitPoint_changed)
 	//}
 	});
-vp1.addEventListener('x3d_position', function(evt) {
+ps.addEventListener('position_changed', function(evt) {
 	var e = evt.detail;
 	//if (evt.value) {
 		vpp.textContent = " " + e.value;
-		//alert('isOver event:'+evt.value+'\nHitPoint: '+evt.node.hitPoint_changed)
 	//}
 	});
-vp2.addEventListener('x3d_position', function(evt) {
-	var e = evt.detail;
-	//if (evt.value) {
-		vpp.textContent = " " + e.value;
-		//alert('isOver event:'+evt.value+'\nHitPoint: '+evt.node.hitPoint_changed)
-	//}
-	});
-///*
+
 	}
 var box_counter = 0;
 var radius = 4;
 var perBoxAngle = 2*Math.PI/12;
 
 function random_color() {
-
+	
 	var m = document.querySelector("Material")
-	//will be transferred to scene graph node
+	//will be transferred to scene graph node 
 	m.setAttribute("diffuseColor", Math.random()+" "+Math.random()+" "+Math.random());
 	console.log(m);
 }
@@ -222,7 +213,7 @@ function toggle_boxSensor() {
 	var last_trafo = trafos[trafos.length - 1];
 	var ts = last_trafo.querySelector('TouchSensor');
 	if (ts !== null) {
-		ts.removeEventListener('x3d_isOver', toRed);
+		ts.removeEventListener('isOver', toRed);
 		ts.remove();
 		//remove listeners?
 		return;
@@ -231,7 +222,7 @@ function toggle_boxSensor() {
 	ts.setAttribute('DEF', 'ts_' + last_trafo.getAttribute('DEF'));
 	last_trafo.appendChild(ts); //x3dnode now correctly added
 	//now also react to events
-	ts.addEventListener('x3d_isOver', toRed);
+	ts.addEventListener('isOver', toRed);
 	//add back material if removed
 	var mat = last_trafo.querySelector("Material");
 	if (mat === null) { // add Material node if previously removed
@@ -240,14 +231,14 @@ function toggle_boxSensor() {
 		app.appendChild(mat);
 	}
 }
-
+	
 function toRed (evt) {
 	var e = evt.detail;
 	var mat = evt.target.parentNode.querySelector('Material');
 	var color = e.value ? "1 0 0" : "0.5 0.5 0.8" ; //mouseOver:mouseOut
 	mat.setAttribute("diffuseColor", color);
 }
-
+	
 function remove_last_box() {
 
 	var trafos = document.querySelectorAll("Transform");
