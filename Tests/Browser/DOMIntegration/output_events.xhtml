@@ -9,10 +9,15 @@
 		<meta http-equiv="Pragma" content="no-cache"/>
 		<meta http-equiv="Expires" content="0"/>
 		<meta charset="utf-8"/>
-
-		<script type="text/javascript"
+		
+		<script type="text/javascript" 
 			src="https://create3000.github.io/code/x_ite/latest/dist/x_ite.js">
 		</script>
+		<script type="text/javascript" 
+			src="">
+		</script>
+		<link rel="stylesheet" type="text/css"
+			href="https://create3000.github.io/code/x_ite/latest/dist/x_ite.css"/>
 
 <style>
 html, body {
@@ -64,7 +69,7 @@ Calculated Y-Position (set directly to blue ball): <span id="posSnaped"></span>
             <Sphere></Sphere>
         </Shape>
         </Transform>
-
+        
         <Transform DEF="ball2" translation='2 0 0' id="ball2">
         <Shape>
             <Appearance>
@@ -76,7 +81,7 @@ Calculated Y-Position (set directly to blue ball): <span id="posSnaped"></span>
 
         <TimeSensor DEF="time" cycleInterval="4" loop="true"></TimeSensor>
         <PositionInterpolator DEF="move" key="0 0.5 1" keyValue="-2 -2.5 0  -2 2.5 0  -2 -2.5 0"></PositionInterpolator>
-
+        
         <ROUTE fromNode="time" fromField ="fraction_changed" toNode="move" toField="set_fraction"></ROUTE>
         <ROUTE fromNode="move" fromField ="value_changed" toNode="ball" toField="translation"></ROUTE>
     </Scene>
@@ -86,7 +91,7 @@ Calculated Y-Position (set directly to blue ball): <span id="posSnaped"></span>
 </body>
 <script>
 	var mover = document.querySelector('[DEF="move"]'); // scripts needs to be at end to find element
-	mover.addEventListener('x3d_value_changed', snapBall);
+	mover.addEventListener('value_changed', snapBall);
 	/**
 	 * Uses the values of a PositionInterpolator to move another ball,
 	 * but instead of just routing the values, round the y component.
@@ -98,17 +103,17 @@ Calculated Y-Position (set directly to blue ball): <span id="posSnaped"></span>
 		//There may be multiple eventObjects but only one of them contains the value we need
 		//if(eventObject.type != "outputchange" || eventObject.fieldName != "value_changed")
 		//	return;
-
+		
 		//Get the value...
 		var value = eventObject.detail.value;
 		//...and create a copy with the manipulated coordinates
 		//var newPos = new x3dom.fields.SFVec3f(2, Math.round(value.y), 0);
 		var newY = Math.round(value.y);
 		var newPos = "2 " + newY + " 0";
-
+	
 		//Set the newly created array as new position for the second ball
 		document.getElementById("ball2").setAttribute('translation', newPos.toString());
-
+		
 		//Show debug information (of course the data can be used to control non x3dom-objects, too)
 		document.getElementById("posInterp").innerHTML = Math.round(value.y*100)/100;
 		document.getElementById("posSnaped").innerHTML = newY;

@@ -3,9 +3,14 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title>X3D DOM integration</title>
-	<script type="text/javascript"
+	<script type="text/javascript" 
 			src="https://create3000.github.io/code/x_ite/latest/dist/x_ite.js">
 	</script>
+	<script type="text/javascript" 
+		src="">
+	</script>
+	<link rel="stylesheet" type="text/css"
+			href="https://create3000.github.io/code/x_ite/latest/dist/x_ite.css"/>
 
     <style>
 x3d-canvas {
@@ -55,7 +60,7 @@ x3d-canvas {
 <input id="speedChange" type="range" value="0.5" min="0.5" max="5" step="0.5" oninput="mySpeedFunction(this.value);"/>
 <script>
 
-document.getElementById("thesphereSensor").addEventListener('x3d_touchTime', myToggleSphereSizeFunction);
+document.getElementById("thesphereSensor").addEventListener('touchTime', myToggleSphereSizeFunction);
 
 function myBlueFunction() {
     document.getElementById("ballColour").setAttribute('diffuseColor', '0 0 1');

@@ -5,39 +5,41 @@
 		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 		<title>Multi-View: Multiple X3D scenes in a single XHTML document</title>
-
-		<script src="https://create3000.github.io/code/x_ite/latest/x_ite.min.js"></script>
-
+		
+		<script type="text/javascript" 
+			src="https://create3000.github.io/code/x_ite/latest/dist/x_ite.js">
+		</script>
 		<style>
 			x3d-canvas {
 				width: 300px;
 				height: 400px;
 				float: left;
+				opacity: 0.8;
 			}
 		</style>
-
+		
 	</head>
-
+       
 <body style="background-color:#E0E0E0; background-image:url(texture/generic/dots.png); ">
 
     <h1>Multi-View: Multiple X3D scenes in a single XHTML document</h1>
-
+	
 	<p class="case">
 	<x3d-canvas src='Deer.x3d'>
-
+		
 	</x3d-canvas >
 		&nbsp;
 	    <!-- Use the same "x", "y", "width" and "height" attributes as SVG.
              Optionally support the "viewBox" and "preserveAspectRatio" just like SVG -->
 	<x3d-canvas src='ClickToAnimate.x3d'>
-
-	</x3d-canvas >
+		
+	</x3d-canvas>	
 		&nbsp;
-	<x3d-canvas src='../defaultbox.x3d'>
-
+	<x3d-canvas src='inline.x3d'>
+    
 	</x3d-canvas >
 	</p>
-
-
+	
+	
 </body>
 </html>
