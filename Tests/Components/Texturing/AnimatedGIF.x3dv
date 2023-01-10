@@ -1,0 +1,16 @@
+#X3D V4.0 utf8 X_ITE V8.3.3
+
+PROFILE Interchange
+
+Shape {
+  appearance Appearance {
+    alphaMode "BLEND"
+    texture MovieTexture {
+      loop TRUE
+      url "transparent-flame-video-5.gif"
+    }
+  }
+  geometry Box {
+    size .8 1.5 .001
+  }
+}
