@@ -1,0 +1,15 @@
+#X3D V4.0 utf8 X_ITE V8.3.2
+
+PROFILE Interchange
+
+PROTO Box [ ]
+{
+  Sphere { }
+}
+
+Shape {
+  appearance Appearance {
+    material Material { }
+  }
+  geometry Box { }
+}
