@@ -1,6 +1,16 @@
-#VRML V2.0 utf8 Comment
+#X3D V4.0 utf8 X_ITE V8.4.4
+
+PROFILE Interchange
+
+COMPONENT Geometry2D : 2
 
 META "title" "LineProperties"
+META "created" "Thu, 12 Jan 2023 12:22:27 GMT"
+META "comment" "World of Sunrise X3D Editor"
+META "creator" "Holger Seelig"
+META "generator" "Sunrise X3D Editor V1.0.8, https://create3000.github.io/sunrise/"
+META "identifier" "file:///Volumes/Home/Projekte/Library/Tests/Components/Shape/LineProperties.x3dv"
+META "modified" "Thu, 12 Jan 2023 12:22:27 GMT"
 
 Background {
   skyColor 0.2 0.2 0.2
@@ -31,7 +41,9 @@ Transform {
         linetype 2
         linewidthScaleFactor 3
       }
-      material Material { emissiveColor 1 0 0 }
+      material Material {
+        emissiveColor 1 0 0
+      }
     }
     geometry Circle2D { }
   }
@@ -78,10 +90,6 @@ Transform {
     geometry Circle2D { }
   }
 }
-
-#
-#
-#
 
 Transform {
   translation 0 -2 0
@@ -152,10 +160,6 @@ Transform {
     geometry Circle2D { }
   }
 }
-
-#
-#
-#
 
 Transform {
   translation 0 -4 0
@@ -233,8 +237,14 @@ DEF Timer TimeSensor {
 }
 
 DEF Interpolator PositionInterpolator2D {
-  key [0, 1]
-  keyValue [0 0, 2 0]
+  key [
+    0,
+    1
+  ]
+  keyValue [
+    0 0,
+    2 0
+  ]
 }
 
 Transform {
@@ -242,20 +252,21 @@ Transform {
   children Shape {
     appearance Appearance {
       alphaMode "MASK"
-      alphaCutoff 1.0
+      alphaCutoff 1
       lineProperties LineProperties {
         linetype 16
         linewidthScaleFactor 3
       }
       material Material { }
       texture PixelTexture {
-        image 72 1 2 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xff00 0xff00 0xff00 0xff00 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xff00 0xff00 0xff00 0xff00 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xff00 0xff00 0xff00 0xff00 0xffff 0xffff 0xffff 0xffff 0xff00 0xff00 0xff00 0xff00 0xffff 0xffff 0xffff 0xffff 0xff00 0xff00 0xff00 0xff00 0xffff 0xffff 0xffff 0xffff 0xff00 0xff00 0xff00 0xff00
+        image 72 1 2
+          0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xff00 0xff00 0xff00 0xff00 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xff00 0xff00 0xff00 0xff00 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xff00 0xff00 0xff00 0xff00 0xffff 0xffff 0xffff 0xffff 0xff00 0xff00 0xff00 0xff00 0xffff 0xffff 0xffff 0xffff 0xff00 0xff00 0xff00 0xff00 0xffff 0xffff 0xffff 0xffff 0xff00 0xff00 0xff00 0xff00
         textureProperties TextureProperties {
-          magnificationFilter "FASTEST"
-          minificationFilter "FASTEST"
+          textureCompression "DEFAULT"
         }
       }
       textureTransform DEF TextureTransform TextureTransform {
+        translation 0.2486672 0
         scale 0.5 1
       }
     }
@@ -263,15 +274,17 @@ Transform {
   }
 }
 
-ROUTE Timer.fraction_changed TO Interpolator.set_fraction
-ROUTE Interpolator.value_changed TO TextureTransform.set_translation
-
 Transform {
   translation 4 -2 0
   children Shape {
     appearance Appearance {
       material Material { }
     }
-    geometry Circle2D { radius 0.5 }
+    geometry Circle2D {
+      radius 0.5
+    }
   }
 }
+
+ROUTE Timer.fraction_changed TO Interpolator.set_fraction
+ROUTE Interpolator.value_changed TO TextureTransform.set_translation
