@@ -1,0 +1,102 @@
+#X3D V4.0 utf8 X_ITE V8.5.0
+
+PROFILE Immersive
+
+COMPONENT EnvironmentalEffects : 3
+COMPONENT Texturing3D : 2
+COMPONENT VolumeRendering : 4
+
+META "comment" "Rise and Shine"
+META "created" "Thu, 09 May 2019 11:59:27 GMT"
+META "creator" "Holger Seelig"
+META "generator" "Sunrise X3D Editor V1.0.8, https://create3000.github.io/sunrise/"
+META "identifier" "file:///Users/holger/Desktop/X_ITE/x_ite/src/tests/ImageTextureAtlas.x3dv"
+META "modified" "Sat, 21 Jan 2023 21:37:10 GMT"
+
+Background {
+  skyColor 0.4 0.4 0.4
+}
+
+Viewpoint {
+  description "Home"
+  position 0 0 5
+}
+
+DEF VisibleClipPlane Transform {
+  children [
+    DEF PlaneSensor PlaneSensor {
+      axisRotation 0 1 0 1.5708
+      offset 0.00000291112 0 0.799866
+      maxPosition -1 0
+    }
+    DEF Rectangle2D Transform {
+      translation 0.00000291112 0 0.799866
+      scale 0.5 0.5 1
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              transparency 1
+            }
+          }
+          geometry Rectangle2D { }
+        }
+        Shape {
+          appearance Appearance {
+            material Material { }
+          }
+          geometry IndexedLineSet {
+            coordIndex [
+              0,
+              1,
+              2,
+              3,
+              0
+            ]
+            coord Coordinate {
+              point [
+                -1 -1 0,
+                1 -1 0,
+                1 1 0,
+                -1 1 0
+              ]
+            }
+          }
+        }
+      ]
+    }
+    DEF ClipPlaneScript Script {
+      inputOnly  SFVec3f set_translation
+      outputOnly SFVec4f plane_changed
+
+      url "vrmlscript:
+function set_translation (value)
+{
+	var distanceFromOrigin = new SFVec3f (0, 0, -1) .dot (value);
+
+	plane_changed = new SFVec4f (0,0,-1, -distanceFromOrigin);
+}
+"
+    }
+  ]
+}
+
+DEF Volume_1 Transform {
+  children [
+    DEF Volume VolumeData {
+      voxels ImageTextureAtlas {
+        url "scan1.png"
+        slicesOverX 10
+        slicesOverY 10
+        numberOfSlices 97
+      }
+    }
+    DEF _1 ClipPlane {
+      plane 0 0 -1 0.799866
+    }
+  ]
+}
+
+ROUTE ClipPlaneScript.plane_changed TO _1.set_plane
+ROUTE PlaneSensor.translation_changed TO ClipPlaneScript.set_translation
+ROUTE PlaneSensor.translation_changed TO Rectangle2D.set_translation
