@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
-<X3D profile='Interchange' version='4.0' xmlns:xsd='https://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
-    <component name='EventUtilities' level='4'/>
+    <component name='EventUtilities' level='1'/>
     <component name='PointingDeviceSensor' level='1'/>
     <meta name='created' content='Fri, 09 Dec 2022 15:26:53 GMT'/>
-    <meta name='comment' content='World of Sunrise X3D Editor'/>
+    <meta name='comment' content='Rise and Shine'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Sunrise X3D Editor V1.0.5, https://create3000.github.io/sunrise/'/>
-    <meta name='identifier' content='file:///Users/holger/Desktop/X_ITE/x_ite/src/tests/InlineGlobal.x3d'/>
-    <meta name='modified' content='Sat, 10 Dec 2022 00:00:22 GMT'/>
+    <meta name='generator' content='Sunrise X3D Editor V1.0.8, https://create3000.github.io/sunrise/'/>
+    <meta name='identifier' content='file:///Volumes/Home/Projekte/Library/Tests/Components/Networking/InlineGlobal.x3d'/>
+    <meta name='modified' content='Sun, 29 Jan 2023 23:21:40 GMT'/>
   </head>
   <Scene>
     <NavigationInfo
@@ -19,7 +19,8 @@
         orientation='-0.76859137417185 0.61112546586771 0.1891902865281 0.76580931764699'/>
     <Transform DEF='Floor'
         scale='100 0.1 100'>
-      <Shape>
+      <Shape
+          castShadow='false'>
         <Appearance>
           <Material
               emissiveColor='0.266667 0.266667 0.266667'/>
