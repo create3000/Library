@@ -9,7 +9,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrise X3D Editor V1.0.8, https://create3000.github.io/sunrise/'/>
     <meta name='identifier' content='file:///Volumes/Home/Projekte/Library/Tests/Components/Networking/InlineGlobal.x3d'/>
-    <meta name='modified' content='Sun, 29 Jan 2023 23:21:40 GMT'/>
+    <meta name='modified' content='Sun, 29 Jan 2023 23:15:47 GMT'/>
   </head>
   <Scene>
     <NavigationInfo
@@ -33,7 +33,7 @@
       <TouchSensor DEF='_1'/>
       <BooleanFilter DEF='_2'/>
       <Inline DEF='_3'
-          global='true'
+          global='false'
           url='"BoxWithLight.x3d"'/>
     </Transform>
     <Transform
@@ -41,7 +41,7 @@
       <TouchSensor DEF='_4'/>
       <BooleanFilter DEF='_5'/>
       <Inline DEF='_6'
-          global='true'
+          global='false'
           url='"BoxWithLight.x3d"'/>
     </Transform>
     <ROUTE fromNode='_1' fromField='isOver' toNode='_2' toField='set_boolean'/>
