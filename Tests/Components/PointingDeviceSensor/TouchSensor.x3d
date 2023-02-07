@@ -11,56 +11,16 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrise X3D Editor V1.0.8, https://create3000.github.io/sunrise/'/>
     <meta name='identifier' content='file:///Volumes/Home/Projekte/Library/Tests/Components/PointingDeviceSensor/TouchSensor.x3d'/>
-    <meta name='modified' content='Mon, 06 Feb 2023 18:29:37 GMT'/>
+    <meta name='modified' content='Tue, 07 Feb 2023 02:42:56 GMT'/>
   </head>
   <Scene>
-    <WorldInfo
-        title='TouchSensor'>
-      <MetadataSet DEF='Titania'
-          name='Titania'
-          reference='http://titania.create3000.de'>
-        <MetadataSet DEF='NavigationInfo' containerField='value'
-            name='NavigationInfo'
-            reference='http://titania.create3000.de'>
-          <MetadataString DEF='type' containerField='value'
-              name='type'
-              reference='http://titania.create3000.de'
-              value='"EXAMINE"'/>
-        </MetadataSet>
-        <MetadataSet DEF='Viewpoint' containerField='value'
-            name='Viewpoint'
-            reference='http://titania.create3000.de'>
-          <MetadataDouble DEF='position' containerField='value'
-              name='position'
-              reference='http://titania.create3000.de'
-              value='9.64484928920026, 12.143861061643, -1.62839420746134'/>
-          <MetadataDouble DEF='orientation' containerField='value'
-              name='orientation'
-              reference='http://titania.create3000.de'
-              value='-0.0609119051953254, 0.828927918236406, 0.556028997601504, 2.49687294768632'/>
-          <MetadataDouble DEF='centerOfRotation' containerField='value'
-              name='centerOfRotation'
-              reference='http://titania.create3000.de'
-              value='3.33892201258892, -0.344722510308543, 1.87617746879294'/>
-        </MetadataSet>
-        <MetadataSet DEF='Selection' containerField='value'
-            name='Selection'
-            reference='http://titania.create3000.de'>
-          <MetadataSet DEF='children' containerField='value'
-              name='children'
-              reference='http://titania.create3000.de'/>
-          <MetadataSet DEF='previous' containerField='value'
-              name='previous'
-              reference='http://titania.create3000.de'/>
-        </MetadataSet>
-      </MetadataSet>
-    </WorldInfo>
     <Transform
         translation='2 4 54'
         rotation='0.0961868856712038 0.964996856246065 0.243985963653827 0.601776'
         scale='0.234 234 12.23'>
       <Viewpoint
-          description='Front'/>
+          description='Front'
+          viewAll='true'/>
       <Viewpoint
           description='Back'
           position='0 0 -10'
@@ -213,7 +173,8 @@
         </Shape>
       </Transform>
       <Transform DEF='Cursor'
-          translation='0.6044495 -0.3015926 -0.196686'
+          translation='5.9553 0.9999996 4.587795'
+          rotation='1 -1.30980459811524e-9 0 1.57079632368259'
           scale='0.1 0.1 0.1'>
         <Shape>
           <Appearance>
@@ -225,6 +186,11 @@
         </Shape>
       </Transform>
     </Transform>
+    <Viewpoint
+        description='Outside'
+        position='7.571402 9.102428 7.154142'
+        orientation='-0.799223715134634 0.548617689497755 0.245479294313263 1.02075809285987'
+        centerOfRotation='3.05801 0.1058213 0.5'/>
     <Script DEF='Debug'>
       <field accessType='inputOnly' type='SFVec3f' name='set_hitNormal'/>
       <field accessType='inputOnly' type='SFVec3f' name='set_hitPoint1'/>
