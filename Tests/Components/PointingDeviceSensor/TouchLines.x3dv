@@ -1,19 +1,16 @@
-#X3D V3.3 utf8 X_ITE V6.0.0
+#X3D V4.0 utf8 X_ITE V8.5.3
 
-PROFILE Core
+PROFILE Interchange
 
-COMPONENT Shape : 5
-COMPONENT Rendering : 5
-COMPONENT Grouping : 3
 COMPONENT PointingDeviceSensor : 1
 COMPONENT Scripting : 1
 
 META "created" "Thu, 20 Oct 2022 11:51:02 GMT"
-META "comment" "World of Sunrise X3D Editor"
+META "comment" "Rise and Shine"
 META "creator" "Holger Seelig"
-META "generator" "Sunrise X3D Editor V1.0.0, https://create3000.github.io/Sunrise/"
+META "generator" "Sunrise X3D Editor V1.0.8, https://create3000.github.io/sunrise/"
 META "identifier" "file:///Volumes/Home/Projekte/Library/Tests/Components/PointingDeviceSensor/TouchLines.x3dv"
-META "modified" "Sun, 23 Oct 2022 10:54:50 GMT"
+META "modified" "Thu, 09 Feb 2023 01:58:09 GMT"
 
 DEF Thin Transform {
   translation -2 0 0
@@ -108,15 +105,29 @@ DEF _2 TouchSensor {
 }
 
 DEF _3 Script {
-  inputOnly SFVec3f set_point
+  inputOnly SFVec2f set_hitTexCoord
+  inputOnly SFVec3f set_hitNormal
+  inputOnly SFVec3f set_hitPoint
 
   url "ecmascript:
 
-function set_point (value, time)
+function set_hitTexCoord (value, time)
 {
-	print (value);
+	print (\"hitTexCoord: \", value);
+}
+
+function set_hitNormal (value, time)
+{
+	print (\"hitNormal: \", value);
+}
+
+function set_hitPoint (value, time)
+{
+	print (\"hitPoint: \", value);
 }
 "
 }
 
-ROUTE _2.hitPoint_changed TO _3.set_point
+ROUTE _2.hitTexCoord_changed TO _3.set_hitTexCoord
+ROUTE _2.hitNormal_changed TO _3.set_hitNormal
+ROUTE _2.hitPoint_changed TO _3.set_hitPoint

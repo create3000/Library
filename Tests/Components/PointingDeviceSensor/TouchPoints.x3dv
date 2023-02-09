@@ -1,13 +1,16 @@
-#X3D V3.3 utf8 X_ITE V6.1.0
+#X3D V4.0 utf8 X_ITE V8.5.3
 
-PROFILE Immersive
+PROFILE Interchange
+
+COMPONENT PointingDeviceSensor : 1
+COMPONENT Scripting : 1
 
 META "created" "Thu, 20 Oct 2022 11:31:00 GMT"
-META "comment" "World of Sunrise X3D Editor"
+META "comment" "Rise and Shine"
 META "creator" "Holger Seelig"
-META "generator" "Sunrise X3D Editor V1.0.0, https://create3000.github.io/Sunrise/"
+META "generator" "Sunrise X3D Editor V1.0.8, https://create3000.github.io/sunrise/"
 META "identifier" "file:///Volumes/Home/Projekte/Library/Tests/Components/PointingDeviceSensor/TouchPoints.x3dv"
-META "modified" "Mon, 24 Oct 2022 17:32:34 GMT"
+META "modified" "Thu, 09 Feb 2023 01:56:49 GMT"
 
 DEF Small Transform {
   translation -3 0 0
@@ -140,15 +143,29 @@ DEF _2 TouchSensor {
 }
 
 DEF _3 Script {
-  inputOnly SFVec3f set_point
+  inputOnly SFVec2f set_hitTexCoord
+  inputOnly SFVec3f set_hitNormal
+  inputOnly SFVec3f set_hitPoint
 
   url "ecmascript:
 
-function set_point (value, time)
+function set_hitTexCoord (value, time)
 {
-	print (value);
+	print (\"hitTexCoord: \", value);
+}
+
+function set_hitNormal (value, time)
+{
+	print (\"hitNormal: \", value);
+}
+
+function set_hitPoint (value, time)
+{
+	print (\"hitPoint: \", value);
 }
 "
 }
 
-ROUTE _2.hitPoint_changed TO _3.set_point
+ROUTE _2.hitPoint_changed TO _3.set_hitPoint
+ROUTE _2.hitNormal_changed TO _3.set_hitNormal
+ROUTE _2.hitTexCoord_changed TO _3.set_hitTexCoord
