@@ -66,6 +66,7 @@ DEF Thick Transform {
     appearance Appearance {
       lineProperties LineProperties {
         linewidthScaleFactor 30
+        linetype 12
       }
     }
     geometry DEF TL IndexedLineSet {
