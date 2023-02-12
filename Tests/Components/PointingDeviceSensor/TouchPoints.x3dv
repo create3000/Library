@@ -1,4 +1,4 @@
-#X3D V4.0 utf8 X_ITE V8.5.3
+#X3D V4.0 utf8 X_ITE V8.6.0a
 
 PROFILE Interchange
 
@@ -8,18 +8,18 @@ COMPONENT Scripting : 1
 META "created" "Thu, 20 Oct 2022 11:31:00 GMT"
 META "comment" "Rise and Shine"
 META "creator" "Holger Seelig"
-META "generator" "Sunrise X3D Editor V1.0.8, https://create3000.github.io/sunrise/"
+META "generator" "Sunrise X3D Editor V1.0.9, https://create3000.github.io/sunrise/"
 META "identifier" "file:///Volumes/Home/Projekte/Library/Tests/Components/PointingDeviceSensor/TouchPoints.x3dv"
-META "modified" "Thu, 09 Feb 2023 01:56:49 GMT"
+META "modified" "Sun, 12 Feb 2023 19:35:52 GMT"
 
-DEF Small Transform {
+DEF Small_1 Transform {
   translation -3 0 0
   children [
-    DEF FourPoints Transform {
-      children DEF PointSet Transform {
+    DEF FourPoints_1 Transform {
+      children DEF PointSet_1 Transform {
         children Shape {
           appearance Appearance { }
-          geometry DEF PS4 PointSet {
+          geometry DEF PS4_1 PointSet {
             coord Coordinate {
               point [
                 1 1 0,
@@ -35,7 +35,7 @@ DEF Small Transform {
     DEF SinglePoint_1 Transform {
       children Shape {
         appearance Appearance { }
-        geometry DEF PS PointSet {
+        geometry DEF PS_1 PointSet {
           coord Coordinate {
             point 0 0 0
           }
@@ -47,8 +47,8 @@ DEF Small Transform {
 
 DEF Large_1 Transform {
   children [
-    DEF FourPoints_1 Transform {
-      children DEF PointSet_1 Transform {
+    DEF FourPoints_2 Transform {
+      children DEF PointSet_2 Transform {
         children Shape {
           appearance Appearance {
             pointProperties PointProperties {
@@ -95,8 +95,8 @@ DEF Attenuation Transform {
   rotation 0 -1 0 1.5
   scale 4 1 1
   children [
-    DEF FourPoints_2 Transform {
-      children DEF PointSet_2 Transform {
+    DEF FourPoints_3 Transform {
+      children DEF PointSet_3 Transform {
         children Shape {
           appearance Appearance {
             pointProperties DEF _1 PointProperties {
@@ -136,6 +136,34 @@ DEF Attenuation Transform {
       }
     }
   ]
+}
+
+DEF Texture Transform {
+  translation -5 0 0
+  rotation 0 1 0 1.8
+  children Shape {
+    appearance Appearance {
+      pointProperties PointProperties {
+        pointSizeScaleFactor 30
+        pointSizeMaxValue 30
+      }
+      texture PixelTexture {
+        image 2 2 1
+          0x14 0x96
+          0x96 0x14
+      }
+    }
+    geometry DEF PS4 PointSet {
+      coord Coordinate {
+        point [
+          1 1 0,
+          -1 1 0,
+          -1 -1 0,
+          1 -1 0
+        ]
+      }
+    }
+  }
 }
 
 DEF _2 TouchSensor {
