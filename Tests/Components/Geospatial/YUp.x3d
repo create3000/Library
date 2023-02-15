@@ -2,7 +2,6 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
 <X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
   <head>
-    <unit category='angle' name='degree' conversionFactor='0.0174532925199432958'/>
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Sun, 10 Apr 2016 01:48:21 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
@@ -15,7 +14,7 @@
    <GeoViewpoint description='Initial GeoViewpoint' orientation='1 0 0 -1.57' position='35.0 -120.0 10000000' centerOfRotation='0 0 -6371000' containerField='children'>
       <GeoOrigin DEF='GO' geoSystem='"GD" "WE"' geoCoords='45 -80 0' rotateYUp='true'/>
     </GeoViewpoint>
-   
+
     <Shape>
          <Appearance>
             <Material diffuseColor='0.7 0.1 0.3' />
@@ -38,7 +37,7 @@
       <GeoElevationGrid geoSystem='"UTM" "Z10" "N" "northing_first"' geoGridOrigin='3600000 0 0' xDimension='2' xSpacing='400000' yScale='200' zDimension='2' zSpacing='500000' height='1000 1000 1000 1000 '>
         <GeoOrigin USE='GO' />
       </GeoElevationGrid>
-    
+
    </Shape>
    <GeoTransform geoSystem='"UTM" "Z10" "N" "easting_first"' geoCenter='0 3600000 0' rotation='0 1 0 0.5' scale='1 2 3' translation='0 100000 200000'>
    <!--GeoTransform-->
