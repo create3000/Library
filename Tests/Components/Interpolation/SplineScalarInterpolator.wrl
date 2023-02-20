@@ -1,0 +1,82 @@
+#VRML V2.0 utf8 Titania V3.0.4
+
+EXTERNPROTO ComposeSFVec3f [
+  exposedField SFFloat x
+  exposedField SFFloat y
+  exposedField SFFloat z
+  eventOut    SFVec3f value_changed
+]
+"ComposeSFVec3f.wrl"
+
+EXTERNPROTO LineTrail [
+  exposedField   SFBool  enabled
+  exposedField   SFTime  cycleInterval
+  exposedField   SFTime  resetTime
+  exposedField   SFVec3f point
+  field          SFInt32 dimension
+]
+"LineTrail.wrl"
+
+Transform {
+  translation -5 0 0
+  scale 10 1 1
+  children [
+    DEF Box Transform {
+      translation 3.50475e-06 -1.37572e-09 0
+      scale 0.01 0.1 0.1
+      children Shape {
+        appearance Appearance {
+          material Material { }
+        }
+        geometry Box { }
+      }
+    }
+    Shape {
+      appearance Appearance {
+        material Material {
+          emissiveColor 0 0.8 0.8
+        }
+      }
+      geometry DEF Trail LineTrail {
+        cycleInterval 0.1
+        resetTime 1505493445.07078
+        point 3.50475e-06 -1.37572e-09 0
+        dimension 50
+      }
+    }
+  ]
+}
+
+DEF Timer TimeSensor {
+  cycleInterval 10
+  loop TRUE
+}
+
+DEF Interpolator SplineScalarInterpolator {
+  key [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ]
+  keyValue [
+    0,
+    -2,
+    2,
+    -1,
+    0
+  ]
+}
+
+DEF Composer ComposeSFVec3f {
+  x 3.50475e-06
+  y -1.37572e-09
+}
+
+ROUTE Timer.cycleTime TO Trail.set_resetTime
+ROUTE Timer.fraction_changed TO Interpolator.set_fraction
+ROUTE Timer.fraction_changed TO Composer.set_x
+ROUTE Interpolator.value_changed TO Composer.set_y
+ROUTE Composer.value_changed TO Box.set_translation
+ROUTE Composer.value_changed TO Trail.set_point
