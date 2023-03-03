@@ -1,0 +1,25 @@
+#X3D V4.0 utf8 X_ITE V8.3.3
+
+PROFILE Immersive
+
+DEF X Transform {
+   children Shape {
+      appearance Appearance {
+         material Material { }
+      }
+      geometry Box { }
+   }
+}
+
+DEF T TimeSensor {
+   cycleInterval 2
+   loop TRUE
+}
+
+DEF I PositionInterpolator {
+   key [0, 0.333, 0.333, 0.666, 0.666, 1]
+   keyValue [-1 1 0, 1 1 0, -1 0 0, 1 0 0, -1 -1 0, 1 -1 0]
+}
+
+ROUTE T.fraction_changed TO I.set_fraction
+ROUTE I.value_changed TO X.set_translation
