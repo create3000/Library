@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
-    <meta name='comment' content='World of Titania'/>
+    <component name='Geometry2D' level='2'/>
+    <meta name='comment' content='Rise and Shine'/>
     <meta name='created' content='Tue, 08 Nov 2016 15:02:44 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V2.0.1, http://titania.create3000.de'/>
-    <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite/tests/Components/Texturing/ColorManagement.x3d'/>
-    <meta name='modified' content='Tue, 08 Nov 2016 15:03:38 GMT'/>
+    <meta name='generator' content='Sunrise X3D Editor V1.0.10, https://create3000.github.io/sunrise/'/>
+    <meta name='identifier' content='file:///Volumes/Home/Projekte/Library/Tests/Components/Texturing/ColorManagement.x3d'/>
+    <meta name='modified' content='Tue, 07 Mar 2023 19:17:23 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -70,8 +71,7 @@
                       repeatT='false'/>
                 </Appearance>
                 <Rectangle2D
-                    size='0.22087 0.146878'
-                    solid='false'/>
+                    size='0.22087 0.146878'/>
               </Shape>
             </Transform>
           </MetadataSet>
