@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" profile="Immersive" version="4.0" xsd:noNamespaceSchemaLocation="https://www.web3d.org/specifications/x3d-4.0.xsd">
+    <head>
+        <meta name="title" content="sphereflowers.x3d"></meta>
+        <meta name="creator" content="John Carlson"></meta>
+        <meta name="description" content="5 or more prismatic flowers"></meta>
+        <meta name="generator" content="X3D-Edit, https://savage.nps.edu/X3D-Edit"></meta>
+        <meta name="identifier" content="https://coderextreme.net/X3DJSONLD/sphereflowers.x3d"></meta>
+    </head>
+    <Scene>
+        <NavigationInfo type='"EXAMINE" "ANY"'/>
+        <Background
+            backUrl='"image.jpg"'
+            bottomUrl='"image.jpg"'
+            frontUrl='"image.jpg"'
+            leftUrl='"image.jpg"'
+            rightUrl='"image.jpg"'
+            topUrl='"image.jpg"'
+        />
+	<Group>
+		<ExternProtoDeclare name="FlowerProto" url='"flowerproto.json#FlowerProto" "https://coderextreme.net/X3DJSONLD/src/main/personal/flowerproto.json#FlowerProto" "https://localhost:3000/src/main/personal/flowerproto.json#FlowerProto"'>
+			<field accessType='inputOutput' name='vertex' type='MFString'/>
+			<field accessType='inputOutput' name='fragment' type='MFString'/>
+		</ExternProtoDeclare>
+		<ProtoDeclare name="flower">
+			<ProtoBody>
+				<Group>
+					<ProtoInstance name="FlowerProto">
+						<fieldValue name="vertex" value='"x_ite_flowers_chromatic.vs"'></fieldValue>
+						<fieldValue name="fragment" value='"x_ite.fs"'></fieldValue>
+					</ProtoInstance>
+				</Group>
+			</ProtoBody>
+		</ProtoDeclare>
+		<ProtoInstance name="flower"/>
+		<ProtoInstance name="flower"/>
+		<ProtoInstance name="flower"/>
+		<ProtoInstance name="flower"/>
+		<ProtoInstance name="flower"/>
+		<ProtoInstance name="flower"/>
+                <TimeSensor DEF='SongTime' loop='true'></TimeSensor>
+	        <Sound maxBack='100' maxFront='100' minBack='20' minFront='20'>
+			<AudioClip DEF='AudioClip' description='Chandubabamusic #1' url='"../resources/chandubabamusic1.wav"'/>
+		</Sound>
+      		<ROUTE fromField='cycleTime' fromNode='SongTime' toField='startTime' toNode='AudioClip'/>
+	</Group>
+    </Scene>
+</X3D>
