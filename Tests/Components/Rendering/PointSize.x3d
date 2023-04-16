@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D profile='Immersive' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
+    <component name='Scripting' level='1'/>
     <meta name='created' content='Mon, 11 Apr 2022 08:11:36 GMT'/>
-    <meta name='comment' content='World of Sunrise X3D Editor'/>
+    <meta name='comment' content='Rise and Shine'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Sunrise X3D Editor V1.0.4, https://create3000.github.io/sunrise/'/>
-    <meta name='identifier' content='file:///Users/holger/Desktop/X_ITE/x_ite/src/tests/PointSize.x3d'/>
-    <meta name='modified' content='Sun, 30 Oct 2022 05:06:06 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.0.18, https://create3000.github.io/sunrize/'/>
+    <meta name='identifier' content='file:///Volumes/Home/Projekte/Library/Tests/Components/Rendering/PointSize.x3d'/>
+    <meta name='modified' content='Sun, 16 Apr 2023 23:40:29 GMT'/>
   </head>
   <Scene>
     <Group DEF='_1'>
@@ -22,7 +23,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 1 1'/>
+                color='0 1 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -39,7 +40,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 1 1'/>
+                color='0 1 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -56,7 +57,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 1 1'/>
+                color='0 1 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -73,7 +74,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 1 1'/>
+                color='0 1 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -90,7 +91,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 1 1'/>
+                color='0 1 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -107,7 +108,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 1 1'/>
+                color='0 1 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -124,7 +125,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 1 1'/>
+                color='0 1 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -141,7 +142,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 1 1'/>
+                color='0 1 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -158,7 +159,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 1 1'/>
+                color='0 1 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -175,7 +176,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 1 1'/>
+                color='0 1 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -189,7 +190,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 0'/>
+                color='1 1 1'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -206,7 +207,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 0'/>
+                color='1 1 1'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -223,7 +224,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 0'/>
+                color='1 1 1'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -240,7 +241,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 0'/>
+                color='1 1 1'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -257,7 +258,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 0'/>
+                color='1 1 1'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -274,7 +275,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 0'/>
+                color='1 1 1'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -291,7 +292,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 0'/>
+                color='1 1 1'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -308,7 +309,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 0'/>
+                color='1 1 1'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -325,7 +326,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 0'/>
+                color='1 1 1'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -342,7 +343,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 0'/>
+                color='1 1 1'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -359,7 +360,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='0 1 0'/>
+                color='1 0 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -376,7 +377,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='0 1 0'/>
+                color='1 0 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -393,7 +394,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='0 1 0'/>
+                color='1 0 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -410,7 +411,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='0 1 0'/>
+                color='1 0 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -427,7 +428,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='0 1 0'/>
+                color='1 0 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -444,7 +445,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='0 1 0'/>
+                color='1 0 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -461,7 +462,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='0 1 0'/>
+                color='1 0 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -478,7 +479,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='0 1 0'/>
+                color='1 0 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -495,7 +496,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='0 1 0'/>
+                color='1 0 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -512,7 +513,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='0 1 0'/>
+                color='1 0 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1208,7 +1209,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='0 1 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1225,7 +1226,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='0 1 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1242,7 +1243,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='0 1 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1259,7 +1260,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='0 1 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1276,7 +1277,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='0 1 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1293,7 +1294,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='0 1 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1310,7 +1311,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='0 1 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1327,7 +1328,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='0 1 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1344,7 +1345,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='0 1 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1361,7 +1362,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='0 1 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1378,7 +1379,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='1 1 1'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1395,7 +1396,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='1 1 1'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1412,7 +1413,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='1 1 1'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1429,7 +1430,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='1 1 1'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1446,7 +1447,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='1 1 1'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1463,7 +1464,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='1 1 1'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1480,7 +1481,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='1 1 1'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1497,7 +1498,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='1 1 1'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1514,7 +1515,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='1 1 1'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1531,7 +1532,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='1 1 1'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1548,7 +1549,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='1 0 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1565,7 +1566,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='1 0 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1582,7 +1583,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='1 0 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1599,7 +1600,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='1 0 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1616,7 +1617,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='1 0 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1633,7 +1634,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='1 0 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1650,7 +1651,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='1 0 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1667,7 +1668,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='1 0 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1684,7 +1685,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='1 0 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1701,7 +1702,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='1 0 0'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1718,7 +1719,7 @@
           </Appearance>
           <PointSet>
             <Color
-                color='1 0 1'/>
+                color='0 0 1'/>
             <Coordinate
                 point='0 0 0'/>
           </PointSet>
@@ -1727,7 +1728,7 @@
     </Group>
     <Script DEF='NewScript'>
       <field accessType='initializeOnly' type='SFNode' name='group'>
-        <Group USE='_1' containerField='group'/>
+        <Group USE='_1'/>
       </field>
 <![CDATA[ecmascript:
 
