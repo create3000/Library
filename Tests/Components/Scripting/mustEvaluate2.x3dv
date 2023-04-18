@@ -1,0 +1,38 @@
+#X3D V4.0 utf8
+
+PROFILE Interchange
+
+COMPONENT Scripting : 1
+
+#VRML V2.0 utf8
+
+PROTO Add
+[
+]
+{
+  DEF TR Transform
+  {
+    children
+    [
+      DEF SCR Script
+      {
+        eventOut      MFNode  O
+        directOutput  TRUE
+        mustEvaluate  TRUE
+
+        url "javascript:
+
+          function initialize()
+          {
+            O = Browser.createVrmlFromString( 'Transform{ translation -2 0 0 children[Shape{appearance Appearance{material Material{diffuseColor 1 0 0}}geometry Sphere{}}]}' );
+            O = Browser.createVrmlFromString( 'Transform{                    children[Shape{appearance Appearance{material Material{diffuseColor 0 1 0}}geometry Sphere{}}]}' );
+          }
+        "
+      }
+    ]
+
+    ROUTE SCR.O TO TR.addChildren
+  }
+}
+
+Add {}
