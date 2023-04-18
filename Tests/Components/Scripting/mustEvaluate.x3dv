@@ -10,7 +10,7 @@ META "comment" "Rise and Shine"
 META "creator" "Holger Seelig"
 META "generator" "Sunrize X3D Editor V1.0.18, https://create3000.github.io/sunrize/"
 META "identifier" "file:///Volumes/Home/Projekte/Library/Tests/Components/Scripting/mustEvaluate.x3dv"
-META "modified" "Tue, 18 Apr 2023 11:28:54 GMT"
+META "modified" "Tue, 18 Apr 2023 11:59:04 GMT"
 
 DEF Box Transform {
   translation 0 -2 0
@@ -33,7 +33,45 @@ DEF Script1 Script {
   inputOnly      SFTime set_time
   initializeOnly SFNode group USE _2
   initializeOnly SFNode script DEF Script2 Script {
-    inputOnly SFTime set_time
+    inputOnly      SFTime set_time
+    initializeOnly SFNode script DEF Script3 Script {
+      inputOnly      SFTime set_time
+      initializeOnly SFNode script DEF Script4 Script {
+        inputOnly SFTime set_time
+
+        url "ecmascript:
+
+function initialize ()
+{
+   // Add code here.
+}
+
+function set_time (value, time)
+{
+   console .log (\"Script4 set_time\");
+}
+"
+      }
+
+      url "ecmascript:
+
+function initialize ()
+{
+   // Add code here.
+}
+
+function set_time (value, time)
+{
+   console .log (\"Script3 set_time before\");
+
+   script .set_time = time;
+
+   console .log (\"Script3 set_time after\");
+}
+"
+      directOutput TRUE
+      mustEvaluate TRUE
+    }
 
     url "ecmascript:
 
@@ -44,10 +82,14 @@ function initialize ()
 
 function set_time (value, time)
 {
-   console .log (\"Script2 set_time\");
+   console .log (\"Script2 set_time before\");
+
+   script .set_time = time;
+
+   console .log (\"Script2 set_time after\");
 }
 "
-    mustEvaluate TRUE
+    directOutput TRUE
   }
 
   url "ecmascript:
