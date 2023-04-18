@@ -1,0 +1,96 @@
+#X3D V4.0 utf8 X_ITE V8.6.18
+
+PROFILE Interchange
+
+COMPONENT PointingDeviceSensor : 1
+COMPONENT Scripting : 1
+
+META "created" "Tue, 18 Apr 2023 10:12:21 GMT"
+META "comment" "Rise and Shine"
+META "creator" "Holger Seelig"
+META "generator" "Sunrize X3D Editor V1.0.18, https://create3000.github.io/sunrize/"
+META "identifier" "file:///Volumes/Home/Projekte/Library/Tests/Components/Scripting/mustEvaluate.x3dv"
+META "modified" "Tue, 18 Apr 2023 11:28:54 GMT"
+
+DEF Box Transform {
+  translation 0 -2 0
+  scale 0.1 0.1 0.1
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 0.5568628 0.4862745 0.7647059
+      }
+    }
+    geometry Box { }
+  }
+}
+
+DEF _1 TouchSensor { }
+
+DEF _2 Group { }
+
+DEF Script1 Script {
+  inputOnly      SFTime set_time
+  initializeOnly SFNode group USE _2
+  initializeOnly SFNode script DEF Script2 Script {
+    inputOnly SFTime set_time
+
+    url "ecmascript:
+
+function initialize ()
+{
+   // Add code here.
+}
+
+function set_time (value, time)
+{
+   console .log (\"Script2 set_time\");
+}
+"
+    mustEvaluate TRUE
+  }
+
+  url "ecmascript:
+
+function initialize ()
+{
+   console .log (\"Script 1 init\")
+
+   group .children .length = 0;
+}
+
+function set_time (value, time)
+{
+   console .log (\"Script 1 set_time before\");
+
+   script .set_time = time;
+
+   console .log (\"Script 1 set_time after\");
+
+   addChild ();
+   addChild ();
+}
+
+function addChild ()
+{
+   const
+      scene     = Browser .currentScene,
+      transform = scene .createNode (\"Transform\"),
+      shape     = scene .createNode (\"Shape\"),
+      box       = scene .createNode (\"Box\");
+
+   shape .geometry = box;
+   transform .children .push (shape);
+   transform .translation .x = Math .random ();
+   transform .translation .y = Math .random ();
+   transform .translation .z = Math .random ();
+   transform .scale          = new SFVec3f (0.1, 0.1, 0.1);
+
+   group .addChildren = new MFNode (transform);
+}
+"
+  directOutput TRUE
+  mustEvaluate TRUE
+}
+
+ROUTE _1.touchTime TO Script1.set_time
