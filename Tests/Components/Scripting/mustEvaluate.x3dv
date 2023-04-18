@@ -10,7 +10,7 @@ META "comment" "Rise and Shine"
 META "creator" "Holger Seelig"
 META "generator" "Sunrize X3D Editor V1.0.18, https://create3000.github.io/sunrize/"
 META "identifier" "file:///Volumes/Home/Projekte/Library/Tests/Components/Scripting/mustEvaluate.x3dv"
-META "modified" "Tue, 18 Apr 2023 11:59:04 GMT"
+META "modified" "Tue, 18 Apr 2023 12:06:14 GMT"
 
 DEF Box Transform {
   translation 0 -2 0
@@ -27,7 +27,52 @@ DEF Box Transform {
 
 DEF _1 TouchSensor { }
 
-DEF _2 Group { }
+DEF _2 Group {
+  children [
+    Transform {
+      translation 0.4518783 0.7954956 0.3513204
+      scale 0.1 0.1 0.1
+      children Shape {
+        geometry Box { }
+      }
+    }
+    Transform {
+      translation 0.0618728 0.1727745 0.3518465
+      scale 0.1 0.1 0.1
+      children Shape {
+        geometry Box { }
+      }
+    }
+    Transform {
+      translation 0.7808711 0.518066 0.5422758
+      scale 0.1 0.1 0.1
+      children Shape {
+        geometry Box { }
+      }
+    }
+    Transform {
+      translation 0.5931829 0.193795 0.9043345
+      scale 0.1 0.1 0.1
+      children Shape {
+        geometry Box { }
+      }
+    }
+    Transform {
+      translation 0.524286 0.4594029 0.04297316
+      scale 0.1 0.1 0.1
+      children Shape {
+        geometry Box { }
+      }
+    }
+    Transform {
+      translation 0.2615511 0.5006033 0.2699632
+      scale 0.1 0.1 0.1
+      children Shape {
+        geometry Box { }
+      }
+    }
+  ]
+}
 
 DEF Script1 Script {
   inputOnly      SFTime set_time
@@ -37,7 +82,22 @@ DEF Script1 Script {
     initializeOnly SFNode script DEF Script3 Script {
       inputOnly      SFTime set_time
       initializeOnly SFNode script DEF Script4 Script {
-        inputOnly SFTime set_time
+        inputOnly      SFTime set_time
+        initializeOnly SFNode script DEF Script5 Script {
+          inputOnly SFTime set_time
+
+          url "ecmascript:
+
+function initialize ()
+{
+   // Add code here.
+}
+
+function set_time (value, time)
+{
+   console .log (\"Script5 set_time\");
+}"
+        }
 
         url "ecmascript:
 
@@ -48,9 +108,15 @@ function initialize ()
 
 function set_time (value, time)
 {
-   console .log (\"Script4 set_time\");
+   console .log (\"Script4 set_time before\");
+
+   script .set_time = time;
+
+   console .log (\"Script4 set_time after\");
 }
 "
+        directOutput TRUE
+        mustEvaluate TRUE
       }
 
       url "ecmascript:
