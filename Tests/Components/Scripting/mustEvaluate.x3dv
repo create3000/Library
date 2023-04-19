@@ -10,7 +10,7 @@ META "comment" "Rise and Shine"
 META "creator" "Holger Seelig"
 META "generator" "Sunrize X3D Editor V1.0.18, https://create3000.github.io/sunrize/"
 META "identifier" "file:///Volumes/Home/Projekte/Library/Tests/Components/Scripting/mustEvaluate.x3dv"
-META "modified" "Wed, 19 Apr 2023 11:53:39 GMT"
+META "modified" "Wed, 19 Apr 2023 15:30:37 GMT"
 
 WorldInfo {
   title "Script.mustEvaluate=TRUE test"
@@ -18,15 +18,17 @@ WorldInfo {
     "Expected output:",
     "",
     "[Log] Script 1 set_time before",
-    "[Log] Script2 set_time before",
-    "[Log] Script2 set_time after",
     "[Log] Script 1 set_time after",
     "",
+    "[Log] Script2 set_time before",
     "[Log] Script3 set_time before",
     "[Log] Script4 set_time before",
-    "[Log] Script5 set_time",
+    "",
     "[Log] Script4 set_time after",
     "[Log] Script3 set_time after",
+    "[Log] Script2 set_time after",
+    "",
+    "[Log] Script5 set_time",
     ""
   ]
 }
@@ -46,7 +48,24 @@ DEF Box Transform {
 
 DEF _1 TouchSensor { }
 
-DEF _2 Group { }
+DEF _2 Group {
+  children [
+    Transform {
+      translation 0.5950341 0.4930795 0.1640098
+      scale 0.1 0.1 0.1
+      children Shape {
+        geometry Box { }
+      }
+    }
+    Transform {
+      translation 0.4892762 0.1938912 0.4211582
+      scale 0.1 0.1 0.1
+      children Shape {
+        geometry Box { }
+      }
+    }
+  ]
+}
 
 DEF Script1 Script {
   inputOnly      SFTime set_time
