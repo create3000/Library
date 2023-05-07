@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <meta name='title' content='ViewpointGroup'/>
+    <meta name='created' content='Sun, 07 May 2023 09:08:53 GMT'/>
+    <meta name='comment' content='Rise and Shine'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.0.24, https://create3000.github.io/sunrize/'/>
+    <meta name='identifier' content='file:///Volumes/Home/Projekte/Library/Tests/Components/Navigation/ViewpointGroup.x3d'/>
+    <meta name='modified' content='Sun, 07 May 2023 09:32:23 GMT'/>
+  </head>
+  <Scene>
+    <Viewpoint
+        description='Outside'
+        position='0 0 25'/>
+    <Viewpoint
+        description='Inside'
+        position='0 0 15'/>
+    <ViewpointGroup
+        description='Group'
+        size='20 20 20'>
+      <Viewpoint
+          description='First in Group'
+          position='0 0 20'/>
+      <ViewpointGroup
+          description='SubGroup'>
+        <Viewpoint
+            description='Second in SubGroup'
+            position='0 0 25'/>
+        <Viewpoint
+            description='Third in SubGroup'
+            position='0 0 30'/>
+      </ViewpointGroup>
+    </ViewpointGroup>
+    <Transform
+        scale='20 20 20'>
+      <Shape>
+        <Appearance>
+          <Material
+              diffuseColor='0.5 0 1'
+              transparency='0.5'/>
+        </Appearance>
+        <Box/>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>
