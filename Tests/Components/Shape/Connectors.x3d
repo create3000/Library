@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Full' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Fri, 04 Sep 2015 10:19:01 GMT'/>
@@ -49,12 +49,12 @@ function initialize ()
 
 	for (var i = 0; i < cornerDimension * 4; ++ i)
 		coordIndex [coordIndex .length] = i;
-		
+
 	geometry .coordIndex = coordIndex;
 
 	for (var i = 0; i < cornerDimension; ++i)
 		corner [i] = startRotation .slerp (endRotation, i / (cornerDimension - 1)) .multVec (point);
-	
+
 	var translation = new SFVec3f (size .x / 2 - cornerRadius, size .y / 2 - cornerRadius, 0);
 
 	for (var i = 0; i < cornerDimension; ++ i)
@@ -240,7 +240,7 @@ function initialize ()
 {
 	Browser .addRoute (output, 'translation_changed', self, 'set_translation');
 	Browser .addRoute (input,  'translation_changed', self, 'set_translation');
-	
+
 	set_translation ();
 }
 
@@ -258,7 +258,7 @@ function set_translation ()
 	{
 		var t = i / (routeDimension - 1);
 		var y = h / 2 * (Math .cos (t * Math .PI) - 1);
-	
+
 		geometry .coord .point [i] = outPoint .add (new SFVec3f (t * w, y, 0));
 	}
 }
