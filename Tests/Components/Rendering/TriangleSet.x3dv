@@ -1,6 +1,6 @@
-#VRML V2.0 utf8
+#X3D V4.0 utf8
 
-META "title" "IndexedTriangleSet"
+META "title" "TriangleSet"
 
 Background {
   skyColor 0.2 0.2 0.2
@@ -14,12 +14,11 @@ Transform {
         url "../images/image.png"
       }
     }
-    geometry IndexedTriangleSet {
+    geometry TriangleSet {
       solid FALSE
       coord Coordinate {
-        point [ -1 -1 0, 1 -1 0, 1 1 0, -1 1 0 ]
+        point [ -1 -1 0, 1 -1 0, 1 1 0, -1 -1 0, 1 1 0, -1 1 0 ]
       }
-      index [ 0, 1, 2, 0, 2, 3 ]
     }
   }
 }
