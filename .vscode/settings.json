@@ -4,6 +4,7 @@
       "**/.bzr": true,
       "**/._.DS_Store": true,
       "**/*~": true,
+      "**/._*": true,
       "**/node_modules": true
    },
    "files.watcherExclude": {

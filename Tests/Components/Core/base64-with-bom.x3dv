@@ -1,0 +1,18 @@
+#X3D V4.0 utf8
+
+PROFILE Core
+COMPONENT Scripting : 1
+
+Script {
+   url "ecmascript:
+async function initialize ()
+{
+   const
+      response = await fetch (new URL ('tests/base64-with-bom.url', location)),
+      text     = await response .text ();
+
+   await Browser .loadURL (new MFString (text));
+   Browser .viewAll (0);
+}
+   "
+}
