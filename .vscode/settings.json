@@ -3,12 +3,11 @@
       ".vscode/ipch": true,
       "**/.bzr": true,
       "**/._.DS_Store": true,
-      "**/*~": true,
       "**/._*": true,
+      "**/*~": true,
       "**/node_modules": true
    },
    "files.watcherExclude": {
-      "**/.bzr/**": true
    },
    "files.insertFinalNewline": true,
    "files.trimFinalNewlines": true,
