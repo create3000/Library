@@ -10,16 +10,20 @@
     <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.0, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 22 Aug 2023 16:38:45 GMT'/>
+    <meta name='modified' content='Tue, 22 Aug 2023 17:06:41 GMT'/>
   </head>
   <Scene>
-    <Sound
-        maxBack='20'
-        maxFront='20'>
-      <AudioClip DEF='Song'
-          url='"04. Like A Virgin.mp3"'
-          startTime='1441360100.29156'/>
-    </Sound>
+    <Transform
+        translation='0 0 10'>
+      <Sound
+          location='0 0 -10'
+          maxBack='20'
+          maxFront='20'>
+        <AudioClip DEF='Song'
+            url='"04. Like A Virgin.mp3"'
+            startTime='1441360100.29156'/>
+      </Sound>
+    </Transform>
     <Collision
         enabled='false'>
       <Transform DEF='Min'>
