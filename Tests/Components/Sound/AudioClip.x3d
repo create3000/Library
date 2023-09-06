@@ -10,18 +10,17 @@
     <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.1, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 06 Sep 2023 11:25:28 GMT'/>
+    <meta name='modified' content='Wed, 06 Sep 2023 11:27:31 GMT'/>
   </head>
   <Scene>
     <Transform DEF='_1'
-        rotation='0 1 0 1'
         center='0 0 10'>
       <Sound
           maxBack='20'
           maxFront='20'>
         <AudioClip DEF='Song'
             url='"04. Like A Virgin.mp3"'
-            startTime='1693999527.029'/>
+            startTime='1693999650.755'/>
       </Sound>
     </Transform>
     <Collision
@@ -53,7 +52,7 @@
           <Material/>
         </Appearance>
         <Text DEF='ElapsedTime'
-            string='"26.2"'/>
+            string='"0.3"'/>
       </Shape>
     </Transform>
     <Transform DEF='Start'
