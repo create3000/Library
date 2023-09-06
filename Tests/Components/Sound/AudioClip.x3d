@@ -10,41 +10,42 @@
     <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.1, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 06 Sep 2023 11:27:31 GMT'/>
+    <meta name='modified' content='Wed, 06 Sep 2023 11:29:56 GMT'/>
   </head>
   <Scene>
     <Transform DEF='_1'
+        rotation='0 0 0 6.28318530717959'
         center='0 0 10'>
       <Sound
           maxBack='20'
           maxFront='20'>
         <AudioClip DEF='Song'
             url='"04. Like A Virgin.mp3"'
-            startTime='1693999650.755'/>
+            startTime='1693999731.586'/>
       </Sound>
+      <Collision
+          enabled='false'>
+        <Transform DEF='Min'>
+          <Shape>
+            <Appearance>
+              <Material
+                  transparency='0.3'/>
+            </Appearance>
+            <Sphere/>
+          </Shape>
+        </Transform>
+        <Transform
+            scale='10 10 10'>
+          <Shape>
+            <Appearance>
+              <Material
+                  transparency='0.3'/>
+            </Appearance>
+            <Sphere/>
+          </Shape>
+        </Transform>
+      </Collision>
     </Transform>
-    <Collision
-        enabled='false'>
-      <Transform DEF='Min'>
-        <Shape>
-          <Appearance>
-            <Material
-                transparency='0.3'/>
-          </Appearance>
-          <Sphere/>
-        </Shape>
-      </Transform>
-      <Transform DEF='Max'
-          scale='10 10 10'>
-        <Shape>
-          <Appearance>
-            <Material
-                transparency='0.3'/>
-          </Appearance>
-          <Sphere/>
-        </Shape>
-      </Transform>
-    </Collision>
     <Transform DEF='ElapsedTime_1'
         translation='0 2 0'>
       <Shape>
@@ -52,7 +53,7 @@
           <Material/>
         </Appearance>
         <Text DEF='ElapsedTime'
-            string='"0.3"'/>
+            string='"64.1"'/>
       </Shape>
     </Transform>
     <Transform DEF='Start'
@@ -92,7 +93,8 @@
         <Box/>
       </Shape>
       <TimeSensor DEF='_3'
-          cycleInterval='10'/>
+          cycleInterval='10'
+          startTime='1693999746.299'/>
       <OrientationInterpolator DEF='_4'
           key='0, 0.25, 0.5, 0.75, 1'
           keyValue='0 1 0 0, 0 1 0 1.5707963267949, 0 1 0 3.14159265358979, 0 1 0 4.71238898038469, 0 0 1 0'/>
