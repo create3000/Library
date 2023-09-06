@@ -9,19 +9,19 @@
     <meta name='comment' content='Rise and Shine'/>
     <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Sunrize X3D Editor V1.1.0, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 22 Aug 2023 17:06:41 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.1.1, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Wed, 06 Sep 2023 11:25:28 GMT'/>
   </head>
   <Scene>
-    <Transform
-        translation='0 0 10'>
+    <Transform DEF='_1'
+        rotation='0 1 0 1'
+        center='0 0 10'>
       <Sound
-          location='0 0 -10'
           maxBack='20'
           maxFront='20'>
         <AudioClip DEF='Song'
             url='"04. Like A Virgin.mp3"'
-            startTime='1441360100.29156'/>
+            startTime='1693999527.029'/>
       </Sound>
     </Transform>
     <Collision
@@ -46,19 +46,20 @@
         </Shape>
       </Transform>
     </Collision>
-    <Transform
+    <Transform DEF='ElapsedTime_1'
         translation='0 2 0'>
       <Shape>
         <Appearance>
           <Material/>
         </Appearance>
         <Text DEF='ElapsedTime'
-            string='"28.9"'/>
+            string='"26.2"'/>
       </Shape>
     </Transform>
-    <Transform
+    <Transform DEF='Start'
         translation='-2 0 0'>
-      <TouchSensor DEF='Play'/>
+      <TouchSensor DEF='Play'
+          description='Start AudioClip'/>
       <Shape>
         <Appearance>
           <Material
@@ -67,9 +68,10 @@
         <Box/>
       </Shape>
     </Transform>
-    <Transform
+    <Transform DEF='Stop_1'
         translation='2 0 0'>
-      <TouchSensor DEF='Stop'/>
+      <TouchSensor DEF='Stop'
+          description='Stop AudioClip'/>
       <Shape>
         <Appearance>
           <Material
@@ -77,6 +79,24 @@
         </Appearance>
         <Box/>
       </Shape>
+    </Transform>
+    <Transform DEF='StartAnimation'
+        translation='-2 -1.5 0'
+        scale='0.2 0.2 0.2'>
+      <TouchSensor DEF='_2'
+          description='Start Animation'/>
+      <Shape>
+        <Appearance>
+          <Material
+              diffuseColor='0.1607843 0.5254902 0.8'/>
+        </Appearance>
+        <Box/>
+      </Shape>
+      <TimeSensor DEF='_3'
+          cycleInterval='10'/>
+      <OrientationInterpolator DEF='_4'
+          key='0, 0.25, 0.5, 0.75, 1'
+          keyValue='0 1 0 0, 0 1 0 1.5707963267949, 0 1 0 3.14159265358979, 0 1 0 4.71238898038469, 0 0 1 0'/>
     </Transform>
     <Script DEF='Debug'>
       <field accessType='inputOnly' type='SFTime' name='set_startTime'/>
@@ -121,5 +141,8 @@ function set_duration (value, time)
     <ROUTE fromNode='Song' fromField='elapsedTime' toNode='Debug' toField='set_elapsedTime'/>
     <ROUTE fromNode='Song' fromField='duration_changed' toNode='Debug' toField='set_duration'/>
     <ROUTE fromNode='Debug' fromField='string_changed' toNode='ElapsedTime' toField='set_string'/>
+    <ROUTE fromNode='_3' fromField='fraction_changed' toNode='_4' toField='set_fraction'/>
+    <ROUTE fromNode='_4' fromField='value_changed' toNode='_1' toField='set_rotation'/>
+    <ROUTE fromNode='_2' fromField='touchTime' toNode='_3' toField='set_startTime'/>
   </Scene>
 </X3D>
