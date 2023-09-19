@@ -7,7 +7,7 @@
     <meta name='comment' content='Rise and Shine'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.2, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 19 Sep 2023 18:25:36 GMT'/>
+    <meta name='modified' content='Tue, 19 Sep 2023 19:02:13 GMT'/>
   </head>
   <Scene>
     <Transform DEF='Text'>
@@ -24,7 +24,7 @@
         scale='1 -1 1'>
       <Shape USE='_1'/>
     </Transform>
-    <Transform
+    <Transform DEF='Tree'
         translation='-2 2 0'>
       <Shape DEF='_2'>
         <Appearance>
