@@ -7,30 +7,55 @@
     <meta name='comment' content='Rise and Shine'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.2, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 19 Sep 2023 11:21:58 GMT'/>
+    <meta name='modified' content='Tue, 19 Sep 2023 13:17:44 GMT'/>
   </head>
   <Scene>
     <HAnimHumanoid>
       <HAnimJoint DEF='_1' containerField='skeleton'>
         <HAnimDisplacer DEF='_2'
+            weight='0.7550001'
             coordIndex='0'
-            weight='0.5929999'
-            displacements='-2 0 0'/>
+            displacements='-3 0 0'/>
         <HAnimDisplacer DEF='_3'
+            weight='0.7550001'
             coordIndex='1'
-            weight='0.5929999'
-            displacements='0 -2 0'/>
+            displacements='-1 -2 0'/>
         <HAnimDisplacer DEF='_4'
+            weight='0.7550001'
             coordIndex='2'
-            weight='0.5929999'
-            displacements='2 0 0'/>
+            displacements='1 0 0'/>
         <HAnimDisplacer DEF='_5'
+            weight='0.7550001'
             coordIndex='3'
-            weight='0.5929999'
-            displacements='0 2 0'/>
+            displacements='-1 2 0'/>
+        <HAnimDisplacer DEF='_6'
+            weight='0.7550001'
+            coordIndex='0'
+            displacements='1 0 0'/>
+        <HAnimJoint DEF='_7'>
+          <HAnimDisplacer DEF='_8'
+              weight='0.7550001'
+              coordIndex='1'
+              displacements='1 0 0'/>
+          <HAnimJoint DEF='_9'>
+            <HAnimDisplacer DEF='_10'
+                weight='0.7550001'
+                coordIndex='2'
+                displacements='1 0 0'/>
+            <HAnimJoint DEF='_11'>
+              <HAnimDisplacer DEF='_12'
+                  weight='0.7550001'
+                  coordIndex='3'
+                  displacements='1 0 0'/>
+            </HAnimJoint>
+          </HAnimJoint>
+        </HAnimJoint>
       </HAnimJoint>
       <HAnimJoint USE='_1' containerField='joints'/>
-      <Coordinate DEF='_6' containerField='skinCoord'
+      <HAnimJoint USE='_7' containerField='joints'/>
+      <HAnimJoint USE='_9' containerField='joints'/>
+      <HAnimJoint USE='_11' containerField='joints'/>
+      <Coordinate DEF='_13' containerField='skinCoord'
           point='1 1 0, -1 1 0, -1 -1 0, 1 -1 0'/>
       <Shape containerField='skin'>
         <Appearance>
@@ -39,15 +64,19 @@
         </Appearance>
         <IndexedLineSet
             coordIndex='0, 1, 2, 3, 0, -1'>
-          <Coordinate USE='_6'/>
+          <Coordinate USE='_13'/>
         </IndexedLineSet>
       </Shape>
     </HAnimHumanoid>
-    <TimeSensor DEF='_7'
+    <TimeSensor DEF='_14'
         loop='true'/>
-    <ROUTE fromNode='_7' fromField='fraction_changed' toNode='_2' toField='set_weight'/>
-    <ROUTE fromNode='_7' fromField='fraction_changed' toNode='_3' toField='set_weight'/>
-    <ROUTE fromNode='_7' fromField='fraction_changed' toNode='_4' toField='set_weight'/>
-    <ROUTE fromNode='_7' fromField='fraction_changed' toNode='_5' toField='set_weight'/>
+    <ROUTE fromNode='_14' fromField='fraction_changed' toNode='_2' toField='set_weight'/>
+    <ROUTE fromNode='_14' fromField='fraction_changed' toNode='_3' toField='set_weight'/>
+    <ROUTE fromNode='_14' fromField='fraction_changed' toNode='_4' toField='set_weight'/>
+    <ROUTE fromNode='_14' fromField='fraction_changed' toNode='_5' toField='set_weight'/>
+    <ROUTE fromNode='_14' fromField='fraction_changed' toNode='_6' toField='set_weight'/>
+    <ROUTE fromNode='_14' fromField='fraction_changed' toNode='_12' toField='set_weight'/>
+    <ROUTE fromNode='_14' fromField='fraction_changed' toNode='_10' toField='set_weight'/>
+    <ROUTE fromNode='_14' fromField='fraction_changed' toNode='_8' toField='set_weight'/>
   </Scene>
 </X3D>
