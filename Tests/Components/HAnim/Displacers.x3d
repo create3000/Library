@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='HAnim' level='3'/>
+    <meta name='created' content='Tue, 19 Sep 2023 11:12:51 GMT'/>
+    <meta name='comment' content='Rise and Shine'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.1.2, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Tue, 19 Sep 2023 11:21:58 GMT'/>
+  </head>
+  <Scene>
+    <HAnimHumanoid>
+      <HAnimJoint DEF='_1' containerField='skeleton'>
+        <HAnimDisplacer DEF='_2'
+            coordIndex='0'
+            weight='0.5929999'
+            displacements='-2 0 0'/>
+        <HAnimDisplacer DEF='_3'
+            coordIndex='1'
+            weight='0.5929999'
+            displacements='0 -2 0'/>
+        <HAnimDisplacer DEF='_4'
+            coordIndex='2'
+            weight='0.5929999'
+            displacements='2 0 0'/>
+        <HAnimDisplacer DEF='_5'
+            coordIndex='3'
+            weight='0.5929999'
+            displacements='0 2 0'/>
+      </HAnimJoint>
+      <HAnimJoint USE='_1' containerField='joints'/>
+      <Coordinate DEF='_6' containerField='skinCoord'
+          point='1 1 0, -1 1 0, -1 -1 0, 1 -1 0'/>
+      <Shape containerField='skin'>
+        <Appearance>
+          <UnlitMaterial
+              emissiveColor='0.4156863 0.1960784 0.6235294'/>
+        </Appearance>
+        <IndexedLineSet
+            coordIndex='0, 1, 2, 3, 0, -1'>
+          <Coordinate USE='_6'/>
+        </IndexedLineSet>
+      </Shape>
+    </HAnimHumanoid>
+    <TimeSensor DEF='_7'
+        loop='true'/>
+    <ROUTE fromNode='_7' fromField='fraction_changed' toNode='_2' toField='set_weight'/>
+    <ROUTE fromNode='_7' fromField='fraction_changed' toNode='_3' toField='set_weight'/>
+    <ROUTE fromNode='_7' fromField='fraction_changed' toNode='_4' toField='set_weight'/>
+    <ROUTE fromNode='_7' fromField='fraction_changed' toNode='_5' toField='set_weight'/>
+  </Scene>
+</X3D>
