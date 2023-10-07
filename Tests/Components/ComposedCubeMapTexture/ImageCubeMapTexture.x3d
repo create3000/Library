@@ -9,7 +9,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite.js/tests/Components/ComposedCubeMapTexture/ImageCubeMapTexture.x3d'/>
-    <meta name='modified' content='Sat, 07 Oct 2023 00:53:17 GMT'/>
+    <meta name='modified' content='Sat, 07 Oct 2023 09:31:02 GMT'/>
   </head>
   <Scene>
     <Viewpoint
@@ -18,17 +18,18 @@
         translation='-1.5 0 0'>
       <Shape>
         <Appearance>
-          <Material/>
-          <ImageCubeMapTexture
-              url='"../images/skybox_texture.jpg"'>
-            <TextureProperties DEF='_1'
-                minificationFilter='NICEST'
-                magnificationFilter='NICEST'
-                boundaryModeS='CLAMP_TO_EDGE'
-                boundaryModeT='CLAMP_TO_EDGE'
-                boundaryModeR='CLAMP_TO_EDGE'
-                textureCompression='DEFAULT'/>
-          </ImageCubeMapTexture>
+          <Material>
+            <ImageCubeMapTexture containerField='diffuseTexture'
+                url='"../images/skybox_texture.jpg"'>
+              <TextureProperties DEF='_1'
+                  minificationFilter='NICEST'
+                  magnificationFilter='NICEST'
+                  boundaryModeS='CLAMP_TO_EDGE'
+                  boundaryModeT='CLAMP_TO_EDGE'
+                  boundaryModeR='CLAMP_TO_EDGE'
+                  textureCompression='DEFAULT'/>
+            </ImageCubeMapTexture>
+          </Material>
         </Appearance>
         <IndexedFaceSet DEF='_2'
             creaseAngle='3.14159'
