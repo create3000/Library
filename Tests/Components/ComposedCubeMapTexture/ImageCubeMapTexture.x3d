@@ -9,13 +9,13 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite.js/tests/Components/ComposedCubeMapTexture/ImageCubeMapTexture.x3d'/>
-    <meta name='modified' content='Sat, 07 Oct 2023 09:31:02 GMT'/>
+    <meta name='modified' content='Sat, 07 Oct 2023 18:31:58 GMT'/>
   </head>
   <Scene>
     <Viewpoint
         position='-0.1412903 0.06043867 5.096824'/>
     <Transform
-        translation='-1.5 0 0'>
+        translation='-2 0 0'>
       <Shape>
         <Appearance>
           <Material>
@@ -41,13 +41,25 @@
         </IndexedFaceSet>
       </Shape>
     </Transform>
-    <Transform
-        translation='1.5 0 0'>
+    <Transform>
       <Shape>
         <Appearance>
           <Material/>
           <ImageCubeMapTexture
               url='"../images/helipad.jpg"'>
+            <TextureProperties USE='_1'/>
+          </ImageCubeMapTexture>
+        </Appearance>
+        <IndexedFaceSet USE='_2'/>
+      </Shape>
+    </Transform>
+    <Transform
+        translation='2 0 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+          <ImageCubeMapTexture
+              url='"../images/diffuse.ktx2"'>
             <TextureProperties USE='_1'/>
           </ImageCubeMapTexture>
         </Appearance>
