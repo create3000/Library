@@ -8,138 +8,9 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/ProjectiveTextureMapping/Parallel.x3d'/>
-    <meta name='modified' content='Mon, 09 Oct 2023 14:59:01 GMT'/>
+    <meta name='modified' content='Mon, 09 Oct 2023 16:54:54 GMT'/>
   </head>
   <Scene>
-    <WorldInfo>
-      <MetadataSet DEF='Titania' containerField='metadata'
-          name='Titania'
-          reference='http://titania.create3000.de'>
-        <MetadataSet DEF='AngleGrid'
-            name='AngleGrid'
-            reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled'
-              name='enabled'
-              reference='http://titania.create3000.de'
-              value='false'/>
-        </MetadataSet>
-        <MetadataSet DEF='Grid'
-            name='Grid'
-            reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled_1'
-              name='enabled'
-              reference='http://titania.create3000.de'
-              value='true'/>
-        </MetadataSet>
-        <MetadataSet DEF='Selection'
-            name='Selection'
-            reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='selectGeometry'
-              name='selectGeometry'
-              reference='http://titania.create3000.de'
-              value='false'/>
-          <MetadataSet DEF='nodes'
-              name='nodes'
-              reference='http://titania.create3000.de'>
-            <TextureProjectorParallel DEF='_1' containerField='value'
-                location='0 0 1'
-                direction='0 0 -1'
-                upVector='0 1 0'
-                fieldOfView='-2, -2, 2, 2'
-                nearDistance='3'>
-              <ImageTexture
-                  url='"http://cdn.rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "https://cdn.rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "http://rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "https://rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg"'
-                  repeatS='false'
-                  repeatT='false'/>
-            </TextureProjectorParallel>
-          </MetadataSet>
-        </MetadataSet>
-        <MetadataSet DEF='BrowserPanel'
-            name='BrowserPanel'
-            reference='http://titania.create3000.de'>
-          <MetadataString DEF='type_4'
-              name='type'
-              reference='http://titania.create3000.de'
-              value='"TOP_VIEW", "MAIN_VIEW", "PERSPECTIVE_VIEW", "FRONT_VIEW"'/>
-          <MetadataSet DEF='viewpoints'
-              name='viewpoints'
-              reference='http://titania.create3000.de'>
-            <MetadataSet DEF='PerspectiveViewpoint'
-                name='PerspectiveViewpoint'
-                reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_5'
-                  name='position'
-                  reference='http://titania.create3000.de'
-                  value='5.87788534164429, 6.46984958648682, 13.8524446487427'/>
-              <MetadataDouble DEF='orientation_6'
-                  name='orientation'
-                  reference='http://titania.create3000.de'
-                  value='-0.704047462871212, 0.695566762376517, 0.143192350010952, 0.568941727555854'/>
-              <MetadataDouble DEF='centerOfRotation_7'
-                  name='centerOfRotation'
-                  reference='http://titania.create3000.de'
-                  value='0, 0, 0'/>
-              <MetadataDouble DEF='fieldOfViewScale'
-                  name='fieldOfViewScale'
-                  reference='http://titania.create3000.de'
-                  value='1'/>
-            </MetadataSet>
-            <MetadataSet DEF='TopViewpoint'
-                name='TopViewpoint'
-                reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_8'
-                  name='position'
-                  reference='http://titania.create3000.de'
-                  value='0, 10000, 0'/>
-              <MetadataDouble DEF='orientation_9'
-                  name='orientation'
-                  reference='http://titania.create3000.de'
-                  value='1, 0, 0, 4.71238898038469'/>
-              <MetadataDouble DEF='centerOfRotation_10'
-                  name='centerOfRotation'
-                  reference='http://titania.create3000.de'
-                  value='-0.0320612526145463, 0, 0.0937320149966475'/>
-              <MetadataDouble DEF='fieldOfViewScale_11'
-                  name='fieldOfViewScale'
-                  reference='http://titania.create3000.de'
-                  value='1.21023944190259'/>
-            </MetadataSet>
-            <MetadataSet DEF='FrontViewpoint'
-                name='FrontViewpoint'
-                reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_12'
-                  name='position'
-                  reference='http://titania.create3000.de'
-                  value='0, 0, 10000'/>
-              <MetadataDouble DEF='orientation_13'
-                  name='orientation'
-                  reference='http://titania.create3000.de'
-                  value='0, 0, 1, 0'/>
-              <MetadataDouble DEF='centerOfRotation_14'
-                  name='centerOfRotation'
-                  reference='http://titania.create3000.de'
-                  value='-0.00884759203065143, 0.0177734813359099, 0'/>
-              <MetadataDouble DEF='fieldOfViewScale_15'
-                  name='fieldOfViewScale'
-                  reference='http://titania.create3000.de'
-                  value='1.212467484375'/>
-            </MetadataSet>
-          </MetadataSet>
-        </MetadataSet>
-        <MetadataSet DEF='Page'
-            name='Page'
-            reference='http://titania.create3000.de'>
-          <MetadataInteger DEF='activeView'
-              name='activeView'
-              reference='http://titania.create3000.de'
-              value='1'/>
-          <MetadataInteger DEF='multiView'
-              name='multiView'
-              reference='http://titania.create3000.de'
-              value='0'/>
-        </MetadataSet>
-      </MetadataSet>
-    </WorldInfo>
     <Transform
         translation='-5 0 0'>
       <Transform DEF='Box'
@@ -152,7 +23,17 @@
           <Box/>
         </Shape>
       </Transform>
-      <TextureProjectorParallel USE='_1'/>
+      <TextureProjectorParallel
+          location='0 0 1'
+          direction='0 0 -1'
+          upVector='0 1 0'
+          fieldOfView='-2, -2, 2, 2'
+          nearDistance='3'>
+        <ImageTexture
+            url='"http://cdn.rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "https://cdn.rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "http://rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "https://rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg"'
+            repeatS='false'
+            repeatT='false'/>
+      </TextureProjectorParallel>
     </Transform>
   </Scene>
 </X3D>

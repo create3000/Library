@@ -8,39 +8,9 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/apple.x3d'/>
-    <meta name='modified' content='Mon, 09 Oct 2023 14:28:35 GMT'/>
+    <meta name='modified' content='Mon, 09 Oct 2023 16:54:42 GMT'/>
   </head>
   <Scene>
-    <WorldInfo
-        title='apple'>
-      <MetadataSet DEF='Titania' containerField='metadata'
-          name='Titania'
-          reference='http://titania.create3000.de'>
-        <MetadataSet DEF='Page'
-            name='Page'
-            reference='http://titania.create3000.de'>
-          <MetadataInteger DEF='activeView'
-              name='activeView'
-              reference='http://titania.create3000.de'
-              value='1'/>
-          <MetadataInteger DEF='multiView'
-              name='multiView'
-              reference='http://titania.create3000.de'
-              value='0'/>
-        </MetadataSet>
-        <MetadataSet DEF='Selection'
-            name='Selection'
-            reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='selectGeometry'
-              name='selectGeometry'
-              reference='http://titania.create3000.de'
-              value='false'/>
-          <MetadataSet DEF='nodes'
-              name='nodes'
-              reference='http://titania.create3000.de'/>
-        </MetadataSet>
-      </MetadataSet>
-    </WorldInfo>
     <Viewpoint
         position='3.45864 5.78616 7.38635'
         orientation='-0.80658553711544 0.563208014712301 0.179489563707828 0.75257055684603'/>
