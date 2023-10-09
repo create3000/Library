@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='CubeMapTexturing' level='3'/>
+    <component name='EnvironmentalSensor' level='3'/>
+    <meta name='created' content='Mon, 09 Oct 2023 20:31:23 GMT'/>
+    <meta name='comment' content='Rise and Shine'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Mon, 09 Oct 2023 21:50:31 GMT'/>
+  </head>
+  <Scene>
+    <EnvironmentLight DEF='_1'
+        color='0.8352941 0.6509804 0.7411765'
+        rotation='-0.00779602937614119 0.999863801003625 0.014546524277291 2.15774070955731'>
+      <ImageCubeMapTexture containerField='diffuseTexture'
+          url='"https://rawgit.com/create3000/Library/main/Tests/Components/images/helipad.jpg"'/>
+    </EnvironmentLight>
+    <ProximitySensor DEF='_2'
+        enabled='false'
+        size='-1 -1 -1'/>
+    <Inline DEF='DamagedHelmet'
+        url='"https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf"'/>
+    <ROUTE fromNode='_2' fromField='orientation_changed' toNode='_1' toField='set_rotation'/>
+  </Scene>
+</X3D>
