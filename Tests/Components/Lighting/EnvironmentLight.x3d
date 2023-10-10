@@ -8,13 +8,14 @@
     <meta name='comment' content='Rise and Shine'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Mon, 09 Oct 2023 21:51:33 GMT'/>
+    <meta name='modified' content='Tue, 10 Oct 2023 06:13:17 GMT'/>
   </head>
   <Scene>
     <NavigationInfo/>
     <EnvironmentLight>
       <ImageCubeMapTexture DEF='_1' containerField='diffuseTexture'
           url='"../images/helipad.jpg"'/>
+      <ImageCubeMapTexture USE='_1' containerField='specularTexture'/>
     </EnvironmentLight>
     <Transform DEF='Box'
         translation='0 1.5 0'>
