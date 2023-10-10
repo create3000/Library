@@ -8,15 +8,15 @@
     <meta name='comment' content='Rise and Shine'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 10 Oct 2023 10:19:47 GMT'/>
+    <meta name='modified' content='Tue, 10 Oct 2023 10:21:28 GMT'/>
   </head>
   <Scene>
     <NavigationInfo/>
     <EnvironmentLight>
       <ImageCubeMapTexture DEF='_1' containerField='diffuseTexture'
-          url='"../images/diffuse.ktx"'/>
+          url='"../images/diffuse.ktx2"'/>
       <ImageCubeMapTexture containerField='specularTexture'
-          url='"../images/specular.ktx"'/>
+          url='"../images/specular.ktx2"'/>
     </EnvironmentLight>
     <Transform DEF='Box'
         translation='0 1.5 0'>
