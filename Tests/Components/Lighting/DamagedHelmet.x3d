@@ -8,9 +8,12 @@
     <meta name='comment' content='Rise and Shine'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Mon, 09 Oct 2023 23:37:34 GMT'/>
+    <meta name='modified' content='Tue, 10 Oct 2023 06:51:39 GMT'/>
   </head>
   <Scene>
+    <Viewpoint
+        position='-0.00248158 1.054537e-5 2.385858'
+        centerOfRotation='-0.00248158 1.054537e-5 -0.187155'/>
     <EnvironmentLight DEF='_1'
         color='0.9764706 0.7960784 0.6117647'
         rotation='-0.00779602937614119 0.999863801003625 0.014546524277291 2.15774070955731'>
