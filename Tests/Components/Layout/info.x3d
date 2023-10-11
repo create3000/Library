@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
-    <meta name='comment' content='World of Titania'/>
+    <component name='Geometry2D' level='2'/>
+    <component name='Layering' level='1'/>
+    <component name='Layout' level='2'/>
+    <component name='Scripting' level='1'/>
+    <component name='Text' level='1'/>
+    <meta name='comment' content='Rise and Shine'/>
     <meta name='created' content='Fri, 05 Sep 2014 01:58:48 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V3.0.4, http://titania.create3000.de'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
     <meta name='icon' content='../../ui/icons/icon-bw.svg'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Layout/info.x3d'/>
-    <meta name='modified' content='Tue, 29 Aug 2017 12:00:50 GMT'/>
+    <meta name='modified' content='Wed, 11 Oct 2023 21:23:41 GMT'/>
     <meta name='title' content='about:info'/>
   </head>
   <Scene>
@@ -28,58 +33,58 @@
     </ExternProtoDeclare>
     <WorldInfo
         title='info'>
-      <MetadataSet DEF='Titania'
+      <MetadataSet DEF='Titania' containerField='metadata'
           name='Titania'
           reference='http://titania.create3000.de'>
-        <MetadataSet DEF='NavigationInfo' containerField='value'
+        <MetadataSet DEF='NavigationInfo'
             name='NavigationInfo'
             reference='http://titania.create3000.de'>
-          <MetadataString DEF='type' containerField='value'
+          <MetadataString DEF='type'
               name='type'
               reference='http://titania.create3000.de'
               value='"EXAMINE"'/>
         </MetadataSet>
-        <MetadataSet DEF='Viewpoint' containerField='value'
+        <MetadataSet DEF='Viewpoint'
             name='Viewpoint'
             reference='http://titania.create3000.de'>
-          <MetadataDouble DEF='position' containerField='value'
+          <MetadataDouble DEF='position'
               name='position'
               reference='http://titania.create3000.de'
               value='-0.00152639835141599, -0.028887877240777, 9.99995899200439'/>
-          <MetadataDouble DEF='orientation' containerField='value'
+          <MetadataDouble DEF='orientation'
               name='orientation'
               reference='http://titania.create3000.de'
               value='0.992968316036784, -0.052313354198032, -0.106194332803706, 0.0029296877328307'/>
-          <MetadataDouble DEF='centerOfRotation' containerField='value'
+          <MetadataDouble DEF='centerOfRotation'
               name='centerOfRotation'
               reference='http://titania.create3000.de'
               value='0, 0, 0'/>
         </MetadataSet>
-        <MetadataSet DEF='Page' containerField='value'
+        <MetadataSet DEF='Page'
             name='Page'
             reference='http://titania.create3000.de'>
-          <MetadataInteger DEF='activeView' containerField='value'
+          <MetadataInteger DEF='activeView'
               name='activeView'
               reference='http://titania.create3000.de'
               value='1'/>
-          <MetadataInteger DEF='multiView' containerField='value'
+          <MetadataInteger DEF='multiView'
               name='multiView'
               reference='http://titania.create3000.de'
               value='0'/>
         </MetadataSet>
-        <MetadataSet DEF='Selection' containerField='value'
+        <MetadataSet DEF='Selection'
             name='Selection'
             reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='selectGeometry' containerField='value'
+          <MetadataBoolean DEF='selectGeometry'
               name='selectGeometry'
               reference='http://titania.create3000.de'
               value='false'/>
-          <MetadataSet DEF='nodes' containerField='value'
+          <MetadataSet DEF='nodes'
               name='nodes'
               reference='http://titania.create3000.de'>
             <Anchor DEF='_1' containerField='value'
                 description='http://titania.create3000.de'
-                url='"http://create3000.de/"'>
+                url='"https://create3000.github.io/x_ite/"'>
               <Transform DEF='Support'
                   translation='-0.421689 0.1 1'>
                 <Shape>
@@ -88,8 +93,8 @@
                         diffuseColor='0 0 0'/>
                   </Appearance>
                   <Text
-                      string='"For additional support please visit", "http://create3000.de."'>
-                    <FontStyle DEF='_2'
+                      string='"For additional support please visit", "https://create3000.github.io/x_ite/."'>
+                    <FontStyle
                         family='"PTN57F.ttf", "sans"'
                         style='NORMAL'
                         size='0.04'
@@ -100,10 +105,10 @@
             </Anchor>
           </MetadataSet>
         </MetadataSet>
-        <MetadataSet DEF='LayerSet' containerField='value'
+        <MetadataSet DEF='LayerSet'
             name='LayerSet'
             reference='http://titania.create3000.de'>
-          <MetadataInteger DEF='activeLayer' containerField='value'
+          <MetadataInteger DEF='activeLayer'
               name='activeLayer'
               reference='http://titania.create3000.de'
               value='-1'/>
@@ -197,8 +202,10 @@
                   <fieldValue name='loop' value='true'/>
                 </ProtoInstance>
                 <Transform DEF='Logo'
+                    rotation='0 0 -1 2.96629171850506'
                     center='5.6 -5.9 0'>
                   <Inline
+                      global='true'
                       url='"library/logo.x3dv"'/>
                 </Transform>
               </Transform>
@@ -210,7 +217,7 @@
                         diffuseColor='1 1 1'/>
                   </Appearance>
                   <Text DEF='BrowserNameText'
-                      string='"Titania"'>
+                      string='"X_ITE"'>
                     <FontStyle
                         family='"PTN77F.ttf", "sans"'
                         style='BOLD'
@@ -293,7 +300,7 @@
                         diffuseColor='1 1 1'/>
                   </Appearance>
                   <Text DEF='VersionNumberText'
-                      string='"3.0.4"'
+                      string='"8.14.0"'
                       maxExtent='0.65'>
                     <FontStyle
                         family='"PTN77F.ttf", "sans"'
