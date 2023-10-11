@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='Geometry2D' level='2'/>
+    <component name='PointingDeviceSensor' level='1'/>
+    <component name='Scripting' level='1'/>
+    <component name='Texturing3D' level='2'/>
+    <component name='VolumeRendering' level='4'/>
+    <meta name='comment' content='Rise and Shine'/>
+    <meta name='created' content='Thu, 09 May 2019 11:59:27 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
+    <meta name='identifier' content='file:///Users/holger/Desktop/X_ITE/media/docs/examples/Texturing3D/ImageTextureAtlas/ImageTextureAtlas.O.x3d'/>
+    <meta name='modified' content='Wed, 11 Oct 2023 09:23:29 GMT'/>
+  </head>
+  <Scene>
+    <Background
+        skyColor='0.4 0.4 0.4'/>
+    <Viewpoint
+        description='Initial View'
+        position='1.010983 0.9100397 1.821797'
+        orientation='-0.619788931308824 0.768191635198068 0.16044716338653 0.650078158107127'/>
+    <Transform DEF='VisibleClipPlane'>
+      <PlaneSensor DEF='PlaneSensor'
+          axisRotation='0 1 0 1.5708'
+          offset='2.91112e-6 0 0.799866'
+          maxPosition='-1 0'/>
+      <Transform DEF='Rectangle2D'
+          translation='2.91112e-6 0 0.799866'
+          scale='0.5 0.5 1'>
+        <Shape>
+          <Appearance>
+            <Material
+                transparency='1'/>
+          </Appearance>
+          <Rectangle2D/>
+        </Shape>
+        <Shape>
+          <Appearance>
+            <Material/>
+          </Appearance>
+          <IndexedLineSet
+              coordIndex='0, 1, 2, 3, 0'>
+            <Coordinate
+                point='-1 -1 0, 1 -1 0, 1 1 0, -1 1 0'/>
+          </IndexedLineSet>
+        </Shape>
+      </Transform>
+      <Script DEF='ClipPlaneScript'>
+        <field accessType='inputOnly' type='SFVec3f' name='set_translation'/>
+        <field accessType='outputOnly' type='SFVec4f' name='plane_changed'/>
+<![CDATA[vrmlscript:
+function set_translation (value)
+{
+	var distanceFromOrigin = new SFVec3f (0, 0, -1) .dot (value);
+
+	plane_changed = new SFVec4f (0,0,-1, -distanceFromOrigin);
+}
+]]>
+      </Script>
+    </Transform>
+    <Transform DEF='Volume_1'>
+      <VolumeData DEF='Volume'>
+        <ImageTexture3D containerField='voxels'
+            url='"../images/3dtex_7_reference_u.ktx2"'/>
+      </VolumeData>
+      <ClipPlane DEF='_1'
+          plane='0 0 -1 0.799866'/>
+    </Transform>
+    <ROUTE fromNode='ClipPlaneScript' fromField='plane_changed' toNode='_1' toField='set_plane'/>
+    <ROUTE fromNode='PlaneSensor' fromField='translation_changed' toNode='ClipPlaneScript' toField='set_translation'/>
+    <ROUTE fromNode='PlaneSensor' fromField='translation_changed' toNode='Rectangle2D' toField='set_translation'/>
+  </Scene>
+</X3D>
