@@ -8,7 +8,7 @@
     <meta name='comment' content='Rise and Shine'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 10 Oct 2023 06:51:39 GMT'/>
+    <meta name='modified' content='Wed, 11 Oct 2023 10:01:18 GMT'/>
   </head>
   <Scene>
     <Viewpoint
@@ -18,7 +18,7 @@
         color='0.9764706 0.7960784 0.6117647'
         rotation='-0.00779602937614119 0.999863801003625 0.014546524277291 2.15774070955731'>
       <ImageCubeMapTexture containerField='diffuseTexture'
-          url='"https://rawgit.com/create3000/Library/main/Tests/Components/images/helipad.jpg"'/>
+          url='"../images/helipad.jpg"'/>
     </EnvironmentLight>
     <ProximitySensor DEF='_2'
         enabled='false'
