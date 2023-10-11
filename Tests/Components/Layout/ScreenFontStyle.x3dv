@@ -1,13 +1,19 @@
-#X3D V3.3 utf8 Titania V4.0.6a
+#X3D V4.0 utf8 X_ITE V8.14.0
 
-PROFILE Full
+PROFILE Interchange
 
-META "comment" "World of Titania"
+COMPONENT Geometry2D : 2
+COMPONENT Layout : 2
+COMPONENT PointingDeviceSensor : 1
+COMPONENT Scripting : 1
+COMPONENT Text : 1
+
+META "comment" "Rise and Shine"
 META "created" "Sun, 25 Feb 2018 08:23:00 GMT"
 META "creator" "Holger Seelig"
-META "generator" "Titania V4.0.6a, http://titania.create3000.de"
+META "generator" "Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/"
 META "identifier" "file:///home/holger/Projekte/Library/Tests/Components/Layout/ScreenFontStyle.x3dv"
-META "modified" "Sun, 25 Feb 2018 08:23:00 GMT"
+META "modified" "Wed, 11 Oct 2023 21:20:49 GMT"
 
 WorldInfo {
   metadata DEF Titania MetadataSet {
@@ -204,9 +210,11 @@ DEF Text Transform {
 
 DEF Debug Script {
   url "vrmlscript:
-function initialize ()
+async function initialize ()
 {
-	var text = Browser .createVrmlFromString ('Text { string [\"M\", \"M\"] fontStyle ScreenFontStyle { pointSize 12 } }') [0];
+	const scene = await Browser .createX3DFromString ('Text { string [\"M\", \"M\"] fontStyle ScreenFontStyle { pointSize 12 } }');
+
+	const text = scene .rootNodes [0];
 
 	print ('DPI: ' + text .lineBounds [1] .y * 6);
 }
