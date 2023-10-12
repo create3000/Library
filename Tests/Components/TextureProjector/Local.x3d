@@ -8,7 +8,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Local.x3d'/>
-    <meta name='modified' content='Mon, 09 Oct 2023 16:54:49 GMT'/>
+    <meta name='modified' content='Thu, 12 Oct 2023 19:00:31 GMT'/>
   </head>
   <Scene>
     <Transform
@@ -39,11 +39,18 @@
           direction='0 0 -1'
           upVector='0 1 0'
           farDistance='100'>
-        <ImageTexture
+        <ImageTexture DEF='_1'
             url='"http://cdn.rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "https://cdn.rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "http://rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "https://rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg"'
             repeatS='false'
             repeatT='false'/>
       </TextureProjectorParallel>
+      <TextureProjector
+          global='false'
+          location='0 3 -1.5'
+          direction='0 0 -1'
+          upVector='0 1 0'>
+        <ImageTexture USE='_1'/>
+      </TextureProjector>
     </Transform>
   </Scene>
 </X3D>
