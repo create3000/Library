@@ -7,45 +7,45 @@
     <meta name='comment' content='Rise and Shine'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.2, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 19 Sep 2023 13:17:44 GMT'/>
+    <meta name='modified' content='Tue, 19 Sep 2023 13:09:55 GMT'/>
   </head>
   <Scene>
     <HAnimHumanoid>
       <HAnimJoint DEF='_1' containerField='skeleton'>
         <HAnimDisplacer DEF='_2'
-            weight='0.7550001'
             coordIndex='0'
+            weight='0.756'
             displacements='-3 0 0'/>
         <HAnimDisplacer DEF='_3'
-            weight='0.7550001'
             coordIndex='1'
+            weight='0.756'
             displacements='-1 -2 0'/>
         <HAnimDisplacer DEF='_4'
-            weight='0.7550001'
             coordIndex='2'
+            weight='0.756'
             displacements='1 0 0'/>
         <HAnimDisplacer DEF='_5'
-            weight='0.7550001'
             coordIndex='3'
+            weight='0.756'
             displacements='-1 2 0'/>
         <HAnimDisplacer DEF='_6'
-            weight='0.7550001'
             coordIndex='0'
+            weight='0.756'
             displacements='1 0 0'/>
         <HAnimJoint DEF='_7'>
           <HAnimDisplacer DEF='_8'
-              weight='0.7550001'
               coordIndex='1'
+              weight='0.756'
               displacements='1 0 0'/>
           <HAnimJoint DEF='_9'>
             <HAnimDisplacer DEF='_10'
-                weight='0.7550001'
                 coordIndex='2'
+                weight='0.756'
                 displacements='1 0 0'/>
             <HAnimJoint DEF='_11'>
               <HAnimDisplacer DEF='_12'
-                  weight='0.7550001'
                   coordIndex='3'
+                  weight='0.756'
                   displacements='1 0 0'/>
             </HAnimJoint>
           </HAnimJoint>

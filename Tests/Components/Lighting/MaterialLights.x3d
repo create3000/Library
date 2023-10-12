@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='Geometry2D' level='2'/>
+    <meta name='created' content='Fri, 06 Oct 2023 17:33:14 GMT'/>
+    <meta name='comment' content='Rise and Shine'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Fri, 06 Oct 2023 20:12:22 GMT'/>
+  </head>
+  <Scene>
+    <NavigationInfo
+        headlight='false'/>
+    <Transform DEF='PhongAmbient1'
+        translation='-1.5 1.5 0'>
+      <Transform>
+        <Shape>
+          <Appearance>
+            <Material
+                ambientIntensity='1'/>
+          </Appearance>
+          <Rectangle2D/>
+        </Shape>
+      </Transform>
+      <DirectionalLight
+          ambientIntensity='1'/>
+    </Transform>
+    <Transform DEF='PhongAmbient0'
+        translation='-1.5 -1.5 0'>
+      <Transform DEF='Rectangle2D'>
+        <Shape>
+          <Appearance>
+            <Material
+                ambientIntensity='1'/>
+          </Appearance>
+          <Rectangle2D/>
+        </Shape>
+      </Transform>
+      <DirectionalLight/>
+    </Transform>
+    <Transform DEF='PBRSpot'
+        translation='1.5 1.5 0'>
+      <Transform>
+        <Shape>
+          <Appearance>
+            <PhysicalMaterial/>
+          </Appearance>
+          <Rectangle2D/>
+        </Shape>
+      </Transform>
+      <SpotLight
+          global='false'
+          color='0.8 0 0'
+          intensity='10'
+          location='0 0 1'
+          beamWidth='0.6'
+          cutOffAngle='0.7'/>
+    </Transform>
+    <Transform DEF='PBRDirectional'
+        translation='1.5 -1.5 0'>
+      <Transform>
+        <Shape>
+          <Appearance>
+            <PhysicalMaterial/>
+          </Appearance>
+          <Rectangle2D/>
+        </Shape>
+      </Transform>
+      <DirectionalLight
+          intensity='10'/>
+    </Transform>
+  </Scene>
+</X3D>
