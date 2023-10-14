@@ -8,7 +8,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/apple.x3d'/>
-    <meta name='modified' content='Mon, 09 Oct 2023 16:54:42 GMT'/>
+    <meta name='modified' content='Sat, 14 Oct 2023 01:28:24 GMT'/>
   </head>
   <Scene>
     <Viewpoint
@@ -19,7 +19,8 @@
         location='3 3 3'
         direction='-0.601322 -0.526144 -0.601319'
         upVector='-0.372041 0.850395 -0.37204'
-        fieldOfView='0.26'>
+        fieldOfView='0.26'
+        nearDistance='1'>
       <ImageTexture
           url='"apple.png"'
           repeatS='false'
