@@ -8,12 +8,12 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Local.x3d'/>
-    <meta name='modified' content='Sat, 14 Oct 2023 10:40:11 GMT'/>
+    <meta name='modified' content='Sat, 14 Oct 2023 10:41:32 GMT'/>
   </head>
   <Scene>
     <Viewpoint
-        position='-4.965764 -0.1949721 16.92257'
-        centerOfRotation='-4.965764 -0.1949721 0'/>
+        position='-5 -0 16.92257'
+        centerOfRotation='-5 -0 0'/>
     <Transform
         translation='-15 0 0'>
       <Transform
