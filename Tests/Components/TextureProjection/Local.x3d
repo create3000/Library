@@ -103,7 +103,6 @@
       <TextureProjectorParallel USE='_3'/>
       <TextureProjector USE='_5'/>
       <TextureProjectorParallel USE='_6'/>
-      <NULL containerField='children'
     </Transform>
   </Scene>
 </X3D>
