@@ -8,7 +8,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Local.x3d'/>
-    <meta name='modified' content='Sat, 14 Oct 2023 10:41:32 GMT'/>
+    <meta name='modified' content='Sun, 15 Oct 2023 23:05:58 GMT'/>
   </head>
   <Scene>
     <Viewpoint
@@ -49,13 +49,24 @@
           upVector='0 1 0'>
         <ImageTexture USE='_4'/>
       </TextureProjector>
+      <TextureProjectorParallel DEF='_6'
+          global='false'
+          location='0 -3 1'
+          direction='0 0 -1'
+          upVector='0 1 0'
+          farDistance='100'>
+        <ImageTexture
+            url='"../images/color_grid_basis.ktx2"'
+            repeatS='false'
+            repeatT='false'/>
+      </TextureProjectorParallel>
     </Transform>
     <Transform
         translation='-5 0 0'>
       <Transform DEF='Box_3'
           translation='2.5 0 -5'
           scale='2.5 5 1'>
-        <Shape DEF='_6'>
+        <Shape DEF='_7'>
           <Appearance>
             <Material/>
           </Appearance>
@@ -65,17 +76,18 @@
       <Transform DEF='Box'
           translation='-2.5 0 -5'
           scale='2.5 5 1'>
-        <Shape USE='_6'/>
+        <Shape USE='_7'/>
       </Transform>
       <TextureProjectorParallel USE='_3'/>
       <TextureProjector USE='_5'/>
+      <TextureProjectorParallel USE='_6'/>
     </Transform>
     <Transform
         translation='5 0 0'>
       <Transform
           translation='2.5 0 -5'
           scale='2.5 5 1'>
-        <Shape DEF='_7'>
+        <Shape DEF='_8'>
           <Appearance>
             <PhysicalMaterial
                 metallic='0'/>
@@ -86,10 +98,12 @@
       <Transform
           translation='-2.5 0 -5'
           scale='2.5 5 1'>
-        <Shape USE='_7'/>
+        <Shape USE='_8'/>
       </Transform>
       <TextureProjectorParallel USE='_3'/>
       <TextureProjector USE='_5'/>
+      <TextureProjectorParallel USE='_6'/>
+      <NULL containerField='children'
     </Transform>
   </Scene>
 </X3D>
