@@ -6,24 +6,25 @@
     <meta name='comment' content='Rise and Shine'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 10 Oct 2023 21:50:57 GMT'/>
+    <meta name='modified' content='Sun, 15 Oct 2023 19:30:00 GMT'/>
   </head>
   <Scene>
     <Viewpoint
-        position='0 0 4.002318'/>
+        position='0 -1 5.9716'
+        centerOfRotation='0 -1 0'/>
     <Transform
         translation='-1 0 0'>
       <Shape>
         <Appearance>
           <PhysicalMaterial DEF='_1'
               metallic='0'>
-            <ImageTexture containerField='baseTexture'
+            <ImageTexture DEF='_2' containerField='baseTexture'
                 url='"../images/color_grid_basis.ktx2"'
                 repeatS='false'
                 repeatT='false'/>
           </PhysicalMaterial>
         </Appearance>
-        <Box DEF='_2'/>
+        <Box DEF='_3'/>
       </Shape>
     </Transform>
     <Transform
@@ -34,7 +35,17 @@
           <TextureTransform
               scale='2 2'/>
         </Appearance>
-        <Box USE='_2'/>
+        <Box USE='_3'/>
+      </Shape>
+    </Transform>
+    <Transform
+        translation='-1 -2 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+          <ImageTexture USE='_2'/>
+        </Appearance>
+        <Box USE='_3'/>
       </Shape>
     </Transform>
   </Scene>
