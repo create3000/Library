@@ -8,7 +8,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Local.x3d'/>
-    <meta name='modified' content='Sun, 15 Oct 2023 23:05:58 GMT'/>
+    <meta name='modified' content='Mon, 16 Oct 2023 14:25:20 GMT'/>
   </head>
   <Scene>
     <Viewpoint
@@ -35,8 +35,7 @@
           global='false'
           location='0 0 1'
           direction='0 0 -1'
-          upVector='0 1 0'
-          farDistance='100'>
+          upVector='0 1 0'>
         <ImageTexture DEF='_4'
             url='"http://cdn.rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "https://cdn.rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "http://rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "https://rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg"'
             repeatS='false'
@@ -53,8 +52,7 @@
           global='false'
           location='0 -3 1'
           direction='0 0 -1'
-          upVector='0 1 0'
-          farDistance='100'>
+          upVector='0 1 0'>
         <ImageTexture
             url='"../images/color_grid_basis.ktx2"'
             repeatS='false'
