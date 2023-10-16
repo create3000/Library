@@ -6,7 +6,7 @@
     <meta name='comment' content='Rise and Shine'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Sun, 15 Oct 2023 19:54:09 GMT'/>
+    <meta name='modified' content='Mon, 16 Oct 2023 07:32:10 GMT'/>
   </head>
   <Scene>
     <Viewpoint
@@ -44,8 +44,24 @@
         translation='-1 -2 0'>
       <Shape>
         <Appearance>
-          <Material/>
-          <ImageTexture USE='_1'/>
+          <Material>
+            <ImageTexture USE='_1' containerField='diffuseTexture'/>
+          </Material>
+        </Appearance>
+        <Box USE='_2'/>
+      </Shape>
+    </Transform>
+    <Transform
+        translation='1 -2 0'>
+      <Shape>
+        <Appearance>
+          <UnlitMaterial>
+            <ImageTexture USE='_1' containerField='emissiveTexture'/>
+          </UnlitMaterial>
+          <ImageTexture
+              url='"../images/color_grid_basis.ktx2"'
+              repeatS='false'
+              repeatT='false'/>
         </Appearance>
         <Box USE='_2'/>
       </Shape>
