@@ -12,7 +12,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///Volumes/Home/Projekte/Library/Tests/Components/Lighting/SpotLight.x3d'/>
-    <meta name='modified' content='Mon, 16 Oct 2023 23:36:48 GMT'/>
+    <meta name='modified' content='Mon, 16 Oct 2023 23:43:15 GMT'/>
   </head>
   <Scene>
     <Script DEF='EnterWorldScript'>
@@ -157,13 +157,13 @@ function initialize ()
               translation='0.5 0.854373 0'>
             <SpotLight DEF='Red'
                 color='1 0 0'
-                direction='-0.3355036 -0.88582 0.2702516'
+                direction='0.509857 -0.8470815 0.1101166'
                 beamWidth='50.15661'
                 cutOffAngle='59.06049'
                 shadows='true'
                 shadowColor='0.1 0 0'/>
             <Transform DEF='_2'
-                rotation='0.935171414262848 -0.354195462909428 0 74.0761239544391'>
+                rotation='0.856774546681513 0.515691163545284 -0 83.6447807220744'>
               <Switch>
                 <Transform DEF='Cone'
                     rotation='-0.999999999993436 -3.62331999997622e-6 8.16271999994642e-11 90.0002104591497'
@@ -197,13 +197,13 @@ function set_direction (value)
               translation='-1 0.800923 1'>
             <SpotLight DEF='Green'
                 color='0 1 0'
-                direction='-0.2885198 -0.9359205 -0.2631818'
+                direction='0.2946525 -0.4513233 0.8498686'
                 beamWidth='23.80055'
                 cutOffAngle='45.30927'
                 shadows='true'
                 shadowColor='0 0.1 0'/>
             <Transform DEF='_5'
-                rotation='0.955622660593384 -0.294593500540019 0 105.041308426912'>
+                rotation='0.837346326830071 0.546672780504196 -0 32.3831435899024'>
               <Switch>
                 <Transform DEF='Cone_1'
                     rotation='0.999999999993436 3.62331999997622e-6 -8.16268999994642e-11 270.000058419654'
@@ -232,7 +232,7 @@ function set_direction (value)
           <Transform
               translation='9.70404e-15 0.166353 0'>
             <Transform DEF='_7'
-                rotation='0.895773876103221 0.444510025636106 -0 86.6530173925314'
+                rotation='0.96517651881502 -0.261599479219894 0 94.8176631090336'
                 scaleOrientation='0.901298633096723 0.105533957038929 0.420146828965403 48.9649158761006'>
               <Switch>
                 <Transform DEF='Cone_2'
@@ -272,7 +272,7 @@ function set_direction (value)
           <SpotLight DEF='Blue'
               global='false'
               color='0 0 1'
-              direction='0.4451265 -0.8970162 0.05856351'
+              direction='-0.2326152 -0.8582386 -0.07494459'
               beamWidth='65.93598'
               cutOffAngle='72.81148'
               shadows='true'
@@ -306,7 +306,7 @@ function set_direction (value)
             </Transform>
           </Transform>
           <Transform DEF='Sphere'
-              translation='0.2966343 -1 1.462207'
+              translation='0.01314219 -1 -2.515487'
               scale='0.5 0.5 0.5'>
             <Group DEF='SphereAnimation'>
               <MetadataSet DEF='Animation' containerField='metadata'
