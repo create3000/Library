@@ -9,7 +9,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/ProjectiveTextureMapping/Perspective.x3d'/>
-    <meta name='modified' content='Sat, 14 Oct 2023 01:26:56 GMT'/>
+    <meta name='modified' content='Mon, 16 Oct 2023 22:57:56 GMT'/>
   </head>
   <Scene>
     <Viewpoint
@@ -41,7 +41,7 @@
         location='-2 0 2'
         direction='-0 -0 -1'
         upVector='-0 1 -0'>
-      <ImageTexture
+      <ImageTexture DEF='_1'
           url='"http://cdn.rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "https://cdn.rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "http://rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "https://rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg"'
           repeatS='false'
           repeatT='false'/>
@@ -52,10 +52,7 @@
         direction='-0 -0 -1'
         upVector='-0 1 -0'
         fieldOfView='20.9068'>
-      <ImageTexture
-          url='"http://cdn.rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "https://cdn.rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "http://rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg", "https://rawgit.com/create3000/Library/1.0.4/Textures/Miscellaneous/lena.jpg"'
-          repeatS='false'
-          repeatT='false'/>
+      <ImageTexture USE='_1'/>
     </TextureProjector>
   </Scene>
 </X3D>
