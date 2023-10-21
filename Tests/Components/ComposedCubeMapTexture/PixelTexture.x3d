@@ -9,7 +9,7 @@
     <meta name='comment' content='Rise and Shine'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Sat, 21 Oct 2023 16:04:58 GMT'/>
+    <meta name='modified' content='Sat, 21 Oct 2023 16:22:49 GMT'/>
   </head>
   <Scene>
     <Transform DEF='Specular_1'>
@@ -18,9 +18,10 @@
           <Material>
             <ComposedCubeMapTexture containerField='diffuseTexture'>
               <PixelTexture DEF='_1' containerField='frontTexture'
-                  image='2 2 4
-                    0xff0000ff 0xff00ff
-                    0xffff 0x0'/>
+                  image='3 3 4
+                    0xff0000ff 0xff00ff 0xffff
+                    0xffffff 0xff00ffff 0xffff00ff
+                    0xffffffff 0xff 0x0'/>
               <PixelTexture USE='_1' containerField='backTexture'/>
               <PixelTexture USE='_1' containerField='leftTexture'/>
               <PixelTexture USE='_1' containerField='rightTexture'/>
