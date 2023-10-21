@@ -11,7 +11,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Texturing3D/ComposedTexture3D.x3d'/>
-    <meta name='modified' content='Sat, 21 Oct 2023 18:18:51 GMT'/>
+    <meta name='modified' content='Sat, 21 Oct 2023 19:35:25 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='Volume' url='"Volume.x3d#Volume", "file:///home/holger/Projekte/Library/Tests/Components/Texturing3D/Volume.x3d#Volume"'>
@@ -120,8 +120,26 @@ function set_translation (value)
           </ComposedTexture3D>
         </fieldValue>
       </ProtoInstance>
-      <ClipPlane DEF='_2'
+      <ClipPlane DEF='_8'
           plane='0 0 -1 0.695269'/>
+    </Transform>
+    <Transform DEF='Box_1'
+        translation='-1 1.5 0'
+        scale='0.5 0.5 0.5'>
+      <Shape>
+        <Appearance>
+          <UnlitMaterial>
+            <ComposedTexture3D USE='Texture' containerField='emissiveTexture'/>
+          </UnlitMaterial>
+        </Appearance>
+        <IndexedFaceSet DEF='_4'
+            coordIndex='0, 1, 2, 3, -1, 7, 6, 5, 4, -1, 1, 5, 6, 2, -1, 4, 0, 3, 7, -1, 1, 0, 4, 5, -1, 3, 2, 6, 7, -1'>
+          <TextureCoordinate3D
+              point='1 1 0, 0 1 0, 0 0 0, 1 0 0, 1 1 1, 0 1 1, 0 0 1, 1 0 1'/>
+          <Coordinate
+              point='1 1 1, -1 1 1, -1 -1 1, 1 -1 1, 1 1 -1, -1 1 -1, -1 -1 -1, 1 -1 -1'/>
+        </IndexedFaceSet>
+      </Shape>
     </Transform>
     <Transform
         translation='1 0 0'>
@@ -141,10 +159,22 @@ function set_translation (value)
           </ComposedTexture3D>
         </fieldValue>
       </ProtoInstance>
-      <ClipPlane USE='_2'/>
+      <ClipPlane USE='_8'/>
+    </Transform>
+    <Transform DEF='Box'
+        translation='1 1.5 0'
+        scale='0.5 0.5 0.5'>
+      <Shape>
+        <Appearance>
+          <UnlitMaterial>
+            <ComposedTexture3D USE='_1' containerField='emissiveTexture'/>
+          </UnlitMaterial>
+        </Appearance>
+        <IndexedFaceSet USE='_4'/>
+      </Shape>
     </Transform>
     <ROUTE fromNode='PlaneSensor' fromField='translation_changed' toNode='ClipPlaneScript' toField='set_translation'/>
     <ROUTE fromNode='PlaneSensor' fromField='translation_changed' toNode='Rectangle2D' toField='set_translation'/>
-    <ROUTE fromNode='ClipPlaneScript' fromField='plane_changed' toNode='_2' toField='set_plane'/>
+    <ROUTE fromNode='ClipPlaneScript' fromField='plane_changed' toNode='_8' toField='set_plane'/>
   </Scene>
 </X3D>
