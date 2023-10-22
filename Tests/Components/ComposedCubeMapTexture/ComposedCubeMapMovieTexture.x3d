@@ -10,58 +10,9 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite.js/tests/Components/ComposedCubeMapTexture/ComposedCubeMapMovieTexture.x3d'/>
-    <meta name='modified' content='Sun, 22 Oct 2023 02:23:02 GMT'/>
+    <meta name='modified' content='Sun, 22 Oct 2023 02:28:35 GMT'/>
   </head>
   <Scene>
-    <WorldInfo
-        title='ComposedCubeMapMovieTexture'>
-      <MetadataSet DEF='Titania' containerField='metadata'
-          name='Titania'
-          reference='http://titania.create3000.de'>
-        <MetadataSet DEF='NavigationInfo'
-            name='NavigationInfo'
-            reference='http://titania.create3000.de'>
-          <MetadataString DEF='type'
-              name='type'
-              reference='http://titania.create3000.de'
-              value='"EXAMINE"'/>
-        </MetadataSet>
-        <MetadataSet DEF='Viewpoint'
-            name='Viewpoint'
-            reference='http://titania.create3000.de'>
-          <MetadataDouble DEF='position'
-              name='position'
-              reference='http://titania.create3000.de'
-              value='0.0461445078253746, 1.00670278072357, 7.48848581314087'/>
-          <MetadataDouble DEF='orientation'
-              name='orientation'
-              reference='http://titania.create3000.de'
-              value='-0.129196514500034, 0.977506018096439, -0.166704064816326, 0.00609863316635776'/>
-          <MetadataDouble DEF='centerOfRotation'
-              name='centerOfRotation'
-              reference='http://titania.create3000.de'
-              value='0.00101503741461784, 1.00071430206299, -0.000791513302829117'/>
-        </MetadataSet>
-        <MetadataSet DEF='Selection'
-            name='Selection'
-            reference='http://titania.create3000.de'>
-          <MetadataSet DEF='children'
-              name='children'
-              reference='http://titania.create3000.de'>
-            <MovieTexture DEF='Movie' containerField='value'
-                url='"../images/campfire.512.mp4"'
-                loop='true'
-                startTime='1697939244.193'
-                stopTime='1697939242.626'
-                repeatS='false'
-                repeatT='false'/>
-          </MetadataSet>
-          <MetadataSet DEF='previous'
-              name='previous'
-              reference='http://titania.create3000.de'/>
-        </MetadataSet>
-      </MetadataSet>
-    </WorldInfo>
     <Background
         skyColor='0.2 0.2 0.2'/>
     <Viewpoint
@@ -72,7 +23,13 @@
       <Shape>
         <Appearance>
           <Material/>
-          <MovieTexture USE='Movie'/>
+          <MovieTexture DEF='Movie'
+              url='"../images/campfire.512.mp4"'
+              loop='true'
+              startTime='1697939244.193'
+              stopTime='1697939242.626'
+              repeatS='false'
+              repeatT='false'/>
         </Appearance>
         <Rectangle2D/>
       </Shape>
