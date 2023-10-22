@@ -4,14 +4,13 @@
   <head>
     <component name='CubeMapTexturing' level='3'/>
     <component name='Geometry2D' level='2'/>
-    <component name='Sound' level='3'/>
     <component name='Texturing3D' level='2'/>
     <meta name='comment' content='Rise and Shine'/>
     <meta name='created' content='Wed, 19 Oct 2016 08:54:08 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite.js/tests/Components/ComposedCubeMapTexture/ComposedCubeMapMovieTexture.x3d'/>
-    <meta name='modified' content='Sun, 22 Oct 2023 01:55:46 GMT'/>
+    <meta name='modified' content='Sun, 22 Oct 2023 02:23:02 GMT'/>
   </head>
   <Scene>
     <WorldInfo
@@ -104,10 +103,6 @@
         </IndexedFaceSet>
       </Shape>
     </Transform>
-    <Sound
-        location='0 0 10'>
-      <MovieTexture USE='Movie' containerField='source'/>
-    </Sound>
     <ROUTE fromNode='_3' fromField='point_changed' toNode='_1' toField='set_point'/>
   </Scene>
 </X3D>
