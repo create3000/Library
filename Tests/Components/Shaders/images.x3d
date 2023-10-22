@@ -11,76 +11,21 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite/tests/Components/Shaders/images.x3d'/>
-    <meta name='modified' content='Sun, 22 Oct 2023 16:58:27 GMT'/>
+    <meta name='modified' content='Sun, 22 Oct 2023 17:07:16 GMT'/>
   </head>
   <Scene>
-    <WorldInfo>
-      <MetadataSet DEF='Titania' containerField='metadata'
-          name='Titania'
-          reference='http://titania.create3000.de'>
-        <MetadataSet DEF='NavigationInfo'
-            name='NavigationInfo'
-            reference='http://titania.create3000.de'>
-          <MetadataString DEF='type'
-              name='type'
-              reference='http://titania.create3000.de'
-              value='"EXAMINE"'/>
-        </MetadataSet>
-        <MetadataSet DEF='Viewpoint'
-            name='Viewpoint'
-            reference='http://titania.create3000.de'>
-          <MetadataDouble DEF='position'
-              name='position'
-              reference='http://titania.create3000.de'
-              value='-0.0952446129997221, 0.0808769601024098, 12.1844271109654'/>
-          <MetadataDouble DEF='orientation'
-              name='orientation'
-              reference='http://titania.create3000.de'
-              value='-0.647260223783024, -0.762264916596723, -0.00252974981798655, 0.0102546044282238'/>
-          <MetadataDouble DEF='centerOfRotation'
-              name='centerOfRotation'
-              reference='http://titania.create3000.de'
-              value='0, 0, 0'/>
-        </MetadataSet>
-        <MetadataSet DEF='AngleGrid'
-            name='AngleGrid'
-            reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled'
-              name='enabled'
-              reference='http://titania.create3000.de'
-              value='false'/>
-        </MetadataSet>
-        <MetadataSet DEF='Grid'
-            name='Grid'
-            reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled_1'
-              name='enabled'
-              reference='http://titania.create3000.de'
-              value='true'/>
-          <MetadataFloat DEF='rotation'
-              name='rotation'
-              reference='http://titania.create3000.de'
-              value='1, 0, 0, 1.5708'/>
-        </MetadataSet>
-        <MetadataSet DEF='Selection'
-            name='Selection'
-            reference='http://titania.create3000.de'>
-          <MetadataSet DEF='previous'
-              name='previous'
-              reference='http://titania.create3000.de'/>
-          <MetadataSet DEF='children'
-              name='children'
-              reference='http://titania.create3000.de'>
-            <Transform DEF='Rectangle2D' containerField='value'
-                translation='-5 0 0'>
-              <Shape>
-                <Appearance>
-                  <ComposedShader
-                      language='GLSL'>
-                    <field accessType='inputOutput' type='SFImage' name='image' value='2 2 4
-                      0x800000ff 0xff00ff
-                      0xffff 0x80808080'/>
-                    <ShaderPart DEF='SFImageVertexShader'>
+    <Viewpoint
+        position='0 0 12.1851'/>
+    <Transform DEF='Rectangle2D'
+        translation='-5 0 0'>
+      <Shape>
+        <Appearance>
+          <ComposedShader
+              language='GLSL'>
+            <field accessType='inputOutput' type='SFImage' name='image' value='2 2 4
+              0x800000ff 0xff00ff
+              0xffff 0x80808080'/>
+            <ShaderPart DEF='SFImageVertexShader'>
 <![CDATA[data:text/plain,
 
 precision mediump float;
@@ -101,9 +46,9 @@ main ()
 	gl_Position = x3d_ProjectionMatrix * x3d_ModelViewMatrix * x3d_Vertex;
 }
 ]]>
-                    </ShaderPart>
-                    <ShaderPart DEF='SFImageFragmentShader'
-                        type='FRAGMENT'>
+            </ShaderPart>
+            <ShaderPart DEF='SFImageFragmentShader'
+                type='FRAGMENT'>
 <![CDATA[data:text/plain,
 
 precision mediump float;
@@ -150,19 +95,12 @@ main ()
 	                     floor (b) / 256.0,
 	                     floor (a) / 256.0);
 }]]>
-                    </ShaderPart>
-                  </ComposedShader>
-                </Appearance>
-                <Rectangle2D/>
-              </Shape>
-            </Transform>
-          </MetadataSet>
-        </MetadataSet>
-      </MetadataSet>
-    </WorldInfo>
-    <Viewpoint
-        position='0 0 12.1851'/>
-    <Transform USE='Rectangle2D'/>
+            </ShaderPart>
+          </ComposedShader>
+        </Appearance>
+        <Rectangle2D/>
+      </Shape>
+    </Transform>
     <Transform DEF='Rectangle2D_1'
         translation='-2 0 0'>
       <Shape>
