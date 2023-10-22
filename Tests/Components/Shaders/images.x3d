@@ -93,7 +93,7 @@ main ()
 
 	gl_Position = x3d_ProjectionMatrix * x3d_ModelViewMatrix * x3d_Vertex;
 }
-]]> 
+]]>
                     </ShaderPart>
                     <ShaderPart DEF='SFImageFragmentShader'
                         type='FRAGMENT'>
@@ -115,14 +115,14 @@ pixel (in int x, in int y)
 		if (i == index)
 		{
 			float p = float (image [i]);
-			
+
 			if (p < 0.0)
 				return (4294967295.0 + p) / 4294967295.0;
 
 			return p / 4294967295.0;
 		}
 	}
-	
+
 	return 0.0;
 }
 
@@ -142,7 +142,7 @@ main ()
 	                     floor (g) / 256.0,
 	                     floor (b) / 256.0,
 	                     floor (a) / 256.0);
-}]]> 
+}]]>
                     </ShaderPart>
                   </ComposedShader>
                 </Appearance>
@@ -187,7 +187,7 @@ main ()
 
 	gl_Position = x3d_ProjectionMatrix * x3d_ModelViewMatrix * x3d_Vertex;
 }
-]]> 
+]]>
             </ShaderPart>
             <ShaderPart DEF='TextureFragmentShader'
                 type='FRAGMENT'>
@@ -202,8 +202,8 @@ varying vec4 texCoord;
 void
 main ()
 {
-	gl_FragColor =  texture2D (texture, vec2 (texCoord));
-}]]> 
+	gl_FragColor =  texture2D (texture, vec2 (texCoord .s, 1.0 - texCoord .t));
+}]]>
             </ShaderPart>
           </ComposedShader>
         </Appearance>
@@ -238,7 +238,7 @@ main ()
 
 	gl_Position = x3d_ProjectionMatrix * x3d_ModelViewMatrix * x3d_Vertex;
 }
-]]> 
+]]>
             </ShaderPart>
             <ShaderPart DEF='TexturesFragmentShader'
                 type='FRAGMENT'>
@@ -253,8 +253,8 @@ varying vec4 texCoord;
 void
 main ()
 {
-	gl_FragColor =  texture2D (texture [0], vec2 (texCoord));
-}]]> 
+	gl_FragColor =  texture2D (texture [0], vec2 (texCoord .s, 1.0 - textCoord .t));
+}]]>
             </ShaderPart>
           </ComposedShader>
         </Appearance>
@@ -302,7 +302,7 @@ main ()
 
 	gl_Position = x3d_ProjectionMatrix * x3d_ModelViewMatrix * x3d_Vertex;
 }
-]]> 
+]]>
             </ShaderPart>
             <ShaderPart DEF='CubeFragmentShader'
                 type='FRAGMENT'>
@@ -318,7 +318,7 @@ void
 main ()
 {
 	gl_FragColor =  textureCube (texture, vec3 (texCoord));
-}]]> 
+}]]>
             </ShaderPart>
           </ComposedShader>
         </Appearance>
