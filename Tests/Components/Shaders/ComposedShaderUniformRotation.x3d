@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
-    <meta name='comment' content='World of Titania'/>
+    <component name='Geometry2D' level='2'/>
+    <component name='Scripting' level='1'/>
+    <component name='Shaders' level='1'/>
+    <component name='Text' level='1'/>
+    <meta name='comment' content='Rise and Shine'/>
     <meta name='created' content='Fri, 07 Oct 2016 02:56:59 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Titania V3.0.3, http://titania.create3000.de'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite/tests/Components/Shaders/ComposedShaderUniformRotation.x3d'/>
-    <meta name='modified' content='Sat, 29 Apr 2017 23:18:47 GMT'/>
+    <meta name='modified' content='Sun, 22 Oct 2023 16:40:39 GMT'/>
     <meta name='titania-add-world-info' content='true'/>
   </head>
   <Scene>
@@ -35,7 +39,7 @@
             <connect nodeField='scale' protoField='scale'/>
           </IS>
           <Transform DEF='Plane'
-              rotation='-3.09087122910219e-08 0.70710528118436 0.707108281185553 3.14159'
+              rotation='-3.09087122910219e-8 0.70710528118436 0.707108281185553 3.14159'
               scale='10 10 1'>
             <Shape>
               <Appearance>
@@ -247,94 +251,19 @@ function isMajor (i, dimension, majorLineEvery, majorLineOffset)
         </Script>
       </ProtoBody>
     </ProtoDeclare>
-    <WorldInfo>
-      <MetadataSet DEF='Titania'
-          name='Titania'
-          reference='http://titania.create3000.de'>
-        <MetadataSet DEF='AngleGrid' containerField='value'
-            name='AngleGrid'
-            reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled' containerField='value'
-              name='enabled'
-              reference='http://titania.create3000.de'
-              value='false'/>
-        </MetadataSet>
-        <MetadataSet DEF='Grid' containerField='value'
-            name='Grid'
-            reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled_1' containerField='value'
-              name='enabled'
-              reference='http://titania.create3000.de'
-              value='true'/>
-        </MetadataSet>
-        <MetadataSet DEF='NavigationInfo' containerField='value'
-            name='NavigationInfo'
-            reference='http://titania.create3000.de'>
-          <MetadataString DEF='type' containerField='value'
-              name='type'
-              reference='http://titania.create3000.de'
-              value='"NONE"'/>
-        </MetadataSet>
-        <MetadataSet DEF='Viewpoint' containerField='value'
-            name='Viewpoint'
-            reference='http://titania.create3000.de'>
-          <MetadataDouble DEF='position' containerField='value'
-              name='position'
-              reference='http://titania.create3000.de'
-              value='0, 0, 10'/>
-          <MetadataDouble DEF='orientation' containerField='value'
-              name='orientation'
-              reference='http://titania.create3000.de'
-              value='0, 0, 1, 0'/>
-          <MetadataDouble DEF='centerOfRotation' containerField='value'
-              name='centerOfRotation'
-              reference='http://titania.create3000.de'
-              value='0, 0, 0'/>
-        </MetadataSet>
-        <MetadataSet DEF='Selection' containerField='value'
-            name='Selection'
-            reference='http://titania.create3000.de'>
-          <MetadataSet DEF='nodes' containerField='value'
-              name='nodes'
-              reference='http://titania.create3000.de'>
-            <Transform DEF='Text' containerField='value'
-                translation='-5.01454 -2.98505 0'>
-              <Shape>
-                <Appearance>
-                  <Material/>
-                </Appearance>
-                <Text
-                    string='"Must show two 2x2 rectangles."'
-                    solid='true'>
-                  <FontStyle DEF='_1'
-                      size='0.39'/>
-                </Text>
-              </Shape>
-            </Transform>
-          </MetadataSet>
-        </MetadataSet>
-        <MetadataSet DEF='AxonometricGrid' containerField='value'
-            name='AxonometricGrid'
-            reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled_2' containerField='value'
-              name='enabled'
-              reference='http://titania.create3000.de'
-              value='false'/>
-        </MetadataSet>
-      </MetadataSet>
-    </WorldInfo>
     <Viewpoint
         fieldOfView='0.7854'/>
     <ProtoInstance name='Grid'>
       <fieldValue name='rotation' value='1 0 0 1.5707963267949'/>
       <fieldValue name='transparency' value='0.8'/>
     </ProtoInstance>
-    <Transform DEF='Rectangle2D'
+    <Transform DEF='Rectangle2D_2'
         translation='-2 0 0'>
       <Shape>
         <Appearance>
           <Material/>
-          <ComposedShader>
+          <ComposedShader
+              language='GLSL'>
             <field accessType='inputOutput' type='SFRotation' name='rotation' value='0 1 0 1.5707963'/>
             <ShaderPart>
 <![CDATA[data:text/plain,
@@ -373,13 +302,27 @@ main ()
         </IndexedLineSet>
       </Shape>
     </Transform>
-    <Transform USE='Text'/>
+    <Transform DEF='Text'
+        translation='-5.01454 -2.98505 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text
+            string='"Must show two 2x2 rectangles."'
+            solid='true'>
+          <FontStyle
+              size='0.39'/>
+        </Text>
+      </Shape>
+    </Transform>
     <Transform DEF='Rectangle2D_1'
         translation='2 0 0'>
       <Shape>
         <Appearance>
           <Material/>
-          <ComposedShader>
+          <ComposedShader
+              language='GLSL'>
             <field accessType='inputOutput' type='MFRotation' name='rotation' value='0 1 0 1.5707963'/>
             <ShaderPart>
 <![CDATA[data:text/plain,
