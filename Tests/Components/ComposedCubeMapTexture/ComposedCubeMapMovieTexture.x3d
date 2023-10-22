@@ -10,7 +10,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite.js/tests/Components/ComposedCubeMapTexture/ComposedCubeMapMovieTexture.x3d'/>
-    <meta name='modified' content='Sun, 22 Oct 2023 02:28:35 GMT'/>
+    <meta name='modified' content='Sun, 22 Oct 2023 06:55:53 GMT'/>
   </head>
   <Scene>
     <Background
@@ -26,8 +26,6 @@
           <MovieTexture DEF='Movie'
               url='"../images/campfire.512.mp4"'
               loop='true'
-              startTime='1697939244.193'
-              stopTime='1697939242.626'
               repeatS='false'
               repeatT='false'/>
         </Appearance>
