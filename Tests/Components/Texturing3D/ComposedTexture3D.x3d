@@ -11,7 +11,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Texturing3D/ComposedTexture3D.x3d'/>
-    <meta name='modified' content='Sat, 21 Oct 2023 19:35:25 GMT'/>
+    <meta name='modified' content='Mon, 23 Oct 2023 14:54:37 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='Volume' url='"Volume.x3d#Volume", "file:///home/holger/Projekte/Library/Tests/Components/Texturing3D/Volume.x3d#Volume"'>
@@ -113,10 +113,18 @@ function set_translation (value)
                 boundaryModeT='CLAMP_TO_EDGE'
                 boundaryModeR='CLAMP_TO_EDGE'
                 textureCompression='DEFAULT'/>
-            <ImageTexture
+            <ImageTexture DEF='_1'
                 url='"../images/lena.jpg"'/>
-            <ImageTexture
+            <ImageTexture DEF='_2'
                 url='"../images/ubuntu.png"'/>
+            <ImageTexture USE='_1'/>
+            <ImageTexture USE='_2'/>
+            <ImageTexture USE='_1'/>
+            <ImageTexture USE='_2'/>
+            <ImageTexture USE='_1'/>
+            <ImageTexture USE='_2'/>
+            <ImageTexture USE='_1'/>
+            <ImageTexture USE='_2'/>
           </ComposedTexture3D>
         </fieldValue>
       </ProtoInstance>
@@ -133,6 +141,7 @@ function set_translation (value)
           </UnlitMaterial>
         </Appearance>
         <IndexedFaceSet DEF='_4'
+            solid='false'
             coordIndex='0, 1, 2, 3, -1, 7, 6, 5, 4, -1, 1, 5, 6, 2, -1, 4, 0, 3, 7, -1, 1, 0, 4, 5, -1, 3, 2, 6, 7, -1'>
           <TextureCoordinate3D
               point='1 1 0, 0 1 0, 0 0 0, 1 0 0, 1 1 1, 0 1 1, 0 0 1, 1 0 1'/>
@@ -145,17 +154,25 @@ function set_translation (value)
         translation='1 0 0'>
       <ProtoInstance name='Volume'>
         <fieldValue name='voxels'>
-          <ComposedTexture3D DEF='_1'>
-            <PixelTexture
+          <ComposedTexture3D DEF='_9'>
+            <PixelTexture DEF='_10'
                 image='3 3 4
                   0xff0000ff 0xff00ff 0xffff
                   0xffffff 0xff00ffff 0xffff00ff
                   0xffffffff 0xff 0x0'/>
-            <PixelTexture
+            <PixelTexture DEF='_11'
                 image='3 3 4
                   0xaf0000ff 0xaf00ff 0xafff
                   0xafafff 0xaf00afff 0xafaf00ff
                   0xafafafff 0xff 0x0'/>
+            <PixelTexture USE='_10'/>
+            <PixelTexture USE='_11'/>
+            <PixelTexture USE='_10'/>
+            <PixelTexture USE='_11'/>
+            <PixelTexture USE='_10'/>
+            <PixelTexture USE='_11'/>
+            <PixelTexture USE='_10'/>
+            <PixelTexture USE='_11'/>
           </ComposedTexture3D>
         </fieldValue>
       </ProtoInstance>
@@ -167,7 +184,7 @@ function set_translation (value)
       <Shape>
         <Appearance>
           <UnlitMaterial>
-            <ComposedTexture3D USE='_1' containerField='emissiveTexture'/>
+            <ComposedTexture3D USE='_9' containerField='emissiveTexture'/>
           </UnlitMaterial>
         </Appearance>
         <IndexedFaceSet USE='_4'/>
