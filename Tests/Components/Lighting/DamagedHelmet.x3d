@@ -7,7 +7,7 @@
     <meta name='comment' content='Rise and Shine'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.7, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 25 Oct 2023 15:39:43 GMT'/>
+    <meta name='modified' content='Thu, 26 Oct 2023 12:50:51 GMT'/>
   </head>
   <Scene>
     <Viewpoint
@@ -20,7 +20,12 @@
       <ImageCubeMapTexture containerField='diffuseTexture'
           url='"../images/helipad-diffuse.jpg"'/>
       <ImageCubeMapTexture containerField='specularTexture'
-          url='"../images/helipad-specular.jpg"'/>
+          url='"../images/helipad-specular.jpg"'>
+        <TextureProperties
+            generateMipMaps='true'
+            minificationFilter='NICEST'
+            magnificationFilter='NICEST'/>
+      </ImageCubeMapTexture>
     </EnvironmentLight>
     <Inline DEF='DamagedHelmet'
         url='"https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf"'/>
