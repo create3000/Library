@@ -3,11 +3,12 @@
 <X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
     <component name='CubeMapTexturing' level='3'/>
+    <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
     <meta name='created' content='Mon, 09 Oct 2023 20:31:23 GMT'/>
     <meta name='comment' content='Rise and Shine'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.7, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Thu, 26 Oct 2023 12:50:51 GMT'/>
+    <meta name='modified' content='Thu, 26 Oct 2023 20:25:23 GMT'/>
   </head>
   <Scene>
     <Viewpoint
@@ -16,7 +17,8 @@
       <NavigationInfo containerField='navigationInfo'/>
     </Viewpoint>
     <EnvironmentLight
-        color='0.9764706 0.7960784 0.6117647'>
+        color='0.9764706 0.7960784 0.6117647'
+        rotation='0 1 0 90'>
       <ImageCubeMapTexture containerField='diffuseTexture'
           url='"../images/helipad-diffuse.jpg"'/>
       <ImageCubeMapTexture containerField='specularTexture'
