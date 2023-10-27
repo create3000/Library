@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='CubeMapTexturing' level='3'/>
+    <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
+    <meta name='created' content='Mon, 09 Oct 2023 20:31:23 GMT'/>
+    <meta name='comment' content='Rise and Shine'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.1.7, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Fri, 27 Oct 2023 10:07:11 GMT'/>
+  </head>
+  <Scene>
+    <Viewpoint
+        position='-0.00248158 1.054537e-5 2.385858'
+        centerOfRotation='-0.00248158 1.054537e-5 -0.187155'>
+      <NavigationInfo containerField='navigationInfo'/>
+    </Viewpoint>
+    <EnvironmentLight
+        color='0.9764706 0.7960784 0.6117647'>
+      <ImageCubeMapTexture containerField='diffuseTexture'
+          url='"../images/diffuse.ktx2"'/>
+      <ImageCubeMapTexture containerField='specularTexture'
+          url='"../images/specular.ktx2"'>
+        <TextureProperties
+            generateMipMaps='true'
+            minificationFilter='NICEST'
+            magnificationFilter='NICEST'/>
+      </ImageCubeMapTexture>
+    </EnvironmentLight>
+    <Inline DEF='DamagedHelmet'
+        url='"https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf"'/>
+  </Scene>
+</X3D>
