@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='CubeMapTexturing' level='3'/>
+    <meta name='created' content='Sat, 28 Oct 2023 11:52:28 GMT'/>
+    <meta name='comment' content='Rise and Shine'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.1.7, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Sat, 28 Oct 2023 12:03:17 GMT'/>
+  </head>
+  <Scene>
+    <Group>
+      <EnvironmentLight
+          rotation='0 1 0 1.5707963267949'>
+        <ImageCubeMapTexture containerField='diffuseTexture'
+            url='"../images/helipad-diffuse.jpg"'>
+          <TextureProperties DEF='_2'
+              generateMipMaps='true'
+              minificationFilter='NICEST'
+              magnificationFilter='NICEST'/>
+        </ImageCubeMapTexture>
+        <ImageCubeMapTexture containerField='specularTexture'
+            url='"../images/helipad-specular.jpg"'>
+          <TextureProperties USE='_2'/>
+        </ImageCubeMapTexture>
+      </EnvironmentLight>
+      <Transform DEF='Specular_1'
+          translation='-1.5 1.5 0'>
+        <Shape>
+          <Appearance DEF='_1'>
+            <PhysicalMaterial
+                roughness='0'/>
+          </Appearance>
+          <Box DEF='_3'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='Diffuse_1'
+          translation='-1.5 -1.5 0'>
+        <Shape>
+          <Appearance DEF='_4'>
+            <PhysicalMaterial
+                metallic='0'/>
+          </Appearance>
+          <Box USE='_3'/>
+        </Shape>
+      </Transform>
+    </Group>
+    <Group>
+      <EnvironmentLight>
+        <ImageCubeMapTexture containerField='diffuseTexture'
+            url='"../images/diffuse.ktx2"'>
+          <TextureProperties USE='_2'/>
+        </ImageCubeMapTexture>
+        <ImageCubeMapTexture containerField='specularTexture'
+            url='"../images/specular.ktx2"'>
+          <TextureProperties USE='_2'/>
+        </ImageCubeMapTexture>
+      </EnvironmentLight>
+      <Transform DEF='Specular'
+          translation='1.5 1.5 0'>
+        <Shape>
+          <Appearance USE='_1'/>
+          <Box USE='_3'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='Diffuse'
+          translation='1.5 -1.5 0'>
+        <Shape>
+          <Appearance USE='_4'/>
+          <Box USE='_3'/>
+        </Shape>
+      </Transform>
+    </Group>
+  </Scene>
+</X3D>
