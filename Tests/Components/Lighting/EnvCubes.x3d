@@ -7,7 +7,7 @@
     <meta name='comment' content='Rise and Shine'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.7, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Sat, 28 Oct 2023 20:59:06 GMT'/>
+    <meta name='modified' content='Sat, 28 Oct 2023 21:09:53 GMT'/>
   </head>
   <Scene>
     <Group>
@@ -30,6 +30,7 @@
         <Shape>
           <Appearance DEF='_1'>
             <PhysicalMaterial
+                baseColor='0.4352941 0.6588235 0.8627451'
                 roughness='0'/>
           </Appearance>
           <Box DEF='_3'/>
