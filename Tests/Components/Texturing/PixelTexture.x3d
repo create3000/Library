@@ -7,7 +7,7 @@
     <meta name='comment' content='Rise and Shine'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.8, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Mon, 30 Oct 2023 21:22:19 GMT'/>
+    <meta name='modified' content='Mon, 30 Oct 2023 21:33:20 GMT'/>
   </head>
   <Scene>
     <Background DEF='Summer'
@@ -23,7 +23,9 @@
             <PixelTexture containerField='diffuseTexture'
                 image='2 2 1
                   0x0 0x7f
-                  0xff 0x40'/>
+                  0xff 0x40'
+                repeatS='false'
+                repeatT='false'/>
           </Material>
         </Appearance>
         <Rectangle2D DEF='_1'/>
@@ -37,13 +39,15 @@
             <PixelTexture containerField='diffuseTexture'
                 image='2 2 2
                   0xff 0x7fff
-                  0xffff 0x0'/>
+                  0xffff 0x0'
+                repeatS='false'
+                repeatT='false'/>
           </Material>
         </Appearance>
         <Rectangle2D USE='_1'/>
       </Shape>
     </Transform>
-    <Transform DEF='Rectangle2D_3'
+    <Transform DEF='Rectangle2D_4'
         translation='-2 -2 0'>
       <Shape>
         <Appearance>
@@ -52,7 +56,9 @@
                 image='3 3 3
                   0xff0000 0xff00 0xff
                   0xffff00 0xffff 0xff00ff
-                  0x0 0xffffff 0xaaaaaa'/>
+                  0x0 0xffffff 0xaaaaaa'
+                repeatS='false'
+                repeatT='false'/>
           </Material>
         </Appearance>
         <Rectangle2D USE='_1'/>
@@ -67,7 +73,9 @@
                 image='3 3 4
                   0xff0000ff 0xff00ff 0xffff
                   0xffff00ff 0xffffff 0xff00ffff
-                  0xff 0xffffffff 0x0'/>
+                  0xff 0xffffffff 0x0'
+                repeatS='false'
+                repeatT='false'/>
           </Material>
         </Appearance>
         <Rectangle2D USE='_1'/>
