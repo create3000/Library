@@ -103,11 +103,7 @@ DEF Attenuation Transform {
               pointSizeScaleFactor 2000
               pointSizeMinValue 2
               pointSizeMaxValue 50
-              attenuation [
-                1,
-                1,
-                0.5
-              ]
+              attenuation 1 1 0.5
             }
           }
           geometry DEF PM4 PointSet {
