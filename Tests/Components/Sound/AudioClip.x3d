@@ -9,12 +9,11 @@
     <meta name='comment' content='Rise and Shine'/>
     <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Sunrize X3D Editor V1.1.1, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 06 Sep 2023 11:29:56 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.1.9, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Mon, 20 Nov 2023 21:03:31 GMT'/>
   </head>
   <Scene>
     <Transform DEF='_1'
-        rotation='0 0 0 6.28318530717959'
         center='0 0 10'>
       <Sound
           maxBack='20'
@@ -34,8 +33,8 @@
             <Sphere/>
           </Shape>
         </Transform>
-        <Transform
-            scale='10 10 10'>
+        <Transform DEF='Max'
+            scale='20 20 20'>
           <Shape>
             <Appearance>
               <Material
