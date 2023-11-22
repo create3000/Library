@@ -9,7 +9,7 @@
     <meta name='comment' content='Rise and Shine'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.1.9, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 21 Nov 2023 18:05:34 GMT'/>
+    <meta name='modified' content='Wed, 22 Nov 2023 07:35:00 GMT'/>
   </head>
   <Scene>
     <Transform DEF='Box_1'
@@ -61,7 +61,7 @@
             <LineProperties USE='_1'/>
             <UnlitMaterial USE='_2'/>
             <DepthMode DEF='_4'
-                depthRange='0 0.9'/>
+                depthRange='0 0.01'/>
           </Appearance>
           <IndexedLineSet USE='_3'/>
         </Shape>
