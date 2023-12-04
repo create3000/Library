@@ -10,7 +10,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.3.2, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Geometry3D/Smash.x3d'/>
-    <meta name='modified' content='Mon, 04 Dec 2023 19:58:56 GMT'/>
+    <meta name='modified' content='Mon, 04 Dec 2023 20:03:35 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='Torus' url='"https://cdn.rawgit.com/create3000/Library/1.0.12/Prototypes/Geometry3D/Torus.x3d", "http://cdn.rawgit.com/create3000/Library/1.0.12/Prototypes/Geometry3D/Torus.x3d", "https://rawgit.com/create3000/Library/1.0.12/Prototypes/Geometry3D/Torus.x3d", "http://rawgit.com/create3000/Library/1.0.12/Prototypes/Geometry3D/Torus.x3d"'>
@@ -369,11 +369,14 @@
             endAngle='6'/>
       </Shape>
     </Transform>
-    <Transform
+    <Transform DEF='Polypoint2D_1'
         translation='3 5.99999 2.20482e-5'>
       <Shape>
         <Appearance>
-          <LineProperties USE='_14'/>
+          <PointProperties DEF='_111'
+              pointSizeScaleFactor='5'
+              pointSizeMinValue='5'
+              pointSizeMaxValue='5'/>
           <Material
               diffuseColor='0 0 0'
               emissiveColor='1 0 0'/>
@@ -474,7 +477,7 @@
             endAngle='6'/>
       </Shape>
     </Transform>
-    <Transform DEF='Disk2D_1'
+    <Transform DEF='Disk2D'
         translation='3 -6.00001 -2.20483e-5'>
       <Shape>
         <Appearance>
@@ -729,8 +732,7 @@
           scaleOrientation='0.734242177388159 -0.16230703921233 0.659200159258493 0.991293'>
         <Shape>
           <Appearance>
-            <LineProperties
-                linewidthScaleFactor='5'/>
+            <PointProperties USE='_111'/>
             <Material
                 emissiveColor='0 0 1'/>
           </Appearance>
@@ -743,8 +745,7 @@
       <Transform>
         <Shape>
           <Appearance>
-            <LineProperties
-                linewidthScaleFactor='20'/>
+            <PointProperties USE='_111'/>
             <Material
                 emissiveColor='1 0 0'
                 transparency='0.8'/>
@@ -760,8 +761,7 @@
           scaleOrientation='-0.491051230990308 0.513758241671677 0.703506330929104 0.668035'>
         <Shape>
           <Appearance>
-            <LineProperties
-                linewidthScaleFactor='10'/>
+            <PointProperties USE='_111'/>
             <Material
                 emissiveColor='1 0 0'/>
           </Appearance>
