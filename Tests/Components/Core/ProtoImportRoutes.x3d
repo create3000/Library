@@ -6,13 +6,14 @@
     <meta name='comment' content='Rise and Shine'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.3.5, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Thu, 28 Dec 2023 14:59:58 GMT'/>
+    <meta name='modified' content='Thu, 28 Dec 2023 22:08:39 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='Test'>
       <ProtoBody>
         <Inline DEF='BoxInline'
-            url='"box1.x3d"'/>
+            url='"box1.x3d"'
+            bboxDisplay='true'/>
         <TimeSensor DEF='T'
             loop='true'/>
         <OrientationInterpolator DEF='I'
