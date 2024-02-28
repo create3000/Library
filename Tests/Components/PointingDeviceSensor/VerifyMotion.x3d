@@ -8,36 +8,36 @@
     <meta name='comment' content='Rise and Shine'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.5.13, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 28 Feb 2024 16:18:15 GMT'/>
+    <meta name='modified' content='Wed, 28 Feb 2024 16:23:31 GMT'/>
   </head>
   <Scene>
     <Viewpoint
         description='Initial View'
         position='2.869677 3.854335 8.769781'
         orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
-    <Group>
+    <Group DEF='Button'>
       <Transform DEF='Box_1'>
         <Shape>
           <Appearance>
             <Material/>
           </Appearance>
-          <Box/>
+          <Box DEF='_1'/>
         </Shape>
       </Transform>
-      <TouchSensor DEF='_1'/>
+      <TouchSensor DEF='_2'/>
     </Group>
-    <Group>
-      <Transform DEF='Box_2'
+    <Group DEF='EnableButton'>
+      <Transform DEF='Box'
           translation='-3 0 0'>
         <Shape>
           <Appearance>
             <Material
                 diffuseColor='0.2196078 0.4627451 0.1137255'/>
           </Appearance>
-          <Box/>
+          <Box USE='_1'/>
         </Shape>
       </Transform>
-      <TouchSensor DEF='_2'/>
+      <TouchSensor DEF='_3'/>
     </Group>
     <Script DEF='TouchScript'>
       <field accessType='inputOnly' type='SFTime' name='set_enable'/>
@@ -61,8 +61,8 @@ function set_time (value, time)
 }
 ]]>
     </Script>
-    <ROUTE fromNode='_1' fromField='touchTime' toNode='TouchScript' toField='set_time'/>
+    <ROUTE fromNode='_2' fromField='touchTime' toNode='TouchScript' toField='set_time'/>
     <ROUTE fromNode='TouchScript' fromField='visiblity_changed' toNode='Box_1' toField='set_visible'/>
-    <ROUTE fromNode='_2' fromField='touchTime' toNode='TouchScript' toField='set_enable'/>
+    <ROUTE fromNode='_3' fromField='touchTime' toNode='TouchScript' toField='set_enable'/>
   </Scene>
 </X3D>
