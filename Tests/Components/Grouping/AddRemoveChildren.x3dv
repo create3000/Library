@@ -10,7 +10,7 @@ META "creator" "Holger Seelig"
 META "generator" "Titania V3.1.1, http://titania.create3000.de"
 META "generator" "Sunrize X3D Editor V1.6.2, https://create3000.github.io/sunrize/"
 META "identifier" "file:///home/holger/Projekte/Library/Tests/Components/Grouping/AddRemoveChildren.x3dv"
-META "modified" "Mon, 11 Mar 2024 00:13:44 GMT"
+META "modified" "Mon, 11 Mar 2024 08:44:42 GMT"
 META "title" "Add & Remove Children"
 
 PROTO Cube [
@@ -32,104 +32,29 @@ PROTO Cube [
   }
 }
 
-WorldInfo {
-  metadata DEF Titania MetadataSet {
-    name "Titania"
-    reference "http://titania.create3000.de"
-    value [
-      DEF Selection MetadataSet {
-        name "Selection"
-        reference "http://titania.create3000.de"
-        value [
-          DEF previous MetadataSet {
-            name "previous"
-            reference "http://titania.create3000.de"
-            value DEF Space Group { }
-          }
-          DEF nodes MetadataSet {
-            name "nodes"
-            reference "http://titania.create3000.de"
-            value Cube {
-              translation 0.0625 0 0
-            }
-          }
-        ]
-      }
-      DEF NavigationInfo MetadataSet {
-        name "NavigationInfo"
-        reference "http://titania.create3000.de"
-        value DEF type MetadataString {
-          name "type"
-          reference "http://titania.create3000.de"
-          value "EXAMINE"
-        }
-      }
-      DEF Viewpoint MetadataSet {
-        name "Viewpoint"
-        reference "http://titania.create3000.de"
-        value [
-          DEF position MetadataDouble {
-            name "position"
-            reference "http://titania.create3000.de"
-            value [
-              1.93730998039246,
-              1.26081001758575,
-              1.81807994842529
-            ]
-          }
-          DEF orientation MetadataDouble {
-            name "orientation"
-            reference "http://titania.create3000.de"
-            value [
-              -0.538509032667305,
-              0.832463050499291,
-              0.130435007912514,
-              0.862355
-            ]
-          }
-          DEF centerOfRotation MetadataDouble {
-            name "centerOfRotation"
-            reference "http://titania.create3000.de"
-            value [
-              0.476249992847443,
-              0.0952500030398369,
-              0
-            ]
-          }
-        ]
-      }
-    ]
+PROTO Space [ ]
+{
+  DEF Space Group { }
+
+  DEF Timer TimeSensor {
+    cycleInterval 0.05
+    loop TRUE
   }
-  title "AddRemoveChildren"
-}
 
-Viewpoint {
-  position 1.93731 1.26081 1.81808
-  orientation -0.538509032667305 0.832463050499291 0.130435007912514 0.862355
-  centerOfRotation 0.47625 0.09525 0
-}
+  DEF AddAndRemoveScript Script {
+    inputOnly      SFTime  set_time
+    initializeOnly SFInt32 xDimension 16
+    initializeOnly SFInt32 yDimension 16
+    initializeOnly SFInt32 zDimension 16
+    initializeOnly SFFloat xSpacing 0
+    initializeOnly SFFloat ySpacing 0
+    initializeOnly SFFloat zSpacing 0
+    initializeOnly MFNode  addChildren [ ]
+    initializeOnly MFNode  removeChildren [ ]
+    initializeOnly MFNode  children [ ]
+    initializeOnly SFNode  space USE Space
 
-USE Space
-
-DEF Timer TimeSensor {
-  cycleInterval 0.05
-  loop TRUE
-}
-
-DEF AddAndRemoveScript Script {
-  inputOnly      SFTime  set_time
-  initializeOnly SFInt32 xDimension 16
-  initializeOnly SFInt32 yDimension 16
-  initializeOnly SFInt32 zDimension 16
-  initializeOnly SFFloat xSpacing 0
-  initializeOnly SFFloat ySpacing 0
-  initializeOnly SFFloat zSpacing 0
-  initializeOnly MFNode  addChildren [ ]
-  initializeOnly MFNode  removeChildren [ ]
-  initializeOnly MFNode  children [ ]
-  initializeOnly SFNode  space USE Space
-
-  url "vrmlscript:
+    url "vrmlscript:
   
 var x = 0;
 var y = 0;
@@ -220,7 +145,91 @@ function random (value)
 	return Math .round (Math .random () * value);
 }
 "
-  directOutput TRUE
+    directOutput TRUE
+  }
+
+  ROUTE Timer.time TO AddAndRemoveScript.set_time
 }
 
-ROUTE Timer.time TO AddAndRemoveScript.set_time
+WorldInfo {
+  metadata DEF Titania MetadataSet {
+    name "Titania"
+    reference "http://titania.create3000.de"
+    value [
+      DEF Selection MetadataSet {
+        name "Selection"
+        reference "http://titania.create3000.de"
+        value [
+          DEF previous MetadataSet {
+            name "previous"
+            reference "http://titania.create3000.de"
+            value DEF Space Group {
+              children Cube {
+                translation 0.0625 0 0
+              }
+            }
+          }
+          DEF nodes MetadataSet {
+            name "nodes"
+            reference "http://titania.create3000.de"
+            value Cube {
+              translation 0.0625 0 0
+            }
+          }
+        ]
+      }
+      DEF NavigationInfo MetadataSet {
+        name "NavigationInfo"
+        reference "http://titania.create3000.de"
+        value DEF type MetadataString {
+          name "type"
+          reference "http://titania.create3000.de"
+          value "EXAMINE"
+        }
+      }
+      DEF Viewpoint MetadataSet {
+        name "Viewpoint"
+        reference "http://titania.create3000.de"
+        value [
+          DEF position MetadataDouble {
+            name "position"
+            reference "http://titania.create3000.de"
+            value [
+              1.93730998039246,
+              1.26081001758575,
+              1.81807994842529
+            ]
+          }
+          DEF orientation MetadataDouble {
+            name "orientation"
+            reference "http://titania.create3000.de"
+            value [
+              -0.538509032667305,
+              0.832463050499291,
+              0.130435007912514,
+              0.862355
+            ]
+          }
+          DEF centerOfRotation MetadataDouble {
+            name "centerOfRotation"
+            reference "http://titania.create3000.de"
+            value [
+              0.476249992847443,
+              0.0952500030398369,
+              0
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  title "AddRemoveChildren"
+}
+
+Viewpoint {
+  position 1.93731 1.26081 1.81808
+  orientation -0.538509032667305 0.832463050499291 0.130435007912514 0.862355
+  centerOfRotation 0.47625 0.09525 0
+}
+
+Space { }
