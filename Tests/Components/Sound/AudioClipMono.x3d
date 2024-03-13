@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='PointingDeviceSensor' level='1'/>
+    <component name='Scripting' level='1'/>
+    <component name='Sound' level='3'/>
+    <component name='Text' level='1'/>
+    <meta name='comment' content='Rise and Shine'/>
+    <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.6.2, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Wed, 13 Mar 2024 15:46:07 GMT'/>
+  </head>
+  <Scene>
+    <Transform DEF='_1'
+        center='0 0 10'>
+      <Sound
+          maxBack='20'
+          maxFront='20'>
+        <AudioClip DEF='Song'
+            url='"04. Like A Virgin - mono.mp3"'
+            startTime='1710344669.115'
+            stopTime='1710344693.614'/>
+      </Sound>
+      <Collision
+          enabled='false'>
+        <Transform DEF='Min'>
+          <Shape>
+            <Appearance>
+              <Material
+                  transparency='0.3'/>
+            </Appearance>
+            <Sphere/>
+          </Shape>
+        </Transform>
+        <Transform DEF='Max'
+            scale='20 20 20'>
+          <Shape>
+            <Appearance>
+              <Material
+                  transparency='0.3'/>
+            </Appearance>
+            <Sphere/>
+          </Shape>
+        </Transform>
+      </Collision>
+    </Transform>
+    <Transform DEF='ElapsedTime_1'
+        translation='0 2 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text DEF='ElapsedTime'
+            string='"24.5"'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='Start'
+        translation='-2 0 0'>
+      <TouchSensor DEF='Play'
+          description='Start AudioClip'/>
+      <Shape>
+        <Appearance>
+          <Material
+              diffuseColor='0 1 0'/>
+        </Appearance>
+        <Box/>
+      </Shape>
+    </Transform>
+    <Transform DEF='Stop_1'
+        translation='2 0 0'>
+      <TouchSensor DEF='Stop'
+          description='Stop AudioClip'/>
+      <Shape>
+        <Appearance>
+          <Material
+              diffuseColor='1 0 0'/>
+        </Appearance>
+        <Box/>
+      </Shape>
+    </Transform>
+    <Transform DEF='StartAnimation'
+        translation='-2 -1.5 0'
+        scale='0.2 0.2 0.2'>
+      <TouchSensor DEF='_2'
+          description='Start Animation'/>
+      <Shape>
+        <Appearance>
+          <Material
+              diffuseColor='0.1607843 0.5254902 0.8'/>
+        </Appearance>
+        <Box/>
+      </Shape>
+      <TimeSensor DEF='_3'
+          cycleInterval='10'
+          startTime='1693999746.299'/>
+      <OrientationInterpolator DEF='_4'
+          key='0, 0.25, 0.5, 0.75, 1'
+          keyValue='0 1 0 0, 0 1 0 1.5707963267949, 0 1 0 3.14159265358979, 0 1 0 4.71238898038469, 0 0 1 0'/>
+    </Transform>
+    <Script DEF='Debug'>
+      <field accessType='inputOnly' type='SFTime' name='set_startTime'/>
+      <field accessType='inputOnly' type='SFTime' name='set_stopTime'/>
+      <field accessType='inputOnly' type='SFBool' name='set_active'/>
+      <field accessType='inputOnly' type='SFTime' name='set_elapsedTime'/>
+      <field accessType='inputOnly' type='SFTime' name='set_duration'/>
+      <field accessType='outputOnly' type='MFString' name='string_changed'/>
+<![CDATA[vrmlscript:
+
+function set_startTime (value, time)
+{
+	print ('Play: ', time)
+}
+
+function set_stopTime (value, time)
+{
+	print ('Stop: ', time)
+}
+
+function set_active (value, time)
+{
+	print ('isActive: ', value)
+}
+
+function set_elapsedTime (value, time)
+{
+	string_changed = new MFString (Math .round (value * 10) / 10);
+}
+
+function set_duration (value, time)
+{
+	print ('Duration: ', value)
+}
+  ]]>
+    </Script>
+    <ROUTE fromNode='Play' fromField='touchTime' toNode='Song' toField='set_startTime'/>
+    <ROUTE fromNode='Stop' fromField='touchTime' toNode='Song' toField='set_stopTime'/>
+    <ROUTE fromNode='Play' fromField='touchTime' toNode='Debug' toField='set_startTime'/>
+    <ROUTE fromNode='Stop' fromField='touchTime' toNode='Debug' toField='set_stopTime'/>
+    <ROUTE fromNode='Song' fromField='isActive' toNode='Debug' toField='set_active'/>
+    <ROUTE fromNode='Song' fromField='elapsedTime' toNode='Debug' toField='set_elapsedTime'/>
+    <ROUTE fromNode='Song' fromField='duration_changed' toNode='Debug' toField='set_duration'/>
+    <ROUTE fromNode='Debug' fromField='string_changed' toNode='ElapsedTime' toField='set_string'/>
+    <ROUTE fromNode='_3' fromField='fraction_changed' toNode='_4' toField='set_fraction'/>
+    <ROUTE fromNode='_4' fromField='value_changed' toNode='_1' toField='set_rotation'/>
+    <ROUTE fromNode='_2' fromField='touchTime' toNode='_3' toField='set_startTime'/>
+  </Scene>
+</X3D>
