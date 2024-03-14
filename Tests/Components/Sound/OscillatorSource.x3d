@@ -12,7 +12,7 @@
     <meta name='created' content='Thu, 14 Mar 2024 00:58:57 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.2, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Thu, 14 Mar 2024 10:31:19 GMT'/>
+    <meta name='modified' content='Thu, 14 Mar 2024 15:29:33 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='Slider'>
@@ -27,7 +27,7 @@
       <ProtoBody>
         <Group>
           <Transform DEF='Text'
-              translation='1.6905 -0.945 -1'
+              translation='1.12 -0.945 -1'
               scale='0.0672307 0.0672307 0.0672307'>
             <Shape>
               <Appearance>
@@ -36,8 +36,7 @@
               <Text DEF='_1'
                   solid='true'>
                 <FontStyle
-                    family='"SANS"'
-                    justify='"END"'/>
+                    family='"SANS"'/>
               </Text>
             </Shape>
           </Transform>
@@ -103,7 +102,7 @@ function initialize ()
 
 function set_initalValue (value)
 {
-	set_value (value)
+	set_currentValue (value);
 	set_values ();
 }
 
@@ -124,15 +123,15 @@ function set_values ()
 
 function set_precision ()
 {
-	set_value (currentValue);
+	set_currentValue (currentValue);
 }
 
 function set_translation (value)
 {
-	set_value (minValue + (value .x * (maxValue - minValue)));
+	set_currentValue (minValue + (value .x * (maxValue - minValue)));
 }
 
-function set_value (value)
+function set_currentValue (value)
 {
 	currentValue       = value;
 	value_changed      = value;
@@ -157,6 +156,18 @@ function set_value (value)
           <MetadataBoolean
               name='visible'
               value='true'/>
+        </MetadataSet>
+        <MetadataSet
+            name='BrowserFrame'>
+          <MetadataBoolean
+              name='fixedSize'
+              value='true'/>
+          <MetadataDouble
+              name='aspectRatio'
+              value='16, 9'/>
+          <MetadataString
+              name='backgroundColor'
+              value='""'/>
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
@@ -184,11 +195,11 @@ function set_value (value)
           <Gain
               gain='2'>
             <OscillatorSource DEF='_1'
-                frequency='100'
-                startTime='1710412187.7'
+                frequency='240.625'
+                startTime='1710429392.629'
                 resumeTime='1710378273.185'
                 pauseTime='1710378272.052'
-                stopTime='1710378444.917'>
+                stopTime='1710429435.001'>
               <PeriodicWave/>
             </OscillatorSource>
           </Gain>
@@ -196,7 +207,7 @@ function set_value (value)
       </Layer>
       <LayoutLayer>
         <Transform DEF='Header_1'
-            translation='1.6905 -0.859496 -1'
+            translation='1.12 -0.859496 -1'
             scale='0.0672307 0.0672307 0.0672307'>
           <Shape>
             <Appearance>
@@ -212,7 +223,7 @@ function set_value (value)
                   family='"SANS"'
                   style='BOLD'
                   size='0.68'
-                  justify='"END", "END"'/>
+                  justify='"BEG&apos;IN", "END"'/>
             </Text>
           </Shape>
         </Transform>
