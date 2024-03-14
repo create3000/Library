@@ -12,12 +12,11 @@
     <meta name='created' content='Thu, 14 Mar 2024 00:58:57 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.2, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Thu, 14 Mar 2024 09:18:26 GMT'/>
+    <meta name='modified' content='Thu, 14 Mar 2024 09:18:56 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='Slider'>
       <ProtoInterface>
-        <field accessType='inputOutput' type='MFString' name='title'/>
         <field accessType='inputOutput' type='SFString' name='description'/>
         <field accessType='inputOutput' type='SFFloat' name='initalValue'/>
         <field accessType='inputOutput' type='SFFloat' name='minValue'/>
@@ -215,7 +214,6 @@ function set_value (value)
           </Shape>
         </Transform>
         <ProtoInstance name='Slider' DEF='Frequency'>
-          <fieldValue name='title' value='"OscillatorSource"'/>
           <fieldValue name='description' value='frequency'/>
           <fieldValue name='initalValue' value='100'/>
           <fieldValue name='maxValue' value='1000'/>
