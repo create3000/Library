@@ -6,7 +6,7 @@
     <meta name='created' content='Thu, 14 Mar 2024 00:58:57 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.2, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Thu, 14 Mar 2024 01:00:47 GMT'/>
+    <meta name='modified' content='Thu, 14 Mar 2024 01:07:25 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -30,7 +30,12 @@
         maxFront='11.59875'>
       <OscillatorSource
           frequency='200'
-          startTime='1710378018.981'/>
+          startTime='1710378294.355'
+          resumeTime='1710378273.185'
+          pauseTime='1710378272.052'
+          stopTime='1710378444.917'>
+        <PeriodicWave/>
+      </OscillatorSource>
     </Sound>
   </Scene>
 </X3D>
