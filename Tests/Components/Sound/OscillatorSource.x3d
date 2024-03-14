@@ -2,13 +2,176 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
 <X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
+    <component name='Geometry2D' level='2'/>
+    <component name='Layering' level='1'/>
+    <component name='Layout' level='2'/>
+    <component name='PointingDeviceSensor' level='1'/>
+    <component name='Scripting' level='1'/>
     <component name='Sound' level='3'/>
+    <component name='Text' level='1'/>
     <meta name='created' content='Thu, 14 Mar 2024 00:58:57 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.2, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Thu, 14 Mar 2024 01:07:25 GMT'/>
+    <meta name='modified' content='Thu, 14 Mar 2024 09:05:03 GMT'/>
   </head>
   <Scene>
+    <ProtoDeclare name='Slider'>
+      <ProtoInterface>
+        <field accessType='inputOutput' type='MFString' name='title'/>
+        <field accessType='inputOutput' type='SFString' name='description'/>
+        <field accessType='inputOutput' type='SFFloat' name='initalValue'/>
+        <field accessType='inputOutput' type='SFFloat' name='minValue'/>
+        <field accessType='inputOutput' type='SFFloat' name='maxValue'/>
+        <field accessType='inputOutput' type='SFInt32' name='precision' value='1'/>
+        <field accessType='outputOnly' type='SFFloat' name='value_changed'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Group>
+          <Transform DEF='Header_1'
+              translation='1.6905 -0.859496 -1'
+              scale='0.0672307 0.0672307 0.0672307'>
+            <Shape>
+              <Appearance>
+                <Material DEF='Artdeco31'
+                    ambientIntensity='0'
+                    diffuseColor='0 0 0'
+                    shininess='0'/>
+              </Appearance>
+              <Text
+                  solid='true'>
+                <IS>
+                  <connect nodeField='string' protoField='title'/>
+                </IS>
+                <FontStyle
+                    family='"SANS"'
+                    style='BOLD'
+                    size='0.68'
+                    justify='"END", "END"'/>
+              </Text>
+            </Shape>
+          </Transform>
+          <Transform DEF='Text'
+              translation='1.6905 -0.945 -1'
+              scale='0.0672307 0.0672307 0.0672307'>
+            <Shape>
+              <Appearance>
+                <Material/>
+              </Appearance>
+              <Text DEF='_2'
+                  solid='true'>
+                <FontStyle
+                    family='"SANS"'
+                    justify='"END"'/>
+              </Text>
+            </Shape>
+          </Transform>
+          <Transform DEF='Slider'
+              translation='0.0735 -0.9285 -3.51117e-6'
+              center='0 -0.027 0'>
+            <Transform DEF='IndexedLineSet'>
+              <Shape>
+                <Appearance>
+                  <LineProperties
+                      linewidthScaleFactor='2'/>
+                  <Material DEF='Artdeco31_1'
+                      emissiveColor='0.721 0.721 0.721'/>
+                </Appearance>
+                <IndexedLineSet
+                    colorPerVertex='false'
+                    coordIndex='0, 1, -1'>
+                  <Coordinate
+                      point='0 0 0, 1 0 0'/>
+                </IndexedLineSet>
+              </Shape>
+            </Transform>
+            <Transform DEF='Knob'>
+              <Transform DEF='Disk2D'
+                  translation='0.5084513 0 0'
+                  scale='0.027 0.0267372 0.0267372'>
+                <Shape>
+                  <Appearance>
+                    <Material/>
+                  </Appearance>
+                  <Disk2D/>
+                </Shape>
+              </Transform>
+              <PlaneSensor DEF='_3'
+                  offset='0.5084513 0 0'
+                  maxPosition='1 0'/>
+            </Transform>
+            <Script DEF='RangeScript'>
+              <field accessType='inputOnly' type='SFVec3f' name='set_translation'/>
+              <field accessType='inputOutput' type='SFString' name='description'/>
+              <field accessType='inputOutput' type='SFFloat' name='initalValue'/>
+              <field accessType='inputOutput' type='SFFloat' name='minValue'/>
+              <field accessType='inputOutput' type='SFFloat' name='maxValue'/>
+              <field accessType='inputOutput' type='SFInt32' name='precision'/>
+              <field accessType='outputOnly' type='SFFloat' name='value_changed'/>
+              <field accessType='outputOnly' type='MFString' name='string_changed'/>
+              <field accessType='outputOnly' type='SFVec3f' name='translation_changed'/>
+              <field accessType='initializeOnly' type='SFFloat' name='currentValue'/>
+              <IS>
+                <connect nodeField='description' protoField='description'/>
+                <connect nodeField='initalValue' protoField='initalValue'/>
+                <connect nodeField='minValue' protoField='minValue'/>
+                <connect nodeField='maxValue' protoField='maxValue'/>
+                <connect nodeField='precision' protoField='precision'/>
+                <connect nodeField='value_changed' protoField='value_changed'/>
+              </IS>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+	set_initalValue (initalValue);
+}
+
+function set_initalValue (value)
+{
+	set_value (value)
+	set_values ();
+}
+
+function set_minValue (value)
+{
+	set_values ();
+}
+
+function set_maxValue (value)
+{
+	set_values ();
+}
+
+function set_values ()
+{
+	translation_changed .x = currentValue / (maxValue - minValue);
+}
+
+function set_precision ()
+{
+	set_value (currentValue);
+}
+
+function set_translation (value)
+{
+	set_value (minValue + (value .x * (maxValue - minValue)));
+}
+
+function set_value (value)
+{
+	currentValue       = value;
+	value_changed      = value;
+	string_changed [0] = description + " " + currentValue .toFixed (precision);
+}]]>
+            </Script>
+          </Transform>
+        </Group>
+        <ROUTE fromNode='RangeScript' fromField='string_changed' toNode='_2' toField='set_string'/>
+        <ROUTE fromNode='_3' fromField='translation_changed' toNode='Disk2D' toField='set_translation'/>
+        <ROUTE fromNode='_3' fromField='translation_changed' toNode='RangeScript' toField='set_translation'/>
+        <ROUTE fromNode='RangeScript' fromField='translation_changed' toNode='_3' toField='set_offset'/>
+        <ROUTE fromNode='RangeScript' fromField='translation_changed' toNode='Disk2D' toField='set_translation'/>
+      </ProtoBody>
+    </ProtoDeclare>
     <WorldInfo>
       <MetadataSet containerField='metadata'
           name='Sunrize'
@@ -21,21 +184,46 @@
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
-    <Viewpoint
-        description='Initial View'
-        position='2.869677 3.854335 8.769781'
-        orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
-    <Sound
-        intensity='0.2116615'
-        maxFront='11.59875'>
-      <OscillatorSource
-          frequency='200'
-          startTime='1710378294.355'
-          resumeTime='1710378273.185'
-          pauseTime='1710378272.052'
-          stopTime='1710378444.917'>
-        <PeriodicWave/>
-      </OscillatorSource>
-    </Sound>
+    <LayerSet
+        activeLayer='1'
+        order='1, 2'>
+      <Layer>
+        <MetadataSet containerField='metadata'
+            name='Sunrize'
+            reference='https://create3000.github.io/sunrize/'>
+          <MetadataSet
+              name='GridTool'>
+            <MetadataBoolean
+                name='visible'
+                value='true'/>
+          </MetadataSet>
+        </MetadataSet>
+        <Viewpoint
+            description='Initial View'
+            position='2.869677 3.854335 8.769781'
+            orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
+        <Sound
+            intensity='0.4693364'
+            maxFront='11.59875'>
+          <OscillatorSource DEF='_1'
+              frequency='100'
+              startTime='1710406855.836'
+              resumeTime='1710378273.185'
+              pauseTime='1710378272.052'
+              stopTime='1710378444.917'>
+            <PeriodicWave/>
+          </OscillatorSource>
+        </Sound>
+      </Layer>
+      <LayoutLayer>
+        <ProtoInstance name='Slider' DEF='_2'>
+          <fieldValue name='title' value='"OscillatorSource"'/>
+          <fieldValue name='description' value='frequency'/>
+          <fieldValue name='initalValue' value='100'/>
+          <fieldValue name='maxValue' value='1000'/>
+        </ProtoInstance>
+      </LayoutLayer>
+    </LayerSet>
+    <ROUTE fromNode='_2' fromField='value_changed' toNode='_1' toField='set_frequency'/>
   </Scene>
 </X3D>
