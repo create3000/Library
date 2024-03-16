@@ -6,7 +6,7 @@
     <meta name='created' content='Fri, 15 Mar 2024 12:18:48 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.2, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Fri, 15 Mar 2024 13:22:32 GMT'/>
+    <meta name='modified' content='Fri, 15 Mar 2024 13:52:00 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -27,8 +27,7 @@
         orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
     <AudioDestination>
       <Gain DEF='LeftChannel'
-          description='Madonna'
-          gain='0'/>
+          description='Madonna'/>
       <Gain DEF='RightChannel'
           description='Abba'/>
     </AudioDestination>
