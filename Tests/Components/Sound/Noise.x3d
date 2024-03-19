@@ -12,7 +12,7 @@
     <meta name='created' content='Mon, 18 Mar 2024 22:06:33 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 19 Mar 2024 19:23:00 GMT'/>
+    <meta name='modified' content='Tue, 19 Mar 2024 19:24:11 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='Button'>
@@ -328,18 +328,6 @@ function set_currentValue (value)
           sampleRate='44100'
           startTime='1710875697.727'/>
     </AudioDestination>
-    <Transform DEF='Start'
-        translation='1 -0.8 -0'>
-      <ProtoInstance name='Button' DEF='_4'>
-        <fieldValue name='description' value='startTime'/>
-      </ProtoInstance>
-    </Transform>
-    <Transform DEF='Stop'
-        translation='1 -0.9 -0'>
-      <ProtoInstance name='Button' DEF='_5'>
-        <fieldValue name='description' value='stopTime'/>
-      </ProtoInstance>
-    </Transform>
     <Script DEF='NoiseScript'>
       <field accessType='outputOnly' type='MFFloat' name='noise_changed'/>
 <![CDATA[ecmascript:
@@ -355,8 +343,20 @@ function initialize ()
 }
 ]]>
     </Script>
+    <Transform DEF='Start'
+        translation='1 -0.8 -0'>
+      <ProtoInstance name='Button' DEF='_4'>
+        <fieldValue name='description' value='startTime'/>
+      </ProtoInstance>
+    </Transform>
+    <Transform DEF='Stop'
+        translation='1 -0.9 -0'>
+      <ProtoInstance name='Button' DEF='_5'>
+        <fieldValue name='description' value='stopTime'/>
+      </ProtoInstance>
+    </Transform>
     <Transform DEF='Loop_1'
-        translation='1 -0.7 -0'>
+        translation='1 -0.7 0'>
       <ProtoInstance name='Toggle' DEF='_7'>
         <fieldValue name='description' value='loop'/>
       </ProtoInstance>
