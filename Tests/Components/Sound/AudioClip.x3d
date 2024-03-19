@@ -11,7 +11,7 @@
     <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 19 Mar 2024 19:34:44 GMT'/>
+    <meta name='modified' content='Tue, 19 Mar 2024 20:21:39 GMT'/>
   </head>
   <Scene>
     <Viewpoint DEF='FrontView'
@@ -30,13 +30,15 @@
         orientation='0 1 0 180'
         centerOfRotation='0 0 5'/>
     <Transform DEF='_5'
+        rotation='0 0 0 360'
         center='0 0 10'>
       <Sound
           maxBack='20'
           maxFront='20'>
         <AudioClip DEF='Song'
-            url='"stereo-test.mp3"'
-            startTime='1710876818.944'/>
+            url='"04. Like A Virgin.mp3", "stereo-test.mp3"'
+            gain='3'
+            startTime='1710879679.963'/>
       </Sound>
       <Collision
           enabled='false'>
@@ -68,7 +70,7 @@
           <Material/>
         </Appearance>
         <Text DEF='ElapsedTime'
-            string='"16.8"'/>
+            string='"19.8"'/>
       </Shape>
     </Transform>
     <Transform DEF='Start'
@@ -109,7 +111,7 @@
       </Shape>
       <TimeSensor DEF='_3'
           cycleInterval='10'
-          startTime='1693999746.299'/>
+          startTime='1710879681.113'/>
       <OrientationInterpolator DEF='_4'
           key='0, 0.25, 0.5, 0.75, 1'
           keyValue='0 1 0 0, 0 1 0 90.0000000000002, 0 1 0 180, 0 1 0 270, 0 0 1 0'/>
