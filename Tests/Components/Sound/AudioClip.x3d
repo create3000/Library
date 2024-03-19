@@ -6,21 +6,37 @@
     <component name='Scripting' level='1'/>
     <component name='Sound' level='3'/>
     <component name='Text' level='1'/>
+    <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
     <meta name='comment' content='Rise and Shine'/>
     <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 19 Mar 2024 19:26:30 GMT'/>
+    <meta name='modified' content='Tue, 19 Mar 2024 19:34:44 GMT'/>
   </head>
   <Scene>
-    <Transform DEF='_1'
+    <Viewpoint DEF='FrontView'
+        description='Front View'
+        centerOfRotation='0 0 5'/>
+    <Viewpoint DEF='Rightview'
+        description='Right View'
+        orientation='0 1 0 90'
+        centerOfRotation='0 0 5'/>
+    <Viewpoint DEF='LeftView'
+        description='Left View'
+        orientation='0 1 0 -90.0000000000002'
+        centerOfRotation='0 0 5'/>
+    <Viewpoint DEF='R180Vew'
+        description='180° View'
+        orientation='0 1 0 180'
+        centerOfRotation='0 0 5'/>
+    <Transform DEF='_5'
         center='0 0 10'>
       <Sound
           maxBack='20'
           maxFront='20'>
         <AudioClip DEF='Song'
             url='"stereo-test.mp3"'
-            startTime='1693999731.586'/>
+            startTime='1710876818.944'/>
       </Sound>
       <Collision
           enabled='false'>
@@ -52,7 +68,7 @@
           <Material/>
         </Appearance>
         <Text DEF='ElapsedTime'
-            string='"64.1"'/>
+            string='"16.8"'/>
       </Shape>
     </Transform>
     <Transform DEF='Start'
@@ -96,7 +112,7 @@
           startTime='1693999746.299'/>
       <OrientationInterpolator DEF='_4'
           key='0, 0.25, 0.5, 0.75, 1'
-          keyValue='0 1 0 0, 0 1 0 1.5707963267949, 0 1 0 3.14159265358979, 0 1 0 4.71238898038469, 0 0 1 0'/>
+          keyValue='0 1 0 0, 0 1 0 90.0000000000002, 0 1 0 180, 0 1 0 270, 0 0 1 0'/>
     </Transform>
     <Script DEF='Debug'>
       <field accessType='inputOnly' type='SFTime' name='set_startTime'/>
@@ -142,7 +158,7 @@ function set_duration (value, time)
     <ROUTE fromNode='Song' fromField='duration_changed' toNode='Debug' toField='set_duration'/>
     <ROUTE fromNode='Debug' fromField='string_changed' toNode='ElapsedTime' toField='set_string'/>
     <ROUTE fromNode='_3' fromField='fraction_changed' toNode='_4' toField='set_fraction'/>
-    <ROUTE fromNode='_4' fromField='value_changed' toNode='_1' toField='set_rotation'/>
+    <ROUTE fromNode='_4' fromField='value_changed' toNode='_5' toField='set_rotation'/>
     <ROUTE fromNode='_2' fromField='touchTime' toNode='_3' toField='set_startTime'/>
   </Scene>
 </X3D>
