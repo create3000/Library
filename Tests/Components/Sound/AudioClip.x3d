@@ -9,8 +9,8 @@
     <meta name='comment' content='Rise and Shine'/>
     <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Sunrize X3D Editor V1.1.9, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Mon, 20 Nov 2023 21:03:31 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Tue, 19 Mar 2024 19:26:30 GMT'/>
   </head>
   <Scene>
     <Transform DEF='_1'
@@ -19,7 +19,7 @@
           maxBack='20'
           maxFront='20'>
         <AudioClip DEF='Song'
-            url='"04. Like A Virgin.mp3"'
+            url='"stereo-test.mp3"'
             startTime='1693999731.586'/>
       </Sound>
       <Collision
