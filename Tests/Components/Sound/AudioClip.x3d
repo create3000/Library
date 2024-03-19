@@ -11,7 +11,7 @@
     <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 19 Mar 2024 20:55:12 GMT'/>
+    <meta name='modified' content='Tue, 19 Mar 2024 21:16:45 GMT'/>
   </head>
   <Scene>
     <Viewpoint DEF='FrontView'
@@ -25,8 +25,13 @@
         description='Left View'
         orientation='0 1 0 -90.0000000000002'
         centerOfRotation='0 0 5'/>
-    <Viewpoint DEF='R180Vew'
-        description='180° View'
+    <Viewpoint DEF='R180VewFront'
+        description='180° View Front'
+        orientation='0 1 0 180'
+        centerOfRotation='0 0 5'/>
+    <Viewpoint DEF='R180VewBack'
+        description='180° View Back'
+        position='0 0 -10'
         orientation='0 1 0 180'
         centerOfRotation='0 0 5'/>
     <Transform DEF='_5'
