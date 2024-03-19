@@ -11,10 +11,10 @@
     <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 19 Mar 2024 21:16:45 GMT'/>
+    <meta name='modified' content='Tue, 19 Mar 2024 22:18:09 GMT'/>
   </head>
   <Scene>
-    <Viewpoint DEF='FrontView'
+    <Viewpoint DEF='FrontView_1'
         description='Front View'
         centerOfRotation='0 0 5'/>
     <Viewpoint DEF='Rightview'
@@ -34,8 +34,17 @@
         position='0 0 -10'
         orientation='0 1 0 180'
         centerOfRotation='0 0 5'/>
+    <Viewpoint DEF='TopView_1'
+        description='Top View'
+        position='0 10 0'
+        orientation='1 0 0 -90'
+        centerOfRotation='0 0 5'/>
+    <Viewpoint DEF='BottomView'
+        description='Top View'
+        position='0 -10 0'
+        orientation='1 0 0 90.0000000000002'
+        centerOfRotation='0 0 5'/>
     <Transform DEF='_5'
-        rotation='0 0 0 360'
         center='0 0 10'>
       <Sound
           maxBack='20'
@@ -43,7 +52,7 @@
         <AudioClip DEF='Song'
             url='"stereo-test.mp3", "04. Like A Virgin.mp3"'
             gain='3'
-            startTime='1710879679.963'
+            startTime='1710886448.659'
             stopTime='1710879737.719'/>
       </Sound>
       <Collision
@@ -76,7 +85,7 @@
           <Material/>
         </Appearance>
         <Text DEF='ElapsedTime'
-            string='"57.7"'/>
+            string='"16.8"'/>
       </Shape>
     </Transform>
     <Transform DEF='Start'
