@@ -14,7 +14,7 @@
     <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 20 Mar 2024 10:32:51 GMT'/>
+    <meta name='modified' content='Wed, 20 Mar 2024 11:34:40 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='RoundedRectangle2D'>
@@ -533,6 +533,26 @@ function set_currentValue (value)
               </Shape>
             </Transform>
           </Collision>
+          <Transform DEF='LeftBox'
+              translation='-2 0 0'>
+            <Shape>
+              <Appearance>
+                <Material
+                    diffuseColor='0.2196078 0.4627451 0.1137255'/>
+              </Appearance>
+              <Box/>
+            </Shape>
+          </Transform>
+          <Transform DEF='RightBox'
+              translation='2 0 0'>
+            <Shape>
+              <Appearance>
+                <Material
+                    diffuseColor='0.6 0 0'/>
+              </Appearance>
+              <Box/>
+            </Shape>
+          </Transform>
         </Transform>
       </Layer>
       <Layer DEF='HUD'>
