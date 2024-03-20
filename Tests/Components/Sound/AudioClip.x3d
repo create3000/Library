@@ -2,82 +2,299 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
 <X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
+    <component name='Geometry2D' level='2'/>
+    <component name='Layering' level='1'/>
     <component name='PointingDeviceSensor' level='1'/>
     <component name='Scripting' level='1'/>
     <component name='Sound' level='3'/>
     <component name='Text' level='1'/>
+    <component name='X_ITE' level='1'/>
     <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
     <meta name='comment' content='Rise and Shine'/>
     <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 19 Mar 2024 22:18:09 GMT'/>
+    <meta name='modified' content='Wed, 20 Mar 2024 10:06:17 GMT'/>
   </head>
   <Scene>
-    <Viewpoint DEF='FrontView_1'
-        description='Front View'
-        centerOfRotation='0 0 5'/>
-    <Viewpoint DEF='Rightview'
-        description='Right View'
-        orientation='0 1 0 90'
-        centerOfRotation='0 0 5'/>
-    <Viewpoint DEF='LeftView'
-        description='Left View'
-        orientation='0 1 0 -90.0000000000002'
-        centerOfRotation='0 0 5'/>
-    <Viewpoint DEF='R180VewFront'
-        description='180° View Front'
-        orientation='0 1 0 180'
-        centerOfRotation='0 0 5'/>
-    <Viewpoint DEF='R180VewBack'
-        description='180° View Back'
-        position='0 0 -10'
-        orientation='0 1 0 180'
-        centerOfRotation='0 0 5'/>
-    <Viewpoint DEF='TopView_1'
-        description='Top View'
-        position='0 10 0'
-        orientation='1 0 0 -90'
-        centerOfRotation='0 0 5'/>
-    <Viewpoint DEF='BottomView'
-        description='Top View'
-        position='0 -10 0'
-        orientation='1 0 0 90.0000000000002'
-        centerOfRotation='0 0 5'/>
-    <Transform DEF='_5'
-        center='0 0 10'>
-      <Sound
-          maxBack='20'
-          maxFront='20'>
-        <AudioClip DEF='Song'
-            url='"stereo-test.mp3", "04. Like A Virgin.mp3"'
-            gain='3'
-            startTime='1710886448.659'
-            stopTime='1710879737.719'/>
-      </Sound>
-      <Collision
-          enabled='false'>
-        <Transform DEF='Min'>
-          <Shape>
-            <Appearance>
-              <Material
-                  transparency='0.3'/>
-            </Appearance>
-            <Sphere/>
-          </Shape>
-        </Transform>
-        <Transform DEF='Max'
-            scale='20 20 20'>
-          <Shape>
-            <Appearance>
-              <Material
-                  transparency='0.3'/>
-            </Appearance>
-            <Sphere/>
-          </Shape>
-        </Transform>
-      </Collision>
-    </Transform>
+    <ProtoDeclare name='Button'>
+      <ProtoInterface>
+        <field accessType='inputOutput' type='SFString' name='description'/>
+        <field accessType='outputOnly' type='SFTime' name='touchTime'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Group>
+          <Transform DEF='Text'
+              scale='0.0672307 0.0672307 0.0672307'>
+            <Shape>
+              <Text DEF='_2'
+                  solid='true'>
+                <FontStyle
+                    family='"SANS"'
+                    justify='"BEGIN", "MIDDLE"'/>
+              </Text>
+            </Shape>
+          </Transform>
+          <Transform DEF='Button'
+              translation='-1.1 0 0'>
+            <Group DEF='Knob'>
+              <Transform DEF='Rectangle2D'
+                  translation='1 0 0'
+                  scale='0.027 0.0267372 0.0267372'>
+                <Shape>
+                  <Rectangle2D
+                      solid='true'/>
+                </Shape>
+              </Transform>
+              <TouchSensor>
+                <IS>
+                  <connect nodeField='touchTime' protoField='touchTime'/>
+                </IS>
+              </TouchSensor>
+              <Script DEF='ButtonScript'>
+                <field accessType='inputOutput' type='SFString' name='description'/>
+                <field accessType='outputOnly' type='MFString' name='string_changed'/>
+                <IS>
+                  <connect nodeField='description' protoField='description'/>
+                </IS>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+   set_description ();
+}
+
+function set_description ()
+{
+   string_changed [0] = description;
+}]]>
+              </Script>
+            </Group>
+          </Transform>
+        </Group>
+        <ROUTE fromNode='ButtonScript' fromField='string_changed' toNode='_2' toField='set_string'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare name='RoundedRectangle2D'>
+      <ProtoInterface>
+        <field accessType='inputOutput' type='SFFloat' name='cornerRadius' value='1'/>
+        <field accessType='inputOutput' type='SFVec2f' name='size' value='2 2'/>
+        <field accessType='initializeOnly' type='SFBool' name='solid'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <IndexedFaceSet DEF='Geometry'
+            normalPerVertex='false'>
+          <TextureCoordinate/>
+          <Coordinate/>
+        </IndexedFaceSet>
+        <Script DEF='RoundedRectangle2D'
+            directOutput='true'>
+          <field accessType='inputOutput' type='SFFloat' name='cornerRadius'/>
+          <field accessType='inputOutput' type='SFVec2f' name='size'/>
+          <field accessType='initializeOnly' type='SFFloat' name='cornerDimension' value='10'/>
+          <field accessType='inputOutput' type='SFBool' name='solid'/>
+          <field accessType='initializeOnly' type='SFNode' name='geometry'>
+            <IndexedFaceSet USE='Geometry'/>
+          </field>
+          <IS>
+            <connect nodeField='cornerRadius' protoField='cornerRadius'/>
+            <connect nodeField='size' protoField='size'/>
+            <connect nodeField='solid' protoField='solid'/>
+          </IS>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+	eventsProcessed ();
+}
+
+function eventsProcessed ()
+{
+	var radius = Math .min (Math .min (cornerRadius, size .x / 2), size .y / 2);
+
+	var
+		point         = new SFVec3f (radius, 0, 0),
+		startRotation = new SFRotation (0, 0, 1, 0),
+		endRotation   = new SFRotation (0, 0, 1, Math .PI / 2),
+		maxSize       = Math .max (size .x, size .y),
+		corner        = new MFVec3f (),
+		coordIndex    = new MFInt32 (),
+		coord         = geometry .coord .point,
+		texCoord      = geometry .texCoord .point;
+
+	coord    .length = 0;
+	texCoord .length = 0;
+
+	for (var i = 0, length = cornerDimension * 4; i < length; ++ i)
+		coordIndex [coordIndex .length] = i;
+		
+	coordIndex [coordIndex .length] = -1;
+
+	for (var i = 0; i < cornerDimension; ++i)
+		corner [i] = startRotation .slerp (endRotation, i / (cornerDimension - 1)) .multVec (point);
+	
+	var translation = new SFVec3f (size .x / 2 - radius, size .y / 2 - radius, 0);
+
+	for (var i = 0; i < cornerDimension; ++ i)
+		coord [coord .length] = corner [i] .add (translation);
+
+	var
+		translation = new SFVec3f (-size .x / 2 + radius, size .y / 2 - radius, 0),
+		rotation    = new SFRotation (0, 0, 1, Math .PI * 0.5);
+
+	for (var i = 0; i < cornerDimension; ++ i)
+		coord [coord .length] = rotation .multVec (corner [i]) .add (translation);
+
+	var
+		translation = new SFVec3f (-size .x / 2 + radius, -size .y / 2 + radius, 0),
+		rotation    = new SFRotation (0, 0, 1, Math .PI);
+
+	for (var i = 0; i < cornerDimension; ++ i)
+		coord [coord .length] = rotation .multVec (corner [i]) .add (translation);
+
+	var
+		translation = new SFVec3f (size .x / 2 - radius, -size .y / 2 + radius, 0),
+		rotation    = new SFRotation (0, 0, 1, Math .PI * 1.5);
+
+	for (var i = 0; i < cornerDimension; ++ i)
+		coord [coord .length] = rotation .multVec (corner [i]) .add (translation);
+
+	var maxSize1_2 = new SFVec3f (maxSize / 2, maxSize / 2, 0);
+
+	for (var i = 0, length = coord .length; i < length; ++ i)
+	{
+		var tex = coord [i] .add (maxSize1_2) .divide (maxSize);
+
+		texCoord [i] = new SFVec2f (tex .x, tex .y);
+	}
+
+	if (! solid)
+	{
+		for (var i = 0, length = cornerDimension * 4; i < length; ++ i)
+			coordIndex [coordIndex .length] = length - 1 - i;
+
+		coordIndex [coordIndex .length] = -1;
+	}
+
+	geometry .set_coordIndex = coordIndex;
+}
+]]>
+        </Script>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare name='Toggle'>
+      <ProtoInterface>
+        <field accessType='inputOutput' type='SFString' name='description'/>
+        <field accessType='inputOutput' type='SFBool' name='initialValue'/>
+        <field accessType='outputOnly' type='SFBool' name='value_changed'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Group>
+          <Transform DEF='Text'
+              scale='0.0672307 0.0672307 0.0672307'>
+            <Shape>
+              <Text DEF='_2'
+                  solid='true'>
+                <FontStyle
+                    family='"SANS"'
+                    justify='"BEGIN", "MIDDLE"'/>
+              </Text>
+            </Shape>
+          </Transform>
+          <Transform DEF='Button'
+              translation='-1.1 0 0'>
+            <Group DEF='Knob'>
+              <Transform DEF='RoundedRectangle2D'
+                  translation='0.98 0 0'
+                  scale='0.027 0.027 0.027'>
+                <Shape>
+                  <Appearance>
+                    <Material
+                        diffuseColor='0.3568627 0.3568627 0.3568627'/>
+                  </Appearance>
+                  <ProtoInstance name='RoundedRectangle2D' containerField='geometry'>
+                    <fieldValue name='size' value='3.54 2'/>
+                  </ProtoInstance>
+                </Shape>
+              </Transform>
+              <Switch DEF='_10'
+                  whichChoice='0'>
+                <Transform DEF='False'
+                    translation='0.96 0 0'
+                    scale='0.027 0.0267372 0.0267372'>
+                  <Shape>
+                    <Appearance>
+                      <UnlitMaterial
+                          emissiveColor='0 0 0'/>
+                      <DepthMode DEF='_1'
+                          polygonOffset='-1 -1'/>
+                    </Appearance>
+                    <Disk2D DEF='_3'
+                        outerRadius='0.8'
+                        solid='true'/>
+                  </Shape>
+                </Transform>
+                <Transform DEF='True'
+                    translation='1 0 0'
+                    scale='0.027 0.0267372 0.0267372'>
+                  <Shape>
+                    <Appearance>
+                      <DepthMode USE='_1'/>
+                    </Appearance>
+                    <Disk2D USE='_3'/>
+                  </Shape>
+                </Transform>
+              </Switch>
+              <TouchSensor DEF='_4'/>
+              <Script DEF='ToggleScript'>
+                <field accessType='inputOnly' type='SFTime' name='set_time'/>
+                <field accessType='inputOutput' type='SFString' name='description'/>
+                <field accessType='inputOutput' type='SFBool' name='initialValue'/>
+                <field accessType='outputOnly' type='MFString' name='string_changed'/>
+                <field accessType='outputOnly' type='SFInt32' name='whichChoice_changed'/>
+                <field accessType='outputOnly' type='SFBool' name='value_changed'/>
+                <IS>
+                  <connect nodeField='description' protoField='description'/>
+                  <connect nodeField='initialValue' protoField='initialValue'/>
+                  <connect nodeField='value_changed' protoField='value_changed'/>
+                </IS>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+   set_description ();
+   set_initialValue (initialValue);
+}
+
+function set_time ()
+{
+   set_currentValue (!value_changed);
+}
+
+function set_description ()
+{
+   string_changed [0] = description;
+}
+
+function set_initialValue (value)
+{
+   set_currentValue (value);
+}
+
+function set_currentValue (value)
+{
+   whichChoice_changed = value;
+   value_changed       = value;
+}]]>
+              </Script>
+            </Group>
+          </Transform>
+        </Group>
+        <ROUTE fromNode='ToggleScript' fromField='string_changed' toNode='_2' toField='set_string'/>
+        <ROUTE fromNode='ToggleScript' fromField='whichChoice_changed' toNode='_10' toField='set_whichChoice'/>
+        <ROUTE fromNode='_4' fromField='touchTime' toNode='ToggleScript' toField='set_time'/>
+      </ProtoBody>
+    </ProtoDeclare>
     <Transform DEF='ElapsedTime_1'
         translation='0 2 0'>
       <Shape>
@@ -86,30 +303,6 @@
         </Appearance>
         <Text DEF='ElapsedTime'
             string='"16.8"'/>
-      </Shape>
-    </Transform>
-    <Transform DEF='Start'
-        translation='-2 0 0'>
-      <TouchSensor DEF='Play'
-          description='Start AudioClip'/>
-      <Shape>
-        <Appearance>
-          <Material
-              diffuseColor='0 1 0'/>
-        </Appearance>
-        <Box/>
-      </Shape>
-    </Transform>
-    <Transform DEF='Stop_1'
-        translation='2 0 0'>
-      <TouchSensor DEF='Stop'
-          description='Stop AudioClip'/>
-      <Shape>
-        <Appearance>
-          <Material
-              diffuseColor='1 0 0'/>
-        </Appearance>
-        <Box/>
       </Shape>
     </Transform>
     <Transform DEF='StartAnimation'
@@ -166,16 +359,128 @@ function set_duration (value, time)
 }
   ]]>
     </Script>
-    <ROUTE fromNode='Play' fromField='touchTime' toNode='Song' toField='set_startTime'/>
-    <ROUTE fromNode='Stop' fromField='touchTime' toNode='Song' toField='set_stopTime'/>
-    <ROUTE fromNode='Play' fromField='touchTime' toNode='Debug' toField='set_startTime'/>
-    <ROUTE fromNode='Stop' fromField='touchTime' toNode='Debug' toField='set_stopTime'/>
+    <LayerSet
+        activeLayer='2'
+        order='0, 1, 2'>
+      <Layer>
+        <Viewpoint DEF='FrontView_1'
+            description='Front View'
+            centerOfRotation='0 0 5'/>
+        <Viewpoint DEF='Rightview'
+            description='Right View'
+            orientation='0 1 0 90'
+            centerOfRotation='0 0 5'/>
+        <Viewpoint DEF='LeftView'
+            description='Left View'
+            orientation='0 1 0 -90.0000000000002'
+            centerOfRotation='0 0 5'/>
+        <Viewpoint DEF='R180VewFront'
+            description='180° View Front'
+            orientation='0 1 0 180'
+            centerOfRotation='0 0 5'/>
+        <Viewpoint DEF='R180VewBack'
+            description='180° View Back'
+            position='0 0 -10'
+            orientation='0 1 0 180'
+            centerOfRotation='0 0 5'/>
+        <Viewpoint DEF='TopView_1'
+            description='Top View'
+            position='0 10 0'
+            orientation='1 0 0 -90'
+            centerOfRotation='0 0 5'/>
+        <Viewpoint DEF='BottomView'
+            description='Bottom View'
+            position='0 -10 0'
+            orientation='1 0 0 90.0000000000002'
+            centerOfRotation='0 0 5'/>
+        <Transform DEF='Sound'
+            center='0 0 10'>
+          <Sound
+              maxBack='20'
+              maxFront='20'>
+            <AudioClip DEF='Song'
+                url='"stereo-test.mp3", "04. Like A Virgin.mp3"'
+                gain='3'
+                startTime='1710886448.659'
+                stopTime='1710879737.719'/>
+          </Sound>
+          <Collision DEF='Sphere_1'
+              enabled='false'>
+            <Transform DEF='Min'>
+              <Shape>
+                <Appearance>
+                  <Material
+                      transparency='0.3'/>
+                </Appearance>
+                <Sphere/>
+              </Shape>
+            </Transform>
+            <Transform DEF='Max'
+                scale='20 20 20'>
+              <Shape>
+                <Appearance>
+                  <Material
+                      transparency='0.3'/>
+                </Appearance>
+                <Sphere/>
+              </Shape>
+            </Transform>
+          </Collision>
+        </Transform>
+      </Layer>
+      <Layer>
+        <MetadataSet containerField='metadata'
+            name='Sunrize'
+            reference='https://create3000.github.io/sunrize/'>
+          <MetadataSet
+              name='GridTool'>
+            <MetadataBoolean
+                name='visible'
+                value='true'/>
+            <MetadataDouble
+                name='rotation'
+                value='1, 0, 0, 1.5707963267949'/>
+            <MetadataFloat
+                name='scale'
+                value='0.1, 0.1, 0.1'/>
+            <MetadataInteger
+                name='dimension'
+                value='34, 10, 20'/>
+            <MetadataBoolean
+                name='snapToCenter'
+                value='true'/>
+          </MetadataSet>
+        </MetadataSet>
+        <OrthoViewpoint/>
+        <Transform DEF='Loop_1'
+            translation='1 -0.7 0'>
+          <ProtoInstance name='Toggle' DEF='_1'>
+            <fieldValue name='description' value='loop'/>
+          </ProtoInstance>
+        </Transform>
+        <Transform DEF='StartTime'
+            translation='1 -0.8 0'>
+          <ProtoInstance name='Button' DEF='_5'>
+            <fieldValue name='description' value='startTime'/>
+          </ProtoInstance>
+        </Transform>
+        <Transform DEF='StopTime_1'
+            translation='1 -0.9 0'>
+          <ProtoInstance name='Button' DEF='_6'>
+            <fieldValue name='description' value='stopTime'/>
+          </ProtoInstance>
+        </Transform>
+      </Layer>
+    </LayerSet>
     <ROUTE fromNode='Song' fromField='isActive' toNode='Debug' toField='set_active'/>
     <ROUTE fromNode='Song' fromField='elapsedTime' toNode='Debug' toField='set_elapsedTime'/>
     <ROUTE fromNode='Song' fromField='duration_changed' toNode='Debug' toField='set_duration'/>
     <ROUTE fromNode='Debug' fromField='string_changed' toNode='ElapsedTime' toField='set_string'/>
     <ROUTE fromNode='_3' fromField='fraction_changed' toNode='_4' toField='set_fraction'/>
-    <ROUTE fromNode='_4' fromField='value_changed' toNode='_5' toField='set_rotation'/>
+    <ROUTE fromNode='_4' fromField='value_changed' toNode='Sound' toField='set_rotation'/>
     <ROUTE fromNode='_2' fromField='touchTime' toNode='_3' toField='set_startTime'/>
+    <ROUTE fromNode='_6' fromField='touchTime' toNode='Song' toField='set_stopTime'/>
+    <ROUTE fromNode='_5' fromField='touchTime' toNode='Song' toField='set_startTime'/>
+    <ROUTE fromNode='_1' fromField='value_changed' toNode='Song' toField='set_loop'/>
   </Scene>
 </X3D>
