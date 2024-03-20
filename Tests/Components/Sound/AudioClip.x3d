@@ -14,7 +14,7 @@
     <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 20 Mar 2024 15:06:50 GMT'/>
+    <meta name='modified' content='Wed, 20 Mar 2024 15:10:23 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='RoundedRectangle2D'>
@@ -495,14 +495,14 @@ function set_currentValue (value)
             description='Top View'
             position='0 10 0'
             orientation='1 0 0 -90'/>
-        <Viewpoint DEF='BottomView'
-            description='Bottom View'
-            position='0 -10 0'
-            orientation='1 0 0 90.0000000000002'/>
         <Viewpoint DEF='TopView90_1'
             description='Top View 90°'
             position='0 10 0'
             orientation='0.577350269189627 -0.577350269189627 -0.577350269189624 240'/>
+        <Viewpoint DEF='BottomView'
+            description='Bottom View'
+            position='0 -10 0'
+            orientation='1 0 0 90.0000000000002'/>
         <Transform DEF='Sound'
             rotation='0 0 0 360'
             center='0 0 10'>
