@@ -14,7 +14,7 @@
     <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 20 Mar 2024 11:59:38 GMT'/>
+    <meta name='modified' content='Wed, 20 Mar 2024 12:10:18 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='RoundedRectangle2D'>
@@ -471,35 +471,28 @@ function set_currentValue (value)
         order='0, 1, 2'>
       <Layer DEF='Sound_1'>
         <Viewpoint DEF='FrontView_1'
-            description='Front View'
-            centerOfRotation='0 0 5'/>
+            description='Front View'/>
         <Viewpoint DEF='FrontView180_1'
             description='Front. View 180'
-            orientation='0 1 0 180'
-            centerOfRotation='0 0 5'/>
+            orientation='0 1 0 180'/>
         <Viewpoint DEF='Rightview'
             description='Right View'
-            orientation='0 1 0 90'
-            centerOfRotation='0 0 5'/>
+            orientation='0 1 0 90'/>
         <Viewpoint DEF='LeftView'
             description='Left View'
-            orientation='0 1 0 -90.0000000000002'
-            centerOfRotation='0 0 5'/>
+            orientation='0 1 0 -90.0000000000002'/>
         <Viewpoint DEF='BackView_1'
             description='Back View'
             position='0 0 -10'
-            orientation='0 1 0 180'
-            centerOfRotation='0 0 5'/>
+            orientation='0 1 0 180'/>
         <Viewpoint DEF='TopView_1'
             description='Top View'
             position='0 10 0'
-            orientation='1 0 0 -90'
-            centerOfRotation='0 0 5'/>
+            orientation='1 0 0 -90'/>
         <Viewpoint DEF='BottomView'
             description='Bottom View'
             position='0 -10 0'
-            orientation='1 0 0 90.0000000000002'
-            centerOfRotation='0 0 5'/>
+            orientation='1 0 0 90.0000000000002'/>
         <Transform DEF='Sound'
             center='0 0 10'>
           <Sound
