@@ -2,470 +2,34 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
 <X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
-    <component name='Geometry2D' level='2'/>
     <component name='Layering' level='1'/>
-    <component name='PointingDeviceSensor' level='1'/>
-    <component name='Scripting' level='1'/>
     <component name='Sound' level='3'/>
-    <component name='Text' level='1'/>
-    <component name='X_ITE' level='1'/>
     <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
     <meta name='comment' content='Rise and Shine'/>
     <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 20 Mar 2024 15:10:23 GMT'/>
+    <meta name='modified' content='Wed, 20 Mar 2024 18:12:26 GMT'/>
   </head>
   <Scene>
-    <ProtoDeclare name='RoundedRectangle2D'>
-      <ProtoInterface>
-        <field accessType='inputOutput' type='SFFloat' name='cornerRadius' value='1'/>
-        <field accessType='inputOutput' type='SFVec2f' name='size' value='2 2'/>
-        <field accessType='initializeOnly' type='SFBool' name='solid'/>
-      </ProtoInterface>
-      <ProtoBody>
-        <IndexedFaceSet DEF='Geometry'
-            normalPerVertex='false'>
-          <TextureCoordinate/>
-          <Coordinate/>
-        </IndexedFaceSet>
-        <Script DEF='RoundedRectangle2D'
-            directOutput='true'>
-          <field accessType='inputOutput' type='SFFloat' name='cornerRadius'/>
-          <field accessType='inputOutput' type='SFVec2f' name='size'/>
-          <field accessType='initializeOnly' type='SFFloat' name='cornerDimension' value='10'/>
-          <field accessType='inputOutput' type='SFBool' name='solid'/>
-          <field accessType='initializeOnly' type='SFNode' name='geometry'>
-            <IndexedFaceSet USE='Geometry'/>
-          </field>
-          <IS>
-            <connect nodeField='cornerRadius' protoField='cornerRadius'/>
-            <connect nodeField='size' protoField='size'/>
-            <connect nodeField='solid' protoField='solid'/>
-          </IS>
-<![CDATA[ecmascript:
-
-function initialize ()
-{
-	eventsProcessed ();
-}
-
-function eventsProcessed ()
-{
-	var radius = Math .min (Math .min (cornerRadius, size .x / 2), size .y / 2);
-
-	var
-		point         = new SFVec3f (radius, 0, 0),
-		startRotation = new SFRotation (0, 0, 1, 0),
-		endRotation   = new SFRotation (0, 0, 1, Math .PI / 2),
-		maxSize       = Math .max (size .x, size .y),
-		corner        = new MFVec3f (),
-		coordIndex    = new MFInt32 (),
-		coord         = geometry .coord .point,
-		texCoord      = geometry .texCoord .point;
-
-	coord    .length = 0;
-	texCoord .length = 0;
-
-	for (var i = 0, length = cornerDimension * 4; i < length; ++ i)
-		coordIndex [coordIndex .length] = i;
-		
-	coordIndex [coordIndex .length] = -1;
-
-	for (var i = 0; i < cornerDimension; ++i)
-		corner [i] = startRotation .slerp (endRotation, i / (cornerDimension - 1)) .multVec (point);
-	
-	var translation = new SFVec3f (size .x / 2 - radius, size .y / 2 - radius, 0);
-
-	for (var i = 0; i < cornerDimension; ++ i)
-		coord [coord .length] = corner [i] .add (translation);
-
-	var
-		translation = new SFVec3f (-size .x / 2 + radius, size .y / 2 - radius, 0),
-		rotation    = new SFRotation (0, 0, 1, Math .PI * 0.5);
-
-	for (var i = 0; i < cornerDimension; ++ i)
-		coord [coord .length] = rotation .multVec (corner [i]) .add (translation);
-
-	var
-		translation = new SFVec3f (-size .x / 2 + radius, -size .y / 2 + radius, 0),
-		rotation    = new SFRotation (0, 0, 1, Math .PI);
-
-	for (var i = 0; i < cornerDimension; ++ i)
-		coord [coord .length] = rotation .multVec (corner [i]) .add (translation);
-
-	var
-		translation = new SFVec3f (size .x / 2 - radius, -size .y / 2 + radius, 0),
-		rotation    = new SFRotation (0, 0, 1, Math .PI * 1.5);
-
-	for (var i = 0; i < cornerDimension; ++ i)
-		coord [coord .length] = rotation .multVec (corner [i]) .add (translation);
-
-	var maxSize1_2 = new SFVec3f (maxSize / 2, maxSize / 2, 0);
-
-	for (var i = 0, length = coord .length; i < length; ++ i)
-	{
-		var tex = coord [i] .add (maxSize1_2) .divide (maxSize);
-
-		texCoord [i] = new SFVec2f (tex .x, tex .y);
-	}
-
-	if (! solid)
-	{
-		for (var i = 0, length = cornerDimension * 4; i < length; ++ i)
-			coordIndex [coordIndex .length] = length - 1 - i;
-
-		coordIndex [coordIndex .length] = -1;
-	}
-
-	geometry .set_coordIndex = coordIndex;
-}
-]]>
-        </Script>
-      </ProtoBody>
-    </ProtoDeclare>
-    <ProtoDeclare name='State'>
-      <ProtoInterface>
-        <field accessType='inputOutput' type='SFString' name='description'/>
-        <field accessType='inputOutput' type='SFBool' name='value'/>
-      </ProtoInterface>
-      <ProtoBody>
-        <Group>
-          <Transform DEF='Text'
-              scale='0.0672307 0.0672307 0.0672307'>
-            <Shape>
-              <Text DEF='_2'
-                  solid='true'>
-                <FontStyle
-                    family='"SANS"'
-                    justify='"BEGIN", "MIDDLE"'/>
-              </Text>
-            </Shape>
-          </Transform>
-          <Transform DEF='Button'
-              translation='-1.1 0 0'>
-            <Group DEF='Knob'>
-              <Transform DEF='RoundedRectangle2D'
-                  translation='0.98 0 0'
-                  scale='0.027 0.027 0.027'>
-                <Shape>
-                  <Appearance>
-                    <Material
-                        diffuseColor='0.3568627 0.3568627 0.3568627'/>
-                  </Appearance>
-                  <ProtoInstance name='RoundedRectangle2D' containerField='geometry'>
-                    <fieldValue name='size' value='3.54 2'/>
-                  </ProtoInstance>
-                </Shape>
-              </Transform>
-              <Switch DEF='_10'
-                  whichChoice='0'>
-                <Transform DEF='False'
-                    translation='0.96 0 0'
-                    scale='0.027 0.0267372 0.0267372'>
-                  <Shape>
-                    <Appearance>
-                      <UnlitMaterial
-                          emissiveColor='0 0 0'/>
-                      <DepthMode DEF='_1'
-                          polygonOffset='-1 -1'/>
-                    </Appearance>
-                    <Disk2D DEF='_3'
-                        outerRadius='0.8'
-                        solid='true'/>
-                  </Shape>
-                </Transform>
-                <Transform DEF='True'
-                    translation='1 0 0'
-                    scale='0.027 0.0267372 0.0267372'>
-                  <Shape>
-                    <Appearance>
-                      <DepthMode USE='_1'/>
-                    </Appearance>
-                    <Disk2D USE='_3'/>
-                  </Shape>
-                </Transform>
-              </Switch>
-              <Script DEF='StateScript'>
-                <field accessType='inputOutput' type='SFString' name='description'/>
-                <field accessType='inputOutput' type='SFBool' name='value'/>
-                <field accessType='outputOnly' type='MFString' name='string_changed'/>
-                <field accessType='outputOnly' type='SFInt32' name='whichChoice_changed'/>
-                <IS>
-                  <connect nodeField='description' protoField='description'/>
-                  <connect nodeField='value' protoField='value'/>
-                </IS>
-<![CDATA[ecmascript:
-
-function initialize ()
-{
-   set_description ();
-   set_value ();
-}
-
-function set_description ()
-{
-   string_changed [0] = description;
-}
-
-function set_value ()
-{
-   whichChoice_changed = value;
-}]]>
-              </Script>
-            </Group>
-          </Transform>
-        </Group>
-        <ROUTE fromNode='StateScript' fromField='string_changed' toNode='_2' toField='set_string'/>
-        <ROUTE fromNode='StateScript' fromField='whichChoice_changed' toNode='_10' toField='set_whichChoice'/>
-      </ProtoBody>
-    </ProtoDeclare>
-    <ProtoDeclare name='Time'>
-      <ProtoInterface>
-        <field accessType='inputOutput' type='SFString' name='description'/>
-        <field accessType='inputOutput' type='SFTime' name='value'/>
-        <field accessType='inputOutput' type='SFInt32' name='precision' value='1'/>
-      </ProtoInterface>
-      <ProtoBody>
-        <Group>
-          <Transform DEF='Text_1'
-              scale='0.0672307 0.0672307 0.0672307'>
-            <Shape>
-              <Text DEF='_1'
-                  solid='true'>
-                <FontStyle
-                    family='"SANS"'
-                    justify='"BEGIN", "MIDDLE"'/>
-              </Text>
-            </Shape>
-          </Transform>
-          <Transform DEF='Time'
-              translation='-1.1 0 0'
-              center='0 -0.027 0'>
-            <Transform DEF='Text'
-                translation='1 0 0'
-                scale='0.0672307 0.0672307 0.0672307'>
-              <Shape>
-                <Text DEF='_3'
-                    solid='true'>
-                  <FontStyle
-                      family='"SANS"'
-                      justify='"END", "MIDDLE"'/>
-                </Text>
-              </Shape>
-            </Transform>
-            <Script DEF='TimeScript'>
-              <field accessType='inputOutput' type='SFString' name='description'/>
-              <field accessType='inputOutput' type='SFTime' name='value'/>
-              <field accessType='inputOutput' type='SFInt32' name='precision'/>
-              <field accessType='outputOnly' type='MFString' name='string_changed'/>
-              <field accessType='outputOnly' type='MFString' name='number_changed'/>
-              <IS>
-                <connect nodeField='description' protoField='description'/>
-                <connect nodeField='value' protoField='value'/>
-                <connect nodeField='precision' protoField='precision'/>
-              </IS>
-<![CDATA[ecmascript:
-
-function initialize ()
-{
-   set_description ();
-   set_value (value);
-}
-
-function set_description ()
-{
-   string_changed [0] = description;
-}
-
-function set_value (value)
-{
-   number_changed [0] = value .toFixed (precision);
-}
-
-function set_precision ()
-{
-   set_value (value);
-}
-]]>
-            </Script>
-          </Transform>
-        </Group>
-        <ROUTE fromNode='TimeScript' fromField='string_changed' toNode='_1' toField='set_string'/>
-        <ROUTE fromNode='TimeScript' fromField='number_changed' toNode='_3' toField='set_string'/>
-      </ProtoBody>
-    </ProtoDeclare>
-    <ProtoDeclare name='Button'>
-      <ProtoInterface>
-        <field accessType='inputOutput' type='SFString' name='description'/>
-        <field accessType='outputOnly' type='SFTime' name='touchTime'/>
-      </ProtoInterface>
-      <ProtoBody>
-        <Group>
-          <Transform DEF='Text'
-              scale='0.0672307 0.0672307 0.0672307'>
-            <Shape>
-              <Text DEF='_2'
-                  solid='true'>
-                <FontStyle
-                    family='"SANS"'
-                    justify='"BEGIN", "MIDDLE"'/>
-              </Text>
-            </Shape>
-          </Transform>
-          <Transform DEF='Button'
-              translation='-1.1 0 0'>
-            <Group DEF='Knob'>
-              <Transform DEF='Rectangle2D'
-                  translation='1 0 0'
-                  scale='0.027 0.0267372 0.0267372'>
-                <Shape>
-                  <Rectangle2D
-                      solid='true'/>
-                </Shape>
-              </Transform>
-              <TouchSensor>
-                <IS>
-                  <connect nodeField='touchTime' protoField='touchTime'/>
-                </IS>
-              </TouchSensor>
-              <Script DEF='ButtonScript'>
-                <field accessType='inputOutput' type='SFString' name='description'/>
-                <field accessType='outputOnly' type='MFString' name='string_changed'/>
-                <IS>
-                  <connect nodeField='description' protoField='description'/>
-                </IS>
-<![CDATA[ecmascript:
-
-function initialize ()
-{
-   set_description ();
-}
-
-function set_description ()
-{
-   string_changed [0] = description;
-}]]>
-              </Script>
-            </Group>
-          </Transform>
-        </Group>
-        <ROUTE fromNode='ButtonScript' fromField='string_changed' toNode='_2' toField='set_string'/>
-      </ProtoBody>
-    </ProtoDeclare>
-    <ProtoDeclare name='Toggle'>
-      <ProtoInterface>
-        <field accessType='inputOutput' type='SFString' name='description'/>
-        <field accessType='inputOutput' type='SFBool' name='initialValue'/>
-        <field accessType='outputOnly' type='SFBool' name='value_changed'/>
-      </ProtoInterface>
-      <ProtoBody>
-        <Group>
-          <Transform DEF='Text'
-              scale='0.0672307 0.0672307 0.0672307'>
-            <Shape>
-              <Text DEF='_2'
-                  solid='true'>
-                <FontStyle
-                    family='"SANS"'
-                    justify='"BEGIN", "MIDDLE"'/>
-              </Text>
-            </Shape>
-          </Transform>
-          <Transform DEF='Button'
-              translation='-1.1 0 0'>
-            <Group DEF='Knob'>
-              <Transform DEF='RoundedRectangle2D'
-                  translation='0.98 0 0'
-                  scale='0.027 0.027 0.027'>
-                <Shape>
-                  <Appearance>
-                    <Material
-                        diffuseColor='0.3568627 0.3568627 0.3568627'/>
-                  </Appearance>
-                  <ProtoInstance name='RoundedRectangle2D' containerField='geometry'>
-                    <fieldValue name='size' value='3.54 2'/>
-                  </ProtoInstance>
-                </Shape>
-              </Transform>
-              <Switch DEF='_10'
-                  whichChoice='0'>
-                <Transform DEF='False'
-                    translation='0.96 0 0'
-                    scale='0.027 0.0267372 0.0267372'>
-                  <Shape>
-                    <Appearance>
-                      <UnlitMaterial
-                          emissiveColor='0 0 0'/>
-                      <DepthMode DEF='_1'
-                          polygonOffset='-1 -1'/>
-                    </Appearance>
-                    <Disk2D DEF='_3'
-                        outerRadius='0.8'
-                        solid='true'/>
-                  </Shape>
-                </Transform>
-                <Transform DEF='True'
-                    translation='1 0 0'
-                    scale='0.027 0.0267372 0.0267372'>
-                  <Shape>
-                    <Appearance>
-                      <DepthMode USE='_1'/>
-                    </Appearance>
-                    <Disk2D USE='_3'/>
-                  </Shape>
-                </Transform>
-              </Switch>
-              <TouchSensor DEF='_4'/>
-              <Script DEF='ToggleScript'>
-                <field accessType='inputOnly' type='SFTime' name='set_time'/>
-                <field accessType='inputOutput' type='SFString' name='description'/>
-                <field accessType='inputOutput' type='SFBool' name='initialValue'/>
-                <field accessType='outputOnly' type='MFString' name='string_changed'/>
-                <field accessType='outputOnly' type='SFInt32' name='whichChoice_changed'/>
-                <field accessType='outputOnly' type='SFBool' name='value_changed'/>
-                <IS>
-                  <connect nodeField='description' protoField='description'/>
-                  <connect nodeField='initialValue' protoField='initialValue'/>
-                  <connect nodeField='value_changed' protoField='value_changed'/>
-                </IS>
-<![CDATA[ecmascript:
-
-function initialize ()
-{
-   set_description ();
-   set_initialValue (initialValue);
-}
-
-function set_time ()
-{
-   set_currentValue (!value_changed);
-}
-
-function set_description ()
-{
-   string_changed [0] = description;
-}
-
-function set_initialValue (value)
-{
-   set_currentValue (value);
-}
-
-function set_currentValue (value)
-{
-   whichChoice_changed = value;
-   value_changed       = value;
-}]]>
-              </Script>
-            </Group>
-          </Transform>
-        </Group>
-        <ROUTE fromNode='ToggleScript' fromField='string_changed' toNode='_2' toField='set_string'/>
-        <ROUTE fromNode='ToggleScript' fromField='whichChoice_changed' toNode='_10' toField='set_whichChoice'/>
-        <ROUTE fromNode='_4' fromField='touchTime' toNode='ToggleScript' toField='set_time'/>
-      </ProtoBody>
-    </ProtoDeclare>
+    <ExternProtoDeclare name='State' url='"../PROTO/Buttons.x3d#State", "file:///Volumes/Home/Projekte/Library/Tests/Components/PROTO/Buttons.x3d#State"'>
+      <field accessType='inputOutput' type='SFString' name='description'/>
+      <field accessType='inputOutput' type='SFBool' name='value'/>
+    </ExternProtoDeclare>
+    <ExternProtoDeclare name='Time' url='"../PROTO/Buttons.x3d#Time", "file:///Volumes/Home/Projekte/Library/Tests/Components/PROTO/Buttons.x3d#Time"'>
+      <field accessType='inputOutput' type='SFString' name='description'/>
+      <field accessType='inputOutput' type='SFTime' name='value'/>
+      <field accessType='inputOutput' type='SFInt32' name='precision'/>
+    </ExternProtoDeclare>
+    <ExternProtoDeclare name='Button' url='"../PROTO/Buttons.x3d#Button", "file:///Volumes/Home/Projekte/Library/Tests/Components/PROTO/Buttons.x3d#Button"'>
+      <field accessType='inputOutput' type='SFString' name='description'/>
+      <field accessType='outputOnly' type='SFTime' name='touchTime'/>
+    </ExternProtoDeclare>
+    <ExternProtoDeclare name='Toggle' url='"../PROTO/Buttons.x3d#Toggle", "file:///Volumes/Home/Projekte/Library/Tests/Components/PROTO/Buttons.x3d#Toggle"'>
+      <field accessType='inputOutput' type='SFString' name='description'/>
+      <field accessType='inputOutput' type='SFBool' name='initialValue'/>
+      <field accessType='outputOnly' type='SFBool' name='value_changed'/>
+    </ExternProtoDeclare>
     <LayerSet
         activeLayer='1'
         order='0, 1, 2'>
@@ -504,7 +68,6 @@ function set_currentValue (value)
             position='0 -10 0'
             orientation='1 0 0 90.0000000000002'/>
         <Transform DEF='Sound'
-            rotation='0 0 0 360'
             center='0 0 10'>
           <Sound
               maxBack='20'
@@ -640,18 +203,19 @@ function set_currentValue (value)
             translation='1 -0.8 -0'>
           <ProtoInstance name='Time' DEF='_10'>
             <fieldValue name='description' value='duration'/>
+            <fieldValue name='value' value='16.74315192743764'/>
           </ProtoInstance>
         </Transform>
       </Layer>
     </LayerSet>
-    <ROUTE fromNode='_6' fromField='touchTime' toNode='Song' toField='set_stopTime'/>
-    <ROUTE fromNode='_8' fromField='touchTime' toNode='Song' toField='set_startTime'/>
-    <ROUTE fromNode='_7' fromField='value_changed' toNode='Song' toField='set_loop'/>
-    <ROUTE fromNode='Song' fromField='elapsedTime' toNode='_9' toField='set_value'/>
-    <ROUTE fromNode='Song' fromField='duration_changed' toNode='_10' toField='set_value'/>
-    <ROUTE fromNode='Song' fromField='isActive' toNode='_2' toField='set_value'/>
     <ROUTE fromNode='_3' fromField='fraction_changed' toNode='_4' toField='set_fraction'/>
     <ROUTE fromNode='_4' fromField='value_changed' toNode='Sound' toField='set_rotation'/>
+    <ROUTE fromNode='Song' fromField='isActive' toNode='_2' toField='set_value'/>
+    <ROUTE fromNode='Song' fromField='elapsedTime' toNode='_9' toField='set_value'/>
+    <ROUTE fromNode='Song' fromField='duration_changed' toNode='_10' toField='set_value'/>
+    <ROUTE fromNode='_8' fromField='touchTime' toNode='Song' toField='set_startTime'/>
+    <ROUTE fromNode='_6' fromField='touchTime' toNode='Song' toField='set_stopTime'/>
     <ROUTE fromNode='_1' fromField='value_changed' toNode='_3' toField='set_loop'/>
+    <ROUTE fromNode='_7' fromField='value_changed' toNode='Song' toField='set_loop'/>
   </Scene>
 </X3D>
