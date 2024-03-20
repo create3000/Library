@@ -14,7 +14,7 @@
     <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 20 Mar 2024 12:10:18 GMT'/>
+    <meta name='modified' content='Wed, 20 Mar 2024 14:43:33 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='RoundedRectangle2D'>
@@ -494,6 +494,7 @@ function set_currentValue (value)
             position='0 -10 0'
             orientation='1 0 0 90.0000000000002'/>
         <Transform DEF='Sound'
+            rotation='0 0 0 360'
             center='0 0 10'>
           <Sound
               maxBack='20'
@@ -546,7 +547,7 @@ function set_currentValue (value)
               <Box/>
             </Shape>
           </Transform>
-          <Transform DEF='TopBox_1'
+          <Transform DEF='TopBox'
               translation='0 2 0'>
             <Shape>
               <Appearance>
@@ -582,19 +583,18 @@ function set_currentValue (value)
           </MetadataSet>
         </MetadataSet>
         <OrthoViewpoint/>
-        <Transform DEF='Animation'
+        <Transform DEF='Animation_2'
             translation='1 -0.3 -0'>
-          <ProtoInstance name='Button'>
-            <fieldValue name='description' value='animation'/>
-          </ProtoInstance>
           <Group DEF='Animation_1'>
             <TimeSensor DEF='_3'
-                cycleInterval='10'
-                startTime='1710879711.654'/>
+                cycleInterval='10'/>
             <OrientationInterpolator DEF='_4'
                 key='0, 0.25, 0.5, 0.75, 1'
                 keyValue='0 1 0 0, 0 1 0 90.0000000000002, 0 1 0 180, 0 1 0 270, 0 0 1 0'/>
           </Group>
+          <ProtoInstance name='Toggle' DEF='_1'>
+            <fieldValue name='description' value='animation'/>
+          </ProtoInstance>
         </Transform>
         <Transform DEF='Loop_1'
             translation='1 -0.4 -0'>
@@ -616,19 +616,19 @@ function set_currentValue (value)
         </Transform>
         <Transform DEF='Active'
             translation='1 -0.7 -0'>
-          <ProtoInstance name='State' DEF='_1'>
+          <ProtoInstance name='State' DEF='_2'>
             <fieldValue name='description' value='isActive'/>
           </ProtoInstance>
         </Transform>
         <Transform DEF='ElapsedTime_3'
             translation='1 -0.9 -0'>
-          <ProtoInstance name='Time' DEF='_2'>
+          <ProtoInstance name='Time' DEF='_9'>
             <fieldValue name='description' value='elapsedTime'/>
           </ProtoInstance>
         </Transform>
         <Transform DEF='Duration'
             translation='1 -0.8 -0'>
-          <ProtoInstance name='Time' DEF='_9'>
+          <ProtoInstance name='Time' DEF='_10'>
             <fieldValue name='description' value='duration'/>
           </ProtoInstance>
         </Transform>
@@ -637,10 +637,11 @@ function set_currentValue (value)
     <ROUTE fromNode='_6' fromField='touchTime' toNode='Song' toField='set_stopTime'/>
     <ROUTE fromNode='_8' fromField='touchTime' toNode='Song' toField='set_startTime'/>
     <ROUTE fromNode='_7' fromField='value_changed' toNode='Song' toField='set_loop'/>
-    <ROUTE fromNode='Song' fromField='elapsedTime' toNode='_2' toField='set_value'/>
-    <ROUTE fromNode='Song' fromField='duration_changed' toNode='_9' toField='set_value'/>
-    <ROUTE fromNode='Song' fromField='isActive' toNode='_1' toField='set_value'/>
+    <ROUTE fromNode='Song' fromField='elapsedTime' toNode='_9' toField='set_value'/>
+    <ROUTE fromNode='Song' fromField='duration_changed' toNode='_10' toField='set_value'/>
+    <ROUTE fromNode='Song' fromField='isActive' toNode='_2' toField='set_value'/>
     <ROUTE fromNode='_3' fromField='fraction_changed' toNode='_4' toField='set_fraction'/>
     <ROUTE fromNode='_4' fromField='value_changed' toNode='Sound' toField='set_rotation'/>
+    <ROUTE fromNode='_1' fromField='value_changed' toNode='_3' toField='set_loop'/>
   </Scene>
 </X3D>
