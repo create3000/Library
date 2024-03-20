@@ -14,67 +14,9 @@
     <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 20 Mar 2024 10:06:17 GMT'/>
+    <meta name='modified' content='Wed, 20 Mar 2024 10:32:51 GMT'/>
   </head>
   <Scene>
-    <ProtoDeclare name='Button'>
-      <ProtoInterface>
-        <field accessType='inputOutput' type='SFString' name='description'/>
-        <field accessType='outputOnly' type='SFTime' name='touchTime'/>
-      </ProtoInterface>
-      <ProtoBody>
-        <Group>
-          <Transform DEF='Text'
-              scale='0.0672307 0.0672307 0.0672307'>
-            <Shape>
-              <Text DEF='_2'
-                  solid='true'>
-                <FontStyle
-                    family='"SANS"'
-                    justify='"BEGIN", "MIDDLE"'/>
-              </Text>
-            </Shape>
-          </Transform>
-          <Transform DEF='Button'
-              translation='-1.1 0 0'>
-            <Group DEF='Knob'>
-              <Transform DEF='Rectangle2D'
-                  translation='1 0 0'
-                  scale='0.027 0.0267372 0.0267372'>
-                <Shape>
-                  <Rectangle2D
-                      solid='true'/>
-                </Shape>
-              </Transform>
-              <TouchSensor>
-                <IS>
-                  <connect nodeField='touchTime' protoField='touchTime'/>
-                </IS>
-              </TouchSensor>
-              <Script DEF='ButtonScript'>
-                <field accessType='inputOutput' type='SFString' name='description'/>
-                <field accessType='outputOnly' type='MFString' name='string_changed'/>
-                <IS>
-                  <connect nodeField='description' protoField='description'/>
-                </IS>
-<![CDATA[ecmascript:
-
-function initialize ()
-{
-   set_description ();
-}
-
-function set_description ()
-{
-   string_changed [0] = description;
-}]]>
-              </Script>
-            </Group>
-          </Transform>
-        </Group>
-        <ROUTE fromNode='ButtonScript' fromField='string_changed' toNode='_2' toField='set_string'/>
-      </ProtoBody>
-    </ProtoDeclare>
     <ProtoDeclare name='RoundedRectangle2D'>
       <ProtoInterface>
         <field accessType='inputOutput' type='SFFloat' name='cornerRadius' value='1'/>
@@ -180,6 +122,235 @@ function eventsProcessed ()
 }
 ]]>
         </Script>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare name='State'>
+      <ProtoInterface>
+        <field accessType='inputOutput' type='SFString' name='description'/>
+        <field accessType='inputOutput' type='SFBool' name='value'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Group>
+          <Transform DEF='Text'
+              scale='0.0672307 0.0672307 0.0672307'>
+            <Shape>
+              <Text DEF='_2'
+                  solid='true'>
+                <FontStyle
+                    family='"SANS"'
+                    justify='"BEGIN", "MIDDLE"'/>
+              </Text>
+            </Shape>
+          </Transform>
+          <Transform DEF='Button'
+              translation='-1.1 0 0'>
+            <Group DEF='Knob'>
+              <Transform DEF='RoundedRectangle2D'
+                  translation='0.98 0 0'
+                  scale='0.027 0.027 0.027'>
+                <Shape>
+                  <Appearance>
+                    <Material
+                        diffuseColor='0.3568627 0.3568627 0.3568627'/>
+                  </Appearance>
+                  <ProtoInstance name='RoundedRectangle2D' containerField='geometry'>
+                    <fieldValue name='size' value='3.54 2'/>
+                  </ProtoInstance>
+                </Shape>
+              </Transform>
+              <Switch DEF='_10'
+                  whichChoice='0'>
+                <Transform DEF='False'
+                    translation='0.96 0 0'
+                    scale='0.027 0.0267372 0.0267372'>
+                  <Shape>
+                    <Appearance>
+                      <UnlitMaterial
+                          emissiveColor='0 0 0'/>
+                      <DepthMode DEF='_1'
+                          polygonOffset='-1 -1'/>
+                    </Appearance>
+                    <Disk2D DEF='_3'
+                        outerRadius='0.8'
+                        solid='true'/>
+                  </Shape>
+                </Transform>
+                <Transform DEF='True'
+                    translation='1 0 0'
+                    scale='0.027 0.0267372 0.0267372'>
+                  <Shape>
+                    <Appearance>
+                      <DepthMode USE='_1'/>
+                    </Appearance>
+                    <Disk2D USE='_3'/>
+                  </Shape>
+                </Transform>
+              </Switch>
+              <Script DEF='StateScript'>
+                <field accessType='inputOutput' type='SFString' name='description'/>
+                <field accessType='inputOutput' type='SFBool' name='value'/>
+                <field accessType='outputOnly' type='MFString' name='string_changed'/>
+                <field accessType='outputOnly' type='SFInt32' name='whichChoice_changed'/>
+                <IS>
+                  <connect nodeField='description' protoField='description'/>
+                  <connect nodeField='value' protoField='value'/>
+                </IS>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+   set_description ();
+   set_value ();
+}
+
+function set_description ()
+{
+   string_changed [0] = description;
+}
+
+function set_value ()
+{
+   whichChoice_changed = value;
+}]]>
+              </Script>
+            </Group>
+          </Transform>
+        </Group>
+        <ROUTE fromNode='StateScript' fromField='string_changed' toNode='_2' toField='set_string'/>
+        <ROUTE fromNode='StateScript' fromField='whichChoice_changed' toNode='_10' toField='set_whichChoice'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare name='Time'>
+      <ProtoInterface>
+        <field accessType='inputOutput' type='SFString' name='description'/>
+        <field accessType='inputOutput' type='SFTime' name='value'/>
+        <field accessType='inputOutput' type='SFInt32' name='precision' value='1'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Group>
+          <Transform DEF='Text_1'
+              scale='0.0672307 0.0672307 0.0672307'>
+            <Shape>
+              <Text DEF='_1'
+                  solid='true'>
+                <FontStyle
+                    family='"SANS"'
+                    justify='"BEGIN", "MIDDLE"'/>
+              </Text>
+            </Shape>
+          </Transform>
+          <Transform DEF='Time'
+              translation='-1.1 0 0'
+              center='0 -0.027 0'>
+            <Transform DEF='Text'
+                translation='1 0 0'
+                scale='0.0672307 0.0672307 0.0672307'>
+              <Shape>
+                <Text DEF='_3'
+                    solid='true'>
+                  <FontStyle
+                      family='"SANS"'
+                      justify='"END", "MIDDLE"'/>
+                </Text>
+              </Shape>
+            </Transform>
+            <Script DEF='TimeScript'>
+              <field accessType='inputOutput' type='SFString' name='description'/>
+              <field accessType='inputOutput' type='SFTime' name='value'/>
+              <field accessType='inputOutput' type='SFInt32' name='precision'/>
+              <field accessType='outputOnly' type='MFString' name='string_changed'/>
+              <field accessType='outputOnly' type='MFString' name='number_changed'/>
+              <IS>
+                <connect nodeField='description' protoField='description'/>
+                <connect nodeField='value' protoField='value'/>
+                <connect nodeField='precision' protoField='precision'/>
+              </IS>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+   set_description ();
+   set_value (value);
+}
+
+function set_description ()
+{
+   string_changed [0] = description;
+}
+
+function set_value (value)
+{
+   number_changed [0] = value .toFixed (precision);
+}
+
+function set_precision ()
+{
+   set_value (value);
+}
+]]>
+            </Script>
+          </Transform>
+        </Group>
+        <ROUTE fromNode='TimeScript' fromField='string_changed' toNode='_1' toField='set_string'/>
+        <ROUTE fromNode='TimeScript' fromField='number_changed' toNode='_3' toField='set_string'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare name='Button'>
+      <ProtoInterface>
+        <field accessType='inputOutput' type='SFString' name='description'/>
+        <field accessType='outputOnly' type='SFTime' name='touchTime'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Group>
+          <Transform DEF='Text'
+              scale='0.0672307 0.0672307 0.0672307'>
+            <Shape>
+              <Text DEF='_2'
+                  solid='true'>
+                <FontStyle
+                    family='"SANS"'
+                    justify='"BEGIN", "MIDDLE"'/>
+              </Text>
+            </Shape>
+          </Transform>
+          <Transform DEF='Button'
+              translation='-1.1 0 0'>
+            <Group DEF='Knob'>
+              <Transform DEF='Rectangle2D'
+                  translation='1 0 0'
+                  scale='0.027 0.0267372 0.0267372'>
+                <Shape>
+                  <Rectangle2D
+                      solid='true'/>
+                </Shape>
+              </Transform>
+              <TouchSensor>
+                <IS>
+                  <connect nodeField='touchTime' protoField='touchTime'/>
+                </IS>
+              </TouchSensor>
+              <Script DEF='ButtonScript'>
+                <field accessType='inputOutput' type='SFString' name='description'/>
+                <field accessType='outputOnly' type='MFString' name='string_changed'/>
+                <IS>
+                  <connect nodeField='description' protoField='description'/>
+                </IS>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+   set_description ();
+}
+
+function set_description ()
+{
+   string_changed [0] = description;
+}]]>
+              </Script>
+            </Group>
+          </Transform>
+        </Group>
+        <ROUTE fromNode='ButtonScript' fromField='string_changed' toNode='_2' toField='set_string'/>
       </ProtoBody>
     </ProtoDeclare>
     <ProtoDeclare name='Toggle'>
@@ -295,74 +466,10 @@ function set_currentValue (value)
         <ROUTE fromNode='_4' fromField='touchTime' toNode='ToggleScript' toField='set_time'/>
       </ProtoBody>
     </ProtoDeclare>
-    <Transform DEF='ElapsedTime_1'
-        translation='0 2 0'>
-      <Shape>
-        <Appearance>
-          <Material/>
-        </Appearance>
-        <Text DEF='ElapsedTime'
-            string='"16.8"'/>
-      </Shape>
-    </Transform>
-    <Transform DEF='StartAnimation'
-        translation='-2 -1.5 0'
-        scale='0.2 0.2 0.2'>
-      <TouchSensor DEF='_2'
-          description='Start Animation'/>
-      <Shape>
-        <Appearance>
-          <Material
-              diffuseColor='0.1607843 0.5254902 0.8'/>
-        </Appearance>
-        <Box/>
-      </Shape>
-      <TimeSensor DEF='_3'
-          cycleInterval='10'
-          startTime='1710879711.654'/>
-      <OrientationInterpolator DEF='_4'
-          key='0, 0.25, 0.5, 0.75, 1'
-          keyValue='0 1 0 0, 0 1 0 90.0000000000002, 0 1 0 180, 0 1 0 270, 0 0 1 0'/>
-    </Transform>
-    <Script DEF='Debug'>
-      <field accessType='inputOnly' type='SFTime' name='set_startTime'/>
-      <field accessType='inputOnly' type='SFTime' name='set_stopTime'/>
-      <field accessType='inputOnly' type='SFBool' name='set_active'/>
-      <field accessType='inputOnly' type='SFTime' name='set_elapsedTime'/>
-      <field accessType='inputOnly' type='SFTime' name='set_duration'/>
-      <field accessType='outputOnly' type='MFString' name='string_changed'/>
-<![CDATA[vrmlscript:
-
-function set_startTime (value, time)
-{
-	print ('Play: ', time)
-}
-
-function set_stopTime (value, time)
-{
-	print ('Stop: ', time)
-}
-
-function set_active (value, time)
-{
-	print ('isActive: ', value)
-}
-
-function set_elapsedTime (value, time)
-{
-	string_changed = new MFString (Math .round (value * 10) / 10);
-}
-
-function set_duration (value, time)
-{
-	print ('Duration: ', value)
-}
-  ]]>
-    </Script>
     <LayerSet
-        activeLayer='2'
+        activeLayer='1'
         order='0, 1, 2'>
-      <Layer>
+      <Layer DEF='Sound_1'>
         <Viewpoint DEF='FrontView_1'
             description='Front View'
             centerOfRotation='0 0 5'/>
@@ -428,7 +535,7 @@ function set_duration (value, time)
           </Collision>
         </Transform>
       </Layer>
-      <Layer>
+      <Layer DEF='HUD'>
         <MetadataSet containerField='metadata'
             name='Sunrize'
             reference='https://create3000.github.io/sunrize/'>
@@ -452,35 +559,65 @@ function set_duration (value, time)
           </MetadataSet>
         </MetadataSet>
         <OrthoViewpoint/>
+        <Transform DEF='Animation'
+            translation='1 -0.3 -0'>
+          <ProtoInstance name='Button'>
+            <fieldValue name='description' value='animation'/>
+          </ProtoInstance>
+          <Group DEF='Animation_1'>
+            <TimeSensor DEF='_3'
+                cycleInterval='10'
+                startTime='1710879711.654'/>
+            <OrientationInterpolator DEF='_4'
+                key='0, 0.25, 0.5, 0.75, 1'
+                keyValue='0 1 0 0, 0 1 0 90.0000000000002, 0 1 0 180, 0 1 0 270, 0 0 1 0'/>
+          </Group>
+        </Transform>
         <Transform DEF='Loop_1'
-            translation='1 -0.7 0'>
-          <ProtoInstance name='Toggle' DEF='_1'>
+            translation='1 -0.4 -0'>
+          <ProtoInstance name='Toggle' DEF='_7'>
             <fieldValue name='description' value='loop'/>
           </ProtoInstance>
         </Transform>
-        <Transform DEF='StartTime'
-            translation='1 -0.8 0'>
-          <ProtoInstance name='Button' DEF='_5'>
+        <Transform DEF='StartTime_1'
+            translation='1 -0.5 -0'>
+          <ProtoInstance name='Button' DEF='_8'>
             <fieldValue name='description' value='startTime'/>
           </ProtoInstance>
         </Transform>
         <Transform DEF='StopTime_1'
-            translation='1 -0.9 0'>
+            translation='1 -0.6 -0'>
           <ProtoInstance name='Button' DEF='_6'>
             <fieldValue name='description' value='stopTime'/>
           </ProtoInstance>
         </Transform>
+        <Transform DEF='Active'
+            translation='1 -0.7 -0'>
+          <ProtoInstance name='State' DEF='_1'>
+            <fieldValue name='description' value='isActive'/>
+          </ProtoInstance>
+        </Transform>
+        <Transform DEF='ElapsedTime_3'
+            translation='1 -0.9 -0'>
+          <ProtoInstance name='Time' DEF='_2'>
+            <fieldValue name='description' value='elapsedTime'/>
+          </ProtoInstance>
+        </Transform>
+        <Transform DEF='Duration'
+            translation='1 -0.8 -0'>
+          <ProtoInstance name='Time' DEF='_9'>
+            <fieldValue name='description' value='duration'/>
+          </ProtoInstance>
+        </Transform>
       </Layer>
     </LayerSet>
-    <ROUTE fromNode='Song' fromField='isActive' toNode='Debug' toField='set_active'/>
-    <ROUTE fromNode='Song' fromField='elapsedTime' toNode='Debug' toField='set_elapsedTime'/>
-    <ROUTE fromNode='Song' fromField='duration_changed' toNode='Debug' toField='set_duration'/>
-    <ROUTE fromNode='Debug' fromField='string_changed' toNode='ElapsedTime' toField='set_string'/>
+    <ROUTE fromNode='_6' fromField='touchTime' toNode='Song' toField='set_stopTime'/>
+    <ROUTE fromNode='_8' fromField='touchTime' toNode='Song' toField='set_startTime'/>
+    <ROUTE fromNode='_7' fromField='value_changed' toNode='Song' toField='set_loop'/>
+    <ROUTE fromNode='Song' fromField='elapsedTime' toNode='_2' toField='set_value'/>
+    <ROUTE fromNode='Song' fromField='duration_changed' toNode='_9' toField='set_value'/>
+    <ROUTE fromNode='Song' fromField='isActive' toNode='_1' toField='set_value'/>
     <ROUTE fromNode='_3' fromField='fraction_changed' toNode='_4' toField='set_fraction'/>
     <ROUTE fromNode='_4' fromField='value_changed' toNode='Sound' toField='set_rotation'/>
-    <ROUTE fromNode='_2' fromField='touchTime' toNode='_3' toField='set_startTime'/>
-    <ROUTE fromNode='_6' fromField='touchTime' toNode='Song' toField='set_stopTime'/>
-    <ROUTE fromNode='_5' fromField='touchTime' toNode='Song' toField='set_startTime'/>
-    <ROUTE fromNode='_1' fromField='value_changed' toNode='Song' toField='set_loop'/>
   </Scene>
 </X3D>
