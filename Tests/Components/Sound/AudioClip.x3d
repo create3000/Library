@@ -14,7 +14,7 @@
     <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 20 Mar 2024 14:48:06 GMT'/>
+    <meta name='modified' content='Wed, 20 Mar 2024 15:06:50 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='RoundedRectangle2D'>
@@ -472,7 +472,7 @@ function set_currentValue (value)
       <Layer DEF='Sound_1'>
         <Viewpoint DEF='FrontView_1'
             description='Front View'/>
-        <Viewpoint DEF='FrontView180_1'
+        <Viewpoint DEF='FrontView180'
             description='Front. View 180'
             orientation='0 1 0 180'/>
         <Viewpoint DEF='RightView'
@@ -487,11 +487,11 @@ function set_currentValue (value)
         <Viewpoint DEF='LeftView180'
             description='Left View 180°'
             orientation='0 1 0 90.0000000000002'/>
-        <Viewpoint DEF='BackView_1'
+        <Viewpoint DEF='BackView'
             description='Back View'
             position='0 0 -10'
             orientation='0 1 0 180'/>
-        <Viewpoint DEF='TopView_1'
+        <Viewpoint DEF='TopView'
             description='Top View'
             position='0 10 0'
             orientation='1 0 0 -90'/>
@@ -499,6 +499,10 @@ function set_currentValue (value)
             description='Bottom View'
             position='0 -10 0'
             orientation='1 0 0 90.0000000000002'/>
+        <Viewpoint DEF='TopView90_1'
+            description='Top View 90°'
+            position='0 10 0'
+            orientation='0.577350269189627 -0.577350269189627 -0.577350269189624 240'/>
         <Transform DEF='Sound'
             rotation='0 0 0 360'
             center='0 0 10'>
@@ -589,7 +593,7 @@ function set_currentValue (value)
           </MetadataSet>
         </MetadataSet>
         <OrthoViewpoint/>
-        <Transform DEF='Animation_2'
+        <Transform DEF='Animation'
             translation='1 -0.3 -0'>
           <Group DEF='Animation_1'>
             <TimeSensor DEF='_3'
