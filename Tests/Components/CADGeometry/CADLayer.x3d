@@ -4,10 +4,8 @@
   <head>
     <component name='CADGeometry' level='2'/>
     <component name='PointingDeviceSensor' level='1'/>
-    <meta name='comment' content='World of Sunrise X3D Editor'/>
     <meta name='created' content='Sat, 24 Feb 2018 08:05:38 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Sunrise X3D Editor V1.0, https://create3000.github.io/Sunrise/'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///Volumes/Home/Projekte/Library/Tests/Components/CADGeometry/CADLayer.x3d'/>
     <meta name='modified' content='Thu, 21 Mar 2024 22:29:36 GMT'/>
