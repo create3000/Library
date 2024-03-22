@@ -9,7 +9,7 @@
     <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 20 Mar 2024 22:56:53 GMT'/>
+    <meta name='modified' content='Fri, 22 Mar 2024 11:10:23 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='State' url='"../PROTO/Buttons.x3d#State", "file:///Volumes/Home/Projekte/Library/Tests/Components/PROTO/Buttons.x3d#State"'>
@@ -183,6 +183,13 @@
           </MetadataSet>
         </MetadataSet>
         <OrthoViewpoint/>
+        <Transform DEF='Visible'
+            translation='1 -0.2 -0'>
+          <ProtoInstance name='Toggle' DEF='_1'>
+            <fieldValue name='description' value='visible'/>
+            <fieldValue name='initialValue' value='true'/>
+          </ProtoInstance>
+        </Transform>
         <Transform DEF='Animation'
             translation='1 -0.3 -0'>
           <Group DEF='Animation_1'>
@@ -196,9 +203,9 @@
             <fieldValue name='description' value='animation'/>
           </ProtoInstance>
         </Transform>
-        <Transform DEF='Loop_1'
+        <Transform DEF='Loop'
             translation='1 -0.4 -0'>
-          <ProtoInstance name='Toggle' DEF='_1'>
+          <ProtoInstance name='Toggle' DEF='_17'>
             <fieldValue name='description' value='loop'/>
           </ProtoInstance>
         </Transform>
@@ -224,6 +231,7 @@
             translation='1 -0.9 -0'>
           <ProtoInstance name='Time' DEF='_16'>
             <fieldValue name='description' value='elapsedTime'/>
+            <fieldValue name='value' value='16.850000143051147'/>
           </ProtoInstance>
         </Transform>
         <Transform DEF='Duration'
@@ -243,6 +251,7 @@
     <ROUTE fromNode='_8' fromField='touchTime' toNode='Song' toField='set_startTime'/>
     <ROUTE fromNode='_12' fromField='touchTime' toNode='Song' toField='set_stopTime'/>
     <ROUTE fromNode='_11' fromField='value_changed' toNode='_3' toField='set_loop'/>
-    <ROUTE fromNode='_1' fromField='value_changed' toNode='Song' toField='set_loop'/>
+    <ROUTE fromNode='_17' fromField='value_changed' toNode='Song' toField='set_loop'/>
+    <ROUTE fromNode='_1' fromField='value_changed' toNode='Sound' toField='set_visible'/>
   </Scene>
 </X3D>
