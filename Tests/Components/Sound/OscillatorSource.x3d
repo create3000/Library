@@ -10,7 +10,7 @@
     <meta name='created' content='Thu, 14 Mar 2024 00:58:57 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Sat, 23 Mar 2024 09:05:44 GMT'/>
+    <meta name='modified' content='Sat, 23 Mar 2024 21:27:27 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='Button' url='"../PROTO/Buttons.x3d#Button"'>
@@ -68,7 +68,7 @@
             position='2.869677 3.854335 8.769781'
             orientation='-0.7765887 0.6177187 0.1238285 28.9476440862198'/>
         <Sound
-            maxFront='11.59875'>
+            maxFront='20'>
           <Gain
               gain='2'>
             <OscillatorSource DEF='_1'
@@ -102,7 +102,7 @@
                 value='true'/>
           </MetadataSet>
         </MetadataSet>
-        <Transform DEF='Header'
+        <Transform DEF='Header_1'
             translation='1 -0.63 -0'
             scale='0.0672307 0.0672307 0.0672307'>
           <Shape>
