@@ -2,148 +2,275 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
 <X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
-    <component name='PointingDeviceSensor' level='1'/>
-    <component name='Scripting' level='1'/>
+    <component name='EventUtilities' level='1'/>
+    <component name='Layering' level='1'/>
     <component name='Sound' level='3'/>
-    <component name='Text' level='1'/>
+    <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
     <meta name='comment' content='Rise and Shine'/>
     <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Sunrize X3D Editor V1.6.2, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 13 Mar 2024 15:46:07 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Sat, 23 Mar 2024 21:42:33 GMT'/>
   </head>
   <Scene>
-    <Transform DEF='_1'
-        center='0 0 10'>
-      <Sound
-          maxBack='20'
-          maxFront='20'>
-        <AudioClip DEF='Song'
-            url='"04. Like A Virgin - mono.mp3"'
-            startTime='1710344669.115'
-            stopTime='1710344693.614'/>
-      </Sound>
-      <Collision
-          enabled='false'>
-        <Transform DEF='Min'>
+    <ExternProtoDeclare name='State' url='"../PROTO/Buttons.x3d#State", "file:///Volumes/Home/Projekte/Library/Tests/Components/PROTO/Buttons.x3d#State"'>
+      <field accessType='inputOutput' type='SFString' name='description'/>
+      <field accessType='inputOutput' type='SFBool' name='value'/>
+    </ExternProtoDeclare>
+    <ExternProtoDeclare name='Time' url='"../PROTO/Buttons.x3d#Time", "file:///Volumes/Home/Projekte/Library/Tests/Components/PROTO/Buttons.x3d#Time"'>
+      <field accessType='inputOutput' type='SFString' name='description'/>
+      <field accessType='inputOutput' type='SFTime' name='value'/>
+      <field accessType='inputOutput' type='SFInt32' name='precision'/>
+    </ExternProtoDeclare>
+    <ExternProtoDeclare name='Button' url='"../PROTO/Buttons.x3d#Button", "file:///Volumes/Home/Projekte/Library/Tests/Components/PROTO/Buttons.x3d#Button"'>
+      <field accessType='inputOutput' type='SFString' name='description'/>
+      <field accessType='outputOnly' type='SFTime' name='touchTime'/>
+    </ExternProtoDeclare>
+    <ExternProtoDeclare name='Toggle' url='"../PROTO/Buttons.x3d#Toggle", "file:///Volumes/Home/Projekte/Library/Tests/Components/PROTO/Buttons.x3d#Toggle"'>
+      <field accessType='inputOutput' type='SFString' name='description'/>
+      <field accessType='inputOutput' type='SFBool' name='initialValue'/>
+      <field accessType='outputOnly' type='SFBool' name='value_changed'/>
+    </ExternProtoDeclare>
+    <LayerSet
+        activeLayer='1'
+        order='0, 1, 2'>
+      <Layer DEF='Sound_1'>
+        <Viewpoint DEF='FrontView_1'
+            description='Front View'/>
+        <Viewpoint DEF='FrontView180'
+            description='Front. View 180'
+            orientation='0 1 0 180'/>
+        <Viewpoint DEF='RightView'
+            description='Right View'
+            orientation='0 1 0 90'/>
+        <Viewpoint DEF='RightvVew180'
+            description='Right View 180°'
+            orientation='0 1 0 -90.0000000000002'/>
+        <Viewpoint DEF='LeftView_1'
+            description='Left View'
+            orientation='0 1 0 -90.0000000000002'/>
+        <Viewpoint DEF='LeftView180'
+            description='Left View 180°'
+            orientation='0 1 0 90.0000000000002'/>
+        <Viewpoint DEF='BackView'
+            description='Back View'
+            position='0 0 -10'
+            orientation='0 1 0 180'/>
+        <Viewpoint DEF='TopView'
+            description='Top View'
+            position='0 10 0'
+            orientation='1 0 0 -90'/>
+        <Viewpoint DEF='TopView90_1'
+            description='Top View 90°'
+            position='0 10 0'
+            orientation='0.577350269189627 -0.577350269189627 -0.577350269189624 240'/>
+        <Viewpoint DEF='BottomView'
+            description='Bottom View'
+            position='0 -10 0'
+            orientation='1 0 0 90.0000000000002'/>
+        <Transform DEF='Sounds'
+            center='0 0 10'>
+          <Group DEF='Sound'>
+            <Sound
+                maxBack='20'
+                maxFront='20'>
+              <AudioClip DEF='Song'
+                  url='"04. Like A Virgin - mono.mp3"'
+                  gain='3'
+                  startTime='1710886448.659'
+                  stopTime='1710879737.719'/>
+            </Sound>
+            <Collision DEF='Sphere_1'
+                enabled='false'>
+              <Transform DEF='Min'
+                  rotation='1 -0 0 90'>
+                <Shape
+                    castShadow='false'>
+                  <Appearance>
+                    <LineProperties
+                        linewidthScaleFactor='1'/>
+                    <Material
+                        diffuseColor='0 0 0'
+                        emissiveColor='1 0.301961 0.301961'/>
+                  </Appearance>
+                  <IndexedLineSet
+                      coordIndex='0, 1, 2, 0, -1, 2, 3, 0, -1, 3, 4, 0, -1, 4, 5, 0, -1, 5, 6, 0, -1, 6, 7, 0, -1, 7, 8, 0, -1, 8, 9, 0, -1, 9, 10, 0, -1, 10, 1, -1, 1, 11, 12, 2, -1, 12, 13, 3, -1, 13, 14, 4, -1, 14, 15, 5, -1, 15, 16, 6, -1, 16, 17, 7, -1, 17, 18, 8, -1, 18, 19, 9, -1, 19, 20, 10, -1, 20, 11, -1, 11, 21, 22, 12, -1, 22, 23, 13, -1, 23, 24, 14, -1, 24, 25, 15, -1, 25, 26, 16, -1, 26, 27, 17, -1, 27, 28, 18, -1, 28, 29, 19, -1, 29, 30, 20, -1, 30, 21, -1, 21, 31, 32, 22, -1, 32, 33, 23, -1, 33, 34, 24, -1, 34, 35, 25, -1, 35, 36, 26, -1, 36, 37, 27, -1, 37, 38, 28, -1, 38, 39, 29, -1, 39, 40, 30, -1, 40, 31, -1, 31, 41, 42, 32, -1, 42, 43, 33, -1, 43, 44, 34, -1, 44, 45, 35, -1, 45, 46, 36, -1, 46, 47, 37, -1, 47, 48, 38, -1, 48, 49, 39, -1, 49, 50, 40, -1, 50, 41, -1, 41, 51, 52, 42, -1, 52, 53, 43, -1, 53, 54, 44, -1, 54, 55, 45, -1, 55, 56, 46, -1, 56, 57, 47, -1, 57, 58, 48, -1, 58, 59, 49, -1, 59, 60, 50, -1, 60, 51, -1, 51, 61, 62, 52, -1, 62, 63, 53, -1, 63, 64, 54, -1, 64, 65, 55, -1, 65, 66, 56, -1, 66, 67, 57, -1, 67, 68, 58, -1, 68, 69, 59, -1, 69, 70, 60, -1, 70, 61, -1, 71, 62, -1, 61, 71, -1, 71, 63, -1, 71, 64, -1, 71, 65, -1, 71, 66, -1, 71, 67, -1, 71, 68, -1, 71, 69, -1, 71, 70, -1'>
+                    <Coordinate
+                        point='0 1 0, 4.68652e-17 0.92388 -0.382683, -0.224936 0.92388 -0.309597, -0.363954 0.92388 -0.118256, -0.363954 0.92388 0.118256, -0.224936 0.92388 0.309597, -9.37304e-17 0.92388 0.382683, 0.224936 0.92388 0.309597, 0.363954 0.92388 0.118256, 0.363954 0.92388 -0.118256, 0.224936 0.92388 -0.309597, 8.65956e-17 0.707107 -0.707107, -0.415627 0.707107 -0.572061, -0.672499 0.707107 -0.218508, -0.672499 0.707107 0.218508, -0.415627 0.707107 0.572061, -1.73191e-16 0.707107 0.707107, 0.415627 0.707107 0.572061, 0.672499 0.707107 0.218508, 0.672499 0.707107 -0.218508, 0.415627 0.707107 -0.572061, 1.13143e-16 0.382683 -0.92388, -0.543043 0.382683 -0.747434, -0.878662 0.382683 -0.285494, -0.878662 0.382683 0.285494, -0.543043 0.382683 0.747434, -2.26285e-16 0.382683 0.92388, 0.543043 0.382683 0.747434, 0.878662 0.382683 0.285494, 0.878662 0.382683 -0.285494, 0.543043 0.382683 -0.747434, 1.22465e-16 6.12323e-17 -1, -0.587785 6.12323e-17 -0.809017, -0.951057 6.12323e-17 -0.309017, -0.951057 6.12323e-17 0.309017, -0.587785 6.12323e-17 0.809017, -2.44929e-16 6.12323e-17 1, 0.587785 6.12323e-17 0.809017, 0.951057 6.12323e-17 0.309017, 0.951057 6.12323e-17 -0.309017, 0.587785 6.12323e-17 -0.809017, 1.13143e-16 -0.382683 -0.92388, -0.543043 -0.382683 -0.747434, -0.878662 -0.382683 -0.285494, -0.878662 -0.382683 0.285494, -0.543043 -0.382683 0.747434, -2.26285e-16 -0.382683 0.92388, 0.543043 -0.382683 0.747434, 0.878662 -0.382683 0.285494, 0.878662 -0.382683 -0.285494, 0.543043 -0.382683 -0.747434, 8.65956e-17 -0.707107 -0.707107, -0.415627 -0.707107 -0.572061, -0.672499 -0.707107 -0.218508, -0.672499 -0.707107 0.218508, -0.415627 -0.707107 0.572061, -1.73191e-16 -0.707107 0.707107, 0.415627 -0.707107 0.572061, 0.672499 -0.707107 0.218508, 0.672499 -0.707107 -0.218508, 0.415627 -0.707107 -0.572061, 4.68652e-17 -0.92388 -0.382683, -0.224936 -0.92388 -0.309597, -0.363954 -0.92388 -0.118256, -0.363954 -0.92388 0.118256, -0.224936 -0.92388 0.309597, -9.37304e-17 -0.92388 0.382683, 0.224936 -0.92388 0.309597, 0.363954 -0.92388 0.118256, 0.363954 -0.92388 -0.118256, 0.224936 -0.92388 -0.309597, 0 -1 0'/>
+                  </IndexedLineSet>
+                </Shape>
+              </Transform>
+              <Transform DEF='Max'
+                  rotation='1 -0 0 90'
+                  scale='20 20 20'>
+                <Shape
+                    castShadow='false'>
+                  <Appearance>
+                    <LineProperties
+                        linewidthScaleFactor='1'/>
+                    <Material
+                        diffuseColor='0 0 0'
+                        emissiveColor='0.301961 1 0.415686'/>
+                  </Appearance>
+                  <IndexedLineSet
+                      coordIndex='0, 1, 2, 0, -1, 2, 3, 0, -1, 3, 4, 0, -1, 4, 5, 0, -1, 5, 6, 0, -1, 6, 7, 0, -1, 7, 8, 0, -1, 8, 9, 0, -1, 9, 10, 0, -1, 10, 1, -1, 1, 11, 12, 2, -1, 12, 13, 3, -1, 13, 14, 4, -1, 14, 15, 5, -1, 15, 16, 6, -1, 16, 17, 7, -1, 17, 18, 8, -1, 18, 19, 9, -1, 19, 20, 10, -1, 20, 11, -1, 11, 21, 22, 12, -1, 22, 23, 13, -1, 23, 24, 14, -1, 24, 25, 15, -1, 25, 26, 16, -1, 26, 27, 17, -1, 27, 28, 18, -1, 28, 29, 19, -1, 29, 30, 20, -1, 30, 21, -1, 21, 31, 32, 22, -1, 32, 33, 23, -1, 33, 34, 24, -1, 34, 35, 25, -1, 35, 36, 26, -1, 36, 37, 27, -1, 37, 38, 28, -1, 38, 39, 29, -1, 39, 40, 30, -1, 40, 31, -1, 31, 41, 42, 32, -1, 42, 43, 33, -1, 43, 44, 34, -1, 44, 45, 35, -1, 45, 46, 36, -1, 46, 47, 37, -1, 47, 48, 38, -1, 48, 49, 39, -1, 49, 50, 40, -1, 50, 41, -1, 41, 51, 52, 42, -1, 52, 53, 43, -1, 53, 54, 44, -1, 54, 55, 45, -1, 55, 56, 46, -1, 56, 57, 47, -1, 57, 58, 48, -1, 58, 59, 49, -1, 59, 60, 50, -1, 60, 51, -1, 51, 61, 62, 52, -1, 62, 63, 53, -1, 63, 64, 54, -1, 64, 65, 55, -1, 65, 66, 56, -1, 66, 67, 57, -1, 67, 68, 58, -1, 68, 69, 59, -1, 69, 70, 60, -1, 70, 61, -1, 71, 62, -1, 61, 71, -1, 71, 63, -1, 71, 64, -1, 71, 65, -1, 71, 66, -1, 71, 67, -1, 71, 68, -1, 71, 69, -1, 71, 70, -1'>
+                    <Coordinate
+                        point='0 1 0, 4.68652e-17 0.92388 -0.382683, -0.224936 0.92388 -0.309597, -0.363954 0.92388 -0.118256, -0.363954 0.92388 0.118256, -0.224936 0.92388 0.309597, -9.37304e-17 0.92388 0.382683, 0.224936 0.92388 0.309597, 0.363954 0.92388 0.118256, 0.363954 0.92388 -0.118256, 0.224936 0.92388 -0.309597, 8.65956e-17 0.707107 -0.707107, -0.415627 0.707107 -0.572061, -0.672499 0.707107 -0.218508, -0.672499 0.707107 0.218508, -0.415627 0.707107 0.572061, -1.73191e-16 0.707107 0.707107, 0.415627 0.707107 0.572061, 0.672499 0.707107 0.218508, 0.672499 0.707107 -0.218508, 0.415627 0.707107 -0.572061, 1.13143e-16 0.382683 -0.92388, -0.543043 0.382683 -0.747434, -0.878662 0.382683 -0.285494, -0.878662 0.382683 0.285494, -0.543043 0.382683 0.747434, -2.26285e-16 0.382683 0.92388, 0.543043 0.382683 0.747434, 0.878662 0.382683 0.285494, 0.878662 0.382683 -0.285494, 0.543043 0.382683 -0.747434, 1.22465e-16 6.12323e-17 -1, -0.587785 6.12323e-17 -0.809017, -0.951057 6.12323e-17 -0.309017, -0.951057 6.12323e-17 0.309017, -0.587785 6.12323e-17 0.809017, -2.44929e-16 6.12323e-17 1, 0.587785 6.12323e-17 0.809017, 0.951057 6.12323e-17 0.309017, 0.951057 6.12323e-17 -0.309017, 0.587785 6.12323e-17 -0.809017, 1.13143e-16 -0.382683 -0.92388, -0.543043 -0.382683 -0.747434, -0.878662 -0.382683 -0.285494, -0.878662 -0.382683 0.285494, -0.543043 -0.382683 0.747434, -2.26285e-16 -0.382683 0.92388, 0.543043 -0.382683 0.747434, 0.878662 -0.382683 0.285494, 0.878662 -0.382683 -0.285494, 0.543043 -0.382683 -0.747434, 8.65956e-17 -0.707107 -0.707107, -0.415627 -0.707107 -0.572061, -0.672499 -0.707107 -0.218508, -0.672499 -0.707107 0.218508, -0.415627 -0.707107 0.572061, -1.73191e-16 -0.707107 0.707107, 0.415627 -0.707107 0.572061, 0.672499 -0.707107 0.218508, 0.672499 -0.707107 -0.218508, 0.415627 -0.707107 -0.572061, 4.68652e-17 -0.92388 -0.382683, -0.224936 -0.92388 -0.309597, -0.363954 -0.92388 -0.118256, -0.363954 -0.92388 0.118256, -0.224936 -0.92388 0.309597, -9.37304e-17 -0.92388 0.382683, 0.224936 -0.92388 0.309597, 0.363954 -0.92388 0.118256, 0.363954 -0.92388 -0.118256, 0.224936 -0.92388 -0.309597, 0 -1 0'/>
+                  </IndexedLineSet>
+                </Shape>
+              </Transform>
+            </Collision>
+          </Group>
+          <Group DEF='SpatialSound'
+              visible='false'>
+            <SpatialSound>
+              <AudioClip USE='Song' containerField='children'/>
+            </SpatialSound>
+          </Group>
+        </Transform>
+        <Transform DEF='LeftBox'
+            translation='-2 0 0'>
           <Shape>
-            <Appearance>
+            <Appearance
+                alphaMode='OPAQUE'>
               <Material
-                  transparency='0.3'/>
+                  diffuseColor='0.2196078 0.4627451 0.1137255'/>
+              <ImageTexture
+                  url='"../images/L.png"'/>
             </Appearance>
-            <Sphere/>
+            <Box/>
           </Shape>
         </Transform>
-        <Transform DEF='Max'
-            scale='20 20 20'>
+        <Transform DEF='RightBox_1'
+            translation='2 0 0'>
           <Shape>
-            <Appearance>
+            <Appearance
+                alphaMode='OPAQUE'>
               <Material
-                  transparency='0.3'/>
+                  diffuseColor='0.6 0 0'/>
+              <ImageTexture
+                  url='"../images/R.png"'/>
             </Appearance>
-            <Sphere/>
+            <Box/>
           </Shape>
         </Transform>
-      </Collision>
-    </Transform>
-    <Transform DEF='ElapsedTime_1'
-        translation='0 2 0'>
-      <Shape>
-        <Appearance>
-          <Material/>
-        </Appearance>
-        <Text DEF='ElapsedTime'
-            string='"24.5"'/>
-      </Shape>
-    </Transform>
-    <Transform DEF='Start'
-        translation='-2 0 0'>
-      <TouchSensor DEF='Play'
-          description='Start AudioClip'/>
-      <Shape>
-        <Appearance>
-          <Material
-              diffuseColor='0 1 0'/>
-        </Appearance>
-        <Box/>
-      </Shape>
-    </Transform>
-    <Transform DEF='Stop_1'
-        translation='2 0 0'>
-      <TouchSensor DEF='Stop'
-          description='Stop AudioClip'/>
-      <Shape>
-        <Appearance>
-          <Material
-              diffuseColor='1 0 0'/>
-        </Appearance>
-        <Box/>
-      </Shape>
-    </Transform>
-    <Transform DEF='StartAnimation'
-        translation='-2 -1.5 0'
-        scale='0.2 0.2 0.2'>
-      <TouchSensor DEF='_2'
-          description='Start Animation'/>
-      <Shape>
-        <Appearance>
-          <Material
-              diffuseColor='0.1607843 0.5254902 0.8'/>
-        </Appearance>
-        <Box/>
-      </Shape>
-      <TimeSensor DEF='_3'
-          cycleInterval='10'
-          startTime='1693999746.299'/>
-      <OrientationInterpolator DEF='_4'
-          key='0, 0.25, 0.5, 0.75, 1'
-          keyValue='0 1 0 0, 0 1 0 1.5707963267949, 0 1 0 3.14159265358979, 0 1 0 4.71238898038469, 0 0 1 0'/>
-    </Transform>
-    <Script DEF='Debug'>
-      <field accessType='inputOnly' type='SFTime' name='set_startTime'/>
-      <field accessType='inputOnly' type='SFTime' name='set_stopTime'/>
-      <field accessType='inputOnly' type='SFBool' name='set_active'/>
-      <field accessType='inputOnly' type='SFTime' name='set_elapsedTime'/>
-      <field accessType='inputOnly' type='SFTime' name='set_duration'/>
-      <field accessType='outputOnly' type='MFString' name='string_changed'/>
-<![CDATA[vrmlscript:
-
-function set_startTime (value, time)
-{
-	print ('Play: ', time)
-}
-
-function set_stopTime (value, time)
-{
-	print ('Stop: ', time)
-}
-
-function set_active (value, time)
-{
-	print ('isActive: ', value)
-}
-
-function set_elapsedTime (value, time)
-{
-	string_changed = new MFString (Math .round (value * 10) / 10);
-}
-
-function set_duration (value, time)
-{
-	print ('Duration: ', value)
-}
-  ]]>
-    </Script>
-    <ROUTE fromNode='Play' fromField='touchTime' toNode='Song' toField='set_startTime'/>
-    <ROUTE fromNode='Stop' fromField='touchTime' toNode='Song' toField='set_stopTime'/>
-    <ROUTE fromNode='Play' fromField='touchTime' toNode='Debug' toField='set_startTime'/>
-    <ROUTE fromNode='Stop' fromField='touchTime' toNode='Debug' toField='set_stopTime'/>
-    <ROUTE fromNode='Song' fromField='isActive' toNode='Debug' toField='set_active'/>
-    <ROUTE fromNode='Song' fromField='elapsedTime' toNode='Debug' toField='set_elapsedTime'/>
-    <ROUTE fromNode='Song' fromField='duration_changed' toNode='Debug' toField='set_duration'/>
-    <ROUTE fromNode='Debug' fromField='string_changed' toNode='ElapsedTime' toField='set_string'/>
+        <Transform DEF='TopBox'
+            translation='0 2 0'>
+          <Shape>
+            <Appearance
+                alphaMode='OPAQUE'>
+              <Material
+                  diffuseColor='0.1607843 0.5254902 0.8'/>
+              <ImageTexture
+                  url='"../images/T.png"'/>
+            </Appearance>
+            <Box/>
+          </Shape>
+        </Transform>
+      </Layer>
+      <Layer DEF='HUD'>
+        <MetadataSet containerField='metadata'
+            name='Sunrize'
+            reference='https://create3000.github.io/sunrize/'>
+          <MetadataSet
+              name='GridTool'>
+            <MetadataBoolean
+                name='visible'
+                value='true'/>
+            <MetadataDouble
+                name='rotation'
+                value='1, 0, 0, 1.5707963267949'/>
+            <MetadataFloat
+                name='scale'
+                value='0.1, 0.1, 0.1'/>
+            <MetadataInteger
+                name='dimension'
+                value='34, 10, 20'/>
+            <MetadataBoolean
+                name='snapToCenter'
+                value='true'/>
+          </MetadataSet>
+        </MetadataSet>
+        <OrthoViewpoint/>
+        <Transform DEF='ToggleSounds'
+            translation='1 -0.1 -0'>
+          <ProtoInstance name='Toggle' DEF='_1'>
+            <fieldValue name='description' value='toggle sounds'/>
+          </ProtoInstance>
+          <BooleanFilter DEF='_2'/>
+        </Transform>
+        <Transform DEF='Visible_1'
+            translation='1 -0.2 -0'>
+          <ProtoInstance name='Toggle' DEF='_18'>
+            <fieldValue name='description' value='visible'/>
+            <fieldValue name='initialValue' value='true'/>
+          </ProtoInstance>
+        </Transform>
+        <Transform DEF='Animation'
+            translation='1 -0.3 -0'>
+          <Group DEF='Animation_1'>
+            <TimeSensor DEF='_3'
+                cycleInterval='10'/>
+            <OrientationInterpolator DEF='_4'
+                key='0, 0.25, 0.5, 0.75, 1'
+                keyValue='0 1 0 0, 0 1 0 90.0000000000002, 0 1 0 180, 0 1 0 270, 0 0 1 0'/>
+          </Group>
+          <ProtoInstance name='Toggle' DEF='_11'>
+            <fieldValue name='description' value='animation'/>
+          </ProtoInstance>
+        </Transform>
+        <Transform DEF='Loop'
+            translation='1 -0.4 -0'>
+          <ProtoInstance name='Toggle' DEF='_17'>
+            <fieldValue name='description' value='loop'/>
+          </ProtoInstance>
+        </Transform>
+        <Transform DEF='StartTime_1'
+            translation='1 -0.5 -0'>
+          <ProtoInstance name='Button' DEF='_8'>
+            <fieldValue name='description' value='startTime'/>
+          </ProtoInstance>
+        </Transform>
+        <Transform DEF='StopTime_1'
+            translation='1 -0.6 -0'>
+          <ProtoInstance name='Button' DEF='_12'>
+            <fieldValue name='description' value='stopTime'/>
+          </ProtoInstance>
+        </Transform>
+        <Transform DEF='Active'
+            translation='1 -0.7 -0'>
+          <ProtoInstance name='State' DEF='_13'>
+            <fieldValue name='description' value='isActive'/>
+          </ProtoInstance>
+        </Transform>
+        <Transform DEF='ElapsedTime_3'
+            translation='1 -0.9 -0'>
+          <ProtoInstance name='Time' DEF='_16'>
+            <fieldValue name='description' value='elapsedTime'/>
+            <fieldValue name='value' value='67.10600018501282'/>
+          </ProtoInstance>
+        </Transform>
+        <Transform DEF='Duration'
+            translation='1 -0.8 -0'>
+          <ProtoInstance name='Time' DEF='_15'>
+            <fieldValue name='description' value='duration'/>
+            <fieldValue name='value' value='191.13795918367347'/>
+          </ProtoInstance>
+        </Transform>
+      </Layer>
+    </LayerSet>
     <ROUTE fromNode='_3' fromField='fraction_changed' toNode='_4' toField='set_fraction'/>
-    <ROUTE fromNode='_4' fromField='value_changed' toNode='_1' toField='set_rotation'/>
-    <ROUTE fromNode='_2' fromField='touchTime' toNode='_3' toField='set_startTime'/>
+    <ROUTE fromNode='_4' fromField='value_changed' toNode='Sounds' toField='set_rotation'/>
+    <ROUTE fromNode='_11' fromField='value_changed' toNode='_3' toField='set_loop'/>
+    <ROUTE fromNode='_18' fromField='value_changed' toNode='Sounds' toField='set_visible'/>
+    <ROUTE fromNode='Song' fromField='duration_changed' toNode='_15' toField='set_value'/>
+    <ROUTE fromNode='Song' fromField='elapsedTime' toNode='_16' toField='set_value'/>
+    <ROUTE fromNode='Song' fromField='isActive' toNode='_13' toField='set_value'/>
+    <ROUTE fromNode='_12' fromField='touchTime' toNode='Song' toField='set_stopTime'/>
+    <ROUTE fromNode='_8' fromField='touchTime' toNode='Song' toField='set_startTime'/>
+    <ROUTE fromNode='_17' fromField='value_changed' toNode='Song' toField='set_loop'/>
+    <ROUTE fromNode='_1' fromField='value_changed' toNode='_2' toField='set_boolean'/>
+    <ROUTE fromNode='_2' fromField='inputNegate' toNode='Sound' toField='set_visible'/>
+    <ROUTE fromNode='_1' fromField='value_changed' toNode='SpatialSound' toField='set_visible'/>
   </Scene>
 </X3D>
