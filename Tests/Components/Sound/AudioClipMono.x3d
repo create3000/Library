@@ -10,7 +10,7 @@
     <meta name='created' content='Sat, 15 Aug 2015 18:52:55 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Sat, 23 Mar 2024 21:42:33 GMT'/>
+    <meta name='modified' content='Sat, 23 Mar 2024 21:46:35 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='State' url='"../PROTO/Buttons.x3d#State", "file:///Volumes/Home/Projekte/Library/Tests/Components/PROTO/Buttons.x3d#State"'>
@@ -127,45 +127,45 @@
               <AudioClip USE='Song' containerField='children'/>
             </SpatialSound>
           </Group>
-        </Transform>
-        <Transform DEF='LeftBox'
-            translation='-2 0 0'>
-          <Shape>
-            <Appearance
-                alphaMode='OPAQUE'>
-              <Material
-                  diffuseColor='0.2196078 0.4627451 0.1137255'/>
-              <ImageTexture
-                  url='"../images/L.png"'/>
-            </Appearance>
-            <Box/>
-          </Shape>
-        </Transform>
-        <Transform DEF='RightBox_1'
-            translation='2 0 0'>
-          <Shape>
-            <Appearance
-                alphaMode='OPAQUE'>
-              <Material
-                  diffuseColor='0.6 0 0'/>
-              <ImageTexture
-                  url='"../images/R.png"'/>
-            </Appearance>
-            <Box/>
-          </Shape>
-        </Transform>
-        <Transform DEF='TopBox'
-            translation='0 2 0'>
-          <Shape>
-            <Appearance
-                alphaMode='OPAQUE'>
-              <Material
-                  diffuseColor='0.1607843 0.5254902 0.8'/>
-              <ImageTexture
-                  url='"../images/T.png"'/>
-            </Appearance>
-            <Box/>
-          </Shape>
+          <Transform DEF='LeftBox_1'
+              translation='-2 0 0'>
+            <Shape>
+              <Appearance
+                  alphaMode='OPAQUE'>
+                <Material
+                    diffuseColor='0.2196078 0.4627451 0.1137255'/>
+                <ImageTexture
+                    url='"../images/L.png"'/>
+              </Appearance>
+              <Box/>
+            </Shape>
+          </Transform>
+          <Transform DEF='RightBox'
+              translation='2 0 0'>
+            <Shape>
+              <Appearance
+                  alphaMode='OPAQUE'>
+                <Material
+                    diffuseColor='0.6 0 0'/>
+                <ImageTexture
+                    url='"../images/R.png"'/>
+              </Appearance>
+              <Box/>
+            </Shape>
+          </Transform>
+          <Transform DEF='TopBox_1'
+              translation='0 2 0'>
+            <Shape>
+              <Appearance
+                  alphaMode='OPAQUE'>
+                <Material
+                    diffuseColor='0.1607843 0.5254902 0.8'/>
+                <ImageTexture
+                    url='"../images/T.png"'/>
+              </Appearance>
+              <Box/>
+            </Shape>
+          </Transform>
         </Transform>
       </Layer>
       <Layer DEF='HUD'>
