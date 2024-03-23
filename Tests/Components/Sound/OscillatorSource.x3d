@@ -10,7 +10,7 @@
     <meta name='created' content='Thu, 14 Mar 2024 00:58:57 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Sat, 23 Mar 2024 08:51:21 GMT'/>
+    <meta name='modified' content='Sat, 23 Mar 2024 09:00:28 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='Button' url='"../PROTO/Buttons.x3d#Button"'>
@@ -50,7 +50,7 @@
       </MetadataSet>
     </WorldInfo>
     <LayerSet
-        activeLayer='2'
+        activeLayer='1'
         order='1, 2'>
       <Layer>
         <MetadataSet containerField='metadata'
@@ -72,7 +72,9 @@
           <Gain
               gain='2'>
             <OscillatorSource DEF='_1'
-                frequency='100'>
+                frequency='100'
+                startTime='1711184393.107'
+                stopTime='1711184400.951'>
               <PeriodicWave/>
             </OscillatorSource>
           </Gain>
@@ -96,13 +98,10 @@
             <MetadataBoolean
                 name='snapToCenter'
                 value='true'/>
-            <MetadataBoolean
-                name='visible'
-                value='true'/>
           </MetadataSet>
         </MetadataSet>
         <Transform DEF='Header'
-            translation='1 -0.6 -0'
+            translation='1 -0.63 -0'
             scale='0.0672307 0.0672307 0.0672307'>
           <Shape>
             <Appearance>
@@ -128,7 +127,7 @@
             <fieldValue name='description' value='startTime'/>
           </ProtoInstance>
         </Transform>
-        <Transform DEF='StopTime_1'
+        <Transform DEF='StopTime'
             translation='1 -0.8 -0'>
           <ProtoInstance name='Button' DEF='_2'>
             <fieldValue name='description' value='stopTime'/>
