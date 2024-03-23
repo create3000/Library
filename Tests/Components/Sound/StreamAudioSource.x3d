@@ -6,7 +6,7 @@
     <meta name='created' content='Fri, 22 Mar 2024 09:43:37 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Sat, 23 Mar 2024 09:07:05 GMT'/>
+    <meta name='modified' content='Sat, 23 Mar 2024 09:09:22 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -27,8 +27,8 @@
         orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
     <StreamAudioDestination>
       <StreamAudioSource
-          startTime='1711184774.424'
-          stopTime='1711184768.751'/>
+          startTime='1711184961.448'
+          stopTime='1711184959.456'/>
     </StreamAudioDestination>
     <ListenerPointSource
         trackCurrentView='true'/>
