@@ -10,7 +10,7 @@
     <meta name='created' content='Thu, 14 Mar 2024 00:58:57 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Sat, 23 Mar 2024 08:46:53 GMT'/>
+    <meta name='modified' content='Sat, 23 Mar 2024 08:51:21 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='Button' url='"../PROTO/Buttons.x3d#Button"'>
@@ -96,10 +96,13 @@
             <MetadataBoolean
                 name='snapToCenter'
                 value='true'/>
+            <MetadataBoolean
+                name='visible'
+                value='true'/>
           </MetadataSet>
         </MetadataSet>
         <Transform DEF='Header'
-            translation='1 -0.7 0'
+            translation='1 -0.6 -0'
             scale='0.0672307 0.0672307 0.0672307'>
           <Shape>
             <Appearance>
@@ -119,10 +122,16 @@
             </Text>
           </Shape>
         </Transform>
-        <Transform DEF='StarTime'
-            translation='1 -0.8 0'>
-          <ProtoInstance name='Button' DEF='_2'>
+        <Transform DEF='StarTime_1'
+            translation='1 -0.7 -0'>
+          <ProtoInstance name='Button' DEF='_4'>
             <fieldValue name='description' value='startTime'/>
+          </ProtoInstance>
+        </Transform>
+        <Transform DEF='StopTime_1'
+            translation='1 -0.8 -0'>
+          <ProtoInstance name='Button' DEF='_2'>
+            <fieldValue name='description' value='stopTime'/>
           </ProtoInstance>
         </Transform>
         <Transform DEF='Frequency'
@@ -136,6 +145,7 @@
       </LayoutLayer>
     </LayerSet>
     <ROUTE fromNode='_3' fromField='value_changed' toNode='_1' toField='set_frequency'/>
-    <ROUTE fromNode='_2' fromField='touchTime' toNode='_1' toField='set_startTime'/>
+    <ROUTE fromNode='_4' fromField='touchTime' toNode='_1' toField='set_startTime'/>
+    <ROUTE fromNode='_2' fromField='touchTime' toNode='_1' toField='set_stopTime'/>
   </Scene>
 </X3D>
