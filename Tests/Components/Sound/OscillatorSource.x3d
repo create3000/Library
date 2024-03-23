@@ -10,7 +10,7 @@
     <meta name='created' content='Thu, 14 Mar 2024 00:58:57 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Sat, 23 Mar 2024 09:00:28 GMT'/>
+    <meta name='modified' content='Sat, 23 Mar 2024 09:05:44 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='Button' url='"../PROTO/Buttons.x3d#Button"'>
@@ -73,8 +73,10 @@
               gain='2'>
             <OscillatorSource DEF='_1'
                 frequency='100'
-                startTime='1711184393.107'
-                stopTime='1711184400.951'>
+                startTime='1711184740.271'
+                resumeTime='1711184735.107'
+                pauseTime='1711184728.293'
+                stopTime='1711184743.335'>
               <PeriodicWave/>
             </OscillatorSource>
           </Gain>
