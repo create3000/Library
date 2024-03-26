@@ -5,8 +5,8 @@
     <component name='Sound' level='3'/>
     <meta name='created' content='Fri, 22 Mar 2024 09:43:37 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Sunrize X3D Editor V1.6.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Sun, 24 Mar 2024 09:42:56 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.6.7, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Tue, 26 Mar 2024 07:11:29 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -30,7 +30,5 @@
           startTime='1711273310.257'
           stopTime='1711273346.401'/>
     </StreamAudioDestination>
-    <ListenerPointSource
-        trackCurrentView='true'/>
   </Scene>
 </X3D>
