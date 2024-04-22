@@ -9,7 +9,7 @@
     <meta name='generator' content='Titania V4.0.2, http://titania.create3000.de'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.10, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/ParticleSystems/Waterfall.x3d'/>
-    <meta name='modified' content='Mon, 22 Apr 2024 20:29:10 GMT'/>
+    <meta name='modified' content='Mon, 22 Apr 2024 21:33:47 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='Grid' url='"GridTool.x3dv#Grid", "file:///home/holger/Projekte/Cobweb/excite/tests/Components/ParticleSystems/GridTool.x3dv#Grid"'>
@@ -35,7 +35,7 @@
         position='5.84487 5.03472 4.6136'
         orientation='-0.345888826425389 0.916328938277108 0.201747854090235 1.13369964678518'
         centerOfRotation='-0.531098 1.64484 1.00739'/>
-    <ParticleSystem
+    <ParticleSystem DEF='Waterfall'
         geometryType='LINE'
         maxParticles='100000'
         particleLifetime='20'
@@ -76,7 +76,15 @@
             linewidthScaleFactor='8'/>
       </Appearance>
     </ParticleSystem>
-    <Transform DEF='IndexedLineSet'>
+    <Transform DEF='Stairs'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <IndexedFaceSet USE='_1'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='Axes'>
       <Shape>
         <IndexedLineSet
             colorPerVertex='false'
@@ -87,14 +95,6 @@
           <Coordinate
               point='-1 0 0, 1 0 0, 0 -1 0, 0 1 0, 0 0 -1, 0 0 1'/>
         </IndexedLineSet>
-      </Shape>
-    </Transform>
-    <Transform DEF='Box'>
-      <Shape>
-        <Appearance>
-          <Material/>
-        </Appearance>
-        <IndexedFaceSet USE='_1'/>
       </Shape>
     </Transform>
     <ProtoInstance name='Grid'/>
