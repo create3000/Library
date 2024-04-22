@@ -1,48 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
+    <component name='ParticleSystems' level='3'/>
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Sun, 01 May 2016 05:50:28 GMT'/>
     <meta name='creator' content='holger'/>
+    <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V1.4.2, http://titania.create3000.de'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.6.10, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite/tests/Components/ParticleSystems/VolumeEmitter-U.x3d'/>
-    <meta name='modified' content='Sun, 01 May 2016 05:50:41 GMT'/>
+    <meta name='modified' content='Mon, 22 Apr 2024 19:54:59 GMT'/>
   </head>
   <Scene>
     <WorldInfo
         title='U-Volume'>
-      <MetadataSet DEF='Titania'
+      <MetadataSet DEF='Titania' containerField='metadata'
           name='Titania'
           reference='http://titania.create3000.de'>
-        <MetadataSet DEF='NavigationInfo' containerField='value'
+        <MetadataSet DEF='NavigationInfo'
             name='NavigationInfo'
             reference='http://titania.create3000.de'>
-          <MetadataString DEF='type' containerField='value'
+          <MetadataString DEF='type'
               name='type'
               reference='http://titania.create3000.de'
               value='"EXAMINE"'/>
         </MetadataSet>
-        <MetadataSet DEF='Viewpoint' containerField='value'
+        <MetadataSet DEF='Viewpoint'
             name='Viewpoint'
             reference='http://titania.create3000.de'>
-          <MetadataDouble DEF='position' containerField='value'
+          <MetadataDouble DEF='position'
               name='position'
               reference='http://titania.create3000.de'
               value='2.42579538175142, 4.90503216646444, 5.83576697716995'/>
-          <MetadataDouble DEF='orientation' containerField='value'
+          <MetadataDouble DEF='orientation'
               name='orientation'
               reference='http://titania.create3000.de'
               value='-0.783095003703687, 0.530489108480527, 0.324566666430577, 0.798730604169587'/>
-          <MetadataDouble DEF='centerOfRotation' containerField='value'
+          <MetadataDouble DEF='centerOfRotation'
               name='centerOfRotation'
               reference='http://titania.create3000.de'
               value='0, 0, 0'/>
         </MetadataSet>
-        <MetadataSet DEF='Selection' containerField='value'
+        <MetadataSet DEF='Selection'
             name='Selection'
             reference='http://titania.create3000.de'>
-          <MetadataSet DEF='previous' containerField='value'
+          <MetadataSet DEF='previous'
               name='previous'
               reference='http://titania.create3000.de'/>
         </MetadataSet>
@@ -68,12 +71,8 @@
         <Coordinate
             point='-2 1 1, -2 -1 1, 2 -1 1, 2 1 1, 1 1 1, 1 0 1, -1 0 1, -1 1 1, -2 1 -1, -2 -1 -1, 2 -1 -1, 2 1 -1, 1 1 -1, 1 0 -1, -1 0 -1, -1 1 -1'/>
       </VolumeEmitter>
-      <ColorRGBA containerField='colorRamp'
-          color='1 0.38 0 1, 1 0.58 0.06 1, 1 0.37 0 1, 1 0.05 0 1'/>
       <Appearance>
-        <PointProperties
-          pointSizeScaleFactor='1'
-          pointSizeMaxValue='1'/>
+        <PointProperties/>
       </Appearance>
     </ParticleSystem>
     <Transform DEF='IndexedLineSet'>

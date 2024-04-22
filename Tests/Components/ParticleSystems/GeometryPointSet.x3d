@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
+    <component name='ParticleSystems' level='3'/>
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Sun, 15 May 2016 00:15:37 GMT'/>
     <meta name='creator' content='holger'/>
+    <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V1.4.3, http://titania.create3000.de'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.6.10, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite/tests/Components/ParticleSystems/GeometryLine.x3d'/>
-    <meta name='modified' content='Sun, 15 May 2016 00:59:41 GMT'/>
+    <meta name='modified' content='Mon, 22 Apr 2024 19:52:35 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='Grid' url='"GridTool.x3dv#Grid", "file:///home/holger/Projekte/Cobweb/excite/tests/Components/ParticleSystems/GridTool.x3dv#Grid"'>
@@ -30,7 +33,7 @@
     <Viewpoint
         description='Viewpoint'
         position='0 20 55'/>
-    <ParticleSystem DEF='_1' containerField='value'
+    <ParticleSystem
         geometryType='GEOMETRY'
         maxParticles='10'
         particleLifetime='4'
@@ -48,7 +51,6 @@
           gustiness='1.7'
           turbulence='0.3'/>
       <WindPhysicsModel
-          direction='1 0 0'
           speed='0.5'
           gustiness='2'/>
       <Appearance>

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
+    <component name='ParticleSystems' level='3'/>
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Fri, 22 Apr 2016 02:56:52 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V1.4.1, http://titania.create3000.de'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.6.10, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite/tests/Components/ParticleSystems/ConeEmitter.x3d'/>
-    <meta name='modified' content='Fri, 22 Apr 2016 03:01:05 GMT'/>
+    <meta name='modified' content='Mon, 22 Apr 2024 19:50:08 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='Grid' url='"GridTool.x3dv#Grid", "file:///home/holger/Projekte/Cobweb/excite/tests/Components/ParticleSystems/GridTool.x3dv#Grid"'>
@@ -27,37 +29,37 @@
     </ExternProtoDeclare>
     <WorldInfo
         title='ConeEmitter'>
-      <MetadataSet DEF='Titania'
+      <MetadataSet DEF='Titania' containerField='metadata'
           name='Titania'
           reference='http://titania.create3000.de'>
-        <MetadataSet DEF='NavigationInfo' containerField='value'
+        <MetadataSet DEF='NavigationInfo'
             name='NavigationInfo'
             reference='http://titania.create3000.de'>
-          <MetadataString DEF='type' containerField='value'
+          <MetadataString DEF='type'
               name='type'
               reference='http://titania.create3000.de'
               value='"EXAMINE"'/>
         </MetadataSet>
-        <MetadataSet DEF='Viewpoint' containerField='value'
+        <MetadataSet DEF='Viewpoint'
             name='Viewpoint'
             reference='http://titania.create3000.de'>
-          <MetadataDouble DEF='position' containerField='value'
+          <MetadataDouble DEF='position'
               name='position'
               reference='http://titania.create3000.de'
               value='0, 0, 4'/>
-          <MetadataDouble DEF='orientation' containerField='value'
+          <MetadataDouble DEF='orientation'
               name='orientation'
               reference='http://titania.create3000.de'
               value='0, 0, 1, 0'/>
-          <MetadataDouble DEF='centerOfRotation' containerField='value'
+          <MetadataDouble DEF='centerOfRotation'
               name='centerOfRotation'
               reference='http://titania.create3000.de'
               value='0, 0, 0'/>
         </MetadataSet>
-        <MetadataSet DEF='Selection' containerField='value'
+        <MetadataSet DEF='Selection'
             name='Selection'
             reference='http://titania.create3000.de'>
-          <MetadataSet DEF='children' containerField='value'
+          <MetadataSet DEF='children'
               name='children'
               reference='http://titania.create3000.de'>
             <ParticleSystem DEF='_1' containerField='value'
@@ -70,17 +72,15 @@
               <ConeEmitter
                   direction='1 1 0'
                   speed='0.1'/>
-              <ColorRGBA containerField='colorRamp'
-                  color='1 0.38 0 1, 1 0.58 0.06 1, 1 0.37 0 1, 1 0.05 0 1'/>
               <Appearance>
                 <PointProperties
-                  pointSizeScaleFactor='2'
-                  pointSizeMinValue='2'
-                  pointSizeMaxValue='2'/>
+                    pointSizeScaleFactor='2'
+                    pointSizeMinValue='2'
+                    pointSizeMaxValue='2'/>
               </Appearance>
             </ParticleSystem>
           </MetadataSet>
-          <MetadataSet DEF='previous' containerField='value'
+          <MetadataSet DEF='previous'
               name='previous'
               reference='http://titania.create3000.de'/>
         </MetadataSet>

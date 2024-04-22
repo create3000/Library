@@ -1,13 +1,22 @@
-#VRML V2.0 utf8 Titania V0.7.4
+#X3D V4.0 utf8 X_ITE V9.5.0
+
+PROFILE Interchange
+
+COMPONENT ParticleSystems : 3
+
+META "created" "Mon, 22 Apr 2024 19:54:24 GMT"
+META "creator" "Holger Seelig"
+META "generator" "Sunrize X3D Editor V1.6.10, https://create3000.github.io/sunrize/"
+META "modified" "Mon, 22 Apr 2024 19:54:24 GMT"
 
 EXTERNPROTO Torus [
-  exposedField SFFloat minorRadius
-  exposedField SFFloat majorRadius
-  exposedField SFInt32 minorDimension
-  exposedField SFInt32 majorDimension
-  field        SFBool  solid
-  field        SFBool  ccw
-  field        SFFloat creaseAngle
+  inputOutput    SFFloat minorRadius
+  inputOutput    SFFloat majorRadius
+  inputOutput    SFInt32 minorDimension
+  inputOutput    SFInt32 majorDimension
+  initializeOnly SFBool  solid
+  initializeOnly SFBool  ccw
+  initializeOnly SFFloat creaseAngle
 ]
 "Torus.x3dv"
 
@@ -20,7 +29,7 @@ Viewpoint {
   position 0 0 20
 }
 
-DEF _1 Transform {
+Transform {
   children Shape {
     appearance Appearance {
       material Material {
