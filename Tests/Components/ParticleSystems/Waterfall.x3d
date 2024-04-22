@@ -9,7 +9,7 @@
     <meta name='generator' content='Titania V4.0.2, http://titania.create3000.de'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.10, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/ParticleSystems/Waterfall.x3d'/>
-    <meta name='modified' content='Mon, 22 Apr 2024 20:17:54 GMT'/>
+    <meta name='modified' content='Mon, 22 Apr 2024 20:29:10 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='Grid' url='"GridTool.x3dv#Grid", "file:///home/holger/Projekte/Cobweb/excite/tests/Components/ParticleSystems/GridTool.x3dv#Grid"'>
@@ -37,7 +37,7 @@
         centerOfRotation='-0.531098 1.64484 1.00739'/>
     <ParticleSystem
         geometryType='LINE'
-        maxParticles='10000'
+        maxParticles='100000'
         particleLifetime='20'
         lifetimeVariation='0.1'
         particleSize='0.1 0.1'
