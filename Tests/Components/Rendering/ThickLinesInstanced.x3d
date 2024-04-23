@@ -7,7 +7,7 @@
     <meta name='created' content='Sun, 21 Apr 2024 21:37:24 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.10, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 23 Apr 2024 01:18:02 GMT'/>
+    <meta name='modified' content='Tue, 23 Apr 2024 09:40:35 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -34,7 +34,7 @@
           <LineProperties
               linetype='0'
               linewidthScaleFactor='4'/>
-          <UnlitMaterial/>
+          <UnlitMaterial DEF='_1'/>
         </Appearance>
         <IndexedLineSet DEF='_6'
             coordIndex='0, 1, 2, 3, 0, -1, 4, 5, 6, 7, 4, -1, 0, 4, -1, 1, 5, -1, 2, 6, -1, 3, 7, -1'>
@@ -60,11 +60,11 @@
     </Transform>
     <Transform DEF='Thin'
         translation='25.75 0 -0.25'>
-      <InstancedShape DEF='_1'
+      <InstancedShape DEF='_2'
           translations='0 0 0, 2.5 0 0, 5 0 0, 7.5 0 0, 10 0 0, 12.5 0 0, 15 0 0, 17.5 0 0, 20 0 0, 22.5 0 0, 0 0 2.5, 2.5 0 2.5, 5 0 2.5, 7.5 0 2.5, 10 0 2.5, 12.5 0 2.5, 15 0 2.5, 17.5 0 2.5, 20 0 2.5, 22.5 0 2.5, 0 0 5, 2.5 0 5, 5 0 5, 7.5 0 5, 10 0 5, 12.5 0 5, 15 0 5, 17.5 0 5, 20 0 5, 22.5 0 5, 0 0 7.5, 2.5 0 7.5, 5 0 7.5, 7.5 0 7.5, 10 0 7.5, 12.5 0 7.5, 15 0 7.5, 17.5 0 7.5, 20 0 7.5, 22.5 0 7.5, 0 0 10, 2.5 0 10, 5 0 10, 7.5 0 10, 10 0 10, 12.5 0 10, 15 0 10, 17.5 0 10, 20 0 10, 22.5 0 10, 0 0 12.5, 2.5 0 12.5, 5 0 12.5, 7.5 0 12.5, 10 0 12.5, 12.5 0 12.5, 15 0 12.5, 17.5 0 12.5, 20 0 12.5, 22.5 0 12.5, 0 0 15, 2.5 0 15, 5 0 15, 7.5 0 15, 10 0 15, 12.5 0 15, 15 0 15, 17.5 0 15, 20 0 15, 22.5 0 15, 0 0 17.5, 2.5 0 17.5, 5 0 17.5, 7.5 0 17.5, 10 0 17.5, 12.5 0 17.5, 15 0 17.5, 17.5 0 17.5, 20 0 17.5, 22.5 0 17.5, 0 0 20, 2.5 0 20, 5 0 20, 7.5 0 20, 10 0 20, 12.5 0 20, 15 0 20, 17.5 0 20, 20 0 20, 22.5 0 20, 0 0 22.5, 2.5 0 22.5, 5 0 22.5, 7.5 0 22.5, 10 0 22.5, 12.5 0 22.5, 15 0 22.5, 17.5 0 22.5, 20 0 22.5, 22.5 0 22.5'
           rotations='0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0'>
         <Appearance>
-          <UnlitMaterial/>
+          <UnlitMaterial USE='_1'/>
         </Appearance>
         <IndexedLineSet USE='_6'/>
       </InstancedShape>
@@ -110,7 +110,7 @@ function eventsProcessed ()
 }
 ]]>
     </Script>
-    <ROUTE fromNode='_4' fromField='translations_changed' toNode='_1' toField='set_translations'/>
-    <ROUTE fromNode='_4' fromField='rotations_changed' toNode='_1' toField='set_rotations'/>
+    <ROUTE fromNode='_4' fromField='translations_changed' toNode='_2' toField='set_translations'/>
+    <ROUTE fromNode='_4' fromField='rotations_changed' toNode='_2' toField='set_rotations'/>
   </Scene>
 </X3D>
