@@ -1,11 +1,17 @@
-#X3D V3.3 utf8 Titania V1.4.0
+#X3D V4.0 utf8 X_ITE V9.5.0
+
+PROFILE Interchange
+
+COMPONENT Geometry2D : 2
+COMPONENT Scripting : 1
 
 META "comment" "World of Titania"
 META "created" "Tue, 05 Aug 2014 20:06:52 GMT"
 META "creator" "Holger Seelig"
 META "generator" "Titania V1.4.0, http://titania.create3000.de"
+META "generator" "Sunrize X3D Editor V1.6.10, https://create3000.github.io/sunrize/"
 META "identifier" "file:///home/holger/Projekte/Cobweb/excite/examples/paul bourke/GridTool.x3dv"
-META "modified" "Mon, 04 Apr 2016 11:16:38 GMT"
+META "modified" "Tue, 23 Apr 2024 02:23:24 GMT"
 
 PROTO Grid [
   inputOutput    SFVec3f    translation 0 0 0
@@ -41,7 +47,7 @@ PROTO Grid [
     scale IS scale
     children [
       DEF Plane Transform {
-        rotation -3.09087122910219e-08 0.70710528118436 0.707108281185553 3.14159
+        rotation -3.09087122910219e-8 0.70710528118436 0.707108281185553 3.14159
         scale 10 10 1
         children Shape {
           appearance Appearance {
