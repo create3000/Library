@@ -7,7 +7,7 @@
     <meta name='created' content='Sun, 21 Apr 2024 21:37:24 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.10, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 23 Apr 2024 00:29:22 GMT'/>
+    <meta name='modified' content='Tue, 23 Apr 2024 00:32:25 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -32,6 +32,7 @@
       <Shape>
         <Appearance DEF='_5'>
           <LineProperties
+              linetype='0'
               linewidthScaleFactor='4'/>
           <UnlitMaterial/>
         </Appearance>
