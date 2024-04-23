@@ -7,7 +7,7 @@ COMPONENT ParticleSystems : 3
 META "created" "Mon, 22 Apr 2024 19:54:24 GMT"
 META "creator" "Holger Seelig"
 META "generator" "Sunrize X3D Editor V1.6.10, https://create3000.github.io/sunrize/"
-META "modified" "Mon, 22 Apr 2024 19:54:24 GMT"
+META "modified" "Tue, 23 Apr 2024 02:34:05 GMT"
 
 EXTERNPROTO Torus [
   inputOutput    SFFloat minorRadius
@@ -26,7 +26,8 @@ DEF Gray Background {
 
 Viewpoint {
   description "Viewpoint"
-  position 0 0 20
+  position -0.7505748 16.04693 11.91355
+  orientation -0.997552454186642 -0.0624788057119734 -0.0313926740341153 0.933184062874328
 }
 
 Transform {
