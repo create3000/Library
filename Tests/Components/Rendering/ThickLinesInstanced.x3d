@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='Scripting' level='1'/>
+    <component name='X_ITE' level='1'/>
+    <meta name='created' content='Sun, 21 Apr 2024 21:37:24 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.6.10, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Tue, 23 Apr 2024 00:24:10 GMT'/>
+  </head>
+  <Scene>
+    <WorldInfo>
+      <MetadataSet containerField='metadata'
+          name='Sunrize'
+          reference='https://create3000.github.io/sunrize/'>
+        <MetadataSet
+            name='GridTool'>
+          <MetadataBoolean
+              name='visible'
+              value='true'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <Viewpoint
+        description='Initial View'
+        position='21.4145 19.3134 37.30774'
+        orientation='-0.845249865208756 0.510161793007317 0.159020785811611 0.70660307438497'
+        centerOfRotation='11.25 0 11.25'/>
+    <Transform DEF='Box_2'
+        translation='-10 0 -0'>
+      <Shape>
+        <Appearance DEF='_1'>
+          <LineProperties
+              linewidthScaleFactor='4'/>
+          <UnlitMaterial/>
+        </Appearance>
+        <IndexedLineSet DEF='_2'
+            coordIndex='0, 1, 2, 3, 0, -1, 4, 5, 6, 7, 4, -1, 0, 4, -1, 1, 5, -1, 2, 6, -1, 3, 7, -1'>
+          <Coordinate
+              point='1 1 1, -1 1 1, -1 -1 1, 1 -1 1, 1 1 -1, -1 1 -1, -1 -1 -1, 1 -1 -1'/>
+        </IndexedLineSet>
+      </Shape>
+    </Transform>
+    <Transform DEF='Box_1'
+        translation='-6 0 -0'>
+      <Shape>
+        <Appearance USE='_1'/>
+        <IndexedLineSet USE='_2'/>
+      </Shape>
+    </Transform>
+    <InstancedShape DEF='_3'
+        translations='0 0 0, 2.5 0 0, 5 0 0, 7.5 0 0, 10 0 0, 12.5 0 0, 15 0 0, 17.5 0 0, 20 0 0, 22.5 0 0, 0 0 2.5, 2.5 0 2.5, 5 0 2.5, 7.5 0 2.5, 10 0 2.5, 12.5 0 2.5, 15 0 2.5, 17.5 0 2.5, 20 0 2.5, 22.5 0 2.5, 0 0 5, 2.5 0 5, 5 0 5, 7.5 0 5, 10 0 5, 12.5 0 5, 15 0 5, 17.5 0 5, 20 0 5, 22.5 0 5, 0 0 7.5, 2.5 0 7.5, 5 0 7.5, 7.5 0 7.5, 10 0 7.5, 12.5 0 7.5, 15 0 7.5, 17.5 0 7.5, 20 0 7.5, 22.5 0 7.5, 0 0 10, 2.5 0 10, 5 0 10, 7.5 0 10, 10 0 10, 12.5 0 10, 15 0 10, 17.5 0 10, 20 0 10, 22.5 0 10, 0 0 12.5, 2.5 0 12.5, 5 0 12.5, 7.5 0 12.5, 10 0 12.5, 12.5 0 12.5, 15 0 12.5, 17.5 0 12.5, 20 0 12.5, 22.5 0 12.5, 0 0 15, 2.5 0 15, 5 0 15, 7.5 0 15, 10 0 15, 12.5 0 15, 15 0 15, 17.5 0 15, 20 0 15, 22.5 0 15, 0 0 17.5, 2.5 0 17.5, 5 0 17.5, 7.5 0 17.5, 10 0 17.5, 12.5 0 17.5, 15 0 17.5, 17.5 0 17.5, 20 0 17.5, 22.5 0 17.5, 0 0 20, 2.5 0 20, 5 0 20, 7.5 0 20, 10 0 20, 12.5 0 20, 15 0 20, 17.5 0 20, 20 0 20, 22.5 0 20, 0 0 22.5, 2.5 0 22.5, 5 0 22.5, 7.5 0 22.5, 10 0 22.5, 12.5 0 22.5, 15 0 22.5, 17.5 0 22.5, 20 0 22.5, 22.5 0 22.5'
+        rotations='0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0, 0 1 0 0'>
+      <Appearance USE='_1'/>
+      <IndexedLineSet USE='_2'/>
+    </InstancedShape>
+    <Script DEF='MeadowScript'>
+      <field accessType='inputOutput' type='SFInt32' name='xDimension' value='10'/>
+      <field accessType='inputOutput' type='SFInt32' name='zDimension' value='10'/>
+      <field accessType='inputOutput' type='SFFloat' name='xSpacing' value='2.5'/>
+      <field accessType='inputOutput' type='SFFloat' name='zSpacing' value='2.5'/>
+      <field accessType='inputOutput' type='SFFloat' name='positionVariation'/>
+      <field accessType='inputOutput' type='SFFloat' name='rotationVariation'/>
+      <field accessType='initializeOnly' type='SFNode' name='shape'>
+        <InstancedShape USE='_3'/>
+      </field>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+   eventsProcessed ();
+}
+
+function eventsProcessed ()
+{
+   shape .translations .length = 0;
+   shape .rotations    .length = 0;
+   shape .scales       .length = 0;
+
+   for (let z = 0; z < zDimension; ++ z)
+   {
+      for (let x = 0; x < xDimension; ++ x)
+      {
+         const
+            tx = x * xSpacing,
+            tz = z * zSpacing,
+            vx = Math .random () * positionVariation,
+            vz = Math .random () * positionVariation,
+            va = Math .random () * rotationVariation * 2;
+
+         shape .translations .push (new SFVec3f (tx + vx, 0, tz + vz));
+         shape .rotations    .push (new SFRotation (0, 1, 0, va));
+      }
+   }
+}
+]]>
+    </Script>
+  </Scene>
+</X3D>
