@@ -7,9 +7,9 @@
     <meta name='created' content='Fri, 22 Apr 2016 02:56:52 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V1.4.1, http://titania.create3000.de'/>
-    <meta name='generator' content='Sunrize X3D Editor V1.6.10, https://create3000.github.io/sunrize/'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.6.11, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite/tests/Components/ParticleSystems/ConeEmitter.x3d'/>
-    <meta name='modified' content='Mon, 22 Apr 2024 19:50:08 GMT'/>
+    <meta name='modified' content='Mon, 29 Apr 2024 10:59:38 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='Grid' url='"GridTool.x3dv#Grid", "file:///home/holger/Projekte/Cobweb/excite/tests/Components/ParticleSystems/GridTool.x3dv#Grid"'>
@@ -68,10 +68,12 @@
                 particleLifetime='10'
                 lifetimeVariation='0.01'
                 particleSize='0.1 0.1'
-                colorKey='0, 0.1, 0.4, 1'>
+                colorKey='0, 1'>
               <ConeEmitter
                   direction='1 1 0'
                   speed='0.1'/>
+              <Color
+                  color='1 0 0, 1 1 0'/>
               <Appearance>
                 <PointProperties
                     pointSizeScaleFactor='2'
