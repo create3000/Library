@@ -12,9 +12,9 @@
     <meta name='created' content='Fri, 22 Apr 2016 03:51:27 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V1.4.1, http://titania.create3000.de'/>
-    <meta name='generator' content='Sunrize X3D Editor V1.6.10, https://create3000.github.io/sunrize/'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.6.11, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite/tests/Components/ParticleSystems/ExplosionEmitter.x3d'/>
-    <meta name='modified' content='Mon, 22 Apr 2024 19:51:56 GMT'/>
+    <meta name='modified' content='Mon, 29 Apr 2024 11:02:02 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='Grid' url='"GridTool.x3dv#Grid", "file:///home/holger/Projekte/Cobweb/excite/tests/Components/ParticleSystems/GridTool.x3dv#Grid"'>
@@ -130,7 +130,7 @@ function set_value (value)
             particleLifetime='4'
             lifetimeVariation='0.5'
             particleSize='1 1'
-            colorKey='0, 0.2, 0.5, 0.7, 0.8, 1'>
+            colorKey='0, 0.5, 1'>
           <ExplosionEmitter
               speed='0.5'
               variation='0.5'
@@ -144,6 +144,8 @@ function set_value (value)
           <WindPhysicsModel
               speed='0.5'
               gustiness='2'/>
+          <Color
+              color='1 0 0, 1 1 0, 0 0 1'/>
           <Appearance>
             <PointProperties
                 pointSizeScaleFactor='10'
