@@ -14,7 +14,7 @@
     <meta name='generator' content='Titania V1.4.1, http://titania.create3000.de'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.11, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite/tests/Components/ParticleSystems/ExplosionEmitter.x3d'/>
-    <meta name='modified' content='Mon, 29 Apr 2024 11:02:02 GMT'/>
+    <meta name='modified' content='Tue, 30 Apr 2024 04:23:56 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='Grid' url='"GridTool.x3dv#Grid", "file:///home/holger/Projekte/Cobweb/excite/tests/Components/ParticleSystems/GridTool.x3dv#Grid"'>
@@ -32,89 +32,6 @@
       <field accessType='inputOutput' type='SFFloat' name='majorLineTransparency'/>
       <field accessType='initializeOnly' type='SFBool' name='solid'/>
     </ExternProtoDeclare>
-    <WorldInfo
-        title='ExplosionEmitter'>
-      <MetadataSet DEF='Titania' containerField='metadata'
-          name='Titania'
-          reference='http://titania.create3000.de'>
-        <MetadataSet DEF='NavigationInfo'
-            name='NavigationInfo'
-            reference='http://titania.create3000.de'>
-          <MetadataString DEF='type'
-              name='type'
-              reference='http://titania.create3000.de'
-              value='"EXAMINE"'/>
-        </MetadataSet>
-        <MetadataSet DEF='Viewpoint'
-            name='Viewpoint'
-            reference='http://titania.create3000.de'>
-          <MetadataDouble DEF='position'
-              name='position'
-              reference='http://titania.create3000.de'
-              value='0, 0, 10'/>
-          <MetadataDouble DEF='orientation'
-              name='orientation'
-              reference='http://titania.create3000.de'
-              value='0, 0, 1, 0'/>
-          <MetadataDouble DEF='centerOfRotation'
-              name='centerOfRotation'
-              reference='http://titania.create3000.de'
-              value='0, 0, 0'/>
-        </MetadataSet>
-        <MetadataSet DEF='Selection'
-            name='Selection'
-            reference='http://titania.create3000.de'>
-          <MetadataSet DEF='previous'
-              name='previous'
-              reference='http://titania.create3000.de'/>
-          <MetadataSet DEF='children'
-              name='children'
-              reference='http://titania.create3000.de'>
-            <Script DEF='NumParticlesyScript' containerField='value'>
-              <field accessType='inputOnly' type='SFVec3f' name='set_translation'/>
-              <field accessType='inputOutput' type='SFString' name='description' value='numParticles'/>
-              <field accessType='inputOutput' type='SFInt32' name='minValue'/>
-              <field accessType='inputOutput' type='SFInt32' name='maxValue' value='40000'/>
-              <field accessType='outputOnly' type='SFInt32' name='value_changed'/>
-              <field accessType='outputOnly' type='MFString' name='string_changed'/>
-              <field accessType='initializeOnly' type='SFInt32' name='currentValue' value='2000'/>
-<![CDATA[ecmascript:
-
-function initialized ()
-{
-	set_value (value);
-}
-
-function set_translation (value)
-{
-	set_value (minValue + (value .x * (maxValue - minValue)));
-}
-
-function set_value (value)
-{
-	var rounded = value .toFixed (0);
-
-	if (rounded == currentValue)
-		return;
-
-	currentValue       = rounded;
-	string_changed [0] = description + " " + rounded;
-	value_changed      = rounded;
-}
-]]>
-            </Script>
-          </MetadataSet>
-        </MetadataSet>
-        <MetadataSet DEF='LayerSet'
-            name='LayerSet'
-            reference='http://titania.create3000.de'>
-          <MetadataInteger DEF='activeLayer'
-              name='activeLayer'
-              reference='http://titania.create3000.de'
-              value='-1'/>
-        </MetadataSet>
-      </MetadataSet>
-    </WorldInfo>
     <LayerSet
         activeLayer='1'
         order='0, 1, 2, 3'>
@@ -130,7 +47,7 @@ function set_value (value)
             particleLifetime='4'
             lifetimeVariation='0.5'
             particleSize='1 1'
-            colorKey='0, 0.5, 1'>
+            colorKey='0, 0.2, 0.5, 0.7, 0.8, 1'>
           <ExplosionEmitter
               speed='0.5'
               variation='0.5'
@@ -144,8 +61,8 @@ function set_value (value)
           <WindPhysicsModel
               speed='0.5'
               gustiness='2'/>
-          <Color
-              color='1 0 0, 1 1 0, 0 0 1'/>
+          <ColorRGBA
+              color='1 0.38 0 0, 1 0.58 0.06 0.01, 1 0.37 0 0.1, 1 0.05 0 0, 0 0 0 0.015, 0 0 0 0'/>
           <Appearance>
             <PointProperties
                 pointSizeScaleFactor='10'
@@ -263,7 +180,39 @@ function set_value (value)
                 </MetadataSet>
               </PositionInterpolator>
             </Group>
-            <Script USE='NumParticlesyScript'/>
+            <Script DEF='NumParticlesyScript'>
+              <field accessType='inputOnly' type='SFVec3f' name='set_translation'/>
+              <field accessType='inputOutput' type='SFString' name='description' value='numParticles'/>
+              <field accessType='inputOutput' type='SFInt32' name='minValue'/>
+              <field accessType='inputOutput' type='SFInt32' name='maxValue' value='40000'/>
+              <field accessType='outputOnly' type='SFInt32' name='value_changed'/>
+              <field accessType='outputOnly' type='MFString' name='string_changed'/>
+              <field accessType='initializeOnly' type='SFInt32' name='currentValue' value='2000'/>
+<![CDATA[ecmascript:
+
+function initialized ()
+{
+	set_value (value);
+}
+
+function set_translation (value)
+{
+	set_value (minValue + (value .x * (maxValue - minValue)));
+}
+
+function set_value (value)
+{
+	var rounded = value .toFixed (0);
+
+	if (rounded == currentValue)
+		return;
+
+	currentValue       = rounded;
+	string_changed [0] = description + " " + rounded;
+	value_changed      = rounded;
+}
+]]>
+            </Script>
           </Group>
           <Switch>
             <Transform DEF='Rectangle2D_1'

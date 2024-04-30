@@ -11,7 +11,7 @@
     <meta name='generator' content='Titania V4.0.6a, http://titania.create3000.de'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.11, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/ParticleSystems/BoundedPhysicsModel.x3d'/>
-    <meta name='modified' content='Mon, 29 Apr 2024 10:47:03 GMT'/>
+    <meta name='modified' content='Tue, 30 Apr 2024 04:24:01 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='IcoSphere' url='"https://cdn.rawgit.com/create3000/Library/1.0.13/Prototypes/Geometry3D/IcoSphere.x3d", "http://cdn.rawgit.com/create3000/Library/1.0.13/Prototypes/Geometry3D/IcoSphere.x3d", "https://rawgit.com/create3000/Library/1.0.13/Prototypes/Geometry3D/IcoSphere.x3d", "http://rawgit.com/create3000/Library/1.0.13/Prototypes/Geometry3D/IcoSphere.x3d"'>
@@ -20,71 +20,6 @@
       <field accessType='inputOutput' type='SFFloat' name='radius'/>
       <field accessType='initializeOnly' type='SFBool' name='solid'/>
     </ExternProtoDeclare>
-    <WorldInfo
-        title='BoundedPhysicsModel'>
-      <MetadataSet DEF='Titania' containerField='metadata'
-          name='Titania'
-          reference='http://titania.create3000.de'>
-        <MetadataSet DEF='NavigationInfo'
-            name='NavigationInfo'
-            reference='http://titania.create3000.de'>
-          <MetadataString DEF='type'
-              name='type'
-              reference='http://titania.create3000.de'
-              value='"EXAMINE"'/>
-        </MetadataSet>
-        <MetadataSet DEF='Viewpoint'
-            name='Viewpoint'
-            reference='http://titania.create3000.de'>
-          <MetadataDouble DEF='position'
-              name='position'
-              reference='http://titania.create3000.de'
-              value='0, 0, 15'/>
-          <MetadataDouble DEF='orientation'
-              name='orientation'
-              reference='http://titania.create3000.de'
-              value='0, 0, 1, 0'/>
-          <MetadataDouble DEF='centerOfRotation'
-              name='centerOfRotation'
-              reference='http://titania.create3000.de'
-              value='0, 0, 0'/>
-        </MetadataSet>
-        <MetadataSet DEF='Selection'
-            name='Selection'
-            reference='http://titania.create3000.de'>
-          <MetadataSet DEF='nodes'
-              name='nodes'
-              reference='http://titania.create3000.de'>
-            <Transform DEF='Icosahedron' containerField='value'>
-              <Shape>
-                <Appearance>
-                  <Material/>
-                </Appearance>
-                <ProtoInstance name='IcoSphere' DEF='_1' containerField='geometry'>
-                  <fieldValue name='order' value='3'/>
-                </ProtoInstance>
-              </Shape>
-            </Transform>
-          </MetadataSet>
-          <MetadataBoolean DEF='selectGeometry'
-              name='selectGeometry'
-              reference='http://titania.create3000.de'
-              value='false'/>
-        </MetadataSet>
-        <MetadataSet DEF='Page'
-            name='Page'
-            reference='http://titania.create3000.de'>
-          <MetadataInteger DEF='activeView'
-              name='activeView'
-              reference='http://titania.create3000.de'
-              value='1'/>
-          <MetadataInteger DEF='multiView'
-              name='multiView'
-              reference='http://titania.create3000.de'
-              value='0'/>
-        </MetadataSet>
-      </MetadataSet>
-    </WorldInfo>
     <Background DEF='Gray'
         skyColor='0.2 0.2 0.2'/>
     <Viewpoint
@@ -100,7 +35,16 @@
             size='7 7 7'/>
       </Shape>
     </Transform>
-    <Transform USE='Icosahedron'/>
+    <Transform DEF='Icosahedron'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <ProtoInstance name='IcoSphere' DEF='_1' containerField='geometry'>
+          <fieldValue name='order' value='3'/>
+        </ProtoInstance>
+      </Shape>
+    </Transform>
     <TimeSensor DEF='_3'
         cycleInterval='20'
         loop='true'/>
@@ -108,12 +52,13 @@
         key='0, 0.3, 1'
         keyValue='true, false'/>
     <ParticleSystem DEF='_5'
+        createParticles='false'
         geometryType='POINT'
         maxParticles='4000'
         particleLifetime='30'
         lifetimeVariation='0'
         particleSize='0.1 0.1'
-        colorKey='0, 1'>
+        colorKey='0, 0.1, 0.4, 1'>
       <ConeEmitter
           position='0 -3 0'
           direction='1 4 0'
@@ -128,8 +73,8 @@
       </BoundedPhysicsModel>
       <ForcePhysicsModel
           force='0 -0.098 0'/>
-      <Color
-          color='1 0 0, 1 1 0'/>
+      <ColorRGBA
+          color='1 0.38 0 0.5, 1 0.58 0.06 0.5, 1 0.37 0 0.5, 1 0.05 0 0.5'/>
       <Appearance>
         <PointProperties
             pointSizeScaleFactor='4'
