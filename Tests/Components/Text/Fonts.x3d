@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='Text' level='1'/>
+    <meta name='created' content='Wed, 01 May 2024 09:38:27 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.6.11, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Wed, 01 May 2024 09:41:10 GMT'/>
+  </head>
+  <Scene>
+    <WorldInfo>
+      <MetadataSet containerField='metadata'
+          name='Sunrize'
+          reference='https://create3000.github.io/sunrize/'>
+        <MetadataSet
+            name='GridTool'>
+          <MetadataBoolean
+              name='visible'
+              value='true'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <Viewpoint
+        description='Initial View'
+        position='2.4565 0.322 5.985084'
+        centerOfRotation='2.4565 0.322 0'/>
+    <Transform DEF='Text_1'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text
+            string='"3D Text fun"'>
+          <FontStyle
+              family='"SourceSans3-Regular.ttf", "SERIF"'/>
+        </Text>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>
