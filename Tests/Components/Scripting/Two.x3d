@@ -7,7 +7,7 @@
     <meta name='created' content='Wed, 08 May 2024 13:06:31 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.12, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Thu, 09 May 2024 10:29:28 GMT'/>
+    <meta name='modified' content='Thu, 09 May 2024 11:50:34 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='Simulation'>
@@ -58,9 +58,6 @@
           </IS>
         </TimeSensor>
         <Script DEF='SimulationScript'>
-          <field accessType='inputOutput' type='SFTime' name='startTime'/>
-          <field accessType='inputOutput' type='SFBool' name='active'/>
-          <field accessType='inputOnly' type='SFTime' name='set_time'/>
           <field accessType='inputOutput' type='MFVec3f' name='initialPositions'/>
           <field accessType='inputOutput' type='MFVec3f' name='initialVelocities'/>
           <field accessType='inputOutput' type='MFFloat' name='initialMasses'/>
@@ -69,12 +66,15 @@
           <field accessType='inputOutput' type='MFVec3f' name='velocities'/>
           <field accessType='inputOutput' type='MFFloat' name='masses'/>
           <field accessType='inputOutput' type='SFFloat' name='gravitationalConstant'/>
+          <field accessType='inputOutput' type='SFTime' name='startTime'/>
+          <field accessType='inputOutput' type='SFBool' name='active'/>
+          <field accessType='inputOnly' type='SFTime' name='set_time'/>
           <IS>
-            <connect nodeField='startTime' protoField='startTime'/>
             <connect nodeField='initialPositions' protoField='initialPositions'/>
             <connect nodeField='initialVelocities' protoField='initialVelocities'/>
             <connect nodeField='initialMasses' protoField='initialMasses'/>
             <connect nodeField='gravitationalConstant' protoField='gravitationalConstant'/>
+            <connect nodeField='startTime' protoField='startTime'/>
           </IS>
 <![CDATA[ecmascript:
 
@@ -89,7 +89,7 @@ function set_startTime (value, time)
 {
    if (value && active)
       return;
-   
+
    positions  = initialPositions;
    velocities = initialVelocities;
    masses     = initialMasses;
@@ -100,7 +100,7 @@ function set_startTime (value, time)
       rotations [p] = new SFRotation (yAxis, velocities [p]);
 }
 
-function set_time ()
+function set_time (value, time)
 {
    const
       dt           = 1 / Math .max (Browser .currentFrameRate, 10),
@@ -132,7 +132,8 @@ function set_time ()
       rotations  [p] = new SFRotation (yAxis, velocity);
       velocities [p] = velocity;
    }
-}]]>
+}
+]]>
         </Script>
         <ROUTE fromNode='_2' fromField='time' toNode='SimulationScript' toField='set_time'/>
         <ROUTE fromNode='SimulationScript' fromField='positions_changed' toNode='_1' toField='set_translations'/>
@@ -161,10 +162,10 @@ function set_time ()
       <fieldValue name='initialVelocities' value='0 0 0.5, 0 0 -0.5'/>
       <fieldValue name='initialMasses' value='1, 1'/>
       <fieldValue name='gravitationalConstant' value='1'/>
-      <fieldValue name='startTime' value='1715250519.074'/>
+      <fieldValue name='startTime' value='1715251625.132'/>
       <fieldValue name='resumeTime' value='1715180583.386'/>
       <fieldValue name='pauseTime' value='1715180582.069'/>
-      <fieldValue name='stopTime' value='1715250530.895'/>
+      <fieldValue name='stopTime' value='1715251647'/>
       <fieldValue name='appearance'>
         <Appearance DEF='_2'>
           <Material/>
