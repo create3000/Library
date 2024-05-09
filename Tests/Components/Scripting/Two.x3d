@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='Scripting' level='1'/>
+    <component name='X_ITE' level='1'/>
+    <meta name='created' content='Wed, 08 May 2024 13:06:31 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.6.12, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Thu, 09 May 2024 10:29:28 GMT'/>
+  </head>
+  <Scene>
+    <ProtoDeclare name='Simulation'>
+      <ProtoInterface>
+        <field accessType='inputOutput' type='SFBool' name='enabled' value='true'/>
+        <field accessType='inputOutput' type='MFVec3f' name='initialPositions'/>
+        <field accessType='inputOutput' type='MFVec3f' name='initialVelocities'/>
+        <field accessType='inputOutput' type='MFFloat' name='initialMasses'/>
+        <field accessType='inputOutput' type='SFFloat' name='gravitationalConstant' value='6.674302e-11'/>
+        <field accessType='inputOutput' type='SFTime' name='startTime'/>
+        <field accessType='inputOutput' type='SFTime' name='resumeTime'/>
+        <field accessType='inputOutput' type='SFTime' name='pauseTime'/>
+        <field accessType='inputOutput' type='SFTime' name='stopTime' value='1'/>
+        <field accessType='outputOnly' type='SFBool' name='isPaused'/>
+        <field accessType='outputOnly' type='SFBool' name='isActive'/>
+        <field accessType='inputOutput' type='SFBool' name='pointerEvents' value='true'/>
+        <field accessType='inputOutput' type='SFBool' name='castShadow' value='true'/>
+        <field accessType='initializeOnly' type='SFBool' name='visible' value='true'/>
+        <field accessType='inputOutput' type='SFBool' name='bboxDisplay'/>
+        <field accessType='initializeOnly' type='SFVec3f' name='bboxSize' value='-1 -1 -1'/>
+        <field accessType='initializeOnly' type='SFVec3f' name='bboxCenter'/>
+        <field accessType='inputOutput' type='SFNode' name='appearance'/>
+        <field accessType='inputOutput' type='SFNode' name='geometry'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <InstancedShape DEF='_1'>
+          <IS>
+            <connect nodeField='pointerEvents' protoField='pointerEvents'/>
+            <connect nodeField='castShadow' protoField='castShadow'/>
+            <connect nodeField='visible' protoField='visible'/>
+            <connect nodeField='bboxDisplay' protoField='bboxDisplay'/>
+            <connect nodeField='bboxSize' protoField='bboxSize'/>
+            <connect nodeField='bboxCenter' protoField='bboxCenter'/>
+            <connect nodeField='appearance' protoField='appearance'/>
+            <connect nodeField='geometry' protoField='geometry'/>
+          </IS>
+        </InstancedShape>
+        <TimeSensor DEF='_2'
+            loop='true'>
+          <IS>
+            <connect nodeField='enabled' protoField='enabled'/>
+            <connect nodeField='startTime' protoField='startTime'/>
+            <connect nodeField='resumeTime' protoField='resumeTime'/>
+            <connect nodeField='pauseTime' protoField='pauseTime'/>
+            <connect nodeField='stopTime' protoField='stopTime'/>
+            <connect nodeField='isPaused' protoField='isPaused'/>
+            <connect nodeField='isActive' protoField='isActive'/>
+          </IS>
+        </TimeSensor>
+        <Script DEF='SimulationScript'>
+          <field accessType='inputOutput' type='SFTime' name='startTime'/>
+          <field accessType='inputOutput' type='SFBool' name='active'/>
+          <field accessType='inputOnly' type='SFTime' name='set_time'/>
+          <field accessType='inputOutput' type='MFVec3f' name='initialPositions'/>
+          <field accessType='inputOutput' type='MFVec3f' name='initialVelocities'/>
+          <field accessType='inputOutput' type='MFFloat' name='initialMasses'/>
+          <field accessType='inputOutput' type='MFVec3f' name='positions'/>
+          <field accessType='inputOutput' type='MFRotation' name='rotations'/>
+          <field accessType='inputOutput' type='MFVec3f' name='velocities'/>
+          <field accessType='inputOutput' type='MFFloat' name='masses'/>
+          <field accessType='inputOutput' type='SFFloat' name='gravitationalConstant'/>
+          <IS>
+            <connect nodeField='startTime' protoField='startTime'/>
+            <connect nodeField='initialPositions' protoField='initialPositions'/>
+            <connect nodeField='initialVelocities' protoField='initialVelocities'/>
+            <connect nodeField='initialMasses' protoField='initialMasses'/>
+            <connect nodeField='gravitationalConstant' protoField='gravitationalConstant'/>
+          </IS>
+<![CDATA[ecmascript:
+
+const yAxis = new SFVec3f (0, 1, 0);
+
+function initialize ()
+{
+   set_startTime (0, 0);
+}
+
+function set_startTime (value, time)
+{
+   if (value && active)
+      return;
+   
+   positions  = initialPositions;
+   velocities = initialVelocities;
+   masses     = initialMasses;
+
+   const numParticles = positions .length;
+
+   for (let p = 0; p < numParticles; ++ p)
+      rotations [p] = new SFRotation (yAxis, velocities [p]);
+}
+
+function set_time ()
+{
+   const
+      dt           = 1 / Math .max (Browser .currentFrameRate, 10),
+      numParticles = positions .length,
+      forces       = new MFVec3f ();
+
+   for (let p1 = 0; p1 < numParticles; ++ p1)
+   {
+      for (let p0 = 0; p0 < p1; ++ p0)
+      {
+         const
+            p = positions [p0] .subtract (positions [p1]),
+            r = p .length (),
+            F = p .multiply ((masses [p0] * masses [p1] / Math .pow (r, 3)));
+
+         forces [p0] = forces [p0] .subtract (F);
+         forces [p1] = forces [p1] .add (F);
+      }
+   }
+
+   for (let p = 0; p < numParticles; ++ p)
+   {
+      const 
+         dv          = forces [p] .multiply (gravitationalConstant * dt / masses [p]),
+         velocity    = velocities [p] .add (dv),
+         translation = velocity .multiply (dt);
+
+      positions  [p] = positions [p] .add (translation);
+      rotations  [p] = new SFRotation (yAxis, velocity);
+      velocities [p] = velocity;
+   }
+}]]>
+        </Script>
+        <ROUTE fromNode='_2' fromField='time' toNode='SimulationScript' toField='set_time'/>
+        <ROUTE fromNode='SimulationScript' fromField='positions_changed' toNode='_1' toField='set_translations'/>
+        <ROUTE fromNode='SimulationScript' fromField='rotations_changed' toNode='_1' toField='set_rotations'/>
+        <ROUTE fromNode='_2' fromField='isActive' toNode='SimulationScript' toField='set_active'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <WorldInfo>
+      <MetadataSet containerField='metadata'
+          name='Sunrize'
+          reference='https://create3000.github.io/sunrize/'>
+        <MetadataSet
+            name='GridTool'>
+          <MetadataBoolean
+              name='visible'
+              value='true'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <Viewpoint
+        description='Initial View'
+        position='1.301276 1.405099 2.168961'
+        orientation='-0.671263063550492 0.717524106724337 0.18591679800989 0.73676213543075'/>
+    <ProtoInstance name='Simulation'>
+      <fieldValue name='initialPositions' value='-1 0 0, 1 0 0'/>
+      <fieldValue name='initialVelocities' value='0 0 0.5, 0 0 -0.5'/>
+      <fieldValue name='initialMasses' value='1, 1'/>
+      <fieldValue name='gravitationalConstant' value='1'/>
+      <fieldValue name='startTime' value='1715250519.074'/>
+      <fieldValue name='resumeTime' value='1715180583.386'/>
+      <fieldValue name='pauseTime' value='1715180582.069'/>
+      <fieldValue name='stopTime' value='1715250530.895'/>
+      <fieldValue name='appearance'>
+        <Appearance DEF='_2'>
+          <Material/>
+        </Appearance>
+      </fieldValue>
+      <fieldValue name='geometry'>
+        <Cone DEF='_1'
+            height='0.2'
+            bottomRadius='0.1'/>
+      </fieldValue>
+    </ProtoInstance>
+  </Scene>
+</X3D>
