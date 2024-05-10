@@ -7,7 +7,7 @@
     <meta name='created' content='Wed, 08 May 2024 13:06:31 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.12, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Fri, 10 May 2024 15:19:33 GMT'/>
+    <meta name='modified' content='Fri, 10 May 2024 16:54:58 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='ParticleSimulation'>
@@ -57,7 +57,7 @@
             <connect nodeField='isActive' protoField='isActive'/>
           </IS>
         </TimeSensor>
-        <Script DEF='SimulationScript'>
+        <Script DEF='ParticleSimulationScript'>
           <field accessType='inputOutput' type='MFVec3f' name='initialPositions'/>
           <field accessType='inputOutput' type='MFVec3f' name='initialVelocities'/>
           <field accessType='inputOutput' type='MFFloat' name='initialMasses'/>
@@ -135,10 +135,66 @@ function set_time (value, time)
 }
 ]]>
         </Script>
-        <ROUTE fromNode='_2' fromField='time' toNode='SimulationScript' toField='set_time'/>
-        <ROUTE fromNode='SimulationScript' fromField='positions_changed' toNode='_1' toField='set_translations'/>
-        <ROUTE fromNode='SimulationScript' fromField='rotations_changed' toNode='_1' toField='set_rotations'/>
-        <ROUTE fromNode='_2' fromField='isActive' toNode='SimulationScript' toField='set_active'/>
+        <ROUTE fromNode='_2' fromField='time' toNode='ParticleSimulationScript' toField='set_time'/>
+        <ROUTE fromNode='ParticleSimulationScript' fromField='positions_changed' toNode='_1' toField='set_translations'/>
+        <ROUTE fromNode='ParticleSimulationScript' fromField='rotations_changed' toNode='_1' toField='set_rotations'/>
+        <ROUTE fromNode='_2' fromField='isActive' toNode='ParticleSimulationScript' toField='set_active'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare name='ParticleGenerator'>
+      <ProtoInterface>
+        <field accessType='inputOutput' type='SFInt32' name='numParticles'/>
+        <field accessType='inputOutput' type='SFNode' name='particleSimulation'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Group DEF='_1'/>
+        <Script DEF='ParticleGeneratorScript'>
+          <field accessType='inputOutput' type='SFInt32' name='numParticles'/>
+          <field accessType='inputOutput' type='SFNode' name='particleSimulation'/>
+          <field accessType='initializeOnly' type='SFNode' name='group'>
+            <Group USE='_1'/>
+          </field>
+          <IS>
+            <connect nodeField='numParticles' protoField='numParticles'/>
+            <connect nodeField='particleSimulation' protoField='particleSimulation'/>
+          </IS>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+   set_particleSimulation ();
+}
+
+function set_numParticles ()
+{
+   if (!particleSimulation)
+      return;
+
+   particleSimulation .initialPositions  .length = 0;
+   particleSimulation .initialVelocities .length = 0;
+   particleSimulation .initialMasses     .length = 0;
+   
+   for (let p = 0; p < numParticles; ++ p)
+   {
+      particleSimulation .initialPositions .push (new SFVec3f (random (-10, 10), random (-10, 10), random (-10, 10)));
+      particleSimulation .initialVelocities .push (new SFVec3f (random (-2, 2), random (-2, 2), random (-2, 2)));
+      particleSimulation .initialMasses .push (1);
+   }
+}
+
+function set_particleSimulation (value, time)
+{
+   group .children [0] = particleSimulation;
+
+   set_numParticles ();
+}
+
+function random (min, max)
+{ 
+   return min + Math .random () * (max - min);
+}
+]]>
+        </Script>
       </ProtoBody>
     </ProtoDeclare>
     <WorldInfo>
@@ -155,8 +211,9 @@ function set_time (value, time)
     </WorldInfo>
     <Viewpoint
         description='Initial View'
-        position='1.301276 1.405099 2.168961'
-        orientation='-0.671263063550492 0.717524106724337 0.18591679800989 0.73676213543075'/>
+        position='13.79954 14.91044 23.38216'
+        orientation='-0.671263063550492 0.717524106724337 0.18591679800989 0.73676213543075'
+        centerOfRotation='-0.02171373 -0.01353645 0.3449655'/>
     <ProtoInstance name='ParticleSimulation'>
       <fieldValue name='initialPositions' value='-1 0 0, 1 0 0'/>
       <fieldValue name='initialVelocities' value='0 0 0.5, 0 0 -0.5'/>
@@ -166,6 +223,7 @@ function set_time (value, time)
       <fieldValue name='resumeTime' value='1715180583.386'/>
       <fieldValue name='pauseTime' value='1715180582.069'/>
       <fieldValue name='stopTime' value='1715354320.514'/>
+      <fieldValue name='visible' value='false'/>
       <fieldValue name='appearance'>
         <Appearance DEF='_2'>
           <Material/>
@@ -175,6 +233,26 @@ function set_time (value, time)
         <Cone DEF='_1'
             height='0.2'
             bottomRadius='0.1'/>
+      </fieldValue>
+    </ProtoInstance>
+    <ProtoInstance name='ParticleGenerator'>
+      <fieldValue name='numParticles' value='100'/>
+      <fieldValue name='particleSimulation'>
+        <ProtoInstance name='ParticleSimulation' DEF='_3'>
+          <fieldValue name='initialPositions' value='0.008081876 4.135872 0.220515, 0.6366962 -6.369578 5.818952, -1.287977 -2.417953 -0.546428, 6.102595 -7.188601 -8.246196, 8.937855 -0.1880693 2.395177, 6.658529 5.060587 5.32984, 5.696049 -7.329099 -3.736168, 5.321321 -7.20895 3.577331, -9.435657 4.207084 7.815996, 0.5867124 4.51545 -3.864223, -3.427734 3.968885 -9.990256, -1.270443 4.334981 4.861812, 1.442669 -2.776704 -1.684485, -8.438253 0.2635866 -9.021488, -6.79712 0.06656203 9.778631, 1.779825 -1.803291 -0.3406321, -4.356044 6.851202 -5.400241, -6.782468 -5.689847 9.352662, 3.297261 0.8792776 -9.5151, -5.733779 8.255779 0.632418, -4.604593 0.9474279 8.643012, 5.066992 -9.160149 3.527585, -0.9606002 -4.658295 -0.2071636, 4.245409 8.063965 -7.141856, -5.935427 1.11066 -1.303237, 8.839997 -4.901078 7.089931, -3.152951 -6.247607 2.57874, 6.087517 -0.5685214 -1.83676, -5.857692 -2.504727 0.7150528, 3.05303 7.964703 6.330353, 4.817488 6.948135 -5.247208, 5.237134 2.402438 -3.662534, -2.694776 0.5894002 8.113411, 1.975158 -8.256342 7.335504, 0.8724593 -4.261742 -6.992887, 7.380538 -2.944521 1.24922, 5.229167 -8.056801 -7.876199, -9.864873 7.712234 6.191245, -3.322357 3.743834 -3.337, -9.725351 6.592136 -5.926419, 9.755544 -5.127728 -1.760066, -1.655452 6.982689 8.29047, 4.04234 -5.236084 3.43355, 5.924277 3.357001 -0.08342614, 8.89626 4.761473 -1.226313, 9.409542 7.002352 2.452869, -1.545308 7.978067 -5.502258, -7.820591 -9.494344 -7.152073, 7.981735 -2.985435 -0.2208906, 2.344441 -7.133758 -6.764894, -4.628756 -4.604494 -0.1303923, 2.205918 -7.036537 -0.9995275, -1.830765 0.3976481 0.8520756, -2.077233 -6.24671 5.156893, -4.457132 7.292675 2.206814, 8.371744 -6.861 -2.957183, 6.722317 3.149483 -2.622056, -5.13869 0.7324619 -6.529962, -6.758307 -6.384488 8.33142, 4.929088 -4.419013 6.812015, -4.912601 -7.685766 -7.177953, -7.65985 8.717028 -1.681646, 2.104774 -0.3814469 -2.180158, 6.498699 -6.287436 3.520933, -5.840552 -9.375782 5.455964, -6.870261 0.7490868 0.9646015, 0.6092217 0.08216619 5.425958, -1.466545 1.35939 9.535697, 7.083895 -4.823447 9.67384, -1.91782 9.040422 6.70595, 7.993309 -4.194572 0.2693658, 7.095081 4.190938 8.633476, 0.222755 -5.331318 6.408678, -1.846177 -0.9968386 -6.71384, 3.166011 -0.07078086 0.4125984, -8.145379 -9.566604 8.901435, -9.12011 3.4005 9.090097, 8.283205 -9.18771 -8.989432, -8.815986 5.747612 -5.322423, 7.090454 3.530212 -4.292941, -8.794103 -6.801323 -6.739497, -4.231726 -3.2422 -7.395613, -3.474442 -4.075049 -4.894899, 8.191236 -2.076608 -6.687466, 1.574687 -4.890602 -9.618819, -8.914033 -2.901965 -8.33249, -2.141223 -7.717161 0.03588194, 6.799711 -1.139453 -1.455489, 4.812061 9.715813 -5.132424, 3.663818 2.539055 -3.67169, 5.03229 2.122549 2.68944, -2.468525 8.788036 8.220769, 0.03372255 -1.278456 2.294355, -1.395742 -1.923482 9.79871, 8.676069 6.286299 -5.084579, 4.613808 6.739379 0.3264973, -0.5814564 -7.304688 9.3755, -3.693048 -0.7650614 7.881209, 4.786129 2.079383 6.732247, 2.522259 -3.879497 7.219136'/>
+          <fieldValue name='initialVelocities' value='-0.1236971 1.606512 1.325814, 0.7733285 -1.516696 -1.026054, 1.173039 1.280095 1.358626, -0.5749229 0.7288222 0.08702347, 1.384691 0.6907257 -1.898441, 0.5284846 -0.4860168 0.68875, -1.27975 0.7441 1.495805, 0.4090696 -0.1024078 0.5431319, -0.8499641 -0.09256132 1.976208, 0.7751647 0.3842842 1.74041, 0.3355575 1.961178 -1.829981, 1.630414 0.05865423 -1.929711, 1.771948 -0.6139337 0.646348, -0.3241091 0.4104548 0.1769273, -1.401766 -1.040059 -1.420351, 0.8946446 0.08562388 -1.636309, -0.1081187 1.885638 -0.7227092, 1.75773 -1.824747 1.588495, 1.98684 0.1959522 -1.447195, -1.459635 -1.431932 1.459941, -1.918574 -0.8518545 1.063596, -1.01879 1.417331 1.42301, 1.721835 0.0691276 0.02689644, 1.949299 0.7965938 1.365848, 1.103561 1.222939 -0.7196158, -1.138824 0.1706483 0.5644947, -1.084453 -0.229198 -0.4524917, -1.360075 1.922309 -1.584654, -1.606096 -1.495246 -1.498618, -0.5948861 1.836369 0.2156673, -0.8445813 1.443157 -1.088583, 0.5629146 1.470758 0.100697, 0.1296725 -1.955087 0.6272204, 0.09824242 -0.05514376 -1.918559, 1.208656 -1.96313 1.348946, 1.60491 0.06675812 -1.187905, -1.475437 -0.237522 1.972376, 1.623827 -1.77208 -1.459819, -0.2906716 -0.3237508 0.3037184, -1.460098 0.04530887 1.710728, 1.531957 1.364882 0.2209023, -0.3513477 -1.083292 1.723414, -0.3926683 -1.390851 -1.850209, 1.102669 1.497313 -1.949341, -1.946531 -1.967102 -1.500148, -1.197083 1.476531 -0.8420746, 0.3993684 1.838349 0.1254725, 1.478047 0.7823297 -1.869686, 0.6251595 -1.406166 -0.5456143, -0.5088885 -0.2286057 -0.04419931, 1.806508 0.3263722 -1.518958, -0.7146292 -0.5441744 -0.5258315, -1.823154 -0.9076692 0.6255168, 1.304824 -0.2401002 1.485618, -1.398969 1.489088 -1.088827, -0.1086883 0.36033 0.704537, -0.7334072 -1.653186 -0.02479495, -0.1105757 -1.737135 0.257915, 0.1614372 0.9449801 -1.338719, 1.104042 -0.7181658 0.8167406, -0.7439025 0.02936504 0.8521869, -1.62657 1.733313 -0.2103693, 0.5952748 1.389402 1.015306, -0.2609773 0.7601173 -1.189743, -1.232039 1.567894 -0.3801902, 1.730669 -0.3574991 1.900708, -0.4460482 -0.7634764 0.5058534, 1.098535 1.0735 -1.699172, -1.445717 1.717057 -0.8865936, -1.356542 -1.609516 -1.644409, -1.747802 0.425963 1.896942, -0.3911165 1.99104 -0.9703851, -0.9340107 0.6543423 0.1561033, -0.933475 -1.869807 0.2075418, -0.7917444 1.927072 1.350568, 1.310085 0.7049019 -0.07308482, -1.827611 1.144985 1.764772, -1.275998 -1.121132 0.4107435, 0.753112 -0.8988444 -1.402413, -0.6200835 -0.7242802 -0.1300147, 1.816868 1.611968 1.767842, -1.791778 -0.5300739 -0.09581319, 1.551654 -0.7056532 -1.88316, 1.494622 -1.438827 -1.427231, 1.982641 -1.972969 1.178703, 1.557235 1.304474 1.148173, 0.7872887 -1.793281 -0.6369668, -0.8946517 -1.196528 -1.376449, -1.761748 1.107477 1.586573, 1.743937 -0.6462222 1.281752, 0.8629253 1.490748 -1.697126, 1.987791 0.376725 -0.5844606, -1.605888 -1.848264 -1.220432, -1.111614 1.321157 -1.036907, 0.7352883 1.132236 -1.452029, -0.5003471 1.548107 1.587043, -1.00947 -1.00726 -1.393228, -0.9784604 -0.5611982 -0.6622671, -0.5466275 -0.9840719 -1.614705, -1.380189 -0.002464048 -1.210789'/>
+          <fieldValue name='initialMasses' value='1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1'/>
+          <fieldValue name='gravitationalConstant' value='1'/>
+          <fieldValue name='startTime' value='1715359816.972'/>
+          <fieldValue name='resumeTime' value='1715359464.14'/>
+          <fieldValue name='stopTime' value='1715359816.154'/>
+          <fieldValue name='appearance'>
+            <Appearance USE='_2'/>
+          </fieldValue>
+          <fieldValue name='geometry'>
+            <Cone DEF='_4'/>
+          </fieldValue>
+        </ProtoInstance>
       </fieldValue>
     </ProtoInstance>
   </Scene>
