@@ -7,10 +7,10 @@
     <meta name='created' content='Wed, 08 May 2024 13:06:31 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.6.12, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Thu, 09 May 2024 11:50:34 GMT'/>
+    <meta name='modified' content='Fri, 10 May 2024 15:19:33 GMT'/>
   </head>
   <Scene>
-    <ProtoDeclare name='Simulation'>
+    <ProtoDeclare name='ParticleSimulation'>
       <ProtoInterface>
         <field accessType='inputOutput' type='SFBool' name='enabled' value='true'/>
         <field accessType='inputOutput' type='MFVec3f' name='initialPositions'/>
@@ -157,15 +157,15 @@ function set_time (value, time)
         description='Initial View'
         position='1.301276 1.405099 2.168961'
         orientation='-0.671263063550492 0.717524106724337 0.18591679800989 0.73676213543075'/>
-    <ProtoInstance name='Simulation'>
+    <ProtoInstance name='ParticleSimulation'>
       <fieldValue name='initialPositions' value='-1 0 0, 1 0 0'/>
       <fieldValue name='initialVelocities' value='0 0 0.5, 0 0 -0.5'/>
       <fieldValue name='initialMasses' value='1, 1'/>
       <fieldValue name='gravitationalConstant' value='1'/>
-      <fieldValue name='startTime' value='1715251625.132'/>
+      <fieldValue name='startTime' value='1715354319.075'/>
       <fieldValue name='resumeTime' value='1715180583.386'/>
       <fieldValue name='pauseTime' value='1715180582.069'/>
-      <fieldValue name='stopTime' value='1715251647'/>
+      <fieldValue name='stopTime' value='1715354320.514'/>
       <fieldValue name='appearance'>
         <Appearance DEF='_2'>
           <Material/>
