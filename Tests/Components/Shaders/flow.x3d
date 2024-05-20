@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='Shaders' level='1'/>
+    <meta name='created' content='Sat, 18 May 2024 18:24:59 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.6.14, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Mon, 20 May 2024 16:12:28 GMT'/>
+  </head>
+  <Scene>
+    <WorldInfo>
+      <MetadataSet containerField='metadata'
+          name='Sunrize'
+          reference='https://create3000.github.io/sunrize/'>
+        <MetadataSet
+            name='GridTool'>
+          <MetadataBoolean
+              name='visible'
+              value='true'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <Viewpoint
+        description='Initial View'
+        position='2.869677 3.854335 8.769781'
+        orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
+    <TimeSensor DEF='_1'
+        loop='true'/>
+    <Transform DEF='IndexedLineSet'>
+      <Shape>
+        <Appearance
+            alphaMode='BLEND'>
+          <ComposedShader DEF='NewShader'
+              language='GLSL'>
+            <field accessType='inputOnly' type='SFTime' name='set_time'/>
+            <field accessType='inputOutput' type='SFColor' name='color' value='0.7372549 0.7372549 0.7372549'/>
+            <ShaderPart DEF='VertexShader'>
+<![CDATA[data:x-shader/x-vertex,#version 300 es
+
+precision highp float;
+precision highp int;
+
+uniform mat4 x3d_ProjectionMatrix;
+uniform mat4 x3d_ModelViewMatrix;
+
+uniform float set_time;
+
+in vec4 x3d_Vertex;
+
+in float lineId;
+in float lineFraction;
+
+out float t;
+
+uint seed = 1u;
+
+void
+srand (const in int value)
+{
+   seed = uint (value);
+}
+
+// Return a uniform distributed random floating point number in the interval [0, 1].
+float
+random ()
+{
+   seed = seed * 1103515245u + 12345u;
+
+   return float (seed) / 4294967295.0;
+}
+
+void
+main ()
+{
+   srand (int (lineId) * 99);
+
+   t = lineFraction - set_time + random ();
+
+   gl_Position = x3d_ProjectionMatrix * x3d_ModelViewMatrix * x3d_Vertex;
+}
+]]>
+            </ShaderPart>
+            <ShaderPart DEF='FragmentShader'
+                type='FRAGMENT'>
+<![CDATA[data:x-shader/x-fragment,#version 300 es
+
+precision highp float;
+precision highp int;
+
+uniform vec3 color;
+
+in float t;
+
+out vec4 x3d_FragColor;
+
+void
+main ()
+{
+   x3d_FragColor = vec4 (color, fract (t));
+}
+]]>
+            </ShaderPart>
+          </ComposedShader>
+        </Appearance>
+        <LineSet
+            vertexCount='2, 2, 2, 2, 2, 2'>
+          <FloatVertexAttribute
+              name='lineId'
+              numComponents='1'
+              value='0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5'/>
+          <FloatVertexAttribute
+              name='lineFraction'
+              numComponents='1'
+              value='0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1'/>
+          <Coordinate
+              point='0 0 0, 0 1 0, 1 0 0, 1 1 0, 2 0 0, 2 1 0, 3 0 0, 3 1 0, 4 0 0, 4 1 0, 5 0 0, 5 1 0'/>
+        </LineSet>
+      </Shape>
+    </Transform>
+    <ROUTE fromNode='_1' fromField='elapsedTime' toNode='NewShader' toField='set_time'/>
+  </Scene>
+</X3D>
