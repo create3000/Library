@@ -13,9 +13,9 @@
     <NavigationInfo/>
     <EnvironmentLight>
       <ImageCubeMapTexture DEF='Diffuse' containerField='diffuseTexture'
-          url='"../images/diffuse.ktx2.gz"'/>
+          url='"../images/helipad-diffuse.ktx2.gz"'/>
       <ImageCubeMapTexture DEF='Specular' containerField='specularTexture'
-          url='"../images/specular.ktx2.gz"'/>
+          url='"../images/helipad-specular.ktx2.gz"'/>
     </EnvironmentLight>
     <Transform DEF='Box'
         translation='0 1.5 0'>

@@ -14,7 +14,7 @@
     <Group>
       <EnvironmentLight>
         <ImageCubeMapTexture DEF='_1' containerField='diffuseTexture'
-            url='"../images/diffuse.ktx2"'>
+            url='"../images/helipad-diffuse.ktx2"'>
           <TextureProperties DEF='_6'
               generateMipMaps='true'
               minificationFilter='NICEST'

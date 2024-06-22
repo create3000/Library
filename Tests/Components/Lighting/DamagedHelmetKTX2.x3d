@@ -19,9 +19,9 @@
     <EnvironmentLight
         color='0.9764706 0.7960784 0.6117647'>
       <ImageCubeMapTexture containerField='diffuseTexture'
-          url='"../images/diffuse.ktx2"'/>
+          url='"../images/helipad-diffuse.ktx2"'/>
       <ImageCubeMapTexture containerField='specularTexture'
-          url='"../images/specular.ktx2"'>
+          url='"../images/helipad-specular.ktx2"'>
         <TextureProperties
             generateMipMaps='true'
             minificationFilter='NICEST'
