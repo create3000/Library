@@ -9,7 +9,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.0, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite.js/tests/Components/ComposedCubeMapTexture/ImageCubeMapTexture.x3d'/>
-    <meta name='modified' content='Sat, 22 Jun 2024 06:13:49 GMT'/>
+    <meta name='modified' content='Sat, 22 Jun 2024 06:40:04 GMT'/>
   </head>
   <Scene>
     <Viewpoint
@@ -59,7 +59,7 @@
         <Appearance>
           <Material/>
           <ImageCubeMapTexture
-              url='"../images/helipad-specular.hdr"'>
+              url='"../images/helipad-specular.ktx2"'>
             <TextureProperties
                 minificationFilter='NICEST'
                 magnificationFilter='NICEST'
