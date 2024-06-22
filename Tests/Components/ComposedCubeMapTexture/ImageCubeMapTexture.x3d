@@ -7,9 +7,9 @@
     <meta name='comment' content='Rise and Shine'/>
     <meta name='created' content='Tue, 02 Feb 2016 05:55:36 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Sunrize X3D Editor V1.1.8, https://create3000.github.io/sunrize/'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.0, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite.js/tests/Components/ComposedCubeMapTexture/ImageCubeMapTexture.x3d'/>
-    <meta name='modified' content='Mon, 30 Oct 2023 09:22:13 GMT'/>
+    <meta name='modified' content='Sat, 22 Jun 2024 06:08:31 GMT'/>
   </head>
   <Scene>
     <Viewpoint
@@ -41,12 +41,12 @@
         </IndexedFaceSet>
       </Shape>
     </Transform>
-    <Transform DEF='PanoramaKDX2_1'>
+    <Transform DEF='PanoramaKDX2'>
       <Shape>
         <Appearance>
           <Material/>
           <ImageCubeMapTexture
-              url='"../images/helipad.jpg"'>
+              url='"../images/helipad-specular.jpg"'>
             <TextureProperties USE='_5'/>
           </ImageCubeMapTexture>
         </Appearance>
