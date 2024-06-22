@@ -9,7 +9,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.0, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite.js/tests/Components/ComposedCubeMapTexture/ImageCubeMapTexture.x3d'/>
-    <meta name='modified' content='Sat, 22 Jun 2024 06:08:31 GMT'/>
+    <meta name='modified' content='Sat, 22 Jun 2024 06:13:49 GMT'/>
   </head>
   <Scene>
     <Viewpoint
@@ -41,7 +41,7 @@
         </IndexedFaceSet>
       </Shape>
     </Transform>
-    <Transform DEF='PanoramaKDX2'>
+    <Transform DEF='PanoramaJPEG_1'>
       <Shape>
         <Appearance>
           <Material/>
