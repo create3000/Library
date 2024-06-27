@@ -10,7 +10,7 @@
     <meta name='created' content='Wed, 20 Mar 2024 18:14:30 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.1, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Thu, 27 Jun 2024 19:49:18 GMT'/>
+    <meta name='modified' content='Thu, 27 Jun 2024 22:11:32 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -69,10 +69,12 @@
       <Shape>
         <Appearance>
           <UnlitMaterial>
-            <PixelTexture DEF='_2' containerField='emissiveTexture'
+            <PixelTexture DEF='_8' containerField='emissiveTexture'
                 image='2 2 3
                   0x40e0d0 0xdb7093
-                  0xa0522d 0xf0e68c'/>
+                  0xa0522d 0xf0e68c'>
+              <TextureProperties/>
+            </PixelTexture>
           </UnlitMaterial>
           <TextureTransform DEF='_3'
               scale='5 5'/>
@@ -87,19 +89,19 @@
           <Material
               diffuseColor='0 0 0'
               emissiveColor='1 1 1'>
-            <PixelTexture USE='_2' containerField='emissiveTexture'/>
+            <PixelTexture USE='_8' containerField='emissiveTexture'/>
           </Material>
           <TextureTransform USE='_3'/>
         </Appearance>
         <Sphere USE='_4'/>
       </Shape>
     </Transform>
-    <Transform DEF='UnlitMaterialExtension_2'
+    <Transform DEF='UnlitMaterialExtension_4'
         translation='2 2 0'>
       <Shape>
         <Appearance>
           <PhysicalMaterial>
-            <PixelTexture USE='_2' containerField='baseTexture'/>
+            <PixelTexture USE='_8' containerField='baseTexture'/>
             <UnlitMaterialExtension/>
           </PhysicalMaterial>
           <TextureTransform USE='_3'/>
@@ -113,10 +115,7 @@
         <Appearance>
           <UnlitMaterial
               emissiveColor='0.1607843 0.5254902 0.8'>
-            <PixelTexture DEF='_5' containerField='emissiveTexture'
-                image='2 2 3
-                  0x40e0d0 0xdb7093
-                  0xa0522d 0xf0e68c'/>
+            <PixelTexture USE='_8' containerField='emissiveTexture'/>
           </UnlitMaterial>
           <TextureTransform DEF='_6'
               scale='5 5'/>
@@ -130,7 +129,7 @@
           <Material
               diffuseColor='0 0 0'
               emissiveColor='0.1607843 0.5254902 0.8'>
-            <PixelTexture USE='_5' containerField='emissiveTexture'/>
+            <PixelTexture USE='_8' containerField='emissiveTexture'/>
           </Material>
           <TextureTransform USE='_6'/>
         </Appearance>
@@ -143,7 +142,7 @@
         <Appearance>
           <PhysicalMaterial
               baseColor='0.1607843 0.5254902 0.8'>
-            <PixelTexture USE='_5' containerField='baseTexture'/>
+            <PixelTexture USE='_8' containerField='baseTexture'/>
             <UnlitMaterialExtension/>
           </PhysicalMaterial>
           <TextureTransform USE='_6'/>
@@ -157,10 +156,7 @@
         <Appearance>
           <UnlitMaterial
               emissiveColor='0.1607843 0.5254902 0.8'/>
-          <PixelTexture DEF='_8'
-              image='2 2 3
-                0x40e0d0 0xdb7093
-                0xa0522d 0xf0e68c'/>
+          <PixelTexture USE='_8'/>
           <TextureTransform DEF='_9'
               scale='5 5'/>
         </Appearance>
