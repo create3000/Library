@@ -10,7 +10,7 @@
     <meta name='created' content='Wed, 20 Mar 2024 18:14:30 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.1, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Thu, 27 Jun 2024 22:15:00 GMT'/>
+    <meta name='modified' content='Thu, 27 Jun 2024 22:26:05 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -38,7 +38,7 @@
           <UnlitMaterial
               emissiveColor='0.1607843 0.5254902 0.8'/>
         </Appearance>
-        <Sphere DEF='_1'/>
+        <Sphere DEF='_2'/>
       </Shape>
     </Transform>
     <Transform DEF='Material_1'
@@ -49,11 +49,22 @@
               diffuseColor='0 0 0'
               emissiveColor='0.1607843 0.5254902 0.8'/>
         </Appearance>
-        <Sphere USE='_1'/>
+        <Sphere USE='_2'/>
       </Shape>
     </Transform>
-    <Transform DEF='UnlitMaterialExtension_1'
+    <Transform DEF='PhysicalMaterial'
         translation='2 4 0'>
+      <Shape>
+        <Appearance>
+          <PhysicalMaterial
+              emissiveColor='0.1607843 0.5254902 0.8'
+              roughness='0'/>
+        </Appearance>
+        <Sphere/>
+      </Shape>
+    </Transform>
+    <Transform DEF='UnlitMaterialExtension_4'
+        translation='4 4 0'>
       <Shape>
         <Appearance>
           <PhysicalMaterial
@@ -61,7 +72,7 @@
             <UnlitMaterialExtension/>
           </PhysicalMaterial>
         </Appearance>
-        <Sphere USE='_1'/>
+        <Sphere USE='_2'/>
       </Shape>
     </Transform>
     <Transform DEF='UnlitMaterial_2'
@@ -78,10 +89,10 @@
                   magnificationFilter='NEAREST_PIXEL'/>
             </PixelTexture>
           </UnlitMaterial>
-          <TextureTransform DEF='_3'
+          <TextureTransform DEF='_16'
               scale='5 5'/>
         </Appearance>
-        <Sphere DEF='_4'/>
+        <Sphere DEF='_17'/>
       </Shape>
     </Transform>
     <Transform DEF='Material_2'
@@ -93,22 +104,36 @@
               emissiveColor='1 1 1'>
             <PixelTexture USE='_8' containerField='emissiveTexture'/>
           </Material>
-          <TextureTransform USE='_3'/>
+          <TextureTransform USE='_16'/>
         </Appearance>
-        <Sphere USE='_4'/>
+        <Sphere USE='_17'/>
       </Shape>
     </Transform>
-    <Transform DEF='UnlitMaterialExtension_2'
+    <Transform DEF='PhysicalMaterial_1'
         translation='2 2 0'>
+      <Shape>
+        <Appearance>
+          <PhysicalMaterial
+              emissiveColor='1 1 1'
+              roughness='0'>
+            <PixelTexture USE='_8' containerField='emissiveTexture'/>
+          </PhysicalMaterial>
+          <TextureTransform USE='_16'/>
+        </Appearance>
+        <Sphere/>
+      </Shape>
+    </Transform>
+    <Transform DEF='UnlitMaterialExtension_1'
+        translation='4 2 0'>
       <Shape>
         <Appearance>
           <PhysicalMaterial>
             <PixelTexture USE='_8' containerField='baseTexture'/>
             <UnlitMaterialExtension/>
           </PhysicalMaterial>
-          <TextureTransform USE='_3'/>
+          <TextureTransform USE='_16'/>
         </Appearance>
-        <Sphere USE='_4'/>
+        <Sphere USE='_17'/>
       </Shape>
     </Transform>
     <Transform DEF='UnlitMaterial_3'
@@ -119,10 +144,10 @@
               emissiveColor='0.1607843 0.5254902 0.8'>
             <PixelTexture USE='_8' containerField='emissiveTexture'/>
           </UnlitMaterial>
-          <TextureTransform DEF='_6'
+          <TextureTransform DEF='_18'
               scale='5 5'/>
         </Appearance>
-        <Sphere DEF='_7'/>
+        <Sphere DEF='_19'/>
       </Shape>
     </Transform>
     <Transform DEF='Material_3'>
@@ -133,13 +158,35 @@
               emissiveColor='0.1607843 0.5254902 0.8'>
             <PixelTexture USE='_8' containerField='emissiveTexture'/>
           </Material>
-          <TextureTransform USE='_6'/>
+          <TextureTransform USE='_18'/>
         </Appearance>
-        <Sphere USE='_7'/>
+        <Sphere USE='_19'/>
       </Shape>
     </Transform>
-    <Transform DEF='UnlitMaterialExtension_3'
+    <Transform DEF='PhysicalMaterial_2'
         translation='2 0 0'>
+      <Shape>
+        <Appearance>
+          <PhysicalMaterial
+              emissiveColor='0.1607843 0.5254902 0.8'
+              roughness='0'>
+            <PixelTexture containerField='emissiveTexture'
+                image='2 2 3
+                  0x40e0d0 0xdb7093
+                  0xa0522d 0xf0e68c'>
+              <TextureProperties
+                  minificationFilter='NEAREST_PIXEL'
+                  magnificationFilter='NEAREST_PIXEL'/>
+            </PixelTexture>
+          </PhysicalMaterial>
+          <TextureTransform
+              scale='5 5'/>
+        </Appearance>
+        <Sphere/>
+      </Shape>
+    </Transform>
+    <Transform DEF='UnlitMaterialExtension_2'
+        translation='4 0 0'>
       <Shape>
         <Appearance>
           <PhysicalMaterial
@@ -147,9 +194,9 @@
             <PixelTexture USE='_8' containerField='baseTexture'/>
             <UnlitMaterialExtension/>
           </PhysicalMaterial>
-          <TextureTransform USE='_6'/>
+          <TextureTransform USE='_18'/>
         </Appearance>
-        <Sphere USE='_7'/>
+        <Sphere USE='_19'/>
       </Shape>
     </Transform>
     <Transform DEF='UnlitMaterial_1'
@@ -166,7 +213,7 @@
       </Shape>
     </Transform>
     <Transform DEF='UnlitMaterialExtension'
-        translation='2 -2 0'>
+        translation='4 -2 0'>
       <Shape>
         <Appearance>
           <PhysicalMaterial
@@ -256,7 +303,7 @@ function change (colorSpace)
         </Appearance>
         <Text
             string='"color"'>
-          <FontStyle DEF='_14'
+          <FontStyle DEF='_20'
               family='"SANS"'
               size='0.4'
               justify='"END", "MIDDLE"'/>
@@ -271,7 +318,7 @@ function change (colorSpace)
         </Appearance>
         <Text
             string='"texture"'>
-          <FontStyle USE='_14'/>
+          <FontStyle USE='_20'/>
         </Text>
       </Shape>
     </Transform>
@@ -283,7 +330,7 @@ function change (colorSpace)
         </Appearance>
         <Text
             string='"color + texture"'>
-          <FontStyle USE='_14'/>
+          <FontStyle USE='_20'/>
         </Text>
       </Shape>
     </Transform>
@@ -295,7 +342,7 @@ function change (colorSpace)
         </Appearance>
         <Text
             string='"color + Appearance.texture"'>
-          <FontStyle USE='_14'/>
+          <FontStyle USE='_20'/>
         </Text>
       </Shape>
     </Transform>
@@ -308,7 +355,7 @@ function change (colorSpace)
         </Appearance>
         <Text
             string='"UnlitMaterial"'>
-          <FontStyle USE='_14'/>
+          <FontStyle USE='_20'/>
         </Text>
       </Shape>
     </Transform>
@@ -321,11 +368,11 @@ function change (colorSpace)
         </Appearance>
         <Text
             string='"Material"'>
-          <FontStyle USE='_14'/>
+          <FontStyle USE='_20'/>
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='Text_5'
+    <Transform DEF='Text_7'
         translation='2 6.09082 0'
         rotation='0 0 1 270'>
       <Shape>
@@ -334,7 +381,20 @@ function change (colorSpace)
         </Appearance>
         <Text
             string='"PhysicalMaterial"'>
-          <FontStyle USE='_14'/>
+          <FontStyle USE='_20'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform DEF='Text_8'
+        translation='4 6.09082 0'
+        rotation='0 0 1 270'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text
+            string='"UnlitExtension"'>
+          <FontStyle USE='_20'/>
         </Text>
       </Shape>
     </Transform>
