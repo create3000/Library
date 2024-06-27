@@ -10,7 +10,7 @@
     <meta name='created' content='Wed, 20 Mar 2024 18:14:30 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.1, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Thu, 27 Jun 2024 22:26:05 GMT'/>
+    <meta name='modified' content='Thu, 27 Jun 2024 22:28:35 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -144,8 +144,7 @@
               emissiveColor='0.1607843 0.5254902 0.8'>
             <PixelTexture USE='_8' containerField='emissiveTexture'/>
           </UnlitMaterial>
-          <TextureTransform DEF='_18'
-              scale='5 5'/>
+          <TextureTransform USE='_16'/>
         </Appearance>
         <Sphere DEF='_19'/>
       </Shape>
@@ -158,7 +157,7 @@
               emissiveColor='0.1607843 0.5254902 0.8'>
             <PixelTexture USE='_8' containerField='emissiveTexture'/>
           </Material>
-          <TextureTransform USE='_18'/>
+          <TextureTransform USE='_16'/>
         </Appearance>
         <Sphere USE='_19'/>
       </Shape>
@@ -179,8 +178,7 @@
                   magnificationFilter='NEAREST_PIXEL'/>
             </PixelTexture>
           </PhysicalMaterial>
-          <TextureTransform
-              scale='5 5'/>
+          <TextureTransform USE='_16'/>
         </Appearance>
         <Sphere/>
       </Shape>
@@ -194,7 +192,7 @@
             <PixelTexture USE='_8' containerField='baseTexture'/>
             <UnlitMaterialExtension/>
           </PhysicalMaterial>
-          <TextureTransform USE='_18'/>
+          <TextureTransform USE='_16'/>
         </Appearance>
         <Sphere USE='_19'/>
       </Shape>
@@ -206,8 +204,7 @@
           <UnlitMaterial
               emissiveColor='0.1607843 0.5254902 0.8'/>
           <PixelTexture USE='_8'/>
-          <TextureTransform DEF='_9'
-              scale='5 5'/>
+          <TextureTransform USE='_16'/>
         </Appearance>
         <Sphere DEF='_10'/>
       </Shape>
@@ -221,7 +218,7 @@
             <UnlitMaterialExtension/>
           </PhysicalMaterial>
           <PixelTexture USE='_8'/>
-          <TextureTransform USE='_9'/>
+          <TextureTransform USE='_16'/>
         </Appearance>
         <Sphere USE='_10'/>
       </Shape>
@@ -385,7 +382,7 @@ function change (colorSpace)
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='Text_8'
+    <Transform DEF='Text_5'
         translation='4 6.09082 0'
         rotation='0 0 1 270'>
       <Shape>
