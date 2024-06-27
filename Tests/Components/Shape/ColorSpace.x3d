@@ -10,7 +10,7 @@
     <meta name='created' content='Wed, 20 Mar 2024 18:14:30 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.1, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Thu, 27 Jun 2024 19:21:42 GMT'/>
+    <meta name='modified' content='Thu, 27 Jun 2024 19:45:11 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -225,25 +225,30 @@
 
 function initialize ()
 {
-   print (Browser .getBrowserOption ("ColorSpace"));
+   output ();
 }
 
 function set_SRGB ()
 {
    Browser .setBrowserOption ("ColorSpace", "SRGB");
-   print (Browser .getBrowserOption ("ColorSpace"));
+   output ();
 }
 
 function set_LINEAR_WHEN_PHYSICAL_MATERIAL ()
 {
    Browser .setBrowserOption ("ColorSpace", "LINEAR_WHEN_PHYSICAL_MATERIAL");
-   print (Browser .getBrowserOption ("ColorSpace"));
+  output ();
 }
 
 function set_LINEAR ()
 {
    Browser .setBrowserOption ("ColorSpace", "LINEAR");
-   print (Browser .getBrowserOption ("ColorSpace"));
+   output ();
+}
+
+function output ()
+{
+   print ("Color Space:", Browser .getBrowserOption ("ColorSpace"));
 }
 ]]>
     </Script>
