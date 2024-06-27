@@ -10,7 +10,7 @@
     <meta name='created' content='Wed, 20 Mar 2024 18:14:30 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.1, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Thu, 27 Jun 2024 22:11:32 GMT'/>
+    <meta name='modified' content='Thu, 27 Jun 2024 22:15:00 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -73,7 +73,9 @@
                 image='2 2 3
                   0x40e0d0 0xdb7093
                   0xa0522d 0xf0e68c'>
-              <TextureProperties/>
+              <TextureProperties
+                  minificationFilter='NEAREST_PIXEL'
+                  magnificationFilter='NEAREST_PIXEL'/>
             </PixelTexture>
           </UnlitMaterial>
           <TextureTransform DEF='_3'
@@ -96,7 +98,7 @@
         <Sphere USE='_4'/>
       </Shape>
     </Transform>
-    <Transform DEF='UnlitMaterialExtension_4'
+    <Transform DEF='UnlitMaterialExtension_2'
         translation='2 2 0'>
       <Shape>
         <Appearance>
