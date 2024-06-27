@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='PointingDeviceSensor' level='1'/>
+    <component name='Scripting' level='1'/>
+    <component name='Text' level='1'/>
+    <component name='X_ITE' level='1'/>
+    <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
+    <meta name='created' content='Wed, 20 Mar 2024 18:14:30 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.1, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Thu, 27 Jun 2024 18:39:40 GMT'/>
+  </head>
+  <Scene>
+    <WorldInfo>
+      <MetadataSet containerField='metadata'
+          name='Sunrize'
+          reference='https://create3000.github.io/sunrize/'>
+        <MetadataSet
+            name='GridTool'>
+          <MetadataInteger
+              name='dimension'
+              value='14, 10, 14'/>
+          <MetadataBoolean
+              name='visible'
+              value='true'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <Viewpoint
+        description='Initial View'
+        position='0 2.5 17.5'/>
+    <Transform DEF='UnlitMaterial'
+        translation='-2 4 0'>
+      <Shape>
+        <Appearance>
+          <UnlitMaterial
+              emissiveColor='0.1607843 0.5254902 0.8'/>
+        </Appearance>
+        <Sphere DEF='_1'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='Material_1'
+        translation='0 4 0'>
+      <Shape>
+        <Appearance>
+          <Material
+              diffuseColor='0 0 0'
+              emissiveColor='0.1607843 0.5254902 0.8'/>
+        </Appearance>
+        <Sphere USE='_1'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='UnlitMaterialExtension_1'
+        translation='2 4 0'>
+      <Shape>
+        <Appearance>
+          <PhysicalMaterial
+              baseColor='0.1607843 0.5254902 0.8'>
+            <UnlitMaterialExtension/>
+          </PhysicalMaterial>
+        </Appearance>
+        <Sphere USE='_1'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='UnlitMaterial_2'
+        translation='-2 2 0'>
+      <Shape>
+        <Appearance>
+          <UnlitMaterial>
+            <PixelTexture DEF='_2' containerField='emissiveTexture'
+                image='2 2 3
+                  0x40e0d0 0xdb7093
+                  0xa0522d 0xf0e68c'/>
+          </UnlitMaterial>
+          <TextureTransform DEF='_3'
+              scale='5 5'/>
+        </Appearance>
+        <Sphere DEF='_4'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='Material_2'
+        translation='0 2 0'>
+      <Shape>
+        <Appearance>
+          <Material
+              diffuseColor='0 0 0'
+              emissiveColor='1 1 1'>
+            <PixelTexture USE='_2' containerField='emissiveTexture'/>
+          </Material>
+          <TextureTransform USE='_3'/>
+        </Appearance>
+        <Sphere USE='_4'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='UnlitMaterialExtension_2'
+        translation='2 2 0'>
+      <Shape>
+        <Appearance>
+          <PhysicalMaterial>
+            <PixelTexture USE='_2' containerField='baseTexture'/>
+            <UnlitMaterialExtension/>
+          </PhysicalMaterial>
+          <TextureTransform USE='_3'/>
+        </Appearance>
+        <Sphere USE='_4'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='UnlitMaterial_3'
+        translation='-2 0 0'>
+      <Shape>
+        <Appearance>
+          <UnlitMaterial
+              emissiveColor='0.1607843 0.5254902 0.8'>
+            <PixelTexture DEF='_5' containerField='emissiveTexture'
+                image='2 2 3
+                  0x40e0d0 0xdb7093
+                  0xa0522d 0xf0e68c'/>
+          </UnlitMaterial>
+          <TextureTransform DEF='_6'
+              scale='5 5'/>
+        </Appearance>
+        <Sphere DEF='_7'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='Material_3'>
+      <Shape>
+        <Appearance>
+          <Material
+              diffuseColor='0 0 0'
+              emissiveColor='0.1607843 0.5254902 0.8'>
+            <PixelTexture USE='_5' containerField='emissiveTexture'/>
+          </Material>
+          <TextureTransform USE='_6'/>
+        </Appearance>
+        <Sphere USE='_7'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='UnlitMaterialExtension_3'
+        translation='2 0 0'>
+      <Shape>
+        <Appearance>
+          <PhysicalMaterial
+              baseColor='0.1607843 0.5254902 0.8'>
+            <PixelTexture USE='_5' containerField='baseTexture'/>
+            <UnlitMaterialExtension/>
+          </PhysicalMaterial>
+          <TextureTransform USE='_6'/>
+        </Appearance>
+        <Sphere USE='_7'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='UnlitMaterial_1'
+        translation='-2 -2 0'>
+      <Shape>
+        <Appearance>
+          <UnlitMaterial
+              emissiveColor='0.1607843 0.5254902 0.8'/>
+          <PixelTexture DEF='_8'
+              image='2 2 3
+                0x40e0d0 0xdb7093
+                0xa0522d 0xf0e68c'/>
+          <TextureTransform DEF='_9'
+              scale='5 5'/>
+        </Appearance>
+        <Sphere DEF='_10'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='UnlitMaterialExtension'
+        translation='2 -2 0'>
+      <Shape>
+        <Appearance>
+          <PhysicalMaterial
+              baseColor='0.1607843 0.5254902 0.8'>
+            <UnlitMaterialExtension/>
+          </PhysicalMaterial>
+          <PixelTexture USE='_8'/>
+          <TextureTransform USE='_9'/>
+        </Appearance>
+        <Sphere USE='_10'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='SRGB'
+        translation='-2 -4 0'
+        scale='0.1582598 0.1582598 0.1582598'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Box/>
+      </Shape>
+      <TouchSensor DEF='_11'
+          description='ColorSpace: SRGB'/>
+    </Transform>
+    <Transform DEF='LINEAR_WHEN_PHYSICAL_MATERIAL'
+        translation='0 -4 0'
+        scale='0.1582598 0.1582598 0.1582598'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Box/>
+      </Shape>
+      <TouchSensor DEF='_12'
+          description='ColorSpace: LINEAR_WHEN_PHYSICAL_MATERIAL'/>
+    </Transform>
+    <Transform DEF='LINEAR'
+        translation='2 -4 0'
+        scale='0.1582598 0.1582598 0.1582598'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Box/>
+      </Shape>
+      <TouchSensor DEF='_13'
+          description='ColorSpace: LINEAR'/>
+    </Transform>
+    <Script DEF='NewScript'>
+      <field accessType='inputOnly' type='SFTime' name='set_SRGB'/>
+      <field accessType='inputOnly' type='SFTime' name='set_LINEAR_WHEN_PHYSICAL_MATERIAL'/>
+      <field accessType='inputOnly' type='SFTime' name='set_LINEAR'/>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+   print (Browser .getBrowserOption ("ColorSpace"));
+}
+
+function set_SRGB ()
+{
+   Browser .setBrowserOption ("ColorSpace", "SRGB");
+   print (Browser .getBrowserOption ("ColorSpace"));
+}
+
+function set_LINEAR_WHEN_PHYSICAL_MATERIAL ()
+{
+   Browser .setBrowserOption ("ColorSpace", "LINEAR_WHEN_PHYSICAL_MATERIAL");
+   print (Browser .getBrowserOption ("ColorSpace"));
+}
+
+function set_LINEAR ()
+{
+   Browser .setBrowserOption ("ColorSpace", "LINEAR");
+   print (Browser .getBrowserOption ("ColorSpace"));
+}
+]]>
+    </Script>
+    <Transform DEF='Text_4'
+        translation='-4.231934 4 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text
+            string='"color"'>
+          <FontStyle DEF='_14'
+              family='"SANS"'
+              size='0.4'
+              justify='"END", "MIDDLE"'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform DEF='Text_2'
+        translation='-4.40686 2 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text
+            string='"texture"'>
+          <FontStyle USE='_14'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform DEF='Text_3'
+        translation='-4.40686 0 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text
+            string='"color + texture"'>
+          <FontStyle USE='_14'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform DEF='Text'
+        translation='-4.272583 -2 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text
+            string='"color + Appearance.texture"'>
+          <FontStyle USE='_14'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform DEF='Text_1'
+        translation='-2 6.09082 0'
+        rotation='0 0 -1 90'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text
+            string='"UnlitMaterial"'>
+          <FontStyle USE='_14'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform DEF='Text_6'
+        translation='-0 6.09082 0'
+        rotation='0 0 1 270'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text
+            string='"Material"'>
+          <FontStyle USE='_14'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform DEF='Text_5'
+        translation='2 6.09082 0'
+        rotation='0 0 1 270'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text
+            string='"PhysicalMaterial"'>
+          <FontStyle USE='_14'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <ROUTE fromNode='_11' fromField='touchTime' toNode='NewScript' toField='set_SRGB'/>
+    <ROUTE fromNode='_12' fromField='touchTime' toNode='NewScript' toField='set_LINEAR_WHEN_PHYSICAL_MATERIAL'/>
+    <ROUTE fromNode='_13' fromField='touchTime' toNode='NewScript' toField='set_LINEAR'/>
+  </Scene>
+</X3D>
