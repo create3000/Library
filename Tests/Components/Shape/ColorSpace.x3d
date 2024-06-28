@@ -10,7 +10,7 @@
     <meta name='created' content='Wed, 20 Mar 2024 18:14:30 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.1, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Thu, 27 Jun 2024 22:28:35 GMT'/>
+    <meta name='modified' content='Fri, 28 Jun 2024 06:14:49 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -292,7 +292,7 @@ function change (colorSpace)
 }
 ]]>
     </Script>
-    <Transform DEF='Text_4'
+    <Transform DEF='Text_8'
         translation='-4.231934 4 0'>
       <Shape>
         <Appearance>
@@ -300,7 +300,7 @@ function change (colorSpace)
         </Appearance>
         <Text
             string='"color"'>
-          <FontStyle DEF='_20'
+          <FontStyle DEF='_18'
               family='"SANS"'
               size='0.4'
               justify='"END", "MIDDLE"'/>
@@ -315,7 +315,7 @@ function change (colorSpace)
         </Appearance>
         <Text
             string='"texture"'>
-          <FontStyle USE='_20'/>
+          <FontStyle USE='_18'/>
         </Text>
       </Shape>
     </Transform>
@@ -327,7 +327,7 @@ function change (colorSpace)
         </Appearance>
         <Text
             string='"color + texture"'>
-          <FontStyle USE='_20'/>
+          <FontStyle USE='_18'/>
         </Text>
       </Shape>
     </Transform>
@@ -339,7 +339,7 @@ function change (colorSpace)
         </Appearance>
         <Text
             string='"color + Appearance.texture"'>
-          <FontStyle USE='_20'/>
+          <FontStyle USE='_18'/>
         </Text>
       </Shape>
     </Transform>
@@ -352,7 +352,7 @@ function change (colorSpace)
         </Appearance>
         <Text
             string='"UnlitMaterial"'>
-          <FontStyle USE='_20'/>
+          <FontStyle USE='_18'/>
         </Text>
       </Shape>
     </Transform>
@@ -365,7 +365,7 @@ function change (colorSpace)
         </Appearance>
         <Text
             string='"Material"'>
-          <FontStyle USE='_20'/>
+          <FontStyle USE='_18'/>
         </Text>
       </Shape>
     </Transform>
@@ -378,7 +378,7 @@ function change (colorSpace)
         </Appearance>
         <Text
             string='"PhysicalMaterial"'>
-          <FontStyle USE='_20'/>
+          <FontStyle USE='_18'/>
         </Text>
       </Shape>
     </Transform>
@@ -391,7 +391,46 @@ function change (colorSpace)
         </Appearance>
         <Text
             string='"UnlitExtension"'>
-          <FontStyle USE='_20'/>
+          <FontStyle USE='_18'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform DEF='Text_9'
+        translation='-2 -3.5 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text
+            string='"SRGB"'>
+          <FontStyle DEF='_21'
+              family='"SANS"'
+              size='0.4'
+              justify='"MIDDLE", "MIDDLE"'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform DEF='Text_10'
+        translation='0 -3.5 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text
+            string='"L_W_P_M"'>
+          <FontStyle USE='_21'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform DEF='Text_11'
+        translation='2 -3.5 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text
+            string='"LINEAR"'>
+          <FontStyle USE='_21'/>
         </Text>
       </Shape>
     </Transform>
