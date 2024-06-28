@@ -5,12 +5,11 @@
     <component name='PointingDeviceSensor' level='1'/>
     <component name='Scripting' level='1'/>
     <component name='Text' level='1'/>
-    <component name='X_ITE' level='1'/>
     <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
     <meta name='created' content='Wed, 20 Mar 2024 18:14:30 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.1, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Fri, 28 Jun 2024 06:47:44 GMT'/>
+    <meta name='modified' content='Fri, 28 Jun 2024 18:17:21 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -63,18 +62,6 @@
         <Sphere USE='_2'/>
       </Shape>
     </Transform>
-    <Transform DEF='UnlitMaterialExtension_4'
-        translation='4 4 0'>
-      <Shape>
-        <Appearance>
-          <PhysicalMaterial
-              baseColor='0.1607843 0.5254902 0.8'>
-            <UnlitMaterialExtension/>
-          </PhysicalMaterial>
-        </Appearance>
-        <Sphere USE='_2'/>
-      </Shape>
-    </Transform>
     <Transform DEF='UnlitMaterial_2'
         translation='-2 2 0'>
       <Shape>
@@ -117,19 +104,6 @@
               emissiveColor='1 1 1'
               roughness='0'>
             <PixelTexture USE='_8' containerField='emissiveTexture'/>
-          </PhysicalMaterial>
-          <TextureTransform USE='_16'/>
-        </Appearance>
-        <Sphere USE='_2'/>
-      </Shape>
-    </Transform>
-    <Transform DEF='UnlitMaterialExtension_1'
-        translation='4 2 0'>
-      <Shape>
-        <Appearance>
-          <PhysicalMaterial>
-            <PixelTexture USE='_8' containerField='baseTexture'/>
-            <UnlitMaterialExtension/>
           </PhysicalMaterial>
           <TextureTransform USE='_16'/>
         </Appearance>
@@ -183,40 +157,12 @@
         <Sphere USE='_2'/>
       </Shape>
     </Transform>
-    <Transform DEF='UnlitMaterialExtension_2'
-        translation='4 0 0'>
-      <Shape>
-        <Appearance>
-          <PhysicalMaterial
-              baseColor='0.1607843 0.5254902 0.8'>
-            <PixelTexture USE='_8' containerField='baseTexture'/>
-            <UnlitMaterialExtension/>
-          </PhysicalMaterial>
-          <TextureTransform USE='_16'/>
-        </Appearance>
-        <Sphere USE='_2'/>
-      </Shape>
-    </Transform>
     <Transform DEF='UnlitMaterial_1'
         translation='-2 -2 0'>
       <Shape>
         <Appearance>
           <UnlitMaterial
               emissiveColor='0.1607843 0.5254902 0.8'/>
-          <PixelTexture USE='_8'/>
-          <TextureTransform USE='_16'/>
-        </Appearance>
-        <Sphere USE='_2'/>
-      </Shape>
-    </Transform>
-    <Transform DEF='UnlitMaterialExtension'
-        translation='4 -2 0'>
-      <Shape>
-        <Appearance>
-          <PhysicalMaterial
-              baseColor='0.1607843 0.5254902 0.8'>
-            <UnlitMaterialExtension/>
-          </PhysicalMaterial>
           <PixelTexture USE='_8'/>
           <TextureTransform USE='_16'/>
         </Appearance>
@@ -356,17 +302,6 @@ function change (colorSpace)
         <Appearance USE='_3'/>
         <Text
             string='"PhysicalMaterial"'>
-          <FontStyle USE='_18'/>
-        </Text>
-      </Shape>
-    </Transform>
-    <Transform DEF='Text_5'
-        translation='4 6.09082 0'
-        rotation='0 0 1 270'>
-      <Shape>
-        <Appearance USE='_3'/>
-        <Text
-            string='"UnlitExtension"'>
           <FontStyle USE='_18'/>
         </Text>
       </Shape>
