@@ -10,7 +10,7 @@
     <meta name='created' content='Wed, 20 Mar 2024 18:14:30 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.1, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Fri, 28 Jun 2024 06:14:49 GMT'/>
+    <meta name='modified' content='Fri, 28 Jun 2024 06:47:44 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -60,7 +60,7 @@
               emissiveColor='0.1607843 0.5254902 0.8'
               roughness='0'/>
         </Appearance>
-        <Sphere/>
+        <Sphere USE='_2'/>
       </Shape>
     </Transform>
     <Transform DEF='UnlitMaterialExtension_4'
@@ -92,7 +92,7 @@
           <TextureTransform DEF='_16'
               scale='5 5'/>
         </Appearance>
-        <Sphere DEF='_17'/>
+        <Sphere USE='_2'/>
       </Shape>
     </Transform>
     <Transform DEF='Material_2'
@@ -106,7 +106,7 @@
           </Material>
           <TextureTransform USE='_16'/>
         </Appearance>
-        <Sphere USE='_17'/>
+        <Sphere USE='_2'/>
       </Shape>
     </Transform>
     <Transform DEF='PhysicalMaterial_1'
@@ -120,7 +120,7 @@
           </PhysicalMaterial>
           <TextureTransform USE='_16'/>
         </Appearance>
-        <Sphere/>
+        <Sphere USE='_2'/>
       </Shape>
     </Transform>
     <Transform DEF='UnlitMaterialExtension_1'
@@ -133,7 +133,7 @@
           </PhysicalMaterial>
           <TextureTransform USE='_16'/>
         </Appearance>
-        <Sphere USE='_17'/>
+        <Sphere USE='_2'/>
       </Shape>
     </Transform>
     <Transform DEF='UnlitMaterial_3'
@@ -146,7 +146,7 @@
           </UnlitMaterial>
           <TextureTransform USE='_16'/>
         </Appearance>
-        <Sphere DEF='_19'/>
+        <Sphere USE='_2'/>
       </Shape>
     </Transform>
     <Transform DEF='Material_3'>
@@ -159,7 +159,7 @@
           </Material>
           <TextureTransform USE='_16'/>
         </Appearance>
-        <Sphere USE='_19'/>
+        <Sphere USE='_2'/>
       </Shape>
     </Transform>
     <Transform DEF='PhysicalMaterial_2'
@@ -180,7 +180,7 @@
           </PhysicalMaterial>
           <TextureTransform USE='_16'/>
         </Appearance>
-        <Sphere/>
+        <Sphere USE='_2'/>
       </Shape>
     </Transform>
     <Transform DEF='UnlitMaterialExtension_2'
@@ -194,7 +194,7 @@
           </PhysicalMaterial>
           <TextureTransform USE='_16'/>
         </Appearance>
-        <Sphere USE='_19'/>
+        <Sphere USE='_2'/>
       </Shape>
     </Transform>
     <Transform DEF='UnlitMaterial_1'
@@ -206,7 +206,7 @@
           <PixelTexture USE='_8'/>
           <TextureTransform USE='_16'/>
         </Appearance>
-        <Sphere DEF='_10'/>
+        <Sphere USE='_2'/>
       </Shape>
     </Transform>
     <Transform DEF='UnlitMaterialExtension'
@@ -220,13 +220,13 @@
           <PixelTexture USE='_8'/>
           <TextureTransform USE='_16'/>
         </Appearance>
-        <Sphere USE='_10'/>
+        <Sphere USE='_2'/>
       </Shape>
     </Transform>
-    <Transform DEF='SRGB'
+    <Transform DEF='SRGB_1'
         translation='-2 -4 0'
         scale='0.1582598 0.1582598 0.1582598'>
-      <Shape>
+      <Shape DEF='_1'>
         <Appearance>
           <Material/>
         </Appearance>
@@ -238,24 +238,14 @@
     <Transform DEF='LINEAR_WHEN_PHYSICAL_MATERIAL'
         translation='0 -4 0'
         scale='0.1582598 0.1582598 0.1582598'>
-      <Shape>
-        <Appearance>
-          <Material/>
-        </Appearance>
-        <Box/>
-      </Shape>
+      <Shape USE='_1'/>
       <TouchSensor DEF='_12'
           description='ColorSpace: LINEAR_WHEN_PHYSICAL_MATERIAL'/>
     </Transform>
     <Transform DEF='LINEAR'
         translation='2 -4 0'
         scale='0.1582598 0.1582598 0.1582598'>
-      <Shape>
-        <Appearance>
-          <Material/>
-        </Appearance>
-        <Box/>
-      </Shape>
+      <Shape USE='_1'/>
       <TouchSensor DEF='_13'
           description='ColorSpace: LINEAR'/>
     </Transform>
@@ -295,7 +285,7 @@ function change (colorSpace)
     <Transform DEF='Text_8'
         translation='-4.231934 4 0'>
       <Shape>
-        <Appearance>
+        <Appearance DEF='_3'>
           <Material/>
         </Appearance>
         <Text
@@ -310,9 +300,7 @@ function change (colorSpace)
     <Transform DEF='Text_2'
         translation='-4.40686 2 0'>
       <Shape>
-        <Appearance>
-          <Material/>
-        </Appearance>
+        <Appearance USE='_3'/>
         <Text
             string='"texture"'>
           <FontStyle USE='_18'/>
@@ -322,9 +310,7 @@ function change (colorSpace)
     <Transform DEF='Text_3'
         translation='-4.40686 0 0'>
       <Shape>
-        <Appearance>
-          <Material/>
-        </Appearance>
+        <Appearance USE='_3'/>
         <Text
             string='"color + texture"'>
           <FontStyle USE='_18'/>
@@ -334,9 +320,7 @@ function change (colorSpace)
     <Transform DEF='Text'
         translation='-4.272583 -2 0'>
       <Shape>
-        <Appearance>
-          <Material/>
-        </Appearance>
+        <Appearance USE='_3'/>
         <Text
             string='"color + Appearance.texture"'>
           <FontStyle USE='_18'/>
@@ -347,9 +331,7 @@ function change (colorSpace)
         translation='-2 6.09082 0'
         rotation='0 0 -1 90'>
       <Shape>
-        <Appearance>
-          <Material/>
-        </Appearance>
+        <Appearance USE='_3'/>
         <Text
             string='"UnlitMaterial"'>
           <FontStyle USE='_18'/>
@@ -360,9 +342,7 @@ function change (colorSpace)
         translation='-0 6.09082 0'
         rotation='0 0 1 270'>
       <Shape>
-        <Appearance>
-          <Material/>
-        </Appearance>
+        <Appearance USE='_3'/>
         <Text
             string='"Material"'>
           <FontStyle USE='_18'/>
@@ -373,9 +353,7 @@ function change (colorSpace)
         translation='2 6.09082 0'
         rotation='0 0 1 270'>
       <Shape>
-        <Appearance>
-          <Material/>
-        </Appearance>
+        <Appearance USE='_3'/>
         <Text
             string='"PhysicalMaterial"'>
           <FontStyle USE='_18'/>
@@ -386,9 +364,7 @@ function change (colorSpace)
         translation='4 6.09082 0'
         rotation='0 0 1 270'>
       <Shape>
-        <Appearance>
-          <Material/>
-        </Appearance>
+        <Appearance USE='_3'/>
         <Text
             string='"UnlitExtension"'>
           <FontStyle USE='_18'/>
@@ -398,9 +374,7 @@ function change (colorSpace)
     <Transform DEF='Text_9'
         translation='-2 -3.5 0'>
       <Shape>
-        <Appearance>
-          <Material/>
-        </Appearance>
+        <Appearance USE='_3'/>
         <Text
             string='"SRGB"'>
           <FontStyle DEF='_21'
@@ -413,9 +387,7 @@ function change (colorSpace)
     <Transform DEF='Text_10'
         translation='0 -3.5 0'>
       <Shape>
-        <Appearance>
-          <Material/>
-        </Appearance>
+        <Appearance USE='_3'/>
         <Text
             string='"L_W_P_M"'>
           <FontStyle USE='_21'/>
@@ -425,9 +397,7 @@ function change (colorSpace)
     <Transform DEF='Text_11'
         translation='2 -3.5 0'>
       <Shape>
-        <Appearance>
-          <Material/>
-        </Appearance>
+        <Appearance USE='_3'/>
         <Text
             string='"LINEAR"'>
           <FontStyle USE='_21'/>
