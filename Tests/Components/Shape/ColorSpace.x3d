@@ -9,10 +9,11 @@
     <meta name='created' content='Wed, 20 Mar 2024 18:14:30 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.3, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Sun, 30 Jun 2024 13:16:59 GMT'/>
+    <meta name='modified' content='Sun, 30 Jun 2024 13:19:06 GMT'/>
   </head>
   <Scene>
-    <WorldInfo>
+    <WorldInfo
+        title='ColorSpace Test'>
       <MetadataSet containerField='metadata'
           name='Sunrize'
           reference='https://create3000.github.io/sunrize/'>
@@ -287,7 +288,7 @@ function change (colorSpace)
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='Text_4'
+    <Transform DEF='Text_6'
         translation='-0 6.09082 0'
         rotation='0 0 1 270'>
       <Shape>
