@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
+    <component name='Scripting' level='1'/>
+    <component name='Text' level='1'/>
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Fri, 11 Sep 2015 17:20:16 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V1.2.2, http://titania.create3000.de'/>
-    <meta name='modified' content='Wed, 06 Jan 2016 23:48:58 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.7, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Tue, 23 Jul 2024 22:55:49 GMT'/>
     <meta name='title' content='Text'/>
   </head>
   <Scene>
@@ -49,29 +52,29 @@
     </ProtoDeclare>
     <WorldInfo
         title='Vertical Text'>
-      <MetadataSet DEF='Titania'
+      <MetadataSet DEF='Titania' containerField='metadata'
           name='Titania'
           reference='http://titania.create3000.de'>
-        <MetadataSet DEF='NavigationInfo' containerField='value'
+        <MetadataSet DEF='NavigationInfo'
             name='NavigationInfo'
             reference='http://titania.create3000.de'>
-          <MetadataString DEF='type' containerField='value'
+          <MetadataString DEF='type'
               name='type'
               reference='http://titania.create3000.de'
               value='"EXAMINE"'/>
         </MetadataSet>
-        <MetadataSet DEF='Viewpoint' containerField='value'
+        <MetadataSet DEF='Viewpoint'
             name='Viewpoint'
             reference='http://titania.create3000.de'>
-          <MetadataDouble DEF='position' containerField='value'
+          <MetadataDouble DEF='position'
               name='position'
               reference='http://titania.create3000.de'
               value='-0.0552061013877392, 6.52955007553101, 27.0410003662109'/>
-          <MetadataDouble DEF='orientation' containerField='value'
+          <MetadataDouble DEF='orientation'
               name='orientation'
               reference='http://titania.create3000.de'
               value='0, 0, 1, 0'/>
-          <MetadataDouble DEF='centerOfRotation' containerField='value'
+          <MetadataDouble DEF='centerOfRotation'
               name='centerOfRotation'
               reference='http://titania.create3000.de'
               value='-0.0552061013877392, 6.52955007553101, 0'/>
@@ -84,7 +87,7 @@
         description='Viewpoint'
         position='-0.0552061 6.52955 27.041'
         centerOfRotation='-0.0552061 6.52955 0'/>
-    <Transform DEF='RedBox'
+    <Transform DEF='RedBox_1'
         translation='-0.5 0.5 0'>
       <Shape>
         <Appearance>
@@ -134,30 +137,31 @@
       </Shape>
     </Transform>
     <Transform DEF='LineBounds'
-        translation='0 16.5214 0'>
+        translation='0 16.52249 0'>
       <ProtoInstance name='BBox2'>
-        <fieldValue name='scale' value='0.862813 16.5559 1'/>
+        <fieldValue name='translation' value='0.8546753 -0.005174474 0'/>
+        <fieldValue name='scale' value='0.8546753 16.55 1'/>
         <fieldValue name='color' value='1 0 1'/>
       </ProtoInstance>
       <ProtoInstance name='BBox2'>
-        <fieldValue name='translation' value='0.862813 -0.799453 0'/>
-        <fieldValue name='scale' value='1.25 15.7564 1'/>
+        <fieldValue name='translation' value='2.104675 -1.380215 0'/>
+        <fieldValue name='scale' value='1.25 15.17496 1'/>
         <fieldValue name='color' value='0 1 0'/>
       </ProtoInstance>
       <ProtoInstance name='BBox2'>
-        <fieldValue name='translation' value='2.11281 -0.00585938 0'/>
-        <fieldValue name='scale' value='1.25 16.55 1'/>
+        <fieldValue name='translation' value='3.354675 -0.5917948 0'/>
+        <fieldValue name='scale' value='1.25 15.96338 1'/>
         <fieldValue name='color' value='0 0 1'/>
       </ProtoInstance>
       <ProtoInstance name='BBox2'>
-        <fieldValue name='translation' value='3.36281 -10.5263 0'/>
-        <fieldValue name='scale' value='1.25 6.02953 1'/>
+        <fieldValue name='translation' value='4.604675 -10.78041 0'/>
+        <fieldValue name='scale' value='1.25 5.774766 1'/>
         <fieldValue name='color' value='1 1 0'/>
       </ProtoInstance>
     </Transform>
     <Transform DEF='TextBounds'
-        translation='0 16.5214 0'
-        scale='4.21559 16.5559 1'>
+        translation='0 16.52249 0'
+        scale='4.208374 16.55517 1'>
       <ProtoInstance name='BBox2'/>
     </Transform>
     <Script DEF='Bounds'>
@@ -174,8 +178,8 @@
             string='"上海市第二中级人民法院2月18日对“复旦投毒案”依法公开", "一审宣判，被告人林森浩犯故意杀人罪被判死刑，剥夺政治", "权利终身。2013年4月，复旦大学研究生黄洋因舍友投毒", "死亡，年仅28岁。!"'
             length='17.1814, 15.7539, 16.5724, 5.99508'
             maxExtent='16.55'>
-          <FontStyle DEF='_1'
-              family='"Arial Unicode MS", "ARIALUNI.TTF"'
+          <FontStyle
+              family='"ARIALUNI.TTF"'
               size='0.5'
               spacing='2.5'
               horizontal='false'
@@ -253,9 +257,11 @@ function set_lineBounds (value, time)
 		}
 		else
 		{
-			transform .translation = new SFVec3f (text .fontStyle .leftToRight ? x : x + text .textBounds .x,
+			transform .translation = new SFVec3f (text .fontStyle .leftToRight ? 0 : x + text .textBounds .x,
 			                                      get_majorAlignment (i),
 			                                      0);
+
+			transform .translation .x += x;
 		
 			x += text .fontStyle .leftToRight ? value [i] .x : -value [i] .x;
 
@@ -276,10 +282,10 @@ function set_textBounds (value, time)
 {
 	scale_changed = new SFVec3f (value .x, value .y, 1);
 }
-  ]]> 
+  ]]>
     </Script>
     <Transform DEF='Text'>
-      <Shape DEF='Shape'>
+      <Shape DEF='Shape_1'>
         <Appearance>
           <Material
               diffuseColor='1 0 0'
