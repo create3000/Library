@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='Text' level='1'/>
+    <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
+    <meta name='created' content='Tue, 23 Jul 2024 15:39:19 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.7, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Wed, 24 Jul 2024 15:00:26 GMT'/>
+  </head>
+  <Scene>
+    <WorldInfo>
+      <MetadataSet containerField='metadata'
+          name='Sunrize'
+          reference='https://create3000.github.io/sunrize/'>
+        <MetadataSet
+            name='GridTool'>
+          <MetadataBoolean
+              name='visible'
+              value='true'/>
+          <MetadataDouble
+              name='rotation'
+              value='1, 0, 0, 1.5707963267949'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <Viewpoint
+        description='Initial View'
+        position='0 0 13.97437'/>
+    <Transform DEF='Text_1'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text DEF='_1'
+            string='"maxExtent=&apos;2.5&apos;", "Second line 25 characters", "mxn"'
+            length='10, 20, 5'
+            maxExtent='7.15'>
+          <FontStyle
+              style='SERIF'
+              horizontal='false'
+              justify='"END", "BEGIN"'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform DEF='Axes'>
+      <Shape>
+        <Appearance>
+          <UnlitMaterial/>
+        </Appearance>
+        <IndexedLineSet
+            coordIndex='0, 1, -1, 2, 3, -1, 4, 5, -1'>
+          <Coordinate
+              point='-1 0 0, 1 0 0, 0 -1 0, 0 1 0, 0 0 -1, 0 0 1'/>
+        </IndexedLineSet>
+      </Shape>
+    </Transform>
+    <Transform DEF='Orign_1'
+        translation='0 7.15 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Sphere
+            radius='0.1'/>
+      </Shape>
+    </Transform>
+    <ROUTE fromNode='_1' fromField='origin' toNode='Orign_1' toField='set_translation'/>
+  </Scene>
+</X3D>
