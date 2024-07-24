@@ -10,7 +10,7 @@
     <meta name='generator' content='Titania V1.4.9, http://titania.create3000.de'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.7, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite/tests/Components/Text/horizontal.x3d'/>
-    <meta name='modified' content='Wed, 24 Jul 2024 14:22:49 GMT'/>
+    <meta name='modified' content='Wed, 24 Jul 2024 14:26:08 GMT'/>
     <meta name='title' content='Text'/>
   </head>
   <Scene>
@@ -61,9 +61,7 @@
     <Transform DEF='Text'>
       <Shape>
         <Appearance>
-          <Material
-              diffuseColor='1 0 0'
-              emissiveColor='1 1 1'/>
+          <Material/>
           <ImageTexture
               url='"../images/lena.jpg"'/>
         </Appearance>
