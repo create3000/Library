@@ -10,7 +10,7 @@
     <meta name='generator' content='Titania V1.4.9, http://titania.create3000.de'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.7, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite/tests/Components/Text/horizontal.x3d'/>
-    <meta name='modified' content='Wed, 24 Jul 2024 14:17:50 GMT'/>
+    <meta name='modified' content='Wed, 24 Jul 2024 14:22:49 GMT'/>
     <meta name='title' content='Text'/>
   </head>
   <Scene>
@@ -51,64 +51,6 @@
         </Transform>
       </ProtoBody>
     </ProtoDeclare>
-    <WorldInfo
-        title='Horizontal Text'>
-      <MetadataSet DEF='Titania' containerField='metadata'
-          name='Titania'
-          reference='http://titania.create3000.de'>
-        <MetadataSet DEF='NavigationInfo'
-            name='NavigationInfo'
-            reference='http://titania.create3000.de'>
-          <MetadataString DEF='type'
-              name='type'
-              reference='http://titania.create3000.de'
-              value='"EXAMINE"'/>
-        </MetadataSet>
-        <MetadataSet DEF='Viewpoint'
-            name='Viewpoint'
-            reference='http://titania.create3000.de'>
-          <MetadataDouble DEF='position'
-              name='position'
-              reference='http://titania.create3000.de'
-              value='0.228690132498741, -0.0604688674211502, 1.71641170978546'/>
-          <MetadataDouble DEF='orientation'
-              name='orientation'
-              reference='http://titania.create3000.de'
-              value='0.872291021747068, 0.488929089099191, 0.00753121584411764, 0.0424616187810779'/>
-          <MetadataDouble DEF='centerOfRotation'
-              name='centerOfRotation'
-              reference='http://titania.create3000.de'
-              value='0.192951887845993, 0.00326720159500837, -0.000781742099206895'/>
-        </MetadataSet>
-        <MetadataSet DEF='Selection'
-            name='Selection'
-            reference='http://titania.create3000.de'>
-          <MetadataSet DEF='previous'
-              name='previous'
-              reference='http://titania.create3000.de'/>
-        </MetadataSet>
-        <MetadataSet DEF='AngleGrid'
-            name='AngleGrid'
-            reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled'
-              name='enabled'
-              reference='http://titania.create3000.de'
-              value='false'/>
-        </MetadataSet>
-        <MetadataSet DEF='Grid'
-            name='Grid'
-            reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled_1'
-              name='enabled'
-              reference='http://titania.create3000.de'
-              value='true'/>
-          <MetadataFloat DEF='rotation'
-              name='rotation'
-              reference='http://titania.create3000.de'
-              value='1, 0, 0, 1.5708'/>
-        </MetadataSet>
-      </MetadataSet>
-    </WorldInfo>
     <Background
         skyColor='0.2 0.2 0.2'/>
     <Viewpoint
@@ -123,7 +65,7 @@
               diffuseColor='1 0 0'
               emissiveColor='1 1 1'/>
           <ImageTexture
-              url='"http://cdn.rawgit.com/create3000/Library/master/Textures/Miscellaneous/lena.jpg", "https://cdn.rawgit.com/create3000/Library/master/Textures/Miscellaneous/lena.jpg", "http://rawgit.com/create3000/Library/master/Textures/Miscellaneous/lena.jpg", "https://rawgit.com/create3000/Library/master/Textures/Miscellaneous/lena.jpg"'/>
+              url='"../images/lena.jpg"'/>
         </Appearance>
         <Text DEF='Text_1'
             string='"Bgre", "good old", "Texts", "today!"'

@@ -9,7 +9,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V1.2.2, http://titania.create3000.de'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.7, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 23 Jul 2024 22:55:49 GMT'/>
+    <meta name='modified' content='Wed, 24 Jul 2024 14:23:44 GMT'/>
     <meta name='title' content='Text'/>
   </head>
   <Scene>
@@ -50,37 +50,6 @@
         </Transform>
       </ProtoBody>
     </ProtoDeclare>
-    <WorldInfo
-        title='Vertical Text'>
-      <MetadataSet DEF='Titania' containerField='metadata'
-          name='Titania'
-          reference='http://titania.create3000.de'>
-        <MetadataSet DEF='NavigationInfo'
-            name='NavigationInfo'
-            reference='http://titania.create3000.de'>
-          <MetadataString DEF='type'
-              name='type'
-              reference='http://titania.create3000.de'
-              value='"EXAMINE"'/>
-        </MetadataSet>
-        <MetadataSet DEF='Viewpoint'
-            name='Viewpoint'
-            reference='http://titania.create3000.de'>
-          <MetadataDouble DEF='position'
-              name='position'
-              reference='http://titania.create3000.de'
-              value='-0.0552061013877392, 6.52955007553101, 27.0410003662109'/>
-          <MetadataDouble DEF='orientation'
-              name='orientation'
-              reference='http://titania.create3000.de'
-              value='0, 0, 1, 0'/>
-          <MetadataDouble DEF='centerOfRotation'
-              name='centerOfRotation'
-              reference='http://titania.create3000.de'
-              value='-0.0552061013877392, 6.52955007553101, 0'/>
-        </MetadataSet>
-      </MetadataSet>
-    </WorldInfo>
     <Background
         skyColor='0.2 0.2 0.2'/>
     <Viewpoint
@@ -137,43 +106,40 @@
       </Shape>
     </Transform>
     <Transform DEF='LineBounds'
-        translation='0 16.52249 0'>
+        translation='0 16.55 0'>
       <ProtoInstance name='BBox2'>
-        <fieldValue name='translation' value='0.8546753 -0.005174474 0'/>
+        <fieldValue name='translation' value='0 -7.629395e-7 0'/>
         <fieldValue name='scale' value='0.8546753 16.55 1'/>
         <fieldValue name='color' value='1 0 1'/>
       </ProtoInstance>
       <ProtoInstance name='BBox2'>
-        <fieldValue name='translation' value='2.104675 -1.380215 0'/>
+        <fieldValue name='translation' value='0.8546753 -1.375042 0'/>
         <fieldValue name='scale' value='1.25 15.17496 1'/>
         <fieldValue name='color' value='0 1 0'/>
       </ProtoInstance>
       <ProtoInstance name='BBox2'>
-        <fieldValue name='translation' value='3.354675 -0.5917948 0'/>
+        <fieldValue name='translation' value='2.104675 -0.5866211 0'/>
         <fieldValue name='scale' value='1.25 15.96338 1'/>
         <fieldValue name='color' value='0 0 1'/>
       </ProtoInstance>
       <ProtoInstance name='BBox2'>
-        <fieldValue name='translation' value='4.604675 -10.78041 0'/>
+        <fieldValue name='translation' value='3.354675 -10.77523 0'/>
         <fieldValue name='scale' value='1.25 5.774766 1'/>
         <fieldValue name='color' value='1 1 0'/>
       </ProtoInstance>
     </Transform>
     <Transform DEF='TextBounds'
-        translation='0 16.52249 0'
-        scale='4.208374 16.55517 1'>
+        translation='0 16.55 0'
+        scale='4.208374 16.55 1'>
       <ProtoInstance name='BBox2'/>
     </Transform>
-    <Script DEF='Bounds'>
-      <field accessType='inputOnly' type='MFVec2f' name='set_lineBounds'/>
-      <field accessType='inputOnly' type='SFVec2f' name='set_textBounds'/>
-      <field accessType='outputOnly' type='SFVec3f' name='translation_changed'/>
-      <field accessType='outputOnly' type='SFVec3f' name='scale_changed'/>
-      <field accessType='initializeOnly' type='SFNode' name='lineBounds'>
-        <Transform USE='LineBounds'/>
-      </field>
-      <field accessType='initializeOnly' type='MFColor' name='color' value='1 0 1, 0 1 0, 0 0 1, 1 1 0, 0 1 1, 1 0 0'/>
-      <field accessType='initializeOnly' type='SFNode' name='text'>
+    <Transform DEF='Text'>
+      <Shape DEF='Shape_1'>
+        <Appearance>
+          <Material
+              diffuseColor='1 0 0'
+              specularColor='0 1 0'/>
+        </Appearance>
         <Text DEF='Geo'
             string='"上海市第二中级人民法院2月18日对“复旦投毒案”依法公开", "一审宣判，被告人林森浩犯故意杀人罪被判死刑，剥夺政治", "权利终身。2013年4月，复旦大学研究生黄洋因舍友投毒", "死亡，年仅28岁。!"'
             length='17.1814, 15.7539, 16.5724, 5.99508'
@@ -185,6 +151,19 @@
               horizontal='false'
               justify='"END", "BEGIN"'/>
         </Text>
+      </Shape>
+    </Transform>
+    <Script DEF='Bounds'>
+      <field accessType='inputOnly' type='MFVec2f' name='set_lineBounds'/>
+      <field accessType='inputOnly' type='SFVec2f' name='set_textBounds'/>
+      <field accessType='outputOnly' type='SFVec3f' name='translation_changed'/>
+      <field accessType='outputOnly' type='SFVec3f' name='scale_changed'/>
+      <field accessType='initializeOnly' type='SFNode' name='lineBounds'>
+        <Transform USE='LineBounds'/>
+      </field>
+      <field accessType='initializeOnly' type='MFColor' name='color' value='1 0 1, 0 1 0, 0 0 1, 1 1 0, 0 1 1, 1 0 0'/>
+      <field accessType='initializeOnly' type='SFNode' name='text'>
+        <Text USE='Geo'/>
       </field>
 <![CDATA[javascript:
 
@@ -284,16 +263,6 @@ function set_textBounds (value, time)
 }
   ]]>
     </Script>
-    <Transform DEF='Text'>
-      <Shape DEF='Shape_1'>
-        <Appearance>
-          <Material
-              diffuseColor='1 0 0'
-              specularColor='0 1 0'/>
-        </Appearance>
-        <Text USE='Geo'/>
-      </Shape>
-    </Transform>
     <ROUTE fromNode='Bounds' fromField='scale_changed' toNode='TextBounds' toField='set_scale'/>
     <ROUTE fromNode='Geo' fromField='origin' toNode='LineBounds' toField='set_translation'/>
     <ROUTE fromNode='Geo' fromField='origin' toNode='TextBounds' toField='set_translation'/>
