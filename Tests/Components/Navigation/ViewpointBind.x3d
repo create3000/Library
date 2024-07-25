@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='EventUtilities' level='1'/>
+    <component name='PointingDeviceSensor' level='1'/>
+    <meta name='created' content='Thu, 25 Jul 2024 16:05:29 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.7, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Thu, 25 Jul 2024 20:49:31 GMT'/>
+  </head>
+  <Scene>
+    <WorldInfo>
+      <MetadataSet containerField='metadata'
+          name='Sunrize'
+          reference='https://create3000.github.io/sunrize/'>
+        <MetadataSet
+            name='GridTool'>
+          <MetadataBoolean
+              name='visible'
+              value='true'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <Viewpoint
+        description='VP 1'
+        position='2.869677 3.854335 8.769781'
+        orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
+    <Viewpoint
+        description='VP 2'
+        position='5.220812 4.072179 7.49403'
+        orientation='0.552572167518166 -0.815206166947771 -0.173501887755142 5.54787878432596'/>
+    <Viewpoint
+        description='VP 3'
+        position='-4.394869 3.689521 8.189784'
+        orientation='-0.598566281364909 -0.78681718523343 -0.15045638515638 0.61843686641716'/>
+    <Viewpoint DEF='VP4'
+        position='-0.01965156 7.869416 6.170244'
+        orientation='-0.99999337845167 -0.00327218228127219 -0.00159244338455401 0.905841696657087'/>
+    <Transform DEF='Box_1'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Box/>
+      </Shape>
+      <TouchSensor DEF='_2'/>
+      <BooleanTrigger DEF='_3'/>
+    </Transform>
+    <Anchor
+        url='"#VP4"'>
+      <Transform DEF='Box'
+          translation='3 -0 0'>
+        <Shape>
+          <Appearance>
+            <Material
+                diffuseColor='0.4039216 0.3058824 0.654902'/>
+          </Appearance>
+          <Box/>
+        </Shape>
+      </Transform>
+    </Anchor>
+    <ROUTE fromNode='_2' fromField='touchTime' toNode='_3' toField='set_triggerTime'/>
+    <ROUTE fromNode='_3' fromField='triggerTrue' toNode='VP4' toField='set_bind'/>
+  </Scene>
+</X3D>
