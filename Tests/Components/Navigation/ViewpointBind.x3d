@@ -7,7 +7,7 @@
     <meta name='created' content='Thu, 25 Jul 2024 16:05:29 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.7, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Fri, 26 Jul 2024 08:39:39 GMT'/>
+    <meta name='modified' content='Fri, 26 Jul 2024 08:42:24 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -37,7 +37,7 @@
     <Viewpoint DEF='VP4'
         position='-0.01965156 7.869416 6.170244'
         orientation='-0.99999337845167 -0.00327218228127219 -0.00159244338455401 0.905841696657087'/>
-    <Transform DEF='Box_1'
+    <Transform DEF='YellowBox'
         translation='-2 0 0'>
       <Shape>
         <Appearance>
@@ -52,10 +52,10 @@
       <TouchSensor DEF='_2'/>
       <BooleanTrigger DEF='_3'/>
     </Transform>
-    <Anchor
-        url='"#VP4"'>
-      <Transform DEF='Box_2'
-          translation='2 -0 0'>
+    <Transform DEF='LilaBox'
+        translation='2 0 0'>
+      <Anchor
+          url='"#VP4"'>
         <Shape>
           <Appearance>
             <Material DEF='Summer6'
@@ -66,8 +66,8 @@
           </Appearance>
           <Box USE='_1'/>
         </Shape>
-      </Transform>
-    </Anchor>
+      </Anchor>
+    </Transform>
     <ROUTE fromNode='_2' fromField='touchTime' toNode='_3' toField='set_triggerTime'/>
     <ROUTE fromNode='_3' fromField='triggerTrue' toNode='VP4' toField='set_bind'/>
   </Scene>
