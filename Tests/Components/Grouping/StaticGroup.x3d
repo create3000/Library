@@ -12,7 +12,7 @@
     <meta name='created' content='Mon, 19 Aug 2024 08:19:30 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.11, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Fri, 23 Aug 2024 14:54:59 GMT'/>
+    <meta name='modified' content='Fri, 23 Aug 2024 19:17:46 GMT'/>
   </head>
   <Scene>
     <WorldInfo
@@ -42,7 +42,22 @@
     <Viewpoint
         description='Initial View'
         position='4.5 1.379883 22.515'
-        centerOfRotation='4.5 1.379883 0'/>
+        centerOfRotation='4.5 1.379883 0'>
+      <NavigationInfo containerField='navigationInfo'
+          headlight='false'/>
+    </Viewpoint>
+    <DirectionalLight
+        shadows='true'/>
+    <Transform DEF='Wall_1'
+        translation='4.5 1 -2'
+        scale='10.5 9 1'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Rectangle2D/>
+      </Shape>
+    </Transform>
     <Group DEF='Groups'>
       <StaticGroup DEF='Geometies'>
         <Transform DEF='Points'
@@ -145,7 +160,7 @@
                   innerRadius='0.25'/>
             </Shape>
           </Transform>
-          <Transform DEF='Rectangle2D'
+          <Transform DEF='Rectangle2D_1'
               translation='1 0 0'>
             <Shape>
               <Appearance USE='_4'/>
@@ -222,7 +237,7 @@
               </IndexedFaceSet>
             </Shape>
           </Transform>
-          <Transform DEF='NurbsSwungSurface_1'
+          <Transform DEF='NurbsSwungSurface'
               translation='9.647157 0.3535812 0.3533477'
               rotation='1 -0 -0 90.0000000000003'
               scale='0.7064238 0.7064238 0.7064238'>
