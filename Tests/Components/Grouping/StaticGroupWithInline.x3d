@@ -6,7 +6,7 @@
     <meta name='created' content='Fri, 23 Aug 2024 19:51:47 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.12, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Fri, 23 Aug 2024 20:34:26 GMT'/>
+    <meta name='modified' content='Fri, 23 Aug 2024 20:39:59 GMT'/>
   </head>
   <Scene>
     <WorldInfo
@@ -35,14 +35,14 @@
     <EnvironmentLight
         intensity='2'>
       <ImageCubeMapTexture containerField='diffuseTexture'
-          url='"http://192.168.178.21:4000/x_ite/assets/laboratory/gltf-sample-viewer/images/cannon-exterior-diffuse.jpg"'>
+          url='"https://create3000.github.io/x_ite/assets/laboratory/gltf-sample-viewer/images/cannon-exterior-diffuse.jpg"'>
         <TextureProperties DEF='_1'
             generateMipMaps='true'
             minificationFilter='NICEST'
             magnificationFilter='NICEST'/>
       </ImageCubeMapTexture>
       <ImageCubeMapTexture containerField='specularTexture'
-          url='"http://192.168.178.21:4000/x_ite/assets/laboratory/gltf-sample-viewer/images/cannon-exterior-specular.jpg"'>
+          url='"https://create3000.github.io/x_ite/assets/laboratory/gltf-sample-viewer/images/cannon-exterior-specular.jpg"'>
         <TextureProperties USE='_1'/>
       </ImageCubeMapTexture>
     </EnvironmentLight>
