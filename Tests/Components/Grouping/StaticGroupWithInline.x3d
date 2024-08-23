@@ -6,7 +6,7 @@
     <meta name='created' content='Fri, 23 Aug 2024 19:51:47 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.12, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Fri, 23 Aug 2024 20:45:51 GMT'/>
+    <meta name='modified' content='Fri, 23 Aug 2024 21:13:07 GMT'/>
   </head>
   <Scene>
     <WorldInfo
@@ -48,8 +48,7 @@
     </EnvironmentLight>
     <StaticGroup DEF='glTF'>
       <Inline
-          url='"https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/master/Models/ABeautifulGame/glTF/ABeautifulGame.gltf"'
-          bboxDisplay='true'/>
+          url='"https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/master/Models/ABeautifulGame/glTF/ABeautifulGame.gltf"'/>
     </StaticGroup>
   </Scene>
 </X3D>
