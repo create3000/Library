@@ -4,6 +4,7 @@
   <head>
     <component name='CubeMapTexturing' level='3'/>
     <component name='Geometry2D' level='2'/>
+    <component name='NURBS' level='4'/>
     <component name='ParticleSystems' level='3'/>
     <component name='Text' level='1'/>
     <component name='X_ITE' level='1'/>
@@ -11,7 +12,7 @@
     <meta name='created' content='Mon, 19 Aug 2024 08:19:30 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.11, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Fri, 23 Aug 2024 14:04:54 GMT'/>
+    <meta name='modified' content='Fri, 23 Aug 2024 14:54:59 GMT'/>
   </head>
   <Scene>
     <WorldInfo
@@ -21,9 +22,6 @@
           reference='https://create3000.github.io/sunrize/'>
         <MetadataSet
             name='GridTool'>
-          <MetadataBoolean
-              name='snapToCenter'
-              value='true'/>
           <MetadataDouble
               name='rotation'
               value='1, 0, 0, 1.5707963267949'/>
@@ -222,6 +220,27 @@
                   coordIndex='4, 0, 3, -1, 4, 3, 2, -1, 4, 2, 1, -1, 4, 1, 0, -1, 0, 1, 2, 3, -1'>
                 <Coordinate USE='_1'/>
               </IndexedFaceSet>
+            </Shape>
+          </Transform>
+          <Transform DEF='NurbsSwungSurface_1'
+              translation='9.647157 0.3535812 0.3533477'
+              rotation='1 -0 -0 90.0000000000003'
+              scale='0.7064238 0.7064238 0.7064238'>
+            <Shape>
+              <Appearance USE='_11'/>
+              <NurbsSwungSurface
+                  ccw='false'>
+                <NurbsCurve2D containerField='profileCurve'
+                    tessellation='50'
+                    closed='true'
+                    order='4'
+                    controlPoint='0 0, 1 0, 1 1, 0 1, 0 0'/>
+                <NurbsCurve2D containerField='trajectoryCurve'
+                    tessellation='50'
+                    closed='true'
+                    order='4'
+                    controlPoint='0 0, 1 0, 1 1, 0 1, 0 0'/>
+              </NurbsSwungSurface>
             </Shape>
           </Transform>
         </Transform>
