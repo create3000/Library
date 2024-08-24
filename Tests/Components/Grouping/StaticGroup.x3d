@@ -11,8 +11,8 @@
     <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
     <meta name='created' content='Mon, 19 Aug 2024 08:19:30 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Sunrize X3D Editor V1.7.11, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Fri, 23 Aug 2024 19:36:31 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.12, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Sat, 24 Aug 2024 08:38:32 GMT'/>
   </head>
   <Scene>
     <WorldInfo
@@ -44,7 +44,7 @@
         position='4.5 1.379883 22.515'
         centerOfRotation='4.5 1.379883 0'/>
     <Group DEF='Groups'>
-      <StaticGroup DEF='Geometies'>
+      <StaticGroup DEF='Geometries'>
         <Transform DEF='Points'
             translation='0 6 0'>
           <Transform DEF='Polypoint2D'
