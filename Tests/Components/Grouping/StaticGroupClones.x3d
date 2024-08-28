@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <meta name='created' content='Tue, 27 Aug 2024 20:45:48 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.15, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Tue, 27 Aug 2024 20:51:25 GMT'/>
+  </head>
+  <Scene>
+    <WorldInfo>
+      <MetadataSet containerField='metadata'
+          name='Sunrize'
+          reference='https://create3000.github.io/sunrize/'>
+        <MetadataSet
+            name='GridTool'>
+          <MetadataBoolean
+              name='visible'
+              value='true'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <Viewpoint
+        description='Initial View'/>
+    <StaticGroup>
+      <Group DEF='Clones'>
+        <Transform DEF='Sphere_1'
+            translation='-3 0 0'>
+          <Shape DEF='_1'>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8 0 0'/>
+            </Appearance>
+            <Sphere/>
+          </Shape>
+        </Transform>
+        <Transform DEF='Sphere_2'
+            translation='-1 0 0'>
+          <Shape USE='_1'/>
+        </Transform>
+        <Transform DEF='Sphere_3'
+            translation='1 0 0'>
+          <Shape USE='_1'/>
+        </Transform>
+        <Transform DEF='Sphere_4'
+            translation='3 -0 0'>
+          <Shape USE='_1'/>
+        </Transform>
+      </Group>
+      <Group>
+        <Transform DEF='Sphere_5'
+            translation='-3 -2 0'>
+          <Shape>
+            <Appearance DEF='_2'>
+              <Material
+                  diffuseColor='1 0.8509804 0.4'/>
+            </Appearance>
+            <Sphere/>
+          </Shape>
+        </Transform>
+        <Transform DEF='Sphere_6'
+            translation='-1 -2 0'>
+          <Shape>
+            <Appearance USE='_2'/>
+            <Sphere/>
+          </Shape>
+        </Transform>
+        <Transform DEF='Sphere_7'
+            translation='1 -2 0'>
+          <Shape>
+            <Appearance USE='_2'/>
+            <Sphere/>
+          </Shape>
+        </Transform>
+        <Transform DEF='Sphere'
+            translation='3 -2 0'>
+          <Shape>
+            <Appearance USE='_2'/>
+            <Sphere/>
+          </Shape>
+        </Transform>
+      </Group>
+    </StaticGroup>
+    <Background DEF='Gray'
+        skyColor='0.2 0.2 0.2'/>
+  </Scene>
+</X3D>
