@@ -1,13 +1,18 @@
-#X3D V3.3 utf8 Titania V4.3.10
+#X3D V4.0 utf8 X_ITE V10.4.1
 
-PROFILE Full
+PROFILE Interchange
+
+COMPONENT NURBS : 4
+COMPONENT Scripting : 1
+COMPONENT Texturing3D : 2
 
 META "comment" "World of Titania"
 META "created" "Sun, 20 Jan 2019 00:49:50 GMT"
 META "creator" "Holger Seelig"
 META "generator" "Titania V4.3.10, http://titania.create3000.de"
+META "generator" "Sunrize X3D Editor V1.7.15, https://create3000.github.io/sunrize/"
 META "identifier" "file:///home/holger/Projekte/Library/Tests/Components/NURBS/DefaultTextureCoordClosed.x3dv"
-META "modified" "Sun, 20 Jan 2019 01:53:02 GMT"
+META "modified" "Sat, 31 Aug 2024 10:43:35 GMT"
 
 PROTO NurbsTorus [
   inputOutput SFInt32 uOrder 3
@@ -25,9 +30,9 @@ PROTO NurbsTorus [
 ]
 {
   DEF _1 NurbsPatchSurface {
-    solid FALSE
     uTessellation 30
     vTessellation 90
+    solid FALSE
     uClosed TRUE
     vClosed TRUE
     uDimension 7
@@ -390,16 +395,16 @@ DEF Torus Transform {
         shininess 0.25
       }
       texture ImageTexture {
-        url "gradient.png"
+        url "../images/uv-grid.png"
       }
       textureTransform TextureTransform {
-        scale 1 1.67
+        scale 3 2
       }
     }
     geometry NurbsPatchSurface {
-      solid FALSE
       uTessellation 30
       vTessellation 90
+      solid FALSE
       uClosed TRUE
       vClosed TRUE
       vOrder 4
