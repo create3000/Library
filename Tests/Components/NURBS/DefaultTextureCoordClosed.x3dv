@@ -12,7 +12,7 @@ META "creator" "Holger Seelig"
 META "generator" "Titania V4.3.10, http://titania.create3000.de"
 META "generator" "Sunrize X3D Editor V1.7.15, https://create3000.github.io/sunrize/"
 META "identifier" "file:///home/holger/Projekte/Library/Tests/Components/NURBS/DefaultTextureCoordClosed.x3dv"
-META "modified" "Sat, 31 Aug 2024 10:44:58 GMT"
+META "modified" "Sun, 01 Sep 2024 16:52:10 GMT"
 
 PROTO NurbsTorus [
   inputOutput SFInt32 uOrder 3
@@ -397,9 +397,7 @@ DEF Torus Transform {
       texture ImageTexture {
         url "../images/uv-grid.jpg"
       }
-      textureTransform TextureTransform {
-        scale 3 2
-      }
+      textureTransform TextureTransform { }
     }
     geometry NurbsPatchSurface {
       uTessellation 30
