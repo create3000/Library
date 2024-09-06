@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='NURBS' level='4'/>
+    <meta name='created' content='Fri, 06 Sep 2024 23:49:24 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.16, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Fri, 06 Sep 2024 23:54:04 GMT'/>
+  </head>
+  <Scene>
+    <Transform>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <NurbsPatchSurface
+            uTessellation='-3'
+            vTessellation='-3'
+            uClosed='true'
+            vClosed='true'
+            uDimension='9'
+            vDimension='5'
+            uKnot='0, 0, 0, 0.25, 0.25, 0.5, 0.5, 0.75, 0.75, 1, 1, 1'
+            vKnot='0, 0, 0, 0.5, 0.5, 1, 1, 1'
+            weight='1, 0.707107, 1, 0.707107, 1, 0.707107, 1, 0.707107, 1, 0.707107, 0.5, 0.707107, 0.5, 0.707107, 0.5, 0.707107, 0.5, 0.707107, 1, 0.707107, 1, 0.707107, 1, 0.707107, 1, 0.707107, 1, 0.707107, 0.5, 0.707107, 0.5, 0.707107, 0.5, 0.707107, 0.5, 0.707107, 1, 0.707107, 1, 0.707107, 1, 0.707107, 1, 0.707107, 1'>
+          <Coordinate DEF='Coordinate1' containerField='controlPoint'
+              point='0 -1 0, 0 -0.707107 0, 0 -1 0, 0 -0.707107 0, 0 -1 0, 0 -0.707107 0, 0 -1 0, 0 -0.707107 0, 0 -1 0, 0 -0.707107 -0.707107, -0.5 -0.5 -0.5, -0.707107 -0.707107 0, -0.5 -0.5 0.5, 0 -0.707107 0.707107, 0.5 -0.5 0.5, 0.707107 -0.707107 0, 0.5 -0.5 -0.5, 0 -0.707107 -0.707107, 0 0 -1, -0.707107 0 -0.707107, -1 0 0, -0.707107 0 0.707107, 0 0 1, 0.707107 0 0.707107, 1 0 0, 0.707107 0 -0.707107, 0 0 -1, 0 0.707107 -0.707107, -0.5 0.5 -0.5, -0.707107 0.707107 0, -0.5 0.5 0.5, 0 0.707107 0.707107, 0.5 0.5 0.5, 0.707107 0.707107 0, 0.5 0.5 -0.5, 0 0.707107 -0.707107, 0 1 0, 0 0.707107 0, 0 1 0, 0 0.707107 0, 0 1 0, 0 0.707107 0, 0 1 0, 0 0.707107 0, 0 1 0'/>
+        </NurbsPatchSurface>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>
