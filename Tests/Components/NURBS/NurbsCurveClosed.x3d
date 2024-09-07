@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='NURBS' level='4'/>
+    <meta name='created' content='Sat, 07 Sep 2024 08:03:47 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.16, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Sat, 07 Sep 2024 08:05:12 GMT'/>
+  </head>
+  <Scene>
+    <Transform
+        translation='-1 -1 0'>
+      <Shape>
+        <Appearance DEF='LightGreenAppearance_1'>
+          <Material
+              diffuseColor='0.8 1 0.8'
+              emissiveColor='0.8 1 0.8'/>
+        </Appearance>
+        <NurbsCurve DEF='NurbsCurveNotClosed_1'
+            tessellation='30'
+            order='4'
+            knot='3, 3, 3, 3, 4, 5, 6, 7, 8, 8, 8, 8'
+            weight='1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1'>
+          <Coordinate DEF='np_1' containerField='controlPoint'
+              point='0 1 0, -0.951057 0.309017 0, -0.587785 -0.809017 0, 0.587785 -0.809017 0, 0.951056 0.309017 0, 0 1 0, -0.951057 0.309017 0, -0.587785 -0.809017 0'/>
+        </NurbsCurve>
+      </Shape>
+      <Shape>
+        <Appearance DEF='Gray_1'>
+          <Material
+              diffuseColor='0.5 0.5 0.5'
+              emissiveColor='0.5 0.5 0.5'
+              transparency='0.5'/>
+        </Appearance>
+        <NurbsCurve DEF='Pentagon_1'
+            tessellation='30'
+            order='2'
+            knot='0, 0, 1, 2, 3, 4, 5, 5'
+            weight='1, 1, 1, 1, 1, 1'>
+          <Coordinate DEF='np_2' containerField='controlPoint'
+              point='0 1 0, -0.951057 0.309017 0, -0.587785 -0.809017 0, 0.587785 -0.809017 0, 0.951056 0.309017 0, 0 1 0'/>
+        </NurbsCurve>
+      </Shape>
+    </Transform>
+    <Transform
+        translation='1 -1 0'>
+      <Shape>
+        <Appearance DEF='LightGreenAppearance_2'>
+          <Material
+              diffuseColor='0.8 1 0.8'
+              emissiveColor='0.8 1 0.8'/>
+        </Appearance>
+        <NurbsCurve DEF='NurbsCurveNotClosed_2'
+            tessellation='30'
+            order='4'
+            knot='0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11'
+            weight='1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1'>
+          <Coordinate DEF='np_3' containerField='controlPoint'
+              point='0 1 0, -0.951057 0.309017 0, -0.587785 -0.809017 0, 0.587785 -0.809017 0, 0.951056 0.309017 0, 0 1 0, -0.951057 0.309017 0, -0.587785 -0.809017 0'/>
+        </NurbsCurve>
+      </Shape>
+      <Shape>
+        <Appearance DEF='Gray_2'>
+          <Material
+              diffuseColor='0.5 0.5 0.5'
+              emissiveColor='0.5 0.5 0.5'
+              transparency='0.5'/>
+        </Appearance>
+        <NurbsCurve DEF='Pentagon_2'
+            tessellation='30'
+            order='2'
+            knot='0, 0, 1, 2, 3, 4, 5, 5'
+            weight='1, 1, 1, 1, 1, 1'>
+          <Coordinate DEF='np_4' containerField='controlPoint'
+              point='0 1 0, -0.951057 0.309017 0, -0.587785 -0.809017 0, 0.587785 -0.809017 0, 0.951056 0.309017 0, 0 1 0'/>
+        </NurbsCurve>
+      </Shape>
+    </Transform>
+    <Transform
+        translation='-1 1 0'>
+      <Shape>
+        <Appearance DEF='LightGreenAppearance_3'>
+          <Material
+              diffuseColor='0.8 1 0.8'
+              emissiveColor='0.8 1 0.8'/>
+        </Appearance>
+        <NurbsCurve DEF='NurbsCurveNotClosed_3'
+            tessellation='30'
+            closed='true'
+            order='4'
+            knot='3, 3, 3, 3, 4, 5, 6, 7, 8, 8, 8, 8'
+            weight='1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1'>
+          <Coordinate DEF='np_5' containerField='controlPoint'
+              point='0 1 0, -0.951057 0.309017 0, -0.587785 -0.809017 0, 0.587785 -0.809017 0, 0.951056 0.309017 0, 0 1 0, -0.951057 0.309017 0, -0.587785 -0.809017 0'/>
+        </NurbsCurve>
+      </Shape>
+      <Shape>
+        <Appearance DEF='Gray_3'>
+          <Material
+              diffuseColor='0.5 0.5 0.5'
+              emissiveColor='0.5 0.5 0.5'
+              transparency='0.5'/>
+        </Appearance>
+        <NurbsCurve DEF='Pentagon_3'
+            tessellation='30'
+            order='2'
+            knot='0, 0, 1, 2, 3, 4, 5, 5'
+            weight='1, 1, 1, 1, 1, 1'>
+          <Coordinate DEF='np_6' containerField='controlPoint'
+              point='0 1 0, -0.951057 0.309017 0, -0.587785 -0.809017 0, 0.587785 -0.809017 0, 0.951056 0.309017 0, 0 1 0'/>
+        </NurbsCurve>
+      </Shape>
+    </Transform>
+    <Transform
+        translation='1 1 0'>
+      <Shape>
+        <Appearance DEF='LightGreenAppearance'>
+          <Material
+              diffuseColor='0.8 1 0.8'
+              emissiveColor='0.8 1 0.8'/>
+        </Appearance>
+        <NurbsCurve DEF='NurbsCurveNotClosed_4'
+            tessellation='30'
+            closed='true'
+            order='4'
+            knot='0, 1, 2, 3, 4, 5'
+            weight='1, 1, 1, 1, 1, 1'>
+          <Coordinate DEF='np_7' containerField='controlPoint'
+              point='0 1 0, -0.951057 0.309017 0, -0.587785 -0.809017 0, 0.587785 -0.809017 0, 0.951056 0.309017 0, 0 1 0'/>
+        </NurbsCurve>
+      </Shape>
+      <Shape>
+        <Appearance DEF='Gray'>
+          <Material
+              diffuseColor='0.5 0.5 0.5'
+              emissiveColor='0.5 0.5 0.5'
+              transparency='0.5'/>
+        </Appearance>
+        <NurbsCurve DEF='Pentagon'
+            tessellation='30'
+            order='2'
+            knot='0, 0, 1, 2, 3, 4, 5, 5'
+            weight='1, 1, 1, 1, 1, 1'>
+          <Coordinate DEF='np' containerField='controlPoint'
+              point='0 1 0, -0.951057 0.309017 0, -0.587785 -0.809017 0, 0.587785 -0.809017 0, 0.951056 0.309017 0, 0 1 0'/>
+        </NurbsCurve>
+      </Shape>
+    </Transform>
+    <Viewpoint/>
+  </Scene>
+</X3D>
