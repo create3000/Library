@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <meta name='created' content='Sat, 07 Sep 2024 12:33:34 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.16, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Sat, 07 Sep 2024 12:33:34 GMT'/>
+  </head>
+  <Scene>
+    <Viewpoint DEF='Viewpoint1_1'
+        position='4.95781 0.359057 -2.55696'
+        orientation='-0.0362412 0.998775 -0.0336861 2.0648'
+        centerOfRotation='0.373292 0.451315 -0.0987954'/>
+    <Transform
+        translation='0.453438 -1.05497 -0.220753'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Extrusion
+            ccw='false'
+            convex='false'
+            creaseAngle='0.785399'
+            crossSection='-0.35883 3.13699e-8, -0.45375 -0.0902568, -0.719829 -0.298162, -0.493548 -0.329777, -0.286799 -0.286799, -0.187813 -0.281084, -0.123254 -0.297562, -0.0653196 -0.328384, 2.43543e-8 -0.322582, 0.0684329 -0.344034, 0.168703 -0.407285, 0.391043 -0.585237, 0.454852 -0.454852, 0.350861 -0.234438, 0.317707 -0.131597, 0.315757 -0.062808, 0.34 2.97237e-8, 0.315757 0.0628081, 0.317707 0.131597, 0.350861 0.234438, 0.454852 0.454854, 0.391043 0.585237, 0.168703 0.407285, 0.0684329 0.344034, -1.41006e-8 0.322582, -0.0653197 0.328384, -0.123254 0.297562, -0.187813 0.281084, -0.286799 0.286799, -0.493546 0.329777, -0.719829 0.298162, -0.45375 0.0902568, -0.35883 -3.13699e-8'
+            spine='0.0170381 0.904368 -1.10851, 0.0193279 1.39235 -0.193229, -0.0144363 1.84505 0.751505, -0.180068 2.24377 1.27323'/>
+      </Shape>
+    </Transform>
+    <Viewpoint DEF='Viewpoint1'
+        position='2.50761 -8.73553 4.17843'
+        orientation='0.168888 0.579895 -0.796993 2.20957'/>
+    <Background DEF='Gray_1'
+        skyColor='0.2 0.2 0.2'/>
+  </Scene>
+</X3D>
