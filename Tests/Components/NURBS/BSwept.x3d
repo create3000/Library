@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='NURBS' level='4'/>
+    <meta name='created' content='Sat, 07 Sep 2024 07:47:22 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.16, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Sat, 07 Sep 2024 07:47:22 GMT'/>
+  </head>
+  <Scene>
+    <Group>
+      <Shape>
+        <Appearance>
+          <LineProperties
+              linewidthScaleFactor='2'/>
+          <Material
+              emissiveColor='1 0 0'/>
+        </Appearance>
+        <LineSet
+            vertexCount='2'>
+          <Coordinate
+              point='0 0 0, 1 0 0'/>
+        </LineSet>
+      </Shape>
+      <Shape>
+        <Appearance>
+          <LineProperties
+              linewidthScaleFactor='2'/>
+          <Material
+              emissiveColor='0 1 0'/>
+        </Appearance>
+        <LineSet
+            vertexCount='2'>
+          <Coordinate
+              point='0 0 0, 0 1 0'/>
+        </LineSet>
+      </Shape>
+      <Shape>
+        <Appearance>
+          <LineProperties
+              linewidthScaleFactor='2'/>
+          <Material
+              emissiveColor='0 0 1'/>
+        </Appearance>
+        <LineSet
+            vertexCount='2'>
+          <Coordinate
+              point='0 0 0, 0 0 1'/>
+        </LineSet>
+      </Shape>
+    </Group>
+    <Background
+        skyColor='0.7 0.7 0.9'/>
+    <Viewpoint/>
+    <Transform>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <NurbsSweptSurface
+            solid='false'>
+          <NurbsCurve2D containerField='crossSectionCurve'
+              knot='0, 0, 0, 1, 2, 3, 4, 5, 6, 6, 6'
+              weight='1, 1, 1, 1, 1, 1, 1, 1'
+              controlPoint='-0.25 0, 0.5 0, 0.5 0.25, 0 0.5, 0.5 0.75, 0.5 1, -0.25 1, -0.25 0'/>
+          <NurbsCurve DEF='TRAJECTORY' containerField='trajectoryCurve'
+              knot='0, 0, 0, 1, 2, 3, 4, 5, 5, 5'
+              weight='1, 1, 1, 1, 1, 1, 1'>
+            <Coordinate DEF='TRAJECTORYCONTROLPTS' containerField='controlPoint'
+                point='0 2 4, 0 2 2, 0 0 2, 2 0 2, 2 0 0, 2 4 0, 2 4 2'/>
+          </NurbsCurve>
+        </NurbsSweptSurface>
+      </Shape>
+    </Transform>
+    <Transform>
+      <Shape>
+        <Appearance>
+          <Material DEF='CYAN'
+              diffuseColor='0 1 1'/>
+        </Appearance>
+        <NurbsCurve DEF='CROSSSECTION'
+            knot='0, 0, 0, 1, 2, 3, 4, 5, 6, 6, 6'
+            weight='1, 1, 1, 1, 1, 1, 1, 1'/>
+      </Shape>
+      <Shape>
+        <Appearance>
+          <Material DEF='MAGENTA'
+              diffuseColor='1 0 1'/>
+        </Appearance>
+        <NurbsCurve USE='TRAJECTORY'/>
+      </Shape>
+      <Shape>
+        <Appearance>
+          <Material DEF='GRAY'
+              diffuseColor='0.5 0.5 0.5'
+              transparency='0.5'/>
+        </Appearance>
+        <NurbsCurve DEF='TRAJECTORYCONTROLLINES'
+            order='2'
+            knot='0, 0, 1, 2, 3, 4, 5, 6, 6'
+            weight='1, 1, 1, 1, 1, 1, 1'>
+          <Coordinate USE='TRAJECTORYCONTROLPTS' containerField='controlPoint'/>
+        </NurbsCurve>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>
