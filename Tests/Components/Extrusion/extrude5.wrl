@@ -1,0 +1,16 @@
+#VRML V2.0 utf8
+
+Viewpoint { }
+
+Shape {
+  appearance Appearance {
+    material Material {
+      diffuseColor 0 0.5 1
+    }
+  }
+  geometry Extrusion {
+    creaseAngle 0.785
+    crossSection [ -0.5 -0.1, -0.5 0.1, 0.5 0.1, 0.5 -0.1, -0.5 -0.1 ]
+    spine [ 0 0 0, 1 0 0 ]
+  }
+}

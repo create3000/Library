@@ -1,0 +1,84 @@
+#VRML V2.0 utf8 Titania V4.3.3
+
+WorldInfo {
+  metadata DEF Titania MetadataSet {
+    name "Titania"
+    reference "http://titania.create3000.de"
+    value [
+      DEF Page MetadataSet {
+        name "Page"
+        reference "http://titania.create3000.de"
+        value [
+          DEF activeView MetadataInteger {
+            name "activeView"
+            reference "http://titania.create3000.de"
+            value 1
+          }
+          DEF multiView MetadataInteger {
+            name "multiView"
+            reference "http://titania.create3000.de"
+            value 0
+          }
+        ]
+      }
+      DEF Selection MetadataSet {
+        name "Selection"
+        reference "http://titania.create3000.de"
+        value [
+          DEF selectGeometry MetadataBoolean {
+            name "selectGeometry"
+            reference "http://titania.create3000.de"
+            value FALSE
+          }
+          DEF nodes MetadataSet {
+            name "nodes"
+            reference "http://titania.create3000.de"
+            value DEF _1 ImageTexture {
+              url "../images/lena.jpg"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  title "Cylinder2"
+}
+
+Group {
+  children Shape {
+    appearance Appearance {
+      texture USE _1
+    }
+    geometry Extrusion {
+      ccw FALSE
+      creaseAngle 3.14159
+      crossSection [
+        1 0,
+        0.92388 0.382683,
+        0.707107 0.707106,
+        0.382684 0.923879,
+        1.26759e-06 1,
+        -0.382682 0.92388,
+        -0.707105 0.707108,
+        -0.923879 0.382685,
+        -1 2.53518e-06,
+        -0.923881 -0.382681,
+        -0.707109 -0.707105,
+        -0.382687 -0.923878,
+        -3.80277e-06 -1,
+        0.38268 -0.923881,
+        0.707104 -0.70711,
+        0.923878 -0.382688,
+        1 0
+      ]
+      orientation [
+        0 0 1 0,
+        0 0 1 0
+      ]
+      scale [
+        2 2,
+        1 1
+      ]
+    }
+  }
+}
