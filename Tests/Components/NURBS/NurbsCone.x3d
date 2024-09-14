@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='NURBS' level='4'/>
+    <meta name='created' content='Sat, 14 Sep 2024 10:05:28 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.18, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Sat, 14 Sep 2024 10:05:57 GMT'/>
+  </head>
+  <Scene>
+    <Transform DEF='NurbsCone'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <NurbsPatchSurface
+            solid='false'
+            uClosed='true'
+            vOrder='2'
+            uDimension='9'
+            vDimension='2'
+            uKnot='0, 0, 0, 0.25, 0.25, 0.5, 0.5, 0.75, 0.75, 1, 1, 1'
+            vKnot='0, 0, 1, 1'
+            weight='1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1, 1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1'>
+          <CoordinateDouble containerField='controlPoint'
+              point='1 -1 0, 0.707106781186548 -0.707106781186548 -0.707106781186548, 0 -1 -1, -0.707106781186548 -0.707106781186548 -0.707106781186548, -1 -1 0, -0.707106781186548 -0.707106781186548 0.707106781186548, 0 -1 1, 0.707106781186548 -0.707106781186548 0.707106781186548, 1 -1 0, 0 1 0, 0 0.707106781186548 0, 0 1 0, 0 0.707106781186548 0, 0 1 0, 0 0.707106781186548 0, 0 1 0, 0 0.707106781186548 0, 0 1 0'/>
+        </NurbsPatchSurface>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>
