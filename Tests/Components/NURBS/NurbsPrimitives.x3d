@@ -7,15 +7,15 @@
     <meta name='created' content='Wed, 20 Mar 2024 18:14:30 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.18, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Sat, 14 Sep 2024 16:08:41 GMT'/>
+    <meta name='modified' content='Sat, 14 Sep 2024 16:18:11 GMT'/>
   </head>
   <Scene>
     <Viewpoint
         description='Initial View'
-        position='2 0 6.659854'
-        centerOfRotation='2 0 0'/>
+        position='2.5 0.25 6.897406'
+        centerOfRotation='2.5 0.25 0'/>
     <Transform DEF='NurbsCircle2D'
-        translation='-0 1 0'>
+        translation='0 1.5 0'>
       <Shape>
         <Appearance>
           <UnlitMaterial/>
@@ -30,7 +30,7 @@
       </Shape>
     </Transform>
     <Transform DEF='NurbsDisk2D'
-        translation='2 1 -0'>
+        translation='2.5 1.5 0'>
       <Shape>
         <Appearance>
           <Material
@@ -47,7 +47,7 @@
       </Shape>
     </Transform>
     <Transform DEF='NurbsRectangle2D'
-        translation='4 1 0'>
+        translation='5 1.5 0'>
       <Shape>
         <Appearance>
           <Material
@@ -87,7 +87,7 @@
       </Shape>
     </Transform>
     <Transform DEF='NurbsSphere_1'
-        translation='2 -1 0'>
+        translation='2.5 -1 0'>
       <Shape>
         <Appearance>
           <Material
@@ -106,7 +106,7 @@
       </Shape>
     </Transform>
     <Transform DEF='NurbsCylinder'
-        translation='4 -1 0'>
+        translation='5 -1 0'>
       <Shape>
         <Appearance>
           <Material
