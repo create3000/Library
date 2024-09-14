@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='NURBS' level='4'/>
+    <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
+    <meta name='created' content='Wed, 20 Mar 2024 18:14:30 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.18, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Sat, 14 Sep 2024 16:08:41 GMT'/>
+  </head>
+  <Scene>
+    <Viewpoint
+        description='Initial View'
+        position='2 0 6.659854'
+        centerOfRotation='2 0 0'/>
+    <Transform DEF='NurbsCircle2D'
+        translation='-0 1 0'>
+      <Shape>
+        <Appearance>
+          <UnlitMaterial/>
+        </Appearance>
+        <NurbsCurve
+            closed='true'
+            knot='0, 0, 0, 0.25, 0.25, 0.5, 0.5, 0.75, 0.75, 1, 1, 1'
+            weight='1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1'>
+          <CoordinateDouble containerField='controlPoint'
+              point='1 0 0, 0.707106781186548 -0.707106781186548 0, 0 -1 0, -0.707106781186548 -0.707106781186548 0, -1 0 0, -0.707106781186548 0.707106781186548 0, 0 1 0, 0.707106781186548 0.707106781186548 0, 1 0 0'/>
+        </NurbsCurve>
+      </Shape>
+    </Transform>
+    <Transform DEF='NurbsDisk2D'
+        translation='2 1 -0'>
+      <Shape>
+        <Appearance>
+          <Material
+              diffuseColor='0.6120656 0.6120656 0.6120656'/>
+        </Appearance>
+        <NurbsPatchSurface
+            solid='false'
+            uDimension='3'
+            vDimension='3'
+            weight='1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1'>
+          <CoordinateDouble containerField='controlPoint'
+              point='-0.707106781186548 -0.707106781186548 0, 0 -1 0, 0.707106781186548 -0.707106781186548 0, -1 0 0, 0 0 0, 1 0 0, -0.707106781186548 0.707106781186548 0, 0 1 0, 0.707106781186548 0.707106781186548 0'/>
+        </NurbsPatchSurface>
+      </Shape>
+    </Transform>
+    <Transform DEF='NurbsRectangle2D'
+        translation='4 1 0'>
+      <Shape>
+        <Appearance>
+          <Material
+              diffuseColor='0.6120656 0.6120656 0.6120656'/>
+        </Appearance>
+        <NurbsPatchSurface
+            solid='false'
+            uOrder='2'
+            vOrder='2'
+            uDimension='2'
+            vDimension='2'
+            uKnot='-1, -1, 1, 1'
+            vKnot='-1, -1, 1, 1'>
+          <CoordinateDouble containerField='controlPoint'
+              point='-1 -1 0, 1 -1 0, -1 1 0, 1 1 0'/>
+        </NurbsPatchSurface>
+      </Shape>
+    </Transform>
+    <Transform DEF='NurbsCone_1'
+        translation='0 -1 -0'>
+      <Shape>
+        <Appearance>
+          <Material
+              diffuseColor='0.6120656 0.6120656 0.6120656'/>
+        </Appearance>
+        <NurbsPatchSurface
+            uClosed='true'
+            vOrder='2'
+            uDimension='9'
+            vDimension='2'
+            uKnot='0, 0, 0, 0.25, 0.25, 0.5, 0.5, 0.75, 0.75, 1, 1, 1'
+            vKnot='0, 0, 1, 1'
+            weight='1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1, 1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1'>
+          <CoordinateDouble containerField='controlPoint'
+              point='1 -1 0, 0.707106781186548 -0.707106781186548 -0.707106781186548, 0 -1 -1, -0.707106781186548 -0.707106781186548 -0.707106781186548, -1 -1 0, -0.707106781186548 -0.707106781186548 0.707106781186548, 0 -1 1, 0.707106781186548 -0.707106781186548 0.707106781186548, 1 -1 0, 0 1 0, 0 0.707106781186548 0, 0 1 0, 0 0.707106781186548 0, 0 1 0, 0 0.707106781186548 0, 0 1 0, 0 0.707106781186548 0, 0 1 0'/>
+        </NurbsPatchSurface>
+      </Shape>
+    </Transform>
+    <Transform DEF='NurbsSphere_1'
+        translation='2 -1 0'>
+      <Shape>
+        <Appearance>
+          <Material
+              diffuseColor='0.6120656 0.6120656 0.6120656'/>
+        </Appearance>
+        <NurbsPatchSurface
+            uClosed='true'
+            uDimension='9'
+            vDimension='5'
+            uKnot='0, 0, 0, 0.25, 0.25, 0.5, 0.5, 0.75, 0.75, 1, 1, 1'
+            vKnot='0, 0, 0, 0.5, 0.5, 1, 1, 1'
+            weight='1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 0.5, 0.707106781186548, 0.5, 0.707106781186548, 0.5, 0.707106781186548, 0.5, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 0.5, 0.707106781186548, 0.5, 0.707106781186548, 0.5, 0.707106781186548, 0.5, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1'>
+          <CoordinateDouble containerField='controlPoint'
+              point='0 -1 0, 0 -0.707106781186548 0, 0 -1 0, 0 -0.707106781186548 0, 0 -1 0, 0 -0.707106781186548 0, 0 -1 0, 0 -0.707106781186548 0, 0 -1 0, 0 -0.707106781186548 -0.707106781186548, -0.5 -0.5 -0.5, -0.707106781186548 -0.707106781186548 0, -0.5 -0.5 0.5, 0 -0.707106781186548 0.707106781186548, 0.5 -0.5 0.5, 0.707106781186548 -0.707106781186548 0, 0.5 -0.5 -0.5, 0 -0.707106781186548 -0.707106781186548, 0 0 -1, -0.707106781186548 0 -0.707106781186548, -1 0 0, -0.707106781186548 0 0.707106781186548, 0 0 1, 0.707106781186548 0 0.707106781186548, 1 0 0, 0.707106781186548 0 -0.707106781186548, 0 0 -1, 0 0.707106781186548 -0.707106781186548, -0.5 0.5 -0.5, -0.707106781186548 0.707106781186548 0, -0.5 0.5 0.5, 0 0.707106781186548 0.707106781186548, 0.5 0.5 0.5, 0.707106781186548 0.707106781186548 0, 0.5 0.5 -0.5, 0 0.707106781186548 -0.707106781186548, 0 1 0, 0 0.707106781186548 0, 0 1 0, 0 0.707106781186548 0, 0 1 0, 0 0.707106781186548 0, 0 1 0, 0 0.707106781186548 0, 0 1 0'/>
+        </NurbsPatchSurface>
+      </Shape>
+    </Transform>
+    <Transform DEF='NurbsCylinder'
+        translation='4 -1 0'>
+      <Shape>
+        <Appearance>
+          <Material
+              diffuseColor='0.6120656 0.6120656 0.6120656'/>
+        </Appearance>
+        <NurbsPatchSurface
+            uClosed='true'
+            vOrder='2'
+            uDimension='9'
+            vDimension='2'
+            uKnot='0, 0, 0, 0.25, 0.25, 0.5, 0.5, 0.75, 0.75, 1, 1, 1'
+            vKnot='0, 0, 1, 1'
+            weight='1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1, 1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1, 0.707106781186548, 1'>
+          <CoordinateDouble containerField='controlPoint'
+              point='1 -1 0, 0.707106781186548 -0.707106781186548 -0.707106781186548, 0 -1 -1, -0.707106781186548 -0.707106781186548 -0.707106781186548, -1 -1 0, -0.707106781186548 -0.707106781186548 0.707106781186548, 0 -1 1, 0.707106781186548 -0.707106781186548 0.707106781186548, 1 -1 0, 1 1 0, 0.707106781186548 0.707106781186548 -0.707106781186548, 0 1 -1, -0.707106781186548 0.707106781186548 -0.707106781186548, -1 1 0, -0.707106781186548 0.707106781186548 0.707106781186548, 0 1 1, 0.707106781186548 0.707106781186548 0.707106781186548, 1 1 0'/>
+        </NurbsPatchSurface>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>
