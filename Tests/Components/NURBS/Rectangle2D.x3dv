@@ -1,4 +1,13 @@
-#X3D V3.2 utf8
+#X3D V4.0 utf8 X_ITE V10.5.1
+
+PROFILE Interchange
+
+COMPONENT NURBS : 4
+
+META "created" "Sat, 14 Sep 2024 05:40:32 GMT"
+META "creator" "Holger Seelig"
+META "generator" "Sunrize X3D Editor V1.7.18, https://create3000.github.io/sunrize/"
+META "modified" "Sat, 14 Sep 2024 05:41:37 GMT"
 
 DEF NurbsRectangle2D Transform {
   children Shape {
@@ -6,17 +15,30 @@ DEF NurbsRectangle2D Transform {
       material Material { }
     }
     geometry NurbsPatchSurface {
-      uTessellation 2
-      vTessellation 2
       solid FALSE
       uOrder 2
       vOrder 2
       uDimension 2
       vDimension 2
-      uKnot [ -1, -1, 1, 1 ]
-      vKnot [ -1, -1, 1, 1 ]
-      controlPoint Coordinate {
-        point [ -1 -1 0, 1 -1 0, -1 1 0, 1 1 0 ]
+      uKnot [
+        -1,
+        -1,
+        1,
+        1
+      ]
+      vKnot [
+        -1,
+        -1,
+        1,
+        1
+      ]
+      controlPoint CoordinateDouble {
+        point [
+          -1 -1 0,
+          1 -1 0,
+          -1 1 0,
+          1 1 0
+        ]
       }
     }
   }

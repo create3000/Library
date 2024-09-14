@@ -9,14 +9,13 @@
     <meta name='generator' content='Titania V4.5.12, http://titania.create3000.de'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.18, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/NURBS/Circle.x3d'/>
-    <meta name='modified' content='Fri, 13 Sep 2024 22:50:48 GMT'/>
+    <meta name='modified' content='Sat, 14 Sep 2024 08:24:34 GMT'/>
   </head>
   <Scene>
-    <Transform DEF='Circle'>
+    <Transform DEF='NurbsCircle2D'>
       <Shape>
         <Appearance>
-          <Material
-              emissiveColor='1 1 1'/>
+          <UnlitMaterial/>
         </Appearance>
         <NurbsCurve
             closed='true'
