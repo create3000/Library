@@ -1,125 +1,50 @@
-#X3D V4.0 utf8
+#X3D V4.0 utf8 X_ITE V10.5.2
 
-WorldInfo {
-  metadata DEF Titania MetadataSet {
-    name "Titania"
-    reference "http://titania.create3000.de"
-    value [
-      DEF AngleGrid MetadataSet {
-        name "AngleGrid"
-        reference "http://titania.create3000.de"
-        value DEF enabled MetadataBoolean {
-          name "enabled"
-          reference "http://titania.create3000.de"
-          value FALSE
-        }
+PROFILE Interchange
+
+META "created" "Sun, 15 Sep 2024 19:40:58 GMT"
+META "creator" "Holger Seelig"
+META "generator" "Sunrize X3D Editor V1.7.19, https://create3000.github.io/sunrize/"
+META "modified" "Sun, 15 Sep 2024 19:42:00 GMT"
+
+Transform {
+  children Shape {
+    appearance Appearance {
+      pointProperties PointProperties {
+        pointSizeScaleFactor 20
+        pointSizeMinValue 20
+        pointSizeMaxValue 20
       }
-      DEF Grid MetadataSet {
-        name "Grid"
-        reference "http://titania.create3000.de"
-        value DEF enabled_1 MetadataBoolean {
-          name "enabled"
-          reference "http://titania.create3000.de"
-          value TRUE
-        }
+      material Material {
+        emissiveColor 1 0 0
+        transparency 0.5
       }
-      DEF NavigationInfo MetadataSet {
-        name "NavigationInfo"
-        reference "http://titania.create3000.de"
-        value DEF type MetadataString {
-          name "type"
-          reference "http://titania.create3000.de"
-          value "EXAMINE"
-        }
-      }
-      DEF Viewpoint MetadataSet {
-        name "Viewpoint"
-        reference "http://titania.create3000.de"
-        value [
-          DEF position MetadataDouble {
-            name "position"
-            reference "http://titania.create3000.de"
-            value [
-              2.08562309276608,
-              3.12359145492636,
-              9.26786672258043
-            ]
-          }
-          DEF orientation MetadataDouble {
-            name "orientation"
-            reference "http://titania.create3000.de"
-            value [
-              -0.81823424359881,
-              0.567648191560462,
-              0.0909299357770617,
-              0.386653255595051
-            ]
-          }
-          DEF centerOfRotation MetadataDouble {
-            name "centerOfRotation"
-            reference "http://titania.create3000.de"
-            value [
-              0,
-              0,
-              0
-            ]
-          }
+    }
+    geometry PointSet {
+      coord Coordinate {
+        point [
+          -1 1 1,
+          -1 -1 1,
+          1 -1 1,
+          1 1 1,
+          -1 1 -1,
+          -1 -1 -1,
+          1 -1 -1,
+          1 1 -1
         ]
       }
-      DEF Selection MetadataSet {
-        name "Selection"
-        reference "http://titania.create3000.de"
-        value [
-          DEF children MetadataSet {
-            name "children"
-            reference "http://titania.create3000.de"
-            value DEF _1 Transform {
-              children Shape {
-                appearance Appearance {
-                  lineProperties DEF _2 LineProperties {
-                    linewidthScaleFactor 20
-                  }
-                  material Material {
-                    emissiveColor 1 0 0
-                    transparency 0.5
-                  }
-                }
-                geometry PointSet {
-                  coord Coordinate {
-                    point [
-                      -1 1 1,
-                      -1 -1 1,
-                      1 -1 1,
-                      1 1 1,
-                      -1 1 -1,
-                      -1 -1 -1,
-                      1 -1 -1,
-                      1 1 -1
-                    ]
-                  }
-                }
-              }
-            }
-          }
-          DEF previous MetadataSet {
-            name "previous"
-            reference "http://titania.create3000.de"
-          }
-        ]
-      }
-    ]
+    }
   }
-  title "PointSet"
 }
-
-USE _1
 
 Transform {
   rotation 0.26726102762664 0.53452205525328 0.801784082880024 4
   children Shape {
     appearance Appearance {
-      lineProperties LineProperties {
-        linewidthScaleFactor 10
+      pointProperties PointProperties {
+        pointSizeScaleFactor 10
+        pointSizeMinValue 10
+        pointSizeMaxValue 10
       }
       material Material {
         emissiveColor 1 0 0
@@ -158,8 +83,10 @@ Transform {
   rotation 0.742781352708207 0.557086014531156 0.371390676354104 1
   children Shape {
     appearance Appearance {
-      lineProperties LineProperties {
-        linewidthScaleFactor 5
+      pointProperties PointProperties {
+        pointSizeScaleFactor 5
+        pointSizeMinValue 5
+        pointSizeMaxValue 5
       }
       material Material {
         emissiveColor 0 0 1
