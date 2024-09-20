@@ -10,7 +10,7 @@ META "creator" "Holger Seelig"
 META "generator" "Titania V4.3.10, http://titania.create3000.de"
 META "generator" "Sunrize X3D Editor V1.7.19, https://create3000.github.io/sunrize/"
 META "identifier" "file:///home/holger/Projekte/Library/Tests/Components/NURBS/NurbsTextureCoordinate.x3dv"
-META "modified" "Fri, 20 Sep 2024 16:05:02 GMT"
+META "modified" "Fri, 20 Sep 2024 16:07:37 GMT"
 
 WorldInfo {
   metadata MetadataSet {
@@ -34,12 +34,10 @@ Viewpoint {
 DEF NurbsRectangle2D Transform {
   translation -1 1 0
   children Shape {
-    appearance Appearance {
+    appearance DEF _1 Appearance {
       material Material { }
       texture ImageTexture {
         url "../images/lena.jpg"
-        repeatS FALSE
-        repeatT FALSE
       }
     }
     geometry NurbsPatchSurface {
@@ -50,7 +48,7 @@ DEF NurbsRectangle2D Transform {
       vOrder 2
       uDimension 3
       vDimension 3
-      controlPoint DEF _1 Coordinate {
+      controlPoint DEF _2 Coordinate {
         point [
           -1 -1 0,
           0 -1 0,
@@ -70,14 +68,7 @@ DEF NurbsRectangle2D Transform {
 DEF NurbsRectangle2D_3 Transform {
   translation 1 1 0
   children Shape {
-    appearance Appearance {
-      material Material { }
-      texture ImageTexture {
-        url "../images/lena.jpg"
-        repeatS FALSE
-        repeatT FALSE
-      }
-    }
+    appearance USE _1
     geometry NurbsPatchSurface {
       uTessellation 20
       vTessellation 20
@@ -86,7 +77,7 @@ DEF NurbsRectangle2D_3 Transform {
       vOrder 2
       uDimension 3
       vDimension 3
-      texCoord DEF _2 TextureCoordinate {
+      texCoord DEF _3 TextureCoordinate {
         point [
           0 0,
           1 0,
@@ -99,7 +90,7 @@ DEF NurbsRectangle2D_3 Transform {
           2 2
         ]
       }
-      controlPoint USE _1
+      controlPoint USE _2
     }
   }
 }
@@ -107,14 +98,7 @@ DEF NurbsRectangle2D_3 Transform {
 DEF NurbsRectangle2D_1 Transform {
   translation -1 -1 0
   children Shape {
-    appearance Appearance {
-      material Material { }
-      texture ImageTexture {
-        url "../images/lena.jpg"
-        repeatS FALSE
-        repeatT FALSE
-      }
-    }
+    appearance USE _1
     geometry NurbsPatchSurface {
       uTessellation 20
       vTessellation 20
@@ -124,9 +108,9 @@ DEF NurbsRectangle2D_1 Transform {
       uDimension 3
       vDimension 3
       texCoord MultiTextureCoordinate {
-        texCoord USE _2
+        texCoord USE _3
       }
-      controlPoint USE _1
+      controlPoint USE _2
     }
   }
 }
@@ -134,14 +118,7 @@ DEF NurbsRectangle2D_1 Transform {
 DEF NurbsRectangle2D_2 Transform {
   translation 1 -1 0
   children Shape {
-    appearance Appearance {
-      material Material { }
-      texture ImageTexture {
-        url "../images/lena.jpg"
-        repeatS FALSE
-        repeatT FALSE
-      }
-    }
+    appearance USE _1
     geometry NurbsPatchSurface {
       uTessellation 20
       vTessellation 20
@@ -162,7 +139,7 @@ DEF NurbsRectangle2D_2 Transform {
           2 2
         ]
       }
-      controlPoint USE _1
+      controlPoint USE _2
     }
   }
 }
