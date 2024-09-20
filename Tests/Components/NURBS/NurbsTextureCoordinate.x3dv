@@ -10,7 +10,7 @@ META "creator" "Holger Seelig"
 META "generator" "Titania V4.3.10, http://titania.create3000.de"
 META "generator" "Sunrize X3D Editor V1.7.19, https://create3000.github.io/sunrize/"
 META "identifier" "file:///home/holger/Projekte/Library/Tests/Components/NURBS/NurbsTextureCoordinate.x3dv"
-META "modified" "Fri, 20 Sep 2024 16:04:25 GMT"
+META "modified" "Fri, 20 Sep 2024 16:05:02 GMT"
 
 WorldInfo {
   metadata MetadataSet {
@@ -28,7 +28,7 @@ WorldInfo {
 }
 
 Viewpoint {
-  position 0 0 4.538154
+  position 0 0 5.059662
 }
 
 DEF NurbsRectangle2D Transform {
