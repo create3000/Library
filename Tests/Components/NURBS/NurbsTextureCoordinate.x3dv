@@ -1,4 +1,4 @@
-#X3D V4.0 utf8 X_ITE V10.4.1
+#X3D V4.0 utf8 X_ITE V10.5.2
 
 PROFILE Interchange
 
@@ -8,16 +8,31 @@ META "comment" "World of Titania"
 META "created" "Sat, 19 Jan 2019 23:58:04 GMT"
 META "creator" "Holger Seelig"
 META "generator" "Titania V4.3.10, http://titania.create3000.de"
-META "generator" "Sunrize X3D Editor V1.7.15, https://create3000.github.io/sunrize/"
+META "generator" "Sunrize X3D Editor V1.7.19, https://create3000.github.io/sunrize/"
 META "identifier" "file:///home/holger/Projekte/Library/Tests/Components/NURBS/NurbsTextureCoordinate.x3dv"
-META "modified" "Sun, 01 Sep 2024 17:17:18 GMT"
+META "modified" "Fri, 20 Sep 2024 15:45:21 GMT"
+
+WorldInfo {
+  metadata MetadataSet {
+    name "Sunrize"
+    reference "https://create3000.github.io/sunrize/"
+    value MetadataSet {
+      name "GridTool"
+      value MetadataBoolean {
+        name "visible"
+        value TRUE
+      }
+    }
+  }
+  title "NurbsTextureCoordinate"
+}
 
 Viewpoint {
-  position 0 0 2.6348
+  position 0 0 4.538154
 }
 
 DEF NurbsRectangle2D Transform {
-  translation -1 0 0
+  translation -2 0 -0
   children Shape {
     appearance Appearance {
       material Material { }
@@ -35,7 +50,7 @@ DEF NurbsRectangle2D Transform {
       vOrder 2
       uDimension 3
       vDimension 3
-      controlPoint DEF _1 Coordinate {
+      controlPoint DEF _2 Coordinate {
         point [
           -1 -1 0,
           0 -1 0,
@@ -53,7 +68,43 @@ DEF NurbsRectangle2D Transform {
 }
 
 DEF NurbsRectangle2D_1 Transform {
-  translation 1 0 0
+  children Shape {
+    appearance Appearance {
+      material Material { }
+      texture ImageTexture {
+        url "../images/lena.jpg"
+        repeatS FALSE
+        repeatT FALSE
+      }
+    }
+    geometry NurbsPatchSurface {
+      uTessellation 20
+      vTessellation 20
+      solid FALSE
+      uOrder 2
+      vOrder 2
+      uDimension 3
+      vDimension 3
+      texCoord TextureCoordinate {
+        point [
+          0 0,
+          0.5 0,
+          1 0,
+          0 0.5,
+          0.5 0.5,
+          1 0.5,
+          0 1,
+          0.5 1,
+          1 1
+        ]
+      }
+      controlPoint USE _2
+    }
+  }
+}
+
+DEF NurbsRectangle2D_2 Transform {
+  translation 2 0 -0
   children Shape {
     appearance Appearance {
       material Material { }
@@ -83,7 +134,7 @@ DEF NurbsRectangle2D_1 Transform {
           2 2
         ]
       }
-      controlPoint USE _1
+      controlPoint USE _2
     }
   }
 }
