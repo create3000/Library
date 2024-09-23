@@ -7,7 +7,7 @@
     <meta name='created' content='Sun, 15 Sep 2024 19:32:11 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.20, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Mon, 23 Sep 2024 07:17:06 GMT'/>
+    <meta name='modified' content='Mon, 23 Sep 2024 07:21:37 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -29,7 +29,8 @@
     <Transform DEF='IndexedLineSet'>
       <InstancedShape
           translations='0 0 1, 1 0 0, -1 0 0, 0 0 -1'
-          rotations='0 0 1 0, 0 1 0 90, 0 1 0 -90, 0 1 0 180'>
+          rotations='0 0 1 0, 0 1 0 90, 0 1 0 -90, 0 1 0 180'
+          bboxDisplay='true'>
         <Appearance>
           <LineProperties
               linewidthScaleFactor='20'/>
