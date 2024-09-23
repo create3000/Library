@@ -7,7 +7,7 @@
     <meta name='created' content='Sun, 15 Sep 2024 19:32:11 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.20, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Mon, 23 Sep 2024 22:14:11 GMT'/>
+    <meta name='modified' content='Mon, 23 Sep 2024 22:14:36 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -27,7 +27,8 @@
         position='0.7749267 2.370545 3.002419'
         orientation='0.903758441308154 -0.412374928774359 -0.114750154172436 325.772880067998'
         centerOfRotation='-4.440892e-16 0.5 -4.440892e-16'/>
-    <Group DEF='Shape'>
+    <Group DEF='Shape'
+        bboxDisplay='true'>
       <Transform DEF='Front'
           translation='0 1 1'>
         <Shape>
