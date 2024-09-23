@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D profile='Interchange' version='3.3' xmlns:xsd='https://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
     <meta name='created' content='Fri, 09 Dec 2022 12:18:26 GMT'/>
     <meta name='comment' content='World of Sunrise X3D Editor'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrise X3D Editor V1.0.5, https://create3000.github.io/sunrise/'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.20, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///Volumes/Home/Projekte/Library/Tests/Components/Rendering/Normals.x3d'/>
-    <meta name='modified' content='Fri, 09 Dec 2022 14:38:02 GMT'/>
+    <meta name='modified' content='Mon, 23 Sep 2024 09:01:36 GMT'/>
   </head>
   <Scene>
     <Background
@@ -17,6 +18,7 @@
       <Shape>
         <Appearance>
           <PointProperties
+              pointSizeScaleFactor='20'
               pointSizeMinValue='20'
               pointSizeMaxValue='20'/>
           <Material DEF='_1'/>
@@ -34,7 +36,7 @@
       <Shape>
         <Appearance>
           <LineProperties
-              linewidthScaleFactor='2'/>
+              linewidthScaleFactor='10'/>
           <Material USE='_1'/>
         </Appearance>
         <IndexedLineSet
