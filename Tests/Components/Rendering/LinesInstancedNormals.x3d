@@ -9,7 +9,7 @@
     <meta name='created' content='Sun, 15 Sep 2024 19:32:11 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.20, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 25 Sep 2024 14:59:59 GMT'/>
+    <meta name='modified' content='Wed, 25 Sep 2024 15:04:01 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -30,6 +30,8 @@
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
+    <Background DEF='Gray'
+        skyColor='0.2 0.2 0.2'/>
     <Viewpoint
         description='Initial View'
         position='1.877034 4.81555 5.992283'
@@ -91,8 +93,7 @@
     </Group>
     <Group DEF='Thin'>
       <Transform DEF='Single_2'
-          translation='-1.5 1 -1.5'
-          bboxDisplay='true'>
+          translation='-1.5 1 -1.5'>
         <Shape>
           <Appearance DEF='_6'>
             <Material USE='_1'/>
@@ -104,8 +105,7 @@
           translation='-1.5 -0 -1.5'>
         <InstancedShape
             translations='0 0 1, 1 0 0, -1 0 0, 0 0 -1'
-            rotations='0 0 1 0, 0 1 0 90.0000000000002, 0 1 0 -90.0000000000002, 0 1 0 180'
-            bboxDisplay='true'>
+            rotations='0 0 1 0, 0 1 0 90.0000000000002, 0 1 0 -90.0000000000002, 0 1 0 180'>
           <Appearance USE='_6'/>
           <IndexedLineSet USE='_2'/>
         </InstancedShape>
@@ -116,7 +116,6 @@
             geometryType='GEOMETRY'
             maxParticles='5'
             lifetimeVariation='0'
-            bboxDisplay='true'
             bboxSize='2 2 2'
             bboxCenter='0 1 0'>
           <PointEmitter
