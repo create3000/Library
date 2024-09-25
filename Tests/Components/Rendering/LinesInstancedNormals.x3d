@@ -9,7 +9,7 @@
     <meta name='created' content='Sun, 15 Sep 2024 19:32:11 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.20, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 25 Sep 2024 15:13:14 GMT'/>
+    <meta name='modified' content='Wed, 25 Sep 2024 15:18:58 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -41,8 +41,7 @@
     </Viewpoint>
     <Group DEF='Thick'>
       <Transform DEF='Single_1'
-          translation='-1.5 1 1.5'
-          bboxDisplay='true'>
+          translation='-1.5 1 1.5'>
         <Shape>
           <Appearance DEF='_5'>
             <LineProperties
@@ -62,8 +61,7 @@
           translation='-1.5 0 1.5'>
         <InstancedShape
             translations='0 0 1, 1 0 0, -1 0 0, 0 0 -1'
-            rotations='0 0 1 0, 0 1 0 90, 0 1 0 -90, 0 1 0 180'
-            bboxDisplay='true'>
+            rotations='0 0 1 0, 0 1 0 90, 0 1 0 -90, 0 1 0 180'>
           <Appearance USE='_5'/>
           <IndexedLineSet DEF='_2'
               coordIndex='0, 1, -1'>
@@ -80,7 +78,6 @@
             geometryType='GEOMETRY'
             maxParticles='5'
             lifetimeVariation='0'
-            bboxDisplay='true'
             bboxSize='2 2 2'
             bboxCenter='0 1 0'>
           <PointEmitter
