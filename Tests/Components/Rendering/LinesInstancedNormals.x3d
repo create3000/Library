@@ -10,7 +10,7 @@
     <meta name='created' content='Sun, 15 Sep 2024 19:32:11 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.20, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 25 Sep 2024 17:45:39 GMT'/>
+    <meta name='modified' content='Wed, 25 Sep 2024 21:06:15 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -126,6 +126,7 @@
       </Transform>
     </Group>
     <Script DEF='EnterWorldScript'>
+      <field accessType='inputOnly' type='SFVec2f' name='set_texCoord'/>
       <field accessType='inputOnly' type='SFVec3f' name='set_normal'/>
       <field accessType='inputOnly' type='SFVec3f' name='set_point'/>
 <![CDATA[ecmascript:
@@ -133,6 +134,11 @@
 function initialize ()
 {
    Browser .setBrowserOption ("ContentScale", 1);
+}
+
+function set_texCoord (value)
+{
+   print ("texCoord", value)
 }
 
 function set_normal (value)
@@ -150,5 +156,6 @@ function set_point (value)
         shadows='true'/>
     <ROUTE fromNode='_1' fromField='hitNormal_changed' toNode='EnterWorldScript' toField='set_normal'/>
     <ROUTE fromNode='_1' fromField='hitPoint_changed' toNode='EnterWorldScript' toField='set_point'/>
+    <ROUTE fromNode='_1' fromField='hitTexCoord_changed' toNode='EnterWorldScript' toField='set_texCoord'/>
   </Scene>
 </X3D>
