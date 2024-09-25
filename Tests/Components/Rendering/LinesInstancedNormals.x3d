@@ -2,12 +2,13 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
 <X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
+    <component name='ParticleSystems' level='3'/>
     <component name='X_ITE' level='1'/>
     <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
     <meta name='created' content='Sun, 15 Sep 2024 19:32:11 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.20, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 24 Sep 2024 20:21:36 GMT'/>
+    <meta name='modified' content='Wed, 25 Sep 2024 14:50:43 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -24,91 +25,60 @@
     </WorldInfo>
     <Viewpoint
         description='Initial View'
-        position='0.7749267 2.370545 3.002419'
-        orientation='0.903758441308154 -0.412374928774359 -0.114750154172436 325.772880067998'
-        centerOfRotation='-4.440892e-16 0.5 -4.440892e-16'/>
-    <Group DEF='Shape'
+        position='2.053535 2.31082 5.115851'
+        orientation='-0.633103994887327 0.76434058427703 0.122322536291369 28.3722266493373'
+        centerOfRotation='0 0.5 0'>
+      <NavigationInfo containerField='navigationInfo'/>
+    </Viewpoint>
+    <Transform DEF='Single'
+        translation='-1.5 1 -0'
         bboxDisplay='true'>
-      <Transform DEF='Front'
-          translation='0 1 1'>
-        <Shape>
-          <Appearance DEF='_1'>
-            <LineProperties
-                linewidthScaleFactor='20'/>
-            <Material/>
-          </Appearance>
-          <IndexedLineSet DEF='_2'
-              coordIndex='0, 1, -1'>
-            <Normal
-                vector='0 0 1, 0 0 1'/>
-            <Coordinate
-                point='-1 0 0, 1 0 0'/>
-          </IndexedLineSet>
-        </Shape>
-      </Transform>
-      <Transform DEF='Right_1'
-          translation='1 1 0'
-          rotation='0 1 0 90'>
-        <Shape>
-          <Appearance>
-            <LineProperties
-                linewidthScaleFactor='20'/>
-            <Material/>
-          </Appearance>
-          <IndexedLineSet
-              coordIndex='0, 1, -1'>
-            <Normal
-                vector='0 0 1, 0 0 1'/>
-            <Coordinate
-                point='-1 0 0, 1 0 0'/>
-          </IndexedLineSet>
-        </Shape>
-      </Transform>
-      <Transform DEF='Back'
-          translation='-0 1 -1'
-          rotation='0 1 0 180'>
-        <Shape>
-          <Appearance>
-            <LineProperties
-                linewidthScaleFactor='20'/>
-            <Material/>
-          </Appearance>
-          <IndexedLineSet
-              coordIndex='0, 1, -1'>
-            <Normal
-                vector='0 0 1, 0 0 1'/>
-            <Coordinate
-                point='-1 0 0, 1 0 0'/>
-          </IndexedLineSet>
-        </Shape>
-      </Transform>
-      <Transform DEF='Left'
-          translation='-1 1 0'
-          rotation='-0 1 -0 270'>
-        <Shape>
-          <Appearance>
-            <LineProperties
-                linewidthScaleFactor='20'/>
-            <Material/>
-          </Appearance>
-          <IndexedLineSet
-              coordIndex='0, 1, -1'>
-            <Normal
-                vector='0 0 1, 0 0 1'/>
-            <Coordinate
-                point='-1 0 0, 1 0 0'/>
-          </IndexedLineSet>
-        </Shape>
-      </Transform>
-    </Group>
-    <Transform DEF='InstancedShape'>
+      <Shape>
+        <Appearance DEF='_3'>
+          <LineProperties
+              linewidthScaleFactor='20'/>
+          <Material/>
+        </Appearance>
+        <IndexedLineSet DEF='_1'
+            coordIndex='0, 1, -1, 2, 3, -1, 4, 5, -1, 6, 7, -1'>
+          <Normal
+              vector='0 0 1, 0 0 1, 0 0 -1, 0 0 -1, -1 0 0, -1 0 0, 1 0 0, 1 0 0'/>
+          <Coordinate
+              point='-1 0 1, 1 0 1, -1 0 -1, 1 0 -1, -1 0 1, -1 0 -1, 1 0 1, 1 0 -1'/>
+        </IndexedLineSet>
+      </Shape>
+    </Transform>
+    <Transform DEF='InstancedShape'
+        translation='-1.5 -0 -0'>
       <InstancedShape
           translations='0 0 1, 1 0 0, -1 0 0, 0 0 -1'
           rotations='0 0 1 0, 0 1 0 90, 0 1 0 -90, 0 1 0 180'
           bboxDisplay='true'>
-        <Appearance USE='_1'/>
-        <IndexedLineSet USE='_2'/>
+        <Appearance USE='_3'/>
+        <IndexedLineSet
+            coordIndex='0, 1, -1'>
+          <Normal
+              vector='0 0 1, 0 0 1'/>
+          <Coordinate
+              point='-1 0 0, 1 0 0'/>
+        </IndexedLineSet>
       </InstancedShape>
+    </Transform>
+    <Transform
+        translation='1.5 -0 -0'>
+      <ParticleSystem
+          geometryType='GEOMETRY'
+          maxParticles='5'
+          lifetimeVariation='0'
+          bboxDisplay='true'
+          bboxSize='2 2 2'
+          bboxCenter='0 1 0'>
+        <PointEmitter
+            speed='0.3'
+            variation='0'/>
+        <Appearance USE='_3'/>
+        <IndexedLineSet USE='_1'/>
+      </ParticleSystem>
     </Transform>
   </Scene>
 </X3D>
