@@ -10,7 +10,7 @@
     <meta name='created' content='Sun, 15 Sep 2024 19:32:11 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.20, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 25 Sep 2024 16:38:03 GMT'/>
+    <meta name='modified' content='Wed, 25 Sep 2024 16:56:46 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -40,7 +40,7 @@
         centerOfRotation='0 0.5 0'>
       <NavigationInfo containerField='navigationInfo'/>
     </Viewpoint>
-    <TouchSensor/>
+    <TouchSensor DEF='_1'/>
     <Group DEF='Thick'>
       <Transform DEF='Single_1'
           translation='-1.5 1 1.5'>
@@ -48,7 +48,7 @@
           <Appearance DEF='_5'>
             <LineProperties
                 linewidthScaleFactor='20'/>
-            <Material DEF='_1'/>
+            <Material DEF='_2'/>
           </Appearance>
           <IndexedLineSet DEF='_4'
               coordIndex='0, 1, -1, 2, 3, -1, 4, 5, -1, 6, 7, -1'>
@@ -65,7 +65,7 @@
             translations='0 0 1, 1 0 0, -1 0 0, 0 0 -1'
             rotations='0 0 1 0, 0 1 0 90, 0 1 0 -90, 0 1 0 180'>
           <Appearance USE='_5'/>
-          <IndexedLineSet DEF='_2'
+          <IndexedLineSet DEF='_6'
               coordIndex='0, 1, -1'>
             <Normal
                 vector='0 0 1, 0 0 1'/>
@@ -94,8 +94,8 @@
       <Transform DEF='Single_2'
           translation='-1.5 1 -1.5'>
         <Shape>
-          <Appearance DEF='_6'>
-            <Material USE='_1'/>
+          <Appearance DEF='_7'>
+            <Material USE='_2'/>
           </Appearance>
           <IndexedLineSet USE='_4'/>
         </Shape>
@@ -105,8 +105,8 @@
         <InstancedShape
             translations='0 0 1, 1 0 0, -1 0 0, 0 0 -1'
             rotations='0 0 1 0, 0 1 0 90.0000000000002, 0 1 0 -90.0000000000002, 0 1 0 180'>
-          <Appearance USE='_6'/>
-          <IndexedLineSet USE='_2'/>
+          <Appearance USE='_7'/>
+          <IndexedLineSet USE='_6'/>
         </InstancedShape>
       </Transform>
       <Transform DEF='ParticleSystem_1'
@@ -120,19 +120,33 @@
           <PointEmitter
               speed='0.3'
               variation='0'/>
-          <Appearance USE='_6'/>
+          <Appearance USE='_7'/>
           <IndexedLineSet USE='_4'/>
         </ParticleSystem>
       </Transform>
     </Group>
     <Script DEF='EnterWorldScript'>
+      <field accessType='inputOnly' type='SFVec3f' name='set_normal'/>
+      <field accessType='inputOnly' type='SFVec3f' name='set_point'/>
 <![CDATA[ecmascript:
 
 function initialize ()
 {
    Browser .setBrowserOption ("ContentScale", 1);
 }
+
+function set_normal (value)
+{
+   print ("normal", value)
+}
+
+function set_point (value)
+{
+   print ("point", value)
+}
 ]]>
     </Script>
+    <ROUTE fromNode='_1' fromField='hitNormal_changed' toNode='EnterWorldScript' toField='set_normal'/>
+    <ROUTE fromNode='_1' fromField='hitPoint_changed' toNode='EnterWorldScript' toField='set_point'/>
   </Scene>
 </X3D>
