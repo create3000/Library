@@ -9,7 +9,7 @@
     <meta name='created' content='Sun, 15 Sep 2024 19:32:11 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.20, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 25 Sep 2024 15:18:58 GMT'/>
+    <meta name='modified' content='Wed, 25 Sep 2024 16:21:08 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -107,7 +107,7 @@
           <IndexedLineSet USE='_2'/>
         </InstancedShape>
       </Transform>
-      <Transform DEF='ParicleSystem_1'
+      <Transform DEF='ParticleSystem_1'
           translation='1.5 -0 -1.5'>
         <ParticleSystem
             geometryType='GEOMETRY'
@@ -123,7 +123,7 @@
         </ParticleSystem>
       </Transform>
     </Group>
-    <Script DEF='NewScript'>
+    <Script DEF='EnterWorldScript'>
 <![CDATA[ecmascript:
 
 function initialize ()
