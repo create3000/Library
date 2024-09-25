@@ -3,12 +3,13 @@
 <X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
     <component name='ParticleSystems' level='3'/>
+    <component name='Scripting' level='1'/>
     <component name='X_ITE' level='1'/>
     <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
     <meta name='created' content='Sun, 15 Sep 2024 19:32:11 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.20, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 25 Sep 2024 14:58:49 GMT'/>
+    <meta name='modified' content='Wed, 25 Sep 2024 14:59:59 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -126,5 +127,14 @@
         </ParticleSystem>
       </Transform>
     </Group>
+    <Script DEF='NewScript'>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+   Browser .setBrowserOption ("ContentScale", 1);
+}
+]]>
+    </Script>
   </Scene>
 </X3D>
