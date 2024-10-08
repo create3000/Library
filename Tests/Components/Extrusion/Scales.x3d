@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <meta name='created' content='Tue, 08 Oct 2024 15:49:29 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.25, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Tue, 08 Oct 2024 16:58:33 GMT'/>
+  </head>
+  <Scene>
+    <WorldInfo>
+      <MetadataSet containerField='metadata'
+          name='Sunrize'
+          reference='https://create3000.github.io/sunrize/'>
+        <MetadataSet
+            name='GridTool'>
+          <MetadataBoolean
+              name='visible'
+              value='true'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <Viewpoint
+        description='Initial View'
+        position='2.869677 3.854335 8.769781'
+        orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
+    <Transform DEF='Extrusion_1'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Extrusion
+            beginCap='false'
+            endCap='false'
+            solid='false'
+            scale='1 1, 2 2'
+            spine='0 0 0, 0 0 0'/>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>
