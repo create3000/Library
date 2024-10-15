@@ -6,46 +6,49 @@
     <meta name='created' content='Tue, 19 Sep 2023 11:12:51 GMT'/>
     <meta name='comment' content='Rise and Shine'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Sunrize X3D Editor V1.1.2, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 19 Sep 2023 13:09:55 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.26, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Tue, 15 Oct 2024 19:13:57 GMT'/>
   </head>
   <Scene>
+    <WorldInfo
+        title='Displacers'
+        info='"Shows a rectangle rotating counterclockwise about [0, 0, 0] and scaling in size."'/>
     <HAnimHumanoid>
       <HAnimJoint DEF='_1' containerField='skeleton'>
         <HAnimDisplacer DEF='_2'
+            weight='0.473'
             coordIndex='0'
-            weight='0.756'
             displacements='-3 0 0'/>
         <HAnimDisplacer DEF='_3'
+            weight='0.473'
             coordIndex='1'
-            weight='0.756'
             displacements='-1 -2 0'/>
         <HAnimDisplacer DEF='_4'
+            weight='0.473'
             coordIndex='2'
-            weight='0.756'
             displacements='1 0 0'/>
         <HAnimDisplacer DEF='_5'
+            weight='0.473'
             coordIndex='3'
-            weight='0.756'
             displacements='-1 2 0'/>
         <HAnimDisplacer DEF='_6'
+            weight='0.473'
             coordIndex='0'
-            weight='0.756'
             displacements='1 0 0'/>
         <HAnimJoint DEF='_7'>
           <HAnimDisplacer DEF='_8'
+              weight='0.473'
               coordIndex='1'
-              weight='0.756'
               displacements='1 0 0'/>
           <HAnimJoint DEF='_9'>
             <HAnimDisplacer DEF='_10'
+                weight='0.473'
                 coordIndex='2'
-                weight='0.756'
                 displacements='1 0 0'/>
             <HAnimJoint DEF='_11'>
               <HAnimDisplacer DEF='_12'
+                  weight='0.473'
                   coordIndex='3'
-                  weight='0.756'
                   displacements='1 0 0'/>
             </HAnimJoint>
           </HAnimJoint>
@@ -70,13 +73,13 @@
     </HAnimHumanoid>
     <TimeSensor DEF='_14'
         loop='true'/>
-    <ROUTE fromNode='_14' fromField='fraction_changed' toNode='_2' toField='set_weight'/>
-    <ROUTE fromNode='_14' fromField='fraction_changed' toNode='_3' toField='set_weight'/>
-    <ROUTE fromNode='_14' fromField='fraction_changed' toNode='_4' toField='set_weight'/>
-    <ROUTE fromNode='_14' fromField='fraction_changed' toNode='_5' toField='set_weight'/>
     <ROUTE fromNode='_14' fromField='fraction_changed' toNode='_6' toField='set_weight'/>
     <ROUTE fromNode='_14' fromField='fraction_changed' toNode='_12' toField='set_weight'/>
     <ROUTE fromNode='_14' fromField='fraction_changed' toNode='_10' toField='set_weight'/>
     <ROUTE fromNode='_14' fromField='fraction_changed' toNode='_8' toField='set_weight'/>
+    <ROUTE fromNode='_14' fromField='fraction_changed' toNode='_2' toField='set_weight'/>
+    <ROUTE fromNode='_14' fromField='fraction_changed' toNode='_3' toField='set_weight'/>
+    <ROUTE fromNode='_14' fromField='fraction_changed' toNode='_4' toField='set_weight'/>
+    <ROUTE fromNode='_14' fromField='fraction_changed' toNode='_5' toField='set_weight'/>
   </Scene>
 </X3D>
