@@ -50,7 +50,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Center_lower_vermillion_lip-FACES'
                     solid='false'
@@ -88,7 +88,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Chin-FACES'
                     solid='false'
@@ -121,7 +121,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Glabella-FACES'
                     solid='false'
@@ -154,7 +154,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Left_bulbar_conjunctiva-FACES'
                     solid='false'
@@ -192,7 +192,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Left_cheek-FACES'
                     solid='false'
@@ -225,7 +225,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Left_dorsum-FACES'
                     solid='false'
@@ -258,7 +258,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Left_ear-FACES'
                     solid='false'
@@ -291,7 +291,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Left_eyebrow-FACES'
                     solid='false'
@@ -324,7 +324,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Left_forehead-FACES'
                     solid='false'
@@ -357,7 +357,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Left_lower_eyelid-FACES'
                     solid='false'
@@ -395,7 +395,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Left_lower_vermillion_lip-FACES'
                     solid='false'
@@ -433,7 +433,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Left_nasolabial_cheek-FACES'
                     solid='false'
@@ -466,7 +466,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Left_nostril-FACES'
                     solid='false'
@@ -499,7 +499,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Left_pupil-FACES'
                     solid='false'
@@ -532,7 +532,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Left_temple-FACES'
                     solid='false'
@@ -570,7 +570,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Left_upper_cutaneous_lip-FACES'
                     solid='false'
@@ -603,7 +603,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Left_upper_eyelid-FACES'
                     solid='false'
@@ -641,7 +641,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Left_upper_vermillion_lip-FACES'
                     solid='false'
@@ -681,7 +681,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Lower_teeth-FACES'
                     solid='false'
@@ -714,7 +714,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Mid_forehead-FACES'
                     solid='false'
@@ -747,7 +747,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Mid_nasal_dorsum-FACES'
                     solid='false'
@@ -785,7 +785,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Mid_upper_vermillion_lip-FACES'
                     solid='false'
@@ -818,7 +818,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Nasal_tip-FACES'
                     solid='false'
@@ -851,7 +851,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Neck-FACES'
                     solid='false'
@@ -884,7 +884,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Occipital_scalp-FACES'
                     solid='false'
@@ -922,7 +922,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Philtrum-FACES'
                     solid='false'
@@ -955,7 +955,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Right_bulbar_conjunctiva-FACES'
                     solid='false'
@@ -993,7 +993,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Right_cheek-FACES'
                     solid='false'
@@ -1026,7 +1026,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Right_dorsum-FACES'
                     solid='false'
@@ -1059,7 +1059,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Right_ear-FACES'
                     solid='false'
@@ -1092,7 +1092,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Right_eyebrow-FACES'
                     solid='false'
@@ -1125,7 +1125,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Right_forehead-FACES'
                     solid='false'
@@ -1158,7 +1158,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Right_lower_eyelid-FACES'
                     solid='false'
@@ -1196,7 +1196,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Right_lower_vermillion_lip-FACES'
                     solid='false'
@@ -1234,7 +1234,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Right_nasolabial_cheek-FACES'
                     solid='false'
@@ -1267,7 +1267,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Right_nostril-FACES'
                     solid='false'
@@ -1300,7 +1300,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Right_pupil-FACES'
                     solid='false'
@@ -1333,7 +1333,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Right_temple-FACES'
                     solid='false'
@@ -1371,7 +1371,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Right_upper_cutaneous_lip-FACES'
                     solid='false'
@@ -1404,7 +1404,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Right_upper_eyelid-FACES'
                     solid='false'
@@ -1442,7 +1442,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Right_upper_vermillion_lip-FACES'
                     solid='false'
@@ -1480,7 +1480,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Tongue-FACES'
                     solid='false'
@@ -1518,7 +1518,7 @@
                       diffuseColor='0.588 0.588 0.588'
                       shininess='0.145'/>
                   <ImageTexture
-                      url='"../../../../../../../Users/holger/Downloads/Jin.jpg"'/>
+                      url='"Jin.png"'/>
                 </Appearance>
                 <IndexedFaceSet DEF='Upper_teeth-FACES'
                     solid='false'
