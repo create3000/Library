@@ -23,7 +23,7 @@ function convert (filename)
    queue (filename, () => system (`npx --yes x3d-tidy -r -m -i '${filename}' -o '.x3d' 1>/dev/null`));
 }
 
-const files = sh (`find '${tests}' -type f \\( -name "*.x3d" -o -name "*.x3dv" -o -name "*.x3dj" -o -name "*.wrl" \\)`) .trim () .split ("\n") .sort ();
+const files = sh (`find '${tests}' -type f \\( -name "*.x3d" -o -name "*.x3dv" -o -name "*.x3dj" -o -name "*.wrl" -o -name "*.gltf" -o -name "*.glb" \\)`) .trim () .split ("\n") .sort ();
 
 for (const filename of files)
    convert (filename);
