@@ -1,0 +1,12 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "Test files for X_ITE",
+  "scripts": {
+    "library": "node build/library.js"
+  },
+  "devDependencies": {
+    "semaphore-async-await": "^1.5.1",
+    "shell-tools": "^1.1.9"
+  }
+}
