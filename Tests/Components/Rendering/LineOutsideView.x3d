@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
+    <meta name='created' content='Sun, 22 Sep 2024 09:10:12 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.23, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Sat, 05 Oct 2024 08:13:10 GMT'/>
+  </head>
+  <Scene>
+    <WorldInfo>
+      <MetadataSet containerField='metadata'
+          name='Sunrize'
+          reference='https://create3000.github.io/sunrize/'>
+        <MetadataSet
+            name='GridTool'>
+          <MetadataDouble
+              name='rotation'
+              value='1, 0, 0, 1.5707963267949'/>
+          <MetadataBoolean
+              name='visible'
+              value='true'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <Viewpoint
+        description='Initial View'/>
+    <Transform DEF='IndexedLineSet'>
+      <Shape>
+        <Appearance>
+          <LineProperties
+              linewidthScaleFactor='20'/>
+          <UnlitMaterial/>
+        </Appearance>
+        <IndexedLineSet DEF='Test'
+            coordIndex='0, 1, -1'>
+          <ColorRGBA
+              color='1 1 1 1, 1 1 1 1'/>
+          <Coordinate
+              point='0 1 -20, 0 -1 20'/>
+        </IndexedLineSet>
+      </Shape>
+    </Transform>
+    <Transform DEF='Box_1'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Box/>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

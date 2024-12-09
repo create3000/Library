@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <meta name='created' content='Wed, 27 Nov 2024 19:36:46 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.33, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Sun, 01 Dec 2024 09:18:28 GMT'/>
+  </head>
+  <Scene>
+    <WorldInfo>
+      <MetadataSet containerField='metadata'
+          name='Sunrize'
+          reference='https://create3000.github.io/sunrize/'>
+        <MetadataSet
+            name='GridTool'>
+          <MetadataBoolean
+              name='visible'
+              value='true'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <Viewpoint
+        description='Initial View'
+        position='2.869677 3.854335 8.769781'
+        orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
+    <OrthoViewpoint
+        description='Ortho View'
+        viewAll='true'/>
+    <Transform DEF='Box'
+        translation='-3 -0 -0'>
+      <Shape>
+        <Appearance>
+          <Material DEF='Rococo4'
+              ambientIntensity='0.25'
+              diffuseColor='0.904409 0.146366 0.208768'
+              specularColor='0.0955906 0.0955906 0.0955906'
+              shininess='0.078125'/>
+        </Appearance>
+        <Box/>
+      </Shape>
+    </Transform>
+    <Transform DEF='Cone'>
+      <Shape>
+        <Appearance>
+          <Material DEF='Rococo1'
+              ambientIntensity='0.25'
+              diffuseColor='0.636212 0.748016 0.300948'
+              specularColor='0.412121 0.412121 0.412121'
+              shininess='0.8'/>
+        </Appearance>
+        <Cone/>
+      </Shape>
+    </Transform>
+    <Transform DEF='Cylinder'
+        translation='3 -0 0'>
+      <Shape>
+        <Appearance>
+          <Material DEF='Rococo18'
+              ambientIntensity='0.25'
+              diffuseColor='0.261641 0.748016 0.725916'
+              specularColor='0.490909 0.490909 0.490909'
+              shininess='0.593939'/>
+        </Appearance>
+        <Cylinder/>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>
