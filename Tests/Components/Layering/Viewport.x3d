@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
-<X3D profile='Full' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
+    <component name='Layering' level='1'/>
+    <component name='PointingDeviceSensor' level='1'/>
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Sat, 29 Aug 2015 04:01:22 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V0.7.8, http://titania.create3000.de'/>
-    <meta name='modified' content='Sat, 29 Aug 2015 04:25:15 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.44, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Mon, 13 Jan 2025 10:18:32 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='Rotor' url='"../../../Titania/share/titania/Library/Prototypes/Engines/Rotor/Rotor.x3dv", "file:///usr/share/titania/Library/Prototypes/Engines/Rotor/Rotor.x3dv"'>
@@ -23,7 +26,7 @@
     </ExternProtoDeclare>
     <Background DEF='Gray'
         skyColor='0.2 0.2 0.2'/>
-    <Viewpoint DEF='_1'
+    <Viewpoint
         description='Start'/>
     <Viewport
         clipBoundary='0, 0.125, 0, 0.125'>

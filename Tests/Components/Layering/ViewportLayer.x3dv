@@ -1,13 +1,18 @@
-#X3D V3.3 utf8 Titania V4.0.6a
+#X3D V4.0 utf8 X_ITE V11.0.4
 
-PROFILE Full
+PROFILE Interchange
+
+COMPONENT Layering : 1
+COMPONENT PointingDeviceSensor : 1
+COMPONENT Scripting : 1
 
 META "comment" "World of Titania"
 META "created" "Sun, 25 Feb 2018 08:13:15 GMT"
 META "creator" "Holger Seelig"
 META "generator" "Titania V4.0.6a, http://titania.create3000.de"
+META "generator" "Sunrize X3D Editor V1.7.44, https://create3000.github.io/sunrize/"
 META "identifier" "file:///home/holger/Projekte/Library/Tests/Components/Layering/ViewportLayer.x3dv"
-META "modified" "Sun, 25 Feb 2018 08:13:15 GMT"
+META "modified" "Mon, 13 Jan 2025 10:16:06 GMT"
 
 EXTERNPROTO Rotor [
   inputOutput SFBool     enabled
@@ -43,8 +48,9 @@ WorldInfo {
             name "nodes"
             reference "http://titania.create3000.de"
             value DEF Beethoven Transform {
-              rotation 0 -1 0 4.39186601669956
+              rotation 0 -1 0 4.07841554334233
               children Inline {
+                global TRUE
                 url "../Geometry3D/Beethoven.x3dz"
               }
             }
