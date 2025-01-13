@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='Geometry2D' level='2'/>
+    <component name='Layering' level='1'/>
+    <component name='PointingDeviceSensor' level='1'/>
+    <meta name='created' content='Mon, 13 Jan 2025 09:37:59 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.44, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Mon, 13 Jan 2025 10:02:51 GMT'/>
+  </head>
+  <Scene>
+    <WorldInfo>
+      <MetadataSet containerField='metadata'
+          name='Sunrize'
+          reference='https://create3000.github.io/sunrize/'>
+        <MetadataSet
+            name='GridTool'>
+          <MetadataBoolean
+              name='visible'
+              value='true'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <LayerSet
+        order='1, 2, 3, 4'>
+      <Layer>
+        <Transform DEF='Box'
+            translation='-2.5 0 0'>
+          <Shape>
+            <Appearance>
+              <Material DEF='Rococo1'
+                  ambientIntensity='0.25'
+                  diffuseColor='0.636212 0.748016 0.300948'
+                  specularColor='0.412121 0.412121 0.412121'
+                  shininess='0.8'/>
+            </Appearance>
+            <Box/>
+          </Shape>
+        </Transform>
+        <TouchSensor
+            description='Box'/>
+      </Layer>
+      <Layer>
+        <Transform DEF='Cone'>
+          <Shape>
+            <Appearance>
+              <Material DEF='Rococo4'
+                  ambientIntensity='0.25'
+                  diffuseColor='0.904409 0.146366 0.208768'
+                  specularColor='0.0955906 0.0955906 0.0955906'
+                  shininess='0.078125'/>
+            </Appearance>
+            <Cone/>
+          </Shape>
+        </Transform>
+        <TouchSensor
+            description='Cone'/>
+      </Layer>
+      <Layer>
+        <Transform DEF='Sphere'
+            translation='2.5 0 0'>
+          <Shape>
+            <Appearance>
+              <Material DEF='Rococo17'
+                  ambientIntensity='0.25'
+                  diffuseColor='0.28636 0.554905 0.904409'
+                  specularColor='0.0955906 0.0955906 0.0955906'
+                  shininess='0.078125'/>
+            </Appearance>
+            <Sphere/>
+          </Shape>
+        </Transform>
+        <TouchSensor
+            description='Sphere'/>
+      </Layer>
+      <Layer
+          visible='false'>
+        <Transform DEF='Rectangle2D_1'
+            scale='6 6 6'>
+          <Shape>
+            <Appearance>
+              <Material/>
+            </Appearance>
+            <Rectangle2D/>
+          </Shape>
+        </Transform>
+        <TouchSensor
+            description='Rectangle2D'/>
+      </Layer>
+    </LayerSet>
+  </Scene>
+</X3D>
