@@ -8,7 +8,7 @@
     <meta name='created' content='Mon, 13 Jan 2025 09:37:59 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.44, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Mon, 13 Jan 2025 10:38:28 GMT'/>
+    <meta name='modified' content='Mon, 13 Jan 2025 11:34:47 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -76,7 +76,7 @@
         <TouchSensor
             description='Sphere'/>
       </Layer>
-      <Layer
+      <Layer DEF='Invisible'
           visible='false'>
         <Transform DEF='Rectangle2D_1'
             scale='6 6 6'>
