@@ -1,8 +1,18 @@
-#X3D V4.0 utf8
+#X3D V4.0 utf8 X_ITE V11.0.4
+
+PROFILE Interchange
+
+META "created" "Sat, 18 Jan 2025 21:09:20 GMT"
+META "creator" "Holger Seelig"
+META "generator" "Sunrize X3D Editor V1.7.44, https://create3000.github.io/sunrize/"
+META "modified" "Sat, 18 Jan 2025 21:15:51 GMT"
 
 Transform {
   children Shape {
     appearance Appearance {
+      lineProperties LineProperties {
+        linewidthScaleFactor 6.95
+      }
       material Material {
         emissiveColor 1 0 0
         transparency 0.5
