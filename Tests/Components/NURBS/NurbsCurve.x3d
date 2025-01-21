@@ -9,148 +9,29 @@
     <meta name='generator' content='Titania V4.3.9, http://titania.create3000.de'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.45, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/NURBS/NurbsCurve.x3d'/>
-    <meta name='modified' content='Mon, 20 Jan 2025 17:47:28 GMT'/>
+    <meta name='modified' content='Tue, 21 Jan 2025 10:44:15 GMT'/>
   </head>
   <Scene>
-    <WorldInfo>
-      <MetadataSet DEF='Titania' containerField='metadata'
-          name='Titania'
-          reference='http://titania.create3000.de'>
-        <MetadataSet DEF='AngleGrid'
-            name='AngleGrid'
-            reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled'
-              name='enabled'
-              reference='http://titania.create3000.de'
-              value='false'/>
-        </MetadataSet>
-        <MetadataSet DEF='Grid'
-            name='Grid'
-            reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled_1'
-              name='enabled'
-              reference='http://titania.create3000.de'
-              value='true'/>
-        </MetadataSet>
-        <MetadataSet DEF='Selection'
-            name='Selection'
-            reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='selectGeometry'
-              name='selectGeometry'
-              reference='http://titania.create3000.de'
-              value='true'/>
-          <MetadataSet DEF='nodes'
-              name='nodes'
-              reference='http://titania.create3000.de'>
-            <Transform DEF='NurbsCurve' containerField='value'>
-              <Shape>
-                <Appearance>
-                  <LineProperties
-                      linewidthScaleFactor='2'/>
-                  <Material
-                      diffuseColor='0 0 0'
-                      emissiveColor='1 1 1'/>
-                </Appearance>
-                <NurbsCurve
-                    tessellation='44'
-                    closed='true'>
-                  <CoordinateDouble containerField='controlPoint'
-                      point='0 0 0, 1 1 0, 3 -1 0, 5 1 0, 7 -1 0, 8 0 0'/>
-                </NurbsCurve>
-              </Shape>
-            </Transform>
-          </MetadataSet>
-        </MetadataSet>
-        <MetadataSet DEF='BrowserPanel'
-            name='BrowserPanel'
-            reference='http://titania.create3000.de'>
-          <MetadataString DEF='type_2'
-              name='type'
-              reference='http://titania.create3000.de'
-              value='"TOP_VIEW", "MAIN_VIEW", "PERSPECTIVE_VIEW", "FRONT_VIEW"'/>
-          <MetadataSet DEF='viewpoints'
-              name='viewpoints'
-              reference='http://titania.create3000.de'>
-            <MetadataSet DEF='PerspectiveViewpoint'
-                name='PerspectiveViewpoint'
-                reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_3'
-                  name='position'
-                  reference='http://titania.create3000.de'
-                  value='5.87788534164429, 6.46984958648682, 13.8524446487427'/>
-              <MetadataDouble DEF='orientation_4'
-                  name='orientation'
-                  reference='http://titania.create3000.de'
-                  value='-0.704047462871213, 0.695566762376518, 0.143192350010952, 0.568941727555854'/>
-              <MetadataDouble DEF='centerOfRotation_5'
-                  name='centerOfRotation'
-                  reference='http://titania.create3000.de'
-                  value='0, 0, 0'/>
-              <MetadataDouble DEF='fieldOfViewScale'
-                  name='fieldOfViewScale'
-                  reference='http://titania.create3000.de'
-                  value='1'/>
-            </MetadataSet>
-            <MetadataSet DEF='TopViewpoint'
-                name='TopViewpoint'
-                reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_6'
-                  name='position'
-                  reference='http://titania.create3000.de'
-                  value='0, 10000, 0'/>
-              <MetadataDouble DEF='orientation_7'
-                  name='orientation'
-                  reference='http://titania.create3000.de'
-                  value='1, 0, 0, 4.71238898038469'/>
-              <MetadataDouble DEF='centerOfRotation_8'
-                  name='centerOfRotation'
-                  reference='http://titania.create3000.de'
-                  value='-0.0320612526145463, 0, 0.0937320149966475'/>
-              <MetadataDouble DEF='fieldOfViewScale_9'
-                  name='fieldOfViewScale'
-                  reference='http://titania.create3000.de'
-                  value='1.21023944190259'/>
-            </MetadataSet>
-            <MetadataSet DEF='FrontViewpoint'
-                name='FrontViewpoint'
-                reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_10'
-                  name='position'
-                  reference='http://titania.create3000.de'
-                  value='0, 0, 10000'/>
-              <MetadataDouble DEF='orientation_11'
-                  name='orientation'
-                  reference='http://titania.create3000.de'
-                  value='0, 0, 1, 0'/>
-              <MetadataDouble DEF='centerOfRotation_12'
-                  name='centerOfRotation'
-                  reference='http://titania.create3000.de'
-                  value='-0.00884759203065143, 0.0177734813359099, 0'/>
-              <MetadataDouble DEF='fieldOfViewScale_13'
-                  name='fieldOfViewScale'
-                  reference='http://titania.create3000.de'
-                  value='1.212467484375'/>
-            </MetadataSet>
-          </MetadataSet>
-        </MetadataSet>
-        <MetadataSet DEF='Page'
-            name='Page'
-            reference='http://titania.create3000.de'>
-          <MetadataInteger DEF='activeView'
-              name='activeView'
-              reference='http://titania.create3000.de'
-              value='1'/>
-          <MetadataInteger DEF='multiView'
-              name='multiView'
-              reference='http://titania.create3000.de'
-              value='0'/>
-        </MetadataSet>
-      </MetadataSet>
-    </WorldInfo>
     <Viewpoint
-        position='4 0 5.50851'
+        position='4 0 5.978221'
         centerOfRotation='4 0 0'/>
-    <Transform USE='NurbsCurve'/>
+    <Transform DEF='NurbsCurve'>
+      <Shape>
+        <Appearance>
+          <LineProperties
+              linewidthScaleFactor='2'/>
+          <Material
+              diffuseColor='0 0 0'
+              emissiveColor='1 1 1'/>
+        </Appearance>
+        <NurbsCurve
+            tessellation='44'
+            closed='true'>
+          <CoordinateDouble containerField='controlPoint'
+              point='0 0 0, 1 1 0, 3 -1 0, 5 1 0, 7 -1 0, 8 0 0'/>
+        </NurbsCurve>
+      </Shape>
+    </Transform>
     <Transform DEF='NurbsCurve_14'
         translation='0 -1 0'>
       <Shape>
