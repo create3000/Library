@@ -9,7 +9,7 @@
     <meta name='generator' content='Titania V4.3.6, http://titania.create3000.de'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.45, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Prototypes/Geometry2D/RoundedRectangle2D.x3d'/>
-    <meta name='modified' content='Thu, 23 Jan 2025 15:29:28 GMT'/>
+    <meta name='modified' content='Thu, 23 Jan 2025 16:50:45 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='RoundedRectangle2D'>
@@ -42,78 +42,78 @@
 
 function initialize ()
 {
-	eventsProcessed ();
+   eventsProcessed ();
 }
 
 function eventsProcessed ()
 {
-	const radius = Math .min (Math .min (cornerRadius, size .x / 2), size .y / 2);
+   const radius = Math .min (Math .min (cornerRadius, size .x / 2), size .y / 2);
 
-	const
-		point         = new SFVec3f (radius, 0, 0),
-		startRotation = new SFRotation (0, 0, 1, 0),
-		endRotation   = new SFRotation (0, 0, 1, Math .PI / 2),
-		maxSize       = Math .max (size .x, size .y),
-		corner        = new MFVec3f (),
-		coordIndex    = new MFInt32 (),
-		coord         = geometry .coord .point,
-		texCoord      = geometry .texCoord .point;
+   const
+      point         = new SFVec3f (radius, 0, 0),
+      startRotation = new SFRotation (0, 0, 1, 0),
+      endRotation   = new SFRotation (0, 0, 1, Math .PI / 2),
+      maxSize       = Math .max (size .x, size .y),
+      corner        = new MFVec3f (),
+      coordIndex    = new MFInt32 (),
+      coord         = geometry .coord .point,
+      texCoord      = geometry .texCoord .point;
 
-	coord    .length = 0;
-	texCoord .length = 0;
+   coord    .length = 0;
+   texCoord .length = 0;
 
-	for (let i = 0, length = cornerDimension * 4; i < length; ++ i)
-		coordIndex [coordIndex .length] = i;
-		
-	coordIndex [coordIndex .length] = -1;
+   for (let i = 0, length = cornerDimension * 4; i < length; ++ i)
+      coordIndex [coordIndex .length] = i;
+      
+   coordIndex [coordIndex .length] = -1;
 
-	for (let i = 0; i < cornerDimension; ++i)
-		corner [i] = startRotation .slerp (endRotation, i / (cornerDimension - 1)) .multVec (point);
-	
-	var translation = new SFVec3f (size .x / 2 - radius, size .y / 2 - radius, 0);
+   for (let i = 0; i < cornerDimension; ++i)
+      corner [i] = startRotation .slerp (endRotation, i / (cornerDimension - 1)) .multVec (point);
+   
+   var translation = new SFVec3f (size .x / 2 - radius, size .y / 2 - radius, 0);
 
-	for (let i = 0; i < cornerDimension; ++ i)
-		coord [coord .length] = corner [i] .add (translation);
+   for (let i = 0; i < cornerDimension; ++ i)
+      coord [coord .length] = corner [i] .add (translation);
 
-	var
-		translation = new SFVec3f (-size .x / 2 + radius, size .y / 2 - radius, 0),
-		rotation    = new SFRotation (0, 0, 1, Math .PI * 0.5);
+   var
+      translation = new SFVec3f (-size .x / 2 + radius, size .y / 2 - radius, 0),
+      rotation    = new SFRotation (0, 0, 1, Math .PI * 0.5);
 
-	for (let i = 0; i < cornerDimension; ++ i)
-		coord [coord .length] = rotation .multVec (corner [i]) .add (translation);
+   for (let i = 0; i < cornerDimension; ++ i)
+      coord [coord .length] = rotation .multVec (corner [i]) .add (translation);
 
-	var
-		translation = new SFVec3f (-size .x / 2 + radius, -size .y / 2 + radius, 0),
-		rotation    = new SFRotation (0, 0, 1, Math .PI);
+   var
+      translation = new SFVec3f (-size .x / 2 + radius, -size .y / 2 + radius, 0),
+      rotation    = new SFRotation (0, 0, 1, Math .PI);
 
-	for (let i = 0; i < cornerDimension; ++ i)
-		coord [coord .length] = rotation .multVec (corner [i]) .add (translation);
+   for (let i = 0; i < cornerDimension; ++ i)
+      coord [coord .length] = rotation .multVec (corner [i]) .add (translation);
 
-	var
-		translation = new SFVec3f (size .x / 2 - radius, -size .y / 2 + radius, 0),
-		rotation    = new SFRotation (0, 0, 1, Math .PI * 1.5);
+   var
+      translation = new SFVec3f (size .x / 2 - radius, -size .y / 2 + radius, 0),
+      rotation    = new SFRotation (0, 0, 1, Math .PI * 1.5);
 
-	for (let i = 0; i < cornerDimension; ++ i)
-		coord [coord .length] = rotation .multVec (corner [i]) .add (translation);
+   for (let i = 0; i < cornerDimension; ++ i)
+      coord [coord .length] = rotation .multVec (corner [i]) .add (translation);
 
-	const maxSize1_2 = new SFVec3f (maxSize / 2, maxSize / 2, 0);
+   const maxSize1_2 = new SFVec3f (maxSize / 2, maxSize / 2, 0);
 
-	for (let i = 0, length = coord .length; i < length; ++ i)
-	{
-		const tex = coord [i] .add (maxSize1_2) .divide (maxSize);
+   for (let i = 0, length = coord .length; i < length; ++ i)
+   {
+      const tex = coord [i] .add (maxSize1_2) .divide (maxSize);
 
-		texCoord [i] = new SFVec2f (tex .x, tex .y);
-	}
+      texCoord [i] = new SFVec2f (tex .x, tex .y);
+   }
 
-	if (!solid)
-	{
-		for (let i = 0, length = cornerDimension * 4; i < length; ++ i)
-			coordIndex [coordIndex .length] = length - 1 - i;
+   if (!solid)
+   {
+      for (let i = 0, length = cornerDimension * 4; i < length; ++ i)
+         coordIndex [coordIndex .length] = length - 1 - i;
 
-		coordIndex [coordIndex .length] = -1;
-	}
+      coordIndex [coordIndex .length] = -1;
+   }
 
-	geometry .set_coordIndex = coordIndex;
+   geometry .set_coordIndex = coordIndex;
 }
 ]]>
         </Script>
