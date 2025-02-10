@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D profile='Full' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
+    <component name='PointingDeviceSensor' level='1'/>
+    <component name='Scripting' level='1'/>
+    <component name='Text' level='1'/>
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Fri, 10 Apr 2015 06:06:29 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V1.1.0, http://titania.create3000.de'/>
-    <meta name='modified' content='Wed, 09 Sep 2015 09:06:33 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.49, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Mon, 10 Feb 2025 17:19:28 GMT'/>
     <meta name='title' content='LineSensor'/>
   </head>
   <Scene>
@@ -16,9 +20,9 @@
         orientation='-0.57735 0.57735 0.577351 2.09439'/>
     <Transform
         translation='3.65468 0.0348776 2.6975'
-        rotation='-0.57735 0.57735 0.577351 2.09439'
+        rotation='-0.577349935856137 0.577349935856137 0.577350935856026 2.09439'
         scale='26.825 26.8249 26.825'
-        scaleOrientation='0.0459123 -0.998773 0.01854 0.72878'>
+        scaleOrientation='0.0192048719193292 0.998939046104669 0.0418563622649512 0.786459884705576'>
       <Viewpoint
           description='Front'/>
       <Viewpoint
@@ -76,8 +80,10 @@
           translation='0.187073 0.187073 0'>
         <Shape>
           <Appearance>
-            <LineProperties
-                linewidthScaleFactor='5'/>
+            <PointProperties
+                pointSizeScaleFactor='5'
+                pointSizeMinValue='5'
+                pointSizeMaxValue='5'/>
             <Material
                 emissiveColor='1 0 0'/>
           </Appearance>
@@ -99,6 +105,15 @@
         </Shape>
       </Transform>
     </Transform>
+    <Transform DEF='Sphere_1'
+        scale='3.04509 3.04509 3.04509'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Sphere/>
+      </Shape>
+    </Transform>
     <Script DEF='Debug'>
       <field accessType='inputOnly' type='SFVec3f' name='set_trackPoint1'/>
       <field accessType='inputOnly' type='SFBool' name='set_isOver1'/>
@@ -118,17 +133,8 @@ function set_isActive1 (value)
 {
 	print ('Touch 1 isActive: ' + value);
 }
-]]> 
+]]>
     </Script>
-    <Transform DEF='Sphere_1'
-        scale='3.04509 3.04509 3.04509'>
-      <Shape>
-        <Appearance>
-          <Material/>
-        </Appearance>
-        <Sphere/>
-      </Shape>
-    </Transform>
     <ROUTE fromNode='Touch1' fromField='trackPoint_changed' toNode='TrackPoint' toField='set_translation'/>
     <ROUTE fromNode='Line' fromField='rotation_changed' toNode='Touch1' toField='set_axisRotation'/>
     <ROUTE fromNode='Line' fromField='rotation_changed' toNode='Cube' toField='set_rotation'/>
