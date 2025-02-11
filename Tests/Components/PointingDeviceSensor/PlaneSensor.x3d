@@ -10,14 +10,15 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V0.7.7, http://titania.create3000.de'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.49, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Mon, 10 Feb 2025 18:14:47 GMT'/>
+    <meta name='modified' content='Tue, 11 Feb 2025 09:55:34 GMT'/>
     <meta name='title' content='PlaneSensor'/>
   </head>
   <Scene>
     <Viewpoint
         description='Home'
-        position='0.00763417 1.06064 5.59705'
-        centerOfRotation='0.00763417 1.06064 0'/>
+        position='-21.86325 150.1474 2.475197'
+        orientation='-0.57126392368049 0.586012379368707 0.574671228380017 2.08663123794122'
+        centerOfRotation='-24.79701 0.03494224 2.492644'/>
     <Transform
         translation='3.65468 0.0348776 2.6975'
         rotation='-0.57735 0.57735 0.577351 2.09439'
