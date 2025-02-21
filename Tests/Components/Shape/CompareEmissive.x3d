@@ -7,7 +7,7 @@
     <meta name='created' content='Fri, 21 Feb 2025 12:22:17 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.50, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Fri, 21 Feb 2025 13:02:37 GMT'/>
+    <meta name='modified' content='Fri, 21 Feb 2025 13:30:20 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -29,7 +29,7 @@
     </Viewpoint>
     <Transform DEF='Rectangle2D'
         translation='0 0 -3'
-        scale='4 4 4'>
+        scale='5 5 5'>
       <Shape>
         <Appearance>
           <UnlitMaterial
@@ -45,7 +45,7 @@
       </Shape>
     </Transform>
     <Transform DEF='UnlitText'
-        translation='-2 2 0'>
+        translation='-2 3 0'>
       <Shape>
         <Text
             string='"Unlit"'>
@@ -56,7 +56,7 @@
       </Shape>
     </Transform>
     <Transform DEF='MaterialText_1'
-        translation='0 2 0'>
+        translation='0 3 0'>
       <Shape>
         <Text
             string='"Material"'>
@@ -65,7 +65,7 @@
       </Shape>
     </Transform>
     <Transform DEF='PhyiscalText'
-        translation='2 2 0'>
+        translation='2 3 0'>
       <Shape>
         <Text
             string='"Physical"'>
@@ -74,65 +74,109 @@
       </Shape>
     </Transform>
     <Transform DEF='Box_1'
-        translation='-2 1 0'>
+        translation='-2 2 0'>
       <Shape>
         <Appearance>
           <UnlitMaterial
               emissiveColor='0.5607843 0.8078431 0'/>
+        </Appearance>
+        <Box DEF='_2'
+            size='1 1 1'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='Box_6'
+        translation='-2 0 0'>
+      <Shape>
+        <Appearance>
+          <UnlitMaterial
+              emissiveColor='0.5607843 0.8078431 0'
+              transparency='0.5'/>
+        </Appearance>
+        <Box USE='_2'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='Box_3'
+        translation='-2 -2 0'>
+      <Shape>
+        <Appearance>
+          <UnlitMaterial
+              emissiveColor='0.5607843 0.8078431 0'
+              transparency='0.5'>
+            <ImageTexture DEF='_1' containerField='emissiveTexture'
+                url='"data:image/png;base64,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"'/>
+          </UnlitMaterial>
+          <TextureTransform DEF='_5'
+              scale='1 2'/>
         </Appearance>
         <Box DEF='_3'
             size='1 1 1'/>
       </Shape>
     </Transform>
-    <Transform DEF='Box_3'
-        translation='-2 -1 0'>
-      <Shape>
-        <Appearance>
-          <UnlitMaterial
-              emissiveColor='0.5607843 0.8078431 0'
-              transparency='0.5'/>
-        </Appearance>
-        <Box USE='_3'/>
-      </Shape>
-    </Transform>
     <Transform DEF='Box_4'
-        translation='0 1 0'>
+        translation='0 2 0'>
       <Shape>
         <Appearance>
           <Material
               emissiveColor='0.5607843 0.8078431 0'/>
         </Appearance>
-        <Box USE='_3'/>
+        <Box USE='_2'/>
       </Shape>
     </Transform>
-    <Transform DEF='Box_5'
-        translation='0 -1 0'>
+    <Transform DEF='Box_7'>
       <Shape>
         <Appearance>
           <Material
               emissiveColor='0.5607843 0.8078431 0'
               transparency='0.5'/>
         </Appearance>
+        <Box USE='_2'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='Box_5'
+        translation='0 -2 0'>
+      <Shape>
+        <Appearance>
+          <Material
+              emissiveColor='0.5607843 0.8078431 0'
+              transparency='0.5'>
+            <ImageTexture USE='_1' containerField='emissiveTexture'/>
+          </Material>
+          <TextureTransform USE='_5'/>
+        </Appearance>
         <Box USE='_3'/>
       </Shape>
     </Transform>
     <Transform DEF='Box_2'
-        translation='2 1 0'>
+        translation='2 2 0'>
       <Shape>
         <Appearance>
           <PhysicalMaterial
               emissiveColor='0.2801244 0.6253447 0'/>
         </Appearance>
-        <Box USE='_3'/>
+        <Box USE='_2'/>
       </Shape>
     </Transform>
-    <Transform DEF='Box'
-        translation='2 -1 0'>
+    <Transform DEF='Box_8'
+        translation='2 0 0'>
       <Shape>
         <Appearance>
           <PhysicalMaterial
               emissiveColor='0.2801244 0.6253447 0'
               transparency='0.5'/>
+        </Appearance>
+        <Box USE='_2'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='Box'
+        translation='2 -2 0'>
+      <Shape>
+        <Appearance>
+          <PhysicalMaterial
+              emissiveColor='0.2801244 0.6253447 0'
+              transparency='0.5'>
+            <ImageTexture USE='_1' containerField='emissiveTexture'/>
+          </PhysicalMaterial>
+          <TextureTransform USE='_5'/>
         </Appearance>
         <Box USE='_3'/>
       </Shape>
