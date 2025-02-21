@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='Geometry2D' level='2'/>
+    <component name='Text' level='1'/>
+    <meta name='created' content='Fri, 21 Feb 2025 12:22:17 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.50, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Fri, 21 Feb 2025 12:33:47 GMT'/>
+  </head>
+  <Scene>
+    <WorldInfo>
+      <MetadataSet containerField='metadata'
+          name='Sunrize'
+          reference='https://create3000.github.io/sunrize/'>
+        <MetadataSet
+            name='GridTool'>
+          <MetadataBoolean
+              name='visible'
+              value='true'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <Viewpoint
+        description='Emissive Comparission'>
+      <NavigationInfo containerField='navigationInfo'
+          headlight='false'/>
+    </Viewpoint>
+    <Transform DEF='Rectangle2D'
+        translation='0 0 -3'
+        scale='4 4 4'>
+      <Shape>
+        <Appearance>
+          <UnlitMaterial
+              emissiveColor='0.6 0.6 0.6'/>
+          <PixelTexture
+              image='2 2 1
+                0x7f 0xff
+                0xff 0x7f'/>
+          <TextureTransform
+              scale='10 10'/>
+        </Appearance>
+        <Rectangle2D/>
+      </Shape>
+    </Transform>
+    <Transform DEF='Box_1'
+        translation='-1 1 0'>
+      <Shape>
+        <Appearance>
+          <UnlitMaterial
+              emissiveColor='0.5607843 0.8078431 0'/>
+        </Appearance>
+        <Box DEF='_2'
+            size='1 1 1'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='Box_3'
+        translation='-1 -1 0'>
+      <Shape>
+        <Appearance>
+          <UnlitMaterial
+              emissiveColor='0.5607843 0.8078431 0'
+              transparency='0.5'/>
+        </Appearance>
+        <Box USE='_2'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='Box_2'
+        translation='1 1 0'>
+      <Shape>
+        <Appearance>
+          <Material
+              emissiveColor='0.5607843 0.8078431 0'/>
+        </Appearance>
+        <Box USE='_2'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='Box'
+        translation='1 -1 0'>
+      <Shape>
+        <Appearance>
+          <Material
+              emissiveColor='0.5607843 0.8078431 0'
+              transparency='0.5'/>
+        </Appearance>
+        <Box USE='_2'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='UnlitText'
+        translation='-1 2 0'>
+      <Shape>
+        <Text
+            string='"Unlit"'>
+          <FontStyle DEF='_1'
+              size='0.4'
+              justify='"MIDDLE", "MIDDLE"'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform DEF='MaterialText'
+        translation='1 2 0'>
+      <Shape>
+        <Text
+            string='"Material"'>
+          <FontStyle USE='_1'/>
+        </Text>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>
