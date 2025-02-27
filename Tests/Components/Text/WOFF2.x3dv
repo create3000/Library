@@ -1,4 +1,4 @@
-#X3D V4.1 utf8 X_ITE V11.2.2
+#X3D V4.0 utf8 X_ITE V11.2.2
 
 PROFILE Interchange
 
@@ -7,7 +7,7 @@ COMPONENT Text : 1
 META "created" "Thu, 27 Feb 2025 13:10:27 GMT"
 META "creator" "Holger Seelig"
 META "generator" "Sunrize X3D Editor V1.7.52, https://create3000.github.io/sunrize/"
-META "modified" "Thu, 27 Feb 2025 13:13:01 GMT"
+META "modified" "Thu, 27 Feb 2025 18:14:08 GMT"
 
 WorldInfo {
   metadata MetadataSet {
@@ -25,8 +25,6 @@ WorldInfo {
 
 Viewpoint {
   description "Initial View"
-  position 2.869677 3.854335 8.769781
-  orientation -0.7765887 0.6177187 0.1238285 0.5052317
 }
 
 DEF Text_1 Transform {
