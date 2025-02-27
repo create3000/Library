@@ -37,7 +37,7 @@ DEF Text_1 Transform {
     geometry Text {
       string "3D Text"
       fontStyle FontStyle {
-        url "WOFF2.woff2"
+        family "WOFF2.woff2"
       }
     }
   }
