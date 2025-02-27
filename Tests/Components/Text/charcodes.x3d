@@ -11,153 +11,30 @@
     <meta name='generator' content='Titania V4.5.0, http://titania.create3000.de'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.52, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Text/charcodes.x3d'/>
-    <meta name='modified' content='Thu, 27 Feb 2025 18:17:14 GMT'/>
+    <meta name='modified' content='Thu, 27 Feb 2025 18:25:19 GMT'/>
   </head>
   <Scene>
-    <WorldInfo>
-      <MetadataSet DEF='Titania' containerField='metadata'
-          name='Titania'
-          reference='http://titania.create3000.de'>
-        <MetadataSet DEF='AngleGrid'
-            name='AngleGrid'
-            reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled'
-              name='enabled'
-              reference='http://titania.create3000.de'
-              value='false'/>
-        </MetadataSet>
-        <MetadataSet DEF='Grid'
-            name='Grid'
-            reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled_1'
-              name='enabled'
-              reference='http://titania.create3000.de'
-              value='true'/>
-        </MetadataSet>
-        <MetadataSet DEF='Selection'
-            name='Selection'
-            reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='selectGeometry'
-              name='selectGeometry'
-              reference='http://titania.create3000.de'
-              value='false'/>
-          <MetadataSet DEF='nodes'
-              name='nodes'
-              reference='http://titania.create3000.de'>
-            <Transform DEF='Text' containerField='value'
-                translation='-2 0 0'>
-              <Shape>
-                <Appearance>
-                  <Material/>
-                </Appearance>
-                <Text DEF='_2'
-                    string='"ʘʗʖʕʔʓʒʑʐʏʎʍʌʋʊʉʈʇʆʅʄʃʂʁʀɿɾɽɼɻ", "ɺɹɸɷɶɵɴɳɲɱɰɯɮɭɬɫɪɩɨɧɦɥɤɣɢɡɠɟɞɝ", "ɜɛɚəɘɗɖɕɔɓɒɑɐɏɎɍɌɋɊɉɈɇɆɅɄɃɂɁɀȿ", "ȾȽȼȻȺȹȸȷȶȵȴȳȲȱȰȯȮȭȬȫȪȩȨȧȦȥȤȣȢȡ", "ȠȟȞȝȜțȚșȘȗȖȕȔȓȒȑȐȏȎȍȌȋȊȉȈȇȆȅȄȃ", "ȂȁȀǿǾǽǼǻǺǹǸǷǶǵǴǳǲǱǰǯǮǭǬǫǪǩǨǧǦǥ", "ǤǣǢǡǠǟǞǝǜǛǚǙǘǗǖǕǔǓǒǑǐǏǎǍǌǋǊǉǈǇ", "ǆǅǄǃǂǁǀƿƾƽƼƻƺƹƸƷƶƵƴƳƲƱưƯƮƭƬƫƪƩ", "ƨƧƦƥƤƣƢơƠƟƞƝƜƛƚƙƘƗƖƕƔƓƒƑƐƏƎƍƌƋ", "ƊƉƈƇƆƅƄƃƂƁƀſžŽżŻźŹŸŷŶŵŴųŲűŰůŮŭ", "ŬūŪũŨŧŦťŤţŢšŠşŞŝŜśŚřŘŗŖŕŔœŒőŐŏ", "ŎōŌŋŊŉňŇņŅńŃłŁŀĿľĽļĻĺĹĸķĶĵĴĳĲı", "İįĮĭĬīĪĩĨħĦĥĤģĢġĠğĞĝĜěĚęĘėĖĕĔē", "ĒđĐďĎčČċĊĉĈćĆąĄăĂāĀÿþýüûúùø÷öõ", "ôóòñðïîíìëêéèçæåäãâáàßÞÝÜÛÚÙØ×", "ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈÇÆÅÄÃÂÁÀ¿¾½¼»º¹", "¸·¶µ´³²±°¯®­¬«ª©¨§¦¥¤£¢¡ ", "~}", "|{zyxwvutsrqponmlkjihgfedcba`_", "^]\\[ZYXWVUTSRQPONMLKJIHGFEDCBA"'
-                    length='22.3449, 22.374, 23.2392, 25.9167, 23.3338, 28.417, 27.5223, 25.094, 25.9762, 25.5892, 24.341, 23.3435, 22.384, 24.7024, 23.9054, 25.8698, 21.3774, 22.281, 22.237, 25.6271'
-                    solid='true'>
-                  <FontStyle
-                      family='"SANS"'
-                      spacing='1.2'/>
-                </Text>
-              </Shape>
-            </Transform>
-          </MetadataSet>
-        </MetadataSet>
-        <MetadataSet DEF='BrowserPanel'
-            name='BrowserPanel'
-            reference='http://titania.create3000.de'>
-          <MetadataString DEF='type_4'
-              name='type'
-              reference='http://titania.create3000.de'
-              value='"TOP_VIEW", "MAIN_VIEW", "PERSPECTIVE_VIEW", "FRONT_VIEW"'/>
-          <MetadataSet DEF='viewpoints'
-              name='viewpoints'
-              reference='http://titania.create3000.de'>
-            <MetadataSet DEF='PerspectiveViewpoint'
-                name='PerspectiveViewpoint'
-                reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_5'
-                  name='position'
-                  reference='http://titania.create3000.de'
-                  value='5.87788534164429, 6.46984958648682, 13.8524446487427'/>
-              <MetadataDouble DEF='orientation_6'
-                  name='orientation'
-                  reference='http://titania.create3000.de'
-                  value='-0.704047462871213, 0.695566762376518, 0.143192350010952, 0.568941727555854'/>
-              <MetadataDouble DEF='centerOfRotation_7'
-                  name='centerOfRotation'
-                  reference='http://titania.create3000.de'
-                  value='0, 0, 0'/>
-              <MetadataDouble DEF='fieldOfViewScale'
-                  name='fieldOfViewScale'
-                  reference='http://titania.create3000.de'
-                  value='1'/>
-            </MetadataSet>
-            <MetadataSet DEF='TopViewpoint'
-                name='TopViewpoint'
-                reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_8'
-                  name='position'
-                  reference='http://titania.create3000.de'
-                  value='0, 10000, 0'/>
-              <MetadataDouble DEF='orientation_9'
-                  name='orientation'
-                  reference='http://titania.create3000.de'
-                  value='1, 0, 0, 4.71238898038469'/>
-              <MetadataDouble DEF='centerOfRotation_10'
-                  name='centerOfRotation'
-                  reference='http://titania.create3000.de'
-                  value='-0.0320612526145463, 0, 0.0937320149966475'/>
-              <MetadataDouble DEF='fieldOfViewScale_11'
-                  name='fieldOfViewScale'
-                  reference='http://titania.create3000.de'
-                  value='1.21023944190259'/>
-            </MetadataSet>
-            <MetadataSet DEF='FrontViewpoint'
-                name='FrontViewpoint'
-                reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_12'
-                  name='position'
-                  reference='http://titania.create3000.de'
-                  value='0, 0, 10000'/>
-              <MetadataDouble DEF='orientation_13'
-                  name='orientation'
-                  reference='http://titania.create3000.de'
-                  value='0, 0, 1, 0'/>
-              <MetadataDouble DEF='centerOfRotation_14'
-                  name='centerOfRotation'
-                  reference='http://titania.create3000.de'
-                  value='-0.00884759203065143, 0.0177734813359099, 0'/>
-              <MetadataDouble DEF='fieldOfViewScale_15'
-                  name='fieldOfViewScale'
-                  reference='http://titania.create3000.de'
-                  value='1.212467484375'/>
-            </MetadataSet>
-          </MetadataSet>
-        </MetadataSet>
-        <MetadataSet DEF='Page'
-            name='Page'
-            reference='http://titania.create3000.de'>
-          <MetadataInteger DEF='activeView'
-              name='activeView'
-              reference='http://titania.create3000.de'
-              value='1'/>
-          <MetadataInteger DEF='multiView'
-              name='multiView'
-              reference='http://titania.create3000.de'
-              value='0'/>
-          <MetadataDouble DEF='browserRatio'
-              name='browserRatio'
-              reference='http://titania.create3000.de'
-              value='1.777777'/>
-        </MetadataSet>
-      </MetadataSet>
-    </WorldInfo>
     <Viewpoint
         description='Test'
         position='25.2858 -10.9949 37.7836'
         centerOfRotation='25.2858 -10.9949 0'/>
-    <Transform USE='Text'/>
-    <Transform DEF='ScreenText'
+    <Transform DEF='Text'
+        translation='-2 0 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text DEF='_2'
+            string='"ʘʗʖʕʔʓʒʑʐʏʎʍʌʋʊʉʈʇʆʅʄʃʂʁʀɿɾɽɼɻ", "ɺɹɸɷɶɵɴɳɲɱɰɯɮɭɬɫɪɩɨɧɦɥɤɣɢɡɠɟɞɝ", "ɜɛɚəɘɗɖɕɔɓɒɑɐɏɎɍɌɋɊɉɈɇɆɅɄɃɂɁɀȿ", "ȾȽȼȻȺȹȸȷȶȵȴȳȲȱȰȯȮȭȬȫȪȩȨȧȦȥȤȣȢȡ", "ȠȟȞȝȜțȚșȘȗȖȕȔȓȒȑȐȏȎȍȌȋȊȉȈȇȆȅȄȃ", "ȂȁȀǿǾǽǼǻǺǹǸǷǶǵǴǳǲǱǰǯǮǭǬǫǪǩǨǧǦǥ", "ǤǣǢǡǠǟǞǝǜǛǚǙǘǗǖǕǔǓǒǑǐǏǎǍǌǋǊǉǈǇ", "ǆǅǄǃǂǁǀƿƾƽƼƻƺƹƸƷƶƵƴƳƲƱưƯƮƭƬƫƪƩ", "ƨƧƦƥƤƣƢơƠƟƞƝƜƛƚƙƘƗƖƕƔƓƒƑƐƏƎƍƌƋ", "ƊƉƈƇƆƅƄƃƂƁƀſžŽżŻźŹŸŷŶŵŴųŲűŰůŮŭ", "ŬūŪũŨŧŦťŤţŢšŠşŞŝŜśŚřŘŗŖŕŔœŒőŐŏ", "ŎōŌŋŊŉňŇņŅńŃłŁŀĿľĽļĻĺĹĸķĶĵĴĳĲı", "İįĮĭĬīĪĩĨħĦĥĤģĢġĠğĞĝĜěĚęĘėĖĕĔē", "ĒđĐďĎčČċĊĉĈćĆąĄăĂāĀÿþýüûúùø÷öõ", "ôóòñðïîíìëêéèçæåäãâáàßÞÝÜÛÚÙØ×", "ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈÇÆÅÄÃÂÁÀ¿¾½¼»º¹", "¸·¶µ´³²±°¯®­¬«ª©¨§¦¥¤£¢¡ ", "~}", "|{zyxwvutsrqponmlkjihgfedcba`_", "^]\\[ZYXWVUTSRQPONMLKJIHGFEDCBA"'
+            length='22.3449, 22.374, 23.2392, 25.9167, 23.3338, 28.417, 27.5223, 25.094, 25.9762, 25.5892, 24.341, 23.3435, 22.384, 24.7024, 23.9054, 25.8698, 21.3774, 22.281, 22.237, 25.6271'
+            solid='true'>
+          <FontStyle
+              family='"SANS"'
+              spacing='1.2'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform DEF='ScreenText_1'
         translation='27 0 0'>
       <Shape>
         <Appearance>
