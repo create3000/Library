@@ -2,12 +2,13 @@
 
 PROFILE Interchange
 
+COMPONENT Layout : 2
 COMPONENT Text : 1
 
 META "created" "Thu, 27 Feb 2025 13:10:27 GMT"
 META "creator" "Holger Seelig"
 META "generator" "Sunrize X3D Editor V1.7.52, https://create3000.github.io/sunrize/"
-META "modified" "Fri, 28 Feb 2025 01:08:23 GMT"
+META "modified" "Fri, 28 Feb 2025 07:31:22 GMT"
 
 WorldInfo {
   metadata MetadataSet {
@@ -27,7 +28,7 @@ Viewpoint {
   description "Initial View"
 }
 
-DEF Text Transform {
+DEF Text_1 Transform {
   children Shape {
     appearance Appearance {
       material Material { }
@@ -41,7 +42,7 @@ DEF Text Transform {
   }
 }
 
-DEF Text_2 Transform {
+DEF Text_3 Transform {
   translation 0 -1.366699 0
   children Shape {
     appearance Appearance {
@@ -51,6 +52,40 @@ DEF Text_2 Transform {
       string "3D Text"
       fontStyle FontStyle {
         family "WOFF2.woff2"
+      }
+    }
+  }
+}
+
+DEF ScreenText_2 Transform {
+  translation -1.352434 0 0
+  children Shape {
+    appearance Appearance {
+      material Material { }
+    }
+    geometry Text {
+      string "3D Text"
+      fontStyle ScreenFontStyle {
+        family "https://fonts.gstatic.com/s/sigmar/v7/hv-XlzJgIE8a85pkamw2EzJwVw.woff2"
+        pointSize 42
+        justify "END"
+      }
+    }
+  }
+}
+
+DEF ScreenText_3 Transform {
+  translation -1.352434 -1.366699 0
+  children Shape {
+    appearance Appearance {
+      material Material { }
+    }
+    geometry Text {
+      string "3D Text"
+      fontStyle ScreenFontStyle {
+        family "WOFF2.woff2"
+        pointSize 42
+        justify "END"
       }
     }
   }
