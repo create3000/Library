@@ -7,7 +7,7 @@ COMPONENT Text : 1
 META "created" "Thu, 27 Feb 2025 13:10:27 GMT"
 META "creator" "Holger Seelig"
 META "generator" "Sunrize X3D Editor V1.7.52, https://create3000.github.io/sunrize/"
-META "modified" "Thu, 27 Feb 2025 18:14:08 GMT"
+META "modified" "Fri, 28 Feb 2025 01:08:23 GMT"
 
 WorldInfo {
   metadata MetadataSet {
@@ -27,7 +27,22 @@ Viewpoint {
   description "Initial View"
 }
 
-DEF Text_1 Transform {
+DEF Text Transform {
+  children Shape {
+    appearance Appearance {
+      material Material { }
+    }
+    geometry Text {
+      string "3D Text"
+      fontStyle FontStyle {
+        family "https://fonts.gstatic.com/s/sigmar/v7/hv-XlzJgIE8a85pkamw2EzJwVw.woff2"
+      }
+    }
+  }
+}
+
+DEF Text_2 Transform {
+  translation 0 -1.366699 0
   children Shape {
     appearance Appearance {
       material Material { }
