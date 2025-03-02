@@ -1,14 +1,14 @@
-#X3D V4.0 utf8 X_ITE V11.2.2
+#X3D V4.1 utf8 X_ITE V11.2.2
 
 PROFILE Interchange
 
 COMPONENT Layout : 2
-COMPONENT Text : 1
+COMPONENT Text : 2
 
 META "created" "Thu, 27 Feb 2025 13:10:27 GMT"
 META "creator" "Holger Seelig"
-META "generator" "Sunrize X3D Editor V1.7.52, https://create3000.github.io/sunrize/"
-META "modified" "Fri, 28 Feb 2025 07:31:22 GMT"
+META "generator" "Sunrize X3D Editor V1.7.53, https://create3000.github.io/sunrize/"
+META "modified" "Sun, 02 Mar 2025 22:22:22 GMT"
 
 WorldInfo {
   metadata MetadataSet {
@@ -36,7 +36,8 @@ DEF Text_1 Transform {
     geometry Text {
       string "3D Text"
       fontStyle FontStyle {
-        family "https://fonts.gstatic.com/s/sigmar/v7/hv-XlzJgIE8a85pkamw2EzJwVw.woff2"
+        family "Sigmar"
+        style "REGULAR"
       }
     }
   }
@@ -51,7 +52,8 @@ DEF Text_3 Transform {
     geometry Text {
       string "3D Text"
       fontStyle FontStyle {
-        family "WOFF2.woff2"
+        family "Oxygen"
+        style "REGULAR"
       }
     }
   }
@@ -66,7 +68,8 @@ DEF ScreenText_2 Transform {
     geometry Text {
       string "3D Text"
       fontStyle ScreenFontStyle {
-        family "https://fonts.gstatic.com/s/sigmar/v7/hv-XlzJgIE8a85pkamw2EzJwVw.woff2"
+        family "Sigmar"
+        style "REGULAR"
         pointSize 42
         justify "END"
       }
@@ -74,7 +77,7 @@ DEF ScreenText_2 Transform {
   }
 }
 
-DEF ScreenText_3 Transform {
+DEF ScreenText Transform {
   translation -1.352434 -1.366699 0
   children Shape {
     appearance Appearance {
@@ -83,10 +86,19 @@ DEF ScreenText_3 Transform {
     geometry Text {
       string "3D Text"
       fontStyle ScreenFontStyle {
-        family "WOFF2.woff2"
+        family "Oxygen"
+        style "REGULAR"
         pointSize 42
         justify "END"
       }
     }
   }
+}
+
+DEF Sigmar FontLibrary {
+  url "https://fonts.gstatic.com/s/sigmar/v7/hv-XlzJgIE8a85pkamw2EzJwVw.woff2"
+}
+
+DEF Oxygen FontLibrary {
+  url "WOFF2.woff2"
 }
