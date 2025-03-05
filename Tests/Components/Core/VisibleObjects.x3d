@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Full' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='X_ITE' level='1'/>
+    <meta name='created' content='Mon, 03 Mar 2025 10:22:35 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.53, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Wed, 05 Mar 2025 08:47:38 GMT'/>
+  </head>
+  <Scene>
+    <ProtoDeclare name='VisibleNodes'>
+      <ProtoBody>
+        <Group DEF='VisibleNodes'/>
+        <Script DEF='VisiblesScript'>
+          <field accessType='initializeOnly' type='SFNode' name='group'>
+            <Group USE='VisibleNodes'/>
+          </field>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+   const typeNames = [... Browser .concreteNodes]
+      .map (Type => Type .typeName) .sort ();
+
+   group .children .length = 0;
+
+   for (const typeName of typeNames)
+      group .children .push (Browser .currentScene .createNode (typeName));
+}
+]]>
+        </Script>
+      </ProtoBody>
+    </ProtoDeclare>
+    <Background/>
+    <Viewpoint/>
+    <ProtoInstance name='VisibleNodes'/>
+  </Scene>
+</X3D>
