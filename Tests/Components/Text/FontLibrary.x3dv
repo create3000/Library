@@ -1,0 +1,56 @@
+#X3D V4.1 utf8 X_ITE V11.2.2
+
+PROFILE Interchange
+
+COMPONENT Text : 2
+
+META "created" "Sun, 02 Mar 2025 09:01:59 GMT"
+META "creator" "Holger Seelig"
+META "modified" "Sun, 02 Mar 2025 17:42:25 GMT"
+META "generator" "Sunrize X3D Editor V1.7.52, https://create3000.github.io/sunrize/"
+
+DEF Text1 Transform {
+  children Shape {
+    appearance Appearance {
+      material Material { }
+    }
+    geometry Text {
+      string "3D Text"
+      fontStyle FontStyle {
+        family [
+          "PT Sans",
+          "SANS"
+        ]
+        justify "MIDDLE"
+      }
+    }
+  }
+}
+
+DEF Text2 Transform {
+  translation 0 -1 0
+  children Shape {
+    appearance Appearance {
+      material Material { }
+    }
+    geometry Text {
+      string "3D Text"
+      fontStyle FontStyle {
+        family [
+          "PT Sans",
+          "SANS"
+        ]
+        style "BOLD"
+        justify "MIDDLE"
+      }
+    }
+  }
+}
+
+FontLibrary {
+  url "https://cdn.jsdelivr.net/npm/x_ite@11.2.2/dist/assets/fonts/PT_Sans/PTSans-Regular.ttf"
+}
+
+FontLibrary {
+  url "https://cdn.jsdelivr.net/npm/x_ite@11.2.2/dist/assets/fonts/PT_Sans/PTSans-Bold.ttf"
+}
