@@ -1,4 +1,4 @@
-#X3D V4.1 utf8 X_ITE V11.2.2
+#X3D V4.1 utf8 X_ITE V11.2.3
 
 PROFILE Interchange
 
@@ -6,8 +6,8 @@ COMPONENT Text : 2
 
 META "created" "Sun, 02 Mar 2025 09:01:59 GMT"
 META "creator" "Holger Seelig"
-META "modified" "Sun, 02 Mar 2025 17:42:25 GMT"
-META "generator" "Sunrize X3D Editor V1.7.52, https://create3000.github.io/sunrize/"
+META "modified" "Thu, 06 Mar 2025 11:33:32 GMT"
+META "generator" "Sunrize X3D Editor V1.7.53, https://create3000.github.io/sunrize/"
 
 DEF Text1 Transform {
   children Shape {
@@ -18,6 +18,7 @@ DEF Text1 Transform {
       string "3D Text"
       fontStyle FontStyle {
         family [
+          "PT Sans Regular",
           "PT Sans",
           "SANS"
         ]
@@ -37,6 +38,7 @@ DEF Text2 Transform {
       string "3D Text"
       fontStyle FontStyle {
         family [
+          "PT Sans Bold",
           "PT Sans",
           "SANS"
         ]
@@ -48,9 +50,11 @@ DEF Text2 Transform {
 }
 
 FontLibrary {
+  family "PT Sans Regular"
   url "https://cdn.jsdelivr.net/npm/x_ite@11.2.2/dist/assets/fonts/PT_Sans/PTSans-Regular.ttf"
 }
 
 FontLibrary {
+  family "PT Sans Bold"
   url "https://cdn.jsdelivr.net/npm/x_ite@11.2.2/dist/assets/fonts/PT_Sans/PTSans-Bold.ttf"
 }
