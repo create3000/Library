@@ -6,7 +6,7 @@ COMPONENT Text : 2
 
 META "created" "Sun, 02 Mar 2025 09:01:59 GMT"
 META "creator" "Holger Seelig"
-META "modified" "Thu, 06 Mar 2025 11:33:32 GMT"
+META "modified" "Thu, 06 Mar 2025 11:41:10 GMT"
 META "generator" "Sunrize X3D Editor V1.7.53, https://create3000.github.io/sunrize/"
 
 DEF Text1 Transform {
