@@ -6,7 +6,7 @@ COMPONENT Text : 2
 
 META "created" "Sun, 02 Mar 2025 09:01:59 GMT"
 META "creator" "Holger Seelig"
-META "modified" "Fri, 07 Mar 2025 11:01:12 GMT"
+META "modified" "Fri, 07 Mar 2025 11:10:09 GMT"
 META "generator" "Sunrize X3D Editor V1.7.53, https://create3000.github.io/sunrize/"
 
 DEF HeadLine Transform {
@@ -74,10 +74,10 @@ DEF Text2 Transform {
 
 FontLibrary {
   family "PT Sans Regular"
-  url "https://cdn.jsdelivr.net/npm/x_ite@11.2.2/dist/assets/fonts/PT_Sans/PTSans-Regular.ttf"
+  url "https://cdn.jsdelivr.net/npm/x_ite@11.2.3/dist/assets/fonts/PT_Sans/PTSans-Regular.woff2"
 }
 
 FontLibrary {
   family "PT Sans Bold"
-  url "https://cdn.jsdelivr.net/npm/x_ite@11.2.2/dist/assets/fonts/PT_Sans/PTSans-Bold.ttf"
+  url "https://cdn.jsdelivr.net/npm/x_ite@11.2.3/dist/assets/fonts/PT_Sans/PTSans-Bold.woff2"
 }
