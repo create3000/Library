@@ -6,16 +6,17 @@ COMPONENT Text : 2
 
 META "created" "Sun, 02 Mar 2025 09:01:59 GMT"
 META "creator" "Holger Seelig"
-META "modified" "Thu, 06 Mar 2025 11:51:58 GMT"
+META "modified" "Fri, 07 Mar 2025 10:48:09 GMT"
 META "generator" "Sunrize X3D Editor V1.7.53, https://create3000.github.io/sunrize/"
 
 DEF Text1 Transform {
+  translation 0 1 0
   children Shape {
     appearance Appearance {
       material Material { }
     }
     geometry Text {
-      string "3D Text"
+      string "X3D Text (PT Sans Regular)"
       fontStyle FontStyle {
         family [
           "PT Sans Regular",
@@ -36,7 +37,7 @@ DEF Text2 Transform {
       material Material { }
     }
     geometry Text {
-      string "3D Text"
+      string "X3D Text (PT Sans Bold)"
       fontStyle FontStyle {
         family [
           "PT Sans Bold",
