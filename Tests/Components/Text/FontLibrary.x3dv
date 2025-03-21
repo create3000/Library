@@ -6,8 +6,12 @@ COMPONENT Text : 2
 
 META "created" "Sun, 02 Mar 2025 09:01:59 GMT"
 META "creator" "Holger Seelig"
-META "modified" "Fri, 21 Mar 2025 17:00:29 GMT"
+META "modified" "Fri, 21 Mar 2025 17:04:54 GMT"
 META "generator" "Sunrize X3D Editor V1.7.59, https://create3000.github.io/sunrize/"
+
+Viewpoint {
+  description "Initial View"
+}
 
 DEF HeadLine_1 Transform {
   translation -6.5 0 0
