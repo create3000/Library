@@ -1,4 +1,4 @@
-#X3D V4.1 utf8 X_ITE V11.2.3
+#X3D V4.1 utf8 X_ITE V11.3.2
 
 PROFILE Interchange
 
@@ -6,11 +6,11 @@ COMPONENT Text : 2
 
 META "created" "Sun, 02 Mar 2025 09:01:59 GMT"
 META "creator" "Holger Seelig"
-META "modified" "Fri, 07 Mar 2025 11:10:09 GMT"
-META "generator" "Sunrize X3D Editor V1.7.53, https://create3000.github.io/sunrize/"
+META "modified" "Fri, 21 Mar 2025 16:32:43 GMT"
+META "generator" "Sunrize X3D Editor V1.7.59, https://create3000.github.io/sunrize/"
 
 DEF HeadLine Transform {
-  translation 0 3 0
+  translation -6.5 -1 0
   children Shape {
     appearance Appearance {
       material Material { }
@@ -24,14 +24,13 @@ DEF HeadLine Transform {
           "SANS"
         ]
         style "BOLD"
-        justify "MIDDLE"
       }
     }
   }
 }
 
 DEF Text1_1 Transform {
-  translation 0 1 0
+  translation -6.5 -2 0
   children Shape {
     appearance Appearance {
       material Material { }
@@ -45,14 +44,13 @@ DEF Text1_1 Transform {
           "SANS"
         ]
         style "REGULAR"
-        justify "MIDDLE"
       }
     }
   }
 }
 
 DEF Text2 Transform {
-  translation 0 -1 0
+  translation -6.5 -3 0
   children Shape {
     appearance Appearance {
       material Material { }
@@ -66,7 +64,6 @@ DEF Text2 Transform {
           "SANS"
         ]
         style "BOLD"
-        justify "MIDDLE"
       }
     }
   }
