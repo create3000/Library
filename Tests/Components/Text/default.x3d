@@ -9,11 +9,11 @@
     <meta name='generator' content='Titania V4.1.1, http://titania.create3000.de'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.59, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Text/default.x3d'/>
-    <meta name='modified' content='Fri, 21 Mar 2025 09:34:50 GMT'/>
+    <meta name='modified' content='Fri, 21 Mar 2025 16:29:18 GMT'/>
   </head>
   <Scene>
     <Transform DEF='NoFontStyle'
-        translation='-6.53841 1 0'>
+        translation='-6.5 1 0'>
       <Shape>
         <Appearance>
           <Material/>
@@ -37,8 +37,8 @@
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='UnknownFamily'
-        translation='3 1 0'>
+    <Transform DEF='UnknownFamily_1'
+        translation='2.5 1 0'>
       <Shape>
         <Appearance>
           <Material/>
@@ -52,7 +52,7 @@
       </Shape>
     </Transform>
     <Transform DEF='Sans'
-        translation='-6.53841 0 0'>
+        translation='-6.5 0 0'>
       <Shape>
         <Appearance>
           <Material/>
@@ -78,8 +78,8 @@
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='Typewriter_1'
-        translation='3 0 0'>
+    <Transform DEF='Typewriter'
+        translation='2.5 0 0'>
       <Shape>
         <Appearance>
           <Material/>
@@ -93,7 +93,7 @@
       </Shape>
     </Transform>
     <Transform DEF='SansBold'
-        translation='-6.53841 -1 0'>
+        translation='-6.5 -1 0'>
       <Shape>
         <Appearance>
           <Material/>
@@ -121,8 +121,8 @@
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='TypewriterBold'
-        translation='3 -1 0'>
+    <Transform DEF='TypewriterBold_1'
+        translation='2.5 -1 0'>
       <Shape>
         <Appearance>
           <Material/>
@@ -137,7 +137,7 @@
       </Shape>
     </Transform>
     <Transform DEF='SansItalic'
-        translation='-6.53841 -2 0'>
+        translation='-6.5 -2 0'>
       <Shape>
         <Appearance>
           <Material/>
@@ -165,8 +165,8 @@
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='TypewriterItalic'
-        translation='3 -2 0'>
+    <Transform DEF='TypewriterItalic_1'
+        translation='2.5 -2 0'>
       <Shape>
         <Appearance>
           <Material/>
@@ -181,7 +181,7 @@
       </Shape>
     </Transform>
     <Transform DEF='SansBoldItalic'
-        translation='-6.53841 -3 0'>
+        translation='-6.5 -3 0'>
       <Shape>
         <Appearance>
           <Material/>
@@ -209,8 +209,8 @@
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='TypewriterBoldItalic'
-        translation='3 -3 0'>
+    <Transform DEF='TypewriterBoldItalic_1'
+        translation='2.5 -3 0'>
       <Shape>
         <Appearance>
           <Material/>
