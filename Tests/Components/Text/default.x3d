@@ -9,7 +9,7 @@
     <meta name='generator' content='Titania V4.1.1, http://titania.create3000.de'/>
     <meta name='generator' content='Sunrize X3D Editor V1.7.59, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Text/default.x3d'/>
-    <meta name='modified' content='Fri, 21 Mar 2025 08:01:38 GMT'/>
+    <meta name='modified' content='Fri, 21 Mar 2025 09:34:50 GMT'/>
   </head>
   <Scene>
     <Transform DEF='NoFontStyle'
@@ -34,6 +34,20 @@
             solid='true'>
           <FontStyle
               family=''/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform DEF='UnknownFamily'
+        translation='3 1 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text
+            string='"3D Text"'
+            solid='true'>
+          <FontStyle
+              family='"Unknown Family"'/>
         </Text>
       </Shape>
     </Transform>
@@ -64,7 +78,7 @@
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='Typewriter'
+    <Transform DEF='Typewriter_1'
         translation='3 0 0'>
       <Shape>
         <Appearance>
@@ -166,7 +180,7 @@
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='SansBoldItalic_1'
+    <Transform DEF='SansBoldItalic'
         translation='-6.53841 -3 0'>
       <Shape>
         <Appearance>
