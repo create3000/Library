@@ -1,18 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.1//EN" "https://www.web3d.org/specifications/x3d-4.1.dtd">
-<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.1.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
     <component name='Text' level='1'/>
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Mon, 23 Apr 2018 08:32:08 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V4.1.1, http://titania.create3000.de'/>
-    <meta name='generator' content='Sunrize X3D Editor V1.7.52, https://create3000.github.io/sunrize/'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.7.59, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Text/default.x3d'/>
-    <meta name='modified' content='Sun, 02 Mar 2025 16:02:07 GMT'/>
+    <meta name='modified' content='Fri, 21 Mar 2025 08:01:38 GMT'/>
   </head>
   <Scene>
-    <Transform DEF='Text'
+    <Transform DEF='NoFontStyle'
+        translation='-6.53841 1 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text
+            string='"3D Text"'
+            solid='true'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='NoFamily'
+        translation='-2 1 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text
+            string='"3D Text"'
+            solid='true'>
+          <FontStyle
+              family=''/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform DEF='Sans'
         translation='-6.53841 0 0'>
       <Shape>
         <Appearance>
@@ -26,7 +51,7 @@
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='Text_14'
+    <Transform DEF='Serif'
         translation='-2 0 0'>
       <Shape>
         <Appearance>
@@ -39,7 +64,7 @@
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='Text_15'
+    <Transform DEF='Typewriter'
         translation='3 0 0'>
       <Shape>
         <Appearance>
@@ -53,7 +78,7 @@
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='Text_16'
+    <Transform DEF='SansBold'
         translation='-6.53841 -1 0'>
       <Shape>
         <Appearance>
@@ -68,7 +93,7 @@
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='Text_17'
+    <Transform DEF='SerifBold'
         translation='-2 -1 0'>
       <Shape>
         <Appearance>
@@ -82,7 +107,7 @@
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='Text_18'
+    <Transform DEF='TypewriterBold'
         translation='3 -1 0'>
       <Shape>
         <Appearance>
@@ -97,7 +122,7 @@
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='Text_19'
+    <Transform DEF='SansItalic'
         translation='-6.53841 -2 0'>
       <Shape>
         <Appearance>
@@ -112,7 +137,7 @@
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='Text_20'
+    <Transform DEF='SerifItalic'
         translation='-2 -2 0'>
       <Shape>
         <Appearance>
@@ -126,7 +151,7 @@
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='Text_21'
+    <Transform DEF='TypewriterItalic'
         translation='3 -2 0'>
       <Shape>
         <Appearance>
@@ -141,7 +166,7 @@
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='Text_22'
+    <Transform DEF='SansBoldItalic_1'
         translation='-6.53841 -3 0'>
       <Shape>
         <Appearance>
@@ -156,7 +181,7 @@
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='Text_23'
+    <Transform DEF='SerifBoldItalic'
         translation='-2 -3 0'>
       <Shape>
         <Appearance>
@@ -170,7 +195,7 @@
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='Text_24'
+    <Transform DEF='TypewriterBoldItalic'
         translation='3 -3 0'>
       <Shape>
         <Appearance>
