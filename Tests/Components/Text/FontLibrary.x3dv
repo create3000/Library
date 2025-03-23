@@ -6,8 +6,8 @@ COMPONENT Text : 2
 
 META "created" "Sun, 02 Mar 2025 09:01:59 GMT"
 META "creator" "Holger Seelig"
-META "modified" "Fri, 21 Mar 2025 17:08:58 GMT"
-META "generator" "Sunrize X3D Editor V1.7.59, https://create3000.github.io/sunrize/"
+META "modified" "Sun, 23 Mar 2025 15:50:35 GMT"
+META "generator" "Sunrize X3D Editor V1.7.61, https://create3000.github.io/sunrize/"
 
 Viewpoint {
   description "Initial View"
@@ -28,6 +28,7 @@ DEF HeadLine_1 Transform {
           "SANS"
         ]
         style "BOLD"
+        size 0.4
       }
     }
   }
