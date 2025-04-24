@@ -6,7 +6,7 @@
     <meta name='created' content='Thu, 24 Apr 2025 22:05:11 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.8.2, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Thu, 24 Apr 2025 22:17:02 GMT'/>
+    <meta name='modified' content='Thu, 24 Apr 2025 22:18:12 GMT'/>
   </head>
   <Scene>
     <LayerSet
@@ -37,6 +37,14 @@
       </Layer>
       <Layer DEF='World_1'>
         <Viewpoint USE='_1'/>
+        <Transform DEF='Box_1'>
+          <Shape>
+            <Appearance>
+              <Material/>
+            </Appearance>
+            <Box/>
+          </Shape>
+        </Transform>
       </Layer>
     </LayerSet>
   </Scene>
