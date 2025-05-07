@@ -9,7 +9,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V1.1.0, http://titania.create3000.de'/>
     <meta name='generator' content='Sunrize X3D Editor V1.8.5, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 07 May 2025 08:24:35 GMT'/>
+    <meta name='modified' content='Wed, 07 May 2025 08:32:23 GMT'/>
   </head>
   <Scene>
     <Viewpoint
@@ -38,7 +38,7 @@
         </Appearance>
         <Box USE='_1'/>
       </Shape>
-      <ProximitySensor
+      <ProximitySensor DEF='LODProxy_1'
           size='100 100 100'/>
     </LOD>
     <ProximitySensor DEF='_3'
