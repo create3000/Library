@@ -9,7 +9,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V1.1.0, http://titania.create3000.de'/>
     <meta name='generator' content='Sunrize X3D Editor V1.8.5, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 07 May 2025 08:07:24 GMT'/>
+    <meta name='modified' content='Wed, 07 May 2025 08:24:35 GMT'/>
   </head>
   <Scene>
     <Viewpoint
@@ -17,7 +17,7 @@
         position='0 0 15'
         centerOfRotation='0 0 -15'/>
     <LOD
-        range='10'>
+        range='10, 20'>
       <Shape DEF='Red'>
         <Appearance>
           <Material DEF='Rococo12_1'
@@ -38,8 +38,10 @@
         </Appearance>
         <Box USE='_1'/>
       </Shape>
+      <ProximitySensor
+          size='100 100 100'/>
     </LOD>
-    <ProximitySensor DEF='_2'
+    <ProximitySensor DEF='_3'
         size='100 100 100'/>
     <Script DEF='ProxyScript'>
       <field accessType='inputOnly' type='SFVec3f' name='set_position'/>
@@ -51,6 +53,6 @@ function set_position (value, time)
 }
 ]]>
     </Script>
-    <ROUTE fromNode='_2' fromField='position_changed' toNode='ProxyScript' toField='set_position'/>
+    <ROUTE fromNode='_3' fromField='position_changed' toNode='ProxyScript' toField='set_position'/>
   </Scene>
 </X3D>
