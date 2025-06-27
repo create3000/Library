@@ -4,25 +4,24 @@ PROFILE Interchange
 
 COMPONENT Geometry2D : 2
 
-META "created" "Fri, 27 Jun 2025 18:18:25 GMT"
+META "created" "Fri, 27 Jun 2025 18:19:23 GMT"
 META "creator" "Holger Seelig"
 META "generator" "Sunrize X3D Editor V1.8.11, https://create3000.github.io/sunrize/"
-META "modified" "Fri, 27 Jun 2025 18:20:28 GMT"
+META "modified" "Fri, 27 Jun 2025 18:20:14 GMT"
 
 Viewpoint {
-  position -0.4979605 0.7036404 -1.862247
-  orientation -0.0228697315448609 -0.984469619072712 -0.174059025913324 2.88432088111505
+  position 0 0 1.707108
 }
 
 Shape {
   appearance Appearance {
     alphaMode "BLEND"
     texture MovieTexture {
-      url "transparent-flame-video-5.gif"
+      url "APNG-Icos4D.png"
       loop TRUE
     }
   }
   geometry Rectangle2D {
-    size 0.8 1.5
+    size 1 1
   }
 }
