@@ -3,25 +3,63 @@
 PROFILE Interchange
 
 COMPONENT Geometry2D : 2
+COMPONENT Layering : 1
+COMPONENT Layout : 2
 
 META "created" "Fri, 27 Jun 2025 18:19:23 GMT"
 META "creator" "Holger Seelig"
 META "generator" "Sunrize X3D Editor V1.8.11, https://create3000.github.io/sunrize/"
-META "modified" "Fri, 27 Jun 2025 18:20:14 GMT"
+META "modified" "Fri, 27 Jun 2025 18:27:31 GMT"
 
-Viewpoint {
-  position 0 0 1.707108
-}
-
-Shape {
-  appearance Appearance {
-    alphaMode "BLEND"
-    texture MovieTexture {
-      url "APNG-Icos4D.png"
-      loop TRUE
+LayerSet {
+  activeLayer 2
+  order [
+    1,
+    2
+  ]
+  layers [
+    DEF CheckerBoard_1 LayoutLayer {
+      pickable FALSE
+      layout Layout {
+        scaleMode [
+          "PIXEL",
+          "PIXEL"
+        ]
+      }
+      children Shape {
+        appearance Appearance {
+          texture PixelTexture {
+            image 2 2 1
+              0x99 0x66
+              0x66 0x99
+          }
+          textureTransform TextureTransform {
+            scale 5000 5000
+          }
+        }
+        geometry Rectangle2D {
+          size 80000 80000
+        }
+      }
     }
-  }
-  geometry Rectangle2D {
-    size 1 1
-  }
+    Layer {
+      children [
+        Viewpoint {
+          position 0 0 1.707108
+        }
+        Shape {
+          appearance Appearance {
+            alphaMode "BLEND"
+            texture MovieTexture {
+              url "APNG-Icos4D.png"
+              loop TRUE
+            }
+          }
+          geometry Rectangle2D {
+            size 1 1
+          }
+        }
+      ]
+    }
+  ]
 }
