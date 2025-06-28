@@ -9,7 +9,7 @@ COMPONENT Layout : 2
 META "created" "Fri, 27 Jun 2025 18:18:25 GMT"
 META "creator" "Holger Seelig"
 META "generator" "Sunrize X3D Editor V1.8.11, https://create3000.github.io/sunrize/"
-META "modified" "Fri, 27 Jun 2025 18:26:59 GMT"
+META "modified" "Sat, 28 Jun 2025 12:43:27 GMT"
 
 LayerSet {
   activeLayer 2
@@ -45,6 +45,7 @@ LayerSet {
     Layer {
       children [
         Viewpoint {
+          description "Initial View"
           position 0 0 2.052082
         }
         Shape {
