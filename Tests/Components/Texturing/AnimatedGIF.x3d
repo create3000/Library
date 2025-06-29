@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='EventUtilities' level='1'/>
+    <component name='Geometry2D' level='2'/>
+    <component name='Layering' level='1'/>
+    <component name='Layout' level='2'/>
+    <component name='PointingDeviceSensor' level='1'/>
+    <meta name='created' content='Fri, 27 Jun 2025 18:18:25 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.8.13, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Sun, 29 Jun 2025 23:07:35 GMT'/>
+  </head>
+  <Scene>
+    <ExternProtoDeclare name='PlayerControls' url='"PlayerControls.x3d#PlayerControls"'>
+      <field accessType='inputOnly' type='SFBool' name='set_paused'/>
+      <field accessType='inputOnly' type='SFBool' name='set_active'/>
+      <field accessType='outputOnly' type='SFBool' name='loop'/>
+      <field accessType='outputOnly' type='SFTime' name='startTime'/>
+      <field accessType='outputOnly' type='SFTime' name='resumeTime'/>
+      <field accessType='outputOnly' type='SFTime' name='pauseTime'/>
+      <field accessType='outputOnly' type='SFTime' name='stopTime'/>
+      <field accessType='inputOutput' type='SFColor' name='color'/>
+      <field accessType='inputOutput' type='SFColor' name='activeColor'/>
+    </ExternProtoDeclare>
+    <LayerSet
+        activeLayer='2'
+        order='1, 2, 3'>
+      <LayoutLayer DEF='CheckerBoard_1'
+          pickable='false'>
+        <Layout
+            scaleMode='"PIXEL", "PIXEL"'/>
+        <Shape>
+          <Appearance>
+            <PixelTexture
+                image='2 2 1
+                  0x99 0x66
+                  0x66 0x99'/>
+            <TextureTransform
+                scale='5000 5000'/>
+          </Appearance>
+          <Rectangle2D
+              size='80000 80000'/>
+        </Shape>
+      </LayoutLayer>
+      <Layer DEF='Movie'>
+        <Viewpoint
+            description='Initial View'
+            position='0 0 2.242467'/>
+        <Shape
+            bboxDisplay='true'>
+          <Appearance
+              alphaMode='BLEND'>
+            <MovieTexture DEF='_3'
+                url='"transparent-flame-video-5.gif"'
+                startTime='1751238289.092'/>
+          </Appearance>
+          <Rectangle2D
+              size='0.8 1.5'/>
+        </Shape>
+      </Layer>
+      <Layer DEF='Controls'>
+        <Transform
+            translation='0 -3.8 0'
+            scale='0.2 0.2 0.2'>
+          <ProtoInstance name='PlayerControls' DEF='_2'>
+            <fieldValue name='activeColor' value='0 0.75 1'/>
+          </ProtoInstance>
+        </Transform>
+      </Layer>
+    </LayerSet>
+    <ROUTE fromNode='_3' fromField='isPaused' toNode='_2' toField='set_paused'/>
+    <ROUTE fromNode='_3' fromField='isActive' toNode='_2' toField='set_active'/>
+    <ROUTE fromNode='_2' fromField='startTime' toNode='_3' toField='set_startTime'/>
+    <ROUTE fromNode='_2' fromField='resumeTime' toNode='_3' toField='set_resumeTime'/>
+    <ROUTE fromNode='_2' fromField='pauseTime' toNode='_3' toField='set_pauseTime'/>
+    <ROUTE fromNode='_2' fromField='stopTime' toNode='_3' toField='set_stopTime'/>
+    <ROUTE fromNode='_2' fromField='loop' toNode='_3' toField='set_loop'/>
+  </Scene>
+</X3D>
