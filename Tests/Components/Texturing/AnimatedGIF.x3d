@@ -10,7 +10,7 @@
     <meta name='created' content='Fri, 27 Jun 2025 18:18:25 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.8.13, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Sun, 29 Jun 2025 23:07:35 GMT'/>
+    <meta name='modified' content='Sun, 29 Jun 2025 23:29:43 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='PlayerControls' url='"PlayerControls.x3d#PlayerControls"'>
@@ -27,8 +27,7 @@
     <LayerSet
         activeLayer='2'
         order='1, 2, 3'>
-      <LayoutLayer DEF='CheckerBoard_1'
-          pickable='false'>
+      <LayoutLayer DEF='CheckerBoard'>
         <Layout
             scaleMode='"PIXEL", "PIXEL"'/>
         <Shape>
