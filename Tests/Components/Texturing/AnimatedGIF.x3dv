@@ -1,4 +1,4 @@
-#X3D V4.0 utf8 X_ITE V11.5.14
+#X3D V4.0 utf8 X_ITE V11.5.11
 
 PROFILE Interchange
 
@@ -11,7 +11,7 @@ COMPONENT PointingDeviceSensor : 1
 META "created" "Fri, 27 Jun 2025 18:18:25 GMT"
 META "creator" "Holger Seelig"
 META "generator" "Sunrize X3D Editor V1.8.13, https://create3000.github.io/sunrize/"
-META "modified" "Sun, 29 Jun 2025 19:37:06 GMT"
+META "modified" "Sun, 29 Jun 2025 19:51:56 GMT"
 
 EXTERNPROTO PlayerControls [
   inputOnly   SFBool  set_paused
@@ -65,6 +65,7 @@ LayerSet {
           position 0 0 2.242467
         }
         Shape {
+          bboxDisplay TRUE
           appearance Appearance {
             alphaMode "BLEND"
             texture DEF _1 MovieTexture {
@@ -78,7 +79,7 @@ LayerSet {
         }
       ]
     }
-    Layer {
+    DEF Controls Layer {
       children Transform {
         translation 0 -3.8 0
         scale 0.2 0.2 0.2
