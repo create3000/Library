@@ -11,12 +11,12 @@ COMPONENT PointingDeviceSensor : 1
 META "created" "Fri, 27 Jun 2025 18:19:23 GMT"
 META "creator" "Holger Seelig"
 META "generator" "Sunrize X3D Editor V1.8.13, https://create3000.github.io/sunrize/"
-META "modified" "Sun, 29 Jun 2025 19:52:48 GMT"
+META "modified" "Sun, 29 Jun 2025 20:01:40 GMT"
 
 EXTERNPROTO PlayerControls [
   inputOnly   SFBool  set_paused
   inputOnly   SFBool  set_active
-  inputOutput SFBool  loop
+  outputOnly  SFBool  loop
   outputOnly  SFTime  startTime
   outputOnly  SFTime  resumeTime
   outputOnly  SFTime  pauseTime
@@ -70,7 +70,6 @@ LayerSet {
             alphaMode "BLEND"
             texture DEF _1 MovieTexture {
               url "APNG-Icos4D.png"
-              loop TRUE
             }
           }
           geometry Rectangle2D {

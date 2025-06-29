@@ -8,14 +8,14 @@
     <meta name='created' content='Sun, 29 Jun 2025 18:49:26 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.8.13, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Sun, 29 Jun 2025 19:56:26 GMT'/>
+    <meta name='modified' content='Sun, 29 Jun 2025 20:01:18 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='PlayerControls'>
       <ProtoInterface>
         <field accessType='inputOnly' type='SFBool' name='set_paused'/>
         <field accessType='inputOnly' type='SFBool' name='set_active'/>
-        <field accessType='inputOutput' type='SFBool' name='loop'/>
+        <field accessType='outputOnly' type='SFBool' name='loop'/>
         <field accessType='outputOnly' type='SFTime' name='startTime'/>
         <field accessType='outputOnly' type='SFTime' name='resumeTime'/>
         <field accessType='outputOnly' type='SFTime' name='pauseTime'/>
@@ -135,10 +135,8 @@
               <Disk2D DEF='_22'
                   innerRadius='0.5'/>
             </Shape>
-            <Shape>
-              <IS>
-                <connect nodeField='visible' protoField='loop'/>
-              </IS>
+            <Shape DEF='_1'
+                visible='false'>
               <Appearance USE='_16'/>
               <Disk2D USE='_22'/>
             </Shape>
@@ -170,6 +168,7 @@
         <ROUTE fromNode='TriggerLoop' fromField='triggerTrue' toNode='ToggleLoop' toField='set_boolean'/>
         <ROUTE fromNode='ToggleLoop' fromField='toggle_changed' toNode='Loop_1' toField='set_boolean'/>
         <ROUTE fromNode='Loop_1' fromField='inputNegate' toNode='_20' toField='set_visible'/>
+        <ROUTE fromNode='ToggleLoop' fromField='toggle_changed' toNode='_1' toField='set_visible'/>
       </ProtoBody>
     </ProtoDeclare>
   </Scene>
