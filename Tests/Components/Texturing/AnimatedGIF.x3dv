@@ -11,7 +11,7 @@ COMPONENT PointingDeviceSensor : 1
 META "created" "Fri, 27 Jun 2025 18:18:25 GMT"
 META "creator" "Holger Seelig"
 META "generator" "Sunrize X3D Editor V1.8.13, https://create3000.github.io/sunrize/"
-META "modified" "Sun, 29 Jun 2025 20:01:32 GMT"
+META "modified" "Sun, 29 Jun 2025 20:09:12 GMT"
 
 EXTERNPROTO PlayerControls [
   inputOnly   SFBool  set_paused
@@ -58,7 +58,7 @@ LayerSet {
         }
       }
     }
-    Layer {
+    DEF Movie Layer {
       children [
         Viewpoint {
           description "Initial View"
@@ -82,18 +82,16 @@ LayerSet {
       children Transform {
         translation 0 -3.8 0
         scale 0.2 0.2 0.2
-        children DEF _2 PlayerControls {
-          loop TRUE
-        }
+        children DEF _2 PlayerControls { }
       }
     }
   ]
 }
 
-ROUTE _2.loop_changed TO _1.set_loop
 ROUTE _1.isPaused TO _2.set_paused
 ROUTE _1.isActive TO _2.set_active
 ROUTE _2.startTime TO _1.set_startTime
 ROUTE _2.resumeTime TO _1.set_resumeTime
 ROUTE _2.pauseTime TO _1.set_pauseTime
 ROUTE _2.stopTime TO _1.set_stopTime
+ROUTE _2.loop TO _1.set_loop
