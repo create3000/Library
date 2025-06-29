@@ -1,21 +1,37 @@
-#X3D V4.0 utf8 X_ITE V11.5.11
+#X3D V4.0 utf8 X_ITE V11.5.14
 
 PROFILE Interchange
 
+COMPONENT EventUtilities : 1
 COMPONENT Geometry2D : 2
 COMPONENT Layering : 1
 COMPONENT Layout : 2
+COMPONENT PointingDeviceSensor : 1
 
 META "created" "Fri, 27 Jun 2025 18:18:25 GMT"
 META "creator" "Holger Seelig"
-META "generator" "Sunrize X3D Editor V1.8.11, https://create3000.github.io/sunrize/"
-META "modified" "Sat, 28 Jun 2025 12:43:27 GMT"
+META "generator" "Sunrize X3D Editor V1.8.13, https://create3000.github.io/sunrize/"
+META "modified" "Sun, 29 Jun 2025 19:37:06 GMT"
+
+EXTERNPROTO PlayerControls [
+  inputOnly   SFBool  set_paused
+  inputOnly   SFBool  set_active
+  inputOutput SFBool  loop
+  outputOnly  SFTime  startTime
+  outputOnly  SFTime  resumeTime
+  outputOnly  SFTime  pauseTime
+  outputOnly  SFTime  stopTime
+  inputOutput SFColor color
+  inputOutput SFColor activeColor
+]
+"PlayerControls.x3d#PlayerControls"
 
 LayerSet {
   activeLayer 2
   order [
     1,
-    2
+    2,
+    3
   ]
   layers [
     DEF CheckerBoard_1 LayoutLayer {
@@ -46,12 +62,12 @@ LayerSet {
       children [
         Viewpoint {
           description "Initial View"
-          position 0 0 2.052082
+          position 0 0 2.242467
         }
         Shape {
           appearance Appearance {
             alphaMode "BLEND"
-            texture MovieTexture {
+            texture DEF _1 MovieTexture {
               url "transparent-flame-video-5.gif"
               loop TRUE
             }
@@ -62,5 +78,22 @@ LayerSet {
         }
       ]
     }
+    Layer {
+      children Transform {
+        translation 0 -3.8 0
+        scale 0.2 0.2 0.2
+        children DEF _2 PlayerControls {
+          loop TRUE
+        }
+      }
+    }
   ]
 }
+
+ROUTE _2.loop_changed TO _1.set_loop
+ROUTE _1.isPaused TO _2.set_paused
+ROUTE _1.isActive TO _2.set_active
+ROUTE _2.startTime TO _1.set_startTime
+ROUTE _2.resumeTime TO _1.set_resumeTime
+ROUTE _2.pauseTime TO _1.set_pauseTime
+ROUTE _2.stopTime TO _1.set_stopTime

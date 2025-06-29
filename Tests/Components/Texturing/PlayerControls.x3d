@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='EventUtilities' level='1'/>
+    <component name='Geometry2D' level='2'/>
+    <component name='PointingDeviceSensor' level='1'/>
+    <meta name='created' content='Sun, 29 Jun 2025 18:49:26 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.8.13, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Sun, 29 Jun 2025 19:33:05 GMT'/>
+  </head>
+  <Scene>
+    <ProtoDeclare name='PlayerControls'>
+      <ProtoInterface>
+        <field accessType='inputOnly' type='SFBool' name='set_paused'/>
+        <field accessType='inputOnly' type='SFBool' name='set_active'/>
+        <field accessType='inputOutput' type='SFBool' name='loop'/>
+        <field accessType='outputOnly' type='SFTime' name='startTime'/>
+        <field accessType='outputOnly' type='SFTime' name='resumeTime'/>
+        <field accessType='outputOnly' type='SFTime' name='pauseTime'/>
+        <field accessType='outputOnly' type='SFTime' name='stopTime'/>
+        <field accessType='inputOutput' type='SFColor' name='color' value='1 1 1'/>
+        <field accessType='inputOutput' type='SFColor' name='activeColor' value='0 0.5 1'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Group>
+          <Transform DEF='Play_1'
+              translation='-2 0 0'
+              rotation='0 0 1 4.71238898038469'>
+            <Shape>
+              <Appearance DEF='_5'>
+                <UnlitMaterial>
+                  <IS>
+                    <connect nodeField='emissiveColor' protoField='color'/>
+                  </IS>
+                </UnlitMaterial>
+              </Appearance>
+              <TriangleSet2D
+                  vertices='-1 -0.8660254, 1 -0.8660254, 0 0.8660254'/>
+            </Shape>
+            <TouchSensor
+                description='Play'>
+              <IS>
+                <connect nodeField='touchTime' protoField='startTime'/>
+              </IS>
+            </TouchSensor>
+          </Transform>
+          <Transform DEF='ResumePause'
+              translation='-2 0 0'
+              visible='false'>
+            <IS>
+              <connect nodeField='visible' protoField='set_active'/>
+            </IS>
+            <Group DEF='Resume'
+                visible='false'>
+              <IS>
+                <connect nodeField='visible' protoField='set_paused'/>
+              </IS>
+              <Transform
+                  translation='-0.4 0 0'>
+                <Shape>
+                  <Appearance DEF='_16'>
+                    <UnlitMaterial>
+                      <IS>
+                        <connect nodeField='emissiveColor' protoField='activeColor'/>
+                      </IS>
+                    </UnlitMaterial>
+                  </Appearance>
+                  <Rectangle2D DEF='_6'
+                      size='0.7 2'/>
+                </Shape>
+              </Transform>
+              <Transform
+                  translation='0.4 0 0'>
+                <Shape>
+                  <Appearance USE='_16'/>
+                  <Rectangle2D USE='_6'/>
+                </Shape>
+              </Transform>
+              <TouchSensor
+                  description='Resume'>
+                <IS>
+                  <connect nodeField='touchTime' protoField='resumeTime'/>
+                </IS>
+              </TouchSensor>
+            </Group>
+            <Group DEF='Pause_1'>
+              <Transform
+                  translation='-0.4 0 0'>
+                <Shape>
+                  <Appearance USE='_5'/>
+                  <Rectangle2D USE='_6'/>
+                </Shape>
+              </Transform>
+              <Transform
+                  translation='0.4 0 0'>
+                <Shape>
+                  <Appearance USE='_5'/>
+                  <Rectangle2D USE='_6'/>
+                </Shape>
+              </Transform>
+              <TouchSensor
+                  description='Pause'>
+                <IS>
+                  <connect nodeField='touchTime' protoField='pauseTime'/>
+                </IS>
+              </TouchSensor>
+            </Group>
+          </Transform>
+          <Transform DEF='Stop'>
+            <Shape DEF='_7'>
+              <Appearance USE='_5'/>
+              <Rectangle2D DEF='_3'/>
+            </Shape>
+            <Shape DEF='Active'
+                visible='false'>
+              <IS>
+                <connect nodeField='visible' protoField='set_active'/>
+              </IS>
+              <Appearance USE='_16'/>
+              <Rectangle2D USE='_3'/>
+            </Shape>
+            <TouchSensor
+                description='Stop'>
+              <IS>
+                <connect nodeField='touchTime' protoField='stopTime'/>
+              </IS>
+            </TouchSensor>
+          </Transform>
+          <Transform DEF='Loop'
+              translation='2 0 0'>
+            <Shape DEF='_20'>
+              <Appearance USE='_5'/>
+              <Disk2D DEF='_22'
+                  innerRadius='0.7'/>
+            </Shape>
+            <Shape DEF='_21'
+                visible='false'>
+              <Appearance USE='_16'/>
+              <Disk2D USE='_22'/>
+            </Shape>
+            <TouchSensor DEF='_17'
+                description='Loop'/>
+          </Transform>
+        </Group>
+        <BooleanFilter DEF='Active_1'>
+          <IS>
+            <connect nodeField='set_boolean' protoField='set_active'/>
+          </IS>
+        </BooleanFilter>
+        <BooleanFilter DEF='Paused_1'>
+          <IS>
+            <connect nodeField='set_boolean' protoField='set_paused'/>
+          </IS>
+        </BooleanFilter>
+        <BooleanTrigger DEF='TriggerLoop'/>
+        <BooleanToggle DEF='ToggleLoop'>
+          <IS>
+            <connect nodeField='toggle' protoField='loop'/>
+          </IS>
+        </BooleanToggle>
+        <BooleanFilter DEF='Loop_1'/>
+        <ROUTE fromNode='Active_1' fromField='inputNegate' toNode='_7' toField='set_visible'/>
+        <ROUTE fromNode='Active_1' fromField='inputNegate' toNode='Play_1' toField='set_visible'/>
+        <ROUTE fromNode='Paused_1' fromField='inputNegate' toNode='Pause_1' toField='set_visible'/>
+        <ROUTE fromNode='_17' fromField='touchTime' toNode='TriggerLoop' toField='set_triggerTime'/>
+        <ROUTE fromNode='TriggerLoop' fromField='triggerTrue' toNode='ToggleLoop' toField='set_boolean'/>
+        <ROUTE fromNode='ToggleLoop' fromField='toggle_changed' toNode='Loop_1' toField='set_boolean'/>
+        <ROUTE fromNode='Loop_1' fromField='inputNegate' toNode='_20' toField='set_visible'/>
+        <ROUTE fromNode='ToggleLoop' fromField='toggle_changed' toNode='_21' toField='set_visible'/>
+      </ProtoBody>
+    </ProtoDeclare>
+  </Scene>
+</X3D>
