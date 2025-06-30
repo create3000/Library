@@ -10,7 +10,7 @@
     <meta name='created' content='Fri, 27 Jun 2025 18:19:23 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.8.13, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Mon, 30 Jun 2025 13:26:22 GMT'/>
+    <meta name='modified' content='Mon, 30 Jun 2025 13:32:59 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='PlayerControls' url='"PlayerControls.x3d#PlayerControls"'>
@@ -52,7 +52,7 @@
             bboxDisplay='true'>
           <Appearance
               alphaMode='BLEND'>
-            <MovieTexture DEF='_1'
+            <MovieTexture DEF='MovieTexture'
                 url='"APNG-Icos4D.png"'/>
           </Appearance>
           <Rectangle2D
@@ -63,18 +63,18 @@
         <Transform
             translation='0 -3.7 0'
             scale='0.2 0.2 0.2'>
-          <ProtoInstance name='PlayerControls' DEF='_2'>
+          <ProtoInstance name='PlayerControls' DEF='PlayerControls'>
             <fieldValue name='activeColor' value='0 0.75 1'/>
           </ProtoInstance>
         </Transform>
       </Layer>
     </LayerSet>
-    <ROUTE fromNode='_1' fromField='isPaused' toNode='_2' toField='set_paused'/>
-    <ROUTE fromNode='_1' fromField='isActive' toNode='_2' toField='set_active'/>
-    <ROUTE fromNode='_2' fromField='startTime' toNode='_1' toField='set_startTime'/>
-    <ROUTE fromNode='_2' fromField='resumeTime' toNode='_1' toField='set_resumeTime'/>
-    <ROUTE fromNode='_2' fromField='pauseTime' toNode='_1' toField='set_pauseTime'/>
-    <ROUTE fromNode='_2' fromField='stopTime' toNode='_1' toField='set_stopTime'/>
-    <ROUTE fromNode='_2' fromField='loop' toNode='_1' toField='set_loop'/>
+    <ROUTE fromNode='MovieTexture' fromField='isPaused' toNode='PlayerControls' toField='set_paused'/>
+    <ROUTE fromNode='MovieTexture' fromField='isActive' toNode='PlayerControls' toField='set_active'/>
+    <ROUTE fromNode='PlayerControls' fromField='startTime' toNode='MovieTexture' toField='set_startTime'/>
+    <ROUTE fromNode='PlayerControls' fromField='resumeTime' toNode='MovieTexture' toField='set_resumeTime'/>
+    <ROUTE fromNode='PlayerControls' fromField='pauseTime' toNode='MovieTexture' toField='set_pauseTime'/>
+    <ROUTE fromNode='PlayerControls' fromField='stopTime' toNode='MovieTexture' toField='set_stopTime'/>
+    <ROUTE fromNode='PlayerControls' fromField='loop' toNode='MovieTexture' toField='set_loop'/>
   </Scene>
 </X3D>
