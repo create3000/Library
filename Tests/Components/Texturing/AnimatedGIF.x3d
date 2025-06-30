@@ -10,7 +10,7 @@
     <meta name='created' content='Fri, 27 Jun 2025 18:18:25 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.8.13, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Mon, 30 Jun 2025 10:49:39 GMT'/>
+    <meta name='modified' content='Mon, 30 Jun 2025 12:13:00 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='PlayerControls' url='"PlayerControls.x3d#PlayerControls"'>
@@ -53,8 +53,7 @@
           <Appearance
               alphaMode='BLEND'>
             <MovieTexture DEF='_3'
-                url='"transparent-flame-video-5.gif"'
-                startTime='1751238289.092'/>
+                url='"transparent-flame-video-5.gif"'/>
           </Appearance>
           <Rectangle2D
               size='0.8 1.5'/>

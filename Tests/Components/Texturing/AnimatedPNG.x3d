@@ -10,7 +10,7 @@
     <meta name='created' content='Fri, 27 Jun 2025 18:19:23 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.8.13, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Mon, 30 Jun 2025 10:49:27 GMT'/>
+    <meta name='modified' content='Mon, 30 Jun 2025 12:12:46 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='PlayerControls' url='"PlayerControls.x3d#PlayerControls"'>
@@ -53,11 +53,7 @@
           <Appearance
               alphaMode='BLEND'>
             <MovieTexture DEF='_1'
-                url='"APNG-Icos4D.png"'
-                startTime='1751239522.835'
-                resumeTime='1751239525.869'
-                pauseTime='1751239523.434'
-                stopTime='1751239522.085'/>
+                url='"APNG-Icos4D.png"'/>
           </Appearance>
           <Rectangle2D
               size='1 1'/>
