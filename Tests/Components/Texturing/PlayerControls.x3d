@@ -8,7 +8,7 @@
     <meta name='created' content='Sun, 29 Jun 2025 18:49:26 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.8.13, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Sun, 29 Jun 2025 23:23:27 GMT'/>
+    <meta name='modified' content='Mon, 30 Jun 2025 10:18:03 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='PlayerControls'>
@@ -78,7 +78,7 @@
               <Shape USE='ClickArea'/>
               <Transform DEF='Left_1'
                   translation='-0.4 0 0'>
-                <Shape>
+                <Shape DEF='_2'>
                   <Appearance DEF='_16'>
                     <UnlitMaterial>
                       <IS>
@@ -92,10 +92,7 @@
               </Transform>
               <Transform DEF='Right_1'
                   translation='0.4 0 0'>
-                <Shape>
-                  <Appearance USE='_16'/>
-                  <Rectangle2D USE='_6'/>
-                </Shape>
+                <Shape USE='_2'/>
               </Transform>
               <TouchSensor
                   description='Resume'>
@@ -108,17 +105,14 @@
               <Shape USE='ClickArea'/>
               <Transform DEF='Left'
                   translation='-0.4 0 0'>
-                <Shape>
+                <Shape DEF='_1'>
                   <Appearance USE='_4'/>
                   <Rectangle2D USE='_6'/>
                 </Shape>
               </Transform>
               <Transform DEF='Right'
                   translation='0.4 0 0'>
-                <Shape>
-                  <Appearance USE='_4'/>
-                  <Rectangle2D USE='_6'/>
-                </Shape>
+                <Shape USE='_1'/>
               </Transform>
               <TouchSensor
                   description='Pause'>
