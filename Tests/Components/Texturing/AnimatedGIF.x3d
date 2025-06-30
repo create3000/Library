@@ -10,7 +10,7 @@
     <meta name='created' content='Fri, 27 Jun 2025 18:18:25 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.8.13, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Mon, 30 Jun 2025 12:13:00 GMT'/>
+    <meta name='modified' content='Mon, 30 Jun 2025 13:26:59 GMT'/>
   </head>
   <Scene>
     <ExternProtoDeclare name='PlayerControls' url='"PlayerControls.x3d#PlayerControls"'>
@@ -47,7 +47,7 @@
       <Layer DEF='Movie'>
         <Viewpoint
             description='Initial View'
-            position='0 0 2.242467'/>
+            position='0 0 2.3'/>
         <Shape
             bboxDisplay='true'>
           <Appearance
@@ -61,7 +61,7 @@
       </Layer>
       <Layer DEF='Controls'>
         <Transform
-            translation='0 -3.8 0'
+            translation='0 -3.7 0'
             scale='0.2 0.2 0.2'>
           <ProtoInstance name='PlayerControls' DEF='_2'>
             <fieldValue name='activeColor' value='0 0.75 1'/>
