@@ -8,7 +8,7 @@
     <meta name='created' content='Sun, 29 Jun 2025 18:49:26 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.8.13, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Mon, 30 Jun 2025 12:03:56 GMT'/>
+    <meta name='modified' content='Mon, 30 Jun 2025 14:08:42 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='PlayerControls'>
@@ -34,7 +34,7 @@
                     emissiveColor='0.2666667 0.2666667 0.2666667'/>
               </Appearance>
               <Rectangle2D
-                  size='7.6 3'/>
+                  size='7.8 3'/>
             </Shape>
           </Transform>
           <Transform DEF='Play_1'
