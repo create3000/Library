@@ -4,13 +4,15 @@ PROFILE Interchange
 
 COMPONENT Scripting : 1
 
+UNIT angle degree 0.017453292519943295
+
 META "comment" "World of Titania"
 META "created" "Mon, 21 Jul 2014 07:20:49 GMT"
 META "creator" "Holger Seelig"
 META "generator" "Titania V4.4.3, http://titania.create3000.de"
 META "generator" "Sunrize X3D Editor V1.8.14, https://create3000.github.io/sunrize/"
 META "identifier" "file:///home/holger/Projekte/Library/Tests/Components/Geometry3D/1728.x3dv"
-META "modified" "Tue, 08 Jul 2025 10:45:00 GMT"
+META "modified" "Tue, 08 Jul 2025 16:54:21 GMT"
 
 PROTO Cubes [
   inputOutput SFInt32 xDimension 0
@@ -137,28 +139,57 @@ Viewpoint {
   position -1.970013e-23 1.155836e-23 79.44929
 }
 
-Cubes {
-  xDimension 13
-  yDimension 13
-  zDimension 13
-  explode 3
-  transparentShape DEF _2 Shape {
-    appearance Appearance {
-      material Material {
-        diffuseColor 1 0 0
-        transparency 0.5015458
+DEF _1 Transform {
+  rotation 0 1 0 125.711998343468
+  children [
+    DEF Animation Group {
+      children [
+        DEF _2 TimeSensor {
+          cycleInterval 20
+          loop TRUE
+        }
+        DEF _3 OrientationInterpolator {
+          key [
+            0,
+            0.25,
+            0.5,
+            0.75,
+            1
+          ]
+          keyValue [
+            0 1 0 0,
+            0 1 0 90,
+            0 1 0 180,
+            0 1 0 270,
+            0 1 0 0
+          ]
+        }
+      ]
+    }
+    Cubes {
+      xDimension 13
+      yDimension 13
+      zDimension 13
+      explode 3
+      transparentShape DEF _4 Shape {
+        appearance Appearance {
+          material Material {
+            diffuseColor 1 0 0
+            transparency 0.5015458
+          }
+        }
+        geometry DEF _5 Box { }
+      }
+      opaqueShape DEF _6 Shape {
+        appearance Appearance {
+          material Material {
+            diffuseColor 0 1 0.147102
+          }
+        }
+        geometry USE _5
       }
     }
-    geometry DEF _1 Box { }
-  }
-  opaqueShape DEF _5 Shape {
-    appearance Appearance {
-      material Material {
-        diffuseColor 0 1 0.147102
-      }
-    }
-    geometry USE _1
-  }
+  ]
 }
 
 DirectionalLight {
@@ -177,3 +208,6 @@ DirectionalLight {
   }
   direction -0.834222 0.152021 -0.530059
 }
+
+ROUTE _2.fraction_changed TO _3.set_fraction
+ROUTE _3.value_changed TO _1.set_rotation
