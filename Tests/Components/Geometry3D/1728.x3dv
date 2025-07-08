@@ -10,7 +10,7 @@ META "creator" "Holger Seelig"
 META "generator" "Titania V4.4.3, http://titania.create3000.de"
 META "generator" "Sunrize X3D Editor V1.8.14, https://create3000.github.io/sunrize/"
 META "identifier" "file:///home/holger/Projekte/Library/Tests/Components/Geometry3D/1728.x3dv"
-META "modified" "Tue, 08 Jul 2025 09:04:59 GMT"
+META "modified" "Tue, 08 Jul 2025 09:13:01 GMT"
 
 PROTO Cubes [
   inputOutput SFInt32 xDimension 0
@@ -146,6 +146,7 @@ Cubes {
     appearance Appearance {
       material Material {
         diffuseColor 1 0 0
+        transparency 0.5015458
       }
     }
     geometry DEF _1 Box { }
