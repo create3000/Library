@@ -10,7 +10,7 @@ META "creator" "Holger Seelig"
 META "generator" "Titania V4.4.3, http://titania.create3000.de"
 META "generator" "Sunrize X3D Editor V1.8.14, https://create3000.github.io/sunrize/"
 META "identifier" "file:///home/holger/Projekte/Library/Tests/Components/Geometry3D/1728.x3dv"
-META "modified" "Tue, 08 Jul 2025 09:13:01 GMT"
+META "modified" "Tue, 08 Jul 2025 10:45:00 GMT"
 
 PROTO Cubes [
   inputOutput SFInt32 xDimension 0
@@ -134,13 +134,13 @@ WorldInfo {
 
 Viewpoint {
   description "Home"
-  position 8.881784e-16 -3.885781e-16 73.17698
+  position -1.970013e-23 1.155836e-23 79.44929
 }
 
 Cubes {
-  xDimension 12
-  yDimension 12
-  zDimension 12
+  xDimension 13
+  yDimension 13
+  zDimension 13
   explode 3
   transparentShape DEF _2 Shape {
     appearance Appearance {
