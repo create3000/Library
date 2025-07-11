@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
-<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
     <meta name='created' content='Tue, 08 Oct 2024 15:49:29 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Sunrize X3D Editor V1.7.25, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 08 Oct 2024 16:58:33 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.8.14, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Fri, 11 Jul 2025 09:33:02 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
