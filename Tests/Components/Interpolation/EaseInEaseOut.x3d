@@ -2,15 +2,27 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
 <X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
+    <component name='EventUtilities' level='1'/>
+    <component name='Geometry2D' level='2'/>
     <component name='PointingDeviceSensor' level='1'/>
-    <component name='Scripting' level='1'/>
     <meta name='title' content='EaseInEaseOut'/>
     <meta name='created' content='Mon, 14 Jul 2025 13:38:16 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.8.15, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Mon, 14 Jul 2025 13:38:30 GMT'/>
+    <meta name='modified' content='Mon, 14 Jul 2025 15:37:11 GMT'/>
   </head>
   <Scene>
+    <ExternProtoDeclare name='PlayerControls' url='"../Texturing/PlayerControls.x3d#PlayerControls"'>
+      <field accessType='inputOnly' type='SFBool' name='set_paused'/>
+      <field accessType='inputOnly' type='SFBool' name='set_active'/>
+      <field accessType='outputOnly' type='SFBool' name='loop'/>
+      <field accessType='outputOnly' type='SFTime' name='startTime'/>
+      <field accessType='outputOnly' type='SFTime' name='resumeTime'/>
+      <field accessType='outputOnly' type='SFTime' name='pauseTime'/>
+      <field accessType='outputOnly' type='SFTime' name='stopTime'/>
+      <field accessType='inputOutput' type='SFColor' name='color'/>
+      <field accessType='inputOutput' type='SFColor' name='activeColor'/>
+    </ExternProtoDeclare>
     <Transform DEF='Box'
         translation='4.923368 0 0'>
       <Shape>
@@ -21,8 +33,7 @@
       </Shape>
     </Transform>
     <TimeSensor DEF='Timer'
-        cycleInterval='10'
-        loop='true'/>
+        cycleInterval='10'/>
     <EaseInEaseOut DEF='Ease'
         key='0, 1'
         easeInEaseOut='0 1, 1 0'/>
@@ -30,153 +41,19 @@
         key='0, 0.5, 1'
         keyValue='-5 0 0, 0 0 0, 5 0 0'/>
     <Transform
-        translation='-1 -3 0'
-        scale='0.2 0.2 0.2'>
-      <TouchSensor DEF='Enabled'/>
-      <Inline
-          url='"Cube.x3d"'/>
+        translation='0 -3.368708 0'
+        scale='0.1738148 0.1738148 0.1738148'>
+      <ProtoInstance name='PlayerControls' DEF='_1'/>
     </Transform>
-    <Transform
-        translation='0.5 -3 0'
-        scale='0.2 0.2 0.2'>
-      <TouchSensor DEF='Start'/>
-      <Inline
-          url='"Cube.x3d"'/>
-    </Transform>
-    <Transform
-        translation='1.5 -3 0'
-        scale='0.2 0.2 0.2'>
-      <TouchSensor DEF='Pause'/>
-      <Inline
-          url='"Cube.x3d"'/>
-    </Transform>
-    <Transform
-        translation='2 -3 0'
-        scale='0.2 0.2 0.2'>
-      <TouchSensor DEF='Resume'/>
-      <Inline
-          url='"Cube.x3d"'/>
-    </Transform>
-    <Transform
-        translation='3 -3 0'
-        scale='0.2 0.2 0.2'>
-      <TouchSensor DEF='Stop'/>
-      <Inline
-          url='"Cube.x3d"'/>
-    </Transform>
-    <Transform
-        translation='0.5 -3.5 0'
-        scale='0.2 0.2 0.2'>
-      <TouchSensor DEF='Start1'/>
-      <Inline
-          url='"Cube.x3d"'/>
-    </Transform>
-    <Transform
-        translation='1.5 -3.5 0'
-        scale='0.2 0.2 0.2'>
-      <TouchSensor DEF='Pause1'/>
-      <Inline
-          url='"Cube.x3d"'/>
-    </Transform>
-    <Transform
-        translation='2 -3.5 0'
-        scale='0.2 0.2 0.2'>
-      <TouchSensor DEF='Resume1'/>
-      <Inline
-          url='"Cube.x3d"'/>
-    </Transform>
-    <Transform
-        translation='3 -3.5 0'
-        scale='0.2 0.2 0.2'>
-      <TouchSensor DEF='Stop1'/>
-      <Inline
-          url='"Cube.x3d"'/>
-    </Transform>
-    <Script DEF='Debug'
-        directOutput='true'>
-      <field accessType='inputOnly' type='SFBool' name='set_enabled'/>
-      <field accessType='inputOnly' type='SFTime' name='set_startTime'/>
-      <field accessType='inputOnly' type='SFTime' name='set_pauseTime'/>
-      <field accessType='inputOnly' type='SFTime' name='set_resumeTime'/>
-      <field accessType='inputOnly' type='SFTime' name='set_stopTime'/>
-      <field accessType='inputOnly' type='SFTime' name='set_startTime1'/>
-      <field accessType='inputOnly' type='SFTime' name='set_pauseTime1'/>
-      <field accessType='inputOnly' type='SFTime' name='set_resumeTime1'/>
-      <field accessType='inputOnly' type='SFTime' name='set_stopTime1'/>
-      <field accessType='initializeOnly' type='SFTime' name='offset' value='3'/>
-      <field accessType='initializeOnly' type='SFNode' name='timer'>
-        <TimeSensor USE='Timer'/>
-      </field>
-<![CDATA[vrmlscript:
-
-function set_enabled (value, time)
-{
-	print ('enabled: ', value);
-	timer .enabled = !value;
-}
-
-function set_startTime (value, time)
-{
-	print ('startTime: ', time);
-	timer .startTime = time;
-}
-
-function set_pauseTime (value, time)
-{
-	print ('pauseTime: ', time);
-	timer .pauseTime = time;
-}
-
-function set_resumeTime (value, time)
-{
-	print ('resumeTime: ', time);
-	timer .resumeTime = time;
-}
-
-function set_stopTime (value, time)
-{
-	print ('stopTime: ', time);
-	timer .stopTime = time;
-
-}
-
-function set_startTime1 (value, time)
-{
-	print ('startTime1: ', time);
-	timer .startTime = time + offset;
-}
-
-function set_pauseTime1 (value, time)
-{
-	print ('pauseTime1: ', time);
-	timer .pauseTime = time + offset;
-}
-
-function set_resumeTime1 (value, time)
-{
-	print ('resumeTime1: ', time);
-	timer .resumeTime = time + offset;
-}
-
-function set_stopTime1 (value, time)
-{
-	print ('stopTime1: ', time);
-	timer .stopTime = time + offset;
-
-}
-]]>
-    </Script>
     <ROUTE fromNode='Timer' fromField='fraction_changed' toNode='Ease' toField='set_fraction'/>
     <ROUTE fromNode='Ease' fromField='modifiedFraction_changed' toNode='Pos' toField='set_fraction'/>
     <ROUTE fromNode='Pos' fromField='value_changed' toNode='Box' toField='set_translation'/>
-    <ROUTE fromNode='Enabled' fromField='isActive' toNode='Debug' toField='set_enabled'/>
-    <ROUTE fromNode='Start' fromField='touchTime' toNode='Debug' toField='set_startTime'/>
-    <ROUTE fromNode='Pause' fromField='touchTime' toNode='Debug' toField='set_pauseTime'/>
-    <ROUTE fromNode='Resume' fromField='touchTime' toNode='Debug' toField='set_resumeTime'/>
-    <ROUTE fromNode='Stop' fromField='touchTime' toNode='Debug' toField='set_stopTime'/>
-    <ROUTE fromNode='Start1' fromField='touchTime' toNode='Debug' toField='set_startTime1'/>
-    <ROUTE fromNode='Pause1' fromField='touchTime' toNode='Debug' toField='set_pauseTime1'/>
-    <ROUTE fromNode='Resume1' fromField='touchTime' toNode='Debug' toField='set_resumeTime1'/>
-    <ROUTE fromNode='Stop1' fromField='touchTime' toNode='Debug' toField='set_stopTime1'/>
+    <ROUTE fromNode='Timer' fromField='isPaused' toNode='_1' toField='set_paused'/>
+    <ROUTE fromNode='Timer' fromField='isActive' toNode='_1' toField='set_active'/>
+    <ROUTE fromNode='_1' fromField='loop' toNode='Timer' toField='set_loop'/>
+    <ROUTE fromNode='_1' fromField='startTime' toNode='Timer' toField='set_startTime'/>
+    <ROUTE fromNode='_1' fromField='resumeTime' toNode='Timer' toField='set_resumeTime'/>
+    <ROUTE fromNode='_1' fromField='pauseTime' toNode='Timer' toField='set_pauseTime'/>
+    <ROUTE fromNode='_1' fromField='stopTime' toNode='Timer' toField='set_stopTime'/>
   </Scene>
 </X3D>
