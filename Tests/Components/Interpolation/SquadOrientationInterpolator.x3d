@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='Scripting' level='1'/>
+    <meta name='title' content='SquadOrientationInterpolator'/>
+    <meta name='created' content='Mon, 14 Jul 2025 13:41:56 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.8.15, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Mon, 14 Jul 2025 13:41:56 GMT'/>
+  </head>
+  <Scene>
+    <ExternProtoDeclare name='ParticleShape' url='"ParticleShape.wrl"'>
+      <field accessType='inputOutput' type='SFColor' name='color'/>
+    </ExternProtoDeclare>
+    <ExternProtoDeclare name='LineTrail' url='"LineTrail.wrl"'>
+      <field accessType='inputOutput' type='SFBool' name='enabled'/>
+      <field accessType='inputOutput' type='SFTime' name='cycleInterval'/>
+      <field accessType='inputOutput' type='SFTime' name='resetTime'/>
+      <field accessType='inputOutput' type='SFVec3f' name='point'/>
+      <field accessType='initializeOnly' type='SFInt32' name='dimension'/>
+    </ExternProtoDeclare>
+    <Viewpoint
+        position='0 0 5'/>
+    <Transform DEF='Cone'
+        rotation='-0.0304463829871132 0.998660865973797 0.0418269355257198 0.397290430138634'>
+      <ProtoInstance name='ParticleShape'>
+        <fieldValue name='color' value='1 0 1'/>
+      </ProtoInstance>
+    </Transform>
+    <Shape>
+      <Appearance>
+        <Material
+            emissiveColor='0 0.8 0.8'/>
+      </Appearance>
+      <ProtoInstance name='LineTrail' DEF='Trail' containerField='geometry'>
+        <fieldValue name='cycleInterval' value='0.1'/>
+        <fieldValue name='point' value='0.3863039 0.01503377 0.922249'/>
+        <fieldValue name='dimension' value='100'/>
+      </ProtoInstance>
+    </Shape>
+    <TimeSensor DEF='Timer'
+        cycleInterval='10'
+        loop='true'/>
+    <SquadOrientationInterpolator DEF='Interpolator'
+        closed='true'
+        key='0, 0.08, 0.16, 0.25, 0.33, 0.4, 0.5, 0.58, 0.66, 0.75, 0.83, 0.92, 1'
+        keyValue='0 0 1 0, -0.0262131 0.999006 0.0360466 0.486701, -2.16524e-7 1 1.08262e-7 0.927554, -0.263707 0.934947 0.237346 1.58702, -0.309345 0.783754 0.538549 2.23924, -0.0588299 0.953145 0.296738 2.91495, 0.0317051 0.990316 0.135165 3.76157, 0.105104 0.98152 0.159912 4.31181, 0.235294 0.943118 0.234871 4.82839, 0.236786 0.944603 0.227283 5.52909, 7.8653e-6 1 2.4198e-6 6.15956, -0.134668 -0.975259 0.17531 6.15383, 0 0 1 0'/>
+    <Script DEF='MultVec'>
+      <field accessType='inputOnly' type='SFRotation' name='set_rotation'/>
+      <field accessType='outputOnly' type='SFVec3f' name='vector_changed'/>
+      <field accessType='initializeOnly' type='SFVec3f' name='vector' value='0 0 1'/>
+<![CDATA[vrmlscript:
+function set_rotation (value, time)
+{
+	vector_changed = value .multVec (vector);
+}
+]]>
+    </Script>
+    <ROUTE fromNode='Timer' fromField='fraction_changed' toNode='Interpolator' toField='set_fraction'/>
+    <ROUTE fromNode='Interpolator' fromField='value_changed' toNode='Cone' toField='set_rotation'/>
+    <ROUTE fromNode='Interpolator' fromField='value_changed' toNode='MultVec' toField='set_rotation'/>
+    <ROUTE fromNode='MultVec' fromField='vector_changed' toNode='Trail' toField='set_point'/>
+  </Scene>
+</X3D>

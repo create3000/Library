@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='Scripting' level='1'/>
+    <meta name='created' content='Mon, 14 Jul 2025 13:41:25 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.8.15, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Mon, 14 Jul 2025 13:41:25 GMT'/>
+  </head>
+  <Scene>
+    <ExternProtoDeclare name='ComposeSFVec3f' url='"ComposeSFVec3f.wrl"'>
+      <field accessType='inputOutput' type='SFFloat' name='x'/>
+      <field accessType='inputOutput' type='SFFloat' name='y'/>
+      <field accessType='inputOutput' type='SFFloat' name='z'/>
+      <field accessType='outputOnly' type='SFVec3f' name='value_changed'/>
+    </ExternProtoDeclare>
+    <ExternProtoDeclare name='LineTrail' url='"LineTrail.wrl"'>
+      <field accessType='inputOutput' type='SFBool' name='enabled'/>
+      <field accessType='inputOutput' type='SFTime' name='cycleInterval'/>
+      <field accessType='inputOutput' type='SFTime' name='resetTime'/>
+      <field accessType='inputOutput' type='SFVec3f' name='point'/>
+      <field accessType='initializeOnly' type='SFInt32' name='dimension'/>
+    </ExternProtoDeclare>
+    <Transform
+        translation='-5 0 0'
+        scale='10 1 1'>
+      <Transform DEF='Box'
+          translation='3.50475e-6 -1.37572e-9 0'
+          scale='0.01 0.1 0.1'>
+        <Shape>
+          <Appearance>
+            <Material/>
+          </Appearance>
+          <Box/>
+        </Shape>
+      </Transform>
+      <Shape>
+        <Appearance>
+          <Material
+              emissiveColor='0 0.8 0.8'/>
+        </Appearance>
+        <ProtoInstance name='LineTrail' DEF='Trail' containerField='geometry'>
+          <fieldValue name='cycleInterval' value='0.1'/>
+          <fieldValue name='resetTime' value='1752500478.442'/>
+          <fieldValue name='point' value='3.50475e-6 -1.37572e-9 0'/>
+          <fieldValue name='dimension' value='50'/>
+        </ProtoInstance>
+      </Shape>
+    </Transform>
+    <TimeSensor DEF='Timer'
+        cycleInterval='10'
+        loop='true'/>
+    <SplineScalarInterpolator DEF='Interpolator'
+        key='0, 0.25, 0.5, 0.75, 1'
+        keyValue='0, -2, 2, -1, 0'/>
+    <ProtoInstance name='ComposeSFVec3f' DEF='Composer'>
+      <fieldValue name='x' value='0.8442'/>
+      <fieldValue name='y' value='-0.8274011'/>
+    </ProtoInstance>
+    <ROUTE fromNode='Timer' fromField='cycleTime' toNode='Trail' toField='set_resetTime'/>
+    <ROUTE fromNode='Timer' fromField='fraction_changed' toNode='Interpolator' toField='set_fraction'/>
+    <ROUTE fromNode='Timer' fromField='fraction_changed' toNode='Composer' toField='set_x'/>
+    <ROUTE fromNode='Interpolator' fromField='value_changed' toNode='Composer' toField='set_y'/>
+    <ROUTE fromNode='Composer' fromField='value_changed' toNode='Box' toField='set_translation'/>
+    <ROUTE fromNode='Composer' fromField='value_changed' toNode='Trail' toField='set_point'/>
+  </Scene>
+</X3D>
