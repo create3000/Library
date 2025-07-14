@@ -13,7 +13,7 @@
     <meta name='description' content='beginnings of a force directed graph in 3D'/>
     <meta name='generator' content='Vim, X3D-Edit, https://savage.nps.edu/X3D-Edit'/>
     <meta name='generator' content='Sunrize X3D Editor V1.8.15, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Mon, 14 Jul 2025 08:00:23 GMT'/>
+    <meta name='modified' content='Mon, 14 Jul 2025 10:28:18 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='node'>
@@ -57,8 +57,7 @@
             <field accessType='inputOutput' type='SFVec3f' name='old'/>
             <field accessType='inputOnly' type='SFTime' name='set_cycle'/>
             <field accessType='outputOnly' type='MFVec3f' name='keyValue'/>
-<![CDATA[
-ecmascript:
+<![CDATA[ecmascript:
 function set_cycle(value) {
 	old = translation;
 	translation = new SFVec3f(Math.random()*100-50, Math.random()*100-50, Math.random()*100-50);
@@ -102,8 +101,7 @@ function set_cycle(value) {
               <connect nodeField='endA' protoField='set_positionA'/>
               <connect nodeField='endB' protoField='set_positionB'/>
             </IS>
-<![CDATA[
-ecmascript:
+<![CDATA[ecmascript:
 
                 function set_endA(value) {
 		    if (typeof spine === 'undefined') {
@@ -134,35 +132,34 @@ ecmascript:
           minPosition='-50 -50'
           maxPosition='50 50'/>
       <ProtoInstance name='node' DEF='nodeA'>
-        <fieldValue name='position' value='0 3.298334 0'/>
+        <fieldValue name='position' value='0 3.738334 0'/>
       </ProtoInstance>
       <ProtoInstance name='node' DEF='nodeB'>
-        <fieldValue name='position' value='0 3.298334 0'/>
+        <fieldValue name='position' value='0 3.738334 0'/>
       </ProtoInstance>
       <ProtoInstance name='node' DEF='nodeC'>
-        <fieldValue name='position' value='0 3.298334 0'/>
+        <fieldValue name='position' value='0 3.738334 0'/>
       </ProtoInstance>
       <ProtoInstance name='node' DEF='nodeD'>
-        <fieldValue name='position' value='0 3.298334 0'/>
+        <fieldValue name='position' value='0 3.738334 0'/>
       </ProtoInstance>
       <ProtoInstance name='cyl' DEF='linkA_1'>
-        <fieldValue name='set_positionA' value='0 3.298334 0'/>
-        <fieldValue name='set_positionB' value='0 3.298334 0'/>
+        <fieldValue name='set_positionA' value='0 3.738334 0'/>
+        <fieldValue name='set_positionB' value='0 3.738334 0'/>
       </ProtoInstance>
       <ProtoInstance name='cyl' DEF='linkB'>
-        <fieldValue name='set_positionA' value='0 3.298334 0'/>
-        <fieldValue name='set_positionB' value='0 3.298334 0'/>
+        <fieldValue name='set_positionA' value='0 3.738334 0'/>
+        <fieldValue name='set_positionB' value='0 3.738334 0'/>
       </ProtoInstance>
       <ProtoInstance name='cyl' DEF='linkC'>
-        <fieldValue name='set_positionA' value='0 3.298334 0'/>
-        <fieldValue name='set_positionB' value='0 3.298334 0'/>
+        <fieldValue name='set_positionA' value='0 3.738334 0'/>
+        <fieldValue name='set_positionB' value='0 3.738334 0'/>
       </ProtoInstance>
     </Transform>
     <Script DEF='clickHandler'>
       <field accessType='inputOutput' type='SFInt32' name='counter'/>
       <field accessType='inputOnly' type='SFBool' name='add_node'/>
-<![CDATA[
-ecmascript:
+<![CDATA[ecmascript:
 	function add_node(value) {
                 // Browser.print('hey ', counter);
                 counter = counter++;
@@ -184,10 +181,10 @@ ecmascript:
     </Script>
     <ROUTE fromNode='clickGenerator' fromField='isActive' toNode='clickHandler' toField='add_node'/>
     <ROUTE fromNode='nodeA' fromField='position_changed' toNode='linkA_1' toField='set_set_positionA'/>
-    <ROUTE fromNode='nodeA' fromField='position_changed' toNode='linkB' toField='set_set_positionA'/>
-    <ROUTE fromNode='nodeA' fromField='position_changed' toNode='linkC' toField='set_set_positionA'/>
     <ROUTE fromNode='nodeB' fromField='position_changed' toNode='linkA_1' toField='set_set_positionB'/>
+    <ROUTE fromNode='nodeA' fromField='position_changed' toNode='linkB' toField='set_set_positionA'/>
     <ROUTE fromNode='nodeC' fromField='position_changed' toNode='linkB' toField='set_set_positionB'/>
+    <ROUTE fromNode='nodeA' fromField='position_changed' toNode='linkC' toField='set_set_positionA'/>
     <ROUTE fromNode='nodeD' fromField='position_changed' toNode='linkC' toField='set_set_positionB'/>
   </Scene>
 </X3D>
