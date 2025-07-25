@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
-<X3D profile='Full' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
+    <component name='Geometry2D' level='2'/>
+    <component name='PointingDeviceSensor' level='1'/>
+    <component name='Scripting' level='1'/>
     <meta name='comment' content='World of Titania'/>
     <meta name='created' content='Fri, 04 Sep 2015 10:19:01 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Titania V3.0.4, http://titania.create3000.de'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.8.16, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Cobweb/excite/tests/Components/Shape/Connectors.x3d'/>
-    <meta name='modified' content='Tue, 25 Jul 2017 09:42:17 GMT'/>
+    <meta name='modified' content='Fri, 25 Jul 2025 15:45:38 GMT'/>
     <meta name='title' content='Connectors'/>
   </head>
   <Scene>
@@ -110,14 +114,14 @@ function initialize ()
               <connect nodeField='geometry' protoField='geometry'/>
             </IS>
             <Appearance>
-              <FillProperties
-                  filled='false'
-                  hatched='false'/>
               <LineProperties>
                 <IS>
                   <connect nodeField='linewidthScaleFactor' protoField='linewidthScaleFactor'/>
                 </IS>
               </LineProperties>
+              <FillProperties
+                  filled='false'
+                  hatched='false'/>
               <Material
                   diffuseColor='0 0 0'>
                 <IS>
@@ -153,7 +157,7 @@ function initialize ()
               <ProtoInstance name='Widget'>
                 <fieldValue name='lineColor' value='0.72 0.14 0.23'/>
                 <fieldValue name='geometry'>
-                  <Disk2D DEF='Connector' containerField='children'
+                  <Disk2D DEF='Connector'
                       outerRadius='0.2'/>
                 </fieldValue>
               </ProtoInstance>
@@ -163,7 +167,7 @@ function initialize ()
               <ProtoInstance name='Widget'>
                 <fieldValue name='lineColor' value='0.44 0.5 0.72'/>
                 <fieldValue name='geometry'>
-                  <Disk2D USE='Connector' containerField='children'/>
+                  <Disk2D USE='Connector'/>
                 </fieldValue>
               </ProtoInstance>
             </Transform>
@@ -271,7 +275,7 @@ function set_translation ()
     <Background
         skyColor='0.2 0.2 0.2'/>
     <OrthoViewpoint
-        description='OthoViewpoint'
+        description='OrthoViewpoint'
         position='-3.13496 -4.19776 10'
         centerOfRotation='-3.13496 -4.19776 0'
         fieldOfView='0, 0, 10, 10'/>
