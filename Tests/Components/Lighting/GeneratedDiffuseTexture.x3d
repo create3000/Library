@@ -6,7 +6,7 @@
     <meta name='created' content='Sat, 26 Jul 2025 18:02:32 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.8.16, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Sat, 26 Jul 2025 18:34:14 GMT'/>
+    <meta name='modified' content='Sat, 26 Jul 2025 18:39:15 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -33,14 +33,14 @@
         translation='-1.5 0 0'>
       <EnvironmentLight>
         <ImageCubeMapTexture containerField='diffuseTexture'
-            url='"https://cdn.jsdelivr.net/npm/x3d-image@2.1.3/src/images/cannon-exterior-diffuse.avif"'>
+            url='"https://create3000.github.io/Library/Tests/Components/images/helipad-diffuse.jpg"'>
           <TextureProperties DEF='_3'
               generateMipMaps='true'
               minificationFilter='NICEST'
               magnificationFilter='NICEST'/>
         </ImageCubeMapTexture>
-        <ImageCubeMapTexture containerField='specularTexture'
-            url='"https://cdn.jsdelivr.net/npm/x3d-image@2.1.3/src/images/cannon-exterior-specular.avif"'>
+        <ImageCubeMapTexture DEF='_1' containerField='specularTexture'
+            url='"https://create3000.github.io/Library/Tests/Components/images/helipad-specular.jpg"'>
           <TextureProperties USE='_3'/>
         </ImageCubeMapTexture>
       </EnvironmentLight>
@@ -68,13 +68,7 @@
     <Transform
         translation='1.5 -0 0'>
       <EnvironmentLight>
-        <ImageCubeMapTexture containerField='specularTexture'
-            url='"https://cdn.jsdelivr.net/npm/x3d-image@2.1.3/src/images/cannon-exterior-specular.avif"'>
-          <TextureProperties
-              generateMipMaps='true'
-              minificationFilter='NICEST'
-              magnificationFilter='NICEST'/>
-        </ImageCubeMapTexture>
+        <ImageCubeMapTexture USE='_1' containerField='specularTexture'/>
       </EnvironmentLight>
       <Transform DEF='Sphere_1'
           translation='-0 1 -0'>
