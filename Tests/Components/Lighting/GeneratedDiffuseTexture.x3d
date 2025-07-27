@@ -6,7 +6,7 @@
     <meta name='created' content='Sat, 26 Jul 2025 18:02:32 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.8.16, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Sat, 26 Jul 2025 18:39:15 GMT'/>
+    <meta name='modified' content='Sun, 27 Jul 2025 11:23:44 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -30,22 +30,22 @@
           headlight='false'/>
     </Viewpoint>
     <Transform
-        translation='-1.5 0 0'>
+        translation='-2 0 -0'>
       <EnvironmentLight>
         <ImageCubeMapTexture containerField='diffuseTexture'
             url='"https://create3000.github.io/Library/Tests/Components/images/helipad-diffuse.jpg"'>
-          <TextureProperties DEF='_3'
+          <TextureProperties DEF='_4'
               generateMipMaps='true'
               minificationFilter='NICEST'
               magnificationFilter='NICEST'/>
         </ImageCubeMapTexture>
         <ImageCubeMapTexture DEF='_1' containerField='specularTexture'
             url='"https://create3000.github.io/Library/Tests/Components/images/helipad-specular.jpg"'>
-          <TextureProperties USE='_3'/>
+          <TextureProperties USE='_4'/>
         </ImageCubeMapTexture>
       </EnvironmentLight>
-      <Transform DEF='Sphere_2'
-          translation='-0 1 -0'>
+      <Transform DEF='Sphere_4'
+          translation='-0 1 0'>
         <Shape>
           <Appearance>
             <PhysicalMaterial
@@ -54,7 +54,7 @@
           <Sphere/>
         </Shape>
       </Transform>
-      <Transform DEF='Sphere_3'
+      <Transform DEF='Sphere_5'
           translation='-0 -1 0'>
         <Shape>
           <Appearance>
@@ -65,8 +65,24 @@
         </Shape>
       </Transform>
     </Transform>
+    <Transform>
+      <EnvironmentLight>
+        <ImageCubeMapTexture USE='_1' containerField='diffuseTexture'/>
+        <ImageCubeMapTexture USE='_1' containerField='specularTexture'/>
+      </EnvironmentLight>
+      <Transform DEF='Sphere_2'
+          translation='0 -1 0'>
+        <Shape>
+          <Appearance DEF='_2'>
+            <PhysicalMaterial
+                metallic='0'/>
+          </Appearance>
+          <Sphere/>
+        </Shape>
+      </Transform>
+    </Transform>
     <Transform
-        translation='1.5 -0 0'>
+        translation='2 -0 -0'>
       <EnvironmentLight>
         <ImageCubeMapTexture USE='_1' containerField='specularTexture'/>
       </EnvironmentLight>
@@ -83,10 +99,7 @@
       <Transform DEF='Sphere'
           translation='-0 -1 0'>
         <Shape>
-          <Appearance>
-            <PhysicalMaterial
-                metallic='0'/>
-          </Appearance>
+          <Appearance USE='_2'/>
           <Sphere/>
         </Shape>
       </Transform>
