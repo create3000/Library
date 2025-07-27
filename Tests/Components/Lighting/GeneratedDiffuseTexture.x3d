@@ -6,7 +6,7 @@
     <meta name='created' content='Sat, 26 Jul 2025 18:02:32 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.8.16, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Sun, 27 Jul 2025 11:23:44 GMT'/>
+    <meta name='modified' content='Sun, 27 Jul 2025 12:35:59 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -71,7 +71,7 @@
         <ImageCubeMapTexture USE='_1' containerField='specularTexture'/>
       </EnvironmentLight>
       <Transform DEF='Sphere_2'
-          translation='0 -1 0'>
+          translation='0 1 0'>
         <Shape>
           <Appearance DEF='_2'>
             <PhysicalMaterial
@@ -96,8 +96,8 @@
           <Sphere/>
         </Shape>
       </Transform>
-      <Transform DEF='Sphere'
-          translation='-0 -1 0'>
+      <Transform DEF='Sphere_6'
+          translation='-2 -1 0'>
         <Shape>
           <Appearance USE='_2'/>
           <Sphere/>
