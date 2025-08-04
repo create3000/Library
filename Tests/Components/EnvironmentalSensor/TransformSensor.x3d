@@ -11,10 +11,10 @@
     <meta name='creator' content='Frans Kievith'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit'/>
-    <meta name='generator' content='Sunrize X3D Editor V1.8.5, https://create3000.github.io/sunrize/'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.8.21, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='TransformSensor-issue.x3d'/>
     <meta name='created' content='Tue, 06 May 2025 21:37:34 GMT'/>
-    <meta name='modified' content='Tue, 06 May 2025 21:37:34 GMT'/>
+    <meta name='modified' content='Mon, 04 Aug 2025 21:59:02 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='CoordinateAxes'>
@@ -134,7 +134,8 @@
             description='Default view'
             position='0 0 20'/>
         <Transform
-            translation='10 0 0'>
+            translation='10 0 0'
+            bboxDisplay='true'>
           <Group DEF='HierachyLevel0'>
             <Shape DEF='Cylinder'>
               <Appearance>
@@ -145,7 +146,7 @@
             <Transform
                 translation='-10 0 0'>
               <Transform DEF='Rotate1'
-                  rotation='0 0 1 4.09977208190043'>
+                  rotation='0 0 1 0.623285573859306'>
                 <Group DEF='HierachyLevel1'>
                   <Shape DEF='Box'>
                     <Appearance>
@@ -206,15 +207,15 @@
           </ProtoInstance>
         </Transform>
         <Transform DEF='CoordinateAxesL1'
-            rotation='0 0 1 4.09977208190043'>
+            rotation='0 0 1 0.623285573859307'>
           <ProtoInstance name='CoordinateAxes'>
             <fieldValue name='symbol' value='"box"'/>
             <fieldValue name='scale' value='2 2 2'/>
           </ProtoInstance>
         </Transform>
         <Transform DEF='CoordinateAxesL2'
-            translation='5.750104 8.181461 0'
-            rotation='0 0 1 4.09977208190043'>
+            translation='-8.11965 -5.837061 0'
+            rotation='0 0 1 0.623285573859307'>
           <ProtoInstance name='CoordinateAxes'>
             <fieldValue name='symbol' value='"sph"'/>
             <fieldValue name='scale' value='2 2 2'/>
