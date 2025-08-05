@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
-<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
     <component name='CubeMapTexturing' level='3'/>
     <component name='Geometry2D' level='2'/>
@@ -11,8 +11,8 @@
     <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
     <meta name='created' content='Mon, 19 Aug 2024 08:19:30 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Sunrize X3D Editor V1.7.12, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Sat, 24 Aug 2024 08:38:32 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.8.21, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Tue, 05 Aug 2025 07:18:41 GMT'/>
   </head>
   <Scene>
     <WorldInfo
@@ -121,7 +121,8 @@
           </Transform>
         </Transform>
         <Transform DEF='Geometry2D'
-            translation='0 2 0'>
+            translation='0 2 0'
+            bboxDisplay='true'>
           <Transform DEF='ArcClose2D'
               translation='-3 0 0'>
             <Shape>
@@ -199,7 +200,8 @@
           </Transform>
         </Transform>
         <Transform DEF='Rendering'
-            translation='-9 -2 0'>
+            translation='-9 -2 0'
+            bboxDisplay='true'>
           <Transform DEF='Pyramid_1'
               translation='6 0 0'>
             <Shape>
