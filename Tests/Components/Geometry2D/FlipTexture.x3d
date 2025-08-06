@@ -7,7 +7,7 @@
     <meta name='created' content='Wed, 06 Aug 2025 14:43:24 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.8.21, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 06 Aug 2025 15:22:41 GMT'/>
+    <meta name='modified' content='Wed, 06 Aug 2025 20:03:57 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -38,8 +38,8 @@
               url='"../images/uv-grid.jpg"'/>
           <TextureTransform
               translation='1 2'
-              rotation='1.047198'
-              scale='2 3'/>
+              rotation='1'
+              scale='0.5 0.75'/>
         </Appearance>
         <Rectangle2D/>
       </Shape>
