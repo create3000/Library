@@ -7,7 +7,7 @@
     <meta name='created' content='Wed, 06 Aug 2025 14:43:24 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.8.21, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 06 Aug 2025 21:18:17 GMT'/>
+    <meta name='modified' content='Wed, 06 Aug 2025 21:32:14 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -26,9 +26,9 @@
     </WorldInfo>
     <Viewpoint
         description='Initial View'
-        position='-0.5 0.5 13.39805'
-        centerOfRotation='-0.5 0.5 0'/>
-    <Group DEF='Labes_1'>
+        position='-0.5 -2 20.09027'
+        centerOfRotation='-0.5 -2 0'/>
+    <Group DEF='Labes'>
       <Transform DEF='FrontText'
           translation='-5 5.225635 0'>
         <Shape>
@@ -53,18 +53,27 @@
         <Shape>
           <Text
               string='"Texture"'>
-            <FontStyle DEF='_2'
+            <FontStyle DEF='_8'
                 size='0.5'
                 justify='"END", "BEGIN"'/>
           </Text>
         </Shape>
       </Transform>
-      <Transform DEF='MaterialTextureText_1'
+      <Transform DEF='MaterialTextureText'
           translation='-5.356445 0 0'>
         <Shape>
           <Text
               string='"Material", "Texture"'>
-            <FontStyle USE='_2'/>
+            <FontStyle USE='_8'/>
+          </Text>
+        </Shape>
+      </Transform>
+      <Transform DEF='NormalTextureText_1'
+          translation='-5.356445 -5 0'>
+        <Shape>
+          <Text
+              string='"Normal"'>
+            <FontStyle USE='_8'/>
           </Text>
         </Shape>
       </Transform>
@@ -83,7 +92,7 @@
                 rotation='1'
                 scale='0.5 0.75'/>
           </Appearance>
-          <Rectangle2D DEF='_1'/>
+          <Rectangle2D DEF='_7'/>
         </Shape>
       </Transform>
       <Transform DEF='Rectangle2D_3'
@@ -93,11 +102,11 @@
         <Shape USE='_3'/>
       </Transform>
     </Group>
-    <Group DEF='MaterialTexture_1'>
-      <Transform DEF='Rectangle2D_1'
+    <Group DEF='MaterialTexture'>
+      <Transform DEF='Rectangle2D_4'
           translation='-3 -2 0'
           scale='2 2 2'>
-        <Shape DEF='_4'>
+        <Shape DEF='_6'>
           <Appearance>
             <Material>
               <ImageTexture containerField='diffuseTexture'
@@ -108,11 +117,36 @@
                 rotation='1'
                 scale='0.5 0.75'/>
           </Appearance>
-          <Rectangle2D USE='_1'/>
+          <Rectangle2D USE='_7'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='Rectangle2D_5'
+          translation='2 -2 0'
+          rotation='0 1 0 3.14159265358979'
+          scale='2 2 2'>
+        <Shape USE='_6'/>
+      </Transform>
+    </Group>
+    <Group DEF='MaterialTexture_1'>
+      <Transform DEF='Rectangle2D_1'
+          translation='-3 -7 0'
+          scale='2 2 2'>
+        <Shape DEF='_4'>
+          <Appearance>
+            <Material>
+              <ImageTexture containerField='normalTexture'
+                  url='"../images/uv-grid.jpg"'/>
+            </Material>
+            <TextureTransform
+                translation='1 2'
+                rotation='1'
+                scale='0.5 0.75'/>
+          </Appearance>
+          <Rectangle2D/>
         </Shape>
       </Transform>
       <Transform DEF='Rectangle2D'
-          translation='2 -2 0'
+          translation='2 -7 0'
           rotation='0 1 0 3.14159265358979'
           scale='2 2 2'>
         <Shape USE='_4'/>
