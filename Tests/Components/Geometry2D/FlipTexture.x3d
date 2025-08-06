@@ -7,7 +7,7 @@
     <meta name='created' content='Wed, 06 Aug 2025 14:43:24 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.8.21, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 06 Aug 2025 21:32:14 GMT'/>
+    <meta name='modified' content='Wed, 06 Aug 2025 21:36:11 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -68,7 +68,7 @@
           </Text>
         </Shape>
       </Transform>
-      <Transform DEF='NormalTextureText_1'
+      <Transform DEF='NormalTextureText'
           translation='-5.356445 -5 0'>
         <Shape>
           <Text
@@ -87,7 +87,7 @@
             <Material/>
             <ImageTexture
                 url='"../images/uv-grid.jpg"'/>
-            <TextureTransform
+            <TextureTransform DEF='_1'
                 translation='1 2'
                 rotation='1'
                 scale='0.5 0.75'/>
@@ -112,10 +112,7 @@
               <ImageTexture containerField='diffuseTexture'
                   url='"../images/uv-grid.jpg"'/>
             </Material>
-            <TextureTransform
-                translation='1 2'
-                rotation='1'
-                scale='0.5 0.75'/>
+            <TextureTransform USE='_1'/>
           </Appearance>
           <Rectangle2D USE='_7'/>
         </Shape>
@@ -127,7 +124,7 @@
         <Shape USE='_6'/>
       </Transform>
     </Group>
-    <Group DEF='MaterialTexture_1'>
+    <Group DEF='NormalTexture_1'>
       <Transform DEF='Rectangle2D_1'
           translation='-3 -7 0'
           scale='2 2 2'>
@@ -137,10 +134,7 @@
               <ImageTexture containerField='normalTexture'
                   url='"../images/uv-grid.jpg"'/>
             </Material>
-            <TextureTransform
-                translation='1 2'
-                rotation='1'
-                scale='0.5 0.75'/>
+            <TextureTransform USE='_1'/>
           </Appearance>
           <Rectangle2D/>
         </Shape>
