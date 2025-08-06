@@ -7,7 +7,7 @@
     <meta name='created' content='Wed, 06 Aug 2025 14:43:24 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.8.21, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 06 Aug 2025 20:03:57 GMT'/>
+    <meta name='modified' content='Wed, 06 Aug 2025 21:06:29 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -26,32 +26,10 @@
     </WorldInfo>
     <Viewpoint
         description='Initial View'
-        position='-0.5 0 7.414046'
-        centerOfRotation='-0.5 0 0'/>
-    <Transform DEF='Rectangle2D_1'
-        translation='-3 0 0'
-        scale='2 2 2'>
-      <Shape DEF='_1'>
-        <Appearance>
-          <Material/>
-          <ImageTexture
-              url='"../images/uv-grid.jpg"'/>
-          <TextureTransform
-              translation='1 2'
-              rotation='1'
-              scale='0.5 0.75'/>
-        </Appearance>
-        <Rectangle2D/>
-      </Shape>
-    </Transform>
-    <Transform DEF='Rectangle2D'
-        translation='2 0 0'
-        rotation='0 1 -0 3.14159265358979'
-        scale='2 2 2'>
-      <Shape USE='_1'/>
-    </Transform>
-    <Transform DEF='Text_1'
-        translation='-5 2.1 0'>
+        position='-0.5 0.5 13.39805'
+        centerOfRotation='-0.5 0.5 0'/>
+    <Transform DEF='FrontText_1'
+        translation='-5 5.225635 0'>
       <Shape>
         <Text
             string='"Front"'>
@@ -60,8 +38,8 @@
         </Text>
       </Shape>
     </Transform>
-    <Transform DEF='Text'
-        translation='0 2.1 0'>
+    <Transform DEF='BackText'
+        translation='0 5.225635 0'>
       <Shape>
         <Text
             string='"Back"'>
@@ -69,5 +47,54 @@
         </Text>
       </Shape>
     </Transform>
+    <Group DEF='Texture_1'>
+      <Transform DEF='Rectangle2D_2'
+          translation='-3 3 0'
+          scale='2 2 2'>
+        <Shape DEF='_3'>
+          <Appearance>
+            <Material/>
+            <ImageTexture
+                url='"../images/uv-grid.jpg"'/>
+            <TextureTransform
+                translation='1 2'
+                rotation='1'
+                scale='0.5 0.75'/>
+          </Appearance>
+          <Rectangle2D DEF='_1'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='Rectangle2D_3'
+          translation='2 3 0'
+          rotation='0 1 0 3.14159265358979'
+          scale='2 2 2'>
+        <Shape USE='_3'/>
+      </Transform>
+    </Group>
+    <Group DEF='MaterialTexture_1'>
+      <Transform DEF='Rectangle2D_1'
+          translation='-3 -2 0'
+          scale='2 2 2'>
+        <Shape DEF='_4'>
+          <Appearance>
+            <Material>
+              <ImageTexture containerField='diffuseTexture'
+                  url='"../images/uv-grid.jpg"'/>
+            </Material>
+            <TextureTransform
+                translation='1 2'
+                rotation='1'
+                scale='0.5 0.75'/>
+          </Appearance>
+          <Rectangle2D USE='_1'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='Rectangle2D'
+          translation='2 -2 0'
+          rotation='0 1 0 3.14159265358979'
+          scale='2 2 2'>
+        <Shape USE='_4'/>
+      </Transform>
+    </Group>
   </Scene>
 </X3D>
