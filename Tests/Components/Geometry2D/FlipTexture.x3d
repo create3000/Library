@@ -7,7 +7,7 @@
     <meta name='created' content='Wed, 06 Aug 2025 14:43:24 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V1.8.21, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 06 Aug 2025 21:06:29 GMT'/>
+    <meta name='modified' content='Wed, 06 Aug 2025 21:18:17 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -28,25 +28,47 @@
         description='Initial View'
         position='-0.5 0.5 13.39805'
         centerOfRotation='-0.5 0.5 0'/>
-    <Transform DEF='FrontText_1'
-        translation='-5 5.225635 0'>
-      <Shape>
-        <Text
-            string='"Front"'>
-          <FontStyle DEF='_2'
-              size='0.5'/>
-        </Text>
-      </Shape>
-    </Transform>
-    <Transform DEF='BackText'
-        translation='0 5.225635 0'>
-      <Shape>
-        <Text
-            string='"Back"'>
-          <FontStyle USE='_2'/>
-        </Text>
-      </Shape>
-    </Transform>
+    <Group DEF='Labes_1'>
+      <Transform DEF='FrontText'
+          translation='-5 5.225635 0'>
+        <Shape>
+          <Text
+              string='"Front"'>
+            <FontStyle DEF='_5'
+                size='0.5'/>
+          </Text>
+        </Shape>
+      </Transform>
+      <Transform DEF='BackText'
+          translation='0 5.225635 0'>
+        <Shape>
+          <Text
+              string='"Back"'>
+            <FontStyle USE='_5'/>
+          </Text>
+        </Shape>
+      </Transform>
+      <Transform DEF='TextureText'
+          translation='-5.356445 5 0'>
+        <Shape>
+          <Text
+              string='"Texture"'>
+            <FontStyle DEF='_2'
+                size='0.5'
+                justify='"END", "BEGIN"'/>
+          </Text>
+        </Shape>
+      </Transform>
+      <Transform DEF='MaterialTextureText_1'
+          translation='-5.356445 0 0'>
+        <Shape>
+          <Text
+              string='"Material", "Texture"'>
+            <FontStyle USE='_2'/>
+          </Text>
+        </Shape>
+      </Transform>
+    </Group>
     <Group DEF='Texture_1'>
       <Transform DEF='Rectangle2D_2'
           translation='-3 3 0'
