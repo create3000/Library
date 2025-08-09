@@ -1,4 +1,4 @@
-#X3D V4.0 utf8 X_ITE V11.5.15
+#X3D V4.0 utf8 X_ITE V12.0.0
 
 PROFILE Interchange
 
@@ -10,9 +10,9 @@ META "comment" "World of Titania"
 META "created" "Mon, 21 Jul 2014 07:20:49 GMT"
 META "creator" "Holger Seelig"
 META "generator" "Titania V4.4.3, http://titania.create3000.de"
-META "generator" "Sunrize X3D Editor V1.8.14, https://create3000.github.io/sunrize/"
+META "generator" "Sunrize X3D Editor V1.8.22, https://create3000.github.io/sunrize/"
 META "identifier" "file:///home/holger/Projekte/Library/Tests/Components/Geometry3D/1728.x3dv"
-META "modified" "Wed, 09 Jul 2025 16:45:39 GMT"
+META "modified" "Sat, 09 Aug 2025 10:33:39 GMT"
 
 PROTO Cubes [
   inputOutput SFInt32 xDimension 0
@@ -63,12 +63,12 @@ function eventsProcessed ()
       {
          for (let x = 0; x < xDimension; ++ x)
          {
-            const translation = new SFVec3f (x, y, z) 
-               .subtract (offset) 
+            const translation = new SFVec3f (x, y, z)
+               .subtract (offset)
                .multiply (explode);
 
-            const o = x === opaque [0] && 
-               y === opaque [1] && 
+            const o = x === opaque [0] &&
+               y === opaque [1] &&
                z === opaque [2];
 
             group .children .push (createCube (translation, o));
@@ -138,10 +138,11 @@ WorldInfo {
 
 Viewpoint {
   description "Home"
-  position 0 0 80
+  position 0 0 114.073
 }
 
 DEF _1 Transform {
+  rotation 0 1 0 22.6259994506835
   children [
     DEF Animation Group {
       children [
@@ -168,9 +169,9 @@ DEF _1 Transform {
       ]
     }
     Cubes {
-      xDimension 13
-      yDimension 13
-      zDimension 13
+      xDimension 20
+      yDimension 20
+      zDimension 20
       explode 3
       transparentShape DEF _4 Shape {
         appearance Appearance {
