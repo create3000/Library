@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <meta name='comment' content='World of Sunrise X3D Editor'/>
+    <meta name='created' content='Mon, 13 Apr 2015 02:16:11 GMT'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrise X3D Editor V1.0.4, https://create3000.github.io/sunrise/'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.10.4, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Wed, 24 Sep 2025 22:09:32 GMT'/>
+    <meta name='identifier' content='file:///Volumes/Home/Projekte/Library/Tests/Components/Interpolation/NormalInterpolator.x3d'/>
+  </head>
+  <Scene>
+    <WorldInfo
+        title='NormalInterpolator'>
+      <MetadataSet containerField='metadata'
+          name='Titania'>
+        <MetadataSet
+            name='AngleGrid'>
+          <MetadataBoolean
+              name='enabled'
+              value='true'/>
+        </MetadataSet>
+        <MetadataSet
+            name='Grid'>
+          <MetadataBoolean
+              name='enabled'
+              value='false'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <Group DEF='CoordinateAnimation_1'>
+      <MetadataSet DEF='Animation_1' containerField='metadata'
+          name='Animation'
+          reference='https://create3000.github.io/sunrize/'>
+        <MetadataInteger DEF='duration_1'
+            name='duration'
+            reference='https://create3000.github.io/sunrize/'
+            value='40'/>
+        <MetadataInteger DEF='frameRate_1'
+            name='frameRate'
+            reference='https://create3000.github.io/sunrize/'
+            value='10'/>
+      </MetadataSet>
+      <TimeSensor DEF='CoordinateAnimationTimer'
+          description='Coordinate Animation'
+          cycleInterval='4'
+          loop='true'
+          startTime='1758751771.312'
+          resumeTime='1758751737.093'
+          pauseTime='1758751737.003'
+          stopTime='1758751771.312'/>
+      <CoordinateInterpolator DEF='PointInterpolator_1'
+          key='0, 0.25, 0.5, 0.75, 1'
+          keyValue='1 0 0, 0 1 0, -1 0 0, 0 -1 0, 0 1 0, -1 0 0, 0 -1 0, 1 0 0, -1 0 0, 0 -1 0, 1 0 0, 0 1 0, 0 -1 0, 1 0 0, 0 1 0, -1 0 0, 1 0 0, 0 1 0, -1 0 0, 0 -1 0'>
+        <MetadataSet DEF='Interpolator_1' containerField='metadata'
+            name='Interpolator'
+            reference='https://create3000.github.io/sunrize/'>
+          <MetadataInteger DEF='keySize_1'
+              name='keySize'
+              reference='https://create3000.github.io/sunrize/'
+              value='4'/>
+          <MetadataInteger DEF='key_1'
+              name='key'
+              reference='https://create3000.github.io/sunrize/'
+              value='0, 10, 20, 30, 40'/>
+          <MetadataDouble DEF='keyValue_1'
+              name='keyValue'
+              reference='https://create3000.github.io/sunrize/'
+              value='1, 0, 0, 0, 1, 0, -1, 0, 0, 0, -1, 0, 0, 1, 0, -1, 0, 0, 0, -1, 0, 1, 0, 0, -1, 0, 0, 0, -1, 0, 1, 0, 0, 0, 1, 0, 0, -1, 0, 1, 0, 0, 0, 1, 0, -1, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0, 0, 0, -1, 0'/>
+          <MetadataString DEF='keyType_1'
+              name='keyType'
+              reference='https://create3000.github.io/sunrize/'
+              value='"LINEAR", "LINEAR", "LINEAR", "LINEAR", "LINEAR"'/>
+        </MetadataSet>
+      </CoordinateInterpolator>
+    </Group>
+    <Transform DEF='PointSet_1'
+        scale='3 3 3'>
+      <Shape>
+        <Appearance>
+          <PointProperties
+              pointSizeScaleFactor='20'
+              pointSizeMinValue='20'
+              pointSizeMaxValue='20'/>
+          <Material
+              emissiveColor='1 0 0'/>
+        </Appearance>
+        <PointSet>
+          <Color
+              color='1 0 0, 0 1 0, 0 0 1, 1 1 0'/>
+          <Coordinate DEF='_3'
+              point='-0.6990001 0.3009999 0, -0.3009999 -0.6990001 0, 0.6990001 -0.3009999 0, 0.3009999 0.6990001 0'/>
+        </PointSet>
+      </Shape>
+    </Transform>
+    <ROUTE fromNode='CoordinateAnimationTimer' fromField='fraction_changed' toNode='PointInterpolator_1' toField='set_fraction'/>
+    <ROUTE fromNode='PointInterpolator_1' fromField='value_changed' toNode='_3' toField='set_point'/>
+  </Scene>
+</X3D>
