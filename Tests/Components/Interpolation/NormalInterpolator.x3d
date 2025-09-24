@@ -6,8 +6,8 @@
     <meta name='created' content='Mon, 13 Apr 2015 02:16:11 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrise X3D Editor V1.0.4, https://create3000.github.io/sunrise/'/>
-    <meta name='generator' content='Sunrize X3D Editor V1.8.15, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Mon, 14 Jul 2025 13:39:18 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.10.4, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Wed, 24 Sep 2025 20:40:42 GMT'/>
     <meta name='identifier' content='file:///Volumes/Home/Projekte/Library/Tests/Components/Interpolation/NormalInterpolator.x3d'/>
   </head>
   <Scene>
@@ -29,12 +29,52 @@
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
-    <TimeSensor DEF='_1'
-        cycleInterval='10'
-        loop='true'/>
-    <NormalInterpolator DEF='_2'
-        key='0, 0.25, 0.5, 0.75, 1'
-        keyValue='1 0 0, 0 1 0, -1 0 0, 0 -1 0, 0 1 0, -1 0 0, 0 -1 0, 1 0 0, -1 0 0, 0 -1 0, 1 0 0, 0 1 0, 0 -1 0, 1 0 0, 0 1 0, -1 0 0, 1 0 0, 0 1 0, -1 0 0, 0 -1 0'/>
+    <Group DEF='NormalAnimation'>
+      <MetadataSet DEF='Animation' containerField='metadata'
+          name='Animation'
+          reference='https://create3000.github.io/sunrize/'>
+        <MetadataInteger DEF='duration'
+            name='duration'
+            reference='https://create3000.github.io/sunrize/'
+            value='40'/>
+        <MetadataInteger DEF='frameRate'
+            name='frameRate'
+            reference='https://create3000.github.io/sunrize/'
+            value='10'/>
+      </MetadataSet>
+      <TimeSensor DEF='NormalAnimationTimer'
+          description='NewAnimation'
+          cycleInterval='4'
+          loop='true'
+          startTime='1758746397.945'
+          resumeTime='1758746370.03'
+          pauseTime='1758746369.912'
+          stopTime='1758746440.732'/>
+      <NormalInterpolator DEF='PointInterpolator'
+          key='0, 0.25, 0.5, 0.75, 1'
+          keyValue='1 0 0, 0 1 0, -1 0 0, 0 -1 0, 0 1 0, -1 0 0, 0 -1 0, 1 0 0, -1 0 0, 0 -1 0, 1 0 0, 0 1 0, 0 -1 0, 1 0 0, 0 1 0, -1 0 0, 1 0 0, 0 1 0, -1 0 0, 0 -1 0'>
+        <MetadataSet DEF='Interpolator' containerField='metadata'
+            name='Interpolator'
+            reference='https://create3000.github.io/sunrize/'>
+          <MetadataInteger DEF='keySize'
+              name='keySize'
+              reference='https://create3000.github.io/sunrize/'
+              value='4'/>
+          <MetadataInteger DEF='key'
+              name='key'
+              reference='https://create3000.github.io/sunrize/'
+              value='0, 10, 20, 30, 40'/>
+          <MetadataDouble DEF='keyValue'
+              name='keyValue'
+              reference='https://create3000.github.io/sunrize/'
+              value='1, 0, 0, 0, 1, 0, -1, 0, 0, 0, -1, 0, 0, 1, 0, -1, 0, 0, 0, -1, 0, 1, 0, 0, -1, 0, 0, 0, -1, 0, 1, 0, 0, 0, 1, 0, 0, -1, 0, 1, 0, 0, 0, 1, 0, -1, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0, 0, 0, -1, 0'/>
+          <MetadataString DEF='keyType'
+              name='keyType'
+              reference='https://create3000.github.io/sunrize/'
+              value='"LINEAR", "LINEAR", "LINEAR", "LINEAR", "LINEAR"'/>
+        </MetadataSet>
+      </NormalInterpolator>
+    </Group>
     <Transform DEF='PointSet_1'
         scale='3 3 3'>
       <Shape>
@@ -48,11 +88,11 @@
         </Appearance>
         <PointSet>
           <Coordinate DEF='_3'
-              point='-0.9991661 0.04082939 0, -0.04082939 -0.9991661 0, 0.9991661 -0.04082939 0, 0.04082939 0.9991661 0'/>
+              point='-0.2089356 -0.9779294 0, 0.9779294 -0.2089356 0, 0.2089356 0.9779294 0, -0.9779294 0.2089356 0'/>
         </PointSet>
       </Shape>
     </Transform>
-    <ROUTE fromNode='_1' fromField='fraction_changed' toNode='_2' toField='set_fraction'/>
-    <ROUTE fromNode='_2' fromField='value_changed' toNode='_3' toField='set_point'/>
+    <ROUTE fromNode='NormalAnimationTimer' fromField='fraction_changed' toNode='PointInterpolator' toField='set_fraction'/>
+    <ROUTE fromNode='PointInterpolator' fromField='value_changed' toNode='_3' toField='set_point'/>
   </Scene>
 </X3D>
