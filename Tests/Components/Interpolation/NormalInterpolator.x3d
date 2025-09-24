@@ -7,7 +7,7 @@
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrise X3D Editor V1.0.4, https://create3000.github.io/sunrise/'/>
     <meta name='generator' content='Sunrize X3D Editor V1.10.4, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Wed, 24 Sep 2025 21:46:46 GMT'/>
+    <meta name='modified' content='Wed, 24 Sep 2025 21:49:24 GMT'/>
     <meta name='identifier' content='file:///Volumes/Home/Projekte/Library/Tests/Components/Interpolation/NormalInterpolator.x3d'/>
   </head>
   <Scene>
@@ -46,10 +46,10 @@
           description='Normal Animation'
           cycleInterval='4'
           loop='true'
-          startTime='1758750386.486'
+          startTime='1758750563.161'
           resumeTime='1758750384.611'
           pauseTime='1758750384.508'
-          stopTime='1758750405.176'/>
+          stopTime='1758750563.161'/>
       <NormalInterpolator DEF='PointInterpolator'
           key='0, 0.25, 0.5, 0.75, 1'
           keyValue='1 0 0, 0 1 0, -1 0 0, 0 -1 0, 0 1 0, -1 0 0, 0 -1 0, 1 0 0, -1 0 0, 0 -1 0, 1 0 0, 0 1 0, 0 -1 0, 1 0 0, 0 1 0, -1 0 0, 1 0 0, 0 1 0, -1 0 0, 0 -1 0'>
@@ -87,8 +87,10 @@
               emissiveColor='1 0 0'/>
         </Appearance>
         <PointSet>
+          <Color
+              color='1 0 0, 0 1 0, 0 0 1, 1 1 0'/>
           <Coordinate DEF='_3'
-              point='0.4872503 0.8732623 0, -0.8732623 0.4872503 0, -0.4872503 -0.8732623 0, 0.8732623 -0.4872503 0'/>
+              point='0.3120035 -0.9500809 0, 0.9500809 0.3120035 0, -0.3120035 0.9500809 0, -0.9500809 -0.3120035 0'/>
         </PointSet>
       </Shape>
     </Transform>
