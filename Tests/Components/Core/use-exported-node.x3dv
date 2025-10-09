@@ -1,0 +1,22 @@
+#X3D V4.0 utf8 X_ITE V12.1.1
+
+PROFILE Interchange
+
+META "creator" "Holger Seelig"
+META "created" "Thu, 09 Oct 2025 17:13:58 GMT"
+META "modified" "Thu, 09 Oct 2025 19:07:30 GMT"
+META "generator" "Sunrize X3D Editor V1.11.1, https://create3000.github.io/sunrize/"
+
+DEF InlineGreenBox Transform {
+  translation -1 0 0
+  children DEF Inline Inline {
+    url "inline.x3dv"
+  }
+}
+
+DEF UseGreenBox Transform {
+  translation 1 0 0
+  children USE GreenBox
+}
+
+IMPORT Inline.GreenBox

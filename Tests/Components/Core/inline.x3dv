@@ -1,0 +1,23 @@
+#X3D V4.0 utf8 X_ITE V12.1.1
+
+PROFILE Interchange
+
+META "creator" "Holger Seelig"
+META "created" "Thu, 09 Oct 2025 17:13:58 GMT"
+META "modified" "Thu, 09 Oct 2025 17:14:19 GMT"
+META "generator" "Sunrize X3D Editor V1.11.1, https://create3000.github.io/sunrize/"
+
+DEF GreenBox Transform {
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 0 1 0
+      }
+    }
+    geometry Box {
+      size 0.5 0.5 0.5
+    }
+  }
+}
+
+EXPORT GreenBox
