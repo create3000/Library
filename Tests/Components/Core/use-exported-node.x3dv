@@ -14,9 +14,9 @@ DEF InlineGreenBox Transform {
   }
 }
 
+IMPORT Inline.GreenBox
+
 DEF UseGreenBox Transform {
   translation 1 0 0
   children USE GreenBox
 }
-
-IMPORT Inline.GreenBox
