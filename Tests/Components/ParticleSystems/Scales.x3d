@@ -7,7 +7,7 @@
     <component name='Scripting' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Fri, 17 Oct 2025 17:10:19 GMT'/>
-    <meta name='modified' content='Sat, 18 Oct 2025 10:30:34 GMT'/>
+    <meta name='modified' content='Sat, 18 Oct 2025 10:40:04 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V1.11.1, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -34,6 +34,8 @@
         centerOfRotation='-0.5625741 1.816504 -0.5606999'/>
     <ProtoInstance name='Grid'>
       <fieldValue name='transparency' value='0.8'/>
+      <fieldValue name='lineColor' value='1 0.6862745 0.1960784'/>
+      <fieldValue name='majorLineColor' value='1 0.6117647 0'/>
     </ProtoInstance>
     <ParticleSystem DEF='Point'
         geometryType='POINT'
