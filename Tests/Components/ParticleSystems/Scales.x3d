@@ -5,7 +5,7 @@
     <component name='ParticleSystems' level='3'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Fri, 17 Oct 2025 17:10:19 GMT'/>
-    <meta name='modified' content='Sat, 18 Oct 2025 09:32:01 GMT'/>
+    <meta name='modified' content='Sat, 18 Oct 2025 09:35:44 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V1.11.1, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -40,6 +40,7 @@
       <Coordinate containerField='scale'
           point='10 10 10, 40 40 40, 0 0 0'/>
       <Appearance>
+        <PointProperties/>
         <UnlitMaterial/>
       </Appearance>
     </ParticleSystem>
