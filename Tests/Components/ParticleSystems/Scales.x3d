@@ -5,7 +5,7 @@
     <component name='ParticleSystems' level='3'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Fri, 17 Oct 2025 17:10:19 GMT'/>
-    <meta name='modified' content='Sat, 18 Oct 2025 09:35:44 GMT'/>
+    <meta name='modified' content='Sat, 18 Oct 2025 09:45:14 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V1.11.1, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -25,9 +25,9 @@
     </WorldInfo>
     <Viewpoint
         description='Initial View'
-        position='-0.2188646 2.91131 6.882234'
-        orientation='0.99770097924835 -0.0677459274478898 -0.00180147748129793 6.22988971983624'
-        centerOfRotation='-0.4999124 2.417488 -1.010739'/>
+        position='3.801289 6.768314 8.071027'
+        orientation='-0.717124786151479 0.678068482150917 0.161106097341932 0.639869408902354'
+        centerOfRotation='-0.5625741 1.816504 -0.5606999'/>
     <ParticleSystem
         geometryType='POINT'
         maxParticles='10'
@@ -59,6 +59,22 @@
       </Appearance>
       <Box
           size='0.2 0.2 0.2'/>
+    </ParticleSystem>
+    <ParticleSystem
+        geometryType='SPRITE'
+        maxParticles='10'
+        lifetimeVariation='0'
+        scaleKey='0, 0.5, 1'>
+      <PointEmitter
+          position='2 0 0'
+          speed='1'
+          variation='0'/>
+      <Coordinate containerField='scale'
+          point='10 10 10, 40 40 40, 0 0 0'/>
+      <Appearance>
+        <PointProperties/>
+        <UnlitMaterial/>
+      </Appearance>
     </ParticleSystem>
   </Scene>
 </X3D>
