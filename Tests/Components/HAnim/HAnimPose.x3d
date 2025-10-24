@@ -11,7 +11,7 @@
     <meta name='contributor' content='Don Brutzman'/>
     <meta name='created' content='31 March 2011'/>
     <meta name='translated' content='1 November 2014'/>
-    <meta name='modified' content='Fri, 24 Oct 2025 11:59:53 GMT'/>
+    <meta name='modified' content='Fri, 24 Oct 2025 13:01:09 GMT'/>
     <meta name='description' content='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'/>
     <meta name='info' content='This scene includes an EXPORT statement to simplfy reuse of a large, complex HAnimHumanoid model by other X3D scenes.'/>
     <meta name='TODO' content='rescale all contained length values from inches to meters'/>
@@ -569,7 +569,7 @@
       <HAnimSegment USE='hanim_r_thigh' containerField='segments'/>
       <HAnimSegment USE='hanim_l_upperarm' containerField='segments'/>
       <HAnimSegment USE='hanim_r_upperarm' containerField='segments'/>
-      <HAnimPose DEF='T_Pose' containerField='skin'
+      <HAnimPose DEF='T_Pose'
           description='arms stretched outward and level similar to letter T'
           name='T'
           loa='1'
@@ -583,7 +583,7 @@
             name='r_shoulder'
             rotation='0 0 -1 1.57'/>
       </HAnimPose>
-      <HAnimPose DEF='A_Pose' containerField='skin'
+      <HAnimPose DEF='A_Pose'
           description='arms stretched outward and downward similar to letter A'
           name='A'
           loa='1'
@@ -597,7 +597,7 @@
             name='r_shoulder'
             rotation='0 0 -1 0.5'/>
       </HAnimPose>
-      <HAnimPose DEF='TouchDown_Pose' containerField='skin'
+      <HAnimPose DEF='TouchDown_Pose'
           description='arms stretched outward providing a TouchDown gesture'
           name='TouchDown'
           loa='1'
@@ -649,18 +649,18 @@
         <HAnimJoint containerField='poseJoints'
             name='r_radiocarpal'/>
       </HAnimPose>
-      <HAnimPose DEF='I_Pose' containerField='skin'
+      <HAnimPose DEF='I_Pose'
           description='default binding pose for baseline Humanoid'
           name='I'
           loa='1'
           transitionDuration='1.5'/>
-      <HAnimPose DEF='H_Pose' containerField='skin'
+      <HAnimPose DEF='H_Pose'
           description='TODO experimental pose not yet implemented'
           name='H'
           loa='1'
           enabled='false'
           transitionDuration='1.4'/>
-      <HAnimPose DEF='FaceLeftPose' containerField='skin'
+      <HAnimPose DEF='FaceLeftPose'
           description='Only modify humanoid_root Joint node to face left'
           name='FaceLeft'
           loa='0'
@@ -670,7 +670,7 @@
             name='humanoid_root'
             rotation='0 1 0 1.570796'/>
       </HAnimPose>
-      <HAnimPose DEF='FaceRightPose' containerField='skin'
+      <HAnimPose DEF='FaceRightPose'
           description='Only modify humanoid_root Joint node to face right'
           name='FaceRight'
           loa='0'
