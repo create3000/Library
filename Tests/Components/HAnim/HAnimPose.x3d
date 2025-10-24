@@ -11,7 +11,7 @@
     <meta name='contributor' content='Don Brutzman'/>
     <meta name='created' content='31 March 2011'/>
     <meta name='translated' content='1 November 2014'/>
-    <meta name='modified' content='Fri, 24 Oct 2025 17:00:44 GMT'/>
+    <meta name='modified' content='Fri, 24 Oct 2025 17:47:12 GMT'/>
     <meta name='description' content='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'/>
     <meta name='info' content='This scene includes an EXPORT statement to simplfy reuse of a large, complex HAnimHumanoid model by other X3D scenes.'/>
     <meta name='TODO' content='rescale all contained length values from inches to meters'/>
@@ -66,7 +66,6 @@
       </MetadataSet>
       <HAnimJoint DEF='hanim_humanoid_root' containerField='skeleton'
           name='humanoid_root'
-          rotation='NaN NaN NaN NaN'
           center='0 30.53 -0.7076'>
         <HAnimSegment DEF='hanim_sacrum'
             name='sacrum'>
@@ -118,7 +117,6 @@
           </HAnimSegment>
           <HAnimJoint DEF='hanim_l_hip'
               name='l_hip'
-              rotation='-0.577350269189626 0.577350269189626 0.577350269189626 1'
               center='4.207 32.02 -0.8155'>
             <HAnimSegment DEF='hanim_l_thigh'
                 name='l_thigh'>
@@ -144,7 +142,6 @@
             </HAnimSegment>
             <HAnimJoint DEF='hanim_l_knee'
                 name='l_knee'
-                rotation='1 0 0 1'
                 center='4.116 17.26 -0.8639'>
               <HAnimSegment DEF='hanim_l_calf'
                   name='l_calf'>
@@ -170,7 +167,6 @@
               </HAnimSegment>
               <HAnimJoint DEF='hanim_l_talocrural'
                   name='l_talocrural'
-                  rotation='-0.894427190999916 0 0.447213595499958 0.225000000000001'
                   center='3.854 3.939 -0.7038'>
                 <HAnimSegment DEF='hanim_l_talus'
                     name='l_talus'>
@@ -225,7 +221,6 @@
           </HAnimJoint>
           <HAnimJoint DEF='hanim_r_hip'
               name='r_hip'
-              rotation='-0.577350269189626 -0.577350269189626 -0.577350269189626 1'
               center='-4.207 32.02 -0.8155'>
             <HAnimSegment DEF='hanim_r_thigh'
                 name='r_thigh'>
@@ -251,7 +246,6 @@
             </HAnimSegment>
             <HAnimJoint DEF='hanim_r_knee'
                 name='r_knee'
-                rotation='1 0 0 1'
                 center='-4.116 17.26 -0.8639'>
               <HAnimSegment DEF='hanim_r_calf'
                   name='r_calf'>
@@ -277,7 +271,6 @@
               </HAnimSegment>
               <HAnimJoint DEF='hanim_r_talocrural'
                   name='r_talocrural'
-                  rotation='-0.894427190999916 0 0.447213595499958 0.250000000000001'
                   center='-3.854 3.939 -0.7038'>
                 <HAnimSegment DEF='hanim_r_talus'
                     name='r_talus'>
@@ -333,7 +326,6 @@
         </HAnimJoint>
         <HAnimJoint DEF='hanim_vl5'
             name='vl5'
-            rotation='0 0 1 0.199999999999999'
             center='0 40.07 -0.8527'>
           <HAnimSegment DEF='hanim_l5'
               name='l5'>
@@ -384,7 +376,6 @@
             </HAnimSegment>
             <HAnimJoint DEF='hanim_l_shoulder'
                 name='l_shoulder'
-                rotation='-0.666666666666667 0.333333333333333 0.666666666666667 2'
                 center='5.975 52 -0.1452'>
               <HAnimSegment DEF='hanim_l_upperarm'
                   name='l_upperarm'>
@@ -410,7 +401,6 @@
               </HAnimSegment>
               <HAnimJoint DEF='hanim_l_elbow'
                   name='l_elbow'
-                  rotation='-1 0 0 1'
                   center='8.093 40.38 -0.2502'>
                 <HAnimSegment DEF='hanim_l_forearm'
                     name='l_forearm'>
@@ -464,7 +454,6 @@
             </HAnimJoint>
             <HAnimJoint DEF='hanim_r_shoulder'
                 name='r_shoulder'
-                rotation='-0.666666666666667 -0.333333333333333 -0.666666666666667 2.6'
                 center='-5.975 52 -0.1452'>
               <HAnimSegment DEF='hanim_r_upperarm'
                   name='r_upperarm'>
@@ -490,7 +479,6 @@
               </HAnimSegment>
               <HAnimJoint DEF='hanim_r_elbow'
                   name='r_elbow'
-                  rotation='-1 0 0 1'
                   center='-8.093 40.38 -0.2502'>
                 <HAnimSegment DEF='hanim_r_forearm'
                     name='r_forearm'>
