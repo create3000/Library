@@ -11,7 +11,7 @@
     <meta name='contributor' content='Don Brutzman'/>
     <meta name='created' content='31 March 2011'/>
     <meta name='translated' content='1 November 2014'/>
-    <meta name='modified' content='Fri, 24 Oct 2025 17:47:12 GMT'/>
+    <meta name='modified' content='Mon, 27 Oct 2025 20:14:41 GMT'/>
     <meta name='description' content='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'/>
     <meta name='info' content='This scene includes an EXPORT statement to simplfy reuse of a large, complex HAnimHumanoid model by other X3D scenes.'/>
     <meta name='TODO' content='rescale all contained length values from inches to meters'/>
@@ -20,7 +20,7 @@
     <meta name='reference' content='KoreanCharactersIllustrated.pdf'/>
     <meta name='reference' content='JinOriginalLOA1.x3d'/>
     <meta name='identifier' content='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/JinLOA1.x3d'/>
-    <meta name='generator' content='Sunrize X3D Editor V1.11.2, https://create3000.github.io/sunrize/'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.11.3, https://create3000.github.io/sunrize/'/>
     <meta name='generator' content='3DS MAX, http://www.autodesk.com/products/autodesk-3ds-max/overview'/>
     <meta name='generator' content='Suwon HAnim Converter'/>
     <meta name='generator' content='Gnu Image Manipulation Program, http://www.gimp.org'/>
@@ -573,7 +573,8 @@
           description='arms stretched outward and level similar to letter T'
           name='T'
           loa='1'
-          transitionDuration='1.3'>
+          transitionDuration='1.3'
+          resetOtherJoints='false'>
         <HAnimJoint DEF='PoseJoint_l_shoulder_1' containerField='poseJoints'
             description='left shoulder'
             name='l_shoulder'
@@ -587,7 +588,8 @@
           description='arms stretched outward and downward similar to letter A'
           name='A'
           loa='1'
-          transitionDuration='1.2'>
+          transitionDuration='1.2'
+          resetOtherJoints='false'>
         <HAnimJoint DEF='PoseJoint_l_shoulder' containerField='poseJoints'
             description='left shoulder'
             name='l_shoulder'
@@ -664,7 +666,8 @@
           description='Only modify humanoid_root Joint node to face left'
           name='FaceLeft'
           loa='0'
-          transitionDuration='1.1'>
+          transitionDuration='1.1'
+          resetOtherJoints='false'>
         <HAnimJoint DEF='FaceLeft_humanoid_root' containerField='poseJoints'
             description='Only rotate the model'
             name='humanoid_root'
@@ -674,7 +677,8 @@
           description='Only modify humanoid_root Joint node to face right'
           name='FaceRight'
           loa='0'
-          transitionDuration='1.1'>
+          transitionDuration='1.1'
+          resetOtherJoints='false'>
         <HAnimJoint DEF='FaceRight_humanoid_root' containerField='poseJoints'
             description='Only rotate the model'
             name='humanoid_root'
