@@ -574,11 +574,11 @@
           name='T'
           loa='1'
           transitionDuration='1.3'>
-        <HAnimJoint DEF='PoseJoint_l_shoulder_1' containerField='poseJoints'
+        <HAnimJoint DEF='PoseJoint_l_shoulder_1' containerField='children'
             description='left shoulder'
             name='l_shoulder'
             rotation='0 0 1 1.57'/>
-        <HAnimJoint DEF='PoseJoint_r_shoulder_1' containerField='poseJoints'
+        <HAnimJoint DEF='PoseJoint_r_shoulder_1' containerField='children'
             description='right shoulder'
             name='r_shoulder'
             rotation='0 0 -1 1.57'/>
@@ -588,11 +588,11 @@
           name='A'
           loa='1'
           transitionDuration='1.2'>
-        <HAnimJoint DEF='PoseJoint_l_shoulder' containerField='poseJoints'
+        <HAnimJoint DEF='PoseJoint_l_shoulder' containerField='children'
             description='left shoulder'
             name='l_shoulder'
             rotation='0 0 1 0.5'/>
-        <HAnimJoint DEF='PoseJoint_r_shoulder' containerField='poseJoints'
+        <HAnimJoint DEF='PoseJoint_r_shoulder' containerField='children'
             description='right shoulder'
             name='r_shoulder'
             rotation='0 0 -1 0.5'/>
@@ -602,51 +602,51 @@
           name='TouchDown'
           loa='1'
           transitionDuration='1.2'>
-        <HAnimJoint containerField='poseJoints'
+        <HAnimJoint containerField='children'
             name='humanoid_root'
             rotation='0 1 0 -0.698132'/>
-        <HAnimJoint containerField='poseJoints'
+        <HAnimJoint containerField='children'
             name='l_hip'
             rotation='-1 1 1 1'/>
-        <HAnimJoint containerField='poseJoints'
+        <HAnimJoint containerField='children'
             name='l_knee'
             rotation='1 0 0 1'/>
-        <HAnimJoint containerField='poseJoints'
+        <HAnimJoint containerField='children'
             name='l_talocrural'
             rotation='-0.2 -0 0.1 0.225'/>
-        <HAnimJoint containerField='poseJoints'
+        <HAnimJoint containerField='children'
             name='r_hip'
             rotation='-1 -1 -1 1'/>
-        <HAnimJoint containerField='poseJoints'
+        <HAnimJoint containerField='children'
             name='r_knee'
             rotation='1 0 0 1'/>
-        <HAnimJoint containerField='poseJoints'
+        <HAnimJoint containerField='children'
             name='r_talocrural'
             rotation='-0.2 0 0.1 0.25'/>
-        <HAnimJoint containerField='poseJoints'
+        <HAnimJoint containerField='children'
             name='vl5'
             rotation='0 0 0.01 0.2'/>
-        <HAnimJoint containerField='poseJoints'
+        <HAnimJoint containerField='children'
             name='vt10'
             rotation='0 0 0.01 0.1'/>
-        <HAnimJoint containerField='poseJoints'
+        <HAnimJoint containerField='children'
             name='vc4'
             rotation='0 0 -0.01 0.15'/>
-        <HAnimJoint containerField='poseJoints'
+        <HAnimJoint containerField='children'
             name='l_shoulder'
             rotation='-1 0.5 1 2'/>
-        <HAnimJoint containerField='poseJoints'
+        <HAnimJoint containerField='children'
             name='l_elbow'
             rotation='-1 0 0 1'/>
-        <HAnimJoint containerField='poseJoints'
+        <HAnimJoint containerField='children'
             name='l_radiocarpal'/>
-        <HAnimJoint containerField='poseJoints'
+        <HAnimJoint containerField='children'
             name='r_shoulder'
             rotation='-1 -0.5 -1 2.6'/>
-        <HAnimJoint containerField='poseJoints'
+        <HAnimJoint containerField='children'
             name='r_elbow'
             rotation='-1 0 0 1'/>
-        <HAnimJoint containerField='poseJoints'
+        <HAnimJoint containerField='children'
             name='r_radiocarpal'/>
       </HAnimPose>
       <HAnimPose DEF='I_Pose'
@@ -665,7 +665,7 @@
           name='FaceLeft'
           loa='0'
           transitionDuration='1.1'>
-        <HAnimJoint DEF='FaceLeft_humanoid_root' containerField='poseJoints'
+        <HAnimJoint DEF='FaceLeft_humanoid_root' containerField='children'
             description='Only rotate the model'
             name='humanoid_root'
             rotation='0 1 0 1.570796'/>
@@ -675,7 +675,7 @@
           name='FaceRight'
           loa='0'
           transitionDuration='1.1'>
-        <HAnimJoint DEF='FaceRight_humanoid_root' containerField='poseJoints'
+        <HAnimJoint DEF='FaceRight_humanoid_root' containerField='children'
             description='Only rotate the model'
             name='humanoid_root'
             rotation='0 -1 0 1.570796'/>
