@@ -5,8 +5,8 @@
     <component name='Shaders' level='1'/>
     <meta name='created' content='Sat, 18 May 2024 18:24:59 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Sunrize X3D Editor V1.6.14, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Mon, 20 May 2024 16:12:28 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.11.17, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Thu, 15 Jan 2026 00:00:30 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -23,8 +23,9 @@
     </WorldInfo>
     <Viewpoint
         description='Initial View'
-        position='2.869677 3.854335 8.769781'
-        orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
+        position='4.266304 2.872367 5.397855'
+        orientation='-0.776588739330481 0.61771873128448 0.123828506271318 0.5052317'
+        centerOfRotation='2.5 0.5 0'/>
     <TimeSensor DEF='_1'
         loop='true'/>
     <Transform DEF='IndexedLineSet'>
