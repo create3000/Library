@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
-<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.1//EN" "https://www.web3d.org/specifications/x3d-4.1.dtd">
+<X3D profile='Interchange' version='4.1' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.1.xsd'>
   <head>
     <component name='CubeMapTexturing' level='3'/>
     <component name='Geometry2D' level='2'/>
     <component name='NURBS' level='4'/>
     <component name='ParticleSystems' level='3'/>
-    <component name='Text' level='1'/>
+    <component name='Text' level='2'/>
     <component name='X_ITE' level='1'/>
     <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
     <meta name='created' content='Mon, 19 Aug 2024 08:19:30 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Sunrize X3D Editor V1.8.21, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 05 Aug 2025 07:18:41 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V2.0.1, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Tue, 03 Feb 2026 20:20:55 GMT'/>
   </head>
   <Scene>
     <WorldInfo
@@ -95,7 +95,8 @@
               translation='-1 0 0'>
             <Shape>
               <Appearance USE='_3'/>
-              <Circle2D/>
+              <Circle2D
+                  radius='0.5'/>
             </Shape>
           </Transform>
           <Transform DEF='Polyline2D'
