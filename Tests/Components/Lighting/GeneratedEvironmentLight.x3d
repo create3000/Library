@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.1//EN" "https://www.web3d.org/specifications/x3d-4.1.dtd">
+<X3D profile='Interchange' version='4.1' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.1.xsd'>
+  <head>
+    <component name='CubeMapTexturing' level='3'/>
+    <component name='PointingDeviceSensor' level='1'/>
+    <component name='Scripting' level='1'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='created' content='Thu, 05 Feb 2026 00:50:18 GMT'/>
+    <meta name='modified' content='Thu, 05 Feb 2026 10:00:09 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V2.0.1, https://create3000.github.io/sunrize/'/>
+  </head>
+  <Scene>
+    <WorldInfo>
+      <MetadataSet DEF='Sunrize' containerField='metadata'
+          name='Sunrize'
+          reference='https://create3000.github.io/sunrize/'>
+        <MetadataSet DEF='GridTool'
+            name='GridTool'
+            reference='https://create3000.github.io/sunrize/'>
+          <MetadataBoolean DEF='visible'
+              name='visible'
+              reference='https://create3000.github.io/sunrize/'
+              value='true'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <Viewpoint
+        description='Initial View'
+        position='1.660902 2.119591 2.935868'
+        orientation='0.724666968257109 -0.66216493907252 -0.190775728488027 5.52635809190401'/>
+    <Background DEF='Sunny'
+        skyAngle='0.05, 0.1, 1, 1.5708'
+        skyColor='1 1 0, 1 1 0.5, 0.125 0.125 0.5, 0.3 0.3 0.55, 0.64 0.734 0.844'
+        groundAngle='1.5708'
+        groundColor='0.1 0.1 0.09, 0.48 0.48 0.45'/>
+    <PointLight/>
+    <Group>
+      <EnvironmentLight
+          global='false'>
+        <GeneratedCubeMapTexture DEF='_1' containerField='specularTexture'
+            update='ALWAYS'/>
+      </EnvironmentLight>
+      <Transform DEF='Sphere'>
+        <Shape>
+          <Appearance>
+            <PhysicalMaterial
+                roughness='0'/>
+          </Appearance>
+          <Sphere/>
+        </Shape>
+      </Transform>
+      <TouchSensor DEF='_2'/>
+      <Script DEF='RenderTextureScript'>
+        <field accessType='inputOnly' type='SFTime' name='set_time'/>
+        <field accessType='outputOnly' type='SFString' name='update'/>
+<![CDATA[ecmascript:
+
+function set_time (value, time)
+{
+   update = "NEXT_FRAME_ONLY";
+}
+]]>
+      </Script>
+    </Group>
+    <Group DEF='MarkerBoxes'>
+      <Transform DEF='Box'
+          translation='0 1.3 0'
+          scale='0.08768116 0.08768116 0.08768116'>
+        <Shape>
+          <Appearance>
+            <Material
+                diffuseColor='0.7882353 0 0.4627451'/>
+          </Appearance>
+          <Box/>
+        </Shape>
+      </Transform>
+      <Transform DEF='Box_2'
+          translation='0 -1.3 0'
+          scale='0.08768116 0.08768116 0.08768116'>
+        <Shape>
+          <Appearance>
+            <Material
+                diffuseColor='0.4156863 0.1960784 0.6235294'/>
+          </Appearance>
+          <Box/>
+        </Shape>
+      </Transform>
+      <Transform DEF='Box_3'
+          translation='1.3 0 0'
+          scale='0.08768116 0.08768116 0.08768116'>
+        <Shape>
+          <Appearance>
+            <Material
+                diffuseColor='0.9568627 0.2627451 0.2117647'/>
+          </Appearance>
+          <Box/>
+        </Shape>
+      </Transform>
+      <Transform DEF='Box_4'
+          translation='-1.3 0 0'
+          scale='0.08768116 0.08768116 0.08768116'>
+        <Shape>
+          <Appearance>
+            <Material
+                diffuseColor='0.1607843 0.5254902 0.8'/>
+          </Appearance>
+          <Box/>
+        </Shape>
+      </Transform>
+      <Transform DEF='Box_5'
+          translation='0 0 1.3'
+          scale='0.08768116 0.08768116 0.08768116'>
+        <Shape>
+          <Appearance>
+            <Material
+                diffuseColor='0.5607843 0.8078431 0'/>
+          </Appearance>
+          <Box/>
+        </Shape>
+      </Transform>
+      <Transform DEF='Box_1'
+          translation='0 0 -1.3'
+          scale='0.08768116 0.08768116 0.08768116'>
+        <Shape>
+          <Appearance>
+            <Material
+                diffuseColor='0.8078431 0.4941176 0'/>
+          </Appearance>
+          <Box/>
+        </Shape>
+      </Transform>
+    </Group>
+    <ROUTE fromNode='_2' fromField='touchTime' toNode='RenderTextureScript' toField='set_time'/>
+    <ROUTE fromNode='RenderTextureScript' fromField='update' toNode='_1' toField='set_update'/>
+  </Scene>
+</X3D>
