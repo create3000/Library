@@ -4,7 +4,7 @@ PROFILE Full
 
 META "creator" "Holger Seelig"
 META "created" "Tue, 10 Feb 2026 12:09:57 GMT"
-META "modified" "Tue, 10 Feb 2026 12:09:57 GMT"
+META "modified" "Tue, 10 Feb 2026 22:09:45 GMT"
 META "generator" "Sunrize X3D Editor V2.0.2, https://create3000.github.io/sunrize/"
 
 MetadataBoolean { }
@@ -363,9 +363,7 @@ HAnimHumanoid { }
 
 HAnimJoint { }
 
-HAnimMotion {
-  endFrame -1
-}
+HAnimMotion { }
 
 HAnimPose { }
 
