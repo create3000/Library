@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.1//EN" "https://www.web3d.org/specifications/x3d-4.1.dtd">
+<X3D profile='Interchange' version='4.1' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.1.xsd'>
+  <head>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='created' content='Fri, 20 Feb 2026 20:57:09 GMT'/>
+    <meta name='modified' content='Fri, 20 Feb 2026 20:57:21 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V2.0.3, https://create3000.github.io/sunrize/'/>
+  </head>
+  <Scene>
+    <WorldInfo>
+      <MetadataSet DEF='Sunrize' containerField='metadata'
+          name='Sunrize'
+          reference='https://create3000.github.io/sunrize/'>
+        <MetadataSet DEF='GridTool'
+            name='GridTool'
+            reference='https://create3000.github.io/sunrize/'>
+          <MetadataBoolean DEF='visible'
+              name='visible'
+              reference='https://create3000.github.io/sunrize/'
+              value='true'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <Viewpoint
+        description='Initial View'
+        position='2.869677 3.854335 8.769781'
+        orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
+    <Transform DEF='Box_1'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Box/>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>
