@@ -8,7 +8,7 @@ Script {
 async function initialize ()
 {
    const
-      response = await fetch (new URL ('tests/base64-with-bom.url', location)),
+      response = await fetch (new URL ('base64-with-bom.url', Browser .currentScene .worldURL)),
       text     = await response .text ();
 
    await Browser .loadURL (new MFString (text));
