@@ -12,6 +12,7 @@ async function initialize ()
       text     = await response .text ();
 
    await Browser .loadURL (new MFString (text));
+   await Browser .nextFrame ();
    Browser .viewAll (0);
 }
    "
