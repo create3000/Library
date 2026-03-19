@@ -6,21 +6,38 @@
     <component name='Geometry2D' level='1'/>
     <component name='Lighting' level='2'/>
     <component name='Scripting' level='1'/>
+    <component name='Texturing' level='4'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Wed, 18 Mar 2026 16:54:40 GMT'/>
-    <meta name='modified' content='Thu, 19 Mar 2026 10:46:24 GMT'/>
+    <meta name='modified' content='Thu, 19 Mar 2026 12:02:07 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.9, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
     <WorldInfo/>
-    <Viewpoint
-        description='Initial View'
-        position='4.799869 10.44682 14.66848'
-        orientation='-0.776588739330481 0.61771873128448 0.123828506271318 0.5052317'
-        centerOfRotation='-1.598721e-14 4 0'>
-      <NavigationInfo containerField='navigationInfo'
-          headlight='false'/>
-    </Viewpoint>
+    <ViewpointGroup>
+      <Viewpoint
+          description='Front View'
+          position='0 4 15'
+          centerOfRotation='0 4 0'>
+        <NavigationInfo DEF='_1' containerField='navigationInfo'
+            headlight='false'/>
+      </Viewpoint>
+      <Viewpoint
+          description='Top View'
+          position='0 19 0'
+          orientation='1 0 0 -1.5707963267949'
+          centerOfRotation='0 4 0'>
+        <NavigationInfo containerField='navigationInfo'
+            headlight='false'/>
+      </Viewpoint>
+      <Viewpoint
+          description='Initial View'
+          position='4.799869 10.44682 14.66848'
+          orientation='-0.776588739330481 0.61771873128448 0.123828506271318 0.5052317'
+          centerOfRotation='0 4 0'>
+        <NavigationInfo USE='_1' containerField='navigationInfo'/>
+      </Viewpoint>
+    </ViewpointGroup>
     <PointLight DEF='MainLight_1'
         intensity='2'
         ambientIntensity='1'
@@ -44,7 +61,7 @@
         ambientIntensity='1'
         attenuation='0 1 0'
         location='-0 4 2'/>
-    <ProximitySensor DEF='_1'
+    <ProximitySensor DEF='_8'
         size='-1 -1 -1'/>
     <Transform DEF='Botton'
         rotation='-1 0 0 1.5707963267949'
@@ -55,13 +72,10 @@
           <RenderedTexture
               update='ALWAYS'
               dimensions='1024, 1024, 4, 1, 1'>
-            <Viewpoint DEF='_2' containerField='viewpoint'
-                position='4.799869 -10.44682 14.66848'
-                orientation='0.908677545845171 0.417498643922108 -0 0.664766589273784'/>
+            <Viewpoint DEF='_10' containerField='viewpoint'
+                position='0 -5.755002 13.245'
+                orientation='0 -0.0917623971973396 0.99578093095851 3.14159265358979'/>
           </RenderedTexture>
-          <TextureTransform
-              translation='0 -1'
-              scale='1 -1'/>
         </Appearance>
         <Rectangle2D DEF='_3'
             solid='true'/>
@@ -69,8 +83,8 @@
       <Script DEF='MirrorBottomScript'>
         <field accessType='inputOutput' type='SFVec3f' name='mirrorTranslation'/>
         <field accessType='inputOutput' type='SFRotation' name='mirrorRotation' value='-1 0 0 1.5707963267949'/>
-        <field accessType='inputOutput' type='SFVec3f' name='viewpointPosition' value='4.799869 10.44682 14.66848'/>
-        <field accessType='inputOutput' type='SFRotation' name='viewpointOrientation' value='-0.776588739330482 0.617718731284481 0.123828506271318 0.505231699999999'/>
+        <field accessType='inputOutput' type='SFVec3f' name='viewpointPosition' value='0 5.755002 13.245'/>
+        <field accessType='inputOutput' type='SFRotation' name='viewpointOrientation' value='-1.00000000000001 0 0 0.183783332022038'/>
         <field accessType='inputOutput' type='SFFloat' name='viewpointFieldOfView' value='0.785398'/>
         <field accessType='outputOnly' type='SFVec3f' name='mirrorViewpointPosition_changed'/>
         <field accessType='outputOnly' type='SFRotation' name='mirrorViewpointOrientation_changed'/>
@@ -79,7 +93,7 @@
 
 function initialize ()
 {
-   eventsProcessed ();
+   eventsProcessed .call (this);
 }
 
 function eventsProcessed ()
@@ -92,7 +106,16 @@ function eventsProcessed ()
 
    mirrorViewpointPosition_changed = mirrorTranslation .subtract (rDirection);
 
-   mirrorViewpointOrientation_changed = new SFRotation (new SFVec3f (0, 0, 1), rDirection .negate ());
+   const
+      forward = viewpointOrientation .multVec (new SFVec3f (0, 0, 1)),
+      up      = viewpointOrientation .multVec (new SFVec3f (0, 1, 0));
+
+   const
+      rForward = reflect (forward, mirrorNormal),
+      rUp      = reflect (up, mirrorNormal),
+      rRight   = rUp .cross (rForward) .normalize ();
+
+   mirrorViewpointOrientation_changed = new SFRotation (new SFMatrix3f (rRight, rUp, rForward));
 }
 
 function reflect (i, n)
@@ -160,20 +183,17 @@ function reflect (i, n)
               update='ALWAYS'
               dimensions='1024, 1024, 4, 1, 1'>
             <Viewpoint DEF='_7' containerField='viewpoint'
-                position='4.799869 10.44682 -22.46848'
-                orientation='-0.0205226469811109 0.986676490110591 0.161394934319308 2.89196949078705'/>
+                position='0 5.755002 -21.045'
+                orientation='0 0.99578093095851 0.0917623971973431 3.14159265358979'/>
           </RenderedTexture>
-          <TextureTransform
-              translation='-1 0'
-              scale='-1 1'/>
         </Appearance>
         <Rectangle2D USE='_3'/>
       </Shape>
       <Script DEF='MirrorFrontScript'>
         <field accessType='inputOutput' type='SFVec3f' name='mirrorTranslation' value='0 4 -3.9'/>
         <field accessType='inputOutput' type='SFRotation' name='mirrorRotation'/>
-        <field accessType='inputOutput' type='SFVec3f' name='viewpointPosition' value='4.799869 10.44682 14.66848'/>
-        <field accessType='inputOutput' type='SFRotation' name='viewpointOrientation' value='-0.776588739330482 0.617718731284481 0.123828506271318 0.505231699999999'/>
+        <field accessType='inputOutput' type='SFVec3f' name='viewpointPosition' value='0 5.755002 13.245'/>
+        <field accessType='inputOutput' type='SFRotation' name='viewpointOrientation' value='-1.00000000000001 0 0 0.183783332022038'/>
         <field accessType='inputOutput' type='SFFloat' name='viewpointFieldOfView' value='0.785398'/>
         <field accessType='outputOnly' type='SFVec3f' name='mirrorViewpointPosition_changed'/>
         <field accessType='outputOnly' type='SFRotation' name='mirrorViewpointOrientation_changed'/>
@@ -182,7 +202,7 @@ function reflect (i, n)
 
 function initialize ()
 {
-   eventsProcessed ();
+   eventsProcessed .call (this);
 }
 
 function eventsProcessed ()
@@ -195,7 +215,16 @@ function eventsProcessed ()
 
    mirrorViewpointPosition_changed = mirrorTranslation .subtract (rDirection);
 
-   mirrorViewpointOrientation_changed = new SFRotation (new SFVec3f (0, 0, 1), rDirection .negate ()) .straighten ();
+   const
+      forward = viewpointOrientation .multVec (new SFVec3f (0, 0, 1)),
+      up      = viewpointOrientation .multVec (new SFVec3f (0, 1, 0));
+
+   const
+      rForward = reflect (forward, mirrorNormal),
+      rUp      = reflect (up, mirrorNormal),
+      rRight   = rUp .cross (rForward) .normalize ();
+
+   mirrorViewpointOrientation_changed = new SFRotation (new SFMatrix3f (rRight, rUp, rForward));
 }
 
 function reflect (i, n)
@@ -228,23 +257,25 @@ function reflect (i, n)
     </Transform>
     <ROUTE fromNode='Botton' fromField='translation_changed' toNode='MirrorBottomScript' toField='set_mirrorTranslation'/>
     <ROUTE fromNode='Botton' fromField='rotation_changed' toNode='MirrorBottomScript' toField='set_mirrorRotation'/>
-    <ROUTE fromNode='_1' fromField='position_changed' toNode='MirrorBottomScript' toField='set_viewpointPosition'/>
-    <ROUTE fromNode='MirrorBottomScript' fromField='mirrorViewpointPosition_changed' toNode='_2' toField='set_position'/>
-    <ROUTE fromNode='MirrorBottomScript' fromField='mirrorViewpointOrientation_changed' toNode='_2' toField='set_orientation'/>
-    <ROUTE fromNode='_1' fromField='orientation_changed' toNode='MirrorBottomScript' toField='set_viewpointOrientation'/>
-    <ROUTE fromNode='MirrorBottomScript' fromField='mirrorViewpointFieldOfView_changed' toNode='_2' toField='set_fieldOfView'/>
+    <ROUTE fromNode='_8' fromField='position_changed' toNode='MirrorBottomScript' toField='set_viewpointPosition'/>
+    <ROUTE fromNode='MirrorBottomScript' fromField='mirrorViewpointPosition_changed' toNode='_10' toField='set_position'/>
+    <ROUTE fromNode='MirrorBottomScript' fromField='mirrorViewpointOrientation_changed' toNode='_10' toField='set_orientation'/>
+    <ROUTE fromNode='_8' fromField='orientation_changed' toNode='MirrorBottomScript' toField='set_viewpointOrientation'/>
+    <ROUTE fromNode='MirrorBottomScript' fromField='mirrorViewpointFieldOfView_changed' toNode='_10' toField='set_fieldOfView'/>
     <ROUTE fromNode='FrontMirror' fromField='rotation_changed' toNode='MirrorFrontScript' toField='set_mirrorRotation'/>
     <ROUTE fromNode='FrontMirror' fromField='translation_changed' toNode='MirrorFrontScript' toField='set_mirrorTranslation'/>
     <ROUTE fromNode='MirrorFrontScript' fromField='mirrorViewpointFieldOfView_changed' toNode='_7' toField='set_fieldOfView'/>
     <ROUTE fromNode='MirrorFrontScript' fromField='mirrorViewpointOrientation_changed' toNode='_7' toField='set_orientation'/>
     <ROUTE fromNode='MirrorFrontScript' fromField='mirrorViewpointPosition_changed' toNode='_7' toField='set_position'/>
-    <ROUTE fromNode='_1' fromField='position_changed' toNode='MirrorFrontScript' toField='set_viewpointPosition'/>
-    <ROUTE fromNode='_1' fromField='orientation_changed' toNode='MirrorFrontScript' toField='set_viewpointOrientation'/>
+    <ROUTE fromNode='_8' fromField='position_changed' toNode='MirrorFrontScript' toField='set_viewpointPosition'/>
+    <ROUTE fromNode='_8' fromField='orientation_changed' toNode='MirrorFrontScript' toField='set_viewpointOrientation'/>
     <ROUTE fromNode='_4' fromField='diffuseColor_changed' toNode='RedLight_1' toField='set_color'/>
     <ROUTE fromNode='RedLight_1' fromField='color_changed' toNode='_4' toField='set_diffuseColor'/>
     <ROUTE fromNode='GreenLight' fromField='color_changed' toNode='_5' toField='set_diffuseColor'/>
     <ROUTE fromNode='_5' fromField='diffuseColor_changed' toNode='GreenLight' toField='set_color'/>
     <ROUTE fromNode='BlueLight' fromField='color_changed' toNode='_6' toField='set_diffuseColor'/>
     <ROUTE fromNode='_6' fromField='diffuseColor_changed' toNode='BlueLight' toField='set_color'/>
+    <ROUTE fromNode='MirrorBottomScript' fromField='url_changed' toNode='MirrorFrontScript' toField='set_url'/>
+    <ROUTE fromNode='MirrorFrontScript' fromField='url_changed' toNode='MirrorBottomScript' toField='set_url'/>
   </Scene>
 </X3D>
