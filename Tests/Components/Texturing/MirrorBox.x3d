@@ -9,23 +9,23 @@
     <component name='Texturing' level='4'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Wed, 18 Mar 2026 16:54:40 GMT'/>
-    <meta name='modified' content='Thu, 19 Mar 2026 14:52:49 GMT'/>
+    <meta name='modified' content='Thu, 19 Mar 2026 16:04:06 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.9, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
     <WorldInfo/>
     <ViewpointGroup>
-      <Viewpoint DEF='Front'
-          description='Front View'
-          position='0 4 15'
-          centerOfRotation='0 4 0'>
-        <NavigationInfo DEF='_1' containerField='navigationInfo'
-            headlight='false'/>
-      </Viewpoint>
       <Viewpoint DEF='Top_1'
           description='Top View'
           position='0 19 0'
           orientation='1 0 0 -1.5707963267949'
+          centerOfRotation='0 4 0'>
+        <NavigationInfo DEF='_1' containerField='navigationInfo'
+            headlight='false'/>
+      </Viewpoint>
+      <Viewpoint DEF='Front'
+          description='Front View'
+          position='0 4 15'
           centerOfRotation='0 4 0'>
         <NavigationInfo USE='_1' containerField='navigationInfo'/>
       </Viewpoint>
@@ -56,7 +56,7 @@
         location='2 4 0'/>
     <PointLight DEF='BlueLight'
         color='0.1607843 0.5254902 0.8'
-        intensity='2'
+        intensity='3'
         ambientIntensity='1'
         attenuation='0 1 0'
         location='-0 4 2'/>
