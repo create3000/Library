@@ -9,7 +9,7 @@
     <component name='Texturing' level='4'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Wed, 18 Mar 2026 16:54:40 GMT'/>
-    <meta name='modified' content='Fri, 20 Mar 2026 08:46:41 GMT'/>
+    <meta name='modified' content='Fri, 20 Mar 2026 09:01:21 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.9, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -43,7 +43,7 @@
         attenuation='0 1 0'
         location='0 6 0'/>
     <PointLight DEF='RedLight'
-        color='0.8 0 0'
+        color='1 0 0'
         intensity='2'
         ambientIntensity='1'
         attenuation='0 1 0'
@@ -55,8 +55,8 @@
         attenuation='0 1 0'
         location='2 4 0'/>
     <PointLight DEF='BlueLight'
-        color='0.1607843 0.5254902 0.8'
-        intensity='3'
+        color='0 0.5731707 1'
+        intensity='2'
         ambientIntensity='1'
         attenuation='0 1 0'
         location='-0 4 2'/>
@@ -67,16 +67,17 @@
         scale='4 4 4'>
       <Shape>
         <Appearance>
-          <Material/>
+          <Material
+              diffuseColor='1 1 1'/>
           <RenderedTexture
               update='ALWAYS'
               dimensions='1024, 1024, 4, 1, 1'
               repeatS='false'
               repeatT='false'>
             <Viewpoint DEF='_10' containerField='viewpoint'
-                position='0 -19 1.350031e-13'
-                orientation='0 -0.707106781186546 0.707106781186549 3.14159265358979'
-                fieldOfView='0.4149925'/>
+                position='10.65733 -10.96945 4.545916'
+                orientation='0.536988404562477 -0.225636862883355 0.812853897987581 2.84565072317698'
+                fieldOfView='0.4912742'/>
           </RenderedTexture>
         </Appearance>
         <Rectangle2D DEF='_3'
@@ -86,8 +87,8 @@
         <field accessType='inputOutput' type='SFVec3f' name='mirrorTranslation'/>
         <field accessType='inputOutput' type='SFRotation' name='mirrorRotation' value='-1 0 0 1.5707963267949'/>
         <field accessType='inputOutput' type='SFVec3f' name='mirrorScale' value='4 4 4'/>
-        <field accessType='inputOutput' type='SFVec3f' name='viewpointPosition' value='0 19 0'/>
-        <field accessType='inputOutput' type='SFRotation' name='viewpointOrientation' value='1 0 0 4.71238898038469'/>
+        <field accessType='inputOutput' type='SFVec3f' name='viewpointPosition' value='10.65733 10.96945 4.545916'/>
+        <field accessType='inputOutput' type='SFRotation' name='viewpointOrientation' value='-0.375286871767315 0.893137300121707 0.247922421354768 1.27370572118745'/>
         <field accessType='inputOutput' type='SFFloat' name='viewpointFieldOfView' value='0.785398'/>
         <field accessType='outputOnly' type='SFVec3f' name='mirrorViewpointPosition_changed'/>
         <field accessType='outputOnly' type='SFRotation' name='mirrorViewpointOrientation_changed'/>
@@ -132,7 +133,7 @@ function eventsProcessed ()
       <Shape>
         <Appearance>
           <Material DEF='_4'
-              diffuseColor='0.8 0 0'/>
+              diffuseColor='1 0 0'/>
         </Appearance>
         <Rectangle2D USE='_3'/>
       </Shape>
@@ -156,7 +157,7 @@ function eventsProcessed ()
       <Shape>
         <Appearance>
           <Material DEF='_6'
-              diffuseColor='0.1607843 0.5254902 0.8'/>
+              diffuseColor='0 0.5731707 1'/>
         </Appearance>
         <Rectangle2D USE='_3'/>
       </Shape>
@@ -167,8 +168,8 @@ function eventsProcessed ()
         scale='4 4 4'>
       <Shape>
         <Appearance>
-          <Material
-              diffuseColor='0.9333333 0.9333333 0.9333333'/>
+          <Material DEF='_2'
+              diffuseColor='1 1 1'/>
         </Appearance>
         <Rectangle2D USE='_3'/>
       </Shape>
@@ -178,16 +179,17 @@ function eventsProcessed ()
         scale='3 3 3'>
       <Shape>
         <Appearance>
-          <Material/>
+          <Material
+              diffuseColor='1 1 1'/>
           <RenderedTexture
               update='ALWAYS'
               dimensions='1024, 1024, 4, 1, 1'
               repeatS='false'
               repeatT='false'>
             <Viewpoint DEF='_7' containerField='viewpoint'
-                position='0 19 -7.8'
-                orientation='0 0.707106781186546 0.707106781186549 3.14159265358979'
-                fieldOfView='0.3824'/>
+                position='10.65733 10.96945 -12.34592'
+                orientation='-0.174002362250271 0.948866581869577 0.263392079878022 2.0217481268377'
+                fieldOfView='0.3877325'/>
           </RenderedTexture>
         </Appearance>
         <Rectangle2D USE='_3'/>
@@ -196,8 +198,8 @@ function eventsProcessed ()
         <field accessType='inputOutput' type='SFVec3f' name='mirrorTranslation' value='0 4 -3.9'/>
         <field accessType='inputOutput' type='SFRotation' name='mirrorRotation'/>
         <field accessType='inputOutput' type='SFVec3f' name='mirrorScale' value='3 3 3'/>
-        <field accessType='inputOutput' type='SFVec3f' name='viewpointPosition' value='0 19 0'/>
-        <field accessType='inputOutput' type='SFRotation' name='viewpointOrientation' value='1 0 0 4.71238898038469'/>
+        <field accessType='inputOutput' type='SFVec3f' name='viewpointPosition' value='10.65733 10.96945 4.545916'/>
+        <field accessType='inputOutput' type='SFRotation' name='viewpointOrientation' value='-0.375286871767315 0.893137300121707 0.247922421354768 1.27370572118745'/>
         <field accessType='inputOutput' type='SFFloat' name='viewpointFieldOfView' value='0.785398'/>
         <field accessType='outputOnly' type='SFVec3f' name='mirrorViewpointPosition_changed'/>
         <field accessType='outputOnly' type='SFRotation' name='mirrorViewpointOrientation_changed'/>
@@ -241,8 +243,7 @@ function eventsProcessed ()
         scale='4 4 4'>
       <Shape>
         <Appearance>
-          <Material
-              diffuseColor='0.9333333 0.9333333 0.9333333'/>
+          <Material USE='_2'/>
         </Appearance>
         <Rectangle2D USE='_3'/>
       </Shape>
@@ -251,7 +252,8 @@ function eventsProcessed ()
         translation='0 1 -0'>
       <Shape>
         <Appearance>
-          <Material/>
+          <Material
+              diffuseColor='1 1 1'/>
         </Appearance>
         <Sphere/>
       </Shape>
