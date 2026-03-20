@@ -9,7 +9,7 @@
     <component name='Texturing' level='4'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Wed, 18 Mar 2026 16:54:40 GMT'/>
-    <meta name='modified' content='Fri, 20 Mar 2026 09:01:21 GMT'/>
+    <meta name='modified' content='Fri, 20 Mar 2026 09:09:27 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.9, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -75,9 +75,9 @@
               repeatS='false'
               repeatT='false'>
             <Viewpoint DEF='_10' containerField='viewpoint'
-                position='10.65733 -10.96945 4.545916'
-                orientation='0.536988404562477 -0.225636862883355 0.812853897987581 2.84565072317698'
-                fieldOfView='0.4912742'/>
+                position='-0.1824005 -6.359603 13.31226'
+                orientation='-0.00682403278943836 -0.0875916349289617 0.996133092546854 3.14279275048763'
+                fieldOfView='0.5294819'/>
           </RenderedTexture>
         </Appearance>
         <Rectangle2D DEF='_3'
@@ -87,9 +87,8 @@
         <field accessType='inputOutput' type='SFVec3f' name='mirrorTranslation'/>
         <field accessType='inputOutput' type='SFRotation' name='mirrorRotation' value='-1 0 0 1.5707963267949'/>
         <field accessType='inputOutput' type='SFVec3f' name='mirrorScale' value='4 4 4'/>
-        <field accessType='inputOutput' type='SFVec3f' name='viewpointPosition' value='10.65733 10.96945 4.545916'/>
-        <field accessType='inputOutput' type='SFRotation' name='viewpointOrientation' value='-0.375286871767315 0.893137300121707 0.247922421354768 1.27370572118745'/>
-        <field accessType='inputOutput' type='SFFloat' name='viewpointFieldOfView' value='0.785398'/>
+        <field accessType='inputOutput' type='SFVec3f' name='viewpointPosition' value='-0.1824005 6.359603 13.31226'/>
+        <field accessType='inputOutput' type='SFRotation' name='viewpointOrientation' value='-0.996955715161751 -0.0776701850056692 -0.00682966818470083 0.175945031253208'/>
         <field accessType='outputOnly' type='SFVec3f' name='mirrorViewpointPosition_changed'/>
         <field accessType='outputOnly' type='SFRotation' name='mirrorViewpointOrientation_changed'/>
         <field accessType='outputOnly' type='SFFloat' name='mirrorViewpointFieldOfView_changed'/>
@@ -187,9 +186,9 @@ function eventsProcessed ()
               repeatS='false'
               repeatT='false'>
             <Viewpoint DEF='_7' containerField='viewpoint'
-                position='10.65733 10.96945 -12.34592'
-                orientation='-0.174002362250271 0.948866581869577 0.263392079878022 2.0217481268377'
-                fieldOfView='0.3877325'/>
+                position='-0.1824005 6.359603 -21.11226'
+                orientation='0.000600062384745836 0.996156107687298 0.0875936586884354 3.15524082263966'
+                fieldOfView='0.3419676'/>
           </RenderedTexture>
         </Appearance>
         <Rectangle2D USE='_3'/>
@@ -198,9 +197,8 @@ function eventsProcessed ()
         <field accessType='inputOutput' type='SFVec3f' name='mirrorTranslation' value='0 4 -3.9'/>
         <field accessType='inputOutput' type='SFRotation' name='mirrorRotation'/>
         <field accessType='inputOutput' type='SFVec3f' name='mirrorScale' value='3 3 3'/>
-        <field accessType='inputOutput' type='SFVec3f' name='viewpointPosition' value='10.65733 10.96945 4.545916'/>
-        <field accessType='inputOutput' type='SFRotation' name='viewpointOrientation' value='-0.375286871767315 0.893137300121707 0.247922421354768 1.27370572118745'/>
-        <field accessType='inputOutput' type='SFFloat' name='viewpointFieldOfView' value='0.785398'/>
+        <field accessType='inputOutput' type='SFVec3f' name='viewpointPosition' value='-0.1824005 6.359603 13.31226'/>
+        <field accessType='inputOutput' type='SFRotation' name='viewpointOrientation' value='-0.996955715161751 -0.0776701850056692 -0.00682966818470083 0.175945031253208'/>
         <field accessType='outputOnly' type='SFVec3f' name='mirrorViewpointPosition_changed'/>
         <field accessType='outputOnly' type='SFRotation' name='mirrorViewpointOrientation_changed'/>
         <field accessType='outputOnly' type='SFFloat' name='mirrorViewpointFieldOfView_changed'/>
@@ -253,6 +251,7 @@ function eventsProcessed ()
       <Shape>
         <Appearance>
           <Material
+              ambientIntensity='1'
               diffuseColor='1 1 1'/>
         </Appearance>
         <Sphere/>
