@@ -10,7 +10,7 @@
     <component name='Texturing3D' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Wed, 18 Mar 2026 16:54:40 GMT'/>
-    <meta name='modified' content='Fri, 20 Mar 2026 13:05:07 GMT'/>
+    <meta name='modified' content='Fri, 20 Mar 2026 15:00:47 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.9, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -68,6 +68,8 @@
         scale='4 4 4'>
       <Shape>
         <Appearance>
+          <UnlitMaterial DEF='_1'
+              emissiveColor='0.9 0.9 0.9'/>
           <RenderedTexture
               update='ALWAYS'
               dimensions='1024, 1024, 4, 1, 1'
@@ -78,7 +80,7 @@
                 orientation='0 -0.707106781186545 0.70710678118655 3.14159265358979'
                 fieldOfView='0.4149925'/>
           </RenderedTexture>
-          <TextureTransformMatrix3D DEF='_1'
+          <TextureTransformMatrix3D DEF='_2'
               matrix='-1 0 0 0 0 1 0 0 0 0 1 0 1 0 0 1'/>
         </Appearance>
         <Rectangle2D DEF='_3'
@@ -168,7 +170,7 @@ function eventsProcessed ()
         scale='4 4 4'>
       <Shape>
         <Appearance>
-          <Material DEF='_2'
+          <Material DEF='_12'
               diffuseColor='1 1 1'/>
         </Appearance>
         <Rectangle2D USE='_3'/>
@@ -179,6 +181,7 @@ function eventsProcessed ()
         scale='3 3 3'>
       <Shape>
         <Appearance>
+          <UnlitMaterial USE='_1'/>
           <RenderedTexture
               update='ALWAYS'
               dimensions='1024, 1024, 4, 1, 1'
@@ -189,7 +192,7 @@ function eventsProcessed ()
                 orientation='0 0.791085915613769 0.611705054840586 3.14159265358979'
                 fieldOfView='0.3824'/>
           </RenderedTexture>
-          <TextureTransformMatrix3D DEF='_12'
+          <TextureTransformMatrix3D DEF='_13'
               matrix='-1 0 0 0 0 1 0 0 0 0 1 0 1 0 0 1'/>
         </Appearance>
         <Rectangle2D USE='_3'/>
@@ -242,7 +245,7 @@ function eventsProcessed ()
         scale='4 4 4'>
       <Shape>
         <Appearance>
-          <Material USE='_2'/>
+          <Material USE='_12'/>
         </Appearance>
         <Rectangle2D USE='_3'/>
       </Shape>
@@ -282,7 +285,7 @@ function eventsProcessed ()
     <ROUTE fromNode='MirrorFrontScript' fromField='url_changed' toNode='MirrorBottomScript' toField='set_url'/>
     <ROUTE fromNode='Botton_1' fromField='scale_changed' toNode='MirrorBottomScript' toField='set_mirrorScale'/>
     <ROUTE fromNode='FrontMirror' fromField='scale_changed' toNode='MirrorFrontScript' toField='set_mirrorScale'/>
-    <ROUTE fromNode='MirrorBottomScript' fromField='mirrorTextureMatrix_changed' toNode='_1' toField='set_matrix'/>
-    <ROUTE fromNode='MirrorFrontScript' fromField='mirrorTextureMatrix_changed' toNode='_12' toField='set_matrix'/>
+    <ROUTE fromNode='MirrorBottomScript' fromField='mirrorTextureMatrix_changed' toNode='_2' toField='set_matrix'/>
+    <ROUTE fromNode='MirrorFrontScript' fromField='mirrorTextureMatrix_changed' toNode='_13' toField='set_matrix'/>
   </Scene>
 </X3D>
