@@ -7,7 +7,7 @@
     <component name='Texturing' level='4'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Tue, 17 Mar 2026 10:49:59 GMT'/>
-    <meta name='modified' content='Sat, 21 Mar 2026 20:53:01 GMT'/>
+    <meta name='modified' content='Sat, 21 Mar 2026 20:59:49 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.9, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -126,7 +126,8 @@
       <Transform DEF='Rectangle2D_8'
           translation='-1.776357e-15 -7 -6.661338e-16'>
         <Shape>
-          <Appearance>
+          <Appearance
+              alphaMode='BLEND'>
             <ComposedShader DEF='NewShader'
                 language='GLSL'>
               <field accessType='inputOutput' type='SFNode' name='renderedTexture'>
@@ -156,7 +157,7 @@ out vec2 texCoord;
 void
 main ()
 {
-   texCoord = vec2 (x3d_TexCoord0 .x, 1.0 - x3d_TexCoord0 .y);
+   texCoord = vec2 (x3d_TexCoord0 .xy);
 
    gl_Position = x3d_ProjectionMatrix * x3d_ModelViewMatrix * x3d_Vertex;
 }
