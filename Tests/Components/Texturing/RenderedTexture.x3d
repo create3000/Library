@@ -6,7 +6,7 @@
     <component name='Texturing' level='4'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Tue, 17 Mar 2026 10:49:59 GMT'/>
-    <meta name='modified' content='Thu, 19 Mar 2026 01:42:02 GMT'/>
+    <meta name='modified' content='Sat, 21 Mar 2026 19:24:30 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.9, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -31,8 +31,12 @@
         groundColor='0.105712 0.156051 0.297, 0.187629 0.255857 0.398, 0.33604 0.405546 0.542, 0.3612 0.469145 0.602, 0.39471 0.522059 0.669'/>
     <Background DEF='Gray'
         skyColor='0.2 0.2 0.2'/>
+    <Viewpoint DEF='VP0'
+        description='Overview'
+        position='6.5 0 18.09289'
+        centerOfRotation='6.5 0 -0.5'/>
     <Group DEF='First'>
-      <Viewpoint DEF='VP1'
+      <Viewpoint DEF='VP1_1'
           description='Image 1'/>
       <Transform DEF='Rectangle2D_2'
           translation='0 0 -1'
@@ -84,15 +88,16 @@
           translation='13 0 -0'>
         <Shape>
           <Appearance>
-            <UnlitMaterial/>
-            <RenderedTexture DEF='Texture2'
-                update='ALWAYS'
-                repeatS='false'
-                repeatT='false'>
-              <Background DEF='BG2' containerField='background'
-                  transparency='1'/>
-              <Viewpoint USE='VP2' containerField='viewpoint'/>
-            </RenderedTexture>
+            <UnlitMaterial>
+              <RenderedTexture DEF='Texture2' containerField='emissiveTexture'
+                  update='ALWAYS'
+                  repeatS='false'
+                  repeatT='false'>
+                <Background DEF='BG2' containerField='background'
+                    transparency='1'/>
+                <Viewpoint USE='VP2' containerField='viewpoint'/>
+              </RenderedTexture>
+            </UnlitMaterial>
           </Appearance>
           <Rectangle2D/>
         </Shape>
