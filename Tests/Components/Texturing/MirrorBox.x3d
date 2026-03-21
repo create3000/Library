@@ -4,14 +4,14 @@
   <head>
     <component name='Core' level='2'/>
     <component name='EnvironmentalSensor' level='1'/>
-    <component name='Geometry2D' level='1'/>
+    <component name='Geometry2D' level='2'/>
     <component name='Lighting' level='2'/>
     <component name='Scripting' level='1'/>
     <component name='Texturing' level='4'/>
     <component name='Texturing3D' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Wed, 18 Mar 2026 16:54:40 GMT'/>
-    <meta name='modified' content='Sat, 21 Mar 2026 00:19:53 GMT'/>
+    <meta name='modified' content='Sat, 21 Mar 2026 00:45:24 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.9, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -20,12 +20,12 @@
         <field accessType='inputOutput' type='SFVec3f' name='translation'/>
         <field accessType='inputOutput' type='SFRotation' name='rotation'/>
         <field accessType='inputOutput' type='SFVec3f' name='scale' value='1 1 1'/>
-        <field accessType='initializeOnly' type='SFBool' name='solid' value='true'/>
         <field accessType='inputOutput' type='SFVec3f' name='sensorSize'/>
         <field accessType='inputOutput' type='SFInt32' name='textureSize' value='128'/>
         <field accessType='inputOutput' type='SFNode' name='material'/>
         <field accessType='inputOutput' type='SFNode' name='textureProperties'/>
         <field accessType='inputOutput' type='SFNode' name='scene'/>
+        <field accessType='inputOutput' type='SFNode' name='geometry'/>
       </ProtoInterface>
       <ProtoBody>
         <Group>
@@ -41,6 +41,9 @@
               <connect nodeField='scale' protoField='scale'/>
             </IS>
             <Shape>
+              <IS>
+                <connect nodeField='geometry' protoField='geometry'/>
+              </IS>
               <Appearance>
                 <IS>
                   <connect nodeField='material' protoField='material'/>
@@ -60,11 +63,6 @@
                 <TextureTransformMatrix3D DEF='_2'
                     matrix='-1 0 0 0 0 1 0 0 0 0 1 0 1 0 0 1'/>
               </Appearance>
-              <Rectangle2D>
-                <IS>
-                  <connect nodeField='solid' protoField='solid'/>
-                </IS>
-              </Rectangle2D>
             </Shape>
           </Transform>
         </Group>
@@ -201,6 +199,10 @@ function eventsProcessed ()
         <UnlitMaterial DEF='_2'
             emissiveColor='0.9 0.9 0.9'/>
       </fieldValue>
+      <fieldValue name='geometry'>
+        <Rectangle2D DEF='_3'
+            solid='true'/>
+      </fieldValue>
     </ProtoInstance>
     <Transform DEF='Left'
         translation='-4 4 0'
@@ -211,8 +213,7 @@ function eventsProcessed ()
           <Material DEF='_4'
               diffuseColor='1 0 0'/>
         </Appearance>
-        <Rectangle2D DEF='_3'
-            solid='true'/>
+        <Rectangle2D USE='_3'/>
       </Shape>
     </Transform>
     <Transform DEF='Right'
@@ -259,6 +260,10 @@ function eventsProcessed ()
       <fieldValue name='material'>
         <UnlitMaterial DEF='_1'
             emissiveColor='0.9 0.9 0.9'/>
+      </fieldValue>
+      <fieldValue name='geometry'>
+        <Disk2D DEF='_7'
+            solid='true'/>
       </fieldValue>
     </ProtoInstance>
     <Transform DEF='Top'
