@@ -7,7 +7,7 @@
     <component name='Texturing' level='4'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Tue, 17 Mar 2026 10:49:59 GMT'/>
-    <meta name='modified' content='Sat, 21 Mar 2026 20:59:49 GMT'/>
+    <meta name='modified' content='Sat, 21 Mar 2026 21:15:47 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.9, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -116,7 +116,7 @@
           <Appearance>
             <Material/>
             <ImageTexture
-                url='"https://picsum.photos/600/300"'
+                url='"https://picsum.photos/id/123/600/300"'
                 repeatS='false'
                 repeatT='false'/>
           </Appearance>
