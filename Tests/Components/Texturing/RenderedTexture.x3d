@@ -7,7 +7,7 @@
     <component name='Texturing' level='4'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Tue, 17 Mar 2026 10:49:59 GMT'/>
-    <meta name='modified' content='Sat, 21 Mar 2026 22:12:39 GMT'/>
+    <meta name='modified' content='Sat, 21 Mar 2026 22:14:56 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.9, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -71,16 +71,17 @@
           description='Material Texture'
           position='13 0 10'
           centerOfRotation='13 0 0'/>
-      <Transform DEF='Rectangle2D_5'
+      <Transform DEF='Rectangle2D'
           translation='13 0 -1'
           scale='6 3 3.444133'>
         <Shape>
           <Appearance>
-            <Material/>
-            <ImageTexture
-                url='"https://picsum.photos/seed/600/300"'
-                repeatS='false'
-                repeatT='false'/>
+            <Material>
+              <ImageTexture containerField='diffuseTexture'
+                  url='"https://picsum.photos/seed/600/300"'
+                  repeatS='false'
+                  repeatT='false'/>
+            </Material>
           </Appearance>
           <Rectangle2D/>
         </Shape>
@@ -114,11 +115,12 @@
           scale='6 3 3.444133'>
         <Shape>
           <Appearance>
-            <Material/>
-            <ImageTexture
-                url='"https://picsum.photos/id/123/600/300"'
-                repeatS='false'
-                repeatT='false'/>
+            <Material>
+              <ImageTexture containerField='diffuseTexture'
+                  url='"https://picsum.photos/id/123/600/300"'
+                  repeatS='false'
+                  repeatT='false'/>
+            </Material>
           </Appearance>
           <Rectangle2D/>
         </Shape>
