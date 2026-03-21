@@ -3,10 +3,11 @@
 <X3D profile='Interchange' version='4.1' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.1.xsd'>
   <head>
     <component name='Geometry2D' level='1'/>
+    <component name='Shaders' level='1'/>
     <component name='Texturing' level='4'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Tue, 17 Mar 2026 10:49:59 GMT'/>
-    <meta name='modified' content='Sat, 21 Mar 2026 19:24:30 GMT'/>
+    <meta name='modified' content='Sat, 21 Mar 2026 20:53:01 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.9, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -33,8 +34,8 @@
         skyColor='0.2 0.2 0.2'/>
     <Viewpoint DEF='VP0'
         description='Overview'
-        position='6.5 0 18.09289'
-        centerOfRotation='6.5 0 -0.5'/>
+        position='6.5 -3.5 17.77452'
+        centerOfRotation='6.5 -3.5 -0.5'/>
     <Group DEF='First'>
       <Viewpoint DEF='VP1_1'
           description='Image 1'/>
@@ -65,12 +66,12 @@
         </Shape>
       </Transform>
     </Group>
-    <Group DEF='Second'>
-      <Viewpoint DEF='VP2'
+    <Group DEF='Second_1'>
+      <Viewpoint DEF='VP2_1'
           description='Image 2'
           position='13 0 10'
           centerOfRotation='13 0 0'/>
-      <Transform DEF='Rectangle2D'
+      <Transform DEF='Rectangle2D_5'
           translation='13 0 -1'
           scale='6 3 3.444133'>
         <Shape>
@@ -84,20 +85,104 @@
           <Rectangle2D/>
         </Shape>
       </Transform>
-      <Transform DEF='Rectangle2D_1'
+      <Transform DEF='Rectangle2D_6'
           translation='13 0 -0'>
         <Shape>
           <Appearance>
             <UnlitMaterial>
-              <RenderedTexture DEF='Texture2' containerField='emissiveTexture'
+              <RenderedTexture DEF='Texture2_1' containerField='emissiveTexture'
                   update='ALWAYS'
                   repeatS='false'
                   repeatT='false'>
-                <Background DEF='BG2' containerField='background'
+                <Background DEF='BG2_1' containerField='background'
                     transparency='1'/>
-                <Viewpoint USE='VP2' containerField='viewpoint'/>
+                <Viewpoint USE='VP2_1' containerField='viewpoint'/>
               </RenderedTexture>
             </UnlitMaterial>
+          </Appearance>
+          <Rectangle2D/>
+        </Shape>
+      </Transform>
+    </Group>
+    <Group DEF='Shader'>
+      <Viewpoint DEF='VP3'
+          description='Image 3'
+          position='0 -7 10'
+          centerOfRotation='13 0 0'/>
+      <Transform DEF='Rectangle2D_7'
+          translation='0 -7 -1'
+          scale='6 3 3.444133'>
+        <Shape>
+          <Appearance>
+            <Material/>
+            <ImageTexture
+                url='"https://picsum.photos/600/300"'
+                repeatS='false'
+                repeatT='false'/>
+          </Appearance>
+          <Rectangle2D/>
+        </Shape>
+      </Transform>
+      <Transform DEF='Rectangle2D_8'
+          translation='-1.776357e-15 -7 -6.661338e-16'>
+        <Shape>
+          <Appearance>
+            <ComposedShader DEF='NewShader'
+                language='GLSL'>
+              <field accessType='inputOutput' type='SFNode' name='renderedTexture'>
+                <RenderedTexture DEF='Texture3'
+                    update='ALWAYS'
+                    repeatS='false'
+                    repeatT='false'>
+                  <Background DEF='BG2' containerField='background'
+                      transparency='1'/>
+                  <Viewpoint USE='VP3' containerField='viewpoint'/>
+                </RenderedTexture>
+              </field>
+              <ShaderPart DEF='VertexShader'>
+<![CDATA[data:x-shader/x-vertex,#version 300 es
+
+precision highp float;
+precision highp int;
+
+uniform mat4 x3d_ProjectionMatrix;
+uniform mat4 x3d_ModelViewMatrix;
+
+in vec4 x3d_TexCoord0;
+in vec4 x3d_Vertex;
+
+out vec2 texCoord;
+
+void
+main ()
+{
+   texCoord = vec2 (x3d_TexCoord0 .x, 1.0 - x3d_TexCoord0 .y);
+
+   gl_Position = x3d_ProjectionMatrix * x3d_ModelViewMatrix * x3d_Vertex;
+}
+]]>
+              </ShaderPart>
+              <ShaderPart DEF='FragmentShader'
+                  type='FRAGMENT'>
+<![CDATA[data:x-shader/x-fragment,#version 300 es
+
+precision highp float;
+precision highp int;
+
+in vec2 texCoord;
+
+out vec4 x3d_FragColor;
+
+uniform sampler2D renderedTexture;
+
+void
+main ()
+{
+   x3d_FragColor = texture (renderedTexture, texCoord);
+}
+]]>
+              </ShaderPart>
+            </ComposedShader>
           </Appearance>
           <Rectangle2D/>
         </Shape>
