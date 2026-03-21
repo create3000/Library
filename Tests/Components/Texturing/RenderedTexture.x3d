@@ -7,7 +7,7 @@
     <component name='Texturing' level='4'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Tue, 17 Mar 2026 10:49:59 GMT'/>
-    <meta name='modified' content='Sat, 21 Mar 2026 21:15:47 GMT'/>
+    <meta name='modified' content='Sat, 21 Mar 2026 22:12:39 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.9, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -32,13 +32,13 @@
         groundColor='0.105712 0.156051 0.297, 0.187629 0.255857 0.398, 0.33604 0.405546 0.542, 0.3612 0.469145 0.602, 0.39471 0.522059 0.669'/>
     <Background DEF='Gray'
         skyColor='0.2 0.2 0.2'/>
-    <Viewpoint DEF='VP0'
+    <Viewpoint DEF='Overview'
         description='Overview'
         position='6.5 -3.5 17.77452'
         centerOfRotation='6.5 -3.5 -0.5'/>
-    <Group DEF='First'>
-      <Viewpoint DEF='VP1_1'
-          description='Image 1'/>
+    <Group DEF='TextureField_1'>
+      <Viewpoint DEF='TextureField'
+          description='Texture Field'/>
       <Transform DEF='Rectangle2D_2'
           translation='0 0 -1'
           scale='6 3 3.444133'>
@@ -66,9 +66,9 @@
         </Shape>
       </Transform>
     </Group>
-    <Group DEF='Second_1'>
-      <Viewpoint DEF='VP2_1'
-          description='Image 2'
+    <Group DEF='MaterialTexture'>
+      <Viewpoint DEF='MaterialTexture_1'
+          description='Material Texture'
           position='13 0 10'
           centerOfRotation='13 0 0'/>
       <Transform DEF='Rectangle2D_5'
@@ -96,7 +96,7 @@
                   repeatT='false'>
                 <Background DEF='BG2_1' containerField='background'
                     transparency='1'/>
-                <Viewpoint USE='VP2_1' containerField='viewpoint'/>
+                <Viewpoint USE='MaterialTexture_1' containerField='viewpoint'/>
               </RenderedTexture>
             </UnlitMaterial>
           </Appearance>
@@ -105,8 +105,8 @@
       </Transform>
     </Group>
     <Group DEF='Shader'>
-      <Viewpoint DEF='VP3'
-          description='Image 3'
+      <Viewpoint DEF='Shader_1'
+          description='Shader'
           position='0 -7 10'
           centerOfRotation='13 0 0'/>
       <Transform DEF='Rectangle2D_7'
@@ -137,7 +137,7 @@
                     repeatT='false'>
                   <Background DEF='BG2' containerField='background'
                       transparency='1'/>
-                  <Viewpoint USE='VP3' containerField='viewpoint'/>
+                  <Viewpoint USE='Shader_1' containerField='viewpoint'/>
                 </RenderedTexture>
               </field>
               <ShaderPart DEF='VertexShader'>
