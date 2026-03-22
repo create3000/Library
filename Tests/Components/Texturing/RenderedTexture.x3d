@@ -6,7 +6,7 @@
     <component name='Shaders' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Tue, 17 Mar 2026 10:49:59 GMT'/>
-    <meta name='modified' content='Sun, 22 Mar 2026 08:04:31 GMT'/>
+    <meta name='modified' content='Sun, 22 Mar 2026 10:18:45 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.9, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -49,10 +49,11 @@
                 repeatS='false'
                 repeatT='false'/>
           </Appearance>
-          <Rectangle2D/>
+          <Rectangle2D DEF='_1'/>
         </Shape>
       </Transform>
-      <Transform DEF='Rectangle2D_4'>
+      <Transform DEF='Rectangle2D_4'
+          scale='2 1 1'>
         <Shape
             bboxDisplay='true'>
           <Appearance>
@@ -62,7 +63,7 @@
                 repeatS='false'
                 repeatT='false'/>
           </Appearance>
-          <Rectangle2D/>
+          <Rectangle2D USE='_1'/>
         </Shape>
       </Transform>
     </Group>
@@ -83,11 +84,12 @@
                   repeatT='false'/>
             </Material>
           </Appearance>
-          <Rectangle2D/>
+          <Rectangle2D USE='_1'/>
         </Shape>
       </Transform>
       <Transform DEF='Rectangle2D_6'
-          translation='13 0 -0'>
+          translation='13 0 -0'
+          scale='2 1 1'>
         <Shape
             bboxDisplay='true'>
           <Appearance>
@@ -102,7 +104,7 @@
               </RenderedTexture>
             </UnlitMaterial>
           </Appearance>
-          <Rectangle2D/>
+          <Rectangle2D USE='_1'/>
         </Shape>
       </Transform>
     </Group>
@@ -123,11 +125,12 @@
                   repeatT='false'/>
             </Material>
           </Appearance>
-          <Rectangle2D/>
+          <Rectangle2D USE='_1'/>
         </Shape>
       </Transform>
       <Transform DEF='Rectangle2D_9'
-          translation='0 -7 0'>
+          translation='0 -7 0'
+          scale='2 1 1'>
         <Shape
             bboxDisplay='true'>
           <Appearance
@@ -189,7 +192,7 @@ main ()
               </ShaderPart>
             </ComposedShader>
           </Appearance>
-          <Rectangle2D/>
+          <Rectangle2D USE='_1'/>
         </Shape>
       </Transform>
     </Group>
@@ -210,11 +213,12 @@ main ()
                   repeatT='false'/>
             </Material>
           </Appearance>
-          <Rectangle2D/>
+          <Rectangle2D USE='_1'/>
         </Shape>
       </Transform>
       <Transform DEF='Rectangle2D_8'
-          translation='13 -7 0'>
+          translation='13 -7 0'
+          scale='2 1 1'>
         <Shape
             bboxDisplay='true'>
           <Appearance
@@ -230,7 +234,7 @@ main ()
               </RenderedTexture>
             </MultiTexture>
           </Appearance>
-          <Rectangle2D/>
+          <Rectangle2D USE='_1'/>
         </Shape>
       </Transform>
     </Group>
