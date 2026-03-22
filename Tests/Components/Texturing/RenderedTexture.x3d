@@ -6,7 +6,7 @@
     <component name='Shaders' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Tue, 17 Mar 2026 10:49:59 GMT'/>
-    <meta name='modified' content='Sun, 22 Mar 2026 07:28:44 GMT'/>
+    <meta name='modified' content='Sun, 22 Mar 2026 07:43:41 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.9, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -215,18 +215,19 @@ main ()
       </Transform>
       <Transform DEF='Rectangle2D_8'
           translation='13 -7 -6.661338e-16'>
-        <RenderedTexture DEF='Texture3' containerField='children'
-            update='ALWAYS'
-            repeatS='false'
-            repeatT='false'>
-          <Background DEF='BG2' containerField='background'
-              transparency='1'/>
-          <Viewpoint USE='MultiTexture' containerField='viewpoint'/>
-        </RenderedTexture>
         <Shape
             bboxDisplay='true'>
           <Appearance>
-            <MultiTexture/>
+            <MultiTexture>
+              <RenderedTexture DEF='Texture4'
+                  update='ALWAYS'
+                  repeatS='false'
+                  repeatT='false'>
+                <Background DEF='BG2' containerField='background'
+                    transparency='1'/>
+                <Viewpoint USE='MultiTexture' containerField='viewpoint'/>
+              </RenderedTexture>
+            </MultiTexture>
           </Appearance>
           <Rectangle2D/>
         </Shape>
