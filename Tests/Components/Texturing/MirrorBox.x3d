@@ -11,7 +11,7 @@
     <component name='Texturing3D' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Wed, 18 Mar 2026 16:54:40 GMT'/>
-    <meta name='modified' content='Sat, 21 Mar 2026 18:13:30 GMT'/>
+    <meta name='modified' content='Sun, 22 Mar 2026 00:40:07 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.9, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -23,6 +23,7 @@
         <field accessType='inputOutput' type='SFVec3f' name='sensorSize'/>
         <field accessType='inputOutput' type='SFInt32' name='textureSize' value='128'/>
         <field accessType='inputOutput' type='SFNode' name='material'/>
+        <field accessType='inputOutput' type='SFNode' name='backMaterial'/>
         <field accessType='inputOutput' type='SFNode' name='textureProperties'/>
         <field accessType='inputOutput' type='SFNode' name='scene'/>
         <field accessType='inputOutput' type='SFNode' name='geometry' appinfo='Should be a Geometry2D node with a size of 2x2.'/>
@@ -47,6 +48,7 @@
               <Appearance>
                 <IS>
                   <connect nodeField='material' protoField='material'/>
+                  <connect nodeField='backMaterial' protoField='backMaterial'/>
                 </IS>
                 <RenderedTexture DEF='_4'
                     update='ALWAYS'
