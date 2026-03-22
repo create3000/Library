@@ -6,7 +6,7 @@
     <component name='Shaders' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Tue, 17 Mar 2026 10:49:59 GMT'/>
-    <meta name='modified' content='Sun, 22 Mar 2026 07:43:41 GMT'/>
+    <meta name='modified' content='Sun, 22 Mar 2026 08:04:31 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.9, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -127,7 +127,7 @@
         </Shape>
       </Transform>
       <Transform DEF='Rectangle2D_9'
-          translation='-1.776357e-15 -7 -6.661338e-16'>
+          translation='0 -7 0'>
         <Shape
             bboxDisplay='true'>
           <Appearance
@@ -214,10 +214,11 @@ main ()
         </Shape>
       </Transform>
       <Transform DEF='Rectangle2D_8'
-          translation='13 -7 -6.661338e-16'>
+          translation='13 -7 0'>
         <Shape
             bboxDisplay='true'>
-          <Appearance>
+          <Appearance
+              alphaMode='BLEND'>
             <MultiTexture>
               <RenderedTexture DEF='Texture4'
                   update='ALWAYS'
