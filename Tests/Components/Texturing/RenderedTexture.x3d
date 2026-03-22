@@ -4,10 +4,9 @@
   <head>
     <component name='Geometry2D' level='1'/>
     <component name='Shaders' level='1'/>
-    <component name='Texturing' level='4'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Tue, 17 Mar 2026 10:49:59 GMT'/>
-    <meta name='modified' content='Sat, 21 Mar 2026 22:14:56 GMT'/>
+    <meta name='modified' content='Sun, 22 Mar 2026 07:28:44 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.9, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -54,7 +53,8 @@
         </Shape>
       </Transform>
       <Transform DEF='Rectangle2D_4'>
-        <Shape>
+        <Shape
+            bboxDisplay='true'>
           <Appearance>
             <UnlitMaterial/>
             <RenderedTexture DEF='Texture1'
@@ -88,7 +88,8 @@
       </Transform>
       <Transform DEF='Rectangle2D_6'
           translation='13 0 -0'>
-        <Shape>
+        <Shape
+            bboxDisplay='true'>
           <Appearance>
             <UnlitMaterial>
               <RenderedTexture DEF='Texture2_1' containerField='emissiveTexture'
@@ -105,12 +106,12 @@
         </Shape>
       </Transform>
     </Group>
-    <Group DEF='Shader'>
-      <Viewpoint DEF='Shader_1'
+    <Group DEF='Shader_2'>
+      <Viewpoint DEF='Shader_3'
           description='Shader'
           position='0 -7 10'
           centerOfRotation='13 0 0'/>
-      <Transform DEF='Rectangle2D_7'
+      <Transform DEF='Rectangle2D_1'
           translation='0 -7 -1'
           scale='6 3 3.444133'>
         <Shape>
@@ -125,24 +126,25 @@
           <Rectangle2D/>
         </Shape>
       </Transform>
-      <Transform DEF='Rectangle2D_8'
+      <Transform DEF='Rectangle2D_9'
           translation='-1.776357e-15 -7 -6.661338e-16'>
-        <Shape>
+        <Shape
+            bboxDisplay='true'>
           <Appearance
               alphaMode='BLEND'>
-            <ComposedShader DEF='NewShader'
+            <ComposedShader DEF='NewShader_1'
                 language='GLSL'>
               <field accessType='inputOutput' type='SFNode' name='renderedTexture'>
-                <RenderedTexture DEF='Texture3'
+                <RenderedTexture DEF='Texture3_1'
                     update='ALWAYS'
                     repeatS='false'
                     repeatT='false'>
-                  <Background DEF='BG2' containerField='background'
+                  <Background DEF='BG2_2' containerField='background'
                       transparency='1'/>
-                  <Viewpoint USE='Shader_1' containerField='viewpoint'/>
+                  <Viewpoint USE='Shader_3' containerField='viewpoint'/>
                 </RenderedTexture>
               </field>
-              <ShaderPart DEF='VertexShader'>
+              <ShaderPart DEF='VertexShader_1'>
 <![CDATA[data:x-shader/x-vertex,#version 300 es
 
 precision highp float;
@@ -165,7 +167,7 @@ main ()
 }
 ]]>
               </ShaderPart>
-              <ShaderPart DEF='FragmentShader'
+              <ShaderPart DEF='FragmentShader_1'
                   type='FRAGMENT'>
 <![CDATA[data:x-shader/x-fragment,#version 300 es
 
@@ -186,6 +188,45 @@ main ()
 ]]>
               </ShaderPart>
             </ComposedShader>
+          </Appearance>
+          <Rectangle2D/>
+        </Shape>
+      </Transform>
+    </Group>
+    <Group DEF='MultiTexture_1'>
+      <Viewpoint DEF='MultiTexture'
+          description='Multi Texture'
+          position='13 -7 10'
+          centerOfRotation='13 0 0'/>
+      <Transform DEF='Rectangle2D_7'
+          translation='13 -7 -1'
+          scale='6 3 3.444133'>
+        <Shape>
+          <Appearance>
+            <Material>
+              <ImageTexture containerField='diffuseTexture'
+                  url='"https://picsum.photos/id/124/600/300"'
+                  repeatS='false'
+                  repeatT='false'/>
+            </Material>
+          </Appearance>
+          <Rectangle2D/>
+        </Shape>
+      </Transform>
+      <Transform DEF='Rectangle2D_8'
+          translation='13 -7 -6.661338e-16'>
+        <RenderedTexture DEF='Texture3' containerField='children'
+            update='ALWAYS'
+            repeatS='false'
+            repeatT='false'>
+          <Background DEF='BG2' containerField='background'
+              transparency='1'/>
+          <Viewpoint USE='MultiTexture' containerField='viewpoint'/>
+        </RenderedTexture>
+        <Shape
+            bboxDisplay='true'>
+          <Appearance>
+            <MultiTexture/>
           </Appearance>
           <Rectangle2D/>
         </Shape>
