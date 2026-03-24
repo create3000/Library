@@ -11,8 +11,8 @@
     <component name='Texturing3D' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Wed, 18 Mar 2026 16:54:40 GMT'/>
-    <meta name='modified' content='Sun, 22 Mar 2026 00:40:07 GMT'/>
-    <meta name='generator' content='Sunrize X3D Editor V2.0.9, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Tue, 24 Mar 2026 15:47:29 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V2.0.10, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
     <ProtoDeclare name='Mirror'>
@@ -25,6 +25,7 @@
         <field accessType='inputOutput' type='SFNode' name='material'/>
         <field accessType='inputOutput' type='SFNode' name='backMaterial'/>
         <field accessType='inputOutput' type='SFNode' name='textureProperties'/>
+        <field accessType='inputOutput' type='SFFloat' name='viewPointFieldOfView' value='0.7853982'/>
         <field accessType='inputOutput' type='SFNode' name='scene'/>
         <field accessType='inputOutput' type='SFNode' name='geometry' appinfo='Should be a Geometry2D node with a size of 2x2.'/>
       </ProtoInterface>
@@ -59,8 +60,11 @@
                   </IS>
                   <Viewpoint DEF='_10' containerField='viewpoint'
                       position='-1.118549 -6.556731 16.03942'
-                      orientation='-0.0165361975453685 -0.195264792891879 0.980611143536332 2.97588477643724'
-                      fieldOfView='0.4528263'/>
+                      orientation='-0.0165361975453685 -0.195264792891879 0.980611143536332 2.97588477643724'>
+                    <IS>
+                      <connect nodeField='fieldOfView' protoField='viewPointFieldOfView'/>
+                    </IS>
+                  </Viewpoint>
                 </RenderedTexture>
                 <TextureTransformMatrix3D DEF='_2'
                     matrix='-1 0 0 0 0 1 0 0 0 0 1 0 1 0 0 1'/>
@@ -78,8 +82,10 @@
           <field accessType='outputOnly' type='MFInt32' name='textureDimension_changed'/>
           <field accessType='outputOnly' type='SFVec3f' name='mirrorViewpointPosition_changed'/>
           <field accessType='outputOnly' type='SFRotation' name='mirrorViewpointOrientation_changed'/>
-          <field accessType='outputOnly' type='SFFloat' name='mirrorViewpointFieldOfView_changed'/>
           <field accessType='outputOnly' type='SFMatrix4f' name='mirrorTextureMatrix_changed'/>
+          <field accessType='initializeOnly' type='SFNode' name='mirrorViewpoint'>
+            <Viewpoint USE='_10'/>
+          </field>
           <IS>
             <connect nodeField='mirrorTranslation' protoField='translation'/>
             <connect nodeField='mirrorRotation' protoField='rotation'/>
@@ -90,6 +96,51 @@
 
 function initialize ()
 {
+   const getProjectionMatrixWithLimits = mirrorViewpoint .getValue () .getProjectionMatrixWithLimits;
+
+   mirrorViewpoint .getValue () .getProjectionMatrixWithLimits = function (nearValue, farValue, viewport)
+   {
+      const projectionMatrix = getProjectionMatrixWithLimits .call (this, nearValue, farValue, viewport);
+
+      const viewMatrix = new SFMatrix4f (mirrorViewpoint .getValue () .getViewMatrix () .copy ());
+
+      // Update the texture matrix
+      let textureMatrix = new SFMatrix4f (
+         0.5, 0.0, 0.0, 0.5,
+         0.0, 0.5, 0.0, 0.5,
+         0.0, 0.0, 0.5, 0.5,
+         0.0, 0.0, 0.0, 1.0,
+      );
+
+      textureMatrix = textureMatrix .multLeft (new SFMatrix4f (projectionMatrix .copy ()));
+      textureMatrix = textureMatrix .multLeft (viewMatrix);
+
+      //mirrorTextureMatrix_changed = textureMatrix;
+
+
+      let reflectorPlane = new Plane (mirrorRotation .multVec (SFVec3f .Z_AXIS), mirrorTranslation);
+
+      reflectorPlane = reflectorPlane .multLeft (viewMatrix);
+
+		  let clipPlane = new SFVec4f (... reflectorPlane .normal, reflectorPlane .distanceFromOrigin);
+      let q = new SFVec4f ();
+
+      q .x = (Math .sign (clipPlane .x) + projectionMatrix [8]) / projectionMatrix [0];
+      q .y = (Math .sign (clipPlane .y) + projectionMatrix [9]) / projectionMatrix [5];
+      q .z = -1;
+      q .w = (1 + projectionMatrix [10]) / projectionMatrix [14];
+
+      clipPlane = clipPlane .multiply (2 / clipPlane .dot (q));
+
+      // Replacing the third row of the projection matrix
+      projectionMatrix [2]  = clipPlane .x;
+      projectionMatrix [6]  = clipPlane .y;
+      projectionMatrix [10] = clipPlane .z + 1.0 + 0.003;
+      projectionMatrix [14] = clipPlane .w;
+
+      return projectionMatrix;
+   }
+
    set_textureSize ();
    eventsProcessed ();
 }
@@ -112,7 +163,7 @@ function set_textureSize ()
 
 function eventsProcessed ()
 {
-   const 
+   const
       mirrorNormal      = mirrorRotation .multVec (SFVec3f .Z_AXIS),
       viewpointToMirror = mirrorTranslation .subtract (viewpointPosition);
 
@@ -121,24 +172,77 @@ function eventsProcessed ()
    mirrorViewpointPosition_changed = mirrorTranslation .subtract (rDirection);
 
    const
-      rForward  = mirrorViewpointPosition_changed .subtract (mirrorTranslation) .normalize (),
+      rForward  = viewpointOrientation .multVec (SFVec3f .Z_AXIS) .reflect (mirrorNormal),
       tUp       = mirrorRotation .multVec (SFVec3f .Y_AXIS),
       rRight    = tUp .cross (rForward) .normalize (),
       rUp       = rForward .cross (rRight) .normalize ();
 
    mirrorViewpointOrientation_changed = new SFRotation (new SFMatrix3f (rRight, rUp, rForward));
-
-   mirrorViewpointFieldOfView_changed = Math .atan (Math .min (mirrorScale .x, mirrorScale .y) / viewpointToMirror .length ()) * 2;
-
-   mirrorTextureMatrix_changed = new SFMatrix4f (-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1);
 }
-]]>
+
+class Plane
+{
+   constructor (normal, point)
+   {
+      this .normal             = normal .copy ();
+      this .distanceFromOrigin = normal .dot (point);
+   }
+
+   multRight (matrix)
+   {
+      // Taken from Inventor:
+
+      // Find the point on the plane along the normal from the origin
+      let point = this .normal .multiply (this .distanceFromOrigin);
+
+      // Transform the plane normal by the matrix
+      // to get the new normal. Use the inverse transpose
+      // of the matrix so that normals are not scaled incorrectly.
+      // n' = n * !~m = ~m * n
+      this .normal = matrix .inverse ()
+         .multMatrixDir (this .normal) .normalize ();
+
+      // Transform the point by the matrix
+      point = matrix .multVecMatrix (point);
+
+      // The new distance is the projected distance of the vector to the
+      // transformed point onto the (unit) transformed normal. This is
+      // just a dot product.
+      this .distanceFromOrigin = this .normal .dot (point);
+
+      return this;
+   }
+
+   multLeft (matrix)
+   {
+      // Taken from Inventor:
+
+      // Find the point on the plane along the normal from the origin
+      let point = this .normal .multiply (this .distanceFromOrigin);
+
+      // Transform the plane normal by the matrix
+      // to get the new normal. Use the inverse transpose
+      // of the matrix so that normals are not scaled incorrectly.
+      // n' = n * !~m = ~m * n
+      this .normal = matrix .inverse ()
+         .multDirMatrix (this .normal) .normalize ();
+
+      // Transform the point by the matrix
+     point = matrix .multMatrixVec (point);
+
+      // The new distance is the projected distance of the vector to the
+      // transformed point onto the (unit) transformed normal. This is
+      // just a dot product.
+      this .distanceFromOrigin = this .normal .dot (point);
+
+      return this;
+   }
+}]]>
         </Script>
         <ROUTE fromNode='_8' fromField='position_changed' toNode='MirrorScript' toField='set_viewpointPosition'/>
         <ROUTE fromNode='_8' fromField='orientation_changed' toNode='MirrorScript' toField='set_viewpointOrientation'/>
         <ROUTE fromNode='MirrorScript' fromField='mirrorViewpointPosition_changed' toNode='_10' toField='set_position'/>
         <ROUTE fromNode='MirrorScript' fromField='mirrorViewpointOrientation_changed' toNode='_10' toField='set_orientation'/>
-        <ROUTE fromNode='MirrorScript' fromField='mirrorViewpointFieldOfView_changed' toNode='_10' toField='set_fieldOfView'/>
         <ROUTE fromNode='MirrorScript' fromField='mirrorTextureMatrix_changed' toNode='_2' toField='set_matrix'/>
         <ROUTE fromNode='MirrorScript' fromField='textureDimension_changed' toNode='_4' toField='set_dimensions'/>
       </ProtoBody>
