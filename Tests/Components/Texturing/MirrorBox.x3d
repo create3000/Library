@@ -11,7 +11,7 @@
     <component name='Texturing3D' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Wed, 18 Mar 2026 16:54:40 GMT'/>
-    <meta name='modified' content='Thu, 26 Mar 2026 09:21:26 GMT'/>
+    <meta name='modified' content='Thu, 26 Mar 2026 09:28:49 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.10, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -122,7 +122,7 @@ function initialize ()
 
       reflectorPlane = reflectorPlane .multLeft (viewMatrix);
 
-		  let clipPlane = new SFVec4f (... reflectorPlane .normal, reflectorPlane .distanceFromOrigin);
+		let clipPlane = new SFVec4f (... reflectorPlane .normal, reflectorPlane .distanceFromOrigin);
       let q = new SFVec4f ();
 
       q .x = (Math .sign (clipPlane .x) + projectionMatrix [8]) / projectionMatrix [0];
