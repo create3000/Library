@@ -11,7 +11,7 @@
     <component name='Texturing3D' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Wed, 18 Mar 2026 16:54:40 GMT'/>
-    <meta name='modified' content='Tue, 24 Mar 2026 16:14:22 GMT'/>
+    <meta name='modified' content='Thu, 26 Mar 2026 09:21:26 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.10, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -106,16 +106,16 @@ function initialize ()
 
       // Update the texture matrix
       let textureMatrix = new SFMatrix4f (
-         0.5, 0.0, 0.0, 0.5,
-         0.0, 0.5, 0.0, 0.5,
-         0.0, 0.0, 0.5, 0.5,
-         0.0, 0.0, 0.0, 1.0,
+         0.5,   0,   0, 0,
+           0, 0.5,   0, 0,
+           0,   0, 0.5, 0,
+         0.5, 0.5, 0.5, 1,
       );
 
       textureMatrix = textureMatrix .multLeft (new SFMatrix4f (projectionMatrix .copy ()));
       textureMatrix = textureMatrix .multLeft (viewMatrix);
 
-      //mirrorTextureMatrix_changed = textureMatrix;
+     //mirrorTextureMatrix_changed = textureMatrix;
 
 
       let reflectorPlane = new Plane (mirrorRotation .multVec (SFVec3f .Z_AXIS), mirrorTranslation);
