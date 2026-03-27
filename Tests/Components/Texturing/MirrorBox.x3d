@@ -11,7 +11,7 @@
     <component name='Texturing3D' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Wed, 18 Mar 2026 16:54:40 GMT'/>
-    <meta name='modified' content='Fri, 27 Mar 2026 17:59:14 GMT'/>
+    <meta name='modified' content='Fri, 27 Mar 2026 18:12:22 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.10, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -25,7 +25,7 @@
         <field accessType='inputOutput' type='SFNode' name='material'/>
         <field accessType='inputOutput' type='SFNode' name='backMaterial'/>
         <field accessType='inputOutput' type='SFNode' name='textureProperties'/>
-        <field accessType='inputOutput' type='SFFloat' name='viewPointFieldOfView' value='0.7853982'/>
+        <field accessType='inputOutput' type='SFFloat' name='fieldOfView' value='0.7853982' appinfo='Should be the same value as in the currently bound viewpoint.'/>
         <field accessType='inputOutput' type='SFNode' name='scene'/>
         <field accessType='inputOutput' type='SFNode' name='geometry' appinfo='Should be a Geometry2D node with a size of 2x2.'/>
       </ProtoInterface>
@@ -60,7 +60,7 @@
                       position='-1.118549 -6.556731 16.03942'
                       orientation='-0.0165361975453685 -0.195264792891879 0.980611143536332 2.97588477643724'>
                     <IS>
-                      <connect nodeField='fieldOfView' protoField='viewPointFieldOfView'/>
+                      <connect nodeField='fieldOfView' protoField='fieldOfView'/>
                     </IS>
                   </Viewpoint>
                 </RenderedTexture>
@@ -125,7 +125,7 @@ function initialize ()
 
       reflectorPlane = reflectorPlane .multLeft (viewMatrix);
 
-      let clipPlane = new SFVec4f (... reflectorPlane .normal, reflectorPlane .distanceFromOrigin);
+		let clipPlane = new SFVec4f (... reflectorPlane .normal, reflectorPlane .distanceFromOrigin);
       let q = new SFVec4f ();
 
       q .x = (Math .sign (clipPlane .x) + projectionMatrix [8]) / projectionMatrix [0];
