@@ -9,9 +9,10 @@
     <component name='Scripting' level='1'/>
     <component name='Texturing' level='4'/>
     <component name='Texturing3D' level='1'/>
+    <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Wed, 18 Mar 2026 16:54:40 GMT'/>
-    <meta name='modified' content='Fri, 27 Mar 2026 18:21:34 GMT'/>
+    <meta name='modified' content='Sat, 28 Mar 2026 19:16:24 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.10, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -25,7 +26,7 @@
         <field accessType='inputOutput' type='SFNode' name='material'/>
         <field accessType='inputOutput' type='SFNode' name='backMaterial'/>
         <field accessType='inputOutput' type='SFNode' name='textureProperties'/>
-        <field accessType='inputOutput' type='SFFloat' name='fieldOfView' value='0.7853982' appinfo='Should be the same value as in the currently bound viewpoint.'/>
+        <field accessType='inputOutput' type='SFFloat' name='fieldOfView' value='0.8726646' appinfo='Should be the same value as in the currently bound viewpoint.'/>
         <field accessType='inputOutput' type='SFNode' name='scene'/>
         <field accessType='inputOutput' type='SFNode' name='geometry' appinfo='Should be a Geometry2D node with a size of 2x2.'/>
       </ProtoInterface>
@@ -58,7 +59,7 @@
                   </IS>
                   <Viewpoint DEF='_10' containerField='viewpoint'
                       position='-1.118549 -6.556731 16.03942'
-                      orientation='-0.0165361975453685 -0.195264792891879 0.980611143536332 2.97588477643724'>
+                      orientation='-0.0165361975453685 -0.195264792891879 0.980611143536332 170.505638007086'>
                     <IS>
                       <connect nodeField='fieldOfView' protoField='fieldOfView'/>
                     </IS>
@@ -76,7 +77,7 @@
           <field accessType='inputOutput' type='SFVec3f' name='mirrorScale'/>
           <field accessType='inputOutput' type='SFInt32' name='textureSize'/>
           <field accessType='inputOutput' type='SFVec3f' name='viewpointPosition' value='-1.118549 6.556731 16.03942'/>
-          <field accessType='inputOutput' type='SFRotation' name='viewpointOrientation' value='-0.914589430575436 -0.403127310041776 -0.0318519289558134 0.172353446868391'/>
+          <field accessType='inputOutput' type='SFRotation' name='viewpointOrientation' value='-0.914589430575436 -0.403127310041776 -0.0318519289558134 9.87512509009108'/>
           <field accessType='outputOnly' type='MFInt32' name='textureDimension_changed'/>
           <field accessType='outputOnly' type='SFVec3f' name='mirrorViewpointPosition_changed'/>
           <field accessType='outputOnly' type='SFRotation' name='mirrorViewpointOrientation_changed'/>
@@ -100,6 +101,8 @@ function initialize ()
    {
       const projectionMatrix = getProjectionMatrixWithLimits .call (this, nearValue, farValue, viewport);
 
+      //const projectionMatrix = updateProjectionMatrix (Math .PI / 4, nearValue, farValue);
+      
       const viewMatrix = new SFMatrix4f (mirrorViewpoint .getValue () .getViewMatrix () .copy ());
 
       // Update the texture matrix
@@ -126,14 +129,16 @@ function initialize ()
          .multLeft (modelMatrix)
          .multLeft (fix);
 
-      mirrorTextureMatrix_changed = textureMatrix;
+      //mirrorTextureMatrix_changed = textureMatrix;
 
 
-      let reflectorPlane = new Plane (mirrorRotation .multVec (SFVec3f .Z_AXIS), mirrorTranslation);
+      const mirrorNormal = mirrorRotation .multVec (SFVec3f .Z_AXIS);
+
+      let reflectorPlane = new Plane (mirrorNormal, mirrorTranslation);
 
       reflectorPlane = reflectorPlane .multLeft (viewMatrix);
 
-		let clipPlane = new SFVec4f (... reflectorPlane .normal, reflectorPlane .distanceFromOrigin);
+		let clipPlane = new SFVec4f (... reflectorPlane .normal, reflectorPlane .distanceFromOrigin * 0);
       let q = new SFVec4f ();
 
       q .x = (Math .sign (clipPlane .x) + projectionMatrix [8]) / projectionMatrix [0];
@@ -248,7 +253,39 @@ class Plane
 
       return this;
    }
-}]]>
+}
+
+function updateProjectionMatrix (fov, near, far) 
+{
+   let top = near * Math .tan (0.5 * fov);
+   let height = 2 * top;
+   let width = height;
+   let left = - 0.5 * width;
+
+   return makePerspective (left, left + width, top, top - height, near, far);
+}
+
+function makePerspective (left, right, top, bottom, near, far)
+{
+	const te = new SFMatrix4f () .getValue ();
+
+	const x = 2 * near / ( right - left );
+	const y = 2 * near / ( top - bottom );
+
+	const a = ( right + left ) / ( right - left );
+	const b = ( top + bottom ) / ( top - bottom );
+
+	const c = - ( far + near ) / ( far - near );
+	const d = ( - 2 * far * near ) / ( far - near );
+
+	te[ 0 ] = x;	te[ 4 ] = 0;	te[ 8 ] = a; 	te[ 12 ] = 0;
+	te[ 1 ] = 0;	te[ 5 ] = y;	te[ 9 ] = b; 	te[ 13 ] = 0;
+	te[ 2 ] = 0;	te[ 6 ] = 0;	te[ 10 ] = c; 	te[ 14 ] = d;
+	te[ 3 ] = 0;	te[ 7 ] = 0;	te[ 11 ] = - 1;	te[ 15 ] = 0;
+
+	return te;
+}
+]]>
         </Script>
         <ROUTE fromNode='_8' fromField='position_changed' toNode='MirrorScript' toField='set_viewpointPosition'/>
         <ROUTE fromNode='_8' fromField='orientation_changed' toNode='MirrorScript' toField='set_viewpointOrientation'/>
@@ -260,9 +297,9 @@ class Plane
     </ProtoDeclare>
     <WorldInfo/>
     <Background DEF='Summer'
-        skyAngle='0.8, 1.3, 1.4, 1.5708'
+        skyAngle='45.83662, 74.48451, 80.21409, 90.00021'
         skyColor='0.21 0.31 0.59, 0.33 0.45 0.7, 0.57 0.66 0.85, 0.6 0.73 0.89, 0.7 0.83 0.98'
-        groundAngle='0.659972, 1.2, 1.39912, 1.5708'
+        groundAngle='37.81361, 68.75494, 80.16367, 90.00021'
         groundColor='0.105712 0.156051 0.297, 0.187629 0.255857 0.398, 0.33604 0.405546 0.542, 0.3612 0.469145 0.602, 0.39471 0.522059 0.669'/>
     <Background DEF='Gray'
         skyColor='0.2 0.2 0.2'/>
@@ -270,22 +307,25 @@ class Plane
       <Viewpoint DEF='Top_1'
           description='Top View'
           position='0 19 0'
-          orientation='1 0 0 -1.5707963267949'
-          centerOfRotation='0 4 0'>
+          orientation='1 0 0 -90.0000000000002'
+          centerOfRotation='0 4 0'
+          fieldOfView='50'>
         <NavigationInfo DEF='_11' containerField='navigationInfo'
             headlight='false'/>
       </Viewpoint>
       <Viewpoint DEF='Front'
           description='Front View'
           position='0 4 15'
-          centerOfRotation='0 4 0'>
+          centerOfRotation='0 4 0'
+          fieldOfView='50'>
         <NavigationInfo USE='_11' containerField='navigationInfo'/>
       </Viewpoint>
       <Viewpoint DEF='Perspective'
           description='Perspective View'
           position='4.799869 10.44682 14.66848'
-          orientation='-0.776588739330481 0.61771873128448 0.123828506271318 0.5052317'
-          centerOfRotation='0 4 0'>
+          orientation='-0.776588739330481 0.61771873128448 0.123828506271318 28.9476440862198'
+          centerOfRotation='0 4 0'
+          fieldOfView='50'>
         <NavigationInfo USE='_11' containerField='navigationInfo'/>
       </Viewpoint>
     </ViewpointGroup>
@@ -314,66 +354,67 @@ class Plane
         location='-0 4 2'/>
     <ProximitySensor
         size='-1 -1 -1'/>
-    <ProtoInstance name='Mirror' DEF='Bottom_1'>
-      <fieldValue name='rotation' value='1 0 0 4.71238898038469'/>
+    <ProtoInstance name='Mirror' DEF='Bottom'>
+      <fieldValue name='rotation' value='1 0 0 270'/>
       <fieldValue name='scale' value='4 4 4'/>
       <fieldValue name='sensorSize' value='-1 -1 -1'/>
       <fieldValue name='textureSize' value='1024'/>
       <fieldValue name='material'>
-        <UnlitMaterial DEF='_2'
+        <UnlitMaterial DEF='_8'
             emissiveColor='0.9 0.9 0.9'/>
       </fieldValue>
+      <fieldValue name='fieldOfView' value='0.8726646'/>
       <fieldValue name='geometry'>
-        <Rectangle2D DEF='_3'
+        <Rectangle2D DEF='_13'
             solid='true'/>
       </fieldValue>
     </ProtoInstance>
     <Transform DEF='Left'
         translation='-4 4 0'
-        rotation='-0.577350269189626 0.577350269189626 -0.577350269189626 2.09439510239321'
+        rotation='-0.577350269189626 0.577350269189626 -0.577350269189626 120.000000000001'
         scale='4 4 4'>
       <Shape>
         <Appearance>
           <Material DEF='_4'
               diffuseColor='1 0 0'/>
         </Appearance>
-        <Rectangle2D USE='_3'/>
+        <Rectangle2D USE='_13'/>
       </Shape>
     </Transform>
     <Transform DEF='Right'
         translation='4 4 0'
-        rotation='-0.577350269189621 0.577350269189629 0.577350269189627 4.18879020478638'
+        rotation='-0.577350269189621 0.577350269189629 0.577350269189627 239.999999999999'
         scale='4 4 4'>
       <Shape>
         <Appearance>
           <Material DEF='_5'
               diffuseColor='0.5607843 0.8078431 0'/>
         </Appearance>
-        <Rectangle2D USE='_3'/>
+        <Rectangle2D USE='_13'/>
       </Shape>
     </Transform>
     <Transform DEF='Back_1'
         translation='0 4 4'
-        rotation='0.707106781186548 -0.707106781186547 0 3.14159265358979'
+        rotation='0.707106781186548 -0.707106781186547 0 180'
         scale='4 4 4'>
       <Shape>
         <Appearance>
           <Material DEF='_6'
               diffuseColor='0 0.5731707 1'/>
         </Appearance>
-        <Rectangle2D USE='_3'/>
+        <Rectangle2D USE='_13'/>
       </Shape>
     </Transform>
     <Transform DEF='Front_1'
         translation='0 4 -4'
-        rotation='-0 -0 -1 1.5707963267949'
+        rotation='0 0 1 270'
         scale='4 4 4'>
       <Shape>
         <Appearance>
           <Material DEF='_12'
               diffuseColor='1 1 1'/>
         </Appearance>
-        <Rectangle2D USE='_3'/>
+        <Rectangle2D USE='_13'/>
       </Shape>
     </Transform>
     <ProtoInstance name='Mirror' DEF='FrontMirror'>
@@ -385,24 +426,25 @@ class Plane
         <UnlitMaterial DEF='_1'
             emissiveColor='0.9 0.9 0.9'/>
       </fieldValue>
+      <fieldValue name='fieldOfView' value='0.8726646'/>
       <fieldValue name='geometry'>
         <Disk2D DEF='_7'
             solid='true'/>
       </fieldValue>
     </ProtoInstance>
     <Transform DEF='Top'
-        translation='-0 8 -0'
-        rotation='0.577350269189625 0.577350269189626 -0.577350269189627 2.09439510239319'
+        translation='0 8 0'
+        rotation='0.577350269189625 0.577350269189626 -0.577350269189627 120'
         scale='4 4 4'>
       <Shape>
         <Appearance>
           <Material USE='_12'/>
         </Appearance>
-        <Rectangle2D USE='_3'/>
+        <Rectangle2D USE='_13'/>
       </Shape>
     </Transform>
     <Transform DEF='Sphere'
-        translation='0 1 -0'>
+        translation='0 1 0'>
       <Shape>
         <Appearance>
           <Material
