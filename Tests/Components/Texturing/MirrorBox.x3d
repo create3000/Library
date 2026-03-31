@@ -12,8 +12,8 @@
     <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Wed, 18 Mar 2026 16:54:40 GMT'/>
-    <meta name='modified' content='Sat, 28 Mar 2026 19:16:24 GMT'/>
-    <meta name='generator' content='Sunrize X3D Editor V2.0.10, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Tue, 31 Mar 2026 12:39:03 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V2.0.11, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
     <ProtoDeclare name='Mirror'>
@@ -101,8 +101,6 @@ function initialize ()
    {
       const projectionMatrix = getProjectionMatrixWithLimits .call (this, nearValue, farValue, viewport);
 
-      //const projectionMatrix = updateProjectionMatrix (Math .PI / 4, nearValue, farValue);
-      
       const viewMatrix = new SFMatrix4f (mirrorViewpoint .getValue () .getViewMatrix () .copy ());
 
       // Update the texture matrix
@@ -116,7 +114,7 @@ function initialize ()
       const modelMatrix = new SFMatrix4f ();
       modelMatrix .setTransform (mirrorTranslation, mirrorRotation, mirrorScale);
 
-      const fix = new SFMatrix4f (
+      const offset = new SFMatrix4f (
           2,  0, 0, 0,
           0,  2, 0, 0,
           0,  0, 1, 0,
@@ -127,32 +125,32 @@ function initialize ()
          .multLeft (new SFMatrix4f (projectionMatrix .copy ()))
          .multLeft (viewMatrix)
          .multLeft (modelMatrix)
-         .multLeft (fix);
+         .multLeft (offset);
 
-      //mirrorTextureMatrix_changed = textureMatrix;
+      mirrorTextureMatrix_changed = textureMatrix;
 
 
-      const mirrorNormal = mirrorRotation .multVec (SFVec3f .Z_AXIS);
+      //const mirrorNormal = mirrorRotation .multVec (SFVec3f .Z_AXIS);
 
-      let reflectorPlane = new Plane (mirrorNormal, mirrorTranslation);
+      //let reflectorPlane = new Plane (mirrorNormal, mirrorTranslation);
 
-      reflectorPlane = reflectorPlane .multLeft (viewMatrix);
+      //reflectorPlane = reflectorPlane .multLeft (viewMatrix);
 
-		let clipPlane = new SFVec4f (... reflectorPlane .normal, reflectorPlane .distanceFromOrigin * 0);
-      let q = new SFVec4f ();
+		//let clipPlane = new SFVec4f (... reflectorPlane .normal, reflectorPlane .distanceFromOrigin);
+      //let q = new SFVec4f ();
 
-      q .x = (Math .sign (clipPlane .x) + projectionMatrix [8]) / projectionMatrix [0];
-      q .y = (Math .sign (clipPlane .y) + projectionMatrix [9]) / projectionMatrix [5];
-      q .z = -1;
-      q .w = (1 + projectionMatrix [10]) / projectionMatrix [14];
+      //q .x = (Math .sign (clipPlane .x) + projectionMatrix [8]) / projectionMatrix [0];
+      //q .y = (Math .sign (clipPlane .y) + projectionMatrix [9]) / projectionMatrix [5];
+      //q .z = -1;
+      //q .w = (1 + projectionMatrix [10]) / projectionMatrix [14];
 
-      clipPlane = clipPlane .multiply (2 / clipPlane .dot (q));
+      //clipPlane = clipPlane .multiply (2 / clipPlane .dot (q));
 
       // Replacing the third row of the projection matrix
-      projectionMatrix [2]  = clipPlane .x;
-      projectionMatrix [6]  = clipPlane .y;
-      projectionMatrix [10] = clipPlane .z + 1.0 + 0.003;
-      projectionMatrix [14] = clipPlane .w;
+      //projectionMatrix [2]  = clipPlane .x;
+      //projectionMatrix [6]  = clipPlane .y;
+      //projectionMatrix [10] = clipPlane .z + 1.0 + 0.003;
+      //projectionMatrix [14] = clipPlane .w;
 
       return projectionMatrix;
    }
@@ -304,18 +302,18 @@ function makePerspective (left, right, top, bottom, near, far)
     <Background DEF='Gray'
         skyColor='0.2 0.2 0.2'/>
     <ViewpointGroup>
-      <Viewpoint DEF='Top_1'
-          description='Top View'
-          position='0 19 0'
-          orientation='1 0 0 -90.0000000000002'
+      <Viewpoint DEF='Front'
+          description='Front View'
+          position='0 4 15'
           centerOfRotation='0 4 0'
           fieldOfView='50'>
         <NavigationInfo DEF='_11' containerField='navigationInfo'
             headlight='false'/>
       </Viewpoint>
-      <Viewpoint DEF='Front'
-          description='Front View'
-          position='0 4 15'
+      <Viewpoint DEF='Top_1'
+          description='Top View'
+          position='0 19 0'
+          orientation='1 0 0 -90.0000000000002'
           centerOfRotation='0 4 0'
           fieldOfView='50'>
         <NavigationInfo USE='_11' containerField='navigationInfo'/>
@@ -363,7 +361,6 @@ function makePerspective (left, right, top, bottom, near, far)
         <UnlitMaterial DEF='_8'
             emissiveColor='0.9 0.9 0.9'/>
       </fieldValue>
-      <fieldValue name='fieldOfView' value='0.8726646'/>
       <fieldValue name='geometry'>
         <Rectangle2D DEF='_13'
             solid='true'/>
@@ -426,7 +423,6 @@ function makePerspective (left, right, top, bottom, near, far)
         <UnlitMaterial DEF='_1'
             emissiveColor='0.9 0.9 0.9'/>
       </fieldValue>
-      <fieldValue name='fieldOfView' value='0.8726646'/>
       <fieldValue name='geometry'>
         <Disk2D DEF='_7'
             solid='true'/>
