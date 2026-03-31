@@ -12,7 +12,7 @@
     <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Wed, 18 Mar 2026 16:54:40 GMT'/>
-    <meta name='modified' content='Tue, 31 Mar 2026 13:26:07 GMT'/>
+    <meta name='modified' content='Tue, 31 Mar 2026 19:49:20 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.11, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -79,9 +79,6 @@
           <field accessType='outputOnly' type='SFRotation' name='mirrorViewpointOrientation_changed'/>
           <field accessType='outputOnly' type='SFFloat' name='mirrorViewpointFieldOfView_changed'/>
           <field accessType='outputOnly' type='SFMatrix4f' name='mirrorTextureMatrix_changed'/>
-          <field accessType='initializeOnly' type='SFNode' name='mirrorViewpoint'>
-            <Viewpoint USE='_10'/>
-          </field>
           <IS>
             <connect nodeField='mirrorTranslation' protoField='translation'/>
             <connect nodeField='mirrorRotation' protoField='rotation'/>
@@ -228,7 +225,9 @@ const Camera =
         <ROUTE fromNode='MirrorScript' fromField='mirrorViewpointFieldOfView_changed' toNode='_10' toField='set_fieldOfView'/>
       </ProtoBody>
     </ProtoDeclare>
-    <WorldInfo/>
+    <WorldInfo
+        title='MirrorBox'
+        info='"https://codepen.io/sjcobb/pen/JWrXeq?editors=0010", "https://github.com/mrdoob/three.js/blob/077dd13c0e869d9f3dbe55875686f920367de457/examples/jsm/objects/Reflector.js#L36"'/>
     <Background DEF='Summer'
         skyAngle='45.83662, 74.48451, 80.21409, 90.00021'
         skyColor='0.21 0.31 0.59, 0.33 0.45 0.7, 0.57 0.66 0.85, 0.6 0.73 0.89, 0.7 0.83 0.98'
