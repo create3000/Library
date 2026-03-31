@@ -12,7 +12,7 @@
     <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Wed, 18 Mar 2026 16:54:40 GMT'/>
-    <meta name='modified' content='Tue, 31 Mar 2026 20:01:42 GMT'/>
+    <meta name='modified' content='Tue, 31 Mar 2026 20:02:45 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.11, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -136,7 +136,7 @@ function eventsProcessed ()
 
    mirrorViewpointOrientation_changed = new SFRotation (new SFMatrix3f (rRight, rUp, rForward));
 
-   mirrorViewpointFieldOfView_changed = Math .atan (Math .min (mirrorScale .x, mirrorScale .y) / viewpointToMirror .length ()) * 3; // Use 3 instead of 2 to make the fov a bit larger.
+   mirrorViewpointFieldOfView_changed = Math .atan (Math .min (mirrorScale .x, mirrorScale .y) / viewpointToMirror .length ()) * 3; // Use 3 instead of 2 to make the fov a bit wider.
 
    // Texture matrix
 
