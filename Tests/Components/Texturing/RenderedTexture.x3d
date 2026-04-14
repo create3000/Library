@@ -6,8 +6,8 @@
     <component name='Shaders' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Tue, 17 Mar 2026 10:49:59 GMT'/>
-    <meta name='modified' content='Sun, 22 Mar 2026 10:18:45 GMT'/>
-    <meta name='generator' content='Sunrize X3D Editor V2.0.9, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Tue, 14 Apr 2026 13:58:38 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V2.0.12, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -98,9 +98,9 @@
                   update='ALWAYS'
                   repeatS='false'
                   repeatT='false'>
-                <Background DEF='BG2_1' containerField='children'
+                <Background DEF='BG2_1'
                     transparency='1'/>
-                <Viewpoint USE='MaterialTexture_1' containerField='children'/>
+                <Viewpoint USE='MaterialTexture_1'/>
               </RenderedTexture>
             </UnlitMaterial>
           </Appearance>
@@ -142,9 +142,9 @@
                     update='ALWAYS'
                     repeatS='false'
                     repeatT='false'>
-                  <Background DEF='BG2_2' containerField='children'
+                  <Background DEF='BG2_2'
                       transparency='1'/>
-                  <Viewpoint USE='Shader_3' containerField='children'/>
+                  <Viewpoint USE='Shader_3'/>
                 </RenderedTexture>
               </field>
               <ShaderPart DEF='VertexShader_1'>
@@ -225,12 +225,13 @@ main ()
               alphaMode='BLEND'>
             <MultiTexture>
               <RenderedTexture DEF='Texture4'
+                  enabled='false'
                   update='ALWAYS'
                   repeatS='false'
                   repeatT='false'>
-                <Background DEF='BG2' containerField='children'
+                <Background DEF='BG2'
                     transparency='1'/>
-                <Viewpoint USE='MultiTexture' containerField='children'/>
+                <Viewpoint USE='MultiTexture'/>
               </RenderedTexture>
             </MultiTexture>
           </Appearance>
