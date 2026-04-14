@@ -24,9 +24,8 @@
         <field accessType='inputOutput' type='SFVec3f' name='sensorSize'/>
         <field accessType='inputOutput' type='SFInt32' name='textureSize' value='128'/>
         <field accessType='inputOutput' type='SFNode' name='material'/>
-        <field accessType='inputOutput' type='SFNode' name='backMaterial'/>
         <field accessType='inputOutput' type='SFNode' name='textureProperties'/>
-        <field accessType='inputOutput' type='SFNode' name='scene'/>
+        <field accessType='inputOutput' type='MFNode' name='children'/>
         <field accessType='inputOutput' type='SFNode' name='geometry' appinfo='Should be a Geometry2D node with a size of 2x2.'/>
       </ProtoInterface>
       <ProtoBody>
@@ -49,18 +48,11 @@
               <Appearance>
                 <IS>
                   <connect nodeField='material' protoField='material'/>
-                  <connect nodeField='backMaterial' protoField='backMaterial'/>
                 </IS>
                 <RenderedTexture DEF='_4'
-                    update='ALWAYS'>
-                  <IS>
-                    <connect nodeField='scene' protoField='scene'/>
-                  </IS>
-                  <Viewpoint DEF='_10' containerField='viewpoint'
-                      position='-1.118549 -6.556731 16.03942'
-                      orientation='-0.0165361975453685 -0.195264792891879 0.980611143536332 170.505638007086'
-                      fieldOfView='50'/>
-                </RenderedTexture>
+                    update='ALWAYS'
+                    repeatS='false'
+                    repeatT='false'/>
                 <TextureTransformMatrix3D DEF='_2'
                     matrix='-1 0 0 0 0 1 0 0 0 0 1 0 1 0 0 1'/>
               </Appearance>
@@ -72,24 +64,35 @@
           <field accessType='inputOutput' type='SFRotation' name='mirrorRotation'/>
           <field accessType='inputOutput' type='SFVec3f' name='mirrorScale'/>
           <field accessType='inputOutput' type='SFInt32' name='textureSize'/>
+          <field accessType='inputOutput' type='MFNode' name='children'/>
           <field accessType='inputOutput' type='SFVec3f' name='viewpointPosition' value='-1.118549 6.556731 16.03942'/>
           <field accessType='inputOutput' type='SFRotation' name='viewpointOrientation' value='-0.914589430575436 -0.403127310041776 -0.0318519289558134 9.87512509009108'/>
-          <field accessType='outputOnly' type='MFInt32' name='textureDimension_changed'/>
           <field accessType='outputOnly' type='SFVec3f' name='mirrorViewpointPosition_changed'/>
           <field accessType='outputOnly' type='SFRotation' name='mirrorViewpointOrientation_changed'/>
           <field accessType='outputOnly' type='SFFloat' name='mirrorViewpointFieldOfView_changed'/>
           <field accessType='outputOnly' type='SFMatrix4f' name='mirrorTextureMatrix_changed'/>
+          <field accessType='initializeOnly' type='SFNode' name='mirrorViewpoint'>
+            <Viewpoint DEF='_10'
+                position='-1.118549 -6.556731 16.03942'
+                orientation='-0.0165361975453685 -0.195264792891879 0.980611143536332 170.505638007086'
+                fieldOfView='25.94504'/>
+          </field>
+          <field accessType='initializeOnly' type='SFNode' name='renderedTexture'>
+            <RenderedTexture USE='_4'/>
+          </field>
           <IS>
             <connect nodeField='mirrorTranslation' protoField='translation'/>
             <connect nodeField='mirrorRotation' protoField='rotation'/>
             <connect nodeField='mirrorScale' protoField='scale'/>
             <connect nodeField='textureSize' protoField='textureSize'/>
+            <connect nodeField='children' protoField='children'/>
           </IS>
 <![CDATA[ecmascript:
 
 function initialize ()
 {
    set_textureSize ();
+   set_children ();
    eventsProcessed ();
 }
 
@@ -106,7 +109,12 @@ function set_textureSize ()
       w = x >= y ? textureSize : x * textureSize / y,
       h = y >= x ? textureSize : y * textureSize / x;
 
-   textureDimension_changed = new MFInt32 (w, h, 4, 1, 1);
+   renderedTexture .dimensions = new MFInt32 (w, h, 4, 1, 1);
+}
+
+function set_children ()
+{
+   renderedTexture .children  = new MFNode (mirrorViewpoint, ... children);
 }
 
 function eventsProcessed ()
@@ -117,34 +125,25 @@ function eventsProcessed ()
 
    const rDirection = viewpointToMirror .reflect (mirrorNormal);
 
-   mirrorViewpointPosition_changed = mirrorTranslation .subtract (rDirection);
-
-   //const
-   //   rForward  = viewpointOrientation .multVec (SFVec3f .Z_AXIS) .reflect (mirrorNormal),
-   //   tUp       = mirrorRotation .multVec (SFVec3f .Y_AXIS),
-   //   rRight    = tUp .cross (rForward) .normalize (),
-   //   rUp       = rForward .cross (rRight) .normalize ();
-
-   //mirrorViewpointOrientation_changed = new SFRotation (new SFMatrix3f (rRight, rUp, rForward));
-
+   mirrorViewpoint .position = mirrorTranslation .subtract (rDirection);
 
    const
-      rForward  = mirrorViewpointPosition_changed .subtract (mirrorTranslation) .normalize (),
+      rForward  = mirrorViewpoint .position .subtract (mirrorTranslation) .normalize (),
       tUp       = mirrorRotation .multVec (SFVec3f .Y_AXIS),
       rRight    = tUp .cross (rForward) .normalize (),
       rUp       = rForward .cross (rRight) .normalize ();
 
-   mirrorViewpointOrientation_changed = new SFRotation (new SFMatrix3f (rRight, rUp, rForward));
+   mirrorViewpoint .orientation = new SFRotation (new SFMatrix3f (rRight, rUp, rForward));
 
-   mirrorViewpointFieldOfView_changed = Math .atan (Math .min (mirrorScale .x, mirrorScale .y) / viewpointToMirror .length ()) * 3; // Use 3 instead of 2 to make the fov a bit wider.
+   mirrorViewpoint .fieldOfView = Math .atan (Math .min (mirrorScale .x, mirrorScale .y) / viewpointToMirror .length ()) * 3; // Use 3 instead of 2 to make fov a bit wider.
 
    // Texture matrix
 
-   const projectionMatrix = Camera .perspective (mirrorViewpointFieldOfView_changed, 0.125, 2_000, mirrorScale .x, mirrorScale .y);
+   const projectionMatrix = Camera .perspective (mirrorViewpoint .fieldOfView, 0.125, 2_000, mirrorScale .x, mirrorScale .y);
 
-   let viewMatrix = new SFMatrix4f () 
-   
-   viewMatrix .setTransform (mirrorViewpointPosition_changed, mirrorViewpointOrientation_changed);
+   let viewMatrix = new SFMatrix4f ()
+
+   viewMatrix .setTransform (mirrorViewpoint .position_changed, mirrorViewpoint .orientation);
 
    viewMatrix = viewMatrix .inverse ();
 
@@ -220,9 +219,8 @@ const Camera =
         <ROUTE fromNode='_8' fromField='orientation_changed' toNode='MirrorScript' toField='set_viewpointOrientation'/>
         <ROUTE fromNode='MirrorScript' fromField='mirrorViewpointPosition_changed' toNode='_10' toField='set_position'/>
         <ROUTE fromNode='MirrorScript' fromField='mirrorViewpointOrientation_changed' toNode='_10' toField='set_orientation'/>
-        <ROUTE fromNode='MirrorScript' fromField='mirrorTextureMatrix_changed' toNode='_2' toField='set_matrix'/>
-        <ROUTE fromNode='MirrorScript' fromField='textureDimension_changed' toNode='_4' toField='set_dimensions'/>
         <ROUTE fromNode='MirrorScript' fromField='mirrorViewpointFieldOfView_changed' toNode='_10' toField='set_fieldOfView'/>
+        <ROUTE fromNode='MirrorScript' fromField='mirrorTextureMatrix_changed' toNode='_2' toField='set_matrix'/>
       </ProtoBody>
     </ProtoDeclare>
     <WorldInfo

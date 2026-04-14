@@ -98,9 +98,9 @@
                   update='ALWAYS'
                   repeatS='false'
                   repeatT='false'>
-                <Background DEF='BG2_1' containerField='background'
+                <Background DEF='BG2_1' containerField='children'
                     transparency='1'/>
-                <Viewpoint USE='MaterialTexture_1' containerField='viewpoint'/>
+                <Viewpoint USE='MaterialTexture_1' containerField='children'/>
               </RenderedTexture>
             </UnlitMaterial>
           </Appearance>
@@ -142,9 +142,9 @@
                     update='ALWAYS'
                     repeatS='false'
                     repeatT='false'>
-                  <Background DEF='BG2_2' containerField='background'
+                  <Background DEF='BG2_2' containerField='children'
                       transparency='1'/>
-                  <Viewpoint USE='Shader_3' containerField='viewpoint'/>
+                  <Viewpoint USE='Shader_3' containerField='children'/>
                 </RenderedTexture>
               </field>
               <ShaderPart DEF='VertexShader_1'>
@@ -228,9 +228,9 @@ main ()
                   update='ALWAYS'
                   repeatS='false'
                   repeatT='false'>
-                <Background DEF='BG2' containerField='background'
+                <Background DEF='BG2' containerField='children'
                     transparency='1'/>
-                <Viewpoint USE='MultiTexture' containerField='viewpoint'/>
+                <Viewpoint USE='MultiTexture' containerField='children'/>
               </RenderedTexture>
             </MultiTexture>
           </Appearance>
