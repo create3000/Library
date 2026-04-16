@@ -6,7 +6,7 @@
     <component name='Shaders' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Tue, 17 Mar 2026 10:49:59 GMT'/>
-    <meta name='modified' content='Thu, 16 Apr 2026 20:15:49 GMT'/>
+    <meta name='modified' content='Thu, 16 Apr 2026 20:48:07 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.12, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -59,6 +59,7 @@
           <Appearance>
             <UnlitMaterial/>
             <RenderedTexture DEF='Texture1'
+                enabled='false'
                 update='ALWAYS'
                 updateInterval='0'
                 repeatS='false'
@@ -96,6 +97,7 @@
           <Appearance>
             <UnlitMaterial>
               <RenderedTexture DEF='Texture2_1' containerField='emissiveTexture'
+                  enabled='false'
                   update='ALWAYS'
                   updateInterval='0'
                   repeatS='false'
@@ -141,6 +143,7 @@
                 language='GLSL'>
               <field accessType='inputOutput' type='SFNode' name='renderedTexture'>
                 <RenderedTexture DEF='Texture3_1'
+                    enabled='false'
                     update='ALWAYS'
                     updateInterval='0'
                     repeatS='false'
@@ -228,6 +231,7 @@ main ()
               alphaMode='BLEND'>
             <MultiTexture>
               <RenderedTexture DEF='Texture4'
+                  enabled='false'
                   update='ALWAYS'
                   updateInterval='0'
                   repeatS='false'
