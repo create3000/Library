@@ -12,7 +12,7 @@
     <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Wed, 18 Mar 2026 16:54:40 GMT'/>
-    <meta name='modified' content='Tue, 14 Apr 2026 13:58:55 GMT'/>
+    <meta name='modified' content='Thu, 16 Apr 2026 20:14:47 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.12, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -50,8 +50,8 @@
                   <connect nodeField='material' protoField='material'/>
                 </IS>
                 <RenderedTexture DEF='_4'
-                    enabled='false'
                     update='ALWAYS'
+                    updateInterval='0'
                     repeatS='false'
                     repeatT='false'/>
                 <TextureTransformMatrix3D DEF='_2'
