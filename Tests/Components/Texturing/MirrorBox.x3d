@@ -12,7 +12,7 @@
     <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Wed, 18 Mar 2026 16:54:40 GMT'/>
-    <meta name='modified' content='Thu, 16 Apr 2026 20:47:50 GMT'/>
+    <meta name='modified' content='Thu, 16 Apr 2026 21:13:09 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.0.12, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -111,7 +111,7 @@ function set_textureSize ()
       w = x >= y ? textureSize : x * textureSize / y,
       h = y >= x ? textureSize : y * textureSize / x;
 
-   renderedTexture .dimensions = new MFInt32 (w, h, 4, 1, 1);
+   renderedTexture .dimensions = new MFInt32 (w, h, 4);
 }
 
 function set_children ()
