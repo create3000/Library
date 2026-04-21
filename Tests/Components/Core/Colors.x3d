@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.1//EN" "https://www.web3d.org/specifications/x3d-4.1.dtd">
+<X3D profile='Interchange' version='4.1' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.1.xsd'>
+  <head>
+    <component name='PointingDeviceSensor' level='1'/>
+    <component name='Scripting' level='1'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='created' content='Tue, 21 Apr 2026 08:29:44 GMT'/>
+    <meta name='modified' content='Tue, 21 Apr 2026 08:44:40 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V2.0.14, https://create3000.github.io/sunrize/'/>
+  </head>
+  <Scene>
+    <Viewpoint
+        description='Initial View'
+        position='2.869677 3.854335 8.769781'
+        orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
+    <TouchSensor DEF='_1'/>
+    <Transform DEF='Box'>
+      <Shape>
+        <Appearance>
+          <Material DEF='_2'
+              diffuseColor='0.8150676 0.8510914 0.3092517'/>
+        </Appearance>
+        <Box/>
+      </Shape>
+    </Transform>
+    <Script DEF='NewScript'>
+      <field accessType='inputOnly' type='SFTime' name='set_time'/>
+      <field accessType='initializeOnly' type='SFNode' name='material'>
+        <Material USE='_2'/>
+      </field>
+<![CDATA[ecmascript:
+
+function set_time (value, time)
+{
+   const r = Math .random ();
+   const g = Math .random ();
+   const b = Math .random ();
+
+   material .diffuseColor = new SFColor (r, g, b);
+}
+]]>
+    </Script>
+    <ROUTE fromNode='_1' fromField='touchTime' toNode='NewScript' toField='set_time'/>
+  </Scene>
+</X3D>
