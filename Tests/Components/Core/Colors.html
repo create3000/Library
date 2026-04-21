@@ -14,11 +14,11 @@ browser .addBrowserCallback ("check", X3D .X3DConstants .INITIALIZED_EVENT, () =
 
   touchSensor .addFieldCallback ("check", "touchTime", () =>
   {
-    material .diffuseColor = new X3D .SFColor (
-      Math .random (),
-      Math .random (),
-      Math .random ()
-    );
+    const r = Math .random ();
+    const g = Math .random ();
+    const b = Math .random ();
+
+    material .diffuseColor = new X3D .SFColor (r, g, b);
   });
 });
     </script>
