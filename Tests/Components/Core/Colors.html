@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script defer src="https://cdn.jsdelivr.net/npm/x_ite@latest/dist/x_ite.min.js"></script>
+    <script type="module">
+const browser = X3D .getBrowser ();
+
+browser .addBrowserCallback ("check", X3D .X3DConstants .INITIALIZED_EVENT, () =>
+{
+  const scene = browser .currentScene;
+  const touchSensor = scene .getNamedNode ("_1");
+  const material = scene .getNamedNode ("_2");
+
+  touchSensor .addFieldCallback ("check", "touchTime", () =>
+  {
+    material .diffuseColor = new X3D .SFColor (
+      Math .random (),
+      Math .random (),
+      Math .random ()
+    );
+  });
+});
+    </script>
+    <style>
+x3d-canvas {
+  width: 800px;
+  height: 450px;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Colors.html</h1>
+    <x3d-canvas>
+      <X3D profile='Interchange' version='4.1' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.1.xsd'>
+        <head>
+          <component name='PointingDeviceSensor' level='1'></component>
+          <component name='Scripting' level='1'></component>
+          <meta name='creator' content='Holger Seelig'></meta>
+          <meta name='created' content='Tue, 21 Apr 2026 08:29:44 GMT'></meta>
+          <meta name='modified' content='Tue, 21 Apr 2026 08:57:18 GMT'></meta>
+          <meta name='generator' content='Sunrize X3D Editor V2.0.14, https://create3000.github.io/sunrize/'></meta>
+        </head>
+        <Scene>
+          <Viewpoint
+              description='Initial View'
+              position='2.869677 3.854335 8.769781'
+              orientation='-0.7765887 0.6177187 0.1238285 0.5052317'></Viewpoint>
+          <TouchSensor DEF='_1'></TouchSensor>
+          <Transform DEF='Box'>
+            <Shape>
+              <Appearance>
+                <Material DEF='_2'
+                    diffuseColor='0.8150676 0.8510914 0.3092517'></Material>
+              </Appearance>
+              <Box></Box>
+            </Shape>
+          </Transform>
+        </Scene>
+      </X3D>
+    </x3d-canvas>
+  </body>
+</html>
