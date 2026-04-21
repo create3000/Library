@@ -7,12 +7,14 @@ import X3D from "https://cdn.jsdelivr.net/npm/x_ite@14.1.5/dist/x_ite.mjs";
 
 const browser = X3D .getBrowser ();
 
+// Wait until scene is loaded and initialized, then add a callback to the TouchSensor to change the color of the box on touch.
 browser .addBrowserCallback ("check", X3D .X3DConstants .INITIALIZED_EVENT, () =>
 {
   const scene = browser .currentScene;
   const touchSensor = scene .getNamedNode ("_1");
   const material = scene .getNamedNode ("_2");
 
+  // Add a callback to the TouchSensor that changes the diffuseColor of the Material to a random color on touch.
   touchSensor .addFieldCallback ("check", "touchTime", () =>
   {
     const r = Math .random ();
