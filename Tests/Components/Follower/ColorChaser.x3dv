@@ -1,4 +1,16 @@
-#X3D V3.3 utf8 Titania
+#X3D V4.1 utf8 X_ITE V15.0.2
+
+PROFILE Interchange
+
+COMPONENT Core : 2
+COMPONENT Followers : 1
+COMPONENT PointingDeviceSensor : 1
+COMPONENT Scripting : 1
+
+META "creator" "Holger Seelig"
+META "created" "Tue, 19 May 2026 17:40:17 GMT"
+META "modified" "Tue, 19 May 2026 17:41:48 GMT"
+META "generator" "Sunrize X3D Editor V2.1.0, https://create3000.github.io/sunrize/"
 
 PROTO ChromaticCircle [
   inputOutput SFFloat value 1
@@ -18,47 +30,51 @@ PROTO ChromaticCircle [
     initializeOnly SFInt32 dimension 60
     initializeOnly SFNode  geometry USE Geometry
 
-    url "vrmlscript:
+    url "ecmascript:
+
 function initialize ()
 {
-	eventsProcessed ();
+   eventsProcessed ();
 }
 
 function eventsProcessed ()
 {
-	var coordIndex = new MFInt32 ();
-	var color      = geometry .color .color;
-	var point      = geometry .coord .point;
+   var coordIndex = new MFInt32 ();
+   var color      = geometry .color .color;
+   var point      = geometry .coord .point;
 
-	var vertex = new SFVec3f (1, 0, 0);
-	var scale  = new SFMatrix4f (size .x / 2, 0, 0, 0,
-	                                   0, size .y / 2, 0, 0,
-	                                   0, 0, 0, 0,
-	                                   0, 0, 0, 1);
+   var vertex = new SFVec3f (1, 0, 0);
+   var scale  = new SFMatrix4f (size .x / 2, 0, 0, 0,
+                                      0, size .y / 2, 0, 0,
+                                      0, 0, 0, 0,
+                                      0, 0, 0, 1);
 
-  color .length = dimension;
-  point .length = dimension;
+   color .length = dimension + 1;
+   point .length = dimension + 1;
 
-	color [0] .setHSV (0, 0, value);
-	point [0] = new SFVec3f (0, 0, 0);
+   color [0] .setHSV (0, 0, value);
+   point [0] = new SFVec3f (0, 0, 0);
 
-	for (var i = 0; i < dimension; ++ i)
-	{
-		color [i + 1] .setHSV (2 * Math. PI * i / dimension, 1, value);
-		point [i + 1] = scale .multMatrixVec (new SFRotation (0, 0, 1, 2 * Math. PI * i / dimension) .multVec (vertex));
-	}
+   for (var i = 0; i < dimension; ++ i)
+   {
+      color [i + 1] .setHSV (2 * Math. PI * i / dimension, 1, value);
+      point [i + 1] = scale .multMatrixVec (new SFRotation (0, 0, 1, 2 * Math. PI * i / dimension) .multVec (vertex));
+   }
 
-	color [color .length] = color [1];
-	point [point .length] = point [1];
+   color [color .length] = color [1];
+   point [point .length] = point [1];
 
-	geometry .fanCount = new MFInt32 (dimension + 2);
+   geometry .fanCount = new MFInt32 (dimension + 2);
 }
 "
   }
 }
 
 NavigationInfo {
-  type [ "NONE", "ANY" ]
+  type [
+    "NONE",
+    "ANY"
+  ]
 }
 
 Background {
@@ -109,35 +125,36 @@ DEF FollowerScript Script {
   outputOnly     SFVec3f translation_changed
   initializeOnly SFNode  touchSensor USE Touch
 
-  url "vrmlscript:
+  url "ecmascript:
+
 function set_time ()
 {
-	var hue        = Math .atan2 (touchSensor .hitPoint_changed .y, touchSensor .hitPoint_changed .x)
-	var saturation = touchSensor .hitPoint_changed .length ();
+   var hue        = Math .atan2 (touchSensor .hitPoint_changed .y, touchSensor .hitPoint_changed .x)
+   var saturation = touchSensor .hitPoint_changed .length ();
 
-	if (hue < 0)
-		hue = 2 * Math .PI + hue;
+   if (hue < 0)
+      hue = 2 * Math .PI + hue;
 
-	destination_changed .setHSV (hue, saturation, value);
+   destination_changed .setHSV (hue, saturation, value);
 }
 
 function set_active (value)
 {
-	if (value)
-		color_changed = new SFColor (0.8, 0, 0);
+   if (value)
+      color_changed = new SFColor (0.8, 0, 0);
 
-	else
-		color_changed = new SFColor (0.8, 0.8, 0.8);
+   else
+      color_changed = new SFColor (0.8, 0.8, 0.8);
 }
 
 function set_color (value)
 {
-	var hsv = value .getHSV ();
+   var hsv = value .getHSV ();
 
-	var x = Math .cos (hsv [0]) * hsv [1];
-	var y = Math .sin (hsv [0]) * hsv [1];
+   var x = Math .cos (hsv [0]) * hsv [1];
+   var y = Math .sin (hsv [0]) * hsv [1];
 
-	translation_changed	= new SFVec3f (x, y, 0);
+   translation_changed   = new SFVec3f (x, y, 0);
 }
 "
 }
