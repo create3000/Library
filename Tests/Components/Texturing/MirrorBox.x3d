@@ -61,7 +61,8 @@
             </Shape>
           </Transform>
         </Group>
-        <Script DEF='MirrorScript'>
+        <Script DEF='MirrorScript'
+            directOutput='true'>
           <field accessType='inputOutput' type='SFVec3f' name='mirrorTranslation'/>
           <field accessType='inputOutput' type='SFRotation' name='mirrorRotation'/>
           <field accessType='inputOutput' type='SFVec3f' name='mirrorScale'/>
@@ -69,18 +70,17 @@
           <field accessType='inputOutput' type='MFNode' name='children'/>
           <field accessType='inputOutput' type='SFVec3f' name='viewpointPosition' value='-1.118549 6.556731 16.03942'/>
           <field accessType='inputOutput' type='SFRotation' name='viewpointOrientation' value='-0.914589430575436 -0.403127310041776 -0.0318519289558134 9.87512509009108'/>
-          <field accessType='outputOnly' type='SFVec3f' name='mirrorViewpointPosition_changed'/>
-          <field accessType='outputOnly' type='SFRotation' name='mirrorViewpointOrientation_changed'/>
-          <field accessType='outputOnly' type='SFFloat' name='mirrorViewpointFieldOfView_changed'/>
-          <field accessType='outputOnly' type='SFMatrix4f' name='mirrorTextureMatrix_changed'/>
           <field accessType='initializeOnly' type='SFNode' name='mirrorViewpoint'>
-            <Viewpoint DEF='_10'
+            <Viewpoint
                 position='-1.118549 -6.556731 16.03942'
                 orientation='-0.0165361975453685 -0.195264792891879 0.980611143536332 170.505638007086'
                 fieldOfView='25.94504'/>
           </field>
           <field accessType='initializeOnly' type='SFNode' name='renderedTexture'>
             <RenderedTexture USE='_4'/>
+          </field>
+          <field accessType='initializeOnly' type='SFNode' name='textureTransform'>
+            <TextureTransformMatrix3D USE='_2'/>
           </field>
           <IS>
             <connect nodeField='mirrorTranslation' protoField='translation'/>
@@ -135,7 +135,7 @@ function eventsProcessed ()
       rRight    = tUp .cross (rForward) .normalize (),
       rUp       = rForward .cross (rRight) .normalize ();
 
-   mirrorViewpoint .orientation = new SFRotation (new SFMatrix3f (rRight, rUp, rForward));
+   mirrorViewpoint .orientation = SFRotation .fromMatrix (new SFMatrix3f (... rRight, ... rUp, ... rForward));
 
    mirrorViewpoint .fieldOfView = Math .atan (Math .min (mirrorScale .x, mirrorScale .y) / viewpointToMirror .length ()) * 3; // Use 3 instead of 2 to make fov a bit wider.
 
@@ -173,7 +173,7 @@ function eventsProcessed ()
       .multLeft (modelMatrix)
       .multLeft (offset);
 
-   mirrorTextureMatrix_changed = textureMatrix;
+   textureTransform .matrix = textureMatrix;
 }
 
 const Camera =
@@ -219,10 +219,6 @@ const Camera =
         </Script>
         <ROUTE fromNode='_8' fromField='position_changed' toNode='MirrorScript' toField='set_viewpointPosition'/>
         <ROUTE fromNode='_8' fromField='orientation_changed' toNode='MirrorScript' toField='set_viewpointOrientation'/>
-        <ROUTE fromNode='MirrorScript' fromField='mirrorViewpointPosition_changed' toNode='_10' toField='set_position'/>
-        <ROUTE fromNode='MirrorScript' fromField='mirrorViewpointOrientation_changed' toNode='_10' toField='set_orientation'/>
-        <ROUTE fromNode='MirrorScript' fromField='mirrorViewpointFieldOfView_changed' toNode='_10' toField='set_fieldOfView'/>
-        <ROUTE fromNode='MirrorScript' fromField='mirrorTextureMatrix_changed' toNode='_2' toField='set_matrix'/>
       </ProtoBody>
     </ProtoDeclare>
     <WorldInfo

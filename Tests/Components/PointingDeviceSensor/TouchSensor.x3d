@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
-<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.1//EN" "https://www.web3d.org/specifications/x3d-4.1.dtd">
+<X3D profile='Interchange' version='4.1' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.1.xsd'>
   <head>
     <component name='Geometry2D' level='2'/>
     <component name='PointingDeviceSensor' level='1'/>
@@ -9,9 +9,10 @@
     <meta name='created' content='Mon, 06 Feb 2023 18:29:37 GMT'/>
     <meta name='comment' content='Rise and Shine'/>
     <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V2.1.0, https://create3000.github.io/sunrize/'/>
     <meta name='generator' content='Sunrise X3D Editor V1.0.8, https://create3000.github.io/sunrise/'/>
     <meta name='identifier' content='file:///Volumes/Home/Projekte/Library/Tests/Components/PointingDeviceSensor/TouchSensor.x3d'/>
-    <meta name='modified' content='Tue, 07 Feb 2023 02:42:56 GMT'/>
+    <meta name='modified' content='Tue, 19 May 2026 18:26:02 GMT'/>
   </head>
   <Scene>
     <Transform
@@ -20,7 +21,9 @@
         scale='0.234 234 12.23'>
       <Viewpoint
           description='Front'
-          viewAll='true'/>
+          position='3.107237 13.34056 14.87668'
+          orientation='0.999988908929686 -0.00438758020739273 -0.00171206236474635 5.53911637740124'
+          centerOfRotation='3.05801 0.1058213 0.5'/>
       <Viewpoint
           description='Back'
           position='0 0 -10'
@@ -62,7 +65,7 @@
         <Transform
             translation='3.29156 -0.792914 -1.04336'
             scale='-1.12121 -0.719564 -0.719564'
-            scaleOrientation='0.999999999436972 0.0000213973999879527 0.0000258496999854459 0.0457693999999979'>
+            scaleOrientation='0.999999999436972 2.13973999879527e-5 2.58496999854459e-5 0.0457693999999979'>
           <Shape>
             <Appearance>
               <Material/>
@@ -85,7 +88,7 @@
         <Transform
             translation='6.90227 -0.792914 -1.22259'
             scale='-1.12121 -0.719564 -0.719564'
-            scaleOrientation='0.999999999436972 0.0000213973999879527 0.0000258496999854459 0.0457693999999979'>
+            scaleOrientation='0.999999999436972 2.13973999879527e-5 2.58496999854459e-5 0.0457693999999979'>
           <Shape>
             <Appearance>
               <Material/>
@@ -173,8 +176,8 @@
         </Shape>
       </Transform>
       <Transform DEF='Cursor'
-          translation='5.9553 0.9999996 4.587795'
-          rotation='1 -1.30980459811524e-9 0 1.57079632368259'
+          translation='8.296242 0.9999993 3.855561'
+          rotation='1 1.96960549714194e-11 -0 1.57079632812647'
           scale='0.1 0.1 0.1'>
         <Shape>
           <Appearance>
