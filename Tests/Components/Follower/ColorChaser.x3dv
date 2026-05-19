@@ -35,7 +35,10 @@ function eventsProcessed ()
 	                                   0, size .y / 2, 0, 0,
 	                                   0, 0, 0, 0,
 	                                   0, 0, 0, 1);
-	                               
+
+  color .length = dimension;
+  point .length = dimension;
+
 	color [0] .setHSV (0, 0, value);
 	point [0] = new SFVec3f (0, 0, 0);
 
@@ -109,12 +112,12 @@ DEF FollowerScript Script {
   url "vrmlscript:
 function set_time ()
 {
-	var hue        = Math .atan2 (touchSensor .hitPoint_changed .y, touchSensor .hitPoint_changed .x) 
+	var hue        = Math .atan2 (touchSensor .hitPoint_changed .y, touchSensor .hitPoint_changed .x)
 	var saturation = touchSensor .hitPoint_changed .length ();
-	
+
 	if (hue < 0)
 		hue = 2 * Math .PI + hue;
-	
+
 	destination_changed .setHSV (hue, saturation, value);
 }
 
@@ -122,7 +125,7 @@ function set_active (value)
 {
 	if (value)
 		color_changed = new SFColor (0.8, 0, 0);
-	
+
 	else
 		color_changed = new SFColor (0.8, 0.8, 0.8);
 }
