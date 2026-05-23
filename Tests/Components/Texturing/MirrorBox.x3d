@@ -51,7 +51,7 @@
                 </IS>
                 <RenderedTexture DEF='_4'
                     enabled='false'
-                    update='ALWAYS'
+                    singleFrame='false'
                     updateInterval='0'
                     repeatS='false'
                     repeatT='false'/>
@@ -111,7 +111,8 @@ function set_textureSize ()
       w = x >= y ? textureSize : x * textureSize / y,
       h = y >= x ? textureSize : y * textureSize / x;
 
-   renderedTexture .dimensions = new MFInt32 (w, h, 4);
+   renderedTexture .width  = w;
+   renderedTexture .height = h;
 }
 
 function set_children ()
