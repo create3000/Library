@@ -7,28 +7,15 @@
     <component name='Texturing' level='3'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Sun, 05 Jul 2026 19:47:24 GMT'/>
-    <meta name='modified' content='Sun, 05 Jul 2026 19:50:19 GMT'/>
+    <meta name='modified' content='Sun, 05 Jul 2026 19:59:40 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.1.11, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
-    <WorldInfo>
-      <MetadataSet DEF='Sunrize' containerField='metadata'
-          name='Sunrize'
-          reference='https://create3000.github.io/sunrize/'>
-        <MetadataSet DEF='GridTool'
-            name='GridTool'
-            reference='https://create3000.github.io/sunrize/'>
-          <MetadataBoolean DEF='visible'
-              name='visible'
-              reference='https://create3000.github.io/sunrize/'
-              value='true'/>
-        </MetadataSet>
-      </MetadataSet>
-    </WorldInfo>
+    <WorldInfo/>
     <Viewpoint
         description='Initial View'
-        position='2.869677 3.854335 8.769781'
-        orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
+        position='3.968474 0.5314805 9.163446'
+        orientation='0.127232087748157 -0.991522442938905 -0.0263674230009893 5.87109699891688'/>
     <Transform DEF='Rectangle2D'
         translation='0 0 -4'
         scale='4 4 4'>
