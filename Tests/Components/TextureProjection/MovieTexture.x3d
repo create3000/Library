@@ -7,7 +7,7 @@
     <component name='Texturing' level='3'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Sun, 05 Jul 2026 19:47:24 GMT'/>
-    <meta name='modified' content='Sun, 05 Jul 2026 19:59:40 GMT'/>
+    <meta name='modified' content='Sun, 05 Jul 2026 20:05:49 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.1.11, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -28,7 +28,9 @@
     </Transform>
     <TextureProjector
         location='-0 0 4'
-        direction='0 0 -1'>
+        direction='0 0 -1'
+        nearDistance='5'
+        farDistance='10'>
       <MovieTexture
           url='"../images/campfire.512.mp4"'
           loop='true'/>

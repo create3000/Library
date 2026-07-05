@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
-<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.1//EN" "https://www.web3d.org/specifications/x3d-4.1.dtd">
+<X3D profile='Interchange' version='4.1' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.1.xsd'>
   <head>
     <component name='TextureProjection' level='2'/>
     <meta name='comment' content='Rise and Shine'/>
     <meta name='created' content='Sat, 16 Nov 2019 09:28:43 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
-    <meta name='generator' content='Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/'/>
+    <meta name='generator' content='Sunrize X3D Editor V2.1.11, https://create3000.github.io/sunrize/'/>
     <meta name='identifier' content='file:///home/holger/apple.x3d'/>
-    <meta name='modified' content='Sat, 14 Oct 2023 01:28:24 GMT'/>
+    <meta name='modified' content='Sun, 05 Jul 2026 20:07:17 GMT'/>
   </head>
   <Scene>
     <Viewpoint
-        position='3.45864 5.78616 7.38635'
+        position='1.654295 2.767566 3.532952'
         orientation='-0.80658553711544 0.563208014712301 0.179489563707828 0.75257055684603'/>
     <TextureProjector
         description='pt1'
@@ -20,11 +20,15 @@
         direction='-0.601322 -0.526144 -0.601319'
         upVector='-0.372041 0.850395 -0.37204'
         fieldOfView='0.26'
-        nearDistance='1'>
+        nearDistance='1'
+        farDistance='25'>
       <ImageTexture
-          url='"apple.png"'
-          repeatS='false'
-          repeatT='false'/>
+          url='"apple.png"'>
+        <TextureProperties
+            boundaryModeS='CLAMP_TO_EDGE'
+            boundaryModeT='CLAMP_TO_EDGE'
+            boundaryModeR='CLAMP_TO_EDGE'/>
+      </ImageTexture>
     </TextureProjector>
     <Shape>
       <Appearance>
