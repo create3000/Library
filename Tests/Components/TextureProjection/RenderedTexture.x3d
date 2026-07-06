@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.1//EN" "https://www.web3d.org/specifications/x3d-4.1.dtd">
+<X3D profile='Interchange' version='4.1' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.1.xsd'>
+  <head>
+    <component name='Geometry2D' level='1'/>
+    <component name='Networking' level='2'/>
+    <component name='TextureProjection' level='2'/>
+    <component name='Texturing' level='4'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='created' content='Mon, 06 Jul 2026 13:58:46 GMT'/>
+    <meta name='modified' content='Mon, 06 Jul 2026 14:11:56 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V2.1.11, https://create3000.github.io/sunrize/'/>
+  </head>
+  <Scene>
+    <WorldInfo/>
+    <Viewpoint
+        description='Initial View'
+        position='3.051618 4.11922 9.322379'
+        orientation='-0.774383893008779 0.620564415989863 0.123407422206789 0.502740123434311'
+        centerOfRotation='1.128134e-7 0.05371017 -0.008944505'/>
+    <Viewpoint DEF='_1'
+        description='Initial View'
+        position='4.80488 8.7914 -3.68049'
+        orientation='-0.223675114305871 0.863300349455577 0.452417892959744 2.33477847779979'
+        centerOfRotation='1.128134e-7 0.05371017 -0.008944505'/>
+    <Group>
+      <Transform DEF='Rectangle2D'
+          rotation='-1 -0 0 1.5707963267949'
+          scale='5 5 5'>
+        <Shape>
+          <Appearance>
+            <Material/>
+          </Appearance>
+          <Rectangle2D/>
+        </Shape>
+      </Transform>
+      <TextureProjector
+          location='4.80488 8.7914 -3.68049'
+          direction='-0.4579728 -0.8020212 0.3834358'
+          upVector='-0.6226596 0.597252 0.5055542'
+          nearDistance='1'
+          farDistance='100'>
+        <RenderedTexture
+            updateInterval='0'
+            width='512'
+            height='512'>
+          <Background
+              transparency='1'/>
+          <Viewpoint USE='_1'/>
+          <Transform DEF='Beethoven'
+              translation='0 1.972088 0.004648378'
+              scale='0.5196708 0.5196708 0.5196708'>
+            <Inline
+                url='"../Geometry3D/Beethoven.x3dz"'/>
+          </Transform>
+        </RenderedTexture>
+      </TextureProjector>
+    </Group>
+    <Transform USE='Beethoven'/>
+  </Scene>
+</X3D>
