@@ -8,7 +8,7 @@
     <component name='Texturing' level='4'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Mon, 06 Jul 2026 13:58:46 GMT'/>
-    <meta name='modified' content='Tue, 07 Jul 2026 08:18:18 GMT'/>
+    <meta name='modified' content='Tue, 07 Jul 2026 09:53:02 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.1.11, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -37,8 +37,8 @@
       <TextureProjector
           global='false'
           location='4.80488 8.7914 -3.68049'
-          direction='-0.4579728 -0.8020212 0.3834358'
-          upVector='-0.6226596 0.597252 0.5055542'
+          direction='-0.4521766 -0.8222844 0.345521'
+          upVector='-0.65337 0.5690768 0.4992587'
           nearDistance='1'
           farDistance='100'>
         <RenderedTexture
