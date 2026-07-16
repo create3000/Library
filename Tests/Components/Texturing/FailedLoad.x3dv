@@ -1,0 +1,32 @@
+#X3D V4.1 utf8 X_ITE V15.1.12
+
+PROFILE Interchange
+
+COMPONENT Geometry2D : 1
+
+META "creator" "Holger Seelig"
+META "created" "Tue, 14 Jul 2026 15:43:10 GMT"
+META "modified" "Thu, 16 Jul 2026 08:19:17 GMT"
+META "generator" "Sunrize X3D Editor V2.1.13, https://create3000.github.io/sunrize/"
+
+Viewpoint {
+  description "Initial View"
+  position 0 0 2.664008
+}
+
+DEF Rectangle2D_1 Transform {
+  rotation 0 1 0 3.14159265358979
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseTexture ImageTexture {
+          url [
+            "https://example.com/does-not-exist.png",
+            "https://picsum.photos/200"
+          ]
+        }
+      }
+    }
+    geometry Rectangle2D { }
+  }
+}
