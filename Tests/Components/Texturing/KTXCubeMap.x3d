@@ -5,7 +5,7 @@
     <component name='CubeMapTexturing' level='2'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Thu, 30 Jul 2026 08:40:05 GMT'/>
-    <meta name='modified' content='Thu, 30 Jul 2026 08:41:13 GMT'/>
+    <meta name='modified' content='Thu, 30 Jul 2026 08:49:28 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.1.17, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -25,10 +25,9 @@
     </WorldInfo>
     <Viewpoint
         description='Initial View'
-        position='2.869677 3.854335 8.769781'
-        orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
-    <Transform DEF='Specular_1'
-        translation='-3 -1.5 0'>
+        position='1.199967 1.611706 3.66712'
+        orientation='-0.776588739330481 0.61771873128448 0.123828506271318 0.5052317'/>
+    <Transform DEF='Specular_1'>
       <Shape>
         <Appearance>
           <Material>
