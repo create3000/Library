@@ -2,11 +2,10 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.1//EN" "https://www.web3d.org/specifications/x3d-4.1.dtd">
 <X3D profile='Interchange' version='4.1' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.1.xsd'>
   <head>
-    <component name='Navigation' level='3'/>
     <meta name='created' content='Wed, 27 Nov 2024 19:36:46 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V2.1.18, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Thu, 06 Aug 2026 17:53:11 GMT'/>
+    <meta name='modified' content='Thu, 06 Aug 2026 18:25:30 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -21,17 +20,18 @@
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
+    <OrthoViewpoint
+        description='Ortho View'
+        centerOfRotation='-0.1475513 -1.110618 0.03053091'
+        fieldOfView='-5.352084 -5.352084 5.352084 5.352084'
+        viewAll='true'>
+      <NavigationInfo containerField='navigationInfo'
+          type='"PLANE", "ANY"'/>
+    </OrthoViewpoint>
     <Viewpoint
         description='Initial View'
         position='2.869677 3.854335 8.769781'
         orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
-    <OrthoViewpoint
-        description='Ortho View'
-        centerOfRotation='0 -0.5 0'
-        fieldOfView='-2.549891 -2.549891 2.549891 2.549891'>
-      <NavigationInfo containerField='navigationInfo'
-          type='"PLANE", "ANY"'/>
-    </OrthoViewpoint>
     <Transform DEF='Box'
         translation='-3 -0 -0'>
       <Shape>
