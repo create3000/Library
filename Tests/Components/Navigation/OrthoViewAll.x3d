@@ -6,7 +6,7 @@
     <meta name='created' content='Wed, 27 Nov 2024 19:36:46 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V2.1.18, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Thu, 06 Aug 2026 16:58:50 GMT'/>
+    <meta name='modified' content='Thu, 06 Aug 2026 17:53:11 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -27,7 +27,8 @@
         orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
     <OrthoViewpoint
         description='Ortho View'
-        viewAll='true'>
+        centerOfRotation='0 -0.5 0'
+        fieldOfView='-2.549891 -2.549891 2.549891 2.549891'>
       <NavigationInfo containerField='navigationInfo'
           type='"PLANE", "ANY"'/>
     </OrthoViewpoint>
@@ -44,7 +45,8 @@
         <Box/>
       </Shape>
     </Transform>
-    <Transform DEF='Cone'>
+    <Transform DEF='Cone'
+        translation='0 -1 0'>
       <Shape>
         <Appearance>
           <Material DEF='Rococo1'
