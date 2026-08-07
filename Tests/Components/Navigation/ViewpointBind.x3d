@@ -8,7 +8,7 @@
     <meta name='created' content='Thu, 25 Jul 2024 16:05:29 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V2.1.18, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Fri, 07 Aug 2026 11:33:40 GMT'/>
+    <meta name='modified' content='Fri, 07 Aug 2026 12:28:41 GMT'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -31,7 +31,8 @@
     <Viewpoint
         description='VP 2'
         position='5.220812 4.072179 7.49403'
-        orientation='0.552572167518166 -0.815206166947771 -0.173501887755142 5.54787878432596'/>
+        orientation='0.552572167518166 -0.815206166947771 -0.173501887755142 5.54787878432596'
+        viewAll='true'/>
     <Viewpoint
         description='VP 3'
         position='-2.0982 1.761452 3.909969'
