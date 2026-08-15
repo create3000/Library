@@ -14,130 +14,9 @@
     <meta name='generator' content='Sunrize X3D Editor V2.1.19, https://create3000.github.io/sunrize/'/>
     <meta name='generator' content='Titania V4.4.5, http://titania.create3000.de'/>
     <meta name='identifier' content='file:///home/holger/Projekte/Library/Tests/Components/Texturing/TextureCoordinateGenerator.x3d'/>
-    <meta name='modified' content='Sat, 15 Aug 2026 13:52:42 GMT'/>
+    <meta name='modified' content='Sat, 15 Aug 2026 13:54:49 GMT'/>
   </head>
   <Scene>
-    <WorldInfo>
-      <MetadataSet DEF='Titania' containerField='metadata'
-          name='Titania'
-          reference='http://titania.create3000.de'>
-        <MetadataSet DEF='AngleGrid'
-            name='AngleGrid'
-            reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled'
-              name='enabled'
-              reference='http://titania.create3000.de'
-              value='false'/>
-        </MetadataSet>
-        <MetadataSet DEF='Grid'
-            name='Grid'
-            reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='enabled_1'
-              name='enabled'
-              reference='http://titania.create3000.de'
-              value='false'/>
-        </MetadataSet>
-        <MetadataSet DEF='Selection'
-            name='Selection'
-            reference='http://titania.create3000.de'>
-          <MetadataBoolean DEF='selectGeometry'
-              name='selectGeometry'
-              reference='http://titania.create3000.de'
-              value='false'/>
-          <MetadataSet DEF='nodes'
-              name='nodes'
-              reference='http://titania.create3000.de'/>
-        </MetadataSet>
-        <MetadataSet DEF='BrowserPanel'
-            name='BrowserPanel'
-            reference='http://titania.create3000.de'>
-          <MetadataString DEF='type_2'
-              name='type'
-              reference='http://titania.create3000.de'
-              value='"TOP_VIEW", "MAIN_VIEW", "PERSPECTIVE_VIEW", "FRONT_VIEW"'/>
-          <MetadataSet DEF='viewpoints'
-              name='viewpoints'
-              reference='http://titania.create3000.de'>
-            <MetadataSet DEF='PerspectiveViewpoint'
-                name='PerspectiveViewpoint'
-                reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_3'
-                  name='position'
-                  reference='http://titania.create3000.de'
-                  value='5.87788534164429, 6.46984958648682, 13.8524446487427'/>
-              <MetadataDouble DEF='orientation_4'
-                  name='orientation'
-                  reference='http://titania.create3000.de'
-                  value='-0.704047462871213, 0.695566762376518, 0.143192350010952, 0.568941727555854'/>
-              <MetadataDouble DEF='centerOfRotation_5'
-                  name='centerOfRotation'
-                  reference='http://titania.create3000.de'
-                  value='0, 0, 0'/>
-              <MetadataDouble DEF='fieldOfViewScale'
-                  name='fieldOfViewScale'
-                  reference='http://titania.create3000.de'
-                  value='1'/>
-            </MetadataSet>
-            <MetadataSet DEF='TopViewpoint'
-                name='TopViewpoint'
-                reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_6'
-                  name='position'
-                  reference='http://titania.create3000.de'
-                  value='0, 10000, 0'/>
-              <MetadataDouble DEF='orientation_7'
-                  name='orientation'
-                  reference='http://titania.create3000.de'
-                  value='1, 0, 0, 4.71238898038469'/>
-              <MetadataDouble DEF='centerOfRotation_8'
-                  name='centerOfRotation'
-                  reference='http://titania.create3000.de'
-                  value='-0.0320612526145463, 0, 0.0937320149966475'/>
-              <MetadataDouble DEF='fieldOfViewScale_9'
-                  name='fieldOfViewScale'
-                  reference='http://titania.create3000.de'
-                  value='1.21023944190259'/>
-            </MetadataSet>
-            <MetadataSet DEF='FrontViewpoint'
-                name='FrontViewpoint'
-                reference='http://titania.create3000.de'>
-              <MetadataDouble DEF='position_10'
-                  name='position'
-                  reference='http://titania.create3000.de'
-                  value='0, 0, 10000'/>
-              <MetadataDouble DEF='orientation_11'
-                  name='orientation'
-                  reference='http://titania.create3000.de'
-                  value='0, 0, 1, 0'/>
-              <MetadataDouble DEF='centerOfRotation_12'
-                  name='centerOfRotation'
-                  reference='http://titania.create3000.de'
-                  value='-0.00884759203065143, 0.0177734813359099, 0'/>
-              <MetadataDouble DEF='fieldOfViewScale_13'
-                  name='fieldOfViewScale'
-                  reference='http://titania.create3000.de'
-                  value='1.212467484375'/>
-            </MetadataSet>
-          </MetadataSet>
-          <MetadataString DEF='shading'
-              name='shading'
-              reference='http://titania.create3000.de'
-              value='"", "PHONG", "", ""'/>
-        </MetadataSet>
-        <MetadataSet DEF='Page'
-            name='Page'
-            reference='http://titania.create3000.de'>
-          <MetadataInteger DEF='activeView'
-              name='activeView'
-              reference='http://titania.create3000.de'
-              value='1'/>
-          <MetadataInteger DEF='multiView'
-              name='multiView'
-              reference='http://titania.create3000.de'
-              value='0'/>
-        </MetadataSet>
-      </MetadataSet>
-    </WorldInfo>
     <LayerSet
         activeLayer='1'
         order='1, 2'>
@@ -238,9 +117,7 @@
           </field>
 <![CDATA[ecmascript:
 
-var index = 0;
-
-var modes = [
+const modes = [
 	"SPHERE",
 	"CAMERA_SPACE_NORMAL",
 	"CAMERA_SPACE_POSITION",
@@ -253,6 +130,8 @@ var modes = [
 	"SPHERE_REFLECT",
 	"SPHERE_REFLECT_LOCAL",
 ];
+
+let index = 0;
 
 function initialize ()
 {
