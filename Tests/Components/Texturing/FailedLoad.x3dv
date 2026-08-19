@@ -6,7 +6,7 @@ COMPONENT Geometry2D : 1
 
 META "creator" "Holger Seelig"
 META "created" "Tue, 14 Jul 2026 15:43:10 GMT"
-META "modified" "Tue, 18 Aug 2026 08:44:12 GMT"
+META "modified" "Wed, 19 Aug 2026 07:41:51 GMT"
 META "generator" "Sunrize X3D Editor V2.1.21, https://create3000.github.io/sunrize/"
 
 Viewpoint {
@@ -22,7 +22,7 @@ DEF AllFailed_1 Transform {
       material Material {
         diffuseTexture ImageTexture {
           url [
-            "https://example.com/does-not-exist-1.png",
+            "does-not-exist-1.png",
             "https://example.com/does-not-exist-2.png",
             "https://example.com/does-not-exist-3.png"
           ]
