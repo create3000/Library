@@ -13,7 +13,7 @@
     <meta name='created' content='Mon, 18 Mar 2024 18:23:31 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V2.3.2, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Tue, 08 Sep 2026 21:40:30 GMT'/>
+    <meta name='modified' content='Tue, 08 Sep 2026 21:55:08 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='RoundedRectangle2D'>
@@ -474,6 +474,10 @@ function set_description ()
                   translation='0.5084513 0 0'
                   scale='0.027 0.0267372 0.0267372'>
                 <Shape>
+                  <Appearance>
+                    <DepthMode
+                        depthRange='0 0.9999'/>
+                  </Appearance>
                   <Disk2D/>
                 </Shape>
               </Transform>
