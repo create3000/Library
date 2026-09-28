@@ -7,11 +7,12 @@
     <component name='Scripting' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Fri, 21 Aug 2026 10:57:03 GMT'/>
-    <meta name='modified' content='Mon, 28 Sep 2026 23:05:49 GMT'/>
+    <meta name='modified' content='Mon, 28 Sep 2026 23:27:23 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.3.5, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
-    <WorldInfo>
+    <WorldInfo
+        title='Timer Test'>
       <MetadataSet DEF='Sunrize' containerField='metadata'
           name='Sunrize'
           reference='https://create3000.github.io/sunrize/'>
