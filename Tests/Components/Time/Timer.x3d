@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.1//EN" "https://www.web3d.org/specifications/x3d-4.1.dtd">
+<X3D profile='Interchange' version='4.1' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.1.xsd'>
+  <head>
+    <component name='EventUtilities' level='1'/>
+    <component name='PointingDeviceSensor' level='1'/>
+    <component name='Scripting' level='1'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='created' content='Fri, 21 Aug 2026 10:57:03 GMT'/>
+    <meta name='modified' content='Mon, 28 Sep 2026 22:03:00 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V2.3.5, https://create3000.github.io/sunrize/'/>
+  </head>
+  <Scene>
+    <WorldInfo>
+      <MetadataSet DEF='Sunrize' containerField='metadata'
+          name='Sunrize'
+          reference='https://create3000.github.io/sunrize/'>
+        <MetadataSet DEF='GridTool'
+            name='GridTool'
+            reference='https://create3000.github.io/sunrize/'>
+          <MetadataBoolean DEF='visible'
+              name='visible'
+              reference='https://create3000.github.io/sunrize/'
+              value='true'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <Viewpoint
+        description='Initial View'
+        position='2.869677 3.854335 8.769781'
+        orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
+    <Transform DEF='Sphere'>
+      <Shape>
+        <Appearance>
+          <Material DEF='Rococo6'
+              ambientIntensity='0.226102'
+              diffuseColor='0.904409 0.549305 0.224283'
+              specularColor='0.0955906 0.0955906 0.0955906'
+              shininess='0.078125'/>
+        </Appearance>
+        <Sphere/>
+      </Shape>
+      <TouchSensor DEF='_2'/>
+    </Transform>
+    <TimeSensor DEF='Timer'/>
+    <BooleanTrigger DEF='_4'/>
+    <Script DEF='DebugScript'
+        directOutput='true'>
+      <field accessType='inputOutput' type='SFTime' name='cycleTime' value='1790432363.492'/>
+      <field accessType='inputOutput' type='SFBool' name='cycleComplete' value='true'/>
+      <field accessType='inputOutput' type='SFTime' name='cycleCompleteTime' value='1790432364'/>
+      <field accessType='inputOutput' type='SFInt32' name='cycleCount' value='1'/>
+      <field accessType='inputOutput' type='SFFloat' name='fraction' value='1'/>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+   // Add code here.
+}
+
+function set_cycleTime (value, time)
+{
+   print ("cycleTime", value);
+}
+
+function set_cycleComplete (value, time)
+{
+   print ("cycleComplete", value);
+}
+
+function set_cycleCompleteTime (value, time)
+{
+   print ("cycleCompleteTime", value);
+}
+
+function set_cycleCount  (value, time)
+{
+   print ("cycleCount", value);
+}
+
+function set_fraction (value, time)
+{
+   print ("fraction", value);
+}
+]]>
+    </Script>
+    <ROUTE fromNode='Timer' fromField='fraction_changed' toNode='DebugScript' toField='set_fraction'/>
+    <ROUTE fromNode='Timer' fromField='cycleCount' toNode='DebugScript' toField='set_cycleCount'/>
+    <ROUTE fromNode='Timer' fromField='cycleCompleteTime' toNode='DebugScript' toField='set_cycleCompleteTime'/>
+    <ROUTE fromNode='Timer' fromField='cycleCompleteTime' toNode='_4' toField='set_triggerTime'/>
+    <ROUTE fromNode='Timer' fromField='cycleComplete' toNode='DebugScript' toField='set_cycleComplete'/>
+    <ROUTE fromNode='Timer' fromField='cycleTime' toNode='DebugScript' toField='set_cycleTime'/>
+    <ROUTE fromNode='_2' fromField='touchTime' toNode='Timer' toField='set_startTime'/>
+    <ROUTE fromNode='_4' fromField='triggerFalse' toNode='Timer' toField='set_loop'/>
+  </Scene>
+</X3D>
