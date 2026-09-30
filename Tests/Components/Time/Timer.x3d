@@ -7,8 +7,8 @@
     <component name='Scripting' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Fri, 21 Aug 2026 10:57:03 GMT'/>
-    <meta name='modified' content='Mon, 28 Sep 2026 23:27:23 GMT'/>
-    <meta name='generator' content='Sunrize X3D Editor V2.3.5, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Tue, 29 Sep 2026 22:16:10 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V2.4.0, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
     <WorldInfo
@@ -30,7 +30,7 @@
           <MetadataString DEF='pages'
               name='pages'
               reference='https://create3000.github.io/sunrize/'
-              value='"[{\"title\":\"Debug Timer Logic\",\"nodes\":[{\"x\":80,\"y\":60,\"path\":\"rootNodes:2:children:1\"},{\"x\":80,\"y\":300,\"path\":\"rootNodes:4\"},{\"x\":320,\"y\":60,\"path\":\"rootNodes:3\"},{\"x\":540,\"y\":60,\"path\":\"rootNodes:5\"}]}]"'/>
+              value='"[{\"title\":\"Debug Timer Logic\",\"nodes\":[{\"x\":35.886567164179105,\"y\":53.829850746268654,\"path\":\"rootNodes:2:children:1\"},{\"x\":35.886567164179105,\"y\":293.8298507462687,\"path\":\"rootNodes:4\"},{\"x\":335.8865671641791,\"y\":73.82985074626866,\"path\":\"rootNodes:3\"},{\"x\":635.886567164179,\"y\":173.82985074626865,\"path\":\"rootNodes:5\"}],\"scale\":1.1146231908168358,\"scrollLeft\":0,\"scrollTop\":0}]"'/>
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
@@ -38,7 +38,7 @@
         description='Initial View'
         position='2.869677 3.854335 8.769781'
         orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
-    <Transform DEF='Sphere'>
+    <Transform DEF='Sphere_1'>
       <Shape>
         <Appearance>
           <Material DEF='Rococo6'
