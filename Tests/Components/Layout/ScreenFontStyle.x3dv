@@ -1,9 +1,10 @@
-#X3D V4.0 utf8 X_ITE V8.14.0
+#X3D V4.1 utf8 X_ITE V16.4.1
 
 PROFILE Interchange
 
-COMPONENT Geometry2D : 2
+COMPONENT Geometry2D : 1
 COMPONENT Layout : 2
+COMPONENT Networking : 2
 COMPONENT PointingDeviceSensor : 1
 COMPONENT Scripting : 1
 COMPONENT Text : 1
@@ -11,103 +12,9 @@ COMPONENT Text : 1
 META "comment" "Rise and Shine"
 META "created" "Sun, 25 Feb 2018 08:23:00 GMT"
 META "creator" "Holger Seelig"
-META "generator" "Sunrize X3D Editor V1.1.5, https://create3000.github.io/sunrize/"
+META "generator" "Sunrize X3D Editor V2.4.0, https://create3000.github.io/sunrize/"
 META "identifier" "file:///home/holger/Projekte/Library/Tests/Components/Layout/ScreenFontStyle.x3dv"
-META "modified" "Wed, 11 Oct 2023 21:20:49 GMT"
-
-WorldInfo {
-  metadata DEF Titania MetadataSet {
-    name "Titania"
-    reference "http://titania.create3000.de"
-    value [
-      DEF Selection MetadataSet {
-        name "Selection"
-        reference "http://titania.create3000.de"
-        value [
-          DEF selectGeometry MetadataBoolean {
-            name "selectGeometry"
-            reference "http://titania.create3000.de"
-            value FALSE
-          }
-          DEF nodes MetadataSet {
-            name "nodes"
-            reference "http://titania.create3000.de"
-            value DEF _1 ScreenFontStyle {
-              family "ARIALUNI.TTF"
-              pointSize 11
-              spacing 1.8
-              horizontal FALSE
-              justify [
-                "BEGIN",
-                "BEGIN"
-              ]
-            }
-          }
-        ]
-      }
-      DEF NavigationInfo MetadataSet {
-        name "NavigationInfo"
-        reference "http://titania.create3000.de"
-        value DEF type MetadataString {
-          name "type"
-          reference "http://titania.create3000.de"
-          value "EXAMINE"
-        }
-      }
-      DEF Viewpoint MetadataSet {
-        name "Viewpoint"
-        reference "http://titania.create3000.de"
-        value [
-          DEF position MetadataDouble {
-            name "position"
-            reference "http://titania.create3000.de"
-            value [
-              0,
-              0,
-              10
-            ]
-          }
-          DEF orientation MetadataDouble {
-            name "orientation"
-            reference "http://titania.create3000.de"
-            value [
-              0,
-              0,
-              1,
-              0
-            ]
-          }
-          DEF centerOfRotation MetadataDouble {
-            name "centerOfRotation"
-            reference "http://titania.create3000.de"
-            value [
-              0,
-              0,
-              0
-            ]
-          }
-        ]
-      }
-      DEF Page MetadataSet {
-        name "Page"
-        reference "http://titania.create3000.de"
-        value [
-          DEF activeView MetadataInteger {
-            name "activeView"
-            reference "http://titania.create3000.de"
-            value 1
-          }
-          DEF multiView MetadataInteger {
-            name "multiView"
-            reference "http://titania.create3000.de"
-            value 0
-          }
-        ]
-      }
-    ]
-  }
-  title "ScreenFontStyle"
-}
+META "modified" "Sat, 03 Oct 2026 11:25:25 GMT"
 
 Background {
   skyColor 0.2 0.2 0.2
@@ -201,15 +108,27 @@ DEF Text Transform {
           "权利终身。2013年4月，复旦大学研究生黄洋因舍友投毒",
           "死亡，年仅28岁。!"
         ]
-        fontStyle USE _1
+        fontStyle ScreenFontStyle {
+          family "ARIALUNI.TTF"
+          pointSize 11
+          spacing 1.8
+          horizontal FALSE
+          justify [
+            "BEGIN",
+            "BEGIN"
+          ]
+        }
       }
     }
-    TouchSensor { }
+    DEF _1 TouchSensor { }
   ]
 }
 
 DEF Debug Script {
-  url "vrmlscript:
+  inputOnly SFVec3f set_hitPoint
+
+  url "ecmascript:
+
 async function initialize ()
 {
 	const scene = await Browser .createX3DFromString ('Text { string [\"M\", \"M\"] fontStyle ScreenFontStyle { pointSize 12 } }');
@@ -218,5 +137,12 @@ async function initialize ()
 
 	print ('DPI: ' + text .lineBounds [1] .y * 6);
 }
+
+function set_hitPoint (value)
+{
+	print (value);
+}
 "
 }
+
+ROUTE _1.hitPoint_changed TO Debug.set_hitPoint
