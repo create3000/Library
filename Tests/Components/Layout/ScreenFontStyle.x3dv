@@ -13,7 +13,7 @@ META "created" "Sun, 25 Feb 2018 08:23:00 GMT"
 META "creator" "Holger Seelig"
 META "generator" "Sunrize X3D Editor V2.4.0, https://create3000.github.io/sunrize/"
 META "identifier" "file:///home/holger/Projekte/Library/Tests/Components/Layout/ScreenFontStyle.x3dv"
-META "modified" "Sat, 03 Oct 2026 11:30:46 GMT"
+META "modified" "Sat, 03 Oct 2026 15:21:45 GMT"
 
 Background {
   skyColor 0.2 0.2 0.2
@@ -106,7 +106,7 @@ DEF Text Transform {
           specularColor 0 1 0
         }
       }
-      geometry DEF Geo Text {
+      geometry DEF Geo_1 Text {
         string [
           "上海市第二中级人民法院2月18日对“复旦投毒案”依法公开",
           "一审宣判，被告人林森浩犯故意杀人罪被判死刑，剥夺政治",
@@ -136,11 +136,12 @@ DEF Debug Script {
 
 async function initialize ()
 {
-	const scene = await Browser .createX3DFromString ('Text { string [\"M\", \"M\"] fontStyle ScreenFontStyle { pointSize 12 } }');
+	const scene = await Browser .createX3DFromString ('Text { string \"M\" fontStyle ScreenFontStyle { pointSize 11 } }');
 
 	const text = scene .rootNodes [0];
 
-	print ('DPI: ' + text .lineBounds [1] .y * 6);
+	print (`Height in Points: ${text .textBounds .y}`);
+	print (`Pixel Per Inch: ${Browser .getRenderingProperty (\"PixelsPerPoint\") * 72}`)
 }
 
 function set_hitPoint (value)
