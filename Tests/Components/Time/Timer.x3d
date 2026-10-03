@@ -7,7 +7,7 @@
     <component name='Scripting' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Fri, 21 Aug 2026 10:57:03 GMT'/>
-    <meta name='modified' content='Wed, 30 Sep 2026 22:56:44 GMT'/>
+    <meta name='modified' content='Thu, 01 Oct 2026 14:59:15 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.4.0, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -82,7 +82,7 @@ function set_cycleCompleteTime (value, time)
    print ("cycleCompleteTime", value);
 }
 
-function set_cycleCount  (value, time)
+function set_cycleCount (value, time)
 {
    print ("cycleCount", value);
 }

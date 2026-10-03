@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.1//EN" "https://www.web3d.org/specifications/x3d-4.1.dtd">
+<X3D profile='Interchange' version='4.1' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.1.xsd'>
+  <head>
+    <component name='Layout' level='2'/>
+    <component name='ParticleSystems' level='2'/>
+    <component name='Text' level='1'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='created' content='Sat, 03 Oct 2026 09:07:39 GMT'/>
+    <meta name='modified' content='Sat, 03 Oct 2026 09:11:24 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V2.4.0, https://create3000.github.io/sunrize/'/>
+  </head>
+  <Scene>
+    <WorldInfo>
+      <MetadataSet DEF='Sunrize' containerField='metadata'
+          name='Sunrize'
+          reference='https://create3000.github.io/sunrize/'>
+        <MetadataSet DEF='GridTool'
+            name='GridTool'
+            reference='https://create3000.github.io/sunrize/'>
+          <MetadataBoolean DEF='visible'
+              name='visible'
+              reference='https://create3000.github.io/sunrize/'
+              value='true'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <Viewpoint
+        description='Initial View'
+        position='2.869677 3.854335 8.769781'
+        orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
+    <ParticleSystem
+        geometryType='GEOMETRY'>
+      <PointEmitter
+          direction='0 0 0'
+          speed='30'/>
+      <Appearance>
+        <Material/>
+      </Appearance>
+      <Text
+          string='"3D Text"'>
+        <ScreenFontStyle/>
+      </Text>
+    </ParticleSystem>
+  </Scene>
+</X3D>
