@@ -14,7 +14,7 @@ META "created" "Sun, 25 Feb 2018 08:23:00 GMT"
 META "creator" "Holger Seelig"
 META "generator" "Sunrize X3D Editor V2.4.0, https://create3000.github.io/sunrize/"
 META "identifier" "file:///home/holger/Projekte/Library/Tests/Components/Layout/ScreenFontStyle.x3dv"
-META "modified" "Sat, 03 Oct 2026 11:25:25 GMT"
+META "modified" "Sat, 03 Oct 2026 11:29:10 GMT"
 
 Background {
   skyColor 0.2 0.2 0.2
@@ -94,6 +94,10 @@ DEF Axes Transform {
 
 DEF Text Transform {
   children [
+    FontLibrary {
+      family "ARIALUNI"
+      url "ARIALUNI.TTF"
+    }
     DEF Shape Shape {
       appearance Appearance {
         material Material {
@@ -109,7 +113,7 @@ DEF Text Transform {
           "死亡，年仅28岁。!"
         ]
         fontStyle ScreenFontStyle {
-          family "ARIALUNI.TTF"
+          family "ARIALUNI"
           pointSize 11
           spacing 1.8
           horizontal FALSE
