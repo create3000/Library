@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.1//EN" "https://www.web3d.org/specifications/x3d-4.1.dtd">
+<X3D profile='Interchange' version='4.1' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.1.xsd'>
+  <head>
+    <component name='HAnim' level='1'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='created' content='Tue, 20 Oct 2026 15:50:00 GMT'/>
+    <meta name='modified' content='Tue, 20 Oct 2026 22:56:40 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V2.5.1, https://create3000.github.io/sunrize/'/>
+  </head>
+  <Scene>
+    <WorldInfo>
+      <MetadataSet DEF='Sunrize' containerField='metadata'
+          name='Sunrize'
+          reference='https://create3000.github.io/sunrize/'>
+        <MetadataSet DEF='GridTool'
+            name='GridTool'
+            reference='https://create3000.github.io/sunrize/'>
+          <MetadataBoolean DEF='visible'
+              name='visible'
+              reference='https://create3000.github.io/sunrize/'
+              value='true'/>
+        </MetadataSet>
+      </MetadataSet>
+    </WorldInfo>
+    <Viewpoint
+        description='Initial View'
+        position='1.5 0.95 2.838417'
+        centerOfRotation='1.5 0.95 0'/>
+    <HAnimHumanoid>
+      <HAnimJoint containerField='skeleton'>
+        <HAnimSegment>
+          <HAnimDisplacer DEF='_4'
+              weight='0.239'
+              coordIndex='0'
+              displacements='1 0 0'/>
+          <Coordinate DEF='_1'
+              point='0 0 0, 0 1 0, 0 2 0'/>
+          <HAnimSegment>
+            <HAnimDisplacer DEF='_5'
+                weight='0.239'
+                coordIndex='1'
+                displacements='1 0 0'/>
+            <Coordinate USE='_1'/>
+            <HAnimSite
+                translation='1 0 0'>
+              <HAnimDisplacer DEF='_2'
+                  weight='0.239'
+                  coordIndex='2'
+                  displacements='1 0 0'/>
+              <Coordinate USE='_1'/>
+              <Transform DEF='Model'>
+                <Shape>
+                  <Appearance>
+                    <LineProperties
+                        linewidthScaleFactor='4'/>
+                    <UnlitMaterial/>
+                  </Appearance>
+                  <LineSet
+                      vertexCount='3'>
+                    <Color
+                        color='1 0 0, 1 1 0, 1 0 0'/>
+                    <Coordinate USE='_1'/>
+                  </LineSet>
+                </Shape>
+              </Transform>
+            </HAnimSite>
+          </HAnimSegment>
+        </HAnimSegment>
+      </HAnimJoint>
+    </HAnimHumanoid>
+    <TimeSensor DEF='_3'
+        cycleInterval='2'
+        loop='true'/>
+    <Transform DEF='Sphere_1'
+        translation='1 -0.05 0'>
+      <Shape DEF='_6'>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Sphere
+            radius='0.05'/>
+      </Shape>
+    </Transform>
+    <Transform DEF='Sphere'
+        translation='2 -0.05 0'>
+      <Shape USE='_6'/>
+    </Transform>
+    <ROUTE fromNode='_3' fromField='fraction_changed' toNode='_4' toField='set_weight'/>
+    <ROUTE fromNode='_3' fromField='fraction_changed' toNode='_5' toField='set_weight'/>
+    <ROUTE fromNode='_3' fromField='fraction_changed' toNode='_2' toField='set_weight'/>
+  </Scene>
+</X3D>
