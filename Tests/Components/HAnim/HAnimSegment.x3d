@@ -6,8 +6,9 @@
     <component name='HAnim' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Tue, 20 Oct 2026 15:50:00 GMT'/>
-    <meta name='modified' content='Wed, 21 Oct 2026 14:44:37 GMT'/>
-    <meta name='generator' content='Sunrize X3D Editor V2.6.1, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Sat, 24 Oct 2026 11:22:53 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V2.6.2, https://create3000.github.io/sunrize/'/>
+    <meta name='creator' content='create3000'/>
   </head>
   <Scene>
     <WorldInfo>
@@ -22,6 +23,14 @@
               reference='https://create3000.github.io/sunrize/'
               value='true'/>
         </MetadataSet>
+        <MetadataSet DEF='RouteGraph'
+            name='RouteGraph'
+            reference='https://create3000.github.io/sunrize/'>
+          <MetadataString DEF='pages'
+              name='pages'
+              reference='https://create3000.github.io/sunrize/'
+              value='"[{\"title\":\"New Logic 1\",\"nodes\":[{\"x\":58.856265915644975,\"y\":88.28439887346745,\"path\":\"rootNodes,3\"},{\"x\":298.85626591564494,\"y\":88.28439887346745,\"path\":\"rootNodes,2,skeleton,0,children,0,children,0,displacers,0\"},{\"x\":518.856265915645,\"y\":168.28439887346747,\"path\":\"rootNodes,2,skeleton,0,children,0,displacers,0\"},{\"x\":758.8562659156449,\"y\":268.28439887346747,\"path\":\"rootNodes,2,skeleton,0,children,0,children,0,children,0,displacers,0\"}],\"scale\":0.679621776504298,\"scrollLeft\":0,\"scrollTop\":0}]"'/>
+        </MetadataSet>
       </MetadataSet>
     </WorldInfo>
     <Viewpoint
@@ -32,21 +41,21 @@
       <HAnimJoint containerField='skeleton'>
         <HAnimSegment>
           <HAnimDisplacer DEF='_4'
-              weight='0.7885'
+              weight='0.916'
               coordIndex='0'
               displacements='1 0 0'/>
           <Coordinate DEF='_1'
               point='0 0 0, 0 1 0, 0 2 0'/>
           <HAnimSegment>
             <HAnimDisplacer DEF='_5'
-                weight='0.7885'
+                weight='0.916'
                 coordIndex='1'
                 displacements='1 0 0'/>
             <Coordinate USE='_1'/>
             <HAnimSite
                 translation='1 0 0'>
               <HAnimDisplacer DEF='_2'
-                  weight='0.7885'
+                  weight='0.916'
                   coordIndex='2'
                   displacements='1 0 0'/>
               <Coordinate USE='_1'/>
