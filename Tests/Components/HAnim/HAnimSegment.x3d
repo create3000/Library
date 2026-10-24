@@ -6,7 +6,7 @@
     <component name='HAnim' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Tue, 20 Oct 2026 15:50:00 GMT'/>
-    <meta name='modified' content='Sat, 24 Oct 2026 22:08:39 GMT'/>
+    <meta name='modified' content='Sat, 24 Oct 2026 22:11:41 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.6.2, https://create3000.github.io/sunrize/'/>
     <meta name='creator' content='create3000'/>
   </head>
@@ -29,7 +29,7 @@
           <MetadataString DEF='pages_1'
               name='pages'
               reference='https://create3000.github.io/sunrize/'
-              value='"[{\"title\":\"New Logic 1\",\"nodes\":[{\"x\":100,\"y\":120,\"path\":\"rootNodes,5,children,0\"},{\"x\":400,\"y\":120,\"path\":\"rootNodes,5,children,1\"},{\"x\":400,\"y\":280,\"path\":\"rootNodes,5,children,2\"},{\"x\":400,\"y\":460,\"path\":\"rootNodes,5,children,3\"},{\"x\":780,\"y\":120,\"path\":\"rootNodes,4,skeleton,0,children,0,displacers,0\"},{\"x\":780,\"y\":300,\"path\":\"rootNodes,4,skeleton,0,children,0,children,0,displacers,0\"},{\"x\":780,\"y\":500,\"path\":\"rootNodes,4,skeleton,0,children,0,children,0,children,0,displacers,0\"}],\"scale\":0.679621776504298,\"scrollLeft\":0,\"scrollTop\":0}]"'/>
+              value='"[{\"title\":\"New Logic 1\",\"nodes\":[{\"x\":40,\"y\":59.999999999999986,\"path\":\"rootNodes,5,children,0\"},{\"x\":339.99999999999994,\"y\":59.999999999999986,\"path\":\"rootNodes,5,children,1\"},{\"x\":339.99999999999994,\"y\":220.00000000000017,\"path\":\"rootNodes,5,children,2\"},{\"x\":339.99999999999994,\"y\":400.00000000000006,\"path\":\"rootNodes,5,children,3\"},{\"x\":720,\"y\":59.999999999999986,\"path\":\"rootNodes,4,skeleton,0,children,0,displacers,0\"},{\"x\":720,\"y\":240.00000000000006,\"path\":\"rootNodes,4,skeleton,0,children,0,children,0,displacers,0\"},{\"x\":720,\"y\":440.00000000000017,\"path\":\"rootNodes,4,skeleton,0,children,0,children,0,children,0,displacers,0\"}],\"scale\":1,\"scrollLeft\":0,\"scrollTop\":0}]"'/>
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
@@ -61,21 +61,21 @@
       <HAnimJoint containerField='skeleton'>
         <HAnimSegment>
           <HAnimDisplacer DEF='_4'
-              weight='0.3005'
+              weight='0.908'
               coordIndex='0'
               displacements='1 0 0'/>
           <Coordinate DEF='_1'
               point='0 0 0, 0 1 0, 0 2 0'/>
           <HAnimSegment>
             <HAnimDisplacer DEF='_5'
-                weight='0.3005'
+                weight='0.908'
                 coordIndex='1'
                 displacements='1 0 0'/>
             <Coordinate USE='_1'/>
             <HAnimSite
                 translation='1 0 0'>
               <HAnimDisplacer DEF='_2'
-                  weight='0.3005'
+                  weight='0.908'
                   coordIndex='2'
                   displacements='1 0 0'/>
               <Coordinate USE='_1'/>
@@ -115,9 +115,7 @@
       <TimeSensor DEF='WeightAnimationTimer'
           description='Weight Animation'
           cycleInterval='4'
-          loop='true'
-          resumeTime='1792879582.119'
-          pauseTime='1792879582.02'/>
+          loop='true'/>
       <ScalarInterpolator DEF='HAnimDisplacerWeightInterpolator'
           key='0, 0.5, 1'
           keyValue='0, 1, 0'>
