@@ -11,7 +11,7 @@
     <component name='Text' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Fri, 21 Aug 2026 10:57:03 GMT'/>
-    <meta name='modified' content='Mon, 09 Nov 2026 14:48:11 GMT'/>
+    <meta name='modified' content='Mon, 09 Nov 2026 15:23:12 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.6.7, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -49,7 +49,7 @@
         orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
     <LayerSet
         activeLayer='-1'
-        order='1, 2'>
+        order='0, 1, 2'>
       <Layer DEF='TimeSensor'>
         <TimeSensor DEF='Timer'
             cycleInterval='10'
@@ -165,18 +165,18 @@ function set_fraction (value, time)
     <ROUTE fromNode='Timer' fromField='cycleCompleteTime' toNode='DebugScript' toField='set_cycleCompleteTime'/>
     <ROUTE fromNode='Timer' fromField='cycleCount' toNode='DebugScript' toField='set_cycleCount'/>
     <ROUTE fromNode='Timer' fromField='fraction_changed' toNode='DebugScript' toField='set_fraction'/>
-    <ROUTE fromNode='Timer' fromField='isPaused' toNode='PlayerControls' toField='set_paused'/>
-    <ROUTE fromNode='Timer' fromField='isActive' toNode='PlayerControls' toField='set_active'/>
-    <ROUTE fromNode='PlayerControls' fromField='startTime' toNode='Timer' toField='set_startTime'/>
-    <ROUTE fromNode='PlayerControls' fromField='resumeTime' toNode='Timer' toField='set_resumeTime'/>
-    <ROUTE fromNode='PlayerControls' fromField='pauseTime' toNode='Timer' toField='set_pauseTime'/>
-    <ROUTE fromNode='PlayerControls' fromField='stopTime' toNode='Timer' toField='set_stopTime'/>
-    <ROUTE fromNode='PlayerControls' fromField='reverse' toNode='Timer' toField='set_reverse'/>
-    <ROUTE fromNode='PlayerControls' fromField='loop' toNode='Timer' toField='set_loop'/>
     <ROUTE fromNode='Timer' fromField='fraction_changed' toNode='TextScript' toField='set_fraction'/>
     <ROUTE fromNode='Timer' fromField='cycleCount' toNode='TextScript' toField='set_cycleCount'/>
     <ROUTE fromNode='Timer' fromField='cycleTime' toNode='TextScript' toField='set_cycleTime'/>
     <ROUTE fromNode='Timer' fromField='cycleCompleteTime' toNode='TextScript' toField='set_cycleCompleteTime'/>
     <ROUTE fromNode='Timer' fromField='isActive' toNode='TextScript' toField='set_active'/>
+    <ROUTE fromNode='Timer' fromField='isPaused' toNode='PlayerControls' toField='set_paused'/>
+    <ROUTE fromNode='Timer' fromField='isActive' toNode='PlayerControls' toField='set_active'/>
+    <ROUTE fromNode='PlayerControls' fromField='loop' toNode='Timer' toField='set_loop'/>
+    <ROUTE fromNode='PlayerControls' fromField='reverse' toNode='Timer' toField='set_reverse'/>
+    <ROUTE fromNode='PlayerControls' fromField='startTime' toNode='Timer' toField='set_startTime'/>
+    <ROUTE fromNode='PlayerControls' fromField='resumeTime' toNode='Timer' toField='set_resumeTime'/>
+    <ROUTE fromNode='PlayerControls' fromField='pauseTime' toNode='Timer' toField='set_pauseTime'/>
+    <ROUTE fromNode='PlayerControls' fromField='stopTime' toNode='Timer' toField='set_stopTime'/>
   </Scene>
 </X3D>
