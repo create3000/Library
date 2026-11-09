@@ -9,9 +9,10 @@
     <component name='Layout' level='1'/>
     <component name='PointingDeviceSensor' level='1'/>
     <component name='Scripting' level='1'/>
+    <component name='Text' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Fri, 21 Aug 2026 10:57:03 GMT'/>
-    <meta name='modified' content='Mon, 09 Nov 2026 14:17:29 GMT'/>
+    <meta name='modified' content='Mon, 09 Nov 2026 14:34:09 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.6.7, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -67,16 +68,20 @@
               size='80000 80000'/>
         </Shape>
       </LayoutLayer>
-      <Layer DEF='Movie'>
+      <Layer DEF='TimeSensor'>
         <TimeSensor DEF='Timer'
-            startTime='1794233833.832'/>
+            cycleInterval='10'
+            loop='true'
+            reverse='true'
+            startTime='1794234727.379'
+            stopTime='1794234760.242'/>
         <Script DEF='DebugScript'
             directOutput='true'>
-          <field accessType='inputOutput' type='SFTime' name='cycleTime' value='1794233833.832'/>
+          <field accessType='inputOutput' type='SFTime' name='cycleTime' value='1794234758.508'/>
           <field accessType='inputOutput' type='SFBool' name='cycleComplete' value='true'/>
-          <field accessType='inputOutput' type='SFTime' name='cycleCompleteTime' value='1794233834.838'/>
-          <field accessType='inputOutput' type='SFInt32' name='cycleCount' value='1'/>
-          <field accessType='inputOutput' type='SFFloat' name='fraction' value='1'/>
+          <field accessType='inputOutput' type='SFTime' name='cycleCompleteTime' value='1794234758.508'/>
+          <field accessType='inputOutput' type='SFInt32' name='cycleCount' value='14'/>
+          <field accessType='inputOutput' type='SFFloat' name='fraction' value='0.8305999'/>
 <![CDATA[ecmascript:
 
 function initialize ()
@@ -110,10 +115,44 @@ function set_fraction (value, time)
 }
 ]]>
         </Script>
+        <Transform DEF='Text'>
+          <Shape>
+            <Appearance>
+              <Material/>
+            </Appearance>
+            <Text DEF='_1'
+                string='"0.000"'>
+              <FontStyle
+                  family='"TYPEWRITER"'
+                  justify='"MIDDLE", "MDDLE"'/>
+            </Text>
+          </Shape>
+          <Script DEF='TextScript'
+              directOutput='true'>
+            <field accessType='inputOutput' type='SFFloat' name='fraction' value='0.8305999'/>
+            <field accessType='initializeOnly' type='SFNode' name='text'>
+              <Text USE='_1'/>
+            </field>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+   // Add code here.
+
+   text .string [0] = 0 .toFixed (3);
+}
+
+function eventsProcessed ()
+{
+   text .string [0] = fraction .toFixed (3);
+}
+]]>
+          </Script>
+        </Transform>
       </Layer>
       <Layer DEF='Controls'>
         <Transform
-            translation='-0.5 -3.7 0'
+            translation='-0.3 -3.7 0'
             scale='0.2 0.2 0.2'>
           <ProtoInstance name='PlayerControls' DEF='PlayerControls'>
             <fieldValue name='reverseButton' value='true'/>
@@ -135,5 +174,6 @@ function set_fraction (value, time)
     <ROUTE fromNode='PlayerControls' fromField='stopTime' toNode='Timer' toField='set_stopTime'/>
     <ROUTE fromNode='PlayerControls' fromField='reverse' toNode='Timer' toField='set_reverse'/>
     <ROUTE fromNode='PlayerControls' fromField='loop' toNode='Timer' toField='set_loop'/>
+    <ROUTE fromNode='Timer' fromField='fraction_changed' toNode='TextScript' toField='set_fraction'/>
   </Scene>
 </X3D>
