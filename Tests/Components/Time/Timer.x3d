@@ -2,15 +2,32 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.1//EN" "https://www.web3d.org/specifications/x3d-4.1.dtd">
 <X3D profile='Interchange' version='4.1' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.1.xsd'>
   <head>
+    <component name='Core' level='2'/>
     <component name='EventUtilities' level='1'/>
+    <component name='Geometry2D' level='1'/>
+    <component name='Layering' level='1'/>
+    <component name='Layout' level='1'/>
     <component name='PointingDeviceSensor' level='1'/>
     <component name='Scripting' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Fri, 21 Aug 2026 10:57:03 GMT'/>
-    <meta name='modified' content='Thu, 01 Oct 2026 14:59:15 GMT'/>
-    <meta name='generator' content='Sunrize X3D Editor V2.4.0, https://create3000.github.io/sunrize/'/>
+    <meta name='modified' content='Mon, 09 Nov 2026 14:17:29 GMT'/>
+    <meta name='generator' content='Sunrize X3D Editor V2.6.7, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
+    <ExternProtoDeclare name='PlayerControls' url='"../Texturing/PlayerControls.x3d#PlayerControls"'>
+      <field accessType='inputOnly' type='SFBool' name='set_paused'/>
+      <field accessType='inputOnly' type='SFBool' name='set_active'/>
+      <field accessType='inputOutput' type='SFBool' name='reverseButton'/>
+      <field accessType='outputOnly' type='SFBool' name='loop'/>
+      <field accessType='outputOnly' type='SFBool' name='reverse'/>
+      <field accessType='outputOnly' type='SFTime' name='startTime'/>
+      <field accessType='outputOnly' type='SFTime' name='resumeTime'/>
+      <field accessType='outputOnly' type='SFTime' name='pauseTime'/>
+      <field accessType='outputOnly' type='SFTime' name='stopTime'/>
+      <field accessType='inputOutput' type='SFColor' name='color'/>
+      <field accessType='inputOutput' type='SFColor' name='activeColor'/>
+    </ExternProtoDeclare>
     <WorldInfo
         title='Timer Test'>
       <MetadataSet DEF='Sunrize' containerField='metadata'
@@ -24,42 +41,42 @@
               reference='https://create3000.github.io/sunrize/'
               value='true'/>
         </MetadataSet>
-        <MetadataSet DEF='RouteGraph_1'
-            name='RouteGraph'
-            reference='https://create3000.github.io/sunrize/'>
-          <MetadataString DEF='pages_1'
-              name='pages'
-              reference='https://create3000.github.io/sunrize/'
-              value='"[{\"title\":\"Debug Timer Logic\",\"nodes\":[{\"x\":34.285714285714285,\"y\":51.42857142857142,\"path\":\"rootNodes,4\"},{\"x\":34.285714285714285,\"y\":211.42857142857144,\"path\":\"rootNodes,2,children,1\"},{\"x\":274.2857142857143,\"y\":51.42857142857142,\"path\":\"rootNodes,3\"},{\"x\":514.2857142857142,\"y\":51.42857142857142,\"path\":\"rootNodes,5\"}],\"scale\":1.1666666666666667,\"scrollLeft\":0,\"scrollTop\":0}]"'/>
-        </MetadataSet>
       </MetadataSet>
     </WorldInfo>
     <Viewpoint
         description='Initial View'
         position='2.869677 3.854335 8.769781'
         orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
-    <Transform DEF='Sphere_1'>
-      <Shape>
-        <Appearance>
-          <Material DEF='Rococo6'
-              ambientIntensity='0.226102'
-              diffuseColor='0.904409 0.549305 0.224283'
-              specularColor='0.0955906 0.0955906 0.0955906'
-              shininess='0.078125'/>
-        </Appearance>
-        <Sphere/>
-      </Shape>
-      <TouchSensor DEF='_2'/>
-    </Transform>
-    <TimeSensor DEF='Timer'/>
-    <BooleanTrigger DEF='_4'/>
-    <Script DEF='DebugScript'
-        directOutput='true'>
-      <field accessType='inputOutput' type='SFTime' name='cycleTime' value='1790432363.492'/>
-      <field accessType='inputOutput' type='SFBool' name='cycleComplete' value='true'/>
-      <field accessType='inputOutput' type='SFTime' name='cycleCompleteTime' value='1790432364'/>
-      <field accessType='inputOutput' type='SFInt32' name='cycleCount' value='1'/>
-      <field accessType='inputOutput' type='SFFloat' name='fraction' value='1'/>
+    <LayerSet
+        activeLayer='2'
+        order='1, 2, 3'>
+      <LayoutLayer DEF='CheckerBoard'
+          pointerEvents='false'>
+        <Layout
+            scaleMode='"PIXEL", "PIXEL"'/>
+        <Shape>
+          <Appearance>
+            <PixelTexture
+                image='2 2 1
+                  0x99 0x66
+                  0x66 0x99'/>
+            <TextureTransform
+                scale='5000 5000'/>
+          </Appearance>
+          <Rectangle2D
+              size='80000 80000'/>
+        </Shape>
+      </LayoutLayer>
+      <Layer DEF='Movie'>
+        <TimeSensor DEF='Timer'
+            startTime='1794233833.832'/>
+        <Script DEF='DebugScript'
+            directOutput='true'>
+          <field accessType='inputOutput' type='SFTime' name='cycleTime' value='1794233833.832'/>
+          <field accessType='inputOutput' type='SFBool' name='cycleComplete' value='true'/>
+          <field accessType='inputOutput' type='SFTime' name='cycleCompleteTime' value='1794233834.838'/>
+          <field accessType='inputOutput' type='SFInt32' name='cycleCount' value='1'/>
+          <field accessType='inputOutput' type='SFFloat' name='fraction' value='1'/>
 <![CDATA[ecmascript:
 
 function initialize ()
@@ -92,14 +109,31 @@ function set_fraction (value, time)
    print ("fraction", value);
 }
 ]]>
-    </Script>
-    <ROUTE fromNode='Timer' fromField='fraction_changed' toNode='DebugScript' toField='set_fraction'/>
-    <ROUTE fromNode='Timer' fromField='cycleCount' toNode='DebugScript' toField='set_cycleCount'/>
-    <ROUTE fromNode='Timer' fromField='cycleCompleteTime' toNode='DebugScript' toField='set_cycleCompleteTime'/>
-    <ROUTE fromNode='Timer' fromField='cycleCompleteTime' toNode='_4' toField='set_triggerTime'/>
-    <ROUTE fromNode='Timer' fromField='cycleComplete' toNode='DebugScript' toField='set_cycleComplete'/>
+        </Script>
+      </Layer>
+      <Layer DEF='Controls'>
+        <Transform
+            translation='-0.5 -3.7 0'
+            scale='0.2 0.2 0.2'>
+          <ProtoInstance name='PlayerControls' DEF='PlayerControls'>
+            <fieldValue name='reverseButton' value='true'/>
+            <fieldValue name='activeColor' value='0 0.75 1'/>
+          </ProtoInstance>
+        </Transform>
+      </Layer>
+    </LayerSet>
     <ROUTE fromNode='Timer' fromField='cycleTime' toNode='DebugScript' toField='set_cycleTime'/>
-    <ROUTE fromNode='_2' fromField='touchTime' toNode='Timer' toField='set_startTime'/>
-    <ROUTE fromNode='_4' fromField='triggerFalse' toNode='Timer' toField='set_loop'/>
+    <ROUTE fromNode='Timer' fromField='cycleComplete' toNode='DebugScript' toField='set_cycleComplete'/>
+    <ROUTE fromNode='Timer' fromField='cycleCompleteTime' toNode='DebugScript' toField='set_cycleCompleteTime'/>
+    <ROUTE fromNode='Timer' fromField='cycleCount' toNode='DebugScript' toField='set_cycleCount'/>
+    <ROUTE fromNode='Timer' fromField='fraction_changed' toNode='DebugScript' toField='set_fraction'/>
+    <ROUTE fromNode='Timer' fromField='isPaused' toNode='PlayerControls' toField='set_paused'/>
+    <ROUTE fromNode='Timer' fromField='isActive' toNode='PlayerControls' toField='set_active'/>
+    <ROUTE fromNode='PlayerControls' fromField='startTime' toNode='Timer' toField='set_startTime'/>
+    <ROUTE fromNode='PlayerControls' fromField='resumeTime' toNode='Timer' toField='set_resumeTime'/>
+    <ROUTE fromNode='PlayerControls' fromField='pauseTime' toNode='Timer' toField='set_pauseTime'/>
+    <ROUTE fromNode='PlayerControls' fromField='stopTime' toNode='Timer' toField='set_stopTime'/>
+    <ROUTE fromNode='PlayerControls' fromField='reverse' toNode='Timer' toField='set_reverse'/>
+    <ROUTE fromNode='PlayerControls' fromField='loop' toNode='Timer' toField='set_loop'/>
   </Scene>
 </X3D>
