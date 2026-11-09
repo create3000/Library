@@ -6,13 +6,12 @@
     <component name='EventUtilities' level='1'/>
     <component name='Geometry2D' level='1'/>
     <component name='Layering' level='1'/>
-    <component name='Layout' level='1'/>
     <component name='PointingDeviceSensor' level='1'/>
     <component name='Scripting' level='1'/>
     <component name='Text' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Fri, 21 Aug 2026 10:57:03 GMT'/>
-    <meta name='modified' content='Mon, 09 Nov 2026 14:34:09 GMT'/>
+    <meta name='modified' content='Mon, 09 Nov 2026 14:48:11 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.6.7, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -49,39 +48,73 @@
         position='2.869677 3.854335 8.769781'
         orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
     <LayerSet
-        activeLayer='2'
-        order='1, 2, 3'>
-      <LayoutLayer DEF='CheckerBoard'
-          pointerEvents='false'>
-        <Layout
-            scaleMode='"PIXEL", "PIXEL"'/>
-        <Shape>
-          <Appearance>
-            <PixelTexture
-                image='2 2 1
-                  0x99 0x66
-                  0x66 0x99'/>
-            <TextureTransform
-                scale='5000 5000'/>
-          </Appearance>
-          <Rectangle2D
-              size='80000 80000'/>
-        </Shape>
-      </LayoutLayer>
+        activeLayer='-1'
+        order='1, 2'>
       <Layer DEF='TimeSensor'>
         <TimeSensor DEF='Timer'
             cycleInterval='10'
-            loop='true'
-            reverse='true'
-            startTime='1794234727.379'
-            stopTime='1794234760.242'/>
+            startTime='1794235674.089'
+            stopTime='1794235675.248'/>
+        <Transform DEF='Text'
+            translation='-4.073888 0 0'>
+          <Shape>
+            <Appearance>
+              <Material/>
+            </Appearance>
+            <Text DEF='_1'
+                string='"cycleTime: -1", "cycleCompleteTime: -1", "cycleCount: 0", "fraction: 0.000"'>
+              <FontStyle
+                  family='"TYPEWRITER"'
+                  size='0.5'
+                  spacing='1.2'
+                  justify='"BEGIN", "MIDDLE"'/>
+            </Text>
+          </Shape>
+          <Script DEF='TextScript'
+              directOutput='true'>
+            <field accessType='inputOnly' type='SFBool' name='set_active'/>
+            <field accessType='inputOutput' type='SFTime' name='cycleTime'/>
+            <field accessType='inputOutput' type='SFTime' name='cycleCompleteTime'/>
+            <field accessType='inputOutput' type='SFInt32' name='cycleCount'/>
+            <field accessType='inputOutput' type='SFFloat' name='fraction'/>
+            <field accessType='initializeOnly' type='SFNode' name='text'>
+              <Text USE='_1'/>
+            </field>
+<![CDATA[ecmascript:
+
+function initialize ()
+{
+   set_active (true);
+}
+
+function set_active (value)
+{
+   if (!value)
+      return;
+
+   cycleTime         = -1;
+   cycleCompleteTime = -1;
+   cycleCount        = 0;
+   fraction          = 0;
+}
+
+function eventsProcessed ()
+{
+   text .string [0] = `cycleTime: ${cycleTime}`;
+   text .string [1] = `cycleCompleteTime: ${cycleCompleteTime}`;
+   text .string [2] = `cycleCount: ${cycleCount}`;
+   text .string [3] = `fraction: ${fraction .toFixed (3)}`;
+}
+]]>
+          </Script>
+        </Transform>
         <Script DEF='DebugScript'
             directOutput='true'>
-          <field accessType='inputOutput' type='SFTime' name='cycleTime' value='1794234758.508'/>
+          <field accessType='inputOutput' type='SFTime' name='cycleTime' value='1794235674.089'/>
           <field accessType='inputOutput' type='SFBool' name='cycleComplete' value='true'/>
-          <field accessType='inputOutput' type='SFTime' name='cycleCompleteTime' value='1794234758.508'/>
-          <field accessType='inputOutput' type='SFInt32' name='cycleCount' value='14'/>
-          <field accessType='inputOutput' type='SFFloat' name='fraction' value='0.8305999'/>
+          <field accessType='inputOutput' type='SFTime' name='cycleCompleteTime' value='1794235657.98'/>
+          <field accessType='inputOutput' type='SFInt32' name='cycleCount'/>
+          <field accessType='inputOutput' type='SFFloat' name='fraction' value='0.1143'/>
 <![CDATA[ecmascript:
 
 function initialize ()
@@ -115,40 +148,6 @@ function set_fraction (value, time)
 }
 ]]>
         </Script>
-        <Transform DEF='Text'>
-          <Shape>
-            <Appearance>
-              <Material/>
-            </Appearance>
-            <Text DEF='_1'
-                string='"0.000"'>
-              <FontStyle
-                  family='"TYPEWRITER"'
-                  justify='"MIDDLE", "MDDLE"'/>
-            </Text>
-          </Shape>
-          <Script DEF='TextScript'
-              directOutput='true'>
-            <field accessType='inputOutput' type='SFFloat' name='fraction' value='0.8305999'/>
-            <field accessType='initializeOnly' type='SFNode' name='text'>
-              <Text USE='_1'/>
-            </field>
-<![CDATA[ecmascript:
-
-function initialize ()
-{
-   // Add code here.
-
-   text .string [0] = 0 .toFixed (3);
-}
-
-function eventsProcessed ()
-{
-   text .string [0] = fraction .toFixed (3);
-}
-]]>
-          </Script>
-        </Transform>
       </Layer>
       <Layer DEF='Controls'>
         <Transform
@@ -175,5 +174,9 @@ function eventsProcessed ()
     <ROUTE fromNode='PlayerControls' fromField='reverse' toNode='Timer' toField='set_reverse'/>
     <ROUTE fromNode='PlayerControls' fromField='loop' toNode='Timer' toField='set_loop'/>
     <ROUTE fromNode='Timer' fromField='fraction_changed' toNode='TextScript' toField='set_fraction'/>
+    <ROUTE fromNode='Timer' fromField='cycleCount' toNode='TextScript' toField='set_cycleCount'/>
+    <ROUTE fromNode='Timer' fromField='cycleTime' toNode='TextScript' toField='set_cycleTime'/>
+    <ROUTE fromNode='Timer' fromField='cycleCompleteTime' toNode='TextScript' toField='set_cycleCompleteTime'/>
+    <ROUTE fromNode='Timer' fromField='isActive' toNode='TextScript' toField='set_active'/>
   </Scene>
 </X3D>
