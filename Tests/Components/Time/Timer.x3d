@@ -4,14 +4,14 @@
   <head>
     <component name='Core' level='2'/>
     <component name='EventUtilities' level='1'/>
-    <component name='Geometry2D' level='1'/>
+    <component name='Geometry2D' level='2'/>
     <component name='Layering' level='1'/>
     <component name='PointingDeviceSensor' level='1'/>
     <component name='Scripting' level='1'/>
     <component name='Text' level='1'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='created' content='Fri, 21 Aug 2026 10:57:03 GMT'/>
-    <meta name='modified' content='Mon, 09 Nov 2026 15:36:30 GMT'/>
+    <meta name='modified' content='Tue, 10 Nov 2026 15:14:59 GMT'/>
     <meta name='generator' content='Sunrize X3D Editor V2.6.7, https://create3000.github.io/sunrize/'/>
   </head>
   <Scene>
@@ -43,10 +43,6 @@
         </MetadataSet>
       </MetadataSet>
     </WorldInfo>
-    <Viewpoint
-        description='Initial View'
-        position='2.869677 3.854335 8.769781'
-        orientation='-0.7765887 0.6177187 0.1238285 0.5052317'/>
     <LayerSet
         activeLayer='-1'
         order='0, 1, 2'>
