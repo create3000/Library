@@ -4,13 +4,13 @@
   <head>
     <component name='Core' level='2'/>
     <component name='EventUtilities' level='1'/>
-    <component name='Geometry2D' level='1'/>
+    <component name='Geometry2D' level='2'/>
     <component name='PointingDeviceSensor' level='1'/>
     <unit category='angle' name='degree' conversionFactor='0.017453292519943295'/>
     <meta name='created' content='Sun, 29 Jun 2025 18:49:26 GMT'/>
     <meta name='creator' content='Holger Seelig'/>
     <meta name='generator' content='Sunrize X3D Editor V2.6.7, https://create3000.github.io/sunrize/'/>
-    <meta name='modified' content='Mon, 09 Nov 2026 14:24:38 GMT'/>
+    <meta name='modified' content='Tue, 10 Nov 2026 06:20:38 GMT'/>
   </head>
   <Scene>
     <ProtoDeclare name='PlayerControls'>
@@ -33,8 +33,7 @@
           <Transform DEF='Play'
               translation='-3 0 0'
               rotation='0 0 1 270'>
-            <Transform DEF='Background'
-                rotation='0 0 1 90'>
+            <Transform DEF='Background'>
               <Shape
                   pointerEvents='false'>
                 <Appearance>
@@ -61,7 +60,7 @@
                   </IS>
                 </UnlitMaterial>
               </Appearance>
-              <TriangleSet2D
+              <TriangleSet2D DEF='_10'
                   vertices='-1 -0.8660254, 1 -0.8660254, 0 0.8660254'/>
             </Shape>
             <TouchSensor
@@ -172,25 +171,53 @@
                 description='Loop'/>
           </Transform>
           <Transform DEF='Reverse'
-              translation='6 0 0'
-              rotation='0 0 1 90'>
+              translation='6 0 0'>
             <IS>
               <connect nodeField='visible' protoField='reverseButton'/>
             </IS>
             <Transform USE='Background'/>
             <Shape USE='ClickArea_2'/>
-            <Shape DEF='Normal_2'
-                pointerEvents='false'>
-              <Appearance USE='Normal_5'/>
-              <TriangleSet2D DEF='_1'
-                  vertices='-0.61803 -0.8660254, 0.61803 -0.8660254, 0 0.8660254'/>
-            </Shape>
-            <Shape DEF='Active_2'
-                pointerEvents='false'
+            <Group DEF='Normal_6'>
+              <Transform DEF='Rectangle'
+                  translation='0.2 0 0'
+                  scale='0.6 0.3 1'>
+                <Shape>
+                  <Appearance USE='Normal_5'/>
+                  <Rectangle2D USE='_4'/>
+                </Shape>
+              </Transform>
+              <Transform DEF='Triangle'
+                  translation='-0.5 0 0'
+                  rotation='0 0 1 90'
+                  scale='0.6 0.6 0.6'>
+                <Shape
+                    pointerEvents='false'>
+                  <Appearance USE='Normal_5'/>
+                  <TriangleSet2D USE='_10'/>
+                </Shape>
+              </Transform>
+            </Group>
+            <Group DEF='Active_6'
                 visible='false'>
-              <Appearance USE='Active_5'/>
-              <TriangleSet2D USE='_1'/>
-            </Shape>
+              <Transform DEF='Rectangle_1'
+                  translation='0.2 0 0'
+                  scale='0.6 0.3 1'>
+                <Shape>
+                  <Appearance USE='Active_5'/>
+                  <Rectangle2D USE='_4'/>
+                </Shape>
+              </Transform>
+              <Transform DEF='Triangle_1'
+                  translation='-0.5 0 0'
+                  rotation='0 0 1 90'
+                  scale='0.6 0.6 0.6'>
+                <Shape
+                    pointerEvents='false'>
+                  <Appearance USE='Active_5'/>
+                  <TriangleSet2D USE='_10'/>
+                </Shape>
+              </Transform>
+            </Group>
             <TouchSensor DEF='_9'
                 description='Reverse'/>
           </Transform>
@@ -230,8 +257,8 @@
         <ROUTE fromNode='TriggerReverse' fromField='triggerTrue' toNode='ToggleReverse' toField='set_boolean'/>
         <ROUTE fromNode='ToggleReverse' fromField='toggle_changed' toNode='Reverse_1' toField='set_boolean'/>
         <ROUTE fromNode='_9' fromField='touchTime' toNode='TriggerReverse' toField='set_triggerTime'/>
-        <ROUTE fromNode='ToggleReverse' fromField='toggle_changed' toNode='Active_2' toField='set_visible'/>
-        <ROUTE fromNode='Reverse_1' fromField='inputNegate' toNode='Normal_2' toField='set_visible'/>
+        <ROUTE fromNode='ToggleReverse' fromField='toggle_changed' toNode='Active_6' toField='set_visible'/>
+        <ROUTE fromNode='Reverse_1' fromField='inputNegate' toNode='Normal_6' toField='set_visible'/>
       </ProtoBody>
     </ProtoDeclare>
     <ProtoInstance name='PlayerControls'/>
